@@ -20,6 +20,12 @@ PLAINTEXT_WHEEL = tuple(
     for coordinate in range(42)
 )
 
+# Each section starts with a ciphertext-wheel origin that emits no plaintext.
+# The rotations below synchronize the resulting coordinate streams with the
+# shared 42-position plaintext wheel.  The exceptional J emits the preceding
+# plaintext character and flips the parity convention used for later deltas.
+PUZZLE1_SHIFTS = (18, 37, 6, 38, 2, 40, 18, 20, 4, 36, 32, 37, 30, 34, 38, 22, 38)
+
 # Every ordinary section starts in the forward state.  Its first ciphertext
 # symbol establishes a ciphertext-wheel origin but emits no recoverable
 # plaintext.  These rotations were recovered by synchronizing the common
@@ -42,6 +48,38 @@ def ciphertext_coordinate(raw: int) -> int:
 
 def _render_coordinate(value: int, shift: int, direction: int = 1) -> str:
     return PLAINTEXT_WHEEL[(direction * value + shift) % 42]
+
+
+def decode_puzzle1_section(message: Sequence[int], shift: int) -> str:
+    """Decode one section of sdlwdr #1's parity-switching Wadsworth cipher."""
+    if len(message) < 2:
+        return ""
+    previous = ciphertext_coordinate(message[0])
+    accumulator = 0
+    parity = 0
+    result: list[str] = []
+    for raw in message[1:]:
+        if raw == EXCEPTIONAL_RAW:
+            result.append(_render_coordinate(accumulator, shift))
+            parity ^= 1
+            continue
+        current = ciphertext_coordinate(raw)
+        distance = (current - previous + 42 * parity) % 82
+        accumulator = (accumulator + distance) % 42
+        result.append(_render_coordinate(accumulator, shift))
+        previous = current
+    return "".join(result)
+
+
+def decode_puzzle1_sections(
+    messages: Sequence[Sequence[int]],
+) -> tuple[str, ...]:
+    if len(messages) != len(PUZZLE1_SHIFTS):
+        raise ValueError("puzzle #1 must contain seventeen sections")
+    return tuple(
+        decode_puzzle1_section(message, shift)
+        for message, shift in zip(messages, PUZZLE1_SHIFTS, strict=True)
+    )
 
 
 def decode_puzzle2_ordinary(message: Sequence[int], shift: int) -> str:

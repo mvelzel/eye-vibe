@@ -7,6 +7,7 @@ from eye_mystery.practice_sdlwdr import (
     COMBINED82,
     PLAINTEXT_ALPHABET,
     PLAINTEXT_WHEEL,
+    decode_puzzle1_sections,
     decode_puzzle2_sections,
 )
 
@@ -20,6 +21,52 @@ class PracticeSdlwdrTests(unittest.TestCase):
         self.assertEqual(len(set(COMBINED82)), 82)
         self.assertEqual(len(PLAINTEXT_ALPHABET), 42)
         self.assertEqual(set(PLAINTEXT_WHEEL), set(PLAINTEXT_ALPHABET))
+
+    def test_cipher1_decodes_confirmed_source(self) -> None:
+        messages = json.loads(
+            (ROOT / "artifacts/practice-sdlwdr/cipher1.json").read_text()
+        )
+        plaintexts = decode_puzzle1_sections(messages)
+        self.assertEqual(
+            tuple(map(len, plaintexts)),
+            tuple(len(message) - 1 for message in messages),
+        )
+        self.assertTrue(
+            plaintexts[0].startswith("WAINAMOINEN OLD AND TRUTHFUL")
+        )
+        self.assertIn("ON THE SEA’S SMOOTH PLAIN", plaintexts[0])
+        self.assertTrue(
+            plaintexts[-1].endswith("LISTEN TO MY WONDROUS SINGING")
+        )
+
+    def test_cipher1_plaintext_fingerprints(self) -> None:
+        messages = json.loads(
+            (ROOT / "artifacts/practice-sdlwdr/cipher1.json").read_text()
+        )
+        observed = tuple(
+            hashlib.sha256(text.encode()).hexdigest()
+            for text in decode_puzzle1_sections(messages)
+        )
+        expected = (
+            "0442bd0da97cc29cdb3c60b8f3fada0659b9a583e748a6620f85161410b8ecb3",
+            "11b73724879dfb5620d8dc76a5d879f95bba80211a3e7ee968bfd60236b4855c",
+            "81221396f2e82e072f729fd725258e133557926139fb5af44ac760851396f275",
+            "6f6815c511621dd87333b64fd6d1d9f2875478bb4e61338eb35790b9c8a34e86",
+            "c77136e5d843c7321e9aca4d09bbc2cdc69558a6a1095712109e1411eab8b415",
+            "f66a1e3954fa241135f4bbc3cdf5c6cde7da49eb8c8db76d4d269972d221ffb8",
+            "abd58bf773946a92c64236e0b430d191fdacf6326565ca3a30b4bb1e50469776",
+            "5fdd7122baabd6b8dcba4048cabed2e83daa6ea46c6bae7f0309add60ebf180e",
+            "ded5975dba310e1a8b8822bc82fb010d4d645140a7b29f677b08b7265d37cde6",
+            "286629742c81d1a755d9ba394e1143f0f0e012442d2999e698fedbeca9966fa8",
+            "ffb0d5dd447c4c9c5b76f9a5d3170396e0c6d85c6aae71ce69c1bb280b6610aa",
+            "3b348e0fe060f2f99e89b0cc0e15d384a5e581a1eb0a0ab85a42a9783b9eb004",
+            "ac6e4935dbabdd5ae495fc4bcfd1d2c312f1a02f40fe267666fce126f9250e26",
+            "413d5eda1df8a320ebcf3dde45bcdf94aa25c413b224d68c4394f608708bf034",
+            "065a2e8a1751342448b9fbd2d179f897efccf739438e7f2a8e34fcad6086fefd",
+            "fa14a70cde5af455fcba48d126041de35984b6f8a0da6f006d84ba8bec4e61d4",
+            "4922b4f1b7c39a667aa8c45e5de154c6a690804d73a01d483fee04247089c101",
+        )
+        self.assertEqual(observed, expected)
 
     def test_cipher2_decodes_confirmed_source(self) -> None:
         messages = json.loads(
