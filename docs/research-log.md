@@ -1668,6 +1668,67 @@ lead should be promoted only by an independent in-game ordering/typing clue or
 a key-free body prediction.  Exact reproduction is included in
 `scripts/analyze_trie_checksum.py`.
 
+### Wide architecture controls and the procedural-wand selector
+
+A second breadth-first pass was frozen before evaluation in
+`docs/wide-approach-map-2026-07-21.md`. Three unrelated literal architectures
+are clean negatives. The best order-two base-5 overlap has 52/1,018 matches,
+ordinary under 5,000 body-multiset-preserving shuffles
+(`1360/5001` upper-tail). After the longest row-prefix boundary, the natural
+3×3 aligned body grid has only 1/74 zero determinants under both `F83` and
+`F101`, ordinary under 5,000 independent message rotations. Low-degree
+polynomial body moments predict no headers beyond the already-known East
+1/East 3/East 5 negative-sum checks modulo 101.
+
+One initially promising finite-field result was a null-model artifact. The
+best shared rule `next=17*current+45 mod 83` matches 34/1,018 transitions and
+beats a naive within-message shuffle at `2/201`. Those shuffles destroy the
+exact copied prefix transitions. Arbitrary global relabeling preserves the
+complete equality trie and every transition multiplicity; 219 of 500 such
+controls meet or beat 34 (`220/501 = 0.439122` with the finite-sample
+correction). Counting copied trie nodes once gives a different optimum of
+26/917. There is no first-order affine recurrence lead.
+
+The associated Discord correction did reveal one exact in-game identity worth
+retaining. Both installed procedural-wand sources contain
+`Random(0,100) < 83`, choosing `ACTION_TYPE_MODIFIER` rather than
+`ACTION_TYPE_DRAW_MANY`. Noita's integer random bounds include 0 and 100, so
+the successful set is literally `0..82`—the Eye alphabet—and the full domain
+has 101 values—the checksum modulus. A complete direct-threshold inventory of
+the current WAK finds 74 comparisons across 22 operator/threshold pairs; 83
+appears only in these two duplicated copies. The loose early-access-labelled
+tree has 25 comparisons across ten pairs and the same two copies.
+
+Chronology limits the claim. The loose archive's sole commit was uploaded on
+2 October 2022. The earliest independently timestamped occurrence in the
+61-snapshot public data repository is commit `70696c9` on 9 February 2021.
+This proves the rule existed after the October 2020 Eye release and is therefore
+eligible as a later decoder clue. It does not independently prove pre-Eye
+construction use. No renderer reference, prefix merge, missing-state
+assignment, or 18-record order accompanies it.
+
+The complementary branch nevertheless supplies a real second correspondence.
+The 18 rolls `83..100` all select `ACTION_TYPE_DRAW_MANY`, whereas `0..82`
+select `ACTION_TYPE_MODIFIER`. Independently, the compressed Eye trie has five
+branch nodes of degrees `(2,3,3,2,3)` and thirteen outgoing edges, so the
+proposed hidden structure has exactly `5+13=18` branch instructions plus
+continuations. The same source also contains the ordinary wand-capacity clamp
+26 and the unshuffled-capacity limit 9, matching complete Eye row width and
+panel count. This conjunction is retrospective and each constant has a
+gameplay explanation, but the 83/18 type split is exact. The result is promoted
+to independent typing evidence for the 83-visible/18-structural architecture,
+not to a decryption. The operational hypothesis and limits are recorded in
+`docs/procedural-wand-architecture.md`.
+
+The actual gun runtime strengthens and bounds the analogy. `draw_actions(n)`
+executes children immediately and recursively, so its action stream is a
+depth-first tree. The Eye degrees `(2,3,3,2,3)` are legal and yield nine leaves
+by the exact tree identity `1+sum(d-1)=9`. All branch depths are below 26 and
+their independently selected breadth order still spells `BEXIT`. But one
+literal cast cannot emit the ciphertext trie: 26 card slots cannot account for
+918 distinct payload edges. The next model must keep control topology and
+payload representation separate, or it is rejected at the capacity bound.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly
@@ -1693,6 +1754,7 @@ pattern. No result currently validates this crib.
 - [Profile of Petri Purho and his card magic](https://www.killscreen.com/profile-petri-purho/)
 - [Datamined eye-rendering function](https://pastebin.com/rXNsPi47)
 - [Noita data archive](https://github.com/vexx32/noita-data)
+- [Earliest timestamped public `Random(0,100)<83` copy, 9 February 2021](https://github.com/vexx32/noita-data/commit/70696c9d62f9d95647b369c307dbecf1158d681c)
 - [Noita early-access data archive](https://github.com/defektu/noita-early-access-data)
 - [Lymm37's eye-message research wiki](https://github.com/Lymm37/eye-messages/wiki)
 - [Noita Eye Glyphs on Puzzling Stack Exchange](https://puzzling.stackexchange.com/questions/119923/noita-eye-glyphs)

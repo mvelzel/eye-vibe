@@ -9,6 +9,42 @@ what would stop or promote it.  Completed and rejected branches remain in
 
 ## Active and high value
 
+### Procedural wand selects exactly `0..82` from `0..100`
+
+**Status:** independently authored typing evidence for the 83-visible plus
+18-structural architecture; no decoder path yet.
+
+The installed Lua contains `Random(0,100) < 83` in the standard procedural-wand
+generator and its `wand_petri` sibling. Because Noita's integer bounds are
+inclusive, the branch's successful outcomes are exactly the Eye alphabet
+`0..82`, while the whole random domain has size 101. The branch chooses a
+modifier card rather than a draw-many card, putting the identity inside Noita's
+wand/deck vocabulary rather than an unrelated asset.
+
+More sharply, the 18 complementary outcomes `83..100` all select
+`ACTION_TYPE_DRAW_MANY`. The compressed Eye trie has five branch nodes with
+degrees `(2,3,3,2,3)` and thirteen outgoing continuations, hence exactly
+`5+13=18` branch/control records. The code therefore supplies the same broad
+type for the missing states that the trie architecture needs. It does not
+assign one missing value to one record.
+
+An inventory finds 74 direct `Random(0,100)` comparisons and 22 distinct
+operator/threshold pairs in the current WAK; `<83` appears only in these two
+duplicated sources. The loose repository labelled early access contains the
+same two copies, but was uploaded in October 2022. The earliest independently
+timestamped public-data copy found is 9 February 2021—after the Eyes, but fully
+eligible as a later clue.
+
+**Next test:** look for a game-authored operation near procedural wand
+generation that orders/types the missing `83..100` states or performs a
+merge/deduplicate-once step. Do not infer that `ACTION_TYPE_MODIFIER` literally
+means visible Eye values, and do not count the duplicated Lua copies as two
+independent clues. Promote only if this identity supplies a second mechanical
+prediction.
+
+The detailed ground-up audit and machine hypothesis are in
+[`procedural-wand-architecture.md`](procedural-wand-architecture.md).
+
 ### Prefix-trie sieve closes modulo 101
 
 **Status:** strongest breadth-first positive; exact pre-registered statistic,

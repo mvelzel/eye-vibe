@@ -11,6 +11,9 @@ the chronological evidence and negative results remain in
 not replace the others.  The breadth-first assumption audit and novel mechanism
 map are in
 [`docs/novel-synthesis-2026-07-21.md`](docs/novel-synthesis-2026-07-21.md).
+The subsequent deliberately wide architecture map and its frozen cheap probes
+are in
+[`docs/wide-approach-map-2026-07-21.md`](docs/wide-approach-map-2026-07-21.md).
 
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
@@ -105,6 +108,21 @@ to 31, exactly complementing the lower-six descendant residue 70.  The joint
 full/lower closure has exact marker-fixed conditional rate `0.0098015%`, but no
 rule yet assigns the 18 values to the 18 records.  It is an architecture to
 falsify, not permission to brute-force an 18! plaintext fit.
+
+There is now an exact independent in-game selector for the numbers themselves.
+The installed procedural-wand Lua uses `Random(0,100) < 83` to choose a modifier
+card over a draw-many card. With Noita's inclusive integer bounds, that is
+literally the successful set `0..82` inside a 101-value domain. Across 74
+direct `Random(0,100)` comparisons in the current WAK, 83 occurs only in the
+two duplicated procedural-wand sources. The earliest independently timestamped
+public copy found is February 2021, so it may be a later decoder clue; it is
+not proof of pre-Eye construction. More sharply, all 18 complementary rolls
+`83..100` select `ACTION_TYPE_DRAW_MANY`. The compressed Eye trie has five
+branch nodes of degrees `(2,3,3,2,3)` and thirteen continuations—exactly 18
+branch/control records. This independently types the proposed hidden states,
+but still supplies no individual assignment or plaintext. The bounded machine
+hypothesis is documented in
+[`docs/procedural-wand-architecture.md`](docs/procedural-wand-architecture.md).
 
 This work has ruled out or failed to support these concrete subclasses:
 

@@ -515,3 +515,56 @@ exits.  It is promoted as the strongest novel architecture, not a decoder.
 Its next falsification target is precise: an in-game asset or a key-free body
 relation must order or type those 18 records without reference to desired
 plaintext.
+
+## Eighth bounded audit: the wand generator types the 18 states
+
+A newly surfaced raw-code identity meets half of that promotion target. The
+installed procedural-wand generator draws an inclusive integer in `0..100`
+and executes:
+
+```text
+0..82   -> ACTION_TYPE_MODIFIER
+83..100 -> ACTION_TYPE_DRAW_MANY
+```
+
+This is an exact 83+18 partition of a 101-state space. It is not merely a
+comment calling something “83%.” A complete WAK inventory finds 74 direct
+`Random(0,100)` comparisons across 22 operator/threshold pairs; `<83` occurs
+only in the two duplicated procedural-wand sources. The public data history
+independently timestamps the code to 9 February 2021. That is too late to prove
+construction use but fully eligible as a decoder clue.
+
+The type assignment aligns with the structural interpretation. The five
+compressed Eye branch nodes have fan-outs `(2,3,3,2,3)`, totaling thirteen
+continuations. A serialized draw-many execution tree therefore contains
+
+```text
+5 branch instructions + 13 drawn continuations = 18 structural records.
+```
+
+Current draw-many cards include arities two and three, though also larger and
+variable arities, so the fan-outs are legal but not uniquely selected. The
+same generator contains the previously noted 26-slot deck clamp and a
+capacity-9 unshuffle condition, matching the complete Eye row width and panel
+count. Because this four-number convergence was assembled retrospectively and
+each value has an ordinary balance/UI explanation, it is not assigned a
+probability.
+
+The runtime semantics is genuinely tree-shaped: `draw_actions(n)` draws and
+executes each child immediately, and a child action may recurse into another
+`draw_actions` call. The Eye degrees produce exactly nine leaves via
+`1+sum(d-1)`. All five Eye branch depths lie inside the first 26-symbol row;
+in East-5-first breadth order they remain the independently recovered
+`BEXIT`. The literal card trace is nevertheless too small—26 deck slots cannot
+account for 918 merged payload edges—so a viable construction must separate
+control topology from encrypted payload or use repeated casts.
+
+This audit promotes the 83-visible/18-structural machine from a purely internal
+numerical architecture to one with independent game-authored typing evidence.
+It still lacks the essential bijection from `83..100` to branch records. The
+actual Lua uses the roll to choose an action type and then chooses a card
+separately; it does not emit the roll as a label. A literal decoder must now
+predict the branch arities or restore a full execution tree under source-
+derived rules, without enumerating 18! labelings. Details and reproduction are
+in `docs/procedural-wand-architecture.md` and
+`scripts/analyze_wand_selector.py`.
