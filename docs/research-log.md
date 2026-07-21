@@ -1358,6 +1358,47 @@ next useful test is held-out prediction from one common state model, not more
 semantic continuation.  Reproduction is in
 `scripts/check_waite_m3_suffix.py`; the full queue is in `docs/open-leads.md`.
 
+The full two-volume OCR gives a stronger finite source test.  It contains five
+`THAT WHICH` pairs at the East-1 gap 28, four at the West-1 gap 30,
+and two at the East-2 gap 35.  Complete source windows aligned to the observed
+raw offsets leave 3/5, 3/4, and 1/2 internally compatible candidates,
+respectively; the proposed `LOWEST/HIGHEST` sentence is the sole surviving
+gap-35 window.  Treating symbol zero as either a marker or plaintext does not
+change the candidate census.
+
+The three messages cannot all be those contiguous source excerpts under a
+perfectly isomorphic cipher.  Cross-comparing every equal maximal substring in
+every combination leaves zero joint-compatible triples.  The best triple has
+8 conflicts among 186 cross-message checks after excluding the probable check
+markers.  This rejects the complete-excerpt hypothesis under exact GAK/XGAK,
+not the narrower `THAT WHICH` or East-2 suffix crib.  Reproduction is in
+`scripts/search_waite_that_which.py` using the Internet Archive OCR files.
+
+The direct Noita provenance is also narrower than “same tract.”  The planning
+file's identifiable excerpts map to *The Golden Tract* (`hm104`), *An Open
+Entrance* (`hm206`), and *A Subtle Allegory* (`hm207`).  Neither the title *A
+Demonstration of Nature* nor its `SUBLIME` sentence occurs in the extracted
+game data.  The evidence is therefore anthology-level developer familiarity,
+not proof that `hm107` itself was selected for the Eyes.
+
+The archive chronology has one caveat.  `defektu/noita-early-access-data`
+identifies its snapshot as “Early Access Data,” but its single Git commit was
+uploaded on 2 October 2022.  The byte-identical early/current file is strong
+archival support for pre-1.0 source familiarity, not an independently
+timestamped 2020 artifact.
+
+The first finite construction test is negative.  Taking the 117 source
+characters aligned to the East-2 body, a complete scan covers 8,598 unique
+standard 83-card bases and 26 operations per base: top swap alone, one anchor
+rule, and ring/mirror plaintext-selected hidden swaps with offsets 1..12.
+None of 223,548 reset-deck models has an injective decoded-symbol-to-character
+mapping.  The best incurs 564 equality-relation conflicts and fails 517 of the
+candidate's 542 required same-character pairs.  This decisively rejects that
+finite physical-deck family for the contiguous body candidate.  A free
+one-hidden-transposition-per-character SMT model is not thereby rejected: it
+returns `unknown` after 30 seconds at both 30 and 117 characters.  Reproduction
+is in `scripts/search_waite_sparse_decks.py`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly
@@ -1412,6 +1453,8 @@ pattern. No result currently validates this crib.
 - [Alchemy Texts: all authors and books](https://www.alchemy-texts.com/all-authors/)
 - [Waite, *A Demonstration of Nature*, exact candidate passage](https://sacred-texts.com/alc/hm1/hm107.htm)
 - [Waite's *Hermetic Museum* index](https://www.sacred-texts.com/alc/hermmuse/index.htm)
+- [Internet Archive OCR source, *Hermetic Museum* volume I](https://archive.org/details/b24927363_0001)
+- [Internet Archive OCR source, *Hermetic Museum* volume II](https://archive.org/details/b24927363_0002)
 
 ## Highest-value next work
 

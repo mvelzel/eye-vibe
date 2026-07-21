@@ -6,6 +6,17 @@ from scripts.check_waite_m3_suffix import (
     WAITE_M3_SUFFIX,
     repeated_substring_checks,
 )
+from scripts.search_waite_that_which import (
+    TARGETS,
+    align_source,
+    cross_incompatibility_count,
+    normalize_ocr,
+    phrase_offsets,
+)
+from scripts.search_waite_sparse_decks import (
+    WAITE_M3_BODY,
+    relation_conflicts,
+)
 
 
 class WaiteCribTests(unittest.TestCase):
@@ -24,6 +35,48 @@ class WaiteCribTests(unittest.TestCase):
         self.assertEqual(longest.text, "E THAT WHICH IS THE ")
         self.assertEqual(longest.length, 20)
         self.assertEqual((longest.first, longest.second), (6, 41))
+
+    def test_ocr_normalization_undoes_line_wraps(self) -> None:
+        text = "that which is exal-\n ted  above"
+        self.assertEqual(normalize_ocr(text), "THAT WHICH IS EXALTED ABOVE")
+
+    def test_source_alignment_uses_complete_message_window(self) -> None:
+        target = TARGETS[2]
+        source = (
+            "X" * target.first_offset
+            + WAITE_M3_SUFFIX
+            + " trailing source text"
+        )
+        self.assertEqual(phrase_offsets(source), (53, 88))
+        alignments = align_source("synthetic", source, target)
+        self.assertEqual(len(alignments), 1)
+        self.assertEqual(
+            len(trigram_values(MESSAGES["east2"])),
+            len(alignments[0].plaintext) + 1,
+        )
+
+    def test_cross_compatibility_detects_pattern_conflict(self) -> None:
+        total, conflicts = cross_incompatibility_count(
+            "ABCA",
+            (1, 2, 3, 1),
+            "ABCA",
+            (4, 5, 6, 7),
+        )
+        self.assertEqual(total, 1)
+        self.assertEqual(conflicts, 1)
+
+    def test_waite_body_fills_message_after_marker(self) -> None:
+        self.assertEqual(
+            len(WAITE_M3_BODY),
+            len(trigram_values(MESSAGES["east2"])) - 1,
+        )
+
+    def test_relation_conflicts_characterize_injective_mapping(self) -> None:
+        self.assertEqual(relation_conflicts("ABCA", (7, 2, 9, 7)), (0, 0, 0))
+        total, same, distinct = relation_conflicts("ABCA", (7, 2, 9, 4))
+        self.assertEqual((total, same, distinct), (1, 1, 0))
+        total, same, distinct = relation_conflicts("ABCD", (7, 2, 9, 7))
+        self.assertEqual((total, same, distinct), (1, 0, 1))
 
 
 if __name__ == "__main__":

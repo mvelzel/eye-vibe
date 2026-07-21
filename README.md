@@ -277,7 +277,21 @@ candidate passes the necessary perfect-isomorphism check; the longest is
 `E THAT WHICH IS THE ` at length 20. The game's byte-identical early-access
 and current `orb_plan.txt` explicitly cite the *Hermetic Museum*, which contains
 the source tract. This makes the crib source-backed and chronologically
-plausible, but it is still not a decryption or a held-out prediction.
+plausible, though the archive was uploaded in 2022 rather than timestamped
+contemporaneously; it is still not a decryption or a held-out prediction.
+An OCR scan of both Waite volumes finds source pairs at all three observed
+`THAT WHICH` gaps (`28,30,35`).  Complete-message alignment is stricter:
+several windows pass separately, but no three-message combination passes the
+cross-message perfect-isomorphism condition (the best has eight conflicts).
+Thus the phrase/suffix lead remains open while the hypothesis that all three
+complete plaintexts are contiguous Waite excerpts is rejected under exact
+GAK/XGAK.
+
+The complete East-2 body candidate also fails a finite reset-deck search:
+8,598 distinct standard bases times 26 top/anchor/ring/mirror variants give
+223,548 models and zero exact fits.  The best breaks 517 of 542 required
+same-character relations.  This rejects that small physical-deck family, not
+arbitrary plaintext-selected permutations.
 
 The East-5-first order does not behave like a persistent state for the concrete
 deck construction tested here. Continuous scans over all 6,806 affine bases

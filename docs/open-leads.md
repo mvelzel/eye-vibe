@@ -9,7 +9,8 @@ or promote it.  Completed and rejected branches remain in
 
 ### Waite suffix for message 3
 
-**Status:** source-backed compatible crib; newly promoted, unproved.
+**Status:** phrase/suffix remains source-backed and compatible; the stronger
+three-complete-excerpt hypothesis is rejected under perfect GAK/XGAK.
 
 Arthur Edward Waite's 1893 *A Demonstration of Nature* contains the 81-character
 sentence:
@@ -24,13 +25,39 @@ repeated substring of length at least two passes the necessary perfect-
 isomorphism test; the longest is `E THAT WHICH IS THE `, length 20.  The
 archived early-access `orb_plan.txt` explicitly names the *Hermetic Museum*
 as a source several times, and it is byte-identical to the installed current
-file, so
-this source family was in the developers' pre-1.0 vocabulary.
+file.  The repository identifies the snapshot as early-access data, supporting
+pre-1.0 familiarity with the source family.  Its sole Git commit was uploaded
+in October 2022, however, so it is archival evidence rather than a
+contemporaneously timestamped file.
 
-**Next test:** propagate the identified 18-character phrase through all six
-first-family isomorph windows, enumerate source-backed continuations around
-each location, and require one common GAK/XGAK state model to predict held-out
-ciphertext.  Source fit and isomorph compatibility alone are not enough.
+A complete OCR scan makes the coincidence more specific but also supplies a
+negative control.  Across Waite's two volumes, there are five source pairs at
+the observed gap 28, four at gap 30, and two at gap 35.  The gap-35 candidate
+sentence is the only one of its two that passes the complete East-2 internal
+isomorphism check.  After aligning full source windows, 3/5 East-1, 3/4 West-1,
+and 1/2 East-2 candidates pass separately.  None of the nine surviving joint
+combinations passes cross-message perfect isomorphism; the least-conflicting
+combination has 8 conflicts among 186 maximal repeated-substring checks.
+Therefore the three complete messages are not contiguous excerpts from this
+OCR-normalized source under exact GAK/XGAK.  This does not reject the narrower
+ten-character phrase or East-2 suffix proposal, because their unknown
+surrounding plaintext need not come from the same source windows.
+
+A finite reset-deck realization is also negative.  The 117-character
+contiguous East-2 body candidate was checked against 8,598 distinct standard
+83-card bases and 26 variants per base: top swap only, a fixed anchor rule,
+and ring/mirror hidden swaps through offset 12.  None of the 223,548 models
+admits an injective decoded-symbol/character map.  The best has 564 equality-
+relation conflicts, including 517 of the plaintext's 542 required equal-
+character pairs.  An unrestricted one-hidden-transposition SMT model remains
+`unknown` at both 30 and 117 symbols, so this is a rejection of the finite
+standard family only.
+
+**Next test:** classify the exact 18-character extension around all six
+windows without assuming that the rest of each message is a contiguous
+quotation.  If that survives, fit a more general but still capacity-controlled
+state family and freeze its learned operations before measuring held-out
+symbols.  Source fit and isomorph compatibility alone are not enough.
 
 **Reject/promote:** reject under perfect GAK/XGAK if any exact repeated
 plaintext substring produces non-isomorphic ciphertext.  Promote only after a
