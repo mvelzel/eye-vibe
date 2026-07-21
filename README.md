@@ -511,6 +511,7 @@ PYTHONPATH=src python3 scripts/solve_affine_gak_enum.py --mode skip --max-symbol
 PYTHONPATH=src python3 scripts/test_affine_isomorph_embedding.py --families last
 PYTHONPATH=src python3 scripts/solve_common_base_swap.py --contexts combined
 PYTHONPATH=src python3 scripts/solve_sparse_crib_z3.py --messages east1,east4 --omit-markers --top-length 10 --lower-length 20 --timeout-ms 120000
+PYTHONPATH=src python3 scripts/calibrate_arbitrary_gak_sat.py --deck-size 14 --messages 3 --length 18 --timeout-ms 30000
 ```
 
 The alternating-substitution experiment accepts a local public-domain language

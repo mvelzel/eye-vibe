@@ -1471,11 +1471,37 @@ ciphertext that lets Kissat reconstruct an initial deck and the
 plaintext-selected shuffle permutations.  The toy cases reportedly reproduce
 their generators.  The author cautioned that many shuffle orders explain
 short texts and that the constraint count grows cubically with the ciphertext
-alphabet; no code link was visible at the time of the observation.  This is
-therefore a method report awaiting local reproduction, not an Eye result.  A
-new `2-to-26 deck cipher` practice puzzle from Qualia and Torben's earlier
-large-group known-plaintext GAK exercise form a natural small-to-`S83`
-calibration ladder before any Waite crib feasibility test.
+alphabet.  A later explanation represents each operation and deck state as a
+Boolean permutation matrix, composes them by matrix multiplication, and
+asserts the observed top-card entry; no code link was visible at the time of
+the observation.
+
+The core method has now been independently reproduced in
+`src/eye_mystery/arbitrary_gak_sat.py`.  Rather than materializing cubic Boolean
+matrix products, it represents positions as finite-width bit-vectors and uses
+conditional multiplexers for
+`new_deck[i] = old_deck[operation[plaintext][i]]`.  Non-top position relabelling
+is removed by choosing a canonical reset deck for a fixed initial top card.
+Every accepted model is converted back to concrete permutations and required
+to re-encrypt the complete known-plaintext corpus exactly.
+
+On a deterministic binary-plaintext calibration with three 18-symbol messages
+(54 known bits), arbitrary decks of sizes 5, 6, 8, 10, 12, and 14 return `sat`
+inside a 30-second bound and replay every emission.  Sizes 16, 18, and 26
+return `unknown` under the same bound.  The solver often recovers a witness
+different from the generator key, directly confirming the underdetermination
+warning.  This is an independent method reproduction and a measured scaling
+boundary, not plaintext recovery and not an Eye result.
+
+Qualia's new `2-to-26 deck cipher` attachment is archived at
+`artifacts/practice-ciphers/deck_cipher_binary_stripped.json` (3,221 bytes,
+SHA-256
+`1f0f10ffc3999fe4c470a87af296f22bebcb5e9b8772e7d4e20060db4cbd95d4`).
+It contains nine ciphertexts of lengths 291–422.  Their binary plaintext and
+the serialization of the stated 27-symbol English alphabet are not supplied,
+so the known-plaintext solver cannot honestly be applied yet.  This puzzle and
+Torben's earlier large-group known-plaintext GAK exercise remain a natural
+small-to-`S83` calibration ladder before any Waite crib feasibility test.
 
 ## Crib observations
 

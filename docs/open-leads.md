@@ -136,14 +136,22 @@ deck and plaintext-selected permutations in CNF, then use Kissat to recover
 models consistent with a supplied plaintext/ciphertext pair.  Toy examples
 were reportedly verified, but the implementation had not yet been linked when
 observed; the author also warned that the encoding scales cubically with the
-ciphertext alphabet and that short texts admit many equivalent models.  This
-is a high-value method lead, not yet a locally reproduced result.
+ciphertext alphabet and that short texts admit many equivalent models.
 
-**Immediate bounded experiment:** obtain the code read-only if its promised
-repository link appears, or independently reproduce the CNF model on a small
-toy.  Freeze the encoding against the new `2-to-26 deck cipher` practice data
-before using it only as a yes/no feasibility test for the Waite East-2 crib.
-Do not interpret one satisfiable model as a unique recovered key.
+The method is now independently reproduced with a finite-width SMT encoding
+that avoids explicit Boolean-matrix multiplication.  A deterministic
+three-message, 54-bit toy recovers an exact replay witness through deck size 14
+within 30 seconds.  Sizes 16, 18, and 26 return `unknown` at the same bound.
+The recovered key need not equal the generator key, confirming that a
+satisfiable result is only a feasibility witness.  This is a useful attack
+primitive but not yet an Eye-scale solver.
+
+**Next bounded experiment:** obtain Henry's code read-only if its promised
+repository link appears and compare its clauses and scaling against the local
+bit-vector model.  Separately infer the `2-to-26` plaintext serialization or a
+small exact crib before invoking a known-plaintext solver.  Do not interpret
+one satisfiable model as a unique recovered key, and do not scale to the Waite
+East-2 crib until a 26-card calibration replays exactly.
 
 ### External in-game key or later hint
 
