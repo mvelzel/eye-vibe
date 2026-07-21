@@ -1879,6 +1879,52 @@ now needs an external reason.  Reproduction is in
 `scripts/analyze_storage_serialization.py` and
 `src/eye_mystery/storage_serialization.py`.
 
+### Snapshot alignment and a five-state equality tape
+
+The predeclared snapshot/delta lane asks whether the prefix tree records
+fixed-coordinate copies and replacements rather than repeated plaintext.  For
+the two deepest sibling trios (`east1,west1,east2` and
+`east4,west4,east5`), compare the cost of indexwise substitutions plus trailing
+truncation with unrestricted unit-cost Levenshtein alignment.  The six savings
+from allowing gaps are `0,7,1,2,2,0`, total 12.  In 2,000 controls, each leaf's
+complete shared prefix and first unique exit remain fixed while the later
+suffix is shuffled within that message.  Only five controls have total at
+most 12, for corrected lower tail `6/2001 = 0.0029985`.
+
+This is real evidence for fixed coordinate synchronization, not specifically
+for construction snapshots.  The known later equality windows drive it, so a
+position-synchronous cipher predicts the same result.  Nor does the signal
+select the visual record width.  The 45 later aligned equality hits have
+26-column chi-square `19.1333` (`0.839580` upper tail), and only two of 48
+equality-run starts/ends lie within one cell of a row edge (`0.653673` upper
+tail).  The fixed-coordinate constraint survives; a 26-column edit worksheet
+does not.
+
+This led to a deliberately strange representation test.  Three aligned values
+have Bell number `B3=5` equality partitions: all equal, one of the three equal
+pairs, or all distinct.  The two deepest sibling trios therefore produce two
+independently selected five-state tapes of lengths 74 and 93 after their branch
+points.  Treating a state as a base-five digit is negative: after searching all
+120 state labels, common reversal, and trigram phase, zero values need exceed
+82, but 493 of 500 state-count-preserving controls do at least as well
+(`494/501 = 0.986028`).  The apparent range fit is a consequence of the
+dominant all-distinct state.
+
+Pairing the two tapes as row and column of a 5x5 Polybius alphabet is also
+negative.  All `5!^2` row/column labels and independent reversals select score
+`-12.65455` on the English model, with repetitive preview
+`OTPOOOOOOOOOTOOODY...`.  Of 500 independently shuffled tape controls, 448
+score at least as well, corrected upper tail `449/501 = 0.896208`.  Targeted
+read-only Discord searches show that generic Polybius squares/cubes are old
+ideas, while exact searches for `Bell number` and `five partitions` in the
+cryptography and novel channels return none.  That does not establish global
+novelty; it only preserves the provenance of this specific tested transform.
+
+Reproduction is in `scripts/analyze_snapshot_delta.py` and
+`scripts/search_partition_polybius.py`.  The durable new constraint is
+position synchrony.  The five-state tape should not be fit further without an
+external selector.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly

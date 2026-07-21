@@ -239,6 +239,16 @@ values; East 1/West 1/East 2 share 24; the other six share five; East 3/East
 4/West 4/East 5 share nine; and East 4/West 4/East 5 share 20. This tree is
 exact corpus structure and should constrain any proposed message semantics.
 
+A snapshot/delta audit sharpens that constraint.  For the two deepest sibling
+trios, fixed-coordinate substitution/truncation alignments lose only 12 edits
+to unrestricted Levenshtein alignments; only 5 of 2,000 suffix shuffles that
+preserve the complete prefix tree do as well (`6/2001 = 0.0029985`).  The
+later equalities are not concentrated in the displayed 26-column geometry,
+so this supports position-synchronous copying or encryption, not a visual row
+edit scheme.  Compressing the three-way equality relation produces a natural
+five-state tape, but direct base-five and two-tape Polybius decoders are
+selection-corrected negatives.
+
 The remaining marker digit supplies a second order. Its sorted multiset is
 exactly `0,0,1,1,2,2,3,3,4`; sorting messages by ascending `(third, first)`
 gives `E1,W1,E2,W2,E4,W4,E5,E3,W3`, in which every non-singleton prefix-tree

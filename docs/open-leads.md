@@ -389,6 +389,37 @@ out of 17, with fixed-weight upper tail `0.825817`.
 capacity predicate derived from ciphertext, but the chunk divisions and
 padding add no independent information beyond the visible direction stream.
 
+### Snapshot/delta tree and five equality partitions
+
+**Status:** fixed-coordinate survivor; literal secondary decoders negative.
+For the upper and lower deepest sibling trios, the six pairwise advantages of
+free Levenshtein alignment over fixed-coordinate substitution/truncation are
+`0,7,1,2,2,0`, total 12.  Only five of 2,000 controls that preserve the full
+prefix tree, each leaf's first unique exit, lengths, and suffix multisets are
+as low (`6/2001 = 0.0029985`).  This says later coincidences are unusually
+position-synchronous.  It does not distinguish copied worksheet snapshots
+from a synchronous cipher, and the known equality windows explain the signal.
+
+The positions do not select the displayed geometry: equality-column
+chi-square and equality-run ends near 26-column record edges have upper tails
+`0.839580` and `0.653673`.  Three aligned values have exactly five set
+partitions (all equal, one of three equal pairs, all distinct), yielding two
+structurally selected five-state tapes after the sibling branch points.  But
+all relabelings of those tapes as base-five digits reach the `0..82` range at
+least as readily in controls (`0.986028` lower tail), and all `5!^2` Polybius
+row/column relabelings plus tape reversals give repetitive gibberish with
+selection-corrected upper tail `0.896208`.
+
+Targeted read-only Discord searches found long-standing generic Polybius
+proposals but no `Bell number`, `five partitions`, or equivalent exact
+equality-partition construction in the cryptography or novel channels.  This
+is only a search result, not proof that nobody considered it.
+
+**Next test:** preserve position synchrony as a mechanism constraint.  Do not
+extend the rejected literal Polybius decoder.  Reopen the five-state tape only
+if an independent game asset or metadata field orders or consumes its five
+partition roles.
+
 ### Qualia `2-to-26 deck cipher` practice puzzle
 
 **Status:** newly identified calibration dependency.  It maps binary plaintext

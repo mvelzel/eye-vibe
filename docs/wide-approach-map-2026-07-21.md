@@ -364,7 +364,30 @@ with fixed-weight upper tail `8259/10001 = 0.825817`.  Therefore serialization
 does not add an out-of-band key; any future use of capacity must justify why a
 decoder would recompute that feature from the ciphertext.
 
+The snapshot/delta lane is the first survivor of the third cycle, but only at
+the architectural level.  In the two deepest sibling trios, unrestricted edit
+alignment saves just 12 operations over fixed-index substitutions and trailing
+truncation; only five of 2,000 prefix-tree- and exit-preserving suffix shuffles
+are as low (`6/2001 = 0.0029985`).  The known equality windows make the bodies
+unusually position-synchronous.  Their positions do not favor the 26-column
+display: column-concentration and row-edge tests have upper tails `0.839580`
+and `0.653673`.
+
+A new wide transform follows from that survivor without assuming plaintext.
+The equality relation among three aligned sibling values has exactly five set
+partitions.  The two deepest trios thus yield two five-state tapes, suggesting
+either new base-five trigrams or the two coordinates of a 5x5 alphabet.  Both
+bounded literal forms are negative.  The optimized `0..82` range fit is more
+common in state-count controls (`0.986028`), and the exhaustive Polybius
+relabeling/reversal search produces repetitive gibberish with selected upper
+tail `0.896208`.  Generic Polybius proposals are longstanding; targeted
+read-only Discord searches did not locate the equality-partition variant, but
+absence from those searches is not a novelty proof.  Preserve position
+synchrony and stop fitting the five states without a game-authored selector.
+
 Reproduction is in `scripts/run_second_wide_probes.py` and
 `scripts/calibrate_factored_34x27.py`; the quotient-log test is in
 `scripts/search_reflection_quotient_logs.py`; the storage reconstruction is in
-`scripts/analyze_storage_serialization.py`.
+`scripts/analyze_storage_serialization.py`; the delta tests are in
+`scripts/analyze_snapshot_delta.py` and
+`scripts/search_partition_polybius.py`.
