@@ -293,6 +293,20 @@ The complete East-2 body candidate also fails a finite reset-deck search:
 same-character relations.  This rejects that small physical-deck family, not
 arbitrary plaintext-selected permutations.
 
+The exact six-window boundary is now certified.  All six ciphertext windows
+share one equality-pattern class through length 10 and split into two classes
+at length 11.  In Waite's corpus, meanwhile, the unique longest string repeated
+at all three gaps is ` THAT WHICH IS ` (15 characters).  Consequently the
+ten-character `THAT WHICH` core remains possible, but a common `IS …`
+continuation across all three messages is impossible under perfect GAK/XGAK.
+East 2 may still use Waite's longer suffix independently.
+
+A limited matched-text calibration makes the source fingerprint non-routine:
+Waite reaches length 15, while none of 17 Project Gutenberg alchemy controls
+or nine non-overlapping controls matched to Waite's 1,318,231 normalized
+characters exceeds length 12.  This is not a discovery p-value because the
+source, gaps, and candidate were selected retrospectively.
+
 The East-5-first order does not behave like a persistent state for the concrete
 deck construction tested here. Continuous scans over all 6,806 affine bases
 and all 8,430 non-duplicate standard physical/near-size bases, at every cyclic

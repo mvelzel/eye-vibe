@@ -53,11 +53,32 @@ character pairs.  An unrestricted one-hidden-transposition SMT model remains
 `unknown` at both 30 and 117 symbols, so this is a rejection of the finite
 standard family only.
 
-**Next test:** classify the exact 18-character extension around all six
-windows without assuming that the rest of each message is a contiguous
-quotation.  If that survives, fit a more general but still capacity-controlled
-state family and freeze its learned operations before measuring held-out
-symbols.  Source fit and isomorph compatibility alone are not enough.
+The six-window extension has an exact boundary.  The ciphertext equality
+patterns at raw `40/68`, `40/70`, and `45/80` are identical across all six
+occurrences through length 10.  At length 11 they split: East 1 has
+`A.B.CB.AC..`, while West 1 and East 2 have `ABC.DC.AD.B`.  Thus a single
+common plaintext can extend through at most ten characters under perfect
+GAK/XGAK.  Independently, the longest OCR string repeated at all three source
+gaps is the unique 15-character ` THAT WHICH IS `.  This makes the Waite
+fingerprint more specific while rejecting its common `IS ` continuation in the
+Eyes.  The exact ten-character core remains compatible; East 2's longer suffix
+can still be different from the other two messages after that core.
+
+A matched control makes the source-only fingerprint worth retaining.  The same
+normalization and gaps were applied to 17 Project Gutenberg alchemy-subject
+texts.  None reaches the Waite length 15; their maximum is 12.  Concatenating
+the controls with unique boundary separators and cutting nine non-overlapping
+blocks of exactly Waite's 1,318,231 normalized characters again gives 0/9 at
+length 15, with maximum 12.  This limited calibration is deliberately not
+reported as a p-value: the source family, gaps, phrase length, and corpus were
+all chosen after inspecting the Eyes.  It establishes only that the Waite
+three-gap phrase is unusual in the available matched controls.
+
+**Next test:** fit East 2 locally to a more general but still capacity-
+controlled state family and freeze its learned operations before measuring
+held-out symbols.  Separately search for an external in-game mechanism that
+would select Waite or the three gaps independently.  Source fit and isomorph
+compatibility alone are not enough.
 
 **Reject/promote:** reject under perfect GAK/XGAK if any exact repeated
 plaintext substring produces non-isomorphic ciphertext.  Promote only after a

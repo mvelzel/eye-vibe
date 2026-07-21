@@ -1399,6 +1399,44 @@ one-hidden-transposition-per-character SMT model is not thereby rejected: it
 returns `unknown` after 30 seconds at both 30 and 117 characters.  Reproduction
 is in `scripts/search_waite_sparse_decks.py`.
 
+The six-window propagation has now been closed exactly.  The equality patterns
+of all six windows are identical for lengths 1 through 10.  At length 11 they
+split into two classes: East 1 is `A.B.CB.AC..`; West 1 and East 2 are
+`ABC.DC.AD.B`.  The three within-message pairs continue much farther—rightward
+lengths `19,26,26`, with maximal `(left,right)` contexts `(7,19)`, `(7,26)`,
+and `(6,26)`—but those are three different cross-message classes.  Under exact
+GAK/XGAK, one common plaintext at all six positions therefore stops after ten
+characters.  `THAT WHICH IS THE ` cannot be the shared 18-character phrase,
+although it remains compatible with the two East-2 occurrences alone.
+
+A source-only fingerprint points in the same direction with an informative
+tension.  At length 10, eight sliding strings recur somewhere in both Waite
+volumes at every one of gaps `28,30,35`; they reduce to two phrase families,
+`THAT WHICH` and `THE SPIRIT`.  Extending without reference to the ciphertext
+leaves one unique maximal string at length 15: ` THAT WHICH IS `.  Thus the
+three gaps genuinely select the proposed Waite phrase family, but the Eye
+ciphertext itself rejects the common `IS ` continuation under perfect
+isomorphism.  Reproduction is in `scripts/classify_that_which_windows.py` and
+`scripts/search_waite_that_which.py`.
+
+A small matched-corpus calibration supports retaining this source fingerprint.
+Seventeen Project Gutenberg files from the alchemy subject corpus were given
+the identical normalization and fixed-gap test.  Their longest all-three-gap
+strings range from 5 to 12 characters; none reaches Waite's 15.  To reduce the
+large text-size difference, the normalized controls were joined with unique
+single-character boundary separators and partitioned into nine non-overlapping
+blocks of exactly Waite's 1,318,231 normalized characters.  Those blocks range
+from length 8 to 12, again 0/9 at length 15.  Formatting artefacts such as
+`[SIDENOTE:` and table bars actually produce several control maxima, making
+this a conservative text-cleaning comparison.
+
+This is not a valid tail probability for discovering the crib.  The source,
+three gaps, ten-character starting length, and control collection are all
+post-selection choices, and several Gutenberg files are alternate editions of
+the same work.  The result says only that ` THAT WHICH IS ` is exceptional in
+the available size-matched alchemical prose, not that it is Eye plaintext.
+Reproduction is in `scripts/calibrate_waite_gap_fingerprint.py`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly

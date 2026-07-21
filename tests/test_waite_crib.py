@@ -7,16 +7,26 @@ from scripts.check_waite_m3_suffix import (
     repeated_substring_checks,
 )
 from scripts.search_waite_that_which import (
+    common_gap_strings,
     TARGETS,
     align_source,
     cross_incompatibility_count,
     normalize_ocr,
+    maximal_common_gap_strings,
     phrase_offsets,
 )
 from scripts.search_waite_sparse_decks import (
     WAITE_M3_BODY,
     relation_conflicts,
 )
+from scripts.classify_that_which_windows import (
+    PAIRS,
+    common_right_prefix,
+    pair_maximal_context,
+    pair_right_prefix,
+    patterns,
+)
+from scripts.calibrate_waite_gap_fingerprint import matched_blocks
 
 
 class WaiteCribTests(unittest.TestCase):
@@ -39,6 +49,24 @@ class WaiteCribTests(unittest.TestCase):
     def test_ocr_normalization_undoes_line_wraps(self) -> None:
         text = "that which is exal-\n ted  above"
         self.assertEqual(normalize_ocr(text), "THAT WHICH IS EXALTED ABOVE")
+
+    def test_common_gap_source_fingerprint(self) -> None:
+        texts = (
+            "ABCDE" + "X" * 5 + "ABCDE",
+            "ABCDE" + "Y" * 7 + "ABCDE",
+        )
+        self.assertIn("ABCDE", common_gap_strings(texts, (10, 12), 5))
+        length, strings = maximal_common_gap_strings(
+            texts, (10, 12), limit=10
+        )
+        self.assertEqual(length, 5)
+        self.assertIn("ABCDE", strings)
+
+    def test_matched_control_blocks_do_not_cross_unique_tail(self) -> None:
+        self.assertEqual(
+            matched_blocks(("ABCDE", "FGHIJ"), 4),
+            ("ABCD", "E\ue000FG", "HIJ\ue001"),
+        )
 
     def test_source_alignment_uses_complete_message_window(self) -> None:
         target = TARGETS[2]
@@ -77,6 +105,21 @@ class WaiteCribTests(unittest.TestCase):
         self.assertEqual((total, same, distinct), (1, 1, 0))
         total, same, distinct = relation_conflicts("ABCD", (7, 2, 9, 7))
         self.assertEqual((total, same, distinct), (1, 0, 1))
+
+    def test_six_windows_split_after_ten_symbols(self) -> None:
+        self.assertEqual(common_right_prefix(), 10)
+        self.assertEqual(len(set(patterns(right=10))), 1)
+        self.assertEqual(len(set(patterns(right=11))), 2)
+
+    def test_pairwise_isomorph_extents(self) -> None:
+        self.assertEqual(
+            tuple(pair_right_prefix(*pair) for pair in PAIRS),
+            (19, 26, 26),
+        )
+        self.assertEqual(
+            tuple(pair_maximal_context(*pair) for pair in PAIRS),
+            ((7, 19), (7, 26), (6, 26)),
+        )
 
 
 if __name__ == "__main__":

@@ -27,6 +27,7 @@ from scripts.check_waite_m3_suffix import repeated_substring_checks
 
 
 PHRASE = "THAT WHICH"
+TARGET_GAPS = (28, 30, 35)
 
 
 @dataclass(frozen=True)
@@ -71,6 +72,56 @@ def normalize_ocr(text: str) -> str:
 
 def phrase_offsets(text: str) -> tuple[int, ...]:
     return tuple(match.start() for match in re.finditer(PHRASE, text))
+
+
+def repeated_strings_at_gap(
+    texts: tuple[str, ...],
+    gap: int,
+    length: int,
+) -> set[str]:
+    repeated: set[str] = set()
+    for text in texts:
+        run = 0
+        for start in range(len(text) - gap - 1, -1, -1):
+            if text[start] == text[start + gap]:
+                run += 1
+            else:
+                run = 0
+            if run >= length:
+                repeated.add(text[start : start + length])
+    return repeated
+
+
+def common_gap_strings(
+    texts: tuple[str, ...],
+    gaps: tuple[int, ...],
+    length: int,
+) -> set[str]:
+    return set.intersection(
+        *(repeated_strings_at_gap(texts, gap, length) for gap in gaps)
+    )
+
+
+def maximal_common_gap_strings(
+    texts: tuple[str, ...],
+    gaps: tuple[int, ...],
+    *,
+    limit: int = 100,
+) -> tuple[int, set[str]]:
+    lower = 0
+    upper = limit + 1
+    best: set[str] = set()
+    while lower + 1 < upper:
+        length = (lower + upper) // 2
+        current = common_gap_strings(texts, gaps, length)
+        if current:
+            lower = length
+            best = current
+        else:
+            upper = length
+    if lower and not best:
+        best = common_gap_strings(texts, gaps, lower)
+    return lower, best
 
 
 def align_source(
@@ -172,8 +223,10 @@ def main() -> None:
     ciphertext_start = 0 if args.include_marker else 1
 
     alignments: list[SourceAlignment] = []
+    normalized_sources: list[str] = []
     for path in args.sources:
         text = normalize_ocr(path.read_text(errors="replace"))
+        normalized_sources.append(text)
         print(f"source={path} phrase-occurrences={len(phrase_offsets(text))}")
         for target in TARGETS:
             alignments.extend(
@@ -184,6 +237,18 @@ def main() -> None:
                     ciphertext_start=ciphertext_start,
                 )
             )
+
+    source_tuple = tuple(normalized_sources)
+    ten_character = common_gap_strings(source_tuple, TARGET_GAPS, 10)
+    maximal_length, maximal_strings = maximal_common_gap_strings(
+        source_tuple, TARGET_GAPS
+    )
+    print(
+        f"all-gap source strings: length10={len(ten_character)} "
+        f"maximal-length={maximal_length}"
+    )
+    print(f"  length10={sorted(ten_character)!r}")
+    print(f"  maximal={sorted(maximal_strings)!r}")
 
     for target in TARGETS:
         candidates = [item for item in alignments if item.target == target]
