@@ -1850,6 +1850,35 @@ in `scripts/run_second_wide_probes.py`,
 `scripts/calibrate_factored_34x27.py`, and
 `scripts/search_reflection_quotient_logs.py`.
 
+### Exact base-seven storage reconstruction
+
+The serialization-side-channel lane is now bounded from primary packed data.
+Start with the accepted visual rows, append renderer symbol `5` after every
+row, translate storage symbols `0..5` to base-seven digits `1..6`, append one
+zero padding digit, and greedily take the longest prefix whose resulting
+integer fits in an unsigned 64-bit word.  This procedure derives all 150 engine
+words exactly.  In little-endian message order their SHA-256 is
+`5de6ccb3a045218827b7ddaad0f1493254f501b08addd1929495ce060242de94`, matching
+the verified Xkeeper transcoder fixture; the first and last words are
+`0xacf686745634505c` and `0x8c`.
+
+The apparent boundary metadata is fully forced.  Of 141 nonfinal chunks, 112
+have 22 symbols and 29 have 21; appending the next visible symbol to every one
+would exceed `2^64-1`.  The nine final lengths are
+`21,11,16,10,9,14,17,21,2`.  Chunk boundaries cross 69 newlines and end at only
+16, excluding a hidden row-record convention.  Reading 21 versus 22 as a bit
+and optimizing the natural reversal, inversion, bit-offset, and byte-order
+conventions yields 8 printable bytes of 17.  Fixed-weight random bitstrings do
+at least as well in `8258/10000` trials (corrected upper tail
+`8259/10001 = 0.825817`).
+
+Thus the u64 divisions, missing high words, and padding provide no independent
+authored channel beyond the visible direction stream.  The capacity predicate
+could still be recomputed as a derived nonlinear feature, but that weaker idea
+now needs an external reason.  Reproduction is in
+`scripts/analyze_storage_serialization.py` and
+`src/eye_mystery/storage_serialization.py`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly

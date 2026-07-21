@@ -373,6 +373,22 @@ strongest structure statistics are ordinary under global-label controls.
 permutation of the 42 classes.  Reopen only if a game-authored 42-state table,
 ordering, or cycle is found.
 
+### Packed base-seven serialization side channel
+
+**Status:** exact reconstruction, independent channel rejected.  Adding the
+renderer newline symbol after each visual row and greedily taking the longest
+prefix that fits in an unsigned 64-bit word reproduces all 150 verified packed
+constants exactly.  Every nonfinal block is forced to length 21 or 22 by the
+overflow boundary; shortened final blocks are just the remaining suffix.
+Blocks cross 69 row delimiters and end at only 16, so they are not authored row
+records.  The 141 natural capacity bits contain 29 short blocks; optimizing
+reversal, inversion, bit offset, and byte order gives only 8 printable bytes
+out of 17, with fixed-weight upper tail `0.825817`.
+
+**Next test:** none as extra metadata.  A construction may still use a
+capacity predicate derived from ciphertext, but the chunk divisions and
+padding add no independent information beyond the visible direction stream.
+
 ### Qualia `2-to-26 deck cipher` practice puzzle
 
 **Status:** newly identified calibration dependency.  It maps binary plaintext
@@ -448,5 +464,5 @@ survivor.  The apparent `34x27` trie-record effect survives a strict fixed-phase
 checksum null but loses selectivity when all record phases are admitted, and
 its boundaries have no trie role.  Both canonical 83-to-42 quotient decoders
 are language-negative.  No new favorite replaces the ledger; the next wide
-cycle should prioritize untouched external-selector, serialization, snapshot,
-and metadata-only lanes rather than reopening a rejected numeric transform.
+cycle should prioritize untouched external-selector, snapshot, and
+metadata-only lanes rather than reopening a rejected numeric transform.

@@ -442,6 +442,13 @@ constants, removes a base-7 padding digit, subtracts one from the remaining
 digits, reverses them, and hands the resulting `0..5` stream to the renderer.
 The paired `noita_dev.exe` contains none of the first twelve 32-bit halves of
 the Eye payload, indicating that the secret payload is release-build-specific.
+The storage boundaries themselves are now closed as an independent channel:
+greedily packing the longest prefix of visible row symbols plus newline that
+fits in an unsigned 64-bit word reproduces all 150 published engine constants
+exactly (fixture SHA-256
+`5de6ccb3a045218827b7ddaad0f1493254f501b08addd1929495ce060242de94`).
+The 21/22-symbol capacity choices are forced by overflow, and a literal binary
+reading of them is ordinary under fixed-weight controls.
 The installed `data.wak` has 14,745 indexed files but no named or textual link
 from the Eyes to the candidate ciphers or sources. Its five `eyespot` objects
 are explicitly the Evil-Eye/tripping reveal mechanism for the Sun-seed books.

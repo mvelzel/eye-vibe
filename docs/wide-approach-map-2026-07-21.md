@@ -353,6 +353,18 @@ the previews are alphanumeric gibberish.  Both canonical low-capacity
 83-to-42 decoders are rejected.  Revisit the complement only if an independent
 game asset orders the 42 classes.
 
+The packed-base-seven lane is independently negative.  A greedy encoder that
+appends renderer newline symbols, maps them with the five directions to digits
+`1..6`, adds the documented zero padding digit, and takes the longest prefix
+fitting in a u64 reproduces all 150 engine constants exactly.  The 21- versus
+22-symbol nonfinal blocks are forced by overflow, while final short blocks are
+ordinary suffixes.  Boundaries cross 69 newlines and terminate on only 16.
+Treating the 141 capacity choices as bits gives a best printable-byte statistic
+with fixed-weight upper tail `8259/10001 = 0.825817`.  Therefore serialization
+does not add an out-of-band key; any future use of capacity must justify why a
+decoder would recompute that feature from the ciphertext.
+
 Reproduction is in `scripts/run_second_wide_probes.py` and
 `scripts/calibrate_factored_34x27.py`; the quotient-log test is in
-`scripts/search_reflection_quotient_logs.py`.
+`scripts/search_reflection_quotient_logs.py`; the storage reconstruction is in
+`scripts/analyze_storage_serialization.py`.
