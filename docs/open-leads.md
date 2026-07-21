@@ -335,9 +335,18 @@ reduce the model rather than extending blind SMT time.
 
 ### sdlwdr practice cipher 4
 
-**Status:** outer cyclic layer solved, inner codec unsolved.  Revisit with a
-new homophonic/deck invariant or author hint.  Current language solvers,
-Wadsworth, Chaocipher, source scans, and Eye-corpus reuse are negative.
+**Status:** outer cyclic layer solved, inner codec unsolved.  The arbitrary
+cyclic-GAK recurrence is now explicit: candidate plaintext repeats must define
+one consistent update function.  Seven English/Finnish corpora give no
+200-transition hit under eight orientation/timing variants, and exhaustive
+affine updates give no natural 27- or 42-position language schedule.  The only
+57-state affine survivors erase the previous state and restate the direct
+difference ranks.
+
+**Next test:** seek a genuinely nonlinear deck invariant or a new author hint;
+do not extend blind SAT or rerun generic language optimization.  A candidate
+source can now be rejected cheaply by the exact recurrence oracle before any
+full key recovery.
 
 ### Qualia `2-to-26 deck cipher` practice puzzle
 

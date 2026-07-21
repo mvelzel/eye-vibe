@@ -49,9 +49,20 @@ symbols, validating the outer cyclic reduction.  The 53-action inner stream
 then resists calibrated English/Finnish homophone attacks, Wadsworth wheels,
 adaptive 57-card alphabets, Chaocipher variants, and exact source scans.
 
+The more transferable attack writes an arbitrary cyclic deck update as
+`p[i+1] = sign*delta[i] + q(p[i]) mod 83`.  Repeated candidate plaintext
+symbols must request the same value of the otherwise arbitrary function `q`.
+Seven English/Finnish corpora fail this key-free consistency test under both
+orientations and both update-timing conventions; every affine `q` is also
+excluded on the natural 27- and 42-position plaintext sets.  The only
+57-position affine survivors set the state multiplier to zero and reproduce
+the known rank stream.
+
 **Lesson:** repeated structure can prove one layer while leaving the next
-layer unknown.  Calibrated failure is preferable to treating unstable
-pseudo-language as a solve.
+layer unknown.  Convert the recovered group into a functional recurrence: it
+can turn plaintext repetition into an exact oracle before any language score.
+Calibrated failure is preferable to treating unstable pseudo-language as a
+solve.
 
 ## Cipher 5: enumerate implementation details with a key-free oracle
 
@@ -82,4 +93,3 @@ separated.
    reject unstable language-like output.
 7. **Keep layers separate.**  Metadata, traversal order, outer group action,
    inner codec, source text, and in-game key are distinct claims.
-

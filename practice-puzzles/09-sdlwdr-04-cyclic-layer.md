@@ -36,6 +36,21 @@ frequency distribution is unusually flat; its most frequent value occurs only
 73 times (`5.60%`).  Thus the cyclic layer is recovered, but its actions do not
 look like ordinary spaced prose under a static one-to-one alphabet.
 
+The deck hint permits a stronger test than treating those differences as
+substitution symbols.  In oriented coordinates an arbitrary cyclic GAK must
+obey a recurrence of the form
+
+```text
+p[i+1] = sign_c * (c[i+1] - c[i]) + q(p[i])  mod 83
+```
+
+where `q` may be any function selected by the current plaintext symbol.  The
+reflected plaintext orientation and the convention in which the next symbol
+selects `q` give eight finite variants.  A proposed source needs no known key
+to be tested: every repeat of the same selector must demand the same value of
+`q`.  That functional-consistency oracle is the main new method recovered from
+this puzzle.
+
 ## Final attack and negative results
 
 The final pass treated each remaining interpretation as a finite model with a
@@ -57,10 +72,15 @@ positive or structural control:
    `-14,250`.  Real Cipher 4 candidates remained near `-20,300..-20,900` and
    changed with the seed.  This is a calibrated rejection, not a failed run
    promoted to evidence.
-4. **Exact source compatibility.**  The 200-symbol common block was scanned
-   against the available English corpus, Crawford's *Kalevala*, Finnish
-   *Kalevala*, and recovered practice-puzzle texts.  No window obeyed even the
-   necessary one-way homophone constraints under the tested normalizations.
+4. **Exact cyclic-recurrence source compatibility.**  The 200-transition
+   common block was scanned against seven available English and Finnish
+   corpora: 3,743,827 letters-only characters and 4,557,173 space-preserving
+   characters.  The scan covers compact and natural-42 space positions, both
+   ciphertext and plaintext orientations, and current/next-symbol update
+   timing.  There are no complete hits.  The best candidate fails after only
+   19 transitions.  This excludes those concrete passages under the arbitrary
+   cyclic-GAK recurrence above; it does not exclude other source text or a
+   non-GAK deck mechanism.
 5. **Adaptive 57-card plaintext alphabets.**  Subtracting 22 makes every action
    a rank in `0..56`.  Six straightforward initial alphabets, every rotation
    and reversal, and thirteen small update laws—move-to-front/back,
@@ -78,6 +98,14 @@ positive or structural control:
    length under arbitrary bijective relabeling.  There is no full match.  The
    longest partial match is only 26 symbols with 25 distinct values, the kind
    of weak coincidence expected in a high-alphabet comparison.
+8. **Affine cyclic update schedules.**  Every recurrence
+   `p' = sign*difference + u*p + v mod 83` was exhausted over the complete
+   second portion.  No schedule keeps the plaintext inside either `A-Z` plus
+   natural-position space or the complete contiguous natural-42 alphabet.  A
+   contiguous 57-state band has exactly two schedules, but both have `u=0`:
+   `p'=difference-22` and its reflection `p'=-difference-5`.  The arbitrary
+   starting symbol is immediately discarded.  These are just the already
+   known direct rank stream, not a hidden stateful decoder.
 
 ## Verdict
 
@@ -98,6 +126,8 @@ because none has been verified.
 - Shared plaintext can expose an outer group action while leaving a separate
   inner codec unresolved.  Do not collapse those two achievements into a
   claimed solution.
+- Once an acting group is known, derive its state recurrence before applying a
+  language score.  Repeated candidate plaintext symbols then impose exact
+  function-consistency constraints even when the key function is arbitrary.
 - A supposed in-game key should survive a direct equality-pattern test before
   receiving interpretive attention.  The Eye-reuse branch fails that test.
-

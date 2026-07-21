@@ -1752,6 +1752,42 @@ diagonal checks and every marker retain equality at rate
 `30,576,476,160/825,564,856,320 = 1/27`. This post-hoc branch summary is also
 not promoted.
 
+### Practice cipher 4: arbitrary cyclic recurrence, finite exclusions
+
+The recovered standard `C83` layer supports a stronger attack than reading its
+adjacent differences as monoalphabetic plaintext actions.  In oriented
+coordinates an arbitrary cyclic group-autokey update has the necessary form
+
+```text
+p[i+1] = sign_c * delta[i] + q(p[i])  mod 83.
+```
+
+The reflected plaintext coordinate and the alternative next-symbol update
+timing are included explicitly.  The update function `q` may otherwise be
+arbitrary.  This turns a proposed source passage into a key-free consistency
+test: two occurrences of the same selector symbol must require the same `q`
+value.
+
+The exact 200-transition block shared by portions 1 and 2 was scanned under
+all eight orientation/timing conventions.  The source set comprises a large
+English composite, Crawford's *Kalevala*, a separate Sherlock Holmes corpus,
+Finnish *Seven Brothers*, Finnish *Kalevala*, and two further recovered
+practice-source files.  It contains 3,743,827 letters-only characters and
+4,557,173 space-preserving characters.  Compact-space and natural-42 space
+positions were tested separately.  No window survives all 200 transitions;
+the maximum consistent prefix is 19.  This is an exact exclusion of those
+passages under this cyclic-GAK family, not a general exclusion of prose.
+
+A second finite search exhausts every affine update
+`p'=sign*delta+u*p+v mod 83` over the complete second portion.  There are no
+survivors in either `A-Z` plus natural-position space or the contiguous
+natural-42 alphabet.  The contiguous 57-state band has exactly two reflected
+survivors, `p'=delta-22` and `p'=-delta-5`; both have `u=0`, discard their
+arbitrary starting state immediately, and merely restate the known direct
+rank reading.  General nonlinear `q` remains unresolved.  Reproduction is in
+`scripts/scan_sdlwdr_cipher4_sources.py` and
+`scripts/analyze_sdlwdr_cipher4_recurrence.py`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly

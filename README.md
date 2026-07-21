@@ -119,9 +119,12 @@ public copy found is February 2021, so it may be a later decoder clue; it is
 not proof of pre-Eye construction. More sharply, all 18 complementary rolls
 `83..100` select `ACTION_TYPE_DRAW_MANY`. The compressed Eye trie has five
 branch nodes of degrees `(2,3,3,2,3)` and thirteen continuations—exactly 18
-branch/control records. This independently types the proposed hidden states,
-but still supplies no individual assignment or plaintext. The bounded machine
-hypothesis is documented in
+retrospective node-plus-edge records. The literal machine interpretation is
+now rejected: an executed tree has fourteen card nodes rather than eighteen,
+and the lower-six checksum branch owns only eleven node-plus-edge records while
+the complement contains all eighteen values. The raw 83-of-101 selector remains
+an independently authored later-clue candidate, but it neither types nor orders
+the proposed hidden states. The bounded audit is documented in
 [`docs/procedural-wand-architecture.md`](docs/procedural-wand-architecture.md).
 
 This work has ruled out or failed to support these concrete subclasses:
