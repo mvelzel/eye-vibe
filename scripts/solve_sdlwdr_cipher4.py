@@ -164,15 +164,26 @@ def main() -> None:
     parser.add_argument("--beam", type=int, default=50_000)
     parser.add_argument(
         "--alphabet",
-        choices=("compact", "ascii32"),
-        default="ascii32",
+        choices=("natural42", "natural42-full", "compact", "ascii32"),
+        default="natural42",
         help="numeric placement of A-Z and space in the 83-position PTA",
     )
     args = parser.parse_args()
 
     messages = tuple(tuple(message) for message in json.loads(args.data.read_text()))
     model = NgramModel.train(args.corpus.read_text(errors="ignore"))
-    if args.alphabet == "compact":
+    if args.alphabet in ("natural42", "natural42-full"):
+        # The straightforward ordering reused by sdlwdr's other puzzles is
+        # ABC...XYZ012...9 followed by space and punctuation.  Restrict the
+        # first language pass to the A-Z-plus-space subset of that wheel.
+        if args.alphabet == "natural42":
+            allowed = tuple(range(26)) + (36,)
+        else:
+            allowed = tuple(range(42))
+        decode_symbol = {
+            value: value if value < 26 else 26 for value in allowed
+        }
+    elif args.alphabet == "compact":
         allowed = tuple(range(27))
         decode_symbol = {value: value for value in allowed}
     else:
