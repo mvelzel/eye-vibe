@@ -1788,6 +1788,68 @@ rank reading.  General nonlinear `q` remains unresolved.  Reproduction is in
 `scripts/scan_sdlwdr_cipher4_sources.py` and
 `scripts/analyze_sdlwdr_cipher4_recurrence.py`.
 
+### Second wide fan-out and the exact 83-to-42 complement
+
+A second deliberate breadth pass opened eighteen construction families before
+deepening any of them.  Its central arithmetic observation is
+
+```text
+5^3 = 125 = 83 visible trigrams + 42 unused trigrams,
+```
+
+while reflection on the 83-cycle independently gives zero plus 41 signed
+pairs, again 42 classes.  This is also the plaintext-wheel size used in the
+solved sdlwdr practice ciphers, although that later community construction is
+not evidence about Noita's developer key.
+
+A targeted read-only Discord search corrects the initial novelty assessment.
+The community explicitly noted [`83+42=125` in July
+2023](https://discord.com/channels/453998283174576133/1063583558154854521/1128899292875198606),
+proposed [pairing two ciphertext values per member of a 42-symbol alphabet in
+January
+2024](https://discord.com/channels/453998283174576133/817530812454010910/1192671913227583508),
+and stated [both `42=(83+1)/2` and `42=5^3-83` in April
+2024](https://discord.com/channels/453998283174576133/817530812454010910/1227134323140857926).
+The count and generic pairing are therefore not new.  The local contribution
+is the explicit reflection/log-quotient construction and the calibrated
+negative results below.
+
+The older scratch research was not silent either: its community-documents
+digest explicitly recorded the contiguous 42 unused values `83..124`.
+Failing to carry that observation into the maintained lead ledger caused the
+mistaken novelty assessment.  The scratch `pairclass` campaign concerns the
+four-class lossy surface of practice puzzle two; it is useful methodological
+background, not a prior Eye-message 83-to-42 decoder.
+
+Six unrelated cheap probes are negative.  Circular reflection centers,
+no-repeat exclusion ranks split into 41 classes plus a bit, delayed component
+tapes, arbitrary context functions through order four, header/length rules,
+and the post-hoc `13x79` body layout are all ordinary under matched controls.
+Merging copied prefixes once makes the label distribution more uniform
+(entropy `6.267139 -> 6.289341`, normalized IoC `1.071586 -> 1.028964`), which
+is compatible with a planted verification skeleton inside high-entropy cover
+but supplies no decoder.
+
+The post-hoc factor `918=34*27` initially survives.  Splitting the two fixed
+marker-derived trie traversals into 34 records of width 27 gives selected
+mod-101 closure counts three and four.  A strict sampler preserves all marker
+labels and diagonal message count vectors and conditions on the known total
+trie closure; only 35 of 5,000 accepted controls reach at least four, giving
+`36/5001 = 0.00719856`.  But the record boundaries do not align with trie
+returns, the zero rows have no common structural role, and allowing all 27
+cyclic phases gives `106/1001 = 0.105894`.  The numeric curiosity is retained
+without a record interpretation.
+
+The second canonical 42-class ordering uses discrete logarithms on
+`F83*/{+1,-1}`.  Exhausting 6,720 generator, center, and zero-placement models,
+with field value 1 fixed at class zero, is language-negative: best
+English/Finnish scores are `-16.94394/-16.08232`
+per tetragram, far from held-in `-9.03528/-10.61812` and visually random.
+Arbitrary class permutations are deliberately not searched.  Reproduction is
+in `scripts/run_second_wide_probes.py`,
+`scripts/calibrate_factored_34x27.py`, and
+`scripts/search_reflection_quotient_logs.py`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly

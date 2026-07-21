@@ -14,6 +14,11 @@ map are in
 The subsequent deliberately wide architecture map and its frozen cheap probes
 are in
 [`docs/wide-approach-map-2026-07-21.md`](docs/wide-approach-map-2026-07-21.md).
+Its second fan-out tests eighteen additional representation and construction
+families before deepening any one of them.  The longstanding community
+`125=83+42` complement motivates two explicit 42-class constructions here,
+but both canonical decoders are language-negative; the post-hoc `34x27` trie
+layout also loses selectivity once record phase is admitted.
 
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the

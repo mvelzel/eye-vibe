@@ -157,6 +157,29 @@ def _signature_groups(
     return groups
 
 
+def random_signature_preserving_relabeling(
+    alphabet_size: int,
+    constraint_vectors: Sequence[Sequence[int]],
+    rng: Random,
+    *,
+    fixed_labels: Sequence[int] = (),
+) -> tuple[int, ...]:
+    """Draw one uniform relabeling from the protected signature subgroup."""
+
+    groups = _signature_groups(
+        alphabet_size,
+        constraint_vectors,
+        fixed_labels,
+    )
+    mapping = list(range(alphabet_size))
+    for labels in groups:
+        replacements = labels.copy()
+        rng.shuffle(replacements)
+        for label, replacement in zip(labels, replacements, strict=True):
+            mapping[label] = replacement
+    return tuple(mapping)
+
+
 def signature_preserving_relabeling_calibration(
     multiplicities: Sequence[int],
     constraint_vectors: Sequence[Sequence[int]],

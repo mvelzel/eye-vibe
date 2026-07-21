@@ -348,6 +348,31 @@ do not extend blind SAT or rerun generic language optimization.  A candidate
 source can now be rejected cheaply by the exact recurrence oracle before any
 full key recovery.
 
+### Exact 42-class complement of the Eye alphabet
+
+**Status:** exact architecture count, canonical decoders negative.  The raw
+three-eye cube has `125=83+42` glyphs, and reflection on `C83` independently
+has 42 orbits.  This composes neatly with the 42-position plaintext wheel used
+in the solved practice ciphers, but that wheel is community-authored
+calibration rather than Noita evidence.
+
+The arithmetic is not newly discovered here.  Read-only Discord history shows
+the `83+42=125` observation by July 2023, a generic paired 42-to-83 homophone
+proposal by January 2024, and the two exact 42 identities together by April
+2024.  An older scratch digest had also already recorded the same contiguous
+42 unused trigrams (`83..124`); failing to promote that fact into the current
+ledger caused the mistaken initial novelty assessment.  The new local result
+is the negative calibration of two canonical orderings, not the count itself.
+
+All 83 circular-distance centers, marker-selected centers, rolling centers,
+and the canonical-origin multiplicative quotient-log family (40 generators,
+global or marker centers, two zero placements) are language-negative.  The
+strongest structure statistics are ordinary under global-label controls.
+
+**Next test:** none without an external selector.  Do not fit an arbitrary
+permutation of the 42 classes.  Reopen only if a game-authored 42-state table,
+ordering, or cycle is found.
+
 ### Qualia `2-to-26 deck cipher` practice puzzle
 
 **Status:** newly identified calibration dependency.  It maps binary plaintext
@@ -415,3 +440,13 @@ scores the first cheap falsification tests.  The direct “nine complete BWT
 rows” interpretation is already rejected, while weaker suffix/LCP metadata,
 nominal cache traces, `Z101` visible/null walks, 26-column records, 3×3 check
 objects, and raw-direction routing remain queued.
+
+The second expansion is now preserved in
+[`wide-approach-map-2026-07-21.md`](wide-approach-map-2026-07-21.md).  It adds
+eighteen lanes and completes six unrelated cheap probes before following a
+survivor.  The apparent `34x27` trie-record effect survives a strict fixed-phase
+checksum null but loses selectivity when all record phases are admitted, and
+its boundaries have no trie role.  Both canonical 83-to-42 quotient decoders
+are language-negative.  No new favorite replaces the ledger; the next wide
+cycle should prioritize untouched external-selector, serialization, snapshot,
+and metadata-only lanes rather than reopening a rejected numeric transform.
