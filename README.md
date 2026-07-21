@@ -301,6 +301,18 @@ ten-character `THAT WHICH` core remains possible, but a common `IS …`
 continuation across all three messages is impossible under perfect GAK/XGAK.
 East 2 may still use Waite's longer suffix independently.
 
+A bounded higher-order variant changes that conclusion without solving the
+cipher.  If the update remembers the two preceding plaintext symbols, the
+first two ciphertext outputs of a repeated phrase may differ; after trimming
+those two, all six windows remain isomorphic through raw end 17.  This makes
+the shared 17-character `THAT WHICH IS THE` compatible with a two-symbol-memory
+model.  In a conditioned no-adjacent-double null that freezes the selected
+ten-symbol isomorph, 2,634 of 200,000 trials extend seven more symbols
+(`1.317%`).  A corpus-wide scan over repeat-rich seeds of lengths 6–14 finds no
+independent replication: every positive gain is a shifted view of this same
+six-window episode.  The extension is therefore a useful model constraint,
+not plaintext evidence or a recovered key.
+
 A limited matched-text calibration makes the source fingerprint non-routine:
 Waite reaches length 15, while none of 17 Project Gutenberg alchemy controls
 or nine non-overlapping controls matched to Waite's 1,318,231 normalized
@@ -472,6 +484,8 @@ PYTHONPATH=src python3 scripts/optimize_base_deck.py --reset-marker
 PYTHONPATH=src python3 scripts/optimize_permutation_progression.py
 PYTHONPATH=src python3 scripts/optimize_hermetic_crib_key.py --rounds 8
 PYTHONPATH=src python3 scripts/search_lumikki_source.py
+PYTHONPATH=src python3 scripts/test_two_symbol_memory.py
+PYTHONPATH=src python3 scripts/analyze_delayed_isomorph_groups.py --base-length 6 --maximum-base-length 14
 ```
 
 The vectorized selected-card scan additionally requires NumPy:

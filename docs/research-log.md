@@ -1437,6 +1437,29 @@ the same work.  The result says only that ` THAT WHICH IS ` is exceptional in
 the available size-matched alchemical prose, not that it is Eye plaintext.
 Reproduction is in `scripts/calibrate_waite_gap_fingerprint.py`.
 
+The proposed rolling-plaintext-window extension has now received a bounded
+corpus test.  A deterministic update that depends on the current plaintext and
+its two predecessors need not make the first two outputs of two repeated
+phrases isomorphic.  After trimming those two outputs, the six first-family
+windows at raw `40/68`, `40/70`, and `45/80` remain in one isomorphism class
+through raw end 17; at end 18 they split.  Thus the 17-character plaintext
+`THAT WHICH IS THE` is compatible with a two-symbol-memory construction even
+though perfect GAK/XGAK rejects its common continuation after ten characters.
+
+The extension is modest evidence, not a decode.  A null that freezes the six
+observed ten-symbol isomorphs and independently draws later values subject to
+the corpus's no-adjacent-double rule reaches a seven-symbol extension in
+`2,634/200,000 = 1.317%` seeded trials.  Because the windows and trim were
+selected retrospectively, this is a conditioned diagnostic rather than a
+discovery p-value.  A scan of all repeat-rich equality-pattern groups with at
+least three occurrences, at least two repeated labels, and seed lengths 6–14
+finds no independent replication.  Every positive trim-two gain is a shifted
+or nested view of the same six passages; independent groups have zero gain.
+The result promotes two-symbol memory from a verbal possibility to a precise
+constraint, but leaves it below a held-out key prediction.  Reproduction is in
+`scripts/test_two_symbol_memory.py` and
+`scripts/analyze_delayed_isomorph_groups.py`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly

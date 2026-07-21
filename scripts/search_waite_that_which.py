@@ -23,7 +23,10 @@ import re
 from eye_mystery.corpus import MESSAGES, trigram_values
 from eye_mystery.isomorphs import pattern
 
-from scripts.check_waite_m3_suffix import repeated_substring_checks
+try:
+    from scripts.check_waite_m3_suffix import repeated_substring_checks
+except ModuleNotFoundError:  # Direct ``python scripts/...`` execution.
+    from check_waite_m3_suffix import repeated_substring_checks
 
 
 PHRASE = "THAT WHICH"

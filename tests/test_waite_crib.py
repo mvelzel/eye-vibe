@@ -27,6 +27,12 @@ from scripts.classify_that_which_windows import (
     patterns,
 )
 from scripts.calibrate_waite_gap_fingerprint import matched_blocks
+from scripts.test_two_symbol_memory import (
+    conditioned_null,
+    delayed_common_end,
+    delayed_patterns,
+)
+from scripts.analyze_delayed_isomorph_groups import find_groups, scan_lengths
 
 
 class WaiteCribTests(unittest.TestCase):
@@ -119,6 +125,59 @@ class WaiteCribTests(unittest.TestCase):
         self.assertEqual(
             tuple(pair_maximal_context(*pair) for pair in PAIRS),
             ((7, 19), (7, 26), (6, 26)),
+        )
+
+    def test_two_symbol_trim_restores_delayed_isomorphism(self) -> None:
+        self.assertEqual(delayed_common_end(0), 10)
+        self.assertEqual(delayed_common_end(1), 10)
+        self.assertEqual(delayed_common_end(2), 17)
+        self.assertEqual(len(set(delayed_patterns(2, 14))), 1)
+        self.assertEqual(len(set(delayed_patterns(2, 17))), 1)
+        self.assertEqual(len(set(delayed_patterns(2, 18))), 2)
+
+    def test_conditioned_null_is_seeded_and_bounded(self) -> None:
+        first = conditioned_null(
+            trials=20,
+            maximum_extension=2,
+            trim=2,
+            seed=7,
+            batch_size=7,
+        )
+        second = conditioned_null(
+            trials=20,
+            maximum_extension=2,
+            trim=2,
+            seed=7,
+            batch_size=7,
+        )
+        self.assertEqual(first, second)
+        self.assertTrue(all(0 <= value <= 20 for value in first))
+
+    def test_delayed_group_scan_recovers_famous_six_windows(self) -> None:
+        groups = find_groups(
+            base_length=9,
+            minimum_occurrences=3,
+            minimum_repeat_excess=2,
+        )
+        famous = next(
+            item for item in groups if item.equality_pattern == "A.B.CB.AC"
+        )
+        self.assertEqual(len(famous.occurrences), 6)
+        self.assertEqual(famous.common_ends, (10, 10, 17))
+        self.assertEqual(famous.trim_two_gain, 7)
+
+    def test_delayed_gain_has_no_independent_repeat_rich_replication(self) -> None:
+        groups = scan_lengths(
+            range(6, 15),
+            minimum_occurrences=3,
+            minimum_repeat_excess=2,
+        )
+        positive = [item for item in groups if item.trim_two_gain > 0]
+        self.assertTrue(positive)
+        self.assertEqual(max(item.trim_two_gain for item in positive), 7)
+        self.assertEqual(
+            len({item.relative_occurrence_signature for item in positive}),
+            1,
         )
 
 

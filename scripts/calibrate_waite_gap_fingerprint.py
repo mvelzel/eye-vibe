@@ -16,11 +16,18 @@ import argparse
 from dataclasses import dataclass
 from pathlib import Path
 
-from scripts.search_waite_that_which import (
-    TARGET_GAPS,
-    maximal_common_gap_strings,
-    normalize_ocr,
-)
+try:
+    from scripts.search_waite_that_which import (
+        TARGET_GAPS,
+        maximal_common_gap_strings,
+        normalize_ocr,
+    )
+except ModuleNotFoundError:  # Direct ``python scripts/...`` execution.
+    from search_waite_that_which import (
+        TARGET_GAPS,
+        maximal_common_gap_strings,
+        normalize_ocr,
+    )
 
 
 @dataclass(frozen=True)

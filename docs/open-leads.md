@@ -53,9 +53,10 @@ character pairs.  An unrestricted one-hidden-transposition SMT model remains
 `unknown` at both 30 and 117 symbols, so this is a rejection of the finite
 standard family only.
 
-The six-window extension has an exact boundary.  The ciphertext equality
-patterns at raw `40/68`, `40/70`, and `45/80` are identical across all six
-occurrences through length 10.  At length 11 they split: East 1 has
+Under perfect GAK/XGAK, the six-window extension has an exact boundary.  The
+ciphertext equality patterns at raw `40/68`, `40/70`, and `45/80` are
+identical across all six occurrences through length 10.  At length 11 they
+split: East 1 has
 `A.B.CB.AC..`, while West 1 and East 2 have `ABC.DC.AD.B`.  Thus a single
 common plaintext can extend through at most ten characters under perfect
 GAK/XGAK.  Independently, the longest OCR string repeated at all three source
@@ -63,6 +64,17 @@ gaps is the unique 15-character ` THAT WHICH IS `.  This makes the Waite
 fingerprint more specific while rejecting its common `IS ` continuation in the
 Eyes.  The exact ten-character core remains compatible; East 2's longer suffix
 can still be different from the other two messages after that core.
+
+A two-symbol rolling-state generalization is a genuine but limited escape
+hatch.  Trimming the first two outputs of each candidate occurrence restores a
+single isomorphism class through raw end 17, so the shared plaintext
+`THAT WHICH IS THE` is compatible with this higher-order model.  Conditioned
+on the already selected ten-symbol isomorph and the no-adjacent-double rule,
+`2,634/200,000 = 1.317%` simulated extensions reach seven additional symbols.
+Scanning every repeat-rich equality-pattern group at seed lengths 6–14 finds
+no independent replication: all positive trim-two gains are nested or shifted
+views of the same six passages.  This is enough to retain and formalize the
+model, but not enough to promote the phrase to plaintext.
 
 A matched control makes the source-only fingerprint worth retaining.  The same
 normalization and gaps were applied to 17 Project Gutenberg alchemy-subject
@@ -109,8 +121,10 @@ resynchronize around limited plaintext differences.
 
 **Next test:** use a source-backed crib such as the Waite suffix or an external
 in-game key to learn a small, explicitly described operation family and demand
-held-out prediction.  Also formalize the proposed rolling two-plaintext-symbol
-state update; nearby last-family isomorphs make larger local memory unlikely.
+held-out prediction.  The rolling two-plaintext-symbol state update now passes
+the selected first-family boundary test but has no independent repeat-rich
+replication; use it only in a capacity-controlled construction with a held-out
+prediction.  Nearby last-family isomorphs make larger local memory unlikely.
 
 ### External in-game key or later hint
 
