@@ -390,12 +390,32 @@ rank 9, and adding the trie-edge count vector raises it to 10.  Therefore the
 new equation is not a formal linear consequence of any combination of the
 nine known message sums.
 
+An exact conditional calibration removes the main weakness of those simple
+relabeling controls.  Group visible labels by their complete occurrence-count
+triple in East 1, East 3, and East 5.  Permuting labels within a group preserves
+all three diagonal complete-message sums **exactly**, not just modulo 101, and
+also preserves the entire equality trie.  Convolving every within-group
+permutation gives the full subgroup rather than a Monte Carlo estimate:
+
+```text
+constraint                                  zero / total                         rate
+three diagonal sums preserved exactly       1,307,844,501,760 / 132,090,377,011,200   0.990113%
+same, with all nine marker labels frozen        8,174,134,656 /     825,564,856,320   0.990126%
+```
+
+Thus the existing zero checks do not make the trie closure common in this huge
+exact conditional subgroup; it behaves almost precisely like one additional
+uniform equation modulo 101.  This still samples a structured subgroup rather
+than every permutation satisfying the checks, but it is a much better matched
+control than unconditional relabeling.
+
 The calibration is not a pristine discovery p-value: the modulus and corpus
-were already known to be checksum-rich, and the relabeling controls do not
-condition on preserving the three diagonal zero sums.  Still, unlike the
+were already known to be checksum-rich, and the exact conditional universe is
+a structured subgroup chosen after the result.  Still, unlike the
 retrospective body `!Fi` echo, the exact statistic was named in the mechanism
-map before it was evaluated, the body boundary is independently fixed, and
-the result is invariant under every traversal choice.  This promotes
+map before it was evaluated, the body boundary is independently fixed, the
+result is invariant under every traversal choice, and the diagonal checks are
+now explicitly conditioned.  This promotes
 **prefix-trie edge sieving plus mod-101 closure** to the strongest novel
 mechanical lead.  The next work must seek a second prediction: a developer
 asset selecting the same merge-once rule, or a non-fitted recursive checksum
@@ -420,3 +440,78 @@ In particular, the claimed **70-pixel Seula residual remains unreproduced**:
 simple raw-sprite masks give 0, 4, 109, 302, 411, or 480, and the dossier did
 not define the extra mask needed to obtain 70.  A future asset-derived selector
 would still be valuable; the present branch value does not supply one.
+
+There is one genuine asset-selected number worth a stronger test.  Veska's
+upper and lower pictograms objectively contain 9 and 8 authored pixels even
+though the dossier's surrounding `12|43` partition fails.  The trie happens to
+factor twice by their sum 17:
+
+```text
+918   = 54 * 17
+37774 = 22 * 17 * 101 = 22 * 1717
+```
+
+Within the exact diagonal-check-preserving relabeling subgroup, joint
+divisibility by `17*101` occurs in
+`125,161,099,264 / 132,090,377,011,200 = 0.094754%`; freezing every marker
+label gives `830,894,368 / 825,564,856,320 = 0.100646%`.  These exploratory
+rates are stronger than the mod-101 equation alone, but 17 was tested after
+inspecting the factorization and the topology's edge count is fixed in this
+null.  They are not discovery probabilities.
+
+The obvious 17-role mechanism fails.  Partition each of the canonical,
+East-5-first trail, marker-trie, and marker-LF serializations into either 17
+consecutive 54-edge records or 17 cyclic lanes, under both DFS and BFS.  None
+of the 136 resulting records has the expected sum 2,222; no consecutive record
+closes modulo 101.  One marker-LF/DFS cyclic lane closes, which is ordinary at
+this search size.  Thus Gate's objective `9|8=17` remains a possible later
+grouping hint, but it does not currently supply the grouping or a decoder.
+
+## Seventh bounded test: 18 structural null states
+
+The trie and modulus support a more coherent, if deliberately adventurous,
+architecture.  The visible alphabet is `0..82`, so `Z101` contains exactly 18
+missing labels, `83..100`, with sum
+
+```text
+83 + ... + 100 = 1647 = 16*101 + 31.
+```
+
+The compressed nine-leaf body trie has five branching nodes and thirteen
+outgoing compressed branch edges—exactly 18 typed structural records.  This
+also gives a literal possible parsing of the already recovered breadth-first
+depth string `BEXIT`: branch nodes plus exits.  Most sharply, the lower-six
+descendant trie has residue 70, so adding every missing label once closes:
+
+```text
+lower-six distinct descendants  70
+missing labels 83..100           31
+                                  --
+                                 101 = 0 mod 101
+```
+
+This predicts a joint event rather than renaming the full-trie zero.  In the
+exact diagonal-check-preserving subgroup with all nine markers fixed,
+
+```text
+full trie = 0 and lower-six descendants = 70
+80,918,060 / 825,564,856,320 = 0.0098015%
+```
+
+Without marker freezing the rate is
+`12,948,675,076 / 132,090,377,011,200 = 0.0098029%`.  Conditional on the full
+trie already closing, the lower event remains almost exactly `1/101`.  Four
+proper internal branch nodes were eligible for the post-hoc complement search;
+summing their exact joint counts gives a conservative union bound of `0.03922%`
+with markers fixed.  The root descendant vector is algebraically tied to the
+full trie and cannot produce this target under the same condition.
+
+This is not a discovery p-value.  The missing-state interpretation, the
+node-plus-edge record count, and the branch complement were noticed after the
+trie closure, and `BEXIT` has several possible readings.  More importantly,
+the hypothesis supplies only the **set** of structural labels `83..100`; it has
+no canonical bijection assigning those labels to the five nodes and thirteen
+exits.  It is promoted as the strongest novel architecture, not a decoder.
+Its next falsification target is precise: an in-game asset or a key-free body
+relation must order or type those 18 records without reference to desired
+plaintext.

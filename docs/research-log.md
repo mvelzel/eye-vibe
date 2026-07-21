@@ -1597,9 +1597,19 @@ does among the 83 additive translations.  A seeded 200,000-sample arbitrary
 global permutation control, preserving the exact equality skeleton and trie
 topology, closes 1,895 times (`0.9475%`).  These are not conditional discovery
 p-values because they do not preserve the three diagonal zero sums and the
-modulus was already selected.  They do show that closure is sensitive to the
-observed numeric labeling and is expected at roughly one percent under simple
-global relabeling controls.
+modulus was already selected.
+
+An exact matched subgroup now conditions those checks.  Partition the 83
+labels by their three occurrence counts in the complete East 1, East 3, and
+East 5 streams.  Arbitrary permutations within each class preserve every
+diagonal sum exactly and preserve the full equality trie.  Convolving the
+small within-class residue histograms counts all
+132,090,377,011,200 relabelings: 1,307,844,501,760 close (`0.990113%`).  If all
+nine visible marker labels are additionally frozen, 8,174,134,656 of
+825,564,856,320 close (`0.990126%`).  The residue distribution is nearly
+uniform, so the known diagonal checks do not explain the trie zero within this
+large exact subgroup.  This remains a post-result conditional universe rather
+than a universal discovery p-value.
 
 This is the strongest new mechanical lead from the wide pass because its exact
 statistic—serialize each distinct trie edge once and test checksums—was frozen
@@ -1615,6 +1625,48 @@ total in the mod-101 grid.  It does not repair the Gate asset claim: both
 quantities are Eye-derived, while direct Seula sprite masks still produce no
 70-pixel residual without an unpublished extra mask.  The match is retained as
 an internal echo and explicitly not counted as independent corroboration.
+
+The defensible Gate `9|8=17` pictograms motivate one additional exploratory
+factor test.  The deduplicated trie has `918=54*17` edges and total
+`37,774=22*17*101`.  In the exact diagonal-check-preserving subgroup, total
+divisibility by `17*101` holds for 125,161,099,264 of
+132,090,377,011,200 relabelings (`0.094754%`); with all marker labels fixed it
+holds for 830,894,368 of 825,564,856,320 (`0.100646%`).  The factor was noticed
+after the trie total and the null fixes the edge count, so these are not
+discovery p-values.
+
+The first concrete 17-role construction is rejected.  Four independently
+available sibling orders—canonical, East-5-first trail, marker-trie, and
+marker-LF—were serialized under DFS and BFS, then partitioned both into 17
+consecutive 54-edge blocks and 17 position-mod-17 lanes.  No record has sum
+2,222, no consecutive block closes modulo 101, and only one of 136 cyclic
+lanes closes.  The arithmetic factor and later Gate selector stay logged, but
+they do not yet define a trie traversal, partition, or plaintext.
+
+A more coherent `Z101` architecture follows from three exact counts.  The
+visible labels `0..82` leave 18 missing values `83..100`.  The compressed
+nine-leaf prefix trie has five branch nodes and thirteen outgoing compressed
+edges, also 18.  Those missing values total 1,647, or residue 31; the lower-six
+descendant trie uniquely has residue 70, so adding the complete missing range
+closes modulo 101.  This offers a literal but unproven parse of the earlier
+breadth-first depth output `BEXIT` as branch nodes plus exits.
+
+The joint condition is not explained by the diagonal checks.  Exact bivariate
+convolution over the diagonal-check-preserving subgroup gives
+12,948,675,076 of 132,090,377,011,200 relabelings (`0.0098029%`) with both the
+full trie at zero and the lower descendants at 70.  Freezing all nine marker
+labels gives 80,918,060 of 825,564,856,320 (`0.0098015%`).  The four eligible
+proper branch nodes each have an almost identical joint rate; summing them
+gives a conservative post-hoc union bound of `0.03922%`.  The all-nine node is
+linearly tied to the full checksum and cannot hit 70 when it closes.
+
+This is exploratory evidence, because the 18-record interpretation and branch
+target were formulated after inspecting the closure.  It is not operational:
+no rule assigns the values `83..100` to the five nodes and thirteen exits.
+Brute-forcing that 18! bijection against language would be unconstrained.  The
+lead should be promoted only by an independent in-game ordering/typing clue or
+a key-free body prediction.  Exact reproduction is included in
+`scripts/analyze_trie_checksum.py`.
 
 ## Crib observations
 

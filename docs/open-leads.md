@@ -30,6 +30,14 @@ discovery p-value.  A second common start offset, 41, also closes; it was not
 selected independently, whereas offset 1 is exactly the established
 marker/body boundary.
 
+A stronger exact subgroup control does preserve the three diagonal sums.
+Labels with identical East 1/East 3/East 5 count triples may be permuted freely
+without changing any of those complete sums or the equality trie.  Exactly
+`1,307,844,501,760 / 132,090,377,011,200 = 0.990113%` of that subgroup closes;
+freezing all nine marker labels gives
+`8,174,134,656 / 825,564,856,320 = 0.990126%`.  The earlier checks therefore do
+not make the trie equation routine within this large matched subgroup.
+
 **Next test:** derive a small recursive checksum law from the fixed trie and
 demand a held-out branch or header prediction.  Independently inspect later
 developer assets for a literal merge/deduplicate-once sieve coupled to 101.
@@ -41,6 +49,34 @@ six after their length-five shared prefix uniquely give 70.  That echoes the
 Eye checksum grid's known main-diagonal mirror total, but it is not independent
 Gate corroboration because both are derived from the Eye corpus.  The proposed
 70-pixel Seula residual still cannot be reproduced from raw sprite masks.
+
+Veska's objective `9|8=17` pictograms also meet two exact trie factors:
+`918=54*17` and `37,774=22*17*101`.  Joint divisibility by `17*101` occurs in
+`0.094754%` of the diagonal-check-preserving subgroup (`0.100646%` with marker
+labels fixed), but this is exploratory and does not calibrate the fixed edge
+count.  The natural 17-record interpretation is negative: eight selected
+DFS/BFS traversals, each split into consecutive and cyclic 54-edge records,
+produce no 2,222-sum record and no consecutive mod-101 closure.  Retain 17 as
+a weak possible grouping selector, not a decoded Gate instruction.
+
+There is a stronger internal architecture.  `Z101` has 18 labels absent from
+the visible `0..82` alphabet.  The compressed body trie has five branch nodes
+and thirteen exits, also 18; `BEXIT` may literally distinguish those record
+types.  The missing values `83..100` sum to 31 modulo 101, while the lower-six
+descendant trie uniquely sums to 70, giving a second closure `70+31=101`.
+
+The exact joint event (full trie zero and lower branch 70) occurs in
+`80,918,060 / 825,564,856,320 = 0.0098015%` of the diagonal-check-preserving,
+marker-fixed subgroup.  Accounting by a union bound for inspecting the four
+eligible proper branches gives at most `0.03922%`.  This is post-hoc
+architecture evidence, not a discovery p-value.  Its critical missing piece is
+a canonical assignment of values `83..100` to the five nodes and thirteen
+exits.
+
+**Promotion test for the 18-state architecture:** find an independently
+authored game selector or a key-free body identity that orders/types all 18
+records.  Do not search 18! assignments or score plaintext; that would make the
+hypothesis unfalsifiable.
 
 ### S3 header sieve and body `!Fi` echo
 

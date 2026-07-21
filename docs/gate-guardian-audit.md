@@ -108,6 +108,13 @@ sum to 70 modulo 101.  This is a concrete same-corpus echo of the mirror total,
 but it is not Gate-asset corroboration and was noticed after the target 70 was
 known.  It does not supply the missing Seula sprite mask described below.
 
+The objective 9-pixel upper and 8-pixel lower Veska pictograms also have a new
+Eye-side echo: the distinct body trie has `918=54*17` edges totaling
+`37,774=22*17*101`.  Natural 17-way consecutive and cyclic partitions under
+the available DFS/BFS traversals fail to produce repeated 2,222-sum records or
+consecutive mod-101 closures.  The factor is retained as a retrospective
+possible grouping hint, not an executed 17-role Gate machine.
+
 The dossier's three Q-C edges are also literal adjacent transitions:
 
 ```text

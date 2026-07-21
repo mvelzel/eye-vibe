@@ -8,6 +8,8 @@ from eye_mystery.trie_checksum import (
     affine_f83_relabeling_calibration,
     branch_descendant_checksums,
     random_relabeling_zero_count,
+    signature_preserving_relabeling_calibration,
+    signature_preserving_joint_calibration,
     trie_checksum,
     vector_rank_mod,
 )
@@ -63,6 +65,8 @@ class TrieChecksumTests(unittest.TestCase):
                 (("east4", "west4", "east5"), 20, 13),
             ),
         )
+        self.assertEqual(2 * len(branches) + len(MESSAGE_ORDER) - 1, 18)
+        self.assertEqual(sum(range(83, 101)) % 101, 31)
 
     def test_affine_relabeling_control_is_about_one_percent(self) -> None:
         calibration = affine_f83_relabeling_calibration(
@@ -92,6 +96,60 @@ class TrieChecksumTests(unittest.TestCase):
             vector_rank_mod(messages + (self.result.label_multiplicities,), 101),
             10,
         )
+
+    def test_exact_null_preserves_diagonal_checks_and_markers(self) -> None:
+        def count_vector(values: tuple[int, ...]) -> tuple[int, ...]:
+            counts = Counter(values)
+            return tuple(counts[value] for value in range(83))
+
+        diagonal = tuple(
+            count_vector(self.streams[name])
+            for name in ("east1", "east3", "east5")
+        )
+        free = signature_preserving_relabeling_calibration(
+            self.result.label_multiplicities,
+            diagonal,
+        )
+        self.assertEqual(free.total, 132_090_377_011_200)
+        self.assertEqual(free.zero_count, 1_307_844_501_760)
+
+        fixed = signature_preserving_relabeling_calibration(
+            self.result.label_multiplicities,
+            diagonal,
+            fixed_labels=tuple(
+                self.streams[name][0] for name in MESSAGE_ORDER
+            ),
+        )
+        self.assertEqual(fixed.total, 825_564_856_320)
+        self.assertEqual(fixed.zero_count, 8_174_134_656)
+
+        joint = signature_preserving_relabeling_calibration(
+            self.result.label_multiplicities,
+            diagonal,
+            checksum_modulus=17 * 101,
+        )
+        self.assertEqual(joint.zero_count, 125_161_099_264)
+        joint_fixed = signature_preserving_relabeling_calibration(
+            self.result.label_multiplicities,
+            diagonal,
+            fixed_labels=tuple(
+                self.streams[name][0] for name in MESSAGE_ORDER
+            ),
+            checksum_modulus=17 * 101,
+        )
+        self.assertEqual(joint_fixed.zero_count, 830_894_368)
+
+        lower_six = branch_descendant_checksums(self.streams, start=1)[2]
+        bivariate = signature_preserving_joint_calibration(
+            self.result.label_multiplicities,
+            lower_six.label_multiplicities,
+            diagonal,
+            fixed_labels=tuple(
+                self.streams[name][0] for name in MESSAGE_ORDER
+            ),
+        )
+        self.assertEqual(bivariate.total, 825_564_856_320)
+        self.assertEqual(bivariate.count(0, 70), 80_918_060)
 
 
 if __name__ == "__main__":

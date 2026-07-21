@@ -3,8 +3,11 @@
 from __future__ import annotations
 
 from collections import Counter
+from collections import defaultdict
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
+from itertools import permutations
+from math import factorial
 from random import Random
 
 from .prefix_hierarchy import PrefixCluster, prefix_clusters
@@ -25,6 +28,7 @@ class BranchChecksum:
     descendant_edge_count: int
     descendant_total: int
     descendant_residue: int
+    label_multiplicities: tuple[int, ...]
 
 
 def trie_checksum(
@@ -73,6 +77,7 @@ def branch_descendant_checksums(
                 descendant_edge_count=checksum.edge_count,
                 descendant_total=checksum.total,
                 descendant_residue=checksum.residue,
+                label_multiplicities=checksum.label_multiplicities,
             )
         )
     return tuple(results)
@@ -83,6 +88,159 @@ class AffineRelabelingCalibration:
     zero_count: int
     total: int
     zero_translations: tuple[int, ...]
+
+
+@dataclass(frozen=True)
+class SignatureRelabelingCalibration:
+    """Exact checksum distribution in a checksum-preserving subgroup."""
+
+    residue_counts: tuple[int, ...]
+
+    @property
+    def total(self) -> int:
+        return sum(self.residue_counts)
+
+    @property
+    def zero_count(self) -> int:
+        return self.residue_counts[0]
+
+
+@dataclass(frozen=True)
+class JointSignatureRelabelingCalibration:
+    """Exact joint distribution of two sums in the same protected subgroup."""
+
+    residue_counts: tuple[tuple[int, ...], ...]
+
+    @property
+    def total(self) -> int:
+        return sum(sum(row) for row in self.residue_counts)
+
+    def count(self, first_residue: int, second_residue: int) -> int:
+        return self.residue_counts[first_residue][second_residue]
+
+
+def _signature_groups(
+    alphabet_size: int,
+    constraint_vectors: Sequence[Sequence[int]],
+    fixed_labels: Sequence[int],
+) -> list[list[int]]:
+    if any(len(vector) != alphabet_size for vector in constraint_vectors):
+        raise ValueError("constraint vectors must span the visible alphabet")
+    fixed = set(fixed_labels)
+    if any(label not in range(alphabet_size) for label in fixed):
+        raise ValueError("fixed label outside the visible alphabet")
+    classes: dict[tuple[int, ...], list[int]] = defaultdict(list)
+    for label in range(alphabet_size):
+        classes[
+            tuple(vector[label] for vector in constraint_vectors)
+        ].append(label)
+    groups: list[list[int]] = []
+    for labels in classes.values():
+        groups.extend([label] for label in labels if label in fixed)
+        free = [label for label in labels if label not in fixed]
+        if free:
+            groups.append(free)
+    return groups
+
+
+def signature_preserving_relabeling_calibration(
+    multiplicities: Sequence[int],
+    constraint_vectors: Sequence[Sequence[int]],
+    *,
+    fixed_labels: Sequence[int] = (),
+    checksum_modulus: int = 101,
+) -> SignatureRelabelingCalibration:
+    """Permute labels having identical counts in every protected message.
+
+    Such relabelings preserve each protected message sum exactly, not merely
+    modulo the checksum.  Fixed labels can additionally preserve the visible
+    marker values.  Independent within-class residue histograms are convolved
+    to count the entire subgroup exactly.
+    """
+
+    alphabet_size = len(multiplicities)
+    groups = _signature_groups(
+        alphabet_size, constraint_vectors, fixed_labels
+    )
+
+    distribution = [0] * checksum_modulus
+    distribution[0] = 1
+    expected_total = 1
+    for labels in groups:
+        group_distribution = [0] * checksum_modulus
+        for relabeled in permutations(labels):
+            residue = sum(
+                multiplicities[label] * value
+                for label, value in zip(labels, relabeled, strict=True)
+            ) % checksum_modulus
+            group_distribution[residue] += 1
+        next_distribution = [0] * checksum_modulus
+        for left_residue, left_count in enumerate(distribution):
+            if not left_count:
+                continue
+            for right_residue, right_count in enumerate(group_distribution):
+                if right_count:
+                    next_distribution[
+                        (left_residue + right_residue) % checksum_modulus
+                    ] += left_count * right_count
+        distribution = next_distribution
+        expected_total *= factorial(len(labels))
+    if sum(distribution) != expected_total:
+        raise AssertionError("relabeling convolution lost assignments")
+    return SignatureRelabelingCalibration(tuple(distribution))
+
+
+def signature_preserving_joint_calibration(
+    first_multiplicities: Sequence[int],
+    second_multiplicities: Sequence[int],
+    constraint_vectors: Sequence[Sequence[int]],
+    *,
+    fixed_labels: Sequence[int] = (),
+    checksum_modulus: int = 101,
+) -> JointSignatureRelabelingCalibration:
+    """Count two checksum residues over every protected relabeling exactly."""
+
+    if len(first_multiplicities) != len(second_multiplicities):
+        raise ValueError("the two count vectors must span the same alphabet")
+    groups = _signature_groups(
+        len(first_multiplicities), constraint_vectors, fixed_labels
+    )
+    distribution: dict[tuple[int, int], int] = {(0, 0): 1}
+    expected_total = 1
+    for labels in groups:
+        group_distribution: Counter[tuple[int, int]] = Counter()
+        for relabeled in permutations(labels):
+            first = sum(
+                first_multiplicities[label] * value
+                for label, value in zip(labels, relabeled, strict=True)
+            ) % checksum_modulus
+            second = sum(
+                second_multiplicities[label] * value
+                for label, value in zip(labels, relabeled, strict=True)
+            ) % checksum_modulus
+            group_distribution[first, second] += 1
+        next_distribution: dict[tuple[int, int], int] = defaultdict(int)
+        for (left_first, left_second), left_count in distribution.items():
+            for (right_first, right_second), right_count in group_distribution.items():
+                next_distribution[
+                    (
+                        (left_first + right_first) % checksum_modulus,
+                        (left_second + right_second) % checksum_modulus,
+                    )
+                ] += left_count * right_count
+        distribution = dict(next_distribution)
+        expected_total *= factorial(len(labels))
+    rows = tuple(
+        tuple(
+            distribution.get((first, second), 0)
+            for second in range(checksum_modulus)
+        )
+        for first in range(checksum_modulus)
+    )
+    result = JointSignatureRelabelingCalibration(rows)
+    if result.total != expected_total:
+        raise AssertionError("joint relabeling convolution lost assignments")
+    return result
 
 
 def affine_f83_relabeling_calibration(

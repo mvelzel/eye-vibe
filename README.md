@@ -91,10 +91,20 @@ merge every copied body prefix into one trie, and count each distinct edge
 once.  Its 918 labels sum to `37,774 = 374 * 101`.  The result is traversal
 invariant, fails suffix/raw/nearby-offset/row-family controls, and adds a tenth
 independent label-count equation to the nine message sums over `F101`.
-Unconditioned global relabeling controls close about one percent of the time,
-so this is a concrete construction lead rather than a decryption or definitive
-p-value.  It motivates testing whether the Eye bodies are a checksum-protected
-prefix-tree object intended to be merged or sieved before any cipher step.
+An exact 132-trillion-member relabeling subgroup that preserves all three
+diagonal checksum equations closes in `0.990113%` of cases; freezing all nine
+markers changes that only to `0.990126%`.  This is a concrete construction lead
+rather than a decryption or definitive p-value.  It motivates testing whether
+the Eye bodies are a checksum-protected prefix-tree object intended to be
+merged or sieved before any cipher step.
+
+A more speculative synthesis gives that object a possible hidden state space:
+the 18 labels missing between the visible `0..82` and modulus 101 match the
+compressed trie's five branch nodes plus thirteen exits.  Values `83..100` sum
+to 31, exactly complementing the lower-six descendant residue 70.  The joint
+full/lower closure has exact marker-fixed conditional rate `0.0098015%`, but no
+rule yet assigns the 18 values to the 18 records.  It is an architecture to
+falsify, not permission to brute-force an 18! plaintext fit.
 
 This work has ruled out or failed to support these concrete subclasses:
 
