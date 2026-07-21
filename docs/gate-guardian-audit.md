@@ -102,6 +102,12 @@ This independently agrees with the dossier's reported scale.  It is a real,
 percent-level fit, not a decoder and not an independent probability that may
 be multiplied into discoveries made from the same corpus.
 
+A later breadth-first prefix-trie test finds another Eye-derived 70: after the
+lower six bodies' shared five-symbol prefix, their distinct descendant edges
+sum to 70 modulo 101.  This is a concrete same-corpus echo of the mirror total,
+but it is not Gate-asset corroboration and was noticed after the target 70 was
+known.  It does not supply the missing Seula sprite mask described below.
+
 The dossier's three Q-C edges are also literal adjacent transitions:
 
 ```text

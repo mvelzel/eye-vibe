@@ -8,7 +8,9 @@ statistical curiosity from a validated decryption.
 The current queue is maintained in [`docs/open-leads.md`](docs/open-leads.md);
 the chronological evidence and negative results remain in
 [`docs/research-log.md`](docs/research-log.md).  A lead entering the queue does
-not replace the others.
+not replace the others.  The breadth-first assumption audit and novel mechanism
+map are in
+[`docs/novel-synthesis-2026-07-21.md`](docs/novel-synthesis-2026-07-21.md).
 
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
@@ -70,6 +72,29 @@ The strongest remaining body-cipher model is a group-autokey cipher with hidden
 state, plausibly equivalent to shuffling an 83-card deck and emitting the top
 card. This explains the flat distribution, causal isomorphs, chaining conflicts,
 and lack of doubles, but it is a cipher class rather than a key or plaintext.
+
+A breadth-first mechanism audit has also found a clean new header fact.  The
+first six marker edges enumerate all six elements of `S3`: the first natural
+row is the three even permutations and the second is the three odd
+permutations; the final row is identity plus the two adjacent generators.  A
+retrospective boundary operation on body trigrams exactly echoes the complete
+marker-BWT output `!Fi`, but a held-out test rejects the obvious decoder: the
+two strong last-family body-context maps are not involutions and violate the
+`ABA=BAB` braid relation.  The `S3` layout is therefore retained as a possible
+global sieve or conformance clue, not claimed as a body transform.  An
+independent exhaustive five-direction `S3` transducer produces a unique
+eight-of-nine near-fit, but `98.353%` of exact intact-body reassignments do as
+well or better, so that alternative is rejected too.
+
+The breadth pass's strongest positive is simpler: strip the nine markers,
+merge every copied body prefix into one trie, and count each distinct edge
+once.  Its 918 labels sum to `37,774 = 374 * 101`.  The result is traversal
+invariant, fails suffix/raw/nearby-offset/row-family controls, and adds a tenth
+independent label-count equation to the nine message sums over `F101`.
+Unconditioned global relabeling controls close about one percent of the time,
+so this is a concrete construction lead rather than a decryption or definitive
+p-value.  It motivates testing whether the Eye bodies are a checksum-protected
+prefix-tree object intended to be merged or sieved before any cipher step.
 
 This work has ruled out or failed to support these concrete subclasses:
 
@@ -488,6 +513,12 @@ PYTHONPATH=src python3 scripts/optimize_hermetic_crib_key.py --rounds 8
 PYTHONPATH=src python3 scripts/search_lumikki_source.py
 PYTHONPATH=src python3 scripts/test_two_symbol_memory.py
 PYTHONPATH=src python3 scripts/analyze_delayed_isomorph_groups.py --base-length 6 --maximum-base-length 14
+PYTHONPATH=src python3 scripts/analyze_suffix_row_hypothesis.py
+PYTHONPATH=src python3 scripts/analyze_conformance_grid.py
+PYTHONPATH=src python3 scripts/analyze_breadth_probes.py
+PYTHONPATH=src python3 scripts/test_s3_context_relations.py
+PYTHONPATH=src python3 scripts/analyze_s3_direction_transducer.py
+PYTHONPATH=src python3 scripts/analyze_trie_checksum.py --samples 200000
 ```
 
 The vectorized selected-card scan additionally requires NumPy:

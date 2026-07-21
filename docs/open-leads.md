@@ -9,6 +9,74 @@ what would stop or promote it.  Completed and rejected branches remain in
 
 ## Active and high value
 
+### Prefix-trie sieve closes modulo 101
+
+**Status:** strongest breadth-first positive; exact pre-registered statistic,
+with shared-data rather than pristine null calibration.
+
+Strip the nine independently identified markers, merge all copied body
+prefixes, and count every distinct labeled trie edge once.  The resulting 918
+values sum to `37,774 = 374 * 101`.  Traversal and sibling order cannot alter
+the multiset.  Suffix-trie, raw-direction, nearby-offset, row-family, and
+leave-one-panel-out controls fail.  The equation is formally independent of
+the nine individual message-sum equations: adding its label-count vector
+raises their rank over `F101` from 9 to 10.
+
+Global relabeling calibrations put an unconditioned exact zero near one percent
+(71/6,806 affine `F83` permutations; 1,895/200,000 seeded arbitrary label
+permutations).  These controls preserve the complete equality trie but not the
+three existing diagonal zero sums, so they are diagnostics rather than a
+discovery p-value.  A second common start offset, 41, also closes; it was not
+selected independently, whereas offset 1 is exactly the established
+marker/body boundary.
+
+**Next test:** derive a small recursive checksum law from the fixed trie and
+demand a held-out branch or header prediction.  Independently inspect later
+developer assets for a literal merge/deduplicate-once sieve coupled to 101.
+Reject semantic readings that merely rename `37,774`; promote only another
+quantity predicted without choosing a new traversal or fitted weight.
+
+The five internal branch descendant residues are `30,19,70,89,13`; the lower
+six after their length-five shared prefix uniquely give 70.  That echoes the
+Eye checksum grid's known main-diagonal mirror total, but it is not independent
+Gate corroboration because both are derived from the Eye corpus.  The proposed
+70-pixel Seula residual still cannot be reproduced from raw sprite masks.
+
+### S3 header sieve and body `!Fi` echo
+
+**Status:** structural construction clue; exact cross-layer identity selected
+retrospectively, while its most natural predictive body action is rejected.
+
+The first six marker control edges enumerate all six permutations of the three
+eye components: the first natural row is `A3` and the second is its odd coset.
+At their canonical East 2/West 2 boundary, a frozen root/frame/exit operation
+reproduces the complete marker-BWT output from body data:
+
+```text
+reverse universal root under East 2 order: 010,231 -> 001,123
+first West 2 symbol after the five-value row prefix: 234 -> 243
+combined: 001123243 = 1,38,73 = !Fi
+```
+
+The exact output occurs once among the nine even-header/odd-exit pairs.  The
+rule was discovered after `!Fi`, however, and includes inspected choices, so it
+is evidence of possible construction redundancy rather than plaintext.
+
+A held-out Coxeter test now rejects the simplest decoder interpretation.  If
+the final-row `W4=(12)` and `E5=(01)` headers name the observed East 4→West 4
+and East 4→East 5 body-context permutations, both maps must square to the
+identity and obey `ABA=BAB`.  Instead every observed square edge is nonidentity
+(`7/7` and `8/8`), and the braid words force `31->41` versus `31->69`.
+No completion of the partial permutations can repair this.  The header `S3`
+may still organize a global sieve or conformance suite, but it does not act
+literally as those body transforms.
+
+**Next test:** retain the frozen root/frame/exit identity only while a broad
+pass tests other mechanism families.  Promote it only if a later developer
+asset independently selects the even/odd boundary operation or it predicts a
+second quantity without new choices.  Do not fit another per-panel `S3`
+transform after the direct action failed.
+
 ### Waite suffix for message 3
 
 **Status:** phrase/suffix remains source-backed and compatible; the stronger
@@ -134,9 +202,12 @@ Henry reported a more direct known-plaintext attack in the read-only
 `silmä-cryptography` discussion on 21 July 2026: encode the unknown initial
 deck and plaintext-selected permutations in CNF, then use Kissat to recover
 models consistent with a supplied plaintext/ciphertext pair.  Toy examples
-were reportedly verified, but the implementation had not yet been linked when
-observed; the author also warned that the encoding scales cubically with the
-ciphertext alphabet and that short texts admit many equivalent models.
+were reportedly verified; the author also warned that the encoding scales
+cubically with the ciphertext alphabet and that short texts admit many
+equivalent models.  The subsequently published
+[implementation](https://github.com/CyclohexAnon/noita_deck_cipher_sat)
+(commit `7acc7eedf025aa65b40e60d93d437d1dad492b58`) has now been inspected and
+reproduced locally with Kissat 4.0.4.
 
 The method is now independently reproduced with a finite-width SMT encoding
 that avoids explicit Boolean-matrix multiplication.  A deterministic
@@ -146,12 +217,19 @@ The recovered key need not equal the generator key, confirming that a
 satisfiable result is only a feasibility witness.  This is a useful attack
 primitive but not yet an Eye-scale solver.
 
-**Next bounded experiment:** obtain Henry's code read-only if its promised
-repository link appears and compare its clauses and scaling against the local
-bit-vector model.  Separately infer the `2-to-26` plaintext serialization or a
-small exact crib before invoking a known-plaintext solver.  Do not interpret
-one satisfiable model as a unique recovered key, and do not scale to the Waite
-East-2 crib until a 26-card calibration replays exactly.
+The committed CNF uses an identity reset deck and forward-only Boolean-matrix
+product implications.  Those implications are sufficient because all three
+matrices are independently constrained as permutations.  The chat-described
+ban on operation entry `(0,0)` is not present in the committed script, but it
+is unnecessary for its published ciphertext.  Our bit-vector solver also
+recovers and exactly replays this public toy pair.
+
+**Pause reason and next test:** the known-plaintext primitive is now verified,
+but both implementations remain unsuitable for unknown plaintext at size 26
+or 83.  Resume after inferring the `2-to-26` plaintext serialization, obtaining
+a small exact crib, or finding a backend/encoding that passes a 26-card replay
+calibration.  Do not interpret one satisfiable model as a unique recovered key
+and do not scale to the Waite East-2 crib before that threshold.
 
 ### External in-game key or later hint
 
@@ -238,3 +316,12 @@ Only after this breadth pass may the strongest few receive implementation or
 asset work.  Preserve the discarded candidates and their kill reasons here or
 in the research log so the search does not repeatedly collapse onto the same
 idea.
+
+The first breadth pass is now preserved in
+[`novel-synthesis-2026-07-21.md`](novel-synthesis-2026-07-21.md).  It suspends
+the prose, one-symbol-per-character, repeated-plaintext, independent-message,
+83-state, and same-layer assumptions; records twenty mechanism families; and
+scores the first cheap falsification tests.  The direct “nine complete BWT
+rows” interpretation is already rejected, while weaker suffix/LCP metadata,
+nominal cache traces, `Z101` visible/null walks, 26-column records, 3×3 check
+objects, and raw-direction routing remain queued.

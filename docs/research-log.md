@@ -1503,6 +1503,119 @@ so the known-plaintext solver cannot honestly be applied yet.  This puzzle and
 Torben's earlier large-group known-plaintext GAK exercise remain a natural
 small-to-`S83` calibration ladder before any Waite crib feasibility test.
 
+Henry's code was published minutes later at
+`CyclohexAnon/noita_deck_cipher_sat`, commit
+`7acc7eedf025aa65b40e60d93d437d1dad492b58`.  A clean temporary build of
+Kissat 4.0.4 (`8af8e56f174b778aef3aa45af9f739b2a5f492c2`) reproduces the committed
+six-card toy: 648 Boolean variables, 6,319 clauses, `SATISFIABLE`, a recovered
+four-operation table different from the generator table, and exact decryption
+of all 13 supplied characters.  The local bit-vector solver independently
+recovers another witness for the same public plaintext/ciphertext pair and
+replays it exactly.
+
+The code audit sharpens the scope.  Its update orientation agrees with the
+ordinary convention `new_deck[i] = old_deck[operation[i]]`.  The one-way
+product clauses are logically sufficient because the input, operation, and
+output matrices are all permutations: every true product cell forces the
+unique true output cell in its row.  The script assumes an identity reset deck
+and does not include the `(0,0)=0` operation clauses described in chat.  The
+latter omission does not invalidate the published toy; it merely means the
+committed model itself does not enforce no adjacent ciphertext doubles.
+Together with the size-16/18/26 timeouts, this closes the present bounded SAT
+experiment as a verified primitive rather than an Eye-scale attack.
+
+## Breadth-first synthesis and S3 header audit
+
+A deliberate wide pass suspended the prose, one-symbol-per-character,
+independent-message, 83-state, English/Finnish, and contemporaneous-clue
+assumptions before selecting another deep attack.  Twenty mechanism families
+and cheap discriminators are frozen in
+`docs/novel-synthesis-2026-07-21.md`.  The first probes reject several literal
+versions without discarding their broader families: the nine bodies are not
+all rows of one BWT rotation matrix; none of 720 natural trigram alphabet
+orders sorts them in the marker-derived trie order; no 26-wide row is a
+26-symbol permutation; a literal eight-entry LRU cache covers only 105 of 469
+repeat events; and an affine mod-101 cumulative walk does not collapse the
+bodies to a small state set.
+
+The pass also found a new exact header organization.  Read a marker's first
+two digits as the already established edge `middle -> first-1`, then name a
+component order `(source,target,remaining)`.  The first six canonical panels
+enumerate all six elements of `S3`: the first row is the even subgroup `A3`
+and the second row is the odd coset.  The final row is identity plus the two
+standard adjacent generators.  Directly permuting every body trigram by its
+own header destroys the copied prefixes and expands the alphabet from 83 to
+117, so it is not a per-panel component unscrambler.
+
+At the exact even/odd row boundary, a retrospective body construction
+nonetheless reproduces every digit of the independent marker-BWT result.
+Reverse the universal two-symbol root under East 2's component order and append
+the first West 2 symbol after its row's length-five prefix under West 2's
+order: `010,231,234 -> 001,123,243`, or values `1,38,73 = !Fi`.  It is unique
+among the nine frozen even-header/odd-exit pairs, but the target and several
+construction choices were inspected first, so it is not a p-value or decode.
+
+The most natural held-out prediction fails decisively.  If final-row headers
+`E4=e`, `W4=(12)`, and `E5=(01)` name the strong East 4→West 4 and East 4→East
+5 body-context permutations `B` and `A`, then `A^2=B^2=e` and `ABA=BAB`.
+The partial observations force seven nonidentity edges of `A^2`, eight of
+`B^2`, and the braid conflict `ABA(31)=41` versus `BAB(31)=69`.  No full
+permutation completion can fix them.  This rejects the direct header-to-body
+Coxeter action while retaining the objectively clean header organization as a
+possible global construction/check clue.  Reproduction is in
+`scripts/analyze_conformance_grid.py` and
+`scripts/test_s3_context_relations.py`.
+
+A second low-capacity `S3` use is also negative after calibration.  Exhausting
+all 4,320 injective mappings of the five raw directions into `S3`, together
+with all fixed eye orders, finds one unique model whose body products carry
+the encoded header source to target for eight of nine panels.  It fits every
+non-self edge and fails only East 4.  However, an exact intact-body reassignment
+null finds at least an eight-edge optimum for 356,904 of all 362,880 body/header
+assignments (`98.353%`) and a perfect nine-edge optimum for 74,436 (`20.512%`).
+The observed near-fit therefore has no useful association evidence.  This
+illustrates why unique best models inside a flexible finite scan still need a
+matched outer calibration.  Reproduction is in
+`scripts/analyze_s3_direction_transducer.py`.
+
+The pre-registered prefix-trie payload probe is positive.  Removing the nine
+established markers, merging their copied body prefixes, and emitting every
+distinct trie edge exactly once gives 918 values totaling
+`37,774 = 374 * 101`.  This multiset is invariant to depth/breadth traversal
+and sibling order.  Keeping markers gives residue 63; starts 2 and 3 give 35
+and 30; the reversed/suffix trie gives 92; and the raw-direction trie after its
+three-digit markers gives 23.  None of the three natural row-family tries or
+nine leave-one-panel-out tries closes.  Scanning all common starts finds one
+other zero at offset 41, which is a post-hoc expected-scale hit; offset 1 is
+independently selected as the marker/body boundary.
+
+The closure is not a symbolic consequence of the earlier message checks.  The
+nine complete message label-count vectors have rank 9 over `F101`; adding the
+deduplicated trie-edge count vector raises the rank to 10.  Under all 6,806
+affine permutations of `0..82`, 71 retain zero (`1.043%`), and only identity
+does among the 83 additive translations.  A seeded 200,000-sample arbitrary
+global permutation control, preserving the exact equality skeleton and trie
+topology, closes 1,895 times (`0.9475%`).  These are not conditional discovery
+p-values because they do not preserve the three diagonal zero sums and the
+modulus was already selected.  They do show that closure is sensitive to the
+observed numeric labeling and is expected at roughly one percent under simple
+global relabeling controls.
+
+This is the strongest new mechanical lead from the wide pass because its exact
+statistic—serialize each distinct trie edge once and test checksums—was frozen
+before evaluation.  It suggests that the copied prefixes may be a merge/sieve
+instruction rather than repeated prose.  It does not yet decode anything.
+Reproduction is in `scripts/analyze_trie_checksum.py`.
+
+At the five documented internal branch nodes, summing every distinct edge
+strictly below the shared prefix gives residues `30,19,70,89,13` in canonical
+cluster order.  The lower six messages after their length-five prefix are the
+unique 70.  This retrospectively equals the main-diagonal mirror-difference
+total in the mod-101 grid.  It does not repair the Gate asset claim: both
+quantities are Eye-derived, while direct Seula sprite masks still produce no
+70-pixel residual without an unpublished extra mask.  The match is retained as
+an internal echo and explicitly not counted as independent corroboration.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly
