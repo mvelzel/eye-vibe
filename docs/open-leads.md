@@ -11,8 +11,8 @@ what would stop or promote it.  Completed and rejected branches remain in
 
 ### Procedural wand selects exactly `0..82` from `0..100`
 
-**Status:** independently authored typing evidence for the 83-visible plus
-18-structural architecture; no decoder path yet.
+**Status:** exact independently authored 83-of-101 selector; the proposed
+18-structural execution match is demoted by scope and runtime accounting.
 
 The installed Lua contains `Random(0,100) < 83` in the standard procedural-wand
 generator and its `wand_petri` sibling. Because Noita's integer bounds are
@@ -21,12 +21,18 @@ inclusive, the branch's successful outcomes are exactly the Eye alphabet
 modifier card rather than a draw-many card, putting the identity inside Noita's
 wand/deck vocabulary rather than an unrelated asset.
 
-More sharply, the 18 complementary outcomes `83..100` all select
+The 18 complementary outcomes `83..100` all select
 `ACTION_TYPE_DRAW_MANY`. The compressed Eye trie has five branch nodes with
-degrees `(2,3,3,2,3)` and thirteen outgoing continuations, hence exactly
-`5+13=18` branch/control records. The code therefore supplies the same broad
-type for the missing states that the trie architecture needs. It does not
-assign one missing value to one record.
+degrees `(2,3,3,2,3)` and thirteen edges. But `5+13=18` counts internal nodes
+and edges as separate records; Noita actually executes five internal cards and
+nine leaf cards, fourteen card nodes total. The exact roll is also discarded
+after selecting a type, so no missing value is assigned to a branch.
+
+The checksum scopes independently fail to line up. The attractive `70+31=101`
+closure uses the lower-six descendant payload, while the 18 hypothetical
+node-plus-edge records belong to the entire nine-leaf tree. That lower-six
+subtree owns only 11 such records; the all-nine scope owns 18 but has visible
+descendant residue 30, which does not close with 31.
 
 An inventory finds 74 direct `Random(0,100)` comparisons and 22 distinct
 operator/threshold pairs in the current WAK; `<83` appears only in these two
@@ -35,12 +41,12 @@ same two copies, but was uploaded in October 2022. The earliest independently
 timestamped public-data copy found is 9 February 2021—after the Eyes, but fully
 eligible as a later clue.
 
-**Next test:** look for a game-authored operation near procedural wand
-generation that orders/types the missing `83..100` states or performs a
-merge/deduplicate-once step. Do not infer that `ACTION_TYPE_MODIFIER` literally
-means visible Eye values, and do not count the duplicated Lua copies as two
-independent clues. Promote only if this identity supplies a second mechanical
-prediction.
+**Next test:** look only for a game-authored format that explicitly serializes
+node and edge records separately, or another independent 83/18 operation near
+the Eyes. Do not infer that `ACTION_TYPE_MODIFIER` literally means visible Eye
+values, and do not count the duplicated Lua copies as two independent clues.
+Without such a rule, retain the number match but stop extending the wand-tree
+decoder.
 
 The detailed ground-up audit and machine hypothesis are in
 [`procedural-wand-architecture.md`](procedural-wand-architecture.md).
@@ -105,9 +111,12 @@ The exact joint event (full trie zero and lower branch 70) occurs in
 `80,918,060 / 825,564,856,320 = 0.0098015%` of the diagonal-check-preserving,
 marker-fixed subgroup.  Accounting by a union bound for inspecting the four
 eligible proper branches gives at most `0.03922%`.  This is post-hoc
-architecture evidence, not a discovery p-value.  Its critical missing piece is
-a canonical assignment of values `83..100` to the five nodes and thirteen
-exits.
+architecture evidence, not a discovery p-value. The procedural-wand audit now
+adds a stronger structural objection: the lower-six branch producing 70 owns
+only 11 hypothetical node-plus-edge records, while all 18 belong to the full
+tree. Actual recursive execution has 14 card nodes rather than 18 records.
+Thus a canonical assignment is not merely missing; the present scopes and
+record semantics are inconsistent.
 
 **Promotion test for the 18-state architecture:** find an independently
 authored game selector or a key-free body identity that orders/types all 18

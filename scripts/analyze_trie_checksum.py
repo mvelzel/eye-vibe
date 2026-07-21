@@ -6,13 +6,14 @@ from collections import Counter
 
 from eye_mystery.corpus import MESSAGES, MESSAGE_ORDER, trigram_values
 from eye_mystery.marker_orders import marker_lexicographic_order
-from eye_mystery.prefix_hierarchy import serialize_trie_edges
+from eye_mystery.prefix_hierarchy import leaf_exit_labels, serialize_trie_edges
 from eye_mystery.trie_checksum import (
     affine_f83_relabeling_calibration,
     branch_descendant_checksums,
     random_relabeling_zero_count,
     signature_preserving_relabeling_calibration,
     signature_preserving_joint_calibration,
+    signature_preserving_linear_calibration,
     trie_checksum,
     vector_rank_mod,
 )
@@ -174,6 +175,33 @@ def main() -> None:
             branch_joint.total,
             hits / branch_joint.total,
         )
+
+    exits = leaf_exit_labels(streams, start=1)
+    second_row = ("west2", "east3", "west3")
+    third_row = ("east4", "west4", "east5")
+    exit_coefficients = [0] * 83
+    for name in second_row:
+        exit_coefficients[exits[name]] += 1
+    for name in third_row:
+        exit_coefficients[exits[name]] -= 1
+    exit_calibration = signature_preserving_linear_calibration(
+        exit_coefficients,
+        diagonal_vectors,
+        fixed_labels=marker_labels,
+    )
+    print("terminal leaf-exit row-sum control:")
+    print("  exits:", exits)
+    print(
+        "  lower natural row sums:",
+        *(sum(exits[name] for name in row) for row in (second_row, third_row)),
+    )
+    print(
+        "  exact equality under protected relabelings:",
+        exit_calibration.count(0),
+        "/",
+        exit_calibration.total,
+        exit_calibration.count(0) / exit_calibration.total,
+    )
 
     orders = {
         "canonical": MESSAGE_ORDER,

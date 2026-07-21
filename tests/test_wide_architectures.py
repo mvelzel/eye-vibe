@@ -6,7 +6,9 @@ from eye_mystery.wide_architectures import (
     best_affine_recurrence_from_counts,
     best_debruijn_overlap,
     debruijn_overlap_score,
+    full_grid_hamming_chi_square,
     header_moment_scores,
+    trigram_hamming_profile,
     trie_transition_counts,
 )
 
@@ -19,6 +21,14 @@ class WideArchitectureTests(unittest.TestCase):
             (2, 2),
         )
         self.assertEqual(best_debruijn_overlap((stream,)).matches, 2)
+
+    def test_base_five_hamming_profile_counts_changed_eyes(self) -> None:
+        stream = (0, 1, 6, 32)  # 000, 001, 011, 112
+        self.assertEqual(trigram_hamming_profile((stream,)), (2, 1, 0))
+        self.assertGreater(
+            full_grid_hamming_chi_square((2, 1, 0)),
+            0,
+        )
 
     def test_affine_recurrence_recovers_a_planted_stream(self) -> None:
         values = [4]

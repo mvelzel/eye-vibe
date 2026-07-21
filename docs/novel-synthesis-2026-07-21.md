@@ -516,7 +516,7 @@ Its next falsification target is precise: an in-game asset or a key-free body
 relation must order or type those 18 records without reference to desired
 plaintext.
 
-## Eighth bounded audit: the wand generator types the 18 states
+## Eighth bounded audit: the wand generator partitions 83 and 18
 
 A newly surfaced raw-code identity meets half of that promotion target. The
 installed procedural-wand generator draws an inclusive integer in `0..100`
@@ -559,12 +559,72 @@ in East-5-first breadth order they remain the independently recovered
 account for 918 merged payload edges—so a viable construction must separate
 control topology from encrypted payload or use repeated casts.
 
-This audit promotes the 83-visible/18-structural machine from a purely internal
-numerical architecture to one with independent game-authored typing evidence.
-It still lacks the essential bijection from `83..100` to branch records. The
+This audit initially appeared to promote the 83-visible/18-structural machine
+from a purely internal numerical architecture to one with independent
+game-authored typing evidence. It still lacked the essential bijection from
+`83..100` to branch records. The
 actual Lua uses the roll to choose an action type and then chooses a card
 separately; it does not emit the roll as a label. A literal decoder must now
 predict the branch arities or restore a full execution tree under source-
 derived rules, without enumerating 18! labelings. Details and reproduction are
 in `docs/procedural-wand-architecture.md` and
 `scripts/analyze_wand_selector.py`.
+
+## Ninth bounded audit: execution and checksum scopes do not match
+
+Grounding the analogy in actual recursive execution reverses the promotion.
+A rooted tree with five internal nodes of degrees `(2,3,3,2,3)` has nine leaves
+and fourteen action/card nodes. Its thirteen edges are relationships between
+those nodes. The `5+13=18` construction counts internal nodes and edges as
+separate record types; Noita's gun runtime does not emit that representation.
+
+The checksum complement has a second, independent locality failure:
+
+```text
+scope       descendant residue   hypothetical node+edge records
+all nine             30                         18
+upper three          19                          4
+lower six            70                         11
+nested four          89                          7
+last three           13                          4
+```
+
+Thus `70+31=101` attaches all 18 missing values to a subtree owning only 11
+proposed records. The scope owning all 18 has residue 30 and does not close.
+Exactly five of the 31,824 unordered 11-label subsets of `83..100` sum to 31
+modulo 101, but no source-derived rule chooses one; testing them for language
+would fit the target after inspection.
+
+This rejects the current local recursive-checksum/wand decoder. The exact
+`Random(0,100)<83` identity remains a legitimate later-clue candidate, but it
+must now earn relevance through a new prediction or an authored node/edge
+serialization. It cannot inherit significance from the failed 18-record
+mapping.
+
+## Tenth bounded audit: two more structural summaries are ordinary
+
+Two key-free ideas from the wide map were tested before returning to a deeper
+cipher family.
+
+First, reading each trigram literally as three base-five eye states gives an
+adjacent Hamming-distance profile of `115,425,478` for distances one, two, and
+three. The apparent shortage of three-eye changes is not special once the
+restricted `0..82` label geometry and copied transition skeleton are respected.
+Among 5,000 global label relabelings, `3,713/5,001 = 0.742451` are at least as
+far from the full-grid reference profile.
+
+Second, the first edge that makes each prefix-tree leaf unique produces the
+natural grid
+
+```text
+80 29 69
+69 78 23
+77 60 33
+```
+
+The lower two rows both sum to 170. In the exact subgroup preserving the three
+diagonal checks, every marker, and the complete trie, row-sum equality occurs
+in exactly `30,576,476,160 / 825,564,856,320 = 1/27` assignments. Since the
+equality and extraction were inspected after seeing the tree, it is not a
+selective held-out prediction. Both observations are retained for completeness
+and dropped as active decoder leads.

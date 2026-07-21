@@ -1707,7 +1707,8 @@ eligible as a later decoder clue. It does not independently prove pre-Eye
 construction use. No renderer reference, prefix merge, missing-state
 assignment, or 18-record order accompanies it.
 
-The complementary branch nevertheless supplies a real second correspondence.
+The complementary branch initially appeared to supply a real second
+correspondence.
 The 18 rolls `83..100` all select `ACTION_TYPE_DRAW_MANY`, whereas `0..82`
 select `ACTION_TYPE_MODIFIER`. Independently, the compressed Eye trie has five
 branch nodes of degrees `(2,3,3,2,3)` and thirteen outgoing edges, so the
@@ -1715,12 +1716,10 @@ proposed hidden structure has exactly `5+13=18` branch instructions plus
 continuations. The same source also contains the ordinary wand-capacity clamp
 26 and the unshuffled-capacity limit 9, matching complete Eye row width and
 panel count. This conjunction is retrospective and each constant has a
-gameplay explanation, but the 83/18 type split is exact. The result is promoted
-to independent typing evidence for the 83-visible/18-structural architecture,
-not to a decryption. The operational hypothesis and limits are recorded in
-`docs/procedural-wand-architecture.md`.
+gameplay explanation, but the 83/18 type split is exact.
 
-The actual gun runtime strengthens and bounds the analogy. `draw_actions(n)`
+The actual gun runtime ultimately bounds rather than strengthens the analogy.
+`draw_actions(n)`
 executes children immediately and recursively, so its action stream is a
 depth-first tree. The Eye degrees `(2,3,3,2,3)` are legal and yield nine leaves
 by the exact tree identity `1+sum(d-1)=9`. All branch depths are below 26 and
@@ -1728,6 +1727,30 @@ their independently selected breadth order still spells `BEXIT`. But one
 literal cast cannot emit the ciphertext trie: 26 card slots cannot account for
 918 distinct payload edges. The next model must keep control topology and
 payload representation separate, or it is rejected at the capacity bound.
+
+A scope-consistency audit then demoted the structural interpretation. A real
+tree with five internal nodes and nine leaves executes fourteen card nodes;
+`5+13=18` counts the internal nodes and the thirteen relationships separately,
+double-counting four non-root internal nodes relative to a card trace. The
+checksum scopes also cross: the attractive `70+31=101` uses the lower-six
+descendant payload, but that subtree owns only 11 hypothetical node-plus-edge
+records. The whole tree owns 18 and has descendant residue 30, which does not
+close with 31. Five unordered 11-value subsets happen to close the lower-six
+residue, but neither the source nor corpus selects one. This rejects the
+current local recursive-checksum/wand execution model while retaining the raw
+83-of-101 selector as an unexplained later-clue candidate. Reproduction is in
+`scripts/analyze_wand_selector.py` and the detailed audit is in
+`docs/procedural-wand-architecture.md`.
+
+Two further breadth controls are negative. Adjacent body trigrams change one,
+two, and three base-five eye components `115,425,478` times. A global-label
+relabeling null that preserves every equality and transition gives an
+upper-tail `3713/5001 = 0.742451`, so the eye-component Hamming geometry is
+ordinary. The first edge making each prefix-tree leaf unique gives lower-row
+sums `69+78+23 = 77+60+33 = 170`, but exact relabelings preserving the three
+diagonal checks and every marker retain equality at rate
+`30,576,476,160/825,564,856,320 = 1/27`. This post-hoc branch summary is also
+not promoted.
 
 ## Crib observations
 

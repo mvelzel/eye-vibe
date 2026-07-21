@@ -12,7 +12,9 @@ from eye_mystery.wide_architectures import (
     best_affine_recurrence,
     best_affine_recurrence_from_counts,
     best_debruijn_overlap,
+    full_grid_hamming_chi_square,
     header_moment_scores,
+    trigram_hamming_profile,
     trie_transition_counts,
 )
 
@@ -40,6 +42,7 @@ def main() -> None:
     parser.add_argument("--recurrence-trials", type=int, default=200)
     parser.add_argument("--recurrence-relabel-trials", type=int, default=500)
     parser.add_argument("--grid-trials", type=int, default=5000)
+    parser.add_argument("--geometry-trials", type=int, default=5000)
     args = parser.parse_args()
 
     streams = {name: trigram_values(MESSAGES[name]) for name in MESSAGE_ORDER}
@@ -57,6 +60,31 @@ def main() -> None:
     print("  null range:", min(path_null), max(path_null))
     print("  upper-tail exceedance:", exceedance(path.matches, path_null))
 
+    profile = trigram_hamming_profile(bodies)
+    geometry_score = full_grid_hamming_chi_square(profile)
+    geometry_null = []
+    alphabet = tuple(range(83))
+    geometry_random = Random(args.seed)
+    for _ in range(args.geometry_trials):
+        relabeled = list(alphabet)
+        geometry_random.shuffle(relabeled)
+        relabeled_bodies = tuple(
+            tuple(relabeled[value] for value in body) for body in bodies
+        )
+        geometry_null.append(
+            full_grid_hamming_chi_square(
+                trigram_hamming_profile(relabeled_bodies)
+            )
+        )
+    print("base-5 changed-eye geometry:")
+    print("  distance 1/2/3 profile:", profile)
+    print("  full-grid chi-square:", geometry_score)
+    print("  relabel-null range:", min(geometry_null), max(geometry_null))
+    print(
+        "  relabel-null upper-tail:",
+        exceedance(geometry_score, geometry_null),
+    )
+
     recurrence = best_affine_recurrence(bodies)
     recurrence_null = [
         best_affine_recurrence(shuffled_bodies(bodies, random)).matches
@@ -69,7 +97,6 @@ def main() -> None:
         "  upper-tail exceedance:",
         exceedance(recurrence.matches, recurrence_null),
     )
-    alphabet = tuple(range(83))
     recurrence_relabel_null = []
     for _ in range(args.recurrence_relabel_trials):
         relabeled = list(alphabet)

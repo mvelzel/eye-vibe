@@ -6,9 +6,11 @@ import re
 from collections import Counter
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
+from itertools import combinations
 
 from .prefix_hierarchy import prefix_clusters
 from .random_thresholds import successful_outcomes
+from .trie_checksum import branch_descendant_checksums
 
 
 ACTION_ENUM = re.compile(
@@ -62,3 +64,79 @@ def procedural_wand_partition() -> SelectorPartition:
     modifier = successful_outcomes("<", 83)
     draw_many = tuple(value for value in range(101) if value not in modifier)
     return SelectorPartition(modifier, draw_many)
+
+
+@dataclass(frozen=True)
+class ControlScope:
+    """One internal Eye-trie subtree and its locally owned control records."""
+
+    members: tuple[str, ...]
+    depth: int
+    degree: int
+    internal_nodes: int
+    structural_records: int
+    visible_edges: int
+    visible_residue: int
+
+
+def compressed_control_scopes(
+    streams: Mapping[str, Sequence[int]],
+    *,
+    start: int = 0,
+    modulus: int = 101,
+) -> tuple[ControlScope, ...]:
+    """Audit structural-record counts in every compressed-trie subtree.
+
+    A control record is counted for each internal branch node and for each of
+    its outgoing compressed edges.  This is the exact convention behind the
+    exploratory ``5 + 13 = 18`` correspondence.  Restricting the count to a
+    subtree reveals whether a checksum complement and its proposed controls
+    inhabit the same scope.
+    """
+
+    clusters = prefix_clusters(streams, start=start)
+    checksums = branch_descendant_checksums(
+        streams, start=start, modulus=modulus
+    )
+    degrees = compressed_branch_degrees(streams, start=start)
+    results = []
+    for cluster, checksum, degree in zip(
+        clusters, checksums, degrees, strict=True
+    ):
+        members = set(cluster.members)
+        descendant_indices = tuple(
+            index
+            for index, other in enumerate(clusters)
+            if set(other.members) <= members
+        )
+        results.append(
+            ControlScope(
+                members=cluster.members,
+                depth=cluster.length,
+                degree=degree,
+                internal_nodes=len(descendant_indices),
+                structural_records=sum(
+                    1 + degrees[index] for index in descendant_indices
+                ),
+                visible_edges=checksum.descendant_edge_count,
+                visible_residue=checksum.descendant_residue,
+            )
+        )
+    return tuple(results)
+
+
+def hidden_subset_residue_count(
+    values: Sequence[int],
+    choose_count: int,
+    target_residue: int,
+    *,
+    modulus: int = 101,
+) -> int:
+    """Count unordered hidden-label subsets with a requested residue."""
+
+    if choose_count < 0 or choose_count > len(values):
+        return 0
+    return sum(
+        sum(selection) % modulus == target_residue % modulus
+        for selection in combinations(values, choose_count)
+    )

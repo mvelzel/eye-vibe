@@ -4,12 +4,14 @@ import unittest
 from collections import Counter
 
 from eye_mystery.corpus import MESSAGES, MESSAGE_ORDER, trigram_values
+from eye_mystery.prefix_hierarchy import leaf_exit_labels
 from eye_mystery.trie_checksum import (
     affine_f83_relabeling_calibration,
     branch_descendant_checksums,
     random_relabeling_zero_count,
     signature_preserving_relabeling_calibration,
     signature_preserving_joint_calibration,
+    signature_preserving_linear_calibration,
     trie_checksum,
     vector_rank_mod,
 )
@@ -150,6 +152,37 @@ class TrieChecksumTests(unittest.TestCase):
         )
         self.assertEqual(bivariate.total, 825_564_856_320)
         self.assertEqual(bivariate.count(0, 70), 80_918_060)
+
+    def test_equal_lower_leaf_exit_row_sums_are_not_selective(self) -> None:
+        def count_vector(values: tuple[int, ...]) -> tuple[int, ...]:
+            counts = Counter(values)
+            return tuple(counts[value] for value in range(83))
+
+        exits = leaf_exit_labels(self.streams, start=1)
+        second_row = ("west2", "east3", "west3")
+        third_row = ("east4", "west4", "east5")
+        self.assertEqual(sum(exits[name] for name in second_row), 170)
+        self.assertEqual(sum(exits[name] for name in third_row), 170)
+
+        coefficients = [0] * 83
+        for name in second_row:
+            coefficients[exits[name]] += 1
+        for name in third_row:
+            coefficients[exits[name]] -= 1
+        diagonal = tuple(
+            count_vector(self.streams[name])
+            for name in ("east1", "east3", "east5")
+        )
+        calibration = signature_preserving_linear_calibration(
+            coefficients,
+            diagonal,
+            fixed_labels=tuple(
+                self.streams[name][0] for name in MESSAGE_ORDER
+            ),
+        )
+        self.assertEqual(calibration.total, 825_564_856_320)
+        self.assertEqual(calibration.count(0), 30_576_476_160)
+        self.assertEqual(calibration.count(0) / calibration.total, 1 / 27)
 
 
 if __name__ == "__main__":

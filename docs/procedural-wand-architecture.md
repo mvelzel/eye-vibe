@@ -20,21 +20,25 @@ compressed body trie contains five branch instructions with fan-outs
 ```
 
 and thirteen outgoing compressed edges. Counting each branch instruction and
-each continuation gives `5+13=18` structural records. Thus the game code does
-not merely repeat 83 and 101: it assigns the complementary 18 states to a
-**draw-many/control category**, the same broad role the trie architecture
-requires.
+each edge gives `5+13=18` hypothetical structural records. The game code does
+not, however, serialize a separate card for a node and for each edge. A tree
+with five internal nodes and nine leaves executes fourteen card nodes; its
+thirteen edges are relationships between those nodes. The 18-record count is
+therefore an exploratory representation, not an execution-level identity.
 
-This is the strongest independent corroboration yet for the speculative
-83-visible/18-structural split. It still is not a decoder.
+The exact 83-of-101 selector remains an independently authored numerical clue.
+Its complement being typed as draw-many is suggestive, but it no longer
+qualifies as independent corroboration for the proposed 18-record trie model.
+It is not a decoder.
 
 There is also a real execution-level match. `draw_actions(n)` loops over `n`
 cards; each drawn card is executed immediately, and a draw-many card can call
 `draw_actions` recursively before its parent returns. Noita therefore executes
 an ordered depth-first action tree. Ordinary modifiers continue with one draw;
-draw-many cards create internal nodes. The Eye topology is a legal such tree:
-five internal degrees `(2,3,3,2,3)` give
-`1 + sum(degree-1) = 9` leaves.
+draw-many cards create internal nodes. The Eye topology is a legal abstract
+tree: five internal degrees `(2,3,3,2,3)` give
+`1 + sum(degree-1) = 9` leaves. But the corresponding execution contains
+`5+9=14` card actions, not 18.
 
 ## Raw-source audit
 
@@ -106,11 +110,12 @@ A falsifiable reading is now available:
    restoring controls yields one execution tree.
 6. A complete visual row is one 26-slot deck record.
 
-The first four statements now have exact numerical/type support. Statements
-five and six are hypotheses. In particular, the real generator uses the roll
-only to choose an action **type** and then separately chooses an action ID; it
-does not emit the integer roll as a card label. The Eye mechanism could borrow
-the vocabulary without literally replaying this Lua.
+The source supplies an exact numerical/type analogy for statements one through
+three, but no evidence that the Eye values are records in that domain.
+Statements four through six are hypotheses. In particular, the real generator
+uses the roll only to choose an action **type** and then separately chooses an
+action ID; it does not emit the integer roll as a card label. The Eye mechanism
+could borrow the vocabulary without literally replaying this Lua.
 
 A literal one-Eye-symbol/one-card execution is already impossible: the merged
 body trie has 918 labeled edges, while an ordinary generated wand has at most
@@ -119,10 +124,46 @@ encrypted payload, treat rows as repeated casts, or explain another level of
 serialization. This prevents the attractive topology from silently becoming
 an unfalsifiable card metaphor.
 
+## Scope-consistency falsification
+
+The strongest-looking checksum connection does not survive local accounting.
+The five compressed subtrees have these descendant residues and hypothetical
+node-plus-edge record counts:
+
+```text
+members   visible residue   local records
+all 9          30               18
+upper 3        19                4
+lower 6        70               11
+nested 4       89                7
+last 3         13                4
+```
+
+The full missing set `83..100` has residue 31. Its attractive closure
+`70+31=101` therefore combines the lower-six payload with controls counted
+over the entire nine-message tree. The lower-six subtree owns 11, not 18, of
+the proposed records. Conversely, the only scope owning all 18 records has
+visible descendant residue 30, and `30+31` does not close.
+
+There are five unordered 11-label subsets of `83..100` whose sum is 31 modulo
+101, so a local lower-six completion is mathematically possible. Nothing in
+the Lua or Eye data selects one of those five subsets or orders it. Searching
+them for readable output would be post-hoc fitting.
+
+This rejects the current **local recursive-checksum version** of the model. It
+does not prove that the developers never reused the 83/101 partition as a
+later clue, but a replacement must independently explain why nodes and edges
+are separate records and how controls cross subtree boundaries.
+
 ## What remains missing
 
 - There is no canonical bijection from `83..100` to the five branch nodes and
   thirteen continuations.
+- Actual recursive execution has fourteen card nodes, not eighteen records;
+  `5+13` double-counts the four non-root internal nodes as both cards and
+  incoming edges.
+- The `70+31` checksum combines a six-message subtree with the entire tree's
+  hypothetical control set.
 - `DRAW_MANY` types the 18 states collectively but does not order them.
 - No Eye marker has yet been shown to encode a specific draw-many card or
   branch arity without fitting.
@@ -134,9 +175,9 @@ an unfalsifiable card metaphor.
 
 ## Next bounded tests
 
-1. Search the procedural-wand and gun execution code for one authored ordering
-   of control records that yields exactly five two/three-way branch events and
-   thirteen continuations. Do not enumerate 18! assignments.
+1. Search only for an authored format that explicitly serializes node and edge
+   records separately. Without that missing rule, stop treating `5+13` as the
+   runtime's record count and do not enumerate 18! assignments.
 2. Test whether the five marker/header-selected records predict the branch
    arities `(2,3,3,2,3)` under one fixed, source-derived mapping.
 3. Treat each 26-trigram row as a deck trace only under the actual Noita draw,

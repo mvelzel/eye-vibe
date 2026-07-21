@@ -4,6 +4,7 @@ from eye_mystery.corpus import MESSAGES, MESSAGE_ORDER, trigram_values
 from eye_mystery.prefix_hierarchy import (
     PrefixCluster,
     breadth_first_prefix_clusters,
+    leaf_exit_labels,
     prefix_clusters,
     serialize_trie_edges,
 )
@@ -39,6 +40,25 @@ class PrefixHierarchyTests(unittest.TestCase):
         )
         self.assertEqual(depths, (2, 5, 24, 9, 20))
         self.assertEqual("".join(chr(64 + depth) for depth in depths), "BEXIT")
+
+    def test_terminal_leaf_exit_labels_are_structurally_selected(self) -> None:
+        streams = {
+            name: trigram_values(MESSAGES[name]) for name in MESSAGE_ORDER
+        }
+        self.assertEqual(
+            leaf_exit_labels(streams, start=1),
+            {
+                "east1": 80,
+                "west1": 29,
+                "east2": 69,
+                "west2": 69,
+                "east3": 78,
+                "west3": 23,
+                "east4": 77,
+                "west4": 60,
+                "east5": 33,
+            },
+        )
 
     def test_trie_serialization_deduplicates_copied_eye_prefixes(self) -> None:
         streams = {

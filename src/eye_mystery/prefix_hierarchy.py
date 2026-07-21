@@ -78,6 +78,27 @@ def breadth_first_prefix_clusters(
     return tuple(result)
 
 
+def leaf_exit_labels(
+    streams: Mapping[str, Sequence[int]], *, start: int = 0
+) -> dict[str, int]:
+    """Return the first edge that leaves the deepest shared-prefix cluster.
+
+    The result is one structurally selected label per stream: the label that
+    first makes that leaf unique within the compressed prefix tree.
+    """
+
+    clusters = prefix_clusters(streams, start=start)
+    result = {}
+    for name, stream in streams.items():
+        containing = [cluster for cluster in clusters if name in cluster.members]
+        depth = max((cluster.length for cluster in containing), default=0)
+        index = start + depth
+        if index >= len(stream):
+            raise ValueError(f"stream {name!r} ends at an internal trie node")
+        result[name] = stream[index]
+    return result
+
+
 def serialize_trie_edges(
     streams: Mapping[str, Sequence[int]],
     order: Sequence[str],

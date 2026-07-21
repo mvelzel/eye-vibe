@@ -18,6 +18,8 @@ from eye_mystery.wand_selector import (
     action_type_counts,
     action_type_enums,
     compressed_branch_degrees,
+    compressed_control_scopes,
+    hidden_subset_residue_count,
     procedural_wand_partition,
 )
 
@@ -78,7 +80,38 @@ def main() -> None:
     print("  every branch lies in first 26-slot row:", max(depths) < 26)
     print("  branch nodes:", len(degrees))
     print("  outgoing compressed edges:", sum(degrees))
-    print("  node-plus-edge structural records:", len(degrees) + sum(degrees))
+    leaves = 1 + sum(degree - 1 for degree in degrees)
+    print("  leaves:", leaves)
+    print("  actual tree action/card nodes:", len(degrees) + leaves)
+    print(
+        "  hypothetical node-plus-edge records:",
+        len(degrees) + sum(degrees),
+    )
+    print("scope-consistency audit:")
+    hidden_values = partition.draw_many_outcomes
+    hidden_residue = sum(hidden_values) % 101
+    print("  all hidden values sum mod101:", hidden_residue)
+    for scope in compressed_control_scopes(streams):
+        target = (-scope.visible_residue) % 101
+        subset_hits = hidden_subset_residue_count(
+            hidden_values, scope.structural_records, target
+        )
+        print(
+            " ",
+            scope.members,
+            "depth",
+            scope.depth,
+            "visible",
+            scope.visible_residue,
+            "local records",
+            scope.structural_records,
+            "closing subsets",
+            subset_hits,
+        )
+    print(
+        "  70-residue six-message subtree owns 11, not 18, records:",
+        compressed_control_scopes(streams)[2].structural_records == 11,
+    )
     print("other same-source dimensional selectors:")
     print("  message count:", len(MESSAGE_ORDER))
     print(

@@ -72,6 +72,40 @@ def best_debruijn_overlap(streams: Sequence[Sequence[int]]) -> PathScore:
     )
 
 
+def trigram_hamming_profile(
+    streams: Sequence[Sequence[int]],
+) -> tuple[int, int, int]:
+    """Count adjacent transitions changing one, two, or three eye digits."""
+
+    counts = [0, 0, 0, 0]
+    for stream in streams:
+        for left, right in zip(stream, stream[1:]):
+            left_digits = base_five_digits(left)
+            right_digits = base_five_digits(right)
+            distance = sum(
+                first != second
+                for first, second in zip(left_digits, right_digits, strict=True)
+            )
+            counts[distance] += 1
+    return counts[1], counts[2], counts[3]
+
+
+def full_grid_hamming_chi_square(profile: Sequence[int]) -> float:
+    """Compare a profile to two distinct uniform points in the 5^3 cube."""
+
+    if len(profile) != 3 or any(count < 0 for count in profile):
+        raise ValueError("profile must contain three nonnegative counts")
+    total = sum(profile)
+    # Of the 124 alternatives to one point, 12, 48, and 64 lie at Hamming
+    # distances one, two, and three respectively.
+    expected = tuple(total * count / 124 for count in (12, 48, 64))
+    return sum(
+        (observed - target) ** 2 / target
+        for observed, target in zip(profile, expected, strict=True)
+        if target
+    )
+
+
 @dataclass(frozen=True)
 class AffineRecurrenceScore:
     matches: int

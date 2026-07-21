@@ -119,6 +119,20 @@ class JointSignatureRelabelingCalibration:
         return self.residue_counts[first_residue][second_residue]
 
 
+@dataclass(frozen=True)
+class LinearSignatureRelabelingCalibration:
+    """Exact integer distribution of a signed label statistic."""
+
+    value_counts: tuple[tuple[int, int], ...]
+
+    @property
+    def total(self) -> int:
+        return sum(count for _, count in self.value_counts)
+
+    def count(self, value: int) -> int:
+        return dict(self.value_counts).get(value, 0)
+
+
 def _signature_groups(
     alphabet_size: int,
     constraint_vectors: Sequence[Sequence[int]],
@@ -240,6 +254,43 @@ def signature_preserving_joint_calibration(
     result = JointSignatureRelabelingCalibration(rows)
     if result.total != expected_total:
         raise AssertionError("joint relabeling convolution lost assignments")
+    return result
+
+
+def signature_preserving_linear_calibration(
+    coefficients: Sequence[int],
+    constraint_vectors: Sequence[Sequence[int]],
+    *,
+    fixed_labels: Sequence[int] = (),
+) -> LinearSignatureRelabelingCalibration:
+    """Count a signed integer statistic over every protected relabeling."""
+
+    groups = _signature_groups(
+        len(coefficients), constraint_vectors, fixed_labels
+    )
+    distribution: Counter[int] = Counter({0: 1})
+    expected_total = 1
+    for labels in groups:
+        group_distribution: Counter[int] = Counter()
+        for relabeled in permutations(labels):
+            value = sum(
+                coefficients[label] * replacement
+                for label, replacement in zip(labels, relabeled, strict=True)
+            )
+            group_distribution[value] += 1
+        next_distribution: Counter[int] = Counter()
+        for left_value, left_count in distribution.items():
+            for right_value, right_count in group_distribution.items():
+                next_distribution[left_value + right_value] += (
+                    left_count * right_count
+                )
+        distribution = next_distribution
+        expected_total *= factorial(len(labels))
+    result = LinearSignatureRelabelingCalibration(
+        tuple(sorted(distribution.items()))
+    )
+    if result.total != expected_total:
+        raise AssertionError("linear relabeling convolution lost assignments")
     return result
 
 

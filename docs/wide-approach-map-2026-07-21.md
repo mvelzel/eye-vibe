@@ -130,15 +130,19 @@ is commit `70696c9` on 9 February 2021. That is after the Eye Messages, making
 the code fully eligible as a later decoder clue but not proving it helped
 construct the ciphertext.
 
-The complement strengthens the result. Rolls `83..100` are not discarded: all
-18 route to `ACTION_TYPE_DRAW_MANY`, while `0..82` route to
-`ACTION_TYPE_MODIFIER`. The compressed Eye trie has five branch nodes of
-degrees `(2,3,3,2,3)` and thirteen outgoing edges, so its 18 proposed hidden
-records already have the broad operational role “branch instruction plus
-drawn continuation.” This promotes the branch from a bare alphabet/modulus
-selector to independent **typing evidence for the 83+18 architecture**. It
-still does not order the 18 records, assign their individual values, or touch
-the Eye renderer. Calling it a decoder would exceed the evidence.
+The complement initially looked stronger. Rolls `83..100` are not discarded:
+all 18 route to `ACTION_TYPE_DRAW_MANY`, while `0..82` route to
+`ACTION_TYPE_MODIFIER`. The compressed Eye trie has five branch nodes and
+thirteen outgoing edges. But `5+13=18` counts internal nodes and relationships
+as separate records; the corresponding recursive cast executes five internal
+cards and nine leaf cards, fourteen nodes total. The exact roll is discarded
+after selecting a type. This retains the bare alphabet/modulus selector but
+demotes the claimed **typing evidence for the 18-record architecture**.
+
+The checksum scopes fail separately. The lower-six subtree whose visible
+residue is 70 owns 11 hypothetical node-plus-edge records, not all 18. The
+all-nine scope owns 18 but has descendant residue 30, which does not close with
+the missing set's residue 31. The current wand-tree decoder is rejected.
 
 ### B. Base-5 path is ordinary
 
@@ -176,6 +180,30 @@ more than one header is the already-known modulus-101 body sum with negative
 sign. It matches exactly East 1, East 3, and East 5. Every other rule matches
 at most one panel. No simple systematic polynomial checksum explains all nine
 first symbols.
+
+## Additional lateral controls
+
+Two further key-free summaries were inspected after the frozen probes. They
+are controls, not pre-registered discoveries.
+
+Reading adjacent trigrams as literal points in the base-five eye cube gives a
+Hamming-distance 1/2/3 profile of `115/425/478`. Its full-grid chi-square is
+`9.46627`. Under 5,000 global relabelings of `0..82`—preserving the complete
+equality/prefix skeleton and every transition multiplicity while randomizing
+the base-five geometry—`3,713/5,001 = 0.742451` controls are at least as
+extreme. The component geometry does not select a low-Hamming instruction
+stream.
+
+Taking each panel's first edge out of its deepest shared-prefix cluster gives
+
+```text
+80,29,69 / 69,78,23 / 77,60,33.
+```
+
+The second and third natural rows both sum to 170. An exact relabeling null
+preserving the trie, the three diagonal checks, and all marker labels retains
+that equality in `30,576,476,160 / 825,564,856,320 = 1/27` cases. The equality
+was noticed post-hoc and is not selective enough to promote.
 
 Reproduction is in `scripts/audit_noita_random_thresholds.py` and
 `scripts/run_wide_architecture_probes.py`.
