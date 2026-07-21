@@ -1,0 +1,1296 @@
+# Research log — 21 July 2026
+
+## Re-established facts
+
+- Nine messages, 1,036 trigrams, lengths `99, 103, 118, 102, 137, 124,
+  119, 120, 114`.
+- The accepted triangular reading gives every value from 0 through 82 and no
+  other value.
+- No message contains the same trigram twice consecutively.
+- After their distinct markers, all nine messages share two values. The full
+  prefix trie then branches into East 1/West 1/East 2 (24 shared values) and
+  the other six (five); within the latter, East 3/East 4/West 4/East 5 share
+  nine, and East 4/West 4/East 5 share 20.
+- Raw frequency nonuniformity is explained by those copied prefixes. Removing
+  shared material makes the distribution compatible with uniformity in the
+  public 2025 frequency workbook.
+- Strong causal isomorphs, reconvergence, and alphabet-chaining conflicts are
+  the decisive structural evidence. The top `A.B.CB.AC` pattern occurs six
+  times where random expectation is negligible.
+
+## New experimental results
+
+### Five-eye affine walk
+
+An exhaustive scan found a degenerate candidate with generator 1, vertical
+translations `+1/-1`, centre negation, displayed trigram orders `123/312`, and
+horizontal identities. It uses 25 states and has normalized IoC 1.6930.
+
+Fixed-rule null tests:
+
+| Null model | Trials | `P(unique <= 25)` | Joint `P(unique <= 25, IoC >= 1.693)` |
+|---|---:|---:|---:|
+| Within-message trigram shuffle | 10,000 | 0.001900 | 0.000300 |
+| Independent uniform `0..82` | 10,000 | 0.001500 | 0.000200 |
+
+Because the rule was selected from roughly 47,000 variants, these fixed-rule
+p-values do not survive the search multiplicity by themselves. More decisively,
+16 simulated-annealing restarts with 200,000 iterations each could not turn the
+two alternating state alphabets into English. The best score per tetragram was
+`-12.1439`; an in-corpus English reference scored `-9.6453`. Outputs were stable
+gibberish. This branch is rejected.
+
+### Gaussian extension-field walk
+
+Because `83 = 3 mod 4`, the equation `i^2 = -1` has no solution in `F_83` but
+does in its quadratic extension. This gives a particularly natural encoding of
+the five eyes as `0, +1, -1, +i, -i` in `F_83^2`. The implementation exhausts
+six centre operations, six observations, four initial states, both reset
+policies, and all 36 parity-dependent trigram orders: 10,368 concrete walks.
+
+The best candidate misses 108 of the 230 equality constraints in the strongest
+published contexts and still uses 37 observed symbols. Candidates using as few
+as 32 symbols miss at least 116 constraints. This is substantially worse than
+the ordinary standard-deck baseline of 87 mismatches. It rejects this natural
+additive/centre/observation family, not arbitrary ciphers over `F_83^2`.
+
+### Structured deck ciphers
+
+Direct move-to-front/back, transpose, swap-front, prefix-reversal, and rotation
+decoders all retain 82–83 values with normalized IoC near 1.
+
+The original scan used ascending and descending numeric initial decks. A
+label-invariant result is available for move-to-front and move-to-back: at each
+repeated card, the move-to-front rank is the number of distinct cards accessed
+since its previous occurrence. This working-set distance is independent of the
+initial deck. Across the Eye corpus, repeated occurrences alone realize 59
+distinct ranks (and 59 after dropping every first trigram); 189 repeated
+occurrences have rank above 25. Move-to-back maps the same invariant through
+`rank = 82 - distance`, preserving the count. Both models therefore need at
+least 59 plaintext instructions under every card labeling.
+
+The more relevant `S_83` construction
+
+1. apply a fixed affine permutation of the deck positions;
+2. swap the top with a plaintext-selected position;
+3. optionally apply a second simple hidden swap;
+4. emit the top card
+
+was scanned over all 6,806 affine bases, with and without treating the first
+trigram as an out-of-band indicator. Every tested form still needs at least 81
+decoded instructions. Beam searches for an arbitrary second swap also exceed 40
+instructions within the first 186 ciphertext values for canonical base shuffles.
+This rules out the concrete construction, not arbitrary deck/GAK ciphers.
+
+A generic decoder made it possible to remove the affine-base restriction while
+retaining the same fixed-base-plus-top-swap construction. It scanned 8,430
+distinct standard physical or near-size shuffles: ordinary interleaves,
+Mongean deals, all Josephus steps, affine shuffles on 82 positions with one
+fixed card, and affine shuffles on 84 positions with one removed dummy. The
+strong contexts contribute 230 equality comparisons. The best candidate still
+misses 87 of them and uses all 83 instructions (82 after skipping message
+markers). No candidate approaches a conventional plaintext alphabet.
+
+A second scan added one plaintext-selected hidden swap after the output-making
+top swap. Across 25 anchored, neighboring, and mirrored rules for every
+standard base—210,750 models—the best reset-marker candidate misses 89 of 230
+comparisons and still uses 81 instructions. The earlier full-stream best missed
+91. The extra swap does not produce a plausible alphabet.
+
+The public allomorph analysis suggests an upper scale of roughly four swaps per
+plaintext action. A staged scan therefore extended the same construction to as
+many as three deterministic hidden swaps after the output-making top swap. It
+tested 292,972 candidates built from 8,598 standard, affine, and near-size
+bases and 25 anchored, ring-offset, or mirror rules, plus an explicit no-op.
+All bases and single rules were exhausted; pair and triple combinations were
+searched on the union of the 50 best bases with and without a hidden swap. The
+best exact one-, two-, and three-hidden-swap candidates missed 89, 92, and 93
+of 230 context equalities and used 81, 80, and 81 instructions respectively.
+Allowing cancelling rules merely recovers the no-hidden baseline of 87 misses
+and 81 instructions. This rejects the concrete formula family, not arbitrary
+four-transposition deviations from an unknown base.
+
+To test genuinely plaintext-specific sparse rules rather than another formula
+family, a coordinate optimizer now learns the concrete action
+
+```text
+apply common base; swap(top, plaintext rank); swap(u_rank, v_rank)
+```
+
+where the second transposition is arbitrary, fixed per decoded instruction,
+and cannot touch the top card. A round is exhaustive in its one-coordinate
+neighborhood: for every rank in the current decode it tests all 3,321 unordered
+non-top swaps, then commits the single best rule. Its objective prioritizes the
+230 strong equality comparisons and then body alphabet size. The distinct
+message markers are included as ordinary encrypted symbols, so their actions
+can establish different post-marker states.
+
+Calibration uses synthetic plaintext with the same message lengths and all 230
+equalities, encrypted on the same best full-stream standard base
+`affine-82-fixed82-15-17`:
+
+| Active planted rules | No-op decode | Rounds | Greedy result |
+|---:|---:|---:|---:|
+| 1 | 9 misses / 48 body ranks | 1 | 0 / 26; exact rule recovered |
+| 5 | 44 / 66 | 5 | 0 / 26; all five exact rules recovered |
+| 26 | 92 / 76 | 5 | 74 / 76; outside the greedy recovery basin |
+
+Endpoint order is immaterial for a transposition. On the real corpus, the same
+base begins at 87 misses and 82 body ranks. Ten exhaustive rounds learn ten
+arbitrary rules and reach 65 misses, but the alphabet never drops below 82.
+This is a calibrated rejection of the one- and five-active-rule neighborhoods
+of that particular base, and a stronger sparse negative than the formulaic
+scan. The 26-rule control is an explicit warning not to generalize it to a
+dense plaintext alphabet, several hidden swaps per letter, or an unknown base.
+
+The generic decoder also accepts an arbitrary initial card order. Simulated
+annealing was first calibrated on planted synthetic data: after 100,000 moves it
+reduced a 10-symbol instance from 83 apparent instructions to 31. On the real
+messages, representative interleave, Mongean, Josephus, and 84-position bases
+stalled at 76–80 instructions under the same budget. This is a useful heuristic
+negative, not a proof.
+
+The newly discovered East-5-first marker order suggests that the panels might
+be consecutive chunks of one stateful stream rather than nine resets. That
+interpretation was tested without pruning at all nine cyclic starts. The 6,806
+affine bases give 61,254 candidates; the best still uses 81 instructions and
+misses 176 of 230 context equalities. The 8,430 non-duplicate standard
+physical/near-size bases give 75,870 candidates; the best uses 81 instructions
+and misses 177. East 5 is not the best start in either family. Thus the order is
+not persistent state for this fixed-base-plus-top-swap construction.
+
+The base permutation itself was then made unrestricted. A separate annealer
+scores both the full 230 equality constraints and decoded alphabet size. Its
+calibration is deliberately sobering: exhaustive best-swap descent repairs a
+one-swap perturbation of a planted 26-symbol instance immediately, but a
+five-swap perturbation can stall far above the planted alphabet. On the real
+corpus the best long run misses 78 equality constraints and still needs 81
+instructions; best-swap descent stops at 85 misses. This strongly disfavors the
+common-base-plus-top-swap mechanism while remaining a heuristic, not an exact
+rejection of every arbitrary base.
+
+Finally, an exact Z3 encoding was built for an unrestricted common base,
+arbitrary initial labeling, a top swap, and at most 26 plaintext positions.
+Selected first-family, last-family, and combined runs all timed out after 60
+seconds with `unknown`, under both integer and bit-vector encodings. This marks
+the present solver boundary; it is not evidence of satisfiability or
+impossibility.
+
+Two further physical-card families have now been closed conditionally. A
+generalized 83-symbol Chaocipher implementation was first verified against the
+published 26-letter `WELLDONE...` example. It then crossed 13 constrained
+alphabets (natural, reverse, the two historical alphabets, `BDMAGICK`,
+`LUMIKKI`, `SNOWWHITE`, and six other Noita/metadata keywords), both odd-deck
+nadir choices, every left/right pairing, and marker-full/reset modes: 676
+candidates. Every candidate retained all 83 output states; the best missed 127
+of the 230 strong equality comparisons. This rejects those exact
+generalizations, not an arbitrary pair of 83-symbol Chaocipher alphabets.
+
+The top-swap scan was also broadened to selected-card handling. Each round
+applies one of the same 8,599 identity/standard/near-size bases, emits the card
+at the plaintext-selected rank, and then performs one of six ordinary actions:
+move the card to the front or back, cut to or after it, or reverse the prefix or
+suffix packet. Full-message and marker-free resets give 103,188 models. The
+best result misses 93/230 equalities and still needs 82 plaintext instructions;
+packet cuts and reversals are worse. This closes a simple magician's-deck gap
+between the no-base adaptive tests and the common-base/top-swap test.
+
+#### The 26-trigram row boundary
+
+Every complete interleaved visual row-pair contains exactly 26 trigrams. The
+archived early-access `gun_procedural.lua` and the current version both clamp
+ordinary generated wand `deck_capacity` to 26; the game also names the
+reshuffle flag `shuffle_deck_when_empty`. This is genuine shared in-game
+vocabulary, although special constructions can reach 30 and the correspondence
+does not by itself identify a cipher.
+
+It suggests a precise decoder rule that had not been tested: reset the hidden
+deck at every visual row-pair. Exhausting all 8,599 bases in the common-base
+plus top-swap family, with and without treating the initial marker as
+out-of-band, gives 17,198 candidates. The best misses 100/230 equalities and
+uses all 83 instructions. Repeating the row-reset test for the six selected-
+card actions adds 103,188 candidates; the best misses 109 and uses 82
+instructions. Thus the 26 coincidence remains a plausible passive alphabet or
+deck hint, but it is not a literal row-boundary reset in these mechanisms.
+
+### Position-progressive permutation
+
+The public research log left the model
+
+```text
+cipher_i = P^i(S[plain_i])
+```
+
+as a tentative possibility, where `P` is an arbitrary permutation and `S` a
+substitution. Direct optimization over arbitrary cycle structures was first
+calibrated on planted data. It repairs one- and five-label perturbations of a
+known 26-symbol instance by exhaustive best-swap descent, while searches from
+unrelated starts are much weaker. On the real corpus, random and fixed-cycle
+searches retain 79–80 decoded values, far from an ordinary alphabet. A broad
+Z3 encoding timed out even at loose bounds, so neither heuristic is the result.
+
+The decisive test is a small exact certificate. First consider a common
+starting phase. If the two strong length-30 last-family alignments are copies of
+one plaintext passage, East 4 at position 68 to East 5 at 69 defines `P`, while
+East 4 at 68 to West 4 at 71 defines `P^3`. The partial `P` map contains
+
+```text
+31 -> 33 -> 62 -> 8
+69 -> 31 -> 33 -> 62
+```
+
+but the independent `P^3` map requires `31 -> 69` and `69 -> 17`. Both are
+immediate contradictions. Therefore no permutation, cycle structure, or
+substitution alphabet satisfies the common-phase model.
+
+More strongly, unknown per-message phases do not rescue it. Call the East
+4→East 5 map `A` and East 4→West 4 map `B`; arbitrary phases merely change which
+powers of `P` these maps are, so they must still commute. Four observed edges
+give
+
+```text
+A(3)=44   B(3)=22   A(22)=23   B(59)=23
+```
+
+Commutativity requires `B(44)=B(A(3))=A(B(3))=23`. Since `B(59)=23` and `B` is
+injective, this would force the distinct symbols 44 and 59 to be equal. Thus
+the entire single-permutation progression family is excluded, including
+arbitrary cycle structures, alphabets, and per-message starting phases.
+
+### Partial-permutation completion bounds
+
+Each high-confidence repeated passage defines an injective partial permutation
+of the 83 ciphertext labels. Decomposing its observed directed graph into paths
+and cycles gives sharp, label-independent completion bounds: a path with `k`
+edges costs `k` transpositions when closed, while a `k`-cycle costs `k-1`.
+
+The marker-plus-shared-prefix contexts are exceptionally simple. Depending on
+the family, they fix 5, 18, or 20 distinct labels and add one marker edge; each
+can be completed with one transposition moving two labels. This is exact
+support for the intuition that the different marker actions can be very close,
+though it does not determine their common base.
+
+The later contexts are much less sparse:
+
+| Context family | Observed edges | Minimum transpositions | Minimum support |
+|---|---:|---:|---:|
+| first gap-28 | 6 | 6 | 11 |
+| first length-18 maps | 13 | 13 | 22–24 |
+| last East 4→East 3 | 22 | 22 | 40 |
+| last length-30 maps | 25 | 25 | 42–43 |
+
+These are cumulative context transformations, not individual plaintext
+actions, so the large bounds do not contradict a sparse generator by
+themselves.
+
+Crucially, every map leaves at least two source and target labels unassigned.
+Closing paths gives a concrete minimum completion, and exchanging the targets
+of two unobserved sources flips its sign without changing any observed edge.
+Therefore every tested context has both even and odd completions. For the two
+length-30 maps the minimum even completion uses 26 transpositions; the minimum
+odd one uses 25. The present context evidence cannot choose `A83` over `S83` or
+vice versa. Any parity attack needs a context covering at least 82 labels or an
+independent relation that fixes the remaining completion choices.
+
+### Partial-map closure, transferred from practice `two`
+
+The solved practice cipher `two` was cracked by extracting complete 12-label
+maps from equality-pattern repeats and composing them until they closed to a
+small permutation group. The same operation is now implemented for the seven
+strong Eye contexts rather than merely cataloguing their repeat locations.
+Their maps expose `6/13/22/25` edges out of 83, so inverses and short words are
+kept only where every constituent edge is observed. If two partial words send
+the same source label to different targets, they are provably distinct in
+every full permutation-group completion. A clique of such conflicts therefore
+gives an exact, model-conditional lower bound on group order without choosing
+arbitrary values for the missing edges.
+
+At reduced-word depth five, retaining words with at least two forced edges,
+the results are:
+
+| Symbols trimmed from each repeat end | Forced partial-word restrictions | Greedy certified distinct-element clique |
+|---:|---:|---:|
+| 0 | 4,339 | 109 |
+| 1 | 3,661 | 108 |
+| 2 | 2,471 | 85 |
+| 3 | 1,303 | 70 |
+
+Every pair among the seven direct context maps conflicts at trims zero through
+two; 20 of 21 pairs still conflict at trim three. The clique algorithm is not
+claimed to find the maximum, but every element it reports has an explicit
+pairwise conflict witness, so each displayed number is a valid lower bound.
+
+Unlike practice `two`, however, these restrictions do **not** close to a small
+or stable group. The bound grows with word depth and falls materially when one
+more boundary symbol is removed. More decisively, a matched null independently
+shuffles each map between its exact observed domain and image sets while
+preserving its fixed-point count. At trim two, 9 of 10 nulls equal or exceed the
+observed clique of 85 (null median 87, range 70–96). At trim three, 11 of 40
+equal or exceed 70 (median 65, range 52–81). Large conflict cliques are thus an
+ordinary consequence of composing seven overlapping sparse injections, not
+evidence for a recovered Eye group.
+
+This is a useful negative transfer: the practice-`two` route needs maps close
+to complete, whereas the strongest Eye repeat covers only 25 of 83 labels and
+composition rapidly loses observed edges. A new longer repeat, a way to join
+contexts, or an in-game clue that supplies missing label correspondences would
+be required before genuine group closure becomes identifiable.
+
+### Affine group autokey
+
+For hidden affine state `(a,b)` and visible coordinate `x=b/a`, normalize each
+plaintext operation by `t=v/u`. Then
+
+```text
+t_i = (x_i - x_(i-1)) * a_(i-1) mod 83
+a_i = u(t_i) * a_(i-1) mod 83
+```
+
+All affine, exponential, power, and shifted-reciprocal choices tested for `u(t)`
+retain 81–82 plaintext values. An unrestricted beam reaches 27 values after 100
+symbols, 38 after 200, and exceeds 40 after 243. Exact integer and finite-enum
+SMT formulations at 27 and 40 values time out; they do not prove impossibility.
+
+Those calculations assign field coordinates `0..82` directly to the displayed
+glyph values. That is a special labeling, whereas a general group-autokey model
+allows an arbitrary permutation between ciphertext labels and the points on
+which the hidden group acts.
+
+To remove that assumption, `affine_embedding.py` assigns an unknown, injective
+field coordinate to every observed ciphertext label and one unknown affine map
+to each repeated-plaintext context. A second implementation independently
+eliminates most coordinates by propagating affine expressions over a directed
+spanning forest. Both encodings give the same result for the last-family
+contexts:
+
+| Group | Context assumptions | Exact result |
+|---|---|---:|
+| `C83:C41` | East 4→West 4 and East 4→East 5, length 30 | `UNSAT` |
+| `C83:C82` | either one or any pair of the three contexts | `SAT` |
+| `C83:C82` | both length-30 contexts plus nested East 4→East 3, length 25 | `UNSAT` |
+
+Thus `C83:C41` is excluded under only the strong three-occurrence isomorph.
+Using just this last family, excluding full `AGL(1,83)` would also require the
+weaker assumption that East 3's nested 25-character pattern represents the same
+plaintext. The pairwise `SAT` results explain why the public literature treated
+that conclusion as tentative.
+
+The `C83:C41` result also has a dependency-free exhaustive certificate. Once
+the two affine multipliers are fixed, the unknown label coordinates and the two
+translations form a linear system over `F_83`. Of the `41^2 = 1,681`
+multiplier pairs, 1,664 systems are inconsistent. Each of the other 17 forces
+at least one equality between the coordinates of distinct ciphertext labels,
+violating the required relabeling permutation. There are no open cases. This
+independently reproduces the SMT result in about two seconds.
+
+The same linear method produces a stronger `C83:C82` result from two independent
+high-confidence isomorph families. Across all `82^2 = 6,724` multiplier pairs,
+the two length-30 mappings reject 6,644 by inconsistent equations and 76 by
+forced coordinate collisions. Only `(4,24)`, `(42,30)`, `(45,7)`, and `(52,32)`
+remain linearly open. Adding only West 1's length-18, gap-30 self-repeat tests 82
+possible multipliers for each survivor; all 328 extensions are inconsistent.
+
+Consequently both affine transitive groups are excluded without identifying
+glyph labels with numeric field coordinates and without using the weaker East 3
+context. The conclusion remains conditional in the ordinary cryptanalytic
+sense that the strong ciphertext isomorphs are being interpreted as repeated
+plaintext passages—the same premise on which the public GAK model is built.
+
+The analogous first-family contexts do not provide such a rejection:
+`C83:C82` is satisfiable, while the `C83:C41` run timed out at 30 seconds.
+
+### Initial trigrams as metadata
+
+The nine first values are `50, 80, 36, 76, 63, 34, 27, 77, 33` in the
+canonical East/West order. They are all distinct and greater than 26, and each
+shares a nontrivial divisor with the universal second value 66. Under simple
+fixed, without-replacement nulls, those two events have probabilities 0.02305
+and 0.03823 respectively.
+
+More strikingly, the first eye of each message is one direction clockwise from
+the second eye of the next message. In canonical order eight of the nine
+circular links work: West 4→East 5 is the sole failure, while the previously
+overlooked East 5→East 1 link succeeds. Rotating the list to
+
+```text
+East 5, East 1, West 1, East 2, West 2, East 3, West 3, East 4, West 4
+```
+
+therefore gives a perfect eight-link linear chain through every message, and
+East 5 is the unique successful cyclic start. Exact enumeration over nine
+distinct values drawn from `0..82`, while retaining the canonical trigram digit
+multiplicities, gives
+
+```text
+236930178600 / 119276318345184000 = 1.98639748e-6
+```
+
+for at least eight of nine circular links under this fixed rule. To estimate
+some of the inspection multiplicity, one million seeded samples were also
+tested for every current-digit/next-digit pairing and every constant integer
+offset: the fixed rule occurred 4 times and some such rule occurred 248 times.
+The latter `2.48e-4` rate is still not a universal correction for every rule a
+human might notice, but makes an accidental order marker substantially less
+plausible than the old uncalibrated seven-link calculation did.
+
+The content immediately after the markers has a complementary hierarchy. All
+nine share two values. They then split into a 24-value East 1/West 1/East 2
+branch and a five-value branch containing the other six; inside the latter,
+East 3/East 4/West 4/East 5 share nine, and East 4/West 4/East 5 share 20. This
+is the complete non-singleton prefix trie. The order chain and prefix tree are
+exact metadata-like structure, but neither supplies plaintext.
+
+The chain has a useful graph interpretation. For a marker `(a,b,c)`, regard
+`b -> a-1` as a directed edge on the three states `0,1,2`. The East-5-first
+order is then an edge-continuous trail through all nine labeled edges. The
+unused third digits have the exact sorted multiset
+
+```text
+0, 0, 1, 1, 2, 2, 3, 3, 4
+```
+
+and provide a second ordering. Sorting markers lexicographically by ascending
+`(third, first, middle)` gives
+
+```text
+East 1, West 1, East 2, West 2, East 4, West 4, East 5, East 3, West 3
+```
+
+Every non-root cluster of the observed prefix trie is an interval in this
+order. Only the `(third, first)` digit pair and its complete reversal have this
+property among the 24 signed choices of two sorting digits.
+
+An exact conditional null enumerates every assignment of the observed marker
+multiset to the nine fixed messages. The denominator for every row is `9!`:
+
+| Assignment event | Count |
+|---|---:|
+| fixed East-5-first trail | 168 |
+| fixed ascending `(third, first)` trie order | 864 |
+| both fixed rules | **1** |
+| any circular trail start and fixed trie order | 8 |
+| any circular start and any signed two-digit trie order | 22 |
+
+The observed assignment is that unique fixed-rule intersection. More
+post-hoc freedom raises the last event to `22/362880 = 6.0626e-5`, still a
+strong conditional composition. This result decodes two header orderings; it
+does not identify the body plaintext or key. A direct cipher follow-up also
+fails: concatenating bodies in the trie-compatible order and scanning every
+affine and standard common-base/top-swap deck leaves at least 82 and 81 decoded
+ranks. The best standard body-only candidate misses 178/230 context equalities.
+
+#### A cyclic BWT payload
+
+The two independently decoded marker orders have the exact relationship of a
+Burrows-Wheeler transform. Reading the unused third marker digits in the
+East-5-first trail order gives last column
+
+```text
+L = 300113422
+```
+
+Stable sorting gives `F = 001122334`; its stable occurrence order is exactly
+the ascending `(third,first)` trie-compatible message order. The LF map is
+
+```text
+(6, 0, 1, 2, 3, 7, 8, 4, 5)
+```
+
+and is one nine-cycle. East 5 independently fixes primary row zero. Cyclic BWT
+inversion then gives `001123243`; regrouping the established base-five
+trigrams gives `(1,38,73)`, and the public ASCII+32 representation reads
+`!Fi`. Since the recovered object is cyclic, it can naturally be displayed as
+`Fi!`.
+
+The exact observed-payload-multiset null is:
+
+| Event | Count out of 22,680 distinct orderings |
+|---|---:|
+| one LF cycle | 2,520 |
+| inverse trigrams all in `0..82` | 1,031 |
+| punctuation + uppercase + lowercase form | 15 |
+| case-insensitive `fi` suffix | 2 |
+| exact `!Fi` | **1** |
+
+Conditioning instead on assignments of all nine observed markers to the fixed
+messages leaves 168 assignments satisfying the fixed trail, 37 with one LF
+cycle, 14 whose inverse gives three values in `0..82`, and only the observed
+assignment giving exact `!Fi`. This is not a universal human-inspection p-value,
+but the BWT construction was selected after both constituent orders had already
+been decoded and calibrated.
+
+Several literal follow-ups are negative. None of the nine bodies is itself a
+valid one-cycle BWT last column, and using its marker value as a primary row
+does not round-trip. Fibonacci differencing and all `83^2 = 6,889` two-lag
+linear recurrences retain 82–83 outputs. Keywording the 83-card initial order
+with `FI`, `FINNISH`, or `FIBONACCI` and scanning 15,236 bases in both marker
+modes also bottoms out at 81 decoded instructions. The payload is a strong
+hint, not a direct transform or key under those families.
+
+LF traversal associates the rows with
+`E5,W3,W4,E3,E4,W2,E2,W1,E1`; reversing that traversal associates the restored
+digits with `E1,W1,E2,W2,E4,E3,W4,W3,E5`. A continuous deck scan tested both
+orders, marker-present and body-only, over all 6,806 affine and 8,430 standard
+bases: 60,944 candidates in total. The best still needs 81 decoded instructions
+and misses 177 of 230 repeated-context equalities. Neither derived permutation
+is the missing continuous-state key in this model.
+
+Two stronger BWT compositions were checked. At the individual-eye level,
+inverse move-to-front plus marker-indexed cyclic BWT was exhausted over all 120
+five-symbol initial lists, six marker-digit orientations, and primary-index
+adjustments `-1,0,+1`. None of the 2,160 candidates even round-trips the first
+message. At the trigram level, concatenating all marker-free bodies in canonical
+order gives LF cycle lengths `(1026,1)` over 1,027 values. Three separate
+one-value deletions yield one cycle, but their primary-row-zero inverses are
+gibberish. A seeded 10,000-trial prefix-tree-preserving parity-shuffle null has
+15 maximum cycles of at least 1,026, including ten exact `(1026,1)` patterns and
+five full 1,027-cycles. The observed near-cycle is unusual at roughly the
+per-mille level, but is neither unique nor a decryption.
+
+#### Wadsworth/cipher-clock exclusion
+
+The historical cipher-clock interpretation has a key-independent obstruction.
+Let its plaintext ring have `m` positions and its mixed ciphertext ring have
+83. Each plaintext transition advances the ciphertext ring by between one and
+`m` positions. If both directed digrams `u->v` and `v->u` occur, their two
+clockwise distances sum to 83, so `2m >= 83` and `m >= 42`, regardless of the
+mixed ring's ordering. The Eye bodies contain 59 such reciprocal digram pairs;
+West 3 alone includes `37,0,37`. This exactly excludes the classical construction
+with 29 Finnish letters or 30 letters-plus-space. It does not exclude a
+nonclassical physical ring with repeated symbols and at least 42 positions.
+
+Aki's published disk-derived candidate is one such nonclassical ring: 114
+physical positions containing 37 distinct plaintext symbols. Its exact
+next-occurrence mechanism was reproduced and scanned with every one of the
+6,806 affine permutations of the 83-position output ring, resetting each
+message, in full-stream and marker-free modes. Against transliterated
+*Kalevala* Finnish, the best scores are `-15.3843` and `-15.4314` per
+tetragram, while the training-corpus self-score is `-8.8862`; both outputs are
+visibly digit-heavy gibberish. This is a conditional negative for that input
+ring, affine output ordering, and reset rule. An arbitrary mixed output ring or
+a different repeated-symbol physical ring remains outside the scan.
+
+#### Finnish language controls
+
+Two public-domain Finnish corpora were used, with `ä`, `ö`, and `å` retained as
+distinct placeholder symbols rather than merged with `a` and `o`. On the old
+25-state full-stream alternating walk, the best Finnish score is `-11.4691`
+per tetragram versus an in-corpus reference of `-10.9524`. Ten nulls jointly
+shuffle every disjoint prefix-tree edge, preserving copied prefixes, message
+lengths, and parity frequencies; they range from `-13.1903` to `-13.0532`.
+The analogous English experiment has a smaller advantage over independently
+shuffled nulls (`-12.2334` versus `-13.5226..-13.6878`) and is much farther from
+its in-corpus reference (`-9.6862`). This is evidence that the marker's `Fi`
+reading is language-relevant, not evidence that the walk is correct.
+
+The cleaner cipher test removes the now-confirmed marker before resetting and
+tracing each body. It necessarily reproduces every copied plaintext prefix.
+The best 25-state reflection and 26-state negation walks, each with alternating
+triangle alphabets, score `-11.8874` and `-11.9044`; their five respective
+prefix-tree nulls occupy `-13.2540..-13.0903` and
+`-13.2980..-13.1018`. Both outputs remain stable Finnish-looking gibberish.
+The stricter monoalphabetic variants score only `-12.9385` and `-13.2077`.
+The 16-state odd-East/checksum walk scores `-11.7572`, inside its simple shuffle
+range `-11.8627..-11.4698`, and remains rejected. Allowing arbitrary
+many-to-one state readouts without a distribution constraint degenerates to
+`SISISISI...`, a standard finite-n-gram maximum rather than plaintext. A
+chi-square Finnish unigram constraint still collapses into short
+`ISI/ATA/NEN` cycles and scores implausibly above held-in Finnish; the
+homophonic relaxation is non-identifying under this objective.
+
+A source check is now exhaustive for Project Gutenberg's Finnish catalog.
+All 3,648 texts loaded successfully. The scanner generated 2,631,331 candidate
+lines, sentences, or paragraphs under letters-only normalization and 2,772,407
+with spaces preserved. Neither set contains a complete exact-length
+`2/24/5/9/20` nine-entry prefix tree. More strongly, neither contains even the
+24-character three-entry upper branch. Letters-only partial counts are five
+deep-20, one nested-9, zero lower-6, and zero joined roots; space-preserving
+counts are two, one, zero, and zero. The public Finnish translation of *Corpus
+Hermeticum* XIII likewise has no complete first-family fingerprint. This still
+does not cover the 2020 Finnish print translation or custom text.
+
+#### A candidate embedded instruction
+
+The marker order and prefix trie compose in an unexpectedly legible way. Start
+the message ordering at East 5, as independently required by the unique perfect
+marker-chain rotation. A breadth-first traversal of the non-singleton prefix
+trie, preserving that message order between sibling branches, has cumulative
+depths
+
+```text
+2, 5, 24, 9, 20  ->  B E X I T
+```
+
+under ordinary A1Z26. The universal two-value root gives the initial `B`; the
+four proper branch nodes spell `EXIT`. It is possible to read this
+self-referentially as “breadth-first: EXIT.” This is not merely an anagram:
+with the six-message root branch first, breadth-first order is exactly
+`5,24,9,20`. A depth-first walk would instead give `5,9,20,24`.
+
+This interpretation has substantial post-hoc freedom: A1Z26, cumulative rather
+than edge depths, breadth-first traversal, and exclusion or interpretation of
+the root were all considered after inspecting the tree. A uniform random-
+cutpoint calculation would badly misrepresent natural repeated prose, so no
+discovery p-value is claimed. No indexed public report of this exact reading
+was found in the web sources checked on 21 July 2026.
+
+Nevertheless, `EXIT` suggests a concrete internal check. Arrange the canonical
+message order in its natural 3x3 checkerboard:
+
+```text
+East 1  West 1  East 2
+West 2  East 3  West 3
+East 4  West 4  East 5
+```
+
+and treat each component of a marker trigram as the documented direction
+`centre, up, right, down, left`. Starting at East 5, all three component fields
+leave the grid:
+
+```text
+first:   East 5 -> West 3 -> East 2 -> north
+middle:  East 5 -> West 3 -> East 2 -> east
+third:   East 5                         -> south
+```
+
+Thus the independently selected start and the literal instruction have an
+exact directional realization. A full audit weakens the uniqueness claim but
+adds a separate multiplicity fact: East 3, West 3, and East 5—and no other
+starts—each have the complete north/east/south exit signature. Shuffling the
+observed marker multiset over the fixed grid gives the exact counts
+
+```text
+fixed East 5 has NES:       2,688 / 362,880
+at least one NES start:     5,328 / 362,880
+exactly three NES starts:     312 / 362,880
+```
+
+Holding the observed East 5 marker fixed while shuffling the other eight gives
+48/40,320 assignments with three starts. A seeded one-million-trial null using
+nine distinct uniform values from `0..82` found 1,602 fixed East 5 events,
+5,447 grids with any NES start, and 75 with at least three. Allowing any
+repeated signature made of three distinct exit directions, rather than the
+inspected `NES` target, raised the last count to 1,167. These are useful
+conditional calibrations, not a discovery p-value: the 3x3 layout, routing
+interpretation, and target signature were all selected post hoc.
+
+The first two East 5 paths visit markers 33, 34, and 36, leaving 35 (`120` in
+base five) as a tempting missing value, but 35 occurs seven times in four
+message bodies and has not produced a consistent next step. Inspecting the
+ciphertext symbols immediately after each prefix exit also produced neither
+text nor a complete marker-pointer chain. `BEXIT` is therefore the strongest
+new lead, not a decryption.
+
+The most literal cipher-key follow-up is also negative. Interpreting `EXIT` in
+the established ASCII+32 alphabet gives card labels `37,56,41,52`; placing
+those first and the remaining labels in ascending order defines an unambiguous
+keyed initial deck. Move-to-front/back, swap-front, prefix reversal, rotation,
+and every transpose distance all retain 82 decoded ranks. An exhaustive scan
+then combined this initial deck with 15,236 unique affine and standard bases in
+both full-message and marker-reset modes (30,472 candidates). The minimum
+alphabet is 81; the best candidate at that minimum misses 89 of 230 context
+equalities, matching rather than improving the prior structured baseline.
+The same exhaustive scans with `NES` and `BEXITNES` also retain at least 81
+ranks and bottom out at 90 and 89 equality misses respectively. None of these
+metadata strings is a key for these deck families.
+
+The A1Z26 depths suggest a more useful class of cribs. The famous Emerald
+Tablet wording `THATWHICHISABOVEISLIKETO` is exactly 24 letters, apparently a
+perfect fit for the first branch. Completing the 20-letter last branch with
+`THATWHICHISBELOWISLI`, however, is rejected without choosing a key. Both
+phrases contain `HICHI` at offset five. Its ciphertext pattern in the first
+branch is `.....`, while in the last branch it is `A...A`; a perfectly
+isomorphic cipher cannot map the same plaintext fragment to both patterns.
+
+A second completion survives. Mead's *Corpus Hermeticum VI* contains the
+sentence “There is no Good that can be got from objects in the world.” Its
+normalized first 20 letters are exactly `THEREISNOGOODTHATCAN`. Assigning
+`THERE` to the six-message branch, `THEREISNO` to East 3 plus the last-family
+messages, and that 20-letter phrase to East 4/West 4/East 5 produces no
+perfect-isomorphism conflict through the entire proposed prefix. This is a
+source-backed crib, not a decryption: the wording was selected after seeing
+the lengths, many Hermetic sentences start with “there is no,” and a sentence
+scan of the downloaded public-domain Mead volumes I–III found no set with
+the complete assigned 2/24/5/9/20 tree. Their combined normalized text also
+contains zero instances of the full first-family 18/30, 18/35, nested 9/28
+source fingerprint.
+
+Combining the upper and lower assignments still produces no key-free
+perfect-isomorphism conflict. A stronger, model-specific check encodes a reset
+83-card deck in `QF_AUFBV`. Every plaintext symbol has an injective top-swap
+rank and one to three arbitrary fixed non-top transpositions; an optional fixed
+common base is applied first. This is the concrete sparse construction, not
+general `S83` GAK.
+
+For the identity base, the lower 20-letter phrase is `SAT`. The model supplies
+12 letter ranks and hidden swaps, and an independent materialized-deck test
+re-encrypts `THEREISNOGOODTHATCAN` to the exact East 4 body prefix. Since the
+lower-family ciphertext prefixes are literal copies, it also covers the five-
+and nine-letter lower branches. The upper phrase is independently `SAT` through
+23 of its 24 letters; the final repeated `O` remains `unknown` after four
+120-second seed variants and one 180-second run.
+
+The shared-key combination is more restrictive. The first ten upper letters
+`THATWHICHI` and the first 17 lower letters are `SAT`, but those ten plus the
+full 20-letter lower phrase are exactly `UNSAT`; the full 24+20 assignment is
+also `UNSAT`. The same 10+20 query on the best nontrivial structured base is
+`unknown` after 120 seconds. Thus the coherent Hermetic tree survives general
+GAK and has a concrete lower-prefix witness, while one natural identity-base,
+two-transposition realization is rejected when its shared letter rules are
+enforced across branches.
+
+Widening the model changes that conclusion in a controlled way. Holding the
+verified lower ranks and its first hidden-swap table fixed, a second hidden
+swap per letter gives a concrete shared key for all 20 lower letters and the
+first ten upper letters `THATWHICHI`. An independent materialized-deck test
+reproduces both ciphertext prefixes. With those two slots fixed, a third hidden
+swap extends the same construction through 14 upper letters,
+`THATWHICHISABO`, again with an independently verified witness. Counting the
+output-making top swap, this uses at most four transpositions per plaintext
+action—the scale suggested by the public allomorph estimate. The particular
+two-hidden witness cannot absorb upper character 11, while a free third slot
+does; direct SMT solving of character 15 remains `unknown`.
+
+A calibrated coordinate descent resolves compatibility without resolving
+likelihood. Starting from the independently materialized 14+20 witness, each
+round exhausts all 3,321 non-top transpositions for every mutable letter/slot.
+It reduces the seven remaining upper mismatches one or two at a time and reaches
+zero in seven rounds, giving one common rank map and at most three hidden swaps
+that exactly re-encrypts the full `THATWHICHISABOVEISLIKETO` and
+`THEREISNOGOODTHATCAN` prefixes. A separate materialized-deck unit test locks in
+the complete witness. Three composition-matched suffix permutations stop at
+one to three mismatches, but that control is biased because the new-letter
+ranks were inferred from the Hermetic ordering itself; no discovery likelihood
+is claimed. These witnesses show concrete compatibility, not likelihood: the
+key was fitted to the crib, and many degrees of freedom remain.
+
+The literal Mead continuation
+`THEREISNOGOODTHATCANBEGOTFROMOBJECTSINTHEWORLD` was then tested one branch at
+a time. East 4, West 4, and East 5 are all `SAT` through character 23
+(`...BEG`); West 4 is also `SAT` through character 24 (`...BEGO`), while East
+4 and East 5 are `unknown` there. Adding the repeated `T` at character 25 is
+`unknown` for West 4 even when the 24-character prefix is solved first and the
+solver is allowed 180 seconds. No branch is rejected or uniquely selected by
+this extension. The fitted full shared witness makes a cleaner held-out
+prediction and fails immediately: none of its next five encrypted outputs for
+`BEGOT` matches East 4. Allowing coordinate refitting repairs three but stalls
+at two mismatches. Three exact 24+25 checks with the ranks and first hidden
+swaps fixed, but the remaining two swaps free, each time out at 120 seconds
+with `unknown`. The short exact witness should therefore be treated as an
+overfit compatibility construction.
+
+The total numeric sums of the messages in canonical order are
+
+```text
+4040  4124  4754
+4295  5656  4748
+5385  4936  4545
+```
+
+East 1, East 3, and East 5—the odd-numbered East messages and the main diagonal
+in this arrangement—are all divisible by 101. Their common gcd is 101, while
+every other three-message subset has gcd at most 8. Removing the first values
+shows that the markers themselves are exact check digits:
+
+```text
+message                 East 1  East 3  East 5
+body sum mod 101            51      38      68
+required marker (-sum)      50      63      33
+actual marker               50      63      33
+```
+
+An exact convolution of the independent uniform `0..82` sum distributions
+gives `P(gcd >= 101) = 4.11776714e-5` for that fixed triple. In one million
+seeded draws from those exact marginals, 44 fixed triples and 3,422 arbitrary
+three-message subsets reached the threshold, giving a post-hoc estimate of
+`0.003422` for finding some such triple.
+
+Two observed-distribution nulls avoid assuming uniform independent symbols. In
+100,000 seeded trials, shuffling the 1,036 observed values into the fixed
+message lengths produced 2 fixed-diagonal and 317 any-triple events. Holding the
+nine markers fixed while shuffling only bodies produced 4 and 316. Conditional
+on the observed body sums and marker multiset, exact enumeration of all `9!`
+marker assignments gives 720 assignments (`1/504`) in which the three natural
+family representatives all satisfy the mod-101 checksum; the same 720 also
+cover one representative from each prefix family. These nulls condition on
+different information and must not be multiplied as independent evidence.
+
+The checksum is tied to the distinguished numeric reading rather than merely
+to 83 arbitrary labels. All `6 × 6 = 36` choices of a separate eye order for
+the two triangle parities were tested. Only the accepted order makes both
+parities separately cover `0..82`; it is also the only order with diagonal gcd
+101. Every other order gives diagonal gcd 1. This is evidence that the numeric
+values—and at least three initial markers—were intentional, but a checksum over
+ciphertext does not reveal the hidden-state key.
+
+As a direct follow-up, all field and deck scans were repeated on only these
+three messages. The only compressed five-eye walk uses 16 states, but a
+monoalphabetic language solve trained on 12.7 MB of alchemical English scores
+`-12.7946` per tetragram versus `-9.7204` for held-in natural text and produces
+stable gibberish. The diagonal is likely a selected/checksummed channel, but
+that walk is another search artifact.
+
+### Public construction and in-game clue audit
+
+Patrick's public Sampo/eye notes propose a 25-position board with five
+eye-selected operations. The implementation now exhausts all 36 triangular
+operation orders under both the published top/bottom/top readout and a clean
+alternating readout. Every stream uses all 25 cells; the best normalized IoC is
+only 1.081, versus roughly 1.7 for ordinary language, and every candidate has
+adjacent doubles whereas the canonical Eye trigram stream has none within a
+message. This rejects that exact automaton, not the broader idea that an
+in-game board supplies state.
+
+The alternative published "Master reading" was measured rather than dismissed
+visually. It uses 125 symbols, has nine adjacent doubles, only six repeated-
+pattern classes, and contains no `A.B.CB.AC` class. The canonical reading uses
+exactly 83 symbols, has zero doubles, 67 pattern classes, and six copies of the
+top class. The 125-symbol reading is therefore structurally much weaker.
+
+The earthquake/altar ring's full visible `BDMAGICK` sequence was also treated
+as a keyed 83-card initial order, rather than only as the shorter `MAGICK`
+motif. Across 15,236 affine and standard bases in both marker modes, the best
+candidate still needs 81 instructions and misses 89/230 equalities. Direct
+keywording does not connect that altar to the body cipher in this family.
+
+The twelve early-access buried glyph texts are old enough to be construction
+material and are independently confirmed Noita puzzle prose. Their normalized
+lengths and exact repetitions have been inventoried. One text happens to have
+103 letters, but the set has neither the nine-message length profile nor the
+Eye prefix tree, and direct orb-lore/text-index and key walks are negative. The
+current Kantele and eye-placement Lua likewise contain no handler joining music
+or an interaction to the Eye ciphertext. These code checks only reject a
+current runtime trigger; they do not rule out a passive clue, a native-code
+check outside the retrieved functions, or a decoder clue added after 1.0.
+
+The retrieved public progress document and analytical notes do not name
+Chaocipher, Solitaire, or Pontifex. This is a statement about the available
+written record, not evidence that nobody tried them privately. Standard
+Solitaire/Pontifex is structurally a poor match because an independent running
+keystream does not naturally create the observed causal isomorphs and
+reconvergences. The generalized Chaocipher test is reported in the structured
+deck section above.
+
+#### Developer-statement check
+
+The oft-repeated line that Arvi said "the eye decorations do contain a message"
+is a paraphrase, not a verbatim interview quote. In the official April 2021
+Noita Summit Q&A, at about 53:42, Arvi jokes about a bungee jump, mayonnaise,
+and getting a vision of "what the message is." His wording supports the modest
+claim that there is a message, but supplies no cryptographic method or
+authorship clue. The written follow-up question document contains no Eye
+answer.
+
+Petri remains a plausible but unconfirmed author. Nolla's 2019 AMA says Petri
+and Olli broadly handled programming, and the renderer is native C++; a profile
+of Petri also documents his lifelong performance of card magic. Those facts
+make simple deck constructions worth testing, but neither proves he designed
+the Eyes. The coincidence between an 83-symbol alphabet and Petri's reported
+birth year 1983 is too unconstrained to use as a key.
+
+### The `LUMIKKI` storage-word lead
+
+The high 32 bits of the first stored 64-bit Eye block are exactly
+`0xacf68674`. The community document calls this CRC-32b of `lumikki`, but the
+standard reflected CRC-32/ISO-HDLC value is `0x5bfc21b9`. An independent
+bit-level audit finds one exact mundane match: non-reflected CRC-32/BZIP2 of
+UTF-8 lowercase `lumikki`. Common case, whitespace, null-termination, UTF-16/
+UTF-32, other CRC-32 models, and standard digest chunks add no second match.
+The number is real; its historical label was imprecise.
+
+The first packed word is
+`0xacf686745634505c`. Its base-seven rendering has a discarded zero padding
+digit and 22 visible stored digits in `1..6` (five eyes plus line break). Base seven is forced by the six
+stored states, so Snow White's seven dwarfs is a thematic association rather
+than an additional numeric decode. White snow, red blood, and black ebony also
+echo the alchemical white/red/black stages, but this was noticed after the hash
+word and must be treated as post-hoc support only.
+
+A calibration scan parsed 283 distinct 32-bit constants from the decompilation
+and hashed 103,834 modern Finnish dictionary words with eight common CRC-32
+models, optionally byte-reversed. It finds zero overlaps. `Lumikki` is a proper
+name/title absent from that word list, so the scan neither reproduces nor
+validates the original reverse lookup; its unknown search universe is the main
+multiple-testing problem. No `lumikki` or Snow White string occurs in the
+retrieved game data, and no retrieved engine, modding, or serialization source
+shows CRC-32/BZIP2 as Noita's ordinary string hash.
+
+The installed Windows executables now settle the runtime-hash alternative for
+the current build. Steam build 17130612 contains a release `noita.exe` compiled
+25 January 2025 and a developer executable compiled four minutes earlier. In
+the release binary, `0xacf68674` occurs exactly once, at virtual address
+`0x61edc9`, as the immediate high half written beside `0x5634505c` to create the
+first Eye storage word. No CRC-32/BZIP2 polynomial, four-entry table prefix,
+full table, `lumikki`, or `BZIP` string is present. The engine does contain one
+CRC-32/ISO-HDLC implementation using the reflected polynomial `0xedb88320`.
+All three of its direct call sites are contiguous in the PNG encoder and build
+the `IHDR`, `IDAT`, and `IEND` chunk checksums. The developer executable has the
+same PNG CRC routine, but none of the first twelve 32-bit Eye-word halves.
+
+Thus the target is Eye payload data, not a second reference to a runtime hash,
+and the CRC family Noita actually uses is the wrong one. This sharply demotes
+the engine-string-hash hypothesis. It does not decide whether a developer chose
+the half-word offline as an easter egg, nor does it calibrate the community's
+reverse-lookup search space.
+
+The external-source chronology is clean at the public boundary. J. A.
+Hahnsson's Finnish `Lumikki` translation dates to 1876, and Project Gutenberg
+made ebook 45046 public in 2014. The extracted story has 14,450 normalized
+letters. Under letters-only and space-preserving normalizations it supplies
+zero complete Eye message trees and zero first-family fingerprints. A scan of
+1,940 fixed-start Cessation-style walks through that text has best Finnish
+tetragram score `-13.0014`, versus `-8.9209` for held-in Finnish, with visibly
+random previews. `LUMIKKI`, `SNOWWHITE`, and alchemical color-stage keyword
+decks also stay at 81 instructions and at least 88 repeated-context misses.
+The hash is therefore still an unexplained clue/easter egg, not a source, key,
+or decryption under the tested literal mechanisms.
+
+### Engine and archive audit
+
+The Emerald Tablet directory links the decompiled C++ routine that renders the
+messages. The function contains the nine ciphertexts as hardcoded 64-bit
+chunks. It selects a message, walks the chunk vector backwards, divides each
+number by 7, emits successive base-7 remainders minus one, reverses the string,
+and calls the renderer. The least-significant base-7 digit is discarded
+padding. All ordinary chunks are divisible by 7; apparent exceptions occur only
+where Ghidra omitted a zero high word for shortened final chunks. Reconstructing
+the high word as zero restores valid `0..5` streams and the published messages.
+There is no encryption routine, plaintext buffer, or runtime key in this path.
+
+The linked current-data repository spans 56 asset snapshots beginning 9
+February 2021; its eye-related Lua only controls placement/visibility. The
+early-access repository contains an early `data.wak` and unpacked assets but no
+eye-message source or executable. These archives therefore cannot provide a
+pre-cipher historical version. The result closes a datamining branch: the
+payload is deliberately precomputed and hardcoded in engine code.
+
+The installed January 2025 `data.wak` adds a stronger current-state audit. A
+small reader validates its directory boundary and all 14,745 file extents, then
+searches each file without allowing matches to cross file boundaries. It finds
+no textual `lumikki`, Snow White, CRC-32/BZIP, Eye-message/glyph, Hermeticum,
+Chaocipher, Solitaire, or Pontifex reference. Its 60 `eye`/`glyph` filenames are
+ordinary enemies/items plus the known eye-related secrets. The five `eyespot`
+entities are unambiguous in Lua: a nearby Evil Eye exposes them; simultaneous
+extreme tripping spawns `book_s_a` through `book_s_e`. Those notes describe the
+Sun-seed sequence and have no direct Eye-message handler.
+
+Line-ending-normalized comparison with the complete March 2023 data tree gives
+481 added, 225 changed, 237 removed, and 14,039 identical paths. A deliberately
+broad filename filter for eyes, secrets, books, orbs, Cessation, cauldrons,
+calendars, Void, music, Kantele/Ocarina, altars, Sampo, glyphs, and puzzles leaves
+25 relevant additions and eight changes. The additions include the known
+Cessation reward, Barren Temple puzzles, Leukaluu Kantele, and a wall-eye enemy.
+The wall eye only fires projectiles and blinks randomly; the Evil Eye change
+only keeps it inside the world; the Kantele change adds an entity tag; and the
+remaining changes are ending fixes, damage balance, biome edges, or tablet-rain
+rewards. No named later addition bridges to the Eye payload. This is a bounded
+negative through January 2025, not an exclusion of a clue hidden in native code,
+visual composition, or an innocuously named mechanic.
+
+#### Native placement, overlap seed, and glyph assets
+
+The installed release binary supplies an exact mechanism for the community's
+special overlap seed. Eye placement initializes its RNG from
+`world_seed XOR 0x0e4bc7e0`. At world seed `239847392` (`0x0e4bc7e0`) the XOR
+is zero; Noita's RNG normalization maps that to its modulus `2147483647`, which
+is a fixed point of the update. All five East messages therefore receive the
+same coordinates, and the four West messages receive their corresponding
+mirrored coordinates. This reproduces the seed independently documented by
+Lymm's Binoculars and shows that the alignment is a real engine consequence,
+not a coordinate-rounding coincidence.
+
+Reconstructing the visible rows and unioning directions at each aligned cell
+gives 411 East cells and 372 West cells. The five-layer East union contains
+every nonempty direction subset, masks `1..31`; the four-layer West union
+contains exactly `1..30`, as mask 31 is impossible without the missing fifth
+layer. Direct base-32, A1Z26-like, packed five-bit, row-reversed, bit-reversed,
+and direction-permuted readings are gibberish. Optimizing printable bytes over
+the natural variants yields 118 of 256 bytes for East and 107 of 232 for West.
+Under 1,000 within-layer position shuffles, East has median 117, range 109–130,
+and upper-tail `p=0.4296`; West has median 113, range 104–126, and
+`p=0.9950`. The composite therefore has no direct byte signal by this measure.
+
+The same binary's renderer at virtual address `0x61e880` constructs exactly
+five 11x7 one-colour bitmaps: centre, up, right, down, and left. Character value
+5 is newline; there is no hidden sixth graphic. A vectorized archive scan then
+tested every installed `.png` for an exact foreground mask at integer
+nearest-neighbour scales 1 through 4, permitting arbitrary foreground colour
+and arbitrary nonmatching background. It decoded all 9,028 real images and
+found zero hits. The two remaining `.png` paths,
+`data/biome_impl/spliced/boss_arena/1.png` and `5.png`, are identical two-byte
+CR/LF placeholders rather than images. The negative is deliberately bounded:
+it does not cover a rotated, redrawn, antialiased, partial, or procedural clue.
+
+#### Cauldron Room sand “star field”
+
+A recent Secrets Storehouse observation noted that the Cauldron Room's sand
+resembles a star field and suggested it might carry information. The installed
+archive identifies the visible pattern more narrowly. The material definition
+for `sand_static` names `data/materials_gfx/earth.png` as its texture; it is not
+a seed-generated pattern or a Cauldron-specific scene asset. The tile is a
+48-by-45, two-colour PNG with 203 minority-colour pixels and SHA-256
+`22d0ec83c6ea7d12778284f90413b8edc0abbf07fba623cb38fba55796db79ad`.
+The archived early-access data and the current data tree contain byte-identical
+copies. `earth_bright.png` and `earth_bright_red.png` use the exact same
+203-pixel binary mask with different palettes.
+
+The dimensions create a tempting numerical coincidence:
+
+```text
+48 * 45 = 2160 = 83 * 26 + 2.
+```
+
+This is not unique in the archive. Of 9,028 decodable PNGs, 14 have area 2,160
+and all 14 are 48-by-45 files under `data/materials_gfx`; no other PNG lies
+within two pixels of `83*26`. Thus 48-by-45 is a shared material-texture format,
+not an Eye-specific dimension chosen only for `earth.png`.
+
+The natural direct use was nevertheless tested. All eight image orientations
+and the three boundary-padding splits (`0+2`, `1+1`, `2+0`) give 24 distinct
+26-by-83 bit tables. Looking up each Eye trigram by its displayed row-pair
+position and value, then scanning the same bounded 7/8-bit framings used for
+the Meditation Chamber mask, produces no plaintext. The best alternating
+result is mechanically dominated by 67 copies of byte `U`: sparse error bits
+over `01010101`, not language. Against 2,000 global-alphabet permutations its
+score has upper-tail `p=0.072964`. Static-only output has `p=0.298351`, and the
+minimum selected foreground count has lower-tail `p=0.329335`.
+
+Therefore the fixed texture and the `83*26+2` arithmetic are real, but the
+texture is generic and its direct sieve reading is negative. It could only be
+revived by an independent clue specifying a different use; arbitrary cropping
+or remapping would be post-hoc.
+
+#### Public-lead provenance checks
+
+The January 2023 “Hidden Secret” email trail is not developer correspondence.
+The preserved document describes unsolicited messages from an anonymous Gmail
+account, and the sender explicitly wrote “I am not a Creator.” Its 3D/avarice
+claims never supplied a reproducible transform or plaintext. It remains a
+finite untrusted hypothesis, but cannot support claims about intended method or
+developer statements.
+
+A July 2026 proposal that the opening animation demonstrates the five Eye
+directions is also rejected at the asset level. The installed intro frames
+`01_00.png` through `01_07.png` contain only the outlined egg/creature shape;
+they do not contain authored internal pupil marks. The apparent moving dots in
+video frames are multiple background stars visible through the transparent
+interior. Moreover, the proposed direction-to-digit permutation still produces
+83 distinct trigram values spread over `0..124`, with 42 holes, rather than
+explaining the exact contiguous `0..82` alphabet. This is a useful example of a
+visual false positive, not an in-game key.
+
+### Source-text fingerprinting
+
+The first-family repeated-plaintext assumption was converted into an exact
+literal-source fingerprint: the same 18-letter block at gaps 30 and 35, with
+its inner nine letters repeated at gap 28. Seventeen English alchemy books from
+Project Gutenberg contain 9,733,222 normalized letters and no complete joint
+fingerprint (also none when normalized with spaces).
+
+A larger crawl of 1,295 pages from the Alchemy Texts archive contains
+119,979,237 normalized letters. Four letter-only joint hits survive, but all
+are transcription/layout artifacts: one crosses a table of contents around
+“ode of the second book,” and three overlap the repeated placeholder “in non
+Latin alphabet.” Space-preserving normalization produces many common prose and
+navigation phrases rather than a unique candidate. The archive therefore
+contains no plausible exact crib under this test, though this exploratory
+fingerprint is not a general exclusion of alchemical plaintext.
+
+The all-Finnish Gutenberg census produces seven letters-only fingerprint hits,
+all rotations of the repeated bibliography notation `Pipp. l. N:o` in book
+53047. Its three space-preserving hits are rotations of the repeated joik line
+`Ooppee Mikko Hetta` in book 57770. Manual inspection identifies both as
+high-period reference/refrain artifacts rather than candidate prose. Together
+with the zero complete trees above, this closes the public-domain Finnish
+Gutenberg branch under the tested literal-source model.
+
+Azazelin Tähti supplies a second bounded Finnish corpus outside Gutenberg. Its
+public sitemap lists 112 occult/esoteric articles, including its Finnish
+*Corpus Hermeticum* XIII and 2004/2006 Emerald Tablet translations. Filtering
+to entries with sitemap `lastmod` no later than 15 October 2020 retains 100
+articles; every page loaded. The letters-only pass covers 1,089,988 normalized
+characters and 2,278 sentence/paragraph candidates in the Eye length range;
+the space-preserving pass covers 1,242,004 and 2,194. Both produce zero exact
+first-family fingerprints, zero full trees, and zero upper-24, deep-20,
+nested-9, lower-6, or joined-root partials. Sitemap modification dates are only
+a reproducible public-availability filter, not evidence of Noita's unknown
+internal construction date. These results reject literal cutting from this
+corpus, not transformed use of its vocabulary.
+
+The current English `common.csv` from Noita's data archive was also scanned as
+a possible built-in crib. It contains 3,413 localization rows. With letters
+only, seven strings have one of the nine exact Eye-message lengths; with spaces
+preserved, seven do. Neither normalization produces a single complete
+first-family fingerprint. In particular, the 102-letter `bookdesc02` is only a
+length match: it lacks the required nested repeats. The localization table
+therefore supplies no exact literal-source candidate under this test. The
+current `common.csv` and `common_dev.csv` have no Finnish-language column, so
+the `Fi!` lead cannot be tested as an unpublished in-table localization.
+
+Aki's active repository contains nine explicitly labeled sample Hermetic
+passages used for cipher experiments. Seven currently have exactly the
+corresponding Eye-message length; West 2 and East 3 differ by `+2` and `-2`.
+Even the seven aligned lines fail a key-free necessary condition for a perfect
+GAK: repeated plaintext `the` produces ciphertext pattern `...` in 23 places
+but `A.A` at West 3 position 76. Perfect isomorphism requires the equality
+pattern of every repeated plaintext sequence to be invariant under starting
+state. The sample is therefore not a candidate solution under the leading
+model. A reusable checker now applies this test to future cribs before any key
+search.
+
+The untested source gap is concrete. The Finnish *Corpus Hermeticum* was
+published on 26 March 2020 (ISBN 9789518995268), translated by Sampsa Kiianmaa,
+H. M. Lampikoski, and Pentti Tuominen, and catalogued as based on Copenhaver's
+1992 and Mead's 1906 editions. No lawful searchable full text was found. Every
+exact ISBN record found labels it `nidottu`, `pehmeäkantinen`, or paperback.
+Exact-title and ISBN searches of the publisher/society shop and major Finnish
+ebook channels found no authorized PDF or EPUB edition as of 21 July 2026; the
+society's separate ebook page does not list it, while its store calls this
+edition a 224-page paperback.
+
+#### Source chronology
+
+The chronology preserves this lead, but does not strengthen it cryptographically:
+
+- the Finnish translation's retail release date is 26 March 2020;
+- Noita 1.0 shipped on 15 October 2020, with the official notes advertising
+  new secrets;
+- the community-maintained Eye Glyph Timeline dates the first recorded Eye
+  post in the Noita Discord to 18 October 2020;
+- the specialist Puzzling Stack Exchange summary independently says the puzzle
+  was added in October 2020, and a contemporary 21 October Reddit discussion
+  describes it as added in 1.0.
+
+The book therefore predates the 1.0 release by 203 days and the first recorded
+sighting by 206 days. No pre-26-March sighting, screenshot, asset, or community
+discussion has been found. The cipher's actual internal construction date is
+unknown, however. For a borrowed external text, the correct necessary condition
+is that the text existed before the developers used it to construct the cipher;
+public Eye release dates cannot establish that. Conversely, a developer-created
+idea may have existed internally long before its public implementation, and a
+decoder clue may be added to the game after the ciphertext. The evidence here
+is therefore only “not ruled out by known public dates.” Fingerprinting a
+physical copy remains a valuable finite check, but is deferred while stronger
+source-independent leads remain.
+
+#### Comparison with the solved Cessation cipher
+
+The Cessation cipher, added with Epilogue 2 in April 2024, is a confirmed Noita
+construction with two potentially relevant motifs. Its six spatial fragments
+are merged along exact shared strings, and its six glyph values are forward
+skip distances through a cyclic binary key; zero and line boundaries reset the
+pointer. The key is supplied independently by the Void-Liquid calendar. This
+public date does not prove when the developers first conceived the mechanism,
+so it cannot by itself exclude Cessation-like construction vocabulary from the
+Eyes. More importantly, a 2024 addition could deliberately supply a decoder
+clue for a 2020 ciphertext. What the public evidence does establish is later
+Noita puzzle vocabulary: visual values, external keys, exact fragment merging,
+and a small deterministic state walk.
+
+The direct analogues are negative:
+
+- The explicit Cessation calendar key was tested against raw Eye directions and
+  accepted trigrams under all direction-to-skip assignments, eight decoded
+  message orders, message-reset and continuous state, four key
+  orientation/complement choices, both bit orders, and all byte phases: 139,008
+  byte interpretations. The best has only 200/387 printable bytes (`51.7%`) and
+  is visibly random; natural ASCII would be almost entirely printable.
+- Treating the five directions as skips through the 26-letter Noita keyed
+  alphabet, the 29-letter Finnish alphabet, ASCII+32, or the 114-position disk
+  ring also fails. The scan includes both ring directions, marker-present and
+  body-only streams, trigram skips, and DFS/BFS serializations that emit every
+  marker-free prefix-trie edge once. Under the Cessation start convention the
+  best Finnish tetragram score is `-16.1854`, versus `-14.4181` for a raw
+  held-in corpus slice, and all previews are gibberish.
+- A related absolute-position reading takes successive Eye trigrams as cursor
+  positions, so their affine-ordered differences become skips through the
+  Noita or Finnish alphabet. All 54,448 affine, offset, direction, and marker
+  variants bottom out at `-16.0158`, versus `-10.9991` for held-in Finnish.
+- Assigning the solved plaintext `SEEKING TRUTH, THE WISE FIND INSTEAD ITS
+  PROFOUND ABSENCE` as the common Eye prefix at depths `2/24/5/9/20` is rejected
+  without choosing a key. Its repeated `NGTRU` at offset five has ciphertext
+  pattern `.....` in the upper branch but `A...A` in the lower branch, violating
+  perfect isomorphism.
+
+Thus Cessation supplies a sensible construction family but neither its key,
+its plaintext, nor the literal skip-key mechanism solves the Eyes. The broader
+lesson—look for a separate in-world key and deduplicate exact fragments before
+decoding—remains live.
+
+## Crib observations
+
+The strongest public alignment suggests a repeated plaintext region of roughly
+17 characters in the first message family, with repeat spacings 28, 30, and 35.
+`as above so below` is exactly 17 characters and appears explicitly in Noita's
+lore, so it is a sensible crib to test. It is not unique: Hermetic source text
+also contains local repeats at the relevant spacings. Exact checks against
+multiple Emerald Tablet translations and the G. R. S. Mead *Corpus Hermeticum*
+put the superficially promising repeats at the wrong message offsets or across
+word boundaries. Also, a GAK isomorph is not a literal plaintext repetition
+pattern. No result currently validates this crib.
+
+## Sources
+
+- [Noita Wiki: Eye Messages](https://noita.wiki.gg/wiki/Eye_Messages)
+- [The Emerald Tablet research directory](https://docs.google.com/spreadsheets/d/1Aih_3v9BMbVI-MQQgWP51HTTplgRwXi2jRKYgyhPMao/edit)
+- [Community Eye Glyph Timeline](https://docs.google.com/document/d/1q-4HnP8lPLQioG5h6fBb7BjVuF1EAOltO3gqn___Pp8/edit)
+- [Noita 1.0 release notes, 15 October 2020](https://noitagame.com/release_notes/20201015/)
+- [The solved Cessation Cipher Quest](https://noita.wiki.gg/wiki/The_Cessation_Cipher_Quest)
+- [Official Noita Summit Q&A, Eye answer at 53:42](https://www.youtube.com/watch?v=5T_DBlXL0YQ&t=3222s)
+- [Official interviews and videos index](https://noita.wiki.gg/wiki/Official_Interviews_and_Videos)
+- [Nolla Games' 2019 developer AMA](https://www.reddit.com/r/Games/comments/d7cqjz/we_are_nolla_games_the_team_behind_the_upcoming/)
+- [Profile of Petri Purho and his card magic](https://www.killscreen.com/profile-petri-purho/)
+- [Datamined eye-rendering function](https://pastebin.com/rXNsPi47)
+- [Noita data archive](https://github.com/vexx32/noita-data)
+- [Noita early-access data archive](https://github.com/defektu/noita-early-access-data)
+- [Lymm37's eye-message research wiki](https://github.com/Lymm37/eye-messages/wiki)
+- [Noita Eye Glyphs on Puzzling Stack Exchange](https://puzzling.stackexchange.com/questions/119923/noita-eye-glyphs)
+- [Aki's active eye-message experiments](https://git.ignore.pl/noita-eyes/)
+- [Aki's experiment log](https://git.ignore.pl/noita-eyes/log/)
+- [Aki's Noita depot manifest history](https://git.ignore.pl/noita-data-builder/plain/manifests)
+- [Lymm's Binoculars](https://gitlab.com/realgonzogames/lymms-binoculars)
+- [Preserved “Hidden Secret” email document](https://docs.google.com/document/d/1DZsFCcO5aRGVwF-spIPCJk1cbsBG0uNo3tMBusywTII/edit)
+- [July 2026 opening-animation Eye proposal](https://www.reddit.com/r/noita/comments/1so4si9/state_of_the_cauldron_eyes_mystery_in_noita_2026/)
+- [Generalized Cipher Clock, ePrint 2020/1492](https://eprint.iacr.org/2020/1492.pdf)
+- [Tomster12's isomorph viewer](https://tomster12.github.io/isomorph-viewer/)
+- [Noita Wiki: Game Lore](https://noita.wiki.gg/wiki/Game_Lore)
+- [Corpus Hermeticum, G. R. S. Mead translation](https://www.gnosis.org/library/grs-mead/TGH-v2/th209.html)
+- [Finnish Corpus Hermeticum XIII](https://www.azazel.fi/article/corpus-hermeticum-kolmastoista-kirja/)
+- [Azazelin Tähti Finnish article sitemap](https://www.azazel.fi/wp-sitemap-posts-soa_page_article-1.xml)
+- [Azazelin Tähti Finnish Emerald Tablet](https://www.azazel.fi/article/smaragditaulu/)
+- [Finnish 2020 Corpus Hermeticum product record](https://www.suomalainen.com/products/corpus-hermeticum)
+- [National Library record for the Finnish Corpus Hermeticum](https://kansalliskirjasto.finna.fi/Record/fikka.5440482)
+- [Publisher/society Corpus Hermeticum listing](https://www.gnosis.fi/itseopiskelu/corpus-hermeticum/)
+- [Publisher/society ebook listings](https://www.gnosis.fi/itseopiskelu/e-kirjoja/)
+- [Project Gutenberg Finnish-text catalog](https://www.gutenberg.org/cache/epub/feeds/pg_catalog.csv)
+- [Project Gutenberg: Kalevala](https://www.gutenberg.org/ebooks/7000)
+- [Project Gutenberg: Seven Brothers](https://www.gutenberg.org/ebooks/11940)
+- [Project Gutenberg: J. A. Hahnsson's Finnish Grimm translation](https://www.gutenberg.org/ebooks/45046)
+- [Kotus modern Finnish word-list page](https://kotus.fi/sanakirjat/kielitoimiston-sanakirja/nykysuomen-sana-aineistot/nykysuomen-sanalista/)
+- [Project Gutenberg: books about alchemy](https://www.gutenberg.org/ebooks/subject/563)
+- [Alchemy Texts: all authors and books](https://www.alchemy-texts.com/all-authors/)
+
+## Highest-value next work
+
+1. Obtain an external clue or a known plaintext fragment. A general `S_83`
+   deck/GAK instance with arbitrary shuffles is underdetermined from this corpus.
+2. Treat `A83` and `S83` as observationally tied until a nearly complete
+   context permutation or another sign relation is found. All affine transitive
+   groups are already excluded by the strong context certificate.
+3. Test crib candidates only against a concrete state mechanism. Language-like
+   prose alone is not validation.
+4. Search confirmed Noita puzzle constructions for an external key or state
+   walk rather than reusing their plaintext literally. Cessation's known
+   calendar key and direct skip mechanism are now negative controls.
+5. Search Petri Purho's likely construction vocabulary: small card/deck
+   operations, Noita wand shuffling, and a 26-symbol plaintext alphabet. Keep
+   each proposal falsifiable against shared prefixes, reconvergence, isomorphs,
+   and the absolute no-double rule.
+6. Classify the `LUMIKKI` constant historically. The installed build excludes
+   CRC-32/BZIP2 as its runtime string hash; the remaining discriminator is a
+   contemporaneous record of the reverse-hash search universe or construction
+   evidence. Without one, do not promote Snow White associations into a key.
+7. Continue separating three clocks: external construction material must
+   predate internal cipher construction; developer-created ideas need not
+   predate their public release; decoder clues may be introduced after the
+   ciphertext. Record which clock every chronological claim uses.
