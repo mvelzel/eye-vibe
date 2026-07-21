@@ -1307,10 +1307,12 @@ The genuine additions are narrower:
   dismissed merely because a simple Chaocipher configuration lacks systematic
   isomorphs.
 - A concrete proposed extension lets the state update depend on a rolling
-  plaintext window, analogous to a higher-order hidden-state model.  The two-
-  symbol separation between nearby last-family isomorphs was suggested as an
-  upper bound of roughly two preceding plaintext symbols for a local update.
-  This is a promising falsifiable restriction, not yet a proved Eye property.
+  plaintext window, analogous to a higher-order hidden-state model.  The
+  specific two-symbol memory was introduced by Qualia as a deliberately
+  artificial counterexample: a flag raised by plaintext `A`, retained for two
+  outputs, and used to choose an inverse permutation.  It was not inferred
+  from nearby Eye isomorphs and is not an independent Eye-derived bound.  It
+  remains useful as a falsifiable example of how offset isomorphs can arise.
 - XGAK can resynchronize more easily than ordinary GAK.  Long repeats should
   still normally reflect common plaintext, but limited differences may occur
   off the repeatedly constrained “backbone” positions.  Crib rejection should
@@ -1438,9 +1440,11 @@ the available size-matched alchemical prose, not that it is Eye plaintext.
 Reproduction is in `scripts/calibrate_waite_gap_fingerprint.py`.
 
 The proposed rolling-plaintext-window extension has now received a bounded
-corpus test.  A deterministic update that depends on the current plaintext and
-its two predecessors need not make the first two outputs of two repeated
-phrases isomorphic.  After trimming those two outputs, the six first-family
+corpus test.  Its two-symbol length was selected from Qualia's artificial
+counterexample, not from held-out Eye evidence.  A deterministic update that
+depends on the current plaintext and its two predecessors need not make the
+first two outputs of two repeated phrases isomorphic.  After trimming those
+two outputs, the six first-family
 windows at raw `40/68`, `40/70`, and `45/80` remain in one isomorphism class
 through raw end 17; at end 18 they split.  Thus the 17-character plaintext
 `THAT WHICH IS THE` is compatible with a two-symbol-memory construction even
@@ -1456,9 +1460,22 @@ least three occurrences, at least two repeated labels, and seed lengths 6–14
 finds no independent replication.  Every positive trim-two gain is a shifted
 or nested view of the same six passages; independent groups have zero gain.
 The result promotes two-symbol memory from a verbal possibility to a precise
-constraint, but leaves it below a held-out key prediction.  Reproduction is in
+compatibility constraint, but it does not independently support that memory
+length and leaves the model below a held-out key prediction.  Reproduction is in
 `scripts/test_two_symbol_memory.py` and
 `scripts/analyze_delayed_isomorph_groups.py`.
+
+The same read-only discussion supplied a stronger attack lead later on 21 July
+2026.  Henry reported a handwritten CNF encoding for known plaintext and
+ciphertext that lets Kissat reconstruct an initial deck and the
+plaintext-selected shuffle permutations.  The toy cases reportedly reproduce
+their generators.  The author cautioned that many shuffle orders explain
+short texts and that the constraint count grows cubically with the ciphertext
+alphabet; no code link was visible at the time of the observation.  This is
+therefore a method report awaiting local reproduction, not an Eye result.  A
+new `2-to-26 deck cipher` practice puzzle from Qualia and Torben's earlier
+large-group known-plaintext GAK exercise form a natural small-to-`S83`
+calibration ladder before any Waite crib feasibility test.
 
 ## Crib observations
 

@@ -1,8 +1,10 @@
 # Open lead ledger — 21 July 2026
 
-This is a queue, not a claim that every lead should be pursued at once.  Each
-entry records why it remains open, the next bounded test, and what would stop
-or promote it.  Completed and rejected branches remain in
+This is a durable ledger, not a claim that every lead should be pursued at
+once.  A paused lead remains here until evidence rejects it or its dependency
+is satisfied; it is not silently dropped when another experiment becomes
+active.  Each entry records why it remains open, the next bounded test, and
+what would stop or promote it.  Completed and rejected branches remain in
 [`research-log.md`](research-log.md).
 
 ## Active and high value
@@ -66,7 +68,9 @@ Eyes.  The exact ten-character core remains compatible; East 2's longer suffix
 can still be different from the other two messages after that core.
 
 A two-symbol rolling-state generalization is a genuine but limited escape
-hatch.  Trimming the first two outputs of each candidate occurrence restores a
+hatch.  The memory length was selected from Qualia's deliberately artificial
+Discord counterexample, not predicted from independent Eye data.  Trimming the
+first two outputs of each candidate occurrence nevertheless restores a
 single isomorphism class through raw end 17, so the shared plaintext
 `THAT WHICH IS THE` is compatible with this higher-order model.  Conditioned
 on the already selected ten-symbol isomorph and the no-adjacent-double rule,
@@ -122,9 +126,24 @@ resynchronize around limited plaintext differences.
 **Next test:** use a source-backed crib such as the Waite suffix or an external
 in-game key to learn a small, explicitly described operation family and demand
 held-out prediction.  The rolling two-plaintext-symbol state update now passes
-the selected first-family boundary test but has no independent repeat-rich
-replication; use it only in a capacity-controlled construction with a held-out
-prediction.  Nearby last-family isomorphs make larger local memory unlikely.
+the selected first-family boundary test but its length came from an artificial
+counterexample and it has no independent repeat-rich replication; use it only
+in a capacity-controlled construction with a held-out prediction.
+
+Henry reported a more direct known-plaintext attack in the read-only
+`silmä-cryptography` discussion on 21 July 2026: encode the unknown initial
+deck and plaintext-selected permutations in CNF, then use Kissat to recover
+models consistent with a supplied plaintext/ciphertext pair.  Toy examples
+were reportedly verified, but the implementation had not yet been linked when
+observed; the author also warned that the encoding scales cubically with the
+ciphertext alphabet and that short texts admit many equivalent models.  This
+is a high-value method lead, not yet a locally reproduced result.
+
+**Immediate bounded experiment:** obtain the code read-only if its promised
+repository link appears, or independently reproduce the CNF model on a small
+toy.  Freeze the encoding against the new `2-to-26 deck cipher` practice data
+before using it only as a yes/no feasibility test for the Waite East-2 crib.
+Do not interpret one satisfiable model as a unique recovered key.
 
 ### External in-game key or later hint
 
@@ -153,6 +172,28 @@ reduce the model rather than extending blind SMT time.
 new homophonic/deck invariant or author hint.  Current language solvers,
 Wadsworth, Chaocipher, source scans, and Eye-corpus reuse are negative.
 
+### Qualia `2-to-26 deck cipher` practice puzzle
+
+**Status:** newly identified calibration dependency.  It maps binary plaintext
+to a 26-symbol ciphertext with an arbitrary initial state and two arbitrary
+plaintext-selected permutations; its small plaintext alphabet makes it a
+better first target for validating the CNF/Kissat formulation than the Eyes.
+
+**Next test:** archive the attached JSON read-only, recover at least one model,
+verify it by forward simulation, and document the attack separately.  Pause
+only while awaiting either the attachment or a computationally tractable
+solver encoding; this does not supersede sdlwdr puzzles 3 and 4.
+
+### Large-group known-plaintext GAK practice puzzle
+
+**Status:** retained training problem posted by Torben on 3 July 2026.  Its
+stated goal is reconstructing swaps from known plaintext for increasingly hard
+deck ciphers up to `S83`.
+
+**Next test:** use it only after the small `2-to-26` solver is independently
+verified.  It is the scale bridge between a toy CNF model and any Eye/Waite
+feasibility claim.
+
 ### Finnish *Corpus Hermeticum* translation
 
 **Status:** chronologically eligible source, inaccessible digitally.  Pursue a
@@ -172,3 +213,20 @@ reverse-hash search universe or developer construction process.
 only reproducible constraints, source documents, or finite attacks not already
 recorded.  The January 2023 Hidden Secret ARG is legacy/hoax material and is not
 an active evidence source.
+
+## Scheduled synthesis checkpoint
+
+After the current known-plaintext SAT experiment reaches a bounded result,
+stop expanding that branch and rebuild the problem from the evidence ledger.
+The first pass must be broad rather than deep: generate mutually different
+mechanism families across representation, state evolution, message ordering,
+error/check structure, non-text payloads, spatial/game-world selection, and
+later-added in-game keys.  Include deliberately strange proposals, but keep
+hard observations separate from community assumptions.
+
+Score every family against the same frozen facts and require at least one
+observation that would distinguish it from GAK/XGAK and from a fitted crib.
+Only after this breadth pass may the strongest few receive implementation or
+asset work.  Preserve the discarded candidates and their kill reasons here or
+in the research log so the search does not repeatedly collapse onto the same
+idea.

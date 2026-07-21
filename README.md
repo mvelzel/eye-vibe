@@ -302,16 +302,18 @@ continuation across all three messages is impossible under perfect GAK/XGAK.
 East 2 may still use Waite's longer suffix independently.
 
 A bounded higher-order variant changes that conclusion without solving the
-cipher.  If the update remembers the two preceding plaintext symbols, the
-first two ciphertext outputs of a repeated phrase may differ; after trimming
-those two, all six windows remain isomorphic through raw end 17.  This makes
+cipher.  The two-symbol memory length came from an intentionally artificial
+community counterexample, not an independent prediction from the Eyes.  If the
+update remembers the two preceding plaintext symbols, the first two ciphertext
+outputs of a repeated phrase may differ; after trimming those two, all six
+windows remain isomorphic through raw end 17.  This makes
 the shared 17-character `THAT WHICH IS THE` compatible with a two-symbol-memory
 model.  In a conditioned no-adjacent-double null that freezes the selected
 ten-symbol isomorph, 2,634 of 200,000 trials extend seven more symbols
 (`1.317%`).  A corpus-wide scan over repeat-rich seeds of lengths 6–14 finds no
 independent replication: every positive gain is a shifted view of this same
 six-window episode.  The extension is therefore a useful model constraint,
-not plaintext evidence or a recovered key.
+not independent plaintext evidence or a recovered key.
 
 A limited matched-text calibration makes the source fingerprint non-routine:
 Waite reaches length 15, while none of 17 Project Gutenberg alchemy controls
