@@ -38,7 +38,12 @@ encrypted it is not, by itself, a useful practice-puzzle solution.
 | [Practice `two`](05-practice-two-octal-hidden-group.md) | Solved; withheld-plaintext confirmation | Compose isomorph column maps into a group, trim dirty anchors, then finish the residual codec. |
 | [sdlwdr #1 — two-cycle Wadsworth cipher](06-sdlwdr-01-wadsworth-kalevala.md) | Solved; author-confirmed | Chained isomorph maps can expose equal hidden cycles, unequal-wheel arithmetic, and a state-changing exceptional symbol. |
 | [sdlwdr #2 — drifting/reversing Wadsworth cipher](07-sdlwdr-02-reversing-wadsworth.md) | Solved; deterministic full decode | Position bands expose slow drift; a rare marker can reverse both hidden traversals. |
+| [sdlwdr #3 — unresolved progression cipher](08-sdlwdr-03-unsolved-progression.md) | Unsolved; exact `C83` progression excluded | Encode the proposed state family exactly and distinguish UNSAT from timeout. |
+| [sdlwdr #4 — recovered cyclic layer](09-sdlwdr-04-cyclic-layer.md) | Partially reduced; plaintext unresolved | Exact repeated blocks can prove an outer group action without solving the inner codec. |
 | [sdlwdr #5 — recursive increasing-chunk shuffle](10-sdlwdr-05-recursive-chunks.md) | Solved; exact replay | Equality-pattern repetitions can select a recursive state-update law before plaintext letters are assigned. |
+
+The cross-puzzle synthesis is in
+[Transferable lessons from the five sdlwdr ciphers](11-transferable-lessons.md).
 
 Additional files will be added as the remaining practice puzzles are either
 solved or closed with a clearly scoped negative result.

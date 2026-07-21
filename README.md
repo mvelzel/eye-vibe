@@ -5,6 +5,11 @@ Messages. It does **not** claim a plaintext. As of 21 July 2026 the mystery is
 still publicly unsolved, and the experiments here deliberately distinguish a
 statistical curiosity from a validated decryption.
 
+The current queue is maintained in [`docs/open-leads.md`](docs/open-leads.md);
+the chronological evidence and negative results remain in
+[`docs/research-log.md`](docs/research-log.md).  A lead entering the queue does
+not replace the others.
+
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
 contiguous alphabet `0..82`, and the nine messages contain 1,036 values. The
@@ -263,6 +268,16 @@ five positions. Greedy refitting stalls with two mismatches and three exact
 solver seeds time out. The full witness therefore demonstrates flexibility,
 not a recovered plaintext; the best nontrivial base and general GAK remain
 open.
+
+A distinct `THAT WHICH` lead survives its first audit. Waite's 81-character
+sentence `SUBLIME THAT WHICH IS THE LOWEST, AND MAKE THAT WHICH IS THE HIGHEST,
+THE LOWEST.` fills East 2 exactly from raw offset 37 and aligns its repeated
+phrase with the message's raw 45/80 isomorph. Every repeated substring in the
+candidate passes the necessary perfect-isomorphism check; the longest is
+`E THAT WHICH IS THE ` at length 20. The game's byte-identical early-access
+and current `orb_plan.txt` explicitly cite the *Hermetic Museum*, which contains
+the source tract. This makes the crib source-backed and chronologically
+plausible, but it is still not a decryption or a held-out prediction.
 
 The East-5-first order does not behave like a persistent state for the concrete
 deck construction tested here. Continuous scans over all 6,806 affine bases

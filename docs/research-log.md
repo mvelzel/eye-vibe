@@ -1217,6 +1217,147 @@ its plaintext, nor the literal skip-key mechanism solves the Eyes. The broader
 lesson—look for a separate in-world key and deduplicate exact fragments before
 decoding—remains live.
 
+### Practice-cipher checkpoint and a fresh Eye attack
+
+The five numbered sdlwdr exercises now have one method-centered record each.
+Numbers 1, 2, and 5 are solved; number 3 remains unresolved after an exact
+single-`C83` progression exclusion; number 4 remains unresolved after its outer
+cyclic layer was recovered.  Cipher 4's standard mod-83 adjacent differences
+expose exact common blocks up to 200 symbols, but calibrated English/Finnish
+homophone solvers, Wadsworth wheels, adaptive 57-card alphabets, Chaocipher
+variants, exact source compatibility, and reuse of the Eye corpus all fail.
+This is a useful failure: it demonstrates that exact shared structure can
+prove an outer group action while leaving a separate inner codec unknown.
+
+The most direct transfer back to the Eyes starts from their absolute no-double
+rule.  Every adjacent difference is nonzero modulo 83, hence lies in the cyclic
+multiplicative group `F_83*` of order 82.  This gives a finite analogue of the
+82-position Wadsworth cycles that solve practice ciphers 1 and 2.  The new scan
+orders differences by all 40 primitive roots, tests four direct/accumulated
+logarithm and logarithmic-distance readings on every plaintext modulus 26..42
+in both directions, and exactly optimizes independent per-message phases
+against 234 published repeat-context comparisons: 5,440 candidates total.
+
+The best candidate still misses 190 of 234 equalities; the best at the
+practice-motivated modulus 42 misses 198.  Its visible outputs are gibberish.
+A correct same-plaintext cycle model should be close to zero, not merely beat
+random by a few dozen votes.  The complete multiplicative-difference/Wadsworth
+family is therefore rejected.  This was the requested fresh pure-cryptographic
+attempt, and it failed cleanly without inventing a plaintext.
+
+### Gate Guardian ground-up audit
+
+The July 2026 cyclical-sieve dossier was read in full and then rebuilt from the
+installed game data rather than accepted as a package.  The strongest direct
+facts survive:
+
+- the checksum grid is `0,84,7 / 53,0,1 / 32,88,0`; main-diagonal circular
+  reflection magnitudes are `31,25,14`, totaling 70;
+- the exact independent uniform fixed-axis probability is about 1.459%;
+- the three claimed Q-C edges are literal carry-free third-eye `+1` transitions,
+  although the complete corpus has seven such adjacent transitions;
+- Veska has exactly 72 pixels of one authored dark-mark color, with plausible
+  9-pixel `1,5,3` and 8-pixel `plus+3` pictograms;
+- Molari and horizontally mirrored Mokke have opaque silhouettes differing at
+  only one pixel.
+
+The source reconstruction also exposes the selection gaps.  A simple spatial
+partition of Veska gives `11 remainder + 44 middle + 9 upper + 8 lower`, so the
+claimed `12+43+9+8` needs an extra one-pixel reclassification rule.  No natural
+Seula vertical-mirror mask produces 70: per-color half-residuals are
+`411,4,302,109`, all-RGBA is 480, and alpha is zero.  The dossier does not
+publish the residual or seven-pixel side-band masks.
+
+All four sprites tile by their dimensions into the original `126×121` gate,
+with Seula above, Molari/Mokke at the sides, and Veska central.  The actual Lua
+activation rule is three eggs.  The XML spawner executes Veska, Molari, Mokke,
+Seula at frames `220,225,230,235`; deaths use card-drop seed offsets `0,1,2,3`.
+There is no Type4/Type6, cache, or Eye dataflow in Gate-specific Lua/XML, and
+the executables contain the four names only in their enemy/progress registry.
+
+The dossier itself concedes that its full interval update and direct Boolean
+application are negative and that eight first-seen Type6 values remain
+unexplained.  The defensible status is therefore “possible later visual
+construction clue,” not “executable decoder.”  The complete source-backed
+audit and derived assembly are in `docs/gate-guardian-audit.md` and
+`artifacts/gate-guardian/assembled-static.png`.
+
+### July 2026 Discord delta audit
+
+A read-only sweep of the current `silmä-cryptography` and `silmä-novel`
+discussions was compared against this log before promoting any lead.  The
+channel's new cipher-hierarchy diagram mostly confirms work already recorded
+here: arbitrary `A83`/`S83` deck/GAK remains the hard residual family, while
+cyclic, dihedral, and affine transitive actions are excluded.  Our exact
+certificates are stronger than the linked public wiki, which still describes
+the two affine cases as incompletely excluded.
+
+The genuine additions are narrower:
+
+- `XGAK` generalizes GAK by giving each plaintext symbol both a fixed deck
+  permutation and a fixed output position.  It is the last currently known
+  class inside the perfectly-isomorphic region.  No perfectly-isomorphic
+  cipher outside XGAK is presently known, but the converse has not been
+  proved.  This enlarges the residual hypothesis space; it does not supply a
+  key or a finite attack.
+- The current discussion distinguishes perfect isomorphism from word- or
+  phrase-level mechanisms.  Word-boundary rules or rare state resets could
+  break perfect isomorphism while retaining the long observed repeats.  This
+  imperfectly-isomorphic region remains under-classified and should not be
+  dismissed merely because a simple Chaocipher configuration lacks systematic
+  isomorphs.
+- A concrete proposed extension lets the state update depend on a rolling
+  plaintext window, analogous to a higher-order hidden-state model.  The two-
+  symbol separation between nearby last-family isomorphs was suggested as an
+  upper bound of roughly two preceding plaintext symbols for a local update.
+  This is a promising falsifiable restriction, not yet a proved Eye property.
+- XGAK can resynchronize more easily than ordinary GAK.  Long repeats should
+  still normally reflect common plaintext, but limited differences may occur
+  off the repeatedly constrained “backbone” positions.  Crib rejection should
+  therefore report whether it assumes exact GAK, XGAK, or only an equality-
+  pattern witness.
+
+The `silmä-novel` pins are dominated by a January 2023 fan ARG that the channel
+itself labels a hoax/legacy material.  Its fresh-save, three-plane, avarice,
+cauldron, and email claims are not evidence about the developer-made Eye
+cipher.  Recent material/alchemy-as-shuffle suggestions are presently ideas
+without a mapping.  Neither category is promoted into the active lead list.
+
+### Waite's message-3 suffix
+
+One current Discord crib is materially stronger than the unsupported novel
+ideas.  Waite's 1893 translation of *A Demonstration of Nature* contains the
+81-character sentence (preserving spaces and punctuation):
+
+```text
+SUBLIME THAT WHICH IS THE LOWEST, AND MAKE THAT WHICH IS THE HIGHEST, THE LOWEST.
+```
+
+East 2 has 118 ciphertext symbols.  Starting the sentence at raw offset 37
+fills the message exactly and places `THAT WHICH` at raw offsets 45 and 80,
+the two known isomorph occurrences.  An exhaustive internal necessary-condition
+check finds no perfect-isomorphism conflict among any equal plaintext
+substrings of length at least two.  After eliminating nested copies that can be
+extended left, the longest repeated pair is the 20-character
+`E THAT WHICH IS THE ` at suffix offsets 6 and 41; its ciphertext gap patterns
+are exactly equal.  The repeated ` THE LOWEST` pair, length 11, also has equal
+all-distinct patterns, which is compatible but carries little information.
+
+There is independent construction chronology.  Both the archived early-access
+and current installed `scripts/biomes/orbrooms/orb_plan.txt` are byte-identical
+(SHA-256 `9e3d741bbe350477e1939e6391599f79e218661a286a5073d6c2ebc78130df47`)
+and explicitly mark several orb-text sources `[Hermetic Museum]`.  Waite's
+*A Demonstration of Nature* is one tract in that work.  Thus the source family
+was demonstrably in the developers' pre-1.0 vocabulary; it is not a later
+translation introduced after the Eyes were constructed.
+
+This remains a crib rather than plaintext.  It was found to fit an already
+known isomorph, the exact 81-character endpoint was selected retrospectively,
+and compatibility leaves arbitrary GAK/XGAK operations unconstrained.  The
+next useful test is held-out prediction from one common state model, not more
+semantic continuation.  Reproduction is in
+`scripts/check_waite_m3_suffix.py`; the full queue is in `docs/open-leads.md`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly
@@ -1269,6 +1410,8 @@ pattern. No result currently validates this crib.
 - [Kotus modern Finnish word-list page](https://kotus.fi/sanakirjat/kielitoimiston-sanakirja/nykysuomen-sana-aineistot/nykysuomen-sanalista/)
 - [Project Gutenberg: books about alchemy](https://www.gutenberg.org/ebooks/subject/563)
 - [Alchemy Texts: all authors and books](https://www.alchemy-texts.com/all-authors/)
+- [Waite, *A Demonstration of Nature*, exact candidate passage](https://sacred-texts.com/alc/hm1/hm107.htm)
+- [Waite's *Hermetic Museum* index](https://www.sacred-texts.com/alc/hermmuse/index.htm)
 
 ## Highest-value next work
 
