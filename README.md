@@ -249,6 +249,16 @@ edit scheme.  Compressing the three-way equality relation produces a natural
 five-state tape, but direct base-five and two-tape Polybius decoders are
 selection-corrected negatives.
 
+The metadata-only lane also yields a new checksum identity.  Read the five
+branch nodes in the independently decoded breadth-first `BEXIT` order; for
+each, add its depth to the sum of its distinct outgoing labels modulo 101.
+The result is `99,99,0,89,89`.  Its three equations raise the protected linear
+rank from 4 to 7, occur in exactly `1/135` of the marker-fixed,
+diagonal-preserving relabeling subgroup, and retain a seeded conditional rate
+`27/5009 = 0.0053903` after requiring the full-trie checksum.  The operation
+was noticed retrospectively, so it is an open check relation rather than a
+decoded instruction.
+
 The remaining marker digit supplies a second order. Its sorted multiset is
 exactly `0,0,1,1,2,2,3,3,4`; sorting messages by ascending `(third, first)`
 gives `E1,W1,E2,W2,E4,W4,E5,E3,W3`, in which every non-singleton prefix-tree

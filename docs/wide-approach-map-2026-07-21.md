@@ -385,9 +385,24 @@ read-only Discord searches did not locate the equality-partition variant, but
 absence from those searches is not a novelty proof.  Preserve position
 synchrony and stop fitting the five states without a game-authored selector.
 
+The metadata-only lane produces one exact survivor.  In `BEXIT` breadth order,
+sum each branch node's distinct outgoing labels and add its depth modulo 101.
+The five results are `99,99,0,89,89`.  The paired-zero-paired pattern supplies
+three linear constraints independent of the three diagonal sums and full-trie
+checksum (rank `4 -> 7`).  It occurs in exactly `1/135` of the marker-fixed,
+diagonal-preserving subgroup and at corrected rate `27/5009 = 0.0053903` after
+also conditioning on full-trie closure in a seeded sample.  Only coefficient
+one survives the full family `exit_sum + k*depth`, `k in Z101`.
+
+This remains retrospective: the branch objects, breadth order, and modulus had
+prior support, but the combine operator did not.  Retain it as a possible
+error/check grammar and demand an external combine rule or held-out prediction
+before interpreting the residues.
+
 Reproduction is in `scripts/run_second_wide_probes.py` and
 `scripts/calibrate_factored_34x27.py`; the quotient-log test is in
 `scripts/search_reflection_quotient_logs.py`; the storage reconstruction is in
 `scripts/analyze_storage_serialization.py`; the delta tests are in
 `scripts/analyze_snapshot_delta.py` and
-`scripts/search_partition_polybius.py`.
+`scripts/search_partition_polybius.py`; the metadata identity is in
+`scripts/analyze_metadata_instruction.py`.

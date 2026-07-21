@@ -420,6 +420,36 @@ extend the rejected literal Polybius decoder.  Reopen the five-state tape only
 if an independent game asset or metadata field orders or consumes its five
 partition roles.
 
+### `BEXIT` branch/exit checksum identity
+
+**Status:** exact metadata-only survivor, meaning unknown.  The markers select
+East 5 first, and breadth-first traversal of the five body-trie branch nodes
+has depths `2,5,24,9,20`, the established post-hoc A1Z26 string `BEXIT`.
+At each node, take each distinct outgoing label once and add the node depth.
+The raw corrected sums are `99,99,202,89,190`, hence modulo 101:
+
+```text
+99, 99, 0, 89, 89
+```
+
+This gives two equal pairs around a zero center.  The three resulting linear
+conditions are independent of the three diagonal message-sum vectors and the
+full merged-trie vector: their rank rises from 4 to 7 over `F101`.  In the
+exact subgroup preserving all diagonal sums and fixing all marker labels,
+`6,115,295,232 / 825,564,856,320 = 1/135` assignments satisfy the identity.
+Allowing every depth coefficient `0..100` adds no surviving assignment: only
+coefficient one occurs.  A seeded 500,000-draw audit additionally conditions
+on full-trie closure; 5,008 controls are accepted and 26 hit the identity,
+giving corrected conditional rate `27/5009 = 0.0053903`.
+
+The probability is not a discovery p-value.  Breadth-first order, modulus 101,
+and branch/exit records had prior motivation, but summing exits and adding the
+depth were selected after inspection among many possible metadata operators.
+
+**Next test:** require an independently authored rule that says how a branch
+depth combines with its outgoing labels, or derive a held-out branch/header
+prediction.  Do not render `99/0/89` as letters by choosing another offset.
+
 ### Qualia `2-to-26 deck cipher` practice puzzle
 
 **Status:** newly identified calibration dependency.  It maps binary plaintext
@@ -494,6 +524,12 @@ eighteen lanes and completes six unrelated cheap probes before following a
 survivor.  The apparent `34x27` trie-record effect survives a strict fixed-phase
 checksum null but loses selectivity when all record phases are admitted, and
 its boundaries have no trie role.  Both canonical 83-to-42 quotient decoders
-are language-negative.  No new favorite replaces the ledger; the next wide
-cycle should prioritize untouched external-selector, snapshot, and
-metadata-only lanes rather than reopening a rejected numeric transform.
+are language-negative.
+
+The third cycle closes the storage side channel, retains position synchrony
+without 26-column geometry, rejects literal five-state delta decoders, and
+adds the retrospective `BEXIT` branch/exit checksum identity.  No decoder
+emerges.  The next cycle should prioritize a genuinely game-authored external
+selector or historical asset delta that predicts one of these structures;
+otherwise return to the unresolved practice-cipher calibration rather than
+reopening a rejected numeric transform.

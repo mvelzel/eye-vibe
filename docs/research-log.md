@@ -1925,6 +1925,47 @@ Reproduction is in `scripts/analyze_snapshot_delta.py` and
 position synchrony.  The five-state tape should not be fit further without an
 external selector.
 
+### Metadata-only `BEXIT` branch/exit identity
+
+The metadata-only lane was frozen to objects already selected independently:
+East 5 first from the marker trail, breadth-first branch order from the
+`BEXIT` depth reading, distinct immediate outgoing trie labels, and modulus
+101 from the message and merged-trie checks.  For the five records, the depths,
+exit labels, raw exit sums, and depth-corrected residues are:
+
+```text
+depth  exits        exit sum  (sum + depth) mod 101
+2      49,48          97              99
+5      2,69,23        94              99
+24     80,29,69      178               0
+9      2,78           80              89
+20     33,77,60      170              89
+```
+
+Thus the selected sequence is `99,99,0,89,89`: two equal pairs around a zero
+center.  Expressed as three linear equations on the global label mapping, all
+three add rank beyond the diagonal East 1/East 3/East 5 count vectors and the
+full merged-trie count vector; the rank over `F101` rises from 4 to 7.
+
+An exact cyclic-convolution calculation over the subgroup that preserves the
+three diagonal sums and fixes all nine marker labels counts
+`6,115,295,232 / 825,564,856,320 = 1/135` satisfying assignments.  Searching
+the entire coefficient family `exit_sum + k*depth` for `k=0..100` does not
+inflate this within that subgroup: coefficient one is the sole value with any
+assignments.  A second seeded calibration samples 500,000 subgroup mappings
+and accepts only the 5,008 that also preserve the known full-trie zero.  Of
+those, 26 satisfy all three exit equations, for corrected conditional rate
+`27/5009 = 0.0053903`.
+
+This is a new check relation, not a solution and not a calibrated discovery
+probability.  The node order and modulus were motivated in advance, while the
+sum-plus-depth operator and paired-zero-paired target were recognized after
+viewing the records.  Many metadata operations could have been tried.  The
+identity earns a ledger entry because it is exact, independently ranked, and
+strictly reproducible; promotion still requires a game-authored combine rule
+or a held-out prediction.  Reproduction is in
+`scripts/analyze_metadata_instruction.py`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly
