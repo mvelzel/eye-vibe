@@ -2071,6 +2071,36 @@ or known plaintext arrives. The corrected model and calibration remain
 reproducible in `scripts/solve_sdlwdr_cipher3_cycle.py` and
 `scripts/optimize_sdlwdr_cipher3_cycle.py`.
 
+### Sixth wide expansion: algebra, codebooks, and column phase
+
+Another breadth cycle froze twelve representations before selecting six cheap
+tests. Literal affine actions in the authored `F5^3` eye coordinates fit none
+of seven strong context maps; the intentionally strange `F3^4+2` model also
+fits none. Geometric rolling hashes and header-as-polynomial-root rules select
+only the already-known forward additive checksum at base one, covering the
+three diagonal East panels (`138/2001 = 0.068966` after complete-family
+selection). Adjacent componentwise `k-x-y` completion lands in the 42 unused
+trigrams 441 of 1,018 times, below its control median (`1325/2001` upper tail).
+
+Treating centre as an empty generator makes 85 word classes in the full
+five-direction cube, but the visible `0..82` subset occupies only 55 and shares
+eight classes with the unused subset. Native inverse cancellation reduces the
+full cube to 53 classes, not 83. The nearby 85 count is not a visible-alphabet
+explanation.
+
+The only primary hit is 26-column phase: all 34 complete records have
+column/label MI 1.882712351 under intact-row rotation controls
+(`1/2001 = 0.000500`). After every first row is removed, the tail remains
+`11/2001 = 0.005497`. A family-held-out predictor closes it. Training
+same-column label counts on two natural prefix families and scoring the third
+gives parts 45, 46, and 49, total 140, versus control median 136 and
+`856/2001 = 0.427786`. The primary effect is in-sample equality alignment,
+not a predictive column channel. No sixth-expansion lane promotes.
+
+The full portfolio and kill rules are in
+`docs/sixth-wide-expansion-2026-07-21.md`; reproduction is in
+`scripts/run_sixth_wide_expansion.py`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly

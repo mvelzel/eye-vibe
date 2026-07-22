@@ -20,6 +20,15 @@ families before deepening any one of them.  The longstanding community
 but both canonical decoders are language-negative; the post-hoc `34x27` trie
 layout also loses selectivity once record phase is admitted.
 
+Two further frozen fan-outs are recorded in
+[`docs/fifth-wide-fanout-2026-07-21.md`](docs/fifth-wide-fanout-2026-07-21.md)
+and
+[`docs/sixth-wide-expansion-2026-07-21.md`](docs/sixth-wide-expansion-2026-07-21.md).
+Together they test twelve additional graph, visual, packet, algebraic,
+codebook, and construction-trace forms. None earns depth after its required
+held-out audit; in particular, the strong 26-column in-sample phase effect
+fails leave-one-prefix-family-out prediction.
+
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
 contiguous alphabet `0..82`, and the nine messages contain 1,036 values. The

@@ -587,3 +587,14 @@ lookup contexts for 1,298 cells and is driven by copied prefixes: after first
 row pairs are dropped, the radius-at-most-one family has
 `197/2001 = 0.098451`, while radius three covers only `46/1001` held-out
 cells. No lane earns depth.
+
+The sixth wide expansion is preserved in
+[`sixth-wide-expansion-2026-07-21.md`](sixth-wide-expansion-2026-07-21.md).
+It starts with twelve additional representations before implementing six:
+literal affine actions on `F5^3` and `F3^4+2`, geometric/hash-root headers,
+adjacent completion into the 42 missing glyphs, neutral-eye word quotients,
+and 26-column phase. None promotes. The strong column MI primary result
+(`1/2001`) persists after first rows are removed (`11/2001`) but fails the
+required leave-one-prefix-family-out prediction (`856/2001`). The remaining
+six lanes stay selector-gated; the next acquisition pass should widen the
+external clue/known-plaintext inventory rather than deepen these forms.
