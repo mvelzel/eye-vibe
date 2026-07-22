@@ -2158,6 +2158,36 @@ elements. Literal newline movement turns 86 source rows into 327/456 fragments
 with 30/75 empty rows. No direct S6/body lane promotes. Reproduction and scope
 are in `docs/factoradic-wide-2026-07-22.md`.
 
+### Giant-dollar mirror geometry: real defect, movable row number
+
+The 21 July `silmä-novel` thread proposed the older
+`boss_centipede/rewards/giant_dollar.png` as a diagram for a mirrored Gate
+sieve. The current and archived early-access copies are byte-identical,
+41x75 RGBA files with SHA-256
+`0bc8284f0b915d73e350343faa4be2ff3d36f4e73e0edea59267a3d55a69e9c1`.
+A September 2019 Discord message already describes the giant dollar-sign
+reward, so it is chronologically eligible before the Eyes.
+
+An independent raw-alpha audit finds three columns opaque for all 75 rows,
+`x=19..21`. Contiguous runs outward from the stem produce a genuine reflected
+near-symmetry: left rows `5..64` and reversed right rows `5..64` agree on
+59/60 rows. The sole mismatch is left `y=34` width 11 against right `y=35`
+width 12; these are zero-based PNG coordinates.
+
+The reported 43-row statement is one subwindow of this relation. Left rows
+`12..54` versus right rows `57..15` agree on 42/43 and place `11|12` at the
+23rd row. Exhausting all `33*33*2=2,178` 43-row start/orientation choices finds
+18 co-best alignments, all using `left_y+right_y=69` and the same defect. The
+mismatch index ranges from 13 through 30 as the window slides. Therefore the
+physical one-pixel asymmetry is real, while row 23 is not selected by the
+centre-run rule alone. A separately defined void/divider mask may select it,
+but the thread did not publish that mask; the raw widths also do not reproduce
+the claimed transformed range `23..1`.
+
+This promotes a mirror/compare construction vocabulary, not a dollar-to-Gate
+or Gate-to-Eye decoder. Code, tests, and the exact falsification target are in
+`docs/giant-dollar-audit-2026-07-22.md`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly

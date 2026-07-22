@@ -176,6 +176,29 @@ collapse, or mask.  None is defined in the dossier.  Until that residual mask
 is published and frozen independently of the target 70, the sprite/checksum
 match cannot be reproduced.
 
+### Giant-dollar mirror diagram
+
+The older `giant_dollar.png` reward asset does contain a reproducible near
+mirror relation. Its three always-opaque centre columns objectively define two
+outward alpha-run width traces. Under the reflection `left_y + right_y = 69`,
+the traces agree on 59 of 60 rows; the sole defect is `11|12`. One 43-row crop
+places that defect on its 23rd row and therefore reproduces the recent
+`42/43`, row 23, `11|12` report.
+
+That crop is not unique under the published rule. Exhausting all 2,178 pairs
+of 43-row windows and both orientations finds 18 co-best crops, all containing
+the same physical defect. Its one-based position ranges from 13 through 30 as
+the crop slides. A separately defined void/divider construction could still
+freeze the advertised crop, but its mask was not supplied and raw centre-run
+widths cannot reproduce the claimed possible widths `23..1`.
+
+The asset is byte-identical in current and archived early-access data and was
+publicly discussed as a reward in September 2019, so it is chronologically
+eligible even as an original clue. This strengthens the modest “mirroring is
+possible construction vocabulary” reading, not the specific Gate execution.
+Full reproduction and the selection audit are in
+[`giant-dollar-audit-2026-07-22.md`](giant-dollar-audit-2026-07-22.md).
+
 ### Molari and Mokke
 
 Molari and horizontally mirrored Mokke are both 37×71.  Their opaque

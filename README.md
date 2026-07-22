@@ -43,6 +43,15 @@ pass rejects six direct S6/body interfaces; in particular, adjacent quotients
 cover 119 of all 120 possible S5 elements rather than exposing a small
 generator alphabet.
 
+The later giant-dollar/Gate discussion has also been reduced to a raw-asset
+test in
+[`docs/giant-dollar-audit-2026-07-22.md`](docs/giant-dollar-audit-2026-07-22.md).
+The sprite contains a genuine 59-of-60 reflected width relation with one
+`11|12` raster defect. The claimed 23rd-row placement is not invariant under
+the stated width rule: 18 tied 43-row crops move it from row 13 through 30.
+This retains mirroring as possible game-authored construction vocabulary while
+requiring the missing void/divider mask before any numeric Eye interpretation.
+
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
 contiguous alphabet `0..82`, and the nine messages contain 1,036 values. The

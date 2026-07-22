@@ -310,16 +310,26 @@ passage.
 
 ### Gate Guardian construction vocabulary
 
-**Status:** plausible later visual clue; proposed decoder under-specified.
+**Status:** plausible visual clue family; proposed decoder under-specified.
 
 The mod-101 diagonal total 70, Q-C successor edges, authored 72-pixel Veska
 layer, paired Molari/Mokke silhouettes, and three-egg art are reproducible.
 The `12|43|9|8` Veska split, 70-pixel Seula residual, side tape, and fresh Type6
 allocator are not reproducible from the published rules.
 
-**Next test:** obtain or independently derive frozen masks without fitting to
-70, then predict one of the eight unresolved first-seen Type6 values.  Continue
-historical asset retrieval only if it can yield a held-out quantity.
+The older giant-dollar reward independently supplies one clean mirror fact.
+Centre-outward alpha-run widths agree on 59/60 rows after reflection, with one
+`11|12` defect. A particular 43-row subwindow gives the reported `42/43` and
+puts the defect on scanline 23, but 18 equally scoring subwindows move that
+index from 13 through 30. The clue therefore promotes mirror/compare vocabulary
+while leaving the void/divider crop and `23..1` transformed-width rule open.
+The asset predates the Eyes; chronology permits but does not connect it.
+
+**Next test:** obtain or independently derive the dollar void/divider masks and
+the Gate masks without fitting to `70`, `23`, or `11|12`, then predict one of
+the eight unresolved first-seen Type6 values. Continue historical asset
+retrieval only if it can yield a held-out quantity. Details are in
+[`giant-dollar-audit-2026-07-22.md`](giant-dollar-audit-2026-07-22.md).
 
 ### Arbitrary `A83`/`S83` GAK or XGAK
 
