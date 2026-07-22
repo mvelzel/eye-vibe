@@ -653,3 +653,12 @@ and 26-column phase. None promotes. The strong column MI primary result
 required leave-one-prefix-family-out prediction (`856/2001`). The remaining
 six lanes stay selector-gated; the next acquisition pass should widen the
 external clue/known-plaintext inventory rather than deepen these forms.
+
+The subsequent factoradic acquisition and giant-dollar audit supply enough
+new constraints for another explicitly broad pass. The frozen portfolio is in
+[`seventh-wide-funnel-2026-07-22.md`](seventh-wide-funnel-2026-07-22.md):
+header-ordered BWT→MTF, six-token positional transposition, a `Z101` hidden-gap
+derivative, sequential eye-change masks, occurrence-pointer distances, and
+ordinal/factoradic self-indexing each receive one matched-control necessity
+test before depth. Six older selector-gated lanes remain listed behind them and
+are not discarded.
