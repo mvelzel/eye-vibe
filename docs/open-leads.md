@@ -389,9 +389,34 @@ and do not scale to the Waite East-2 crib before that threshold.
 
 In parallel, formalize deck chaining first as a label-invariant quotient or
 constraint-propagation rule and require it to recover a solvable GCTAK/practice
-fixture. Do not infer merged operation classes from the Eye patterns alone;
-the number of classes and the proposed “trailer altar” selector are presently
-unverified.
+fixture. Do not infer merged operation classes from the Eye patterns alone.
+The exact trailer proposal has now been audited: all nine candidate start
+digits share one class, but the categories fail positionwise equality for all
+three concrete funny-obstacle pairs. Retain it only as a start selector until
+an independently specified operation predicts a held-out symbol. See
+[`ninth-second-wide-results-2026-07-22.md`](ninth-second-wide-results-2026-07-22.md).
+
+### First/third-eye transition order
+
+**Status:** exploratory held-out residue; arithmetic interpretation rejected.
+
+Across seven nonliteral ciphertext-isomorphic windows, the two-bit statement
+“high digit increases / low digit increases” agrees on `63/141` corresponding
+transitions. The first four contexts independently select that same coordinate
+pair and direction before the last three score `35/82`. Controls that preserve
+the complete equality skeleton, all markers, and the three known diagonal
+integer sums give uncorrected tails `0.005997` and `0.006997`.
+
+This emerged only after ablating a preliminary borrow model across six feature
+variants. The middle eye and borrow propagation are unnecessary, and
+familywise correction demotes both tails. It is therefore not a base-five
+arithmetic clue and not yet a body model.
+
+**Next test:** demand a separately selected, genuinely new context or an
+independent game-authored first/third-eye comparison rule. Do not inspect more
+relations on the same seven contexts or use the present scores to select the
+test. Full audit is in
+[`ninth-second-wide-results-2026-07-22.md`](ninth-second-wide-results-2026-07-22.md).
 
 ### External in-game key or later hint
 

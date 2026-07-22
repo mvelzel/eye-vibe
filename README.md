@@ -95,13 +95,23 @@ and forbidden-transition support has binary rank 82. The header classes rank
 high among three-triple partitions but have negative held-out gain, so they do
 not predict dynamics.
 
-The next slice is frozen in
+The next slice was frozen in
 [`docs/ninth-second-wide-freeze-2026-07-22.md`](docs/ninth-second-wide-freeze-2026-07-22.md).
 It uses the exact proposed trailer partition—rather than a paraphrase—beside
 independent carry-state and worldline tests. The keyed 36-symbol alphabet is
 `ABDMGICRTKEFHJLNOPQSUVWXYZ0123456789`; the proposed classes are
 `ABKEFHJLNOPQ`, `DMGICRT`, and `SUVWXYZ0123456789`, with Q and a
 letters-versus-digits split as the only frozen variants.
+
+The completed results are in
+[`docs/ninth-second-wide-results-2026-07-22.md`](docs/ninth-second-wide-results-2026-07-22.md).
+The category partition explains the common digit class but not the three
+concrete funny-obstacle pairs. Direct worldline overlaps are identically zero.
+The apparent borrow anomaly fails its held-out checksum-preserving control and
+collapses under ablation to a simpler high/low-eye comparison. That comparison
+replicates across the first/last context split, but it was selected from six
+post-hoc variants and loses familywise significance. It is retained only as a
+bounded future prediction, not as evidence for arithmetic or a decoder.
 
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the

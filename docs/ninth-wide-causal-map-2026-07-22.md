@@ -131,3 +131,12 @@ The second wide slice was then frozen before execution. It acquires the exact
 proposed trailer categories and places them beside independent radix-five
 carry and one-worldline tests. See
 [`ninth-second-wide-freeze-2026-07-22.md`](ninth-second-wide-freeze-2026-07-22.md).
+
+That slice is now complete. The category partition supplies a viable shared
+digit class but fails all three funny-obstacle pairs. Every direct worldline
+overlap is zero. The preliminary borrow hit does not survive its harder
+held-out checksum-preserving control and is fully reproduced without carry by
+comparing only the high and low eyes. That simpler comparison has uncorrected
+matched tails `0.005997` overall and `0.006997` held-out, but it was selected
+from six ablations and therefore does not promote. Full results are in
+[`ninth-second-wide-results-2026-07-22.md`](ninth-second-wide-results-2026-07-22.md).

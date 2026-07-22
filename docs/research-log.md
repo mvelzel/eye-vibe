@@ -2275,6 +2275,35 @@ This acquisition unblocks a finite category-level test but is not itself a
 decoder. Its frozen test sits beside unrelated carry and worldline lanes in
 `docs/ninth-second-wide-freeze-2026-07-22.md`.
 
+### Ninth second slice: category, borrow, and worldline tests
+
+The exact trailer categories put all nine candidate initial digits in one
+class, satisfying the proposed common-start precondition. They do not preserve
+any complete documented funny-obstacle pair: `EAST/WEST` mismatches at zero,
+while `COPPER/SILVER` and `FROZEN/MOLTEN` mismatch at zero, one, and three.
+This retains the partition as a possible start selector but rejects it as the
+complete three/four-operation quotient.
+
+The frozen borrow-state agreement initially scores `63/141` with arbitrary
+global-label tail `3/2001`. A matched subgroup that preserves the East-1,
+East-3, and East-5 sums exactly gives tail `0.007496` overall and `0.013493`
+on the first-to-last held-out split. It therefore fails the frozen promotion
+rule. Its Markov tail is `0.035482`.
+
+A six-feature ablation rejects the arithmetic interpretation. The winning
+order never emits the middle-eye step, and two independent high/low digit
+comparisons reproduce `63/141` and held-out `35/82` without borrow
+propagation. This simpler relation has checksum-preserving tails `0.005997`
+and `0.006997`, but selection from six inspected variants raises them beyond
+the familywise line. It remains a scoped out-of-sample prediction rather than
+a result to deepen on the same contexts.
+
+Finally, every directed panel pair has both literal and repeat-validated
+isomorphic suffix/prefix overlap zero. All `9!` worldline orders tie at zero;
+the strict checkpoint model is rejected. Code, full controls, and the
+false-positive audit are in
+`docs/ninth-second-wide-results-2026-07-22.md`.
+
 ### Eighth wide batch: structural and provenance lanes close
 
 The six deferred sixth-expansion lanes were frozen as a second batch rather
