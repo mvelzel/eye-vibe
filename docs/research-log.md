@@ -2101,6 +2101,63 @@ The full portfolio and kill rules are in
 `docs/sixth-wide-expansion-2026-07-21.md`; reproduction is in
 `scripts/run_sixth_wide_expansion.py`.
 
+### Read-only Discord delta: factoradic headers and a Paley negative
+
+On 22 July, a read-only sweep of the recent `silmä-cryptography`,
+`silmä-novel`, and `silmä-teollinan-älly` discussions recovered Lquid's
+`noita_eye_header_audit.zip`. Its SHA-256 is
+`ec9968c38c0816caba668a4cc73d78f0e8a89c2bba569b8729276d121d710fb8`;
+every included manifest entry verifies. The supplied reproduction regenerates
+its report and JSON byte-for-byte in a temporary directory.
+
+The important finite core was then implemented independently from the local
+canonical corpus. Ordinary lexicographic S6 unranking maps header ranks
+`50,80,36` to `r,s,r^-1`, generating D4 and fixing center/newline. The six
+remaining headers fix only center and generate S5. Newline preimages in case
+order are `555343434`; East-Q occupies three right cosets of P and West-Q one.
+The fixed center is partly automatic because ranks `0..82` lie below 120.
+
+Freezing each named header's first two base-five graph digits and permuting the
+observed third-digit multiset gives 22,680 assignments, 15,120 in range and
+12,096 with distinct ranks. Counts are: typed newline word 6, P=D4 136, Q=S5
+80, P=D4 plus Q=S5 4, and the full typed/coset system 2. The survivors are the
+observation and the West2/West4 label exchange; those positions are the same
+graph edge and type. This is one structural class modulo the graph's duplicate
+edge. It promotes header metadata while leaving project-wide selection and the
+missing body decoder explicit. Reproduction is in
+`src/eye_mystery/factoradic_headers.py` and
+`scripts/analyze_factoradic_headers.py`.
+
+The same acquisition pass preserved “deck chaining” and merged-operation XGAK
+as mechanism leads and treated `wmdwm.net/noita` only as an AI-generated
+pattern viewer. The giant-dollar sprite is byte-identical in the current and
+archived early-access assets, making it chronologically eligible, but the new
+43-row mirror/XOR claim still lacks independently frozen masks.
+
+The “Why 83?” discussion also motivated a distinct key-free Paley probe.
+Quadratic character modulo 83 maps every adjacent nonzero difference to one
+bit and complements under sign reversal. The 1,027-bit corpus has 485 ones.
+Repeated contexts achieve only 134/221 best equal-or-complement matches, one
+exact copy among thirteen, with global-label upper tail
+`1004/2001 = 0.501749`. The best selected 7/8-bit ASCII form is gibberish and
+has upper tail `738/2001 = 0.368816`. This lane is closed; implementation is in
+`src/eye_mystery/paley_projection.py`.
+
+The next S6 work begins wide: row/message products, adjacent quotients,
+running actions, moving-delimiter tapes, D4 cosets, and conjugacy features each
+receive one cheap necessity test before any body model is deepened. Details
+and provenance are in `docs/discord-factoradic-audit-2026-07-22.md`.
+
+That portfolio is now complete and entirely negative. Across 500 matched
+global body-label permutations, the corrected tails are: product/header
+`501/501`, quotient-support lower `501/501`, quotient-visible `396/501`,
+quotient-in-D4 `164/501`, running-state compression `498/501`, header-coset
+membership `482/501`, coset self-transition `164/501`, and cycle-type MI
+`258/501`. Observed adjacent quotients occupy 119 of all 120 possible S5
+elements. Literal newline movement turns 86 source rows into 327/456 fragments
+with 30/75 empty rows. No direct S6/body lane promotes. Reproduction and scope
+are in `docs/factoradic-wide-2026-07-22.md`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly

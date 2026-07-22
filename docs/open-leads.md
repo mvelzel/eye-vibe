@@ -1,4 +1,4 @@
-# Open lead ledger — 21 July 2026
+# Open lead ledger — 22 July 2026
 
 This is a durable ledger, not a claim that every lead should be pursued at
 once.  A paused lead remains here until evidence rejects it or its dependency
@@ -8,6 +8,38 @@ what would stop or promote it.  Completed and rejected branches remain in
 [`research-log.md`](research-log.md).
 
 ## Active and high value
+
+### Six-symbol factoradic header type system
+
+**Status:** independently reproduced structural metadata; six direct body
+interfaces rejected, with no plaintext and no decoder.
+
+Lexicographically unranking the nine first-trigram ranks as permutations of
+`[center,up,right,down,left,newline]` gives a coherent three-way classifier.
+The P headers are `r,s,r^-1`, generate D4, and preserve newline. Every Q header
+fixes only center; the six generate S5, East-Q has newline preimage four,
+West-Q has preimage three, and their right-coset counts relative to P are
+three versus one.
+
+This is not forced by the earlier header graph. Freezing its nine `(a,b)`
+coordinates and permuting only the observed third-digit multiset leaves two
+full survivors among 12,096 in-range distinct-rank assignments. They differ
+only by swapping West2 and West4, the graph's indistinguishable duplicate
+edge, hence one structural class. The shared fixed center is deflated: all
+lexicographic S6 ranks below 120 fix the first symbol automatically.
+
+The frozen wide portfolio is complete. Nonabelian products match no header;
+adjacent quotients cover 119/120 S5 elements; running states do not compress;
+D4 cosets and conjugacy features are ordinary; and moving the renderer newline
+destroys row syntax. None approaches its `0.01` promotion line.
+
+**Next test:** retain the header classifier while waiting for an independently
+authored rule that consumes its three types or graph coordinates. Direct fixed
+unshuffling and arbitrary S6-feature-to-letter maps are not admissible. Full
+provenance is in
+[`discord-factoradic-audit-2026-07-22.md`](discord-factoradic-audit-2026-07-22.md),
+and body results are in
+[`factoradic-wide-2026-07-22.md`](factoradic-wide-2026-07-22.md).
 
 ### Procedural wand selects exactly `0..82` from `0..100`
 
@@ -298,6 +330,13 @@ strong repeated-plaintext premise.  Sparse observed context maps cannot choose
 `A83` versus `S83`.  XGAK adds a plaintext-selected output position and may
 resynchronize around limited plaintext differences.
 
+The latest read-only discussion adds two related but still informal leads.
+“Deck chaining” would try to extend the graph-chaining step that reduced GCTAK
+to substitution into ordinary GAK. Separately, XGAK may become more constrained
+when several plaintext symbols select the same operation: common starts and
+reconvergence could expose operation equivalence classes even when absolute
+output positions remain hidden. Neither idea yet specifies a finite Eye attack.
+
 **Next test:** use a source-backed crib such as the Waite suffix or an external
 in-game key to learn a small, explicitly described operation family and demand
 held-out prediction.  The rolling two-plaintext-symbol state update now passes
@@ -337,6 +376,12 @@ or 83.  Resume after inferring the `2-to-26` plaintext serialization, obtaining
 a small exact crib, or finding a backend/encoding that passes a 26-card replay
 calibration.  Do not interpret one satisfiable model as a unique recovered key
 and do not scale to the Waite East-2 crib before that threshold.
+
+In parallel, formalize deck chaining first as a label-invariant quotient or
+constraint-propagation rule and require it to recover a solvable GCTAK/practice
+fixture. Do not infer merged operation classes from the Eye patterns alone;
+the number of classes and the proposed “trailer altar” selector are presently
+unverified.
 
 ### External in-game key or later hint
 

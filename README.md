@@ -1,7 +1,7 @@
 # Noita eye-mystery workbench
 
 This repository is a reproducible cryptanalysis workbench for Noita's nine Eye
-Messages. It does **not** claim a plaintext. As of 21 July 2026 the mystery is
+Messages. It does **not** claim a plaintext. As of 22 July 2026 the mystery is
 still publicly unsolved, and the experiments here deliberately distinguish a
 statistical curiosity from a validated decryption.
 
@@ -28,6 +28,20 @@ Together they test twelve additional graph, visual, packet, algebraic,
 codebook, and construction-trace forms. None earns depth after its required
 held-out audit; in particular, the strong 26-column in-sample phase effect
 fails leave-one-prefix-family-out prediction.
+
+A subsequent read-only Discord acquisition produced a concrete six-symbol
+factoradic header claim. Its finite core has now been rebuilt independently in
+[`docs/discord-factoradic-audit-2026-07-22.md`](docs/discord-factoradic-audit-2026-07-22.md).
+The P headers form `r,s,r^-1` in D4, Q generates S5, and the side-specific
+newline/coset classifier survives a graph-conditioned enumeration with two
+solutions among 12,096 assignments—one class after the only duplicate-edge
+swap. This promotes the first trigrams as structured metadata, not as a body
+decoder. A separate Legendre/Paley transition projection is calibrated
+negative. The subsequent
+[`docs/factoradic-wide-2026-07-22.md`](docs/factoradic-wide-2026-07-22.md)
+pass rejects six direct S6/body interfaces; in particular, adjacent quotients
+cover 119 of all 120 possible S5 elements rather than exposing a small
+generator alphabet.
 
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
