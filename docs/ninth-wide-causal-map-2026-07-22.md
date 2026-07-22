@@ -126,3 +126,8 @@ held-out log gain is `-3.408916`, so they make prediction worse.
 
 Definitions, controls, false-positive audit, and reproduction are in
 [`ninth-causal-batch-2026-07-22.md`](ninth-causal-batch-2026-07-22.md).
+
+The second wide slice was then frozen before execution. It acquires the exact
+proposed trailer categories and places them beside independent radix-five
+carry and one-worldline tests. See
+[`ninth-second-wide-freeze-2026-07-22.md`](ninth-second-wide-freeze-2026-07-22.md).

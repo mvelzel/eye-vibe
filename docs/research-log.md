@@ -2261,6 +2261,20 @@ partition has negative gain.
 Methods, controls, and the false-positive audit are in
 `docs/ninth-causal-batch-2026-07-22.md`.
 
+### Exact trailer-category acquisition
+
+Read-only Discord context supplies the missing exact form of the recent XGAK
+selector. Keying `A-Z0-9` with `A BAD MAGIC CARD TRICK` gives
+`ABDMGICRTKEFHJLNOPQSUVWXYZ0123456789`. The annotated trailer diagram colors
+the proposed categories as normal/front `ABKEFHJLNOPQ`, nonstandard/front
+`DMGICRT`, and unseen/back `SUVWXYZ0123456789`; Q may move to the back set, and
+a four-class variant splits back letters from digits. The full back side is
+speculative even though it fits the available width.
+
+This acquisition unblocks a finite category-level test but is not itself a
+decoder. Its frozen test sits beside unrelated carry and worldline lanes in
+`docs/ninth-second-wide-freeze-2026-07-22.md`.
+
 ### Eighth wide batch: structural and provenance lanes close
 
 The six deferred sixth-expansion lanes were frozen as a second batch rather

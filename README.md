@@ -95,6 +95,14 @@ and forbidden-transition support has binary rank 82. The header classes rank
 high among three-triple partitions but have negative held-out gain, so they do
 not predict dynamics.
 
+The next slice is frozen in
+[`docs/ninth-second-wide-freeze-2026-07-22.md`](docs/ninth-second-wide-freeze-2026-07-22.md).
+It uses the exact proposed trailer partition—rather than a paraphrase—beside
+independent carry-state and worldline tests. The keyed 36-symbol alphabet is
+`ABDMGICRTKEFHJLNOPQSUVWXYZ0123456789`; the proposed classes are
+`ABKEFHJLNOPQ`, `DMGICRT`, and `SUVWXYZ0123456789`, with Q and a
+letters-versus-digits split as the only frozen variants.
+
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
 contiguous alphabet `0..82`, and the nine messages contain 1,036 values. The
