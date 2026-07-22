@@ -2047,6 +2047,30 @@ synchrony plus sparse lookup-table memorization, not a cellular decoder.
 No fifth-fan-out lane promotes. Reproduction is in
 `scripts/run_fifth_wide_fanout.py` and `src/eye_mystery/fifth_wide.py`.
 
+### Practice cipher 3: corrected cycle arithmetic and bounded stop
+
+The unresolved sdlwdr #3 progression hypothesis was audited before granting it
+more solver time. Its Discord thread contains only the ciphertext attachment
+and an A0 correction; the claim that its alphabet progresses with position is
+our hypothesis, not an author hint found in that thread.
+
+The first `C82+1` and `C41+C41+1` encodings also contained a real arithmetic
+error: they reduced stream positions modulo 83 before applying the shorter
+cycle modulus. The corrected implementation retains raw reset-relative
+positions. This does not change the established `C83` UNSAT result. Corrected
+ten-second checks make group A SAT at 42 symbols under both decompositions;
+groups B, C, and the full corpus still time out.
+
+A permutation annealer was then calibrated against A. In 400,000 swaps and two
+restarts it finds 40 symbols for `C82+1` and 41 for `C41+C41+1`, confirming that
+the diagnostic can enter the satisfiable basin. Its corresponding best bounds
+for B are 65 and 64; for C, 77 and 78; for the full 18 streams, 83 and 83.
+These are not exact lower bounds, but the large, monotone gap is enough for a
+resource decision: stop deepening this unendorsed premise until a new invariant
+or known plaintext arrives. The corrected model and calibration remain
+reproducible in `scripts/solve_sdlwdr_cipher3_cycle.py` and
+`scripts/optimize_sdlwdr_cipher3_cycle.py`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly

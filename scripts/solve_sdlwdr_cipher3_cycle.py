@@ -16,6 +16,8 @@ from pathlib import Path
 
 import z3
 
+from eye_mystery.permutation_progression import CycleLayout
+
 
 SIZE = 83
 ROOT = Path(__file__).resolve().parents[1]
@@ -32,16 +34,12 @@ def main() -> None:
     cycle_lengths = tuple(map(int, args.cycle_lengths.split(",")))
     if any(length < 1 for length in cycle_lengths) or sum(cycle_lengths) != SIZE:
         raise SystemExit("cycle lengths must be positive and sum to 83")
-    slot_cycle = []
-    slot_offset = []
+    layout = CycleLayout(cycle_lengths)
     cycle_slots = []
     start = 0
-    for cycle_index, length in enumerate(cycle_lengths):
+    for length in cycle_lengths:
         slots = tuple(range(start, start + length))
         cycle_slots.append(slots)
-        for offset in range(length):
-            slot_cycle.append(cycle_index)
-            slot_offset.append(offset)
         start += length
 
     data = json.loads(
@@ -57,7 +55,9 @@ def main() -> None:
     positions = [set() for _ in range(SIZE)]
     for stream in streams.values():
         for position, symbol in enumerate(stream):
-            positions[symbol].add(position % SIZE)
+            # Keep the true stream position.  Reducing modulo the complete
+            # 83-slot alphabet is only valid for C83, not C82 or C41.
+            positions[symbol].add(position)
 
     solver = z3.Solver()
     solver.set(timeout=args.timeout_ms)
@@ -82,12 +82,8 @@ def main() -> None:
 
     for symbol in range(SIZE):
         for coordinate in range(SIZE):
-            cycle_index = slot_cycle[coordinate]
-            offset = slot_offset[coordinate]
-            slots = cycle_slots[cycle_index]
-            length = len(slots)
             required = {
-                slots[(offset - position) % length]
+                layout.decode_slot(coordinate, position)
                 for position in positions[symbol]
             }
             solver.add(
@@ -129,11 +125,7 @@ def main() -> None:
     for name, stream in streams.items():
         values = []
         for position, symbol in enumerate(stream):
-            slot = coordinates[symbol]
-            cycle_index = slot_cycle[slot]
-            slots = cycle_slots[cycle_index]
-            offset = slot_offset[slot]
-            values.append(slots[(offset - position) % len(slots)])
+            values.append(layout.decode_slot(coordinates[symbol], position))
         print(f"{name}: {' '.join(map(str, values))}")
 
 

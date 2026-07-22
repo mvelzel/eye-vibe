@@ -1,11 +1,14 @@
 # sdlwdr #3 — unresolved progression cipher
 
-**Status:** Unsolved.  One exact mechanism family is excluded; two broader
-cycle decompositions remain undecided because their solvers timed out.
+**Status:** Unsolved. One exact mechanism family is excluded; two broader
+cycle decompositions remain undecided exactly, but corrected bounded searches
+make them poor candidates for the complete corpus.
 
 ## What was tested
 
-The working hint was that the ciphertext alphabet progresses with position.
+The working **hypothesis** was that the ciphertext alphabet progresses with
+position. The Discord puzzle thread contains only the ciphertext attachment
+and a correction to A0; no author hint there endorses this mechanism.
 That can be stated without guessing letters.  Let `P` be one permutation of
 the 83 ciphertext symbols.  At zero-based position `i`, decode symbol `c[i]`
 as
@@ -39,8 +42,32 @@ C82 + fixed point
 C41 + C41 + fixed point
 ```
 
-Both returned `unknown: timeout` in fresh bounded runs.  They are **not**
-excluded.  A separate scan of standard physical/near-size initial shuffles
+Both returned `unknown: timeout` in fresh bounded runs. They are **not**
+excluded.
+
+An audit found that the first version of these two encodings reduced every
+stream position modulo 83 before applying the cycle's own modulus. That is
+valid for `C83`, but wrong for `C82` and `C41`. The exact and heuristic solvers
+now retain the true reset-relative position. Corrected ten-second exact checks
+find group A satisfiable at the 42-symbol limit for both decompositions; groups
+B and C still time out.
+
+A calibrated permutation annealer supplies a bounded diagnostic. In 400,000
+swaps × two restarts it does recover 40/41-symbol witnesses for group A, so it
+can reach the known satisfiable regime. On the harder groups its best decoded
+alphabet sizes are far away:
+
+```text
+                 A    B    C    ALL
+C82 + fixed     40   65   77     83
+C41+C41+fixed   41   64   78     83
+```
+
+These are upper bounds, not impossibility proofs. Their value is strategic:
+the same search that succeeds on A makes no approach to 42 on B, C, or all 18
+streams. Without a new invariant or author hint, more blind depth on this
+progression premise is not justified. A separate scan of standard
+physical/near-size initial shuffles
 followed by selected-card deck updates did not collapse a representative
 message to a plausible small alphabet, but that scan is a finite negative,
 not a proof about arbitrary deck operations.
@@ -48,9 +75,9 @@ not a proof about arbitrary deck operations.
 ## Solution
 
 No verified plaintext has been recovered, so there is no solution text to
-state.  The complete result is the scoped negative above: the proposed
+state. The complete result is the scoped negative above: the proposed
 position-progressive mechanism cannot be one 83-cycle with at most 42 decoded
-symbols.  The supplied scripts retain the unresolved alternatives explicitly
+symbols. The supplied scripts retain the unresolved alternatives explicitly
 instead of presenting a timeout as an impossibility proof.
 
 ## Transfer to the Eyes
@@ -58,6 +85,10 @@ instead of presenting a timeout as an impossibility proof.
 - Translate a verbal mechanism into a label-independent constraint system.
 - Use exact contradictions to discard whole key spaces before language search.
 - Record `UNSAT`, finite scan failure, and timeout as three different outcomes.
+- Calibrate a heuristic on a satisfiable subset before treating its failure on
+  the whole corpus as evidence.
+- Audit nested moduli: reducing positions by the alphabet size before applying
+  a shorter cycle silently changes the model.
 - Do not infer that a family is wrong merely because its more symmetric
   one-cycle member is wrong.
 

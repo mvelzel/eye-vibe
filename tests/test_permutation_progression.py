@@ -1,6 +1,7 @@
 import unittest
 
 from eye_mystery.permutation_progression import (
+    CycleLayout,
     decode_progression,
     decoded_alphabet_size,
     encrypt_progression,
@@ -9,6 +10,18 @@ from eye_mystery.permutation_progression import (
 
 
 class PermutationProgressionTests(unittest.TestCase):
+    def test_cycle_layout_uses_each_cycles_own_modulus(self) -> None:
+        layout = CycleLayout((4, 1))
+        self.assertEqual(layout.slot_metadata(), (
+            (0, 0, 4),
+            (0, 1, 4),
+            (0, 2, 4),
+            (0, 3, 4),
+            (4, 0, 1),
+        ))
+        self.assertEqual(layout.decode_slot(1, 5), 0)
+        self.assertEqual(layout.decode_slot(4, 99), 4)
+
     def test_inverse(self) -> None:
         permutation = (2, 0, 3, 1)
         inverse = inverse_permutation(permutation)

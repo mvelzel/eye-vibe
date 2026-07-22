@@ -355,9 +355,15 @@ map—not for superficial reuse of their plaintext.
 
 ### sdlwdr practice cipher 3
 
-**Status:** unsolved.  One exact single-`C83` progression model is UNSAT;
-multi-cycle variants timed out.  Resume when a new invariant or author hint can
-reduce the model rather than extending blind SMT time.
+**Status:** unsolved. One exact single-`C83` progression model is UNSAT. The
+old multi-cycle runs contained a nested-modulus error; corrected `C82+1` and
+`C41+C41+1` runs make group A SAT but time out on B/C/all. A calibrated
+400,000-swap search reaches 40/41 symbols on A, but only 64–65 on B, 77–78 on
+C, and all 83 on the full corpus. The Discord thread supplies no author hint
+for the progression premise.
+
+**Next test:** resume only when a new invariant, known plaintext, or author hint
+reduces the model. Do not extend blind SMT or annealing time.
 
 ### sdlwdr practice cipher 4
 

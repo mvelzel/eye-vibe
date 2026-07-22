@@ -8,6 +8,53 @@ ordinary substitution alphabet.
 from __future__ import annotations
 
 from collections.abc import Iterable, Sequence
+from dataclasses import dataclass
+from functools import cache
+
+
+@dataclass(frozen=True)
+class CycleLayout:
+    """Address the slots of a permutation with known cycle lengths.
+
+    Slots belonging to later cycles are offset into the same flat namespace.
+    ``decode_slot`` applies an inverse permutation power without assuming that
+    all cycles have the size of the complete alphabet.
+    """
+
+    lengths: tuple[int, ...]
+
+    def __post_init__(self) -> None:
+        if not self.lengths or any(length < 1 for length in self.lengths):
+            raise ValueError("cycle lengths must be positive")
+
+    @property
+    def size(self) -> int:
+        return sum(self.lengths)
+
+    @property
+    def starts(self) -> tuple[int, ...]:
+        result = []
+        total = 0
+        for length in self.lengths:
+            result.append(total)
+            total += length
+        return tuple(result)
+
+    @cache
+    def slot_metadata(self) -> tuple[tuple[int, int, int], ...]:
+        """Return ``(start, offset, length)`` for every flat slot."""
+
+        return tuple(
+            (start, offset, length)
+            for start, length in zip(self.starts, self.lengths, strict=True)
+            for offset in range(length)
+        )
+
+    def decode_slot(self, slot: int, position: int) -> int:
+        if not 0 <= slot < self.size:
+            raise ValueError("slot is outside the cycle layout")
+        start, offset, length = self.slot_metadata()[slot]
+        return start + (offset - position) % length
 
 
 def validate_permutation(permutation: Sequence[int]) -> None:
