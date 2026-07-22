@@ -669,3 +669,11 @@ respectively `0.550225`, `0.775112`, `0.899550`, `0.732134`, `0.035482`, and
 its predeclared 2,000-control refinement moved away from the `0.01` line. Do
 not add pointer moduli, BWT conventions, block phases, or ordinal sample rules.
 The next wide batch is the six explicitly deferred independent lanes.
+
+That batch is now frozen before execution in
+[`eighth-wide-deferred-2026-07-22.md`](eighth-wide-deferred-2026-07-22.md).
+It covers static synchronization/error coding, without-replacement packets,
+an exact reconvergence cocycle, deterministic shared phrase grammar, and
+provenance gates for eligible Noita RNG and range-coding models. The last two
+may legitimately stop at a missing authored implementation/model; generic
+fitting is disallowed.
