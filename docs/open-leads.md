@@ -677,3 +677,11 @@ an exact reconvergence cocycle, deterministic shared phrase grammar, and
 provenance gates for eligible Noita RNG and range-coding models. The last two
 may legitimately stop at a missing authored implementation/model; generic
 fitting is disallowed.
+
+All six deferred lanes now close. The visible codebook has minimum Hamming
+distance one and 9,746/13,778 valid cross-boundary splices. Packet depletion
+and deterministic RePair have tails `0.606697` and `0.328336`. The literal
+mod-101 cocycle is exactly inconsistent: 57 contradictions among 786 equations
+on one 729-node component. The early/current Lua trees supply 337/975 engine
+RNG calls but no implementation, and the exact table inventory supplies no
+frequency model. Details and reproduction are in the eighth-batch document.

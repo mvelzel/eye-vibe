@@ -62,6 +62,14 @@ eye-change masks, occurrence pointers, and ordinal self-indexing are likewise
 negative; none approaches the frozen `0.01` promotion threshold after the
 2,000-control refinement.
 
+The six deferred lanes are now also complete in
+[`docs/eighth-wide-deferred-2026-07-22.md`](docs/eighth-wide-deferred-2026-07-22.md).
+The visible `0..82` interval is not a literal correcting/comma-free code;
+26/83 packets and deterministic phrase grammar are ordinary; and the exact
+repeated-bigram mod-101 potential model has 57 contradictions among 786
+constraints. Provenance gates find no in-data RNG implementation and no
+authored range-frequency model, preventing unconstrained fitting.
+
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
 contiguous alphabet `0..82`, and the nine messages contain 1,036 values. The

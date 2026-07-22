@@ -2216,6 +2216,37 @@ body consumer.
 Full definitions, stop rules, results, and reproduction are in
 `docs/seventh-wide-funnel-2026-07-22.md`.
 
+### Eighth wide batch: structural and provenance lanes close
+
+The six deferred sixth-expansion lanes were frozen as a second batch rather
+than discarded. The literal 83-of-125 synchronizing/error code fails exactly:
+its minimum Hamming distance is one, it has 415 distance-one pairs, and
+9,746/13,778 cross-boundary length-three splices remain in `0..82`.
+
+Without-replacement coverage is ordinary. The 34 complete 26-token records
+sum to 750 distinct labels and the nine phase-zero 83-token body blocks sum to
+474; the joint matched upper tail is `1214/2001 = 0.606697`.
+Deterministic, net-positive RePair saves 68 symbols after charging two per
+rule, with prefix-preserving upper tail `657/2001 = 0.328336`.
+
+The reconvergence cocycle receives an exact stronger falsifier. Every repeated
+bigram identifies its three path-boundary states. The quotient has 729 nodes,
+786 distinct constraints, and one component. Solving
+`potential(v)-potential(u)=label mod 101` yields 57 contradictory constraints;
+there are only 58 surplus constraints beyond a spanning tree. The visible
+labels are not a literal mod-101 gradient on this minimally merged equality
+graph.
+
+The two provenance-gated lanes cannot begin honestly. The archived/current
+loose data contain 337/975 calls to engine random functions and zero definitions
+of those generators. The known native placement RNG has no authored
+header-to-body consumption rule. The exact table audit has no 42/101 table and
+only duplicated 83-string `gun_names`, not a frequency model. Generic PRNG and
+range-model fitting remain disallowed.
+
+Definitions and reproduction are in
+`docs/eighth-wide-deferred-2026-07-22.md`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly
