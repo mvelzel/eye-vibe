@@ -111,3 +111,18 @@ Lane D starts with method calibration rather than Eye fitting.  Lanes I–N stay
 on the ledger and are not deleted if the first batch closes.
 
 No first-batch statistic will be implemented until this portfolio is committed.
+
+## First-batch result
+
+The six tests are complete and none promotes. The all-context common-base hit
+was literal-prefix identity contamination; the seven nonliteral maps give
+`36/117` agreements with corrected tail `0.818182`. Branch influence has
+maximum `GF(2)` and Boolean rank five and zero nested row pairs. The proposed
+synchronization spectrum is exactly determined by the equality signatures
+used to select its windows. Both full and equal-length-truncated equality
+skeletons have automorphism group order one. The absent-transition matrix has
+binary rank 82 and all 83 row patterns. Header classes rank `2/280`, but their
+held-out log gain is `-3.408916`, so they make prediction worse.
+
+Definitions, controls, false-positive audit, and reproduction are in
+[`ninth-causal-batch-2026-07-22.md`](ninth-causal-batch-2026-07-22.md).

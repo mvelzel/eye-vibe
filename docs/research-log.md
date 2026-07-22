@@ -2237,6 +2237,30 @@ body consumer.
 Full definitions, stop rules, results, and reproduction are in
 `docs/seventh-wide-funnel-2026-07-22.md`.
 
+### Ninth causal batch: six relational summaries close
+
+The first six lanes of the frozen causal portfolio are complete. A global
+assignment fits `108/209` partial-context edges with corrected tail `1/1001`,
+but that score is dominated by the six literal prefix maps. Removing them
+leaves `36/117`, null range `35..42`, and tail `0.818182`.
+
+The five branch-reconvergence tapes occupy 54 columns, have maximum `GF(2)` and
+Boolean rank five, and have zero nested row pairs. The excess columns are in
+the opposite direction from the planned low-footprint test and restate known
+isomorphic windows. Synchronization profiles are exactly functions of the
+equality signatures that selected those windows, so they are non-identifying.
+
+Both the full and common-98-coordinate equality skeletons have automorphism
+group order one. The deduplicated 843-edge transition support gives an absent
+matrix of binary rank 82 with 83 distinct rows; degree/no-loop controls are
+indistinguishable. Finally, the factoradic header partition's invariant
+transition model has held-out log gain `-3.408916`. Its superficially strong
+`2/280` rank is invalid as promotion evidence because even the best tested
+partition has negative gain.
+
+Methods, controls, and the false-positive audit are in
+`docs/ninth-causal-batch-2026-07-22.md`.
+
 ### Eighth wide batch: structural and provenance lanes close
 
 The six deferred sixth-expansion lanes were frozen as a second batch rather

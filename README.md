@@ -85,6 +85,16 @@ reconvergence structure?” Its fourteen-lane breadth map is frozen in
 It includes the recent XGAK category/common-base suggestions, but begins with
 six key-free causal and quotient tests before deepening any one model.
 
+That first causal batch is complete in
+[`docs/ninth-causal-batch-2026-07-22.md`](docs/ninth-causal-batch-2026-07-22.md).
+All six close. The apparent common-base hit is copied-prefix identity
+contamination; the decontaminated tail is `0.818182`. Branch footprints are
+full-rank and non-nested, synchronization collapses exactly to the selected
+equality signatures, both equality-skeleton automorphism groups are trivial,
+and forbidden-transition support has binary rank 82. The header classes rank
+high among three-triple partitions but have negative held-out gain, so they do
+not predict dynamics.
+
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
 contiguous alphabet `0..82`, and the nine messages contain 1,036 values. The
@@ -671,6 +681,7 @@ PYTHONPATH=src python3 scripts/analyze_trie_checksum.py --samples 200000
 PYTHONPATH=src python3 scripts/scan_game_authored_tables.py /path/to/data.wak
 PYTHONPATH=src python3 scripts/analyze_gun_names_selector.py /path/to/data.wak /path/to/english.txt --controls 2000
 PYTHONPATH=src python3 scripts/run_fifth_wide_fanout.py --controls 2000 --sort-controls 10000
+PYTHONPATH=src python3 scripts/run_ninth_causal_batch.py --controls 1000
 ```
 
 The vectorized selected-card scan additionally requires NumPy:
