@@ -70,6 +70,14 @@ repeated-bigram mod-101 potential model has 57 contradictions among 786
 constraints. Provenance gates find no in-data RNG implementation and no
 authored range-frequency model, preventing unconstrained fitting.
 
+The practice-cipher method calibration also continues. A frozen
+case-sensitive bijection test for sdlwdr cipher 4 is recorded in
+[`docs/practice-cipher4-case-bijection-2026-07-22.md`](docs/practice-cipher4-case-bijection-2026-07-22.md).
+Matched controls recover 99.9233% of 1,304 characters, while four natural
+57-character prose alphabets leave the real stream roughly 10,700 log-score
+units worse and seed-unstable. The cyclic outer layer remains solved; its
+plaintext/inner codec does not.
+
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
 contiguous alphabet `0..82`, and the nine messages contain 1,036 values. The

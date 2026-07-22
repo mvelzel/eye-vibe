@@ -56,7 +56,9 @@ Seven English/Finnish corpora fail this key-free consistency test under both
 orientations and both update-timing conventions; every affine `q` is also
 excluded on the natural 27- and 42-position plaintext sets.  The only
 57-position affine survivors set the state multiplier to zero and reproduce
-the known rank stream.
+the known rank stream. A later case-sensitive bijection test adds a useful
+boundary: four natural 57-character prose alphabets fail by roughly 10,700
+log-score units while matched controls recover 99.9233% of the text.
 
 **Lesson:** repeated structure can prove one layer while leaving the next
 layer unknown.  Convert the recovered group into a functional recurrence: it

@@ -106,6 +106,13 @@ positive or structural control:
    `p'=difference-22` and its reflection `p'=-difference-5`.  The arbitrary
    starting symbol is immediately discarded.  These are just the already
    known direct rank stream, not a hidden stateful decoder.
+9. **Case-sensitive injective substitution.**  The exact 57-wide action band
+   was mapped bijectively into four conventional `A-Z`/`a-z`/space/punctuation
+   pools with a raw character four-gram model.  Matched planted controls recover
+   99.9233% of 1,304 characters at scores near `-11,000`.  Real candidates
+   remain seed-unstable gibberish near `-21,700..-21,950`.  This rejects the
+   previously untested “straightforward 57-character case alphabet” reading;
+   it does not reject a second codec or non-prose plaintext.
 
 ## Verdict
 
@@ -113,8 +120,9 @@ The puzzle has **not** been solved.  The defensible result is narrower: its
 visible ciphertext is a standard `C83` running state, adjacent differences
 recover the repeated action stream, and the missing inner map is neither the
 tested Wadsworth wheel, ordinary static homophones, the tested adaptive
-57-card alphabet, nor an Eye-derived in-game key.  No plaintext is stated
-because none has been verified.
+57-card alphabet, a conventional case-sensitive 57-character bijection, nor
+an Eye-derived in-game key.  No plaintext is stated because none has been
+verified.
 
 ## Transfer to the Eyes
 

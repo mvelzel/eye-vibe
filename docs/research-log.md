@@ -1788,6 +1788,27 @@ rank reading.  General nonlinear `q` remains unresolved.  Reproduction is in
 `scripts/scan_sdlwdr_cipher4_sources.py` and
 `scripts/analyze_sdlwdr_cipher4_recurrence.py`.
 
+### Practice cipher 4: calibrated case-sensitive bijection rejection
+
+The exact `22..78` action span suggested a previously untested finite reading:
+53 observed actions inside 57 positions might be an injective substitution of
+a conventional case-sensitive alphabet (`A-Z`, `a-z`, space, and five ordinary
+punctuation characters). Earlier attacks had case-folded the stream and forced
+homophone allocations, so they did not cover this model.
+
+A raw case/punctuation four-gram optimizer was tested on four frozen character
+pools. For each pool, the same algorithm decoded a planted 1,304-character
+control to 99.9233% accuracy, with best scores from `-10,984.01` to
+`-11,097.55`. Real Cipher 4 runs remained between `-21,714.64` and
+`-21,951.41`; independent seeds selected unrelated keys and produced only
+isolated pseudo-words inside mixed-case gibberish. The score gap and instability
+reject this conventional bijection family. They do not reject a second codec,
+an unconventional alphabet, or non-prose plaintext.
+
+The frozen protocol and full score table are in
+`docs/practice-cipher4-case-bijection-2026-07-22.md`; reproduction is in
+`scripts/solve_sdlwdr_cipher4_case_bijection.py`.
+
 ### Second wide fan-out and the exact 83-to-42 complement
 
 A second deliberate breadth pass opened eighteen construction families before

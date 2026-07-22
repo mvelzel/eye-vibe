@@ -46,3 +46,31 @@ substitution remains.
 This test does not cover a second transposition/encoding layer or a plaintext
 alphabet outside the listed conventional families.  Those remain separate
 hypotheses if this one fails.
+
+## Result
+
+The planted control succeeds and the real puzzle fails by a wide, stable
+margin:
+
+| Character pool | Control score | Control accuracy | Best real score | Real restarts |
+|---|---:|---:|---:|---:|
+| `A-Z a-z .,?!` | -11,001.74 | 99.9233% | -21,951.41 | 4 × 150,000 |
+| `A-Z a-z .,'-` | -11,097.55 | 99.9233% | -21,714.64 | 8 × 200,000 |
+| `A-Z a-z .;:-` | -10,984.01 | 99.9233% | -21,793.14 | 4 × 150,000 |
+| `A-Z a-z .,:;` | -11,041.51 | 99.9233% | -21,821.69 | 4 × 150,000 |
+
+The one control error out of 1,304 characters is on an underdetermined rare
+character; the prose itself is clean and the best control solution recurs
+across independent seeds.  The real candidates differ radically between
+seeds and pools.  Their isolated fragments such as `hints`, `wind`, or
+`ampLing` move to unrelated token assignments and are surrounded by mixed-case
+gibberish.  They are optimizer artifacts, not partial plaintext.
+
+## Verdict
+
+Reject the declared case-sensitive monoalphabetic family.  The 57-wide band
+is real, but it is not a bijection onto any of the four conventional
+case-sensitive prose alphabets under this calibrated model.  This narrows the
+remaining boundary to either a nonlinear/second layer, an unconventional
+source alphabet, or non-prose plaintext.  Merely increasing the same
+annealing budget is not justified.

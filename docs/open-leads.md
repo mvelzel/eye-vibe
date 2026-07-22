@@ -428,12 +428,16 @@ one consistent update function.  Seven English/Finnish corpora give no
 200-transition hit under eight orientation/timing variants, and exhaustive
 affine updates give no natural 27- or 42-position language schedule.  The only
 57-state affine survivors erase the previous state and restate the direct
-difference ranks.
+difference ranks. A separate case-sensitive bijection test now rejects four
+natural 57-character prose alphabets: controls recover 99.9233% at scores near
+`-11,000`, while all real runs remain unstable near `-21,700..-21,950`.
 
-**Next test:** seek a genuinely nonlinear deck invariant or a new author hint;
-do not extend blind SAT or rerun generic language optimization.  A candidate
-source can now be rejected cheaply by the exact recurrence oracle before any
-full key recovery.
+**Next test:** examine whether the direct action stream is a deterministic
+second-layer encoding or non-prose record format, using format signatures and
+exact equality constraints before language scoring. Seek a genuinely nonlinear
+deck invariant or a new author hint; do not extend blind SAT or rerun generic
+language optimization. A candidate source can now be rejected cheaply by the
+exact recurrence oracle before any full key recovery.
 
 ### Exact 42-class complement of the Eye alphabet
 
