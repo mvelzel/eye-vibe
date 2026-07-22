@@ -203,6 +203,35 @@ def riffle_held_out_score(
     )
 
 
+@dataclass(frozen=True)
+class ContextDifferentialScore:
+    repeated_mass: int
+    edges: int
+    summed_support: int
+    per_map_support: tuple[int, ...]
+
+
+def context_differential_score(
+    mappings: Sequence[Mapping[int, int]], *, modulus: int = 101
+) -> ContextDifferentialScore:
+    """Count repeated source/target differences separately in each map."""
+
+    if modulus < 2:
+        raise ValueError("difference modulus must be at least two")
+    supports = tuple(
+        len({(target - source) % modulus for source, target in mapping.items()})
+        for mapping in mappings
+    )
+    edges = sum(map(len, mappings))
+    summed_support = sum(supports)
+    return ContextDifferentialScore(
+        edges - summed_support,
+        edges,
+        summed_support,
+        supports,
+    )
+
+
 def out_faro_position(position: int, *, size: int = 84) -> int:
     if size % 2 or size < 2:
         raise ValueError("a perfect Faro requires a positive even deck size")

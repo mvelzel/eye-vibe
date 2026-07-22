@@ -8,6 +8,7 @@ from eye_mystery.tenth_wide import (
     DIFFERENTIAL_VARIANTS,
     branch_differential_score,
     context_graph_score,
+    context_differential_score,
     context_mappings,
     directed_color_refinement,
     in_faro_position,
@@ -39,6 +40,20 @@ class TenthWideUnitTests(unittest.TestCase):
         self.assertEqual(
             riffle_score((mapping,), convention=((0, 1, 2), False)).rising_sequences,
             2,
+        )
+
+    def test_context_differential_support_is_kept_per_map(self) -> None:
+        score = context_differential_score(
+            (
+                {0: 2, 1: 3, 5: 8},
+                {0: 1, 2: 4},
+            ),
+            modulus=11,
+        )
+        self.assertEqual(score.per_map_support, (2, 2))
+        self.assertEqual(
+            (score.edges, score.summed_support, score.repeated_mass),
+            (5, 4, 1),
         )
 
     def test_84_card_out_faro_is_multiplication_by_two_mod_83(self) -> None:

@@ -122,6 +122,15 @@ corrects the attribution: Faro, 84-card decks, stable sorts, and projection
 away from the middle eye were already discussed by the community. The exact
 bounded tests—not those broad ingredients—are the candidate new work.
 
+The first six tests from that horizon are complete in
+[`docs/tenth-wide-batch-results-2026-07-22.md`](docs/tenth-wide-batch-results-2026-07-22.md).
+Ordinal recurrences, riffle rising sequences, an untyped graph quotient, and
+semantic context holonomy are negative. The pure 84-card out-Faro construction
+is exactly affine over `F83`, so it falls inside an already-excluded group
+family. Mod-101 sibling-branch differences initially pass their corrected
+screen (`4/1001`) by one support slot, but fail the pre-registered context-map
+validation (`874/2001`). No first-batch lane earns depth.
+
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
 contiguous alphabet `0..82`, and the nine messages contain 1,036 values. The

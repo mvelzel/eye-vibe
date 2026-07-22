@@ -109,3 +109,11 @@ validate their own interpretation.
   second, independently authored quantity.
 - If a lane fails cheaply, its broader family stays distinct from the literal
   subclass that failed.
+
+## First-batch result
+
+The first batch is complete. Five lanes close directly or under matched
+controls. The sixth, mod-101 branch differentials, passes its initial
+four-variant screen at `4/1001` but fails the independently frozen
+context-map validation at `874/2001`. No lane earns depth. Full results are in
+[`tenth-wide-batch-results-2026-07-22.md`](tenth-wide-batch-results-2026-07-22.md).

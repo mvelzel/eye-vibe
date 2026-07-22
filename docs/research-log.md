@@ -2327,6 +2327,31 @@ lane is deliberately deferred so the seven windows that generated its residue
 cannot validate their own interpretation. Definitions and prior-work
 boundaries are in `docs/tenth-wide-horizon-2026-07-22.md`.
 
+### Tenth horizon first batch: one screened anomaly fails validation
+
+Tie-aware ordinal patterns have reselected family tail `0.594406` and
+first-to-last-family tail `0.349650`. Partial context maps require 58 rising
+sequences under their best shared base-five order, ordinary against matched
+maps (`0.550450`); the held-out tail is `0.899101`.
+
+An 84-card out-Faro fixes position 83 and acts as `x -> 2x mod 83` on all 83
+other positions. Two has multiplicative order 82, and adding visible cuts
+recovers the already-excluded affine `F83` family. In-Faro moves the sentinel
+and therefore needs an independently specified output rule. Directed color
+refinement individualizes all 83 transition labels after two iterations, even
+with any one panel withheld. The observed context-window graph is a forest
+with cycle rank zero, so it supplies no semantic holonomy loop.
+
+The only initial positive is sibling-branch differential support. Mod-101
+differences have repeated mass `3142/3611`, one support slot beyond 1,000
+prefix/sum-preserving controls; selecting among four representations gives
+`4/1001 = 0.003996`. A definition committed before validation fixes mod 101
+and moves to the seven nonliteral context maps. Their repeated mass is 11,
+controls span 2..21, and the tail is `874/2001 = 0.436782`. The clue fails.
+Per the freeze, missing residues are not mined for semantic numbers. Full
+methods and results are in
+`docs/tenth-wide-batch-results-2026-07-22.md`.
+
 ### Eighth wide batch: structural and provenance lanes close
 
 The six deferred sixth-expansion lanes were frozen as a second batch rather

@@ -425,6 +425,13 @@ here is only the held-out, checksum-controlled order-preservation statistic.
 It remains deferred while the unrelated first batch in
 [`tenth-wide-horizon-2026-07-22.md`](tenth-wide-horizon-2026-07-22.md) runs.
 
+That batch is now complete and supplies no independent support for the
+outer-eye interpretation. Its ordinal family is null-typical after full
+selection correction. A separate outer-eye branch differential is only a
+one-support-slot effect and loses to family correction; the selected mod-101
+branch effect then fails its frozen context-map validation. The deferred
+outer-eye test still requires genuinely new data or an authored selector.
+
 ### External in-game key or later hint
 
 **Status:** high-value search track.
