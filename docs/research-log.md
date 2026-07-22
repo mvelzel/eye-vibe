@@ -2304,6 +2304,29 @@ the strict checkpoint model is rejected. Code, full controls, and the
 false-positive audit are in
 `docs/ninth-second-wide-results-2026-07-22.md`.
 
+### Tenth horizon: novelty audit before depth
+
+A read-only Discord search prevents four broad ingredients from being
+mislabelled as new. Faro shuffles appear in `silmä-cryptography` on 28 June
+2025; an 84-card XGAK representation appears on 10 May and 17 July 2026; a
+stable sort was suggested in `silmä-novel` on 25 January 2023; and Tuska
+explicitly removed the middle eye and published outer-pair projections on
+7 May 2026. The first-`N` cut and reversed-packet variants are likewise
+documented community leads.
+
+No searched message matched four exact diagnostics: an 84-card out-Faro whose
+83 non-sentinel positions form the mod-83 orbit, riffle rising-sequence
+complexity of the partial context maps, tie-aware ordinal-pattern recurrence,
+or an exact graph-cover/bisimulation quotient. Absence from search is not proof
+of global novelty.
+
+Sixteen lanes are frozen before further Eye computation. The first cheap batch
+tests ordinal patterns, riffle complexity, the pure 84/42 Faro algebra, graph
+quotients, branch differentials, and context-loop obstructions. The outer-eye
+lane is deliberately deferred so the seven windows that generated its residue
+cannot validate their own interpretation. Definitions and prior-work
+boundaries are in `docs/tenth-wide-horizon-2026-07-22.md`.
+
 ### Eighth wide batch: structural and provenance lanes close
 
 The six deferred sixth-expansion lanes were frozen as a second batch rather

@@ -113,6 +113,15 @@ replicates across the first/last context split, but it was selected from six
 post-hoc variants and loses familywise significance. It is retained only as a
 bounded future prediction, not as evidence for arithmetic or a decoder.
 
+The next search horizon begins deliberately wide in
+[`docs/tenth-wide-horizon-2026-07-22.md`](docs/tenth-wide-horizon-2026-07-22.md).
+It restores five uncompleted lanes beside ordinal patterns, riffle-shuffle
+rising sequences, an exact 84/42 Faro-sentinel construction, graph covers,
+branch differentials, and context-loop obstructions. A read-only Discord audit
+corrects the attribution: Faro, 84-card decks, stable sorts, and projection
+away from the middle eye were already discussed by the community. The exact
+bounded tests—not those broad ingredients—are the candidate new work.
+
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
 contiguous alphabet `0..82`, and the nine messages contain 1,036 values. The

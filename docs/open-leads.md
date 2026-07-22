@@ -418,6 +418,13 @@ relations on the same seven contexts or use the present scores to select the
 test. Full audit is in
 [`ninth-second-wide-results-2026-07-22.md`](ninth-second-wide-results-2026-07-22.md).
 
+Read-only history adds an important attribution correction: Tuska explicitly
+projected away the middle eye and posted body projections on 7 May 2026. The
+outer-eye representation is therefore community prior art. The new evidence
+here is only the held-out, checksum-controlled order-preservation statistic.
+It remains deferred while the unrelated first batch in
+[`tenth-wide-horizon-2026-07-22.md`](tenth-wide-horizon-2026-07-22.md) runs.
+
 ### External in-game key or later hint
 
 **Status:** high-value search track.
