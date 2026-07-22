@@ -2188,6 +2188,34 @@ This promotes a mirror/compare construction vocabulary, not a dollar-to-Gate
 or Gate-to-Eye decoder. Code, tests, and the exact falsification target are in
 `docs/giant-dollar-audit-2026-07-22.md`.
 
+### Seventh wide funnel: dynamic transforms all close
+
+A new six-lane portfolio was frozen before implementation. It tested
+header-ordered BWT→MTF on the exact six-symbol renderer tape, factoradic
+six-token block transposition, `Z101` missing-interval crossings, sequential
+three-eye change masks, equality-only next-occurrence pointers, and ordinal
+six-value self-indexing. Global label relabelings preserve every body equality
+and copied prefix for the absolute-label lanes; the two equality/position
+lanes use the established prefix-tree-preserving positional shuffle.
+
+Across 2,000 controls, corrected tails in lane order are `1101/2001`,
+`1551/2001`, `1800/2001`, `1465/2001`, `71/2001`, and `1807/2001`. The
+pointer lane was the only preliminary near miss (`10/501`); refinement moved
+it to `71/2001 = 0.035482` without adding any convention. No lane crosses the
+frozen `0.01` line.
+
+The most informative negative is the first. A header supplies a complete
+order of the five directions plus renderer newline, and the marker layer
+independently supports BWT vocabulary. Nevertheless, a correctly terminated
+header-collated BWT and ordinary move-to-front coding gives 2,523 runs over
+3,176 symbols, exactly ordinary under matched relabelings (`0.550225`). The
+headers also match none of the first-six-distinct body permutations and only
+one of 873 eligible sliding ordinal windows. Factoradic metadata still lacks a
+body consumer.
+
+Full definitions, stop rules, results, and reproduction are in
+`docs/seventh-wide-funnel-2026-07-22.md`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly

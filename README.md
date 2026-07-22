@@ -52,6 +52,16 @@ the stated width rule: 18 tied 43-row crops move it from row 13 through 30.
 This retains mirroring as possible game-authored construction vocabulary while
 requiring the missing void/divider mask before any numeric Eye interpretation.
 
+A seventh deliberately broad pass is complete in
+[`docs/seventh-wide-funnel-2026-07-22.md`](docs/seventh-wide-funnel-2026-07-22.md).
+It rejects six new low-capacity forms before depth, including the strongest
+new synthesis: using each factoradic header as the collation order for a
+renderer-tape BWT→move-to-front transform. Its matched tail is `0.550225`.
+Six-token block transposition, the `Z101` hidden-gap derivative, sequential
+eye-change masks, occurrence pointers, and ordinal self-indexing are likewise
+negative; none approaches the frozen `0.01` promotion threshold after the
+2,000-control refinement.
+
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
 contiguous alphabet `0..82`, and the nine messages contain 1,036 values. The

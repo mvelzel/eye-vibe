@@ -83,3 +83,77 @@ the broader queue.
 If no lane crosses `0.01`, record all six negatives and widen to the deferred
 batch or return to practice-cipher method calibration. Do not rescue the best
 ordinary p-value with offsets, arbitrary alphabets, or per-message choices.
+
+## Results
+
+All six frozen forms are negative. The reported tails reselect the stated
+convention family inside every one of 2,000 controls:
+
+| Lane | Observed selected statistic | Corrected matched-control tail | Decision |
+|---|---:|---:|---|
+| A. header-ordered BWT→MTF | 2,523 runs over 3,176 symbols, inverse header order | `1101/2001 = 0.550225` lower | stop |
+| B. six-token transposition | 10 adjacent doubles, 106 repeated bigrams, header order | `1551/2001 = 0.775112` upper | stop |
+| C. `Z101` gap derivative | 132 compressed bytes, 250 runs, 173/1,018 gap bits | `1800/2001 = 0.899550` lower | stop |
+| D. eye-change sequence | 385 compressed bytes, 711 runs, change-mask channel | `1465/2001 = 0.732134` lower | stop |
+| E. occurrence pointers | 413 compressed bytes, entropy 6.03924, 469 events | `71/2001 = 0.035482` lower | stop |
+| F. ordinal/factoradic records | one sliding match among 873 windows; no initial match | `1807/2001 = 0.903048` upper | stop |
+
+### A: the natural compression synthesis fails
+
+This was the most strongly motivated new lane because it joined three
+independent facts: the six-symbol factoradic header, the real renderer newline,
+and the marker BWT. The implementation removes the spatially separated header
+eyes correctly—two from the first top row and one from the first bottom row—so
+the header controls rather than contaminates its body tape. It then appends a
+unique fixed sentinel, sorts under the header or inverse order, and performs
+ordinary sentinel-first move-to-front coding.
+
+The inverse route gives 2,523 BWT runs and 653 MTF zeros. This is exactly
+ordinary under equality/prefix-preserving global relabelings. The result
+rejects the compact BWT→MTF pipeline, not every transform that could consume a
+six-symbol collation order.
+
+### B–D: no positional or derivative side channel
+
+Permuting complete six-token body blocks creates ten adjacent doubles, but
+matched positional controls usually create at least as much combined double
+and bigram structure. Treating `0..82` as the visible interval of `Z101`
+produces 173 transitions whose unique shortest path crosses the hidden
+`83..100` interval. Their binary order is less, not more, compressible than
+most relabeled controls. Likewise, retaining the temporal order and identity
+of the three changing eyes adds no signal beyond the previously ordinary
+Hamming marginal.
+
+### E: refined near miss closes
+
+Forward next-occurrence distances form 469 events with 92 distinct byte
+values. The first 500-control pass gave `10/501 = 0.019960`, the only result
+near the threshold. A predeclared refinement to 2,000 controls moved it away
+from promotion, to `71/2001 = 0.035482`. No distance modulus, direction,
+letter map, or compression model was added. The direct temporal-pointer tape
+is closed; the broader typed allocation/cache idea remains possible only with
+an external rule.
+
+### F: headers do not self-index natural six-value samples
+
+The first six distinct values match neither selected header convention in any
+panel. Across 873 distinct sliding six-windows, the selected inverse route has
+one match total, an entirely ordinary count. Thus the factoradic headers do
+not describe these natural Lehmer records.
+
+## Outcome
+
+No lane earns depth. In particular, the factoradic header remains structural
+metadata with no direct body consumer, and the genuine dollar mirror relation
+does not alter that conclusion. The next breadth work should use the six
+deferred independent lanes rather than parameterizing A–F:
+codebook synchronization, without-replacement packets, equality-graph
+cocycles, phrase grammar, eligible Noita RNGs, and externally selected range
+coding.
+
+Reproduction:
+
+```bash
+PYTHONPATH=src python3 scripts/run_seventh_wide_funnel.py \
+  --controls 2000 --seed 20260722
+```

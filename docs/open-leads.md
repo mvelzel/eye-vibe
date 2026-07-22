@@ -662,3 +662,10 @@ derivative, sequential eye-change masks, occurrence-pointer distances, and
 ordinal/factoradic self-indexing each receive one matched-control necessity
 test before depth. Six older selector-gated lanes remain listed behind them and
 are not discarded.
+
+That first batch is now complete and all six forms close. Corrected tails are
+respectively `0.550225`, `0.775112`, `0.899550`, `0.732134`, `0.035482`, and
+`0.903048`. The occurrence-pointer result was the only 500-control near miss;
+its predeclared 2,000-control refinement moved away from the `0.01` line. Do
+not add pointer moduli, BWT conventions, block phases, or ordinal sample rules.
+The next wide batch is the six explicitly deferred independent lanes.
