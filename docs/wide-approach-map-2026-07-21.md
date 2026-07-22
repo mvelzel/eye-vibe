@@ -406,3 +406,22 @@ Reproduction is in `scripts/run_second_wide_probes.py` and
 `scripts/analyze_snapshot_delta.py` and
 `scripts/search_partition_polybius.py`; the metadata identity is in
 `scripts/analyze_metadata_instruction.py`.
+
+## Fourth bounded audit: exact authored lookup tables
+
+A raw installed-data inventory searches balanced Lua literals, XML child
+lists, and line-oriented text for exact sizes 5, 42, 83, and 101. The only
+83-entry family is four identical copies of `gun_names` in procedural-wand
+code; there are no 42- or 101-entry Lua tables. This count has been known in
+Discord since 2022. The table is nevertheless a legitimate construction-key
+candidate because the archived early-access tree contains the identical list
+and lacks the Eye payload, although that archive was published only in 2022.
+
+The lookup fails two bounded attacks. Fifteen deterministic word features,
+both marker policies, and full family reselection under shuffled name-label
+assignments give corrected English-score tail `316/2001 = 0.157921`.
+Alphabetical/reverse name decks transferred into the exact solved
+practice-#5 recursive shuffle put at best `560/1027` outputs in `0..41`, with
+corrected tail `240/2001 = 0.119940`. Therefore the literal table stays paused
+unless another authored asset says how to consume it. Details are in
+`docs/game-authored-table-audit.md`.

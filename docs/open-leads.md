@@ -51,6 +51,32 @@ decoder.
 The detailed ground-up audit and machine hypothesis are in
 [`procedural-wand-architecture.md`](procedural-wand-architecture.md).
 
+### Exact 83-entry `gun_names` lookup
+
+**Status:** exact game-authored lookup, direct uses rejected; paused pending an
+independent consumption rule.
+
+A structural scan of 1,077 installed Lua files finds four 83-entry tables and
+no 42- or 101-entry table. All four are identical copies of the same
+`gun_names` adjective list in procedural-wand code. Its source order maps
+exactly onto Eye labels `0..82`, and an archived tree labelled early access has
+the identical list while lacking the Eye payload. That supports, but does not
+independently timestamp, pre-Eye availability: the snapshot was only uploaded
+in October 2022.
+
+Fifteen fixed name reductions, both marker policies, and matched shuffled-name
+controls reject the natural direct lookup family (`316/2001 = 0.157921`).
+Alphabetizing the names as an 83-card initial deck and applying the exact
+practice-cipher-#5 dynamic shuffle is also negative: its best candidate puts
+only `560/1027` values in the proposed 42-symbol range, with corrected tail
+`240/2001 = 0.119940`. Discord records show the count was known by August
+2022 and arbitrary letter selection was explored in 2024.
+
+**Next test:** none without a second authored clue that selects a letter,
+ordering, or state transition. Do not choose name letters independently per
+occurrence or enumerate arbitrary name sorts. Full inventory and controls are
+in [`game-authored-table-audit.md`](game-authored-table-audit.md).
+
 ### Prefix-trie sieve closes modulo 101
 
 **Status:** strongest breadth-first positive; exact pre-registered statistic,
@@ -533,3 +559,10 @@ emerges.  The next cycle should prioritize a genuinely game-authored external
 selector or historical asset delta that predicts one of these structures;
 otherwise return to the unresolved practice-cipher calibration rather than
 reopening a rejected numeric transform.
+
+The fourth cycle performs that exact-table inventory. It finds the known
+83-entry `gun_names` table and no direct 42/101 Lua counterpart, then rejects
+both a family of fixed semantic lookups and the learned practice-#5 dynamic
+shuffle transfer under matched controls. The next novel cycle must widen
+again across unrelated selector *formats*—not deepen arbitrary readings of
+this one table—before selecting another implementation target.

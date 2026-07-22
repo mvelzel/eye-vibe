@@ -515,6 +515,18 @@ Among 3,413 strings, seven happen to equal an Eye-message length under each of
 two normalizations, but none has the complete first-family repeat fingerprint.
 The exact-length matches are therefore unsupported coincidences.
 
+A literal installed-data table inventory finds one exact 83-entry family:
+four copies of the procedural-wand `gun_names` adjective list, all identical.
+The same list occurs in the archived tree labelled early access, so it is a
+chronologically plausible construction key, although that snapshot was only
+published in 2022. The count has also been known in Discord since 2022. A
+family-corrected scan of fifteen fixed name-to-letter rules with both marker
+policies is negative (`316/2001 = 0.157921`), as is alphabetizing the names
+into an initial deck for the solved practice-#5 recursive shuffle
+(`240/2001 = 0.119940`). The exact table is therefore paused until another
+authored clue specifies how to consume it; arbitrary per-occurrence letter
+choice is not a falsifiable decoder.
+
 The complete Finnish Project Gutenberg catalog was also checked, book by book,
 under both letters-only and space-preserving normalization. All 3,648 texts
 loaded successfully. Among 2,631,331 and 2,772,407 candidate passages in the
@@ -582,6 +594,8 @@ PYTHONPATH=src python3 scripts/analyze_breadth_probes.py
 PYTHONPATH=src python3 scripts/test_s3_context_relations.py
 PYTHONPATH=src python3 scripts/analyze_s3_direction_transducer.py
 PYTHONPATH=src python3 scripts/analyze_trie_checksum.py --samples 200000
+PYTHONPATH=src python3 scripts/scan_game_authored_tables.py /path/to/data.wak
+PYTHONPATH=src python3 scripts/analyze_gun_names_selector.py /path/to/data.wak /path/to/english.txt --controls 2000
 ```
 
 The vectorized selected-card scan additionally requires NumPy:

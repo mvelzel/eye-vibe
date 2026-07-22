@@ -1966,6 +1966,52 @@ strictly reproducible; promotion still requires a game-authored combine rule
 or a held-out prediction.  Reproduction is in
 `scripts/analyze_metadata_instruction.py`.
 
+### Exact authored-table inventory and `gun_names`
+
+The next wide cycle searched raw installed data for literal developer-authored
+tables of the independently interesting sizes 5, 42, 83, and 101. A balanced
+Lua scanner covers 1,077 files and finds table counts
+`5:1011, 42:0, 83:4, 101:0`. All four 83 hits are equivalent copies of the
+same `gun_names` array in `gun_procedural.lua`,
+`gun_procedural_better.lua`, `gun_utilities.lua`, and `wand_petri.lua`. The
+NUL-joined entries hash to
+`9ef2ead9b050c32b8440930d4ff7480b1c77298f7758c162fca8e5e54daf94ae`.
+At runtime a uniform `Random(1,#gun_names)` merely chooses a wand-name prefix.
+
+XML and text inventories add no comparable table. Among 4,325 XML files, the
+only 42-child element is the component root of `maggot_tiny.xml`; there are no
+83/101 child lists. Nonblank CSV/TSV/TXT line counts contain none of 42, 83,
+or 101. Three hundred and one XML files are not standalone-parseable, so this
+is a scoped inventory, not a proof over arbitrary encodings.
+
+The identical 83-name list occurs in the archive labelled early-access data,
+which lacks the Eye payload strings, and its `gun_utilities.lua` is
+byte-identical to the February 2021 public-data copy. This makes pre-Eye
+availability plausible but not independently timestamped: the early-access
+repository's one commit dates to 2 October 2022. The table would be eligible
+as a later decoder clue in either case.
+
+Discord provenance prevents a false novelty claim. Defektu noted the exact 83
+names and `wand_petri` copy on 22 August 2022; sirreldar tried selecting letters
+from the indexed adjectives in September 2024; sdlwdr revisited the list as a
+possible ordering in May 2026. The new contribution is a bounded calibration.
+
+Fifteen deterministic readings—first/last/middle/length, all three Eye digits
+from either end, digit sum, and label modulo word length—were tested with both
+marker policies. Shuffling whole names over labels and reselecting the entire
+family gives corrected upper tail `316/2001 = 0.157921`; the selected output is
+gibberish. A second method-transfer test alphabetizes the names into an
+83-card initial deck and applies the exact recursive shuffle learned from
+practice cipher #5. Its best result places `560/1027` body values in `0..41`,
+also ordinary under shuffled-name controls (`240/2001 = 0.119940`).
+
+The exact lookup remains an eligible clue only if another authored object
+selects how to consume it. Arbitrary per-occurrence letter choice and
+unrestricted name ordering are closed as unfalsifiable. Reproduction is in
+`scripts/scan_game_authored_tables.py` and
+`scripts/analyze_gun_names_selector.py`; the full audit is
+`docs/game-authored-table-audit.md`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly
