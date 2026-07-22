@@ -572,3 +572,12 @@ That next breadth step is frozen in
 graph routes, 2D local rewrites, mixed-radix packets, stable-sort traces,
 nonlinear digitwise grid operators, and raw-direction turtle paths each get
 one selection-corrected necessity test before any survivor can deepen.
+
+All six bounded forms are now closed. Graph reuse, radix packing, digitwise
+grid arithmetic, and turtle compactness are ordinary. The stable-sort trace
+misses the frozen threshold even after a 10,000-control refinement
+(`147/10001 = 0.014699`). The apparent cellular hit (`1/2001`) uses 1,149
+lookup contexts for 1,298 cells and is driven by copied prefixes: after first
+row pairs are dropped, the radius-at-most-one family has
+`197/2001 = 0.098451`, while radius three covers only `46/1001` held-out
+cells. No lane earns depth.

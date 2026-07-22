@@ -527,6 +527,15 @@ into an initial deck for the solved practice-#5 recursive shuffle
 authored clue specifies how to consume it; arbitrary per-occurrence letter
 choice is not a falsifiable decoder.
 
+A subsequent six-lane wide fan-out rejects literal directed-graph routes,
+mixed-radix byte packing, stable-sort worksheet traces, nonlinear base-five
+grid operations, and native-direction turtle drawings. A visually striking
+top-to-bottom row-rule score is also closed: its radius-three lookup uses 1,149
+contexts for 1,298 cells and mostly memorizes copied prefixes. Once the first
+prefix-bearing row pair is removed, the small radius-at-most-one rule has
+corrected tail `197/2001 = 0.098451`; the large lookup covers only 46 of 1,001
+held-out cells. None of the six earns a deeper search.
+
 The complete Finnish Project Gutenberg catalog was also checked, book by book,
 under both letters-only and space-preserving normalization. All 3,648 texts
 loaded successfully. Among 2,631,331 and 2,772,407 candidate passages in the
@@ -596,6 +605,7 @@ PYTHONPATH=src python3 scripts/analyze_s3_direction_transducer.py
 PYTHONPATH=src python3 scripts/analyze_trie_checksum.py --samples 200000
 PYTHONPATH=src python3 scripts/scan_game_authored_tables.py /path/to/data.wak
 PYTHONPATH=src python3 scripts/analyze_gun_names_selector.py /path/to/data.wak /path/to/english.txt --controls 2000
+PYTHONPATH=src python3 scripts/run_fifth_wide_fanout.py --controls 2000 --sort-controls 10000
 ```
 
 The vectorized selected-card scan additionally requires NumPy:

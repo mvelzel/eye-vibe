@@ -145,3 +145,54 @@ must cross its own `0.01` threshold and retain a meaningful effect after its
 documented nuisance structure is preserved. If none survives, all six bounded
 forms close and the next cycle widens again or returns to unresolved practice
 cipher #4; it does not rescue a favourite lane by adding parameters.
+
+## Results
+
+The six primary tests use 2,000 fixed-seed controls. Lane D additionally uses
+a separately seeded 10,000-control refinement because its first estimate lay
+close to the frozen threshold.
+
+| Lane | Observed selected statistic | Corrected tail | Decision |
+|---|---:|---:|---|
+| A graph route | `175` reused of `1,018` directed transitions | `87/2001 = 0.043478` upper | stop |
+| B local rewrite | `1292/1298 = 0.995378`, radius 3, shift -1 | `1/2001 = 0.000500` upper | nuisance audit required |
+| C radix packet | `714/938 = 0.761194` printable, reversed base 128 | `1668/2001 = 0.833583` upper | stop |
+| D stable sort | `6743/12408 = 0.543440`, order `(1,2,0)` | `147/10001 = 0.014699` upper | stop |
+| E digitwise grid | `3/216`, left minus right | `1895/2001 = 0.947026` upper | stop |
+| F turtle path | bounding-area sum `10152`, canonical order | `1053/2001 = 0.526237` lower | stop |
+
+### Why lane B does not promote
+
+The apparent cellular result is a capacity/copy artifact. The selected
+radius-three model creates 1,149 arbitrary context rules for only 1,298 cells.
+Leave-one-row-pair-out prediction covers just `232/1298 = 17.87%` of cells;
+most coverage comes from the first row pairs containing the already-known
+copied family prefixes.
+
+A stricter nuisance audit drops the first visual row pair from every message,
+so all complete retained pairs begin after every deepest shared body prefix.
+Two consequences are decisive:
+
+- the capacity-controlled radius-at-most-one family falls to
+  `458/1133 = 0.404237`, with corrected upper tail
+  `197/2001 = 0.098451`;
+- the radius-three lookup covers only 46 of 1,001 cells under
+  leave-one-pair-out validation (`36/46` correct), with almost all remaining
+  coverage concentrated in two row pairs containing known later copied
+  windows.
+
+Thus the low primary tail rediscovers position synchrony and memorizes sparse
+seven-cell contexts. It does not provide a compact row-update law or a
+held-out row prediction, so it fails its predeclared promotion condition.
+
+### Outcome
+
+No lane survives. The bounded graph-route, direct radix, stable-sort,
+digitwise-grid, and turtle forms close on their primary controls. The local
+rewrite form closes after the required held-out/copy audit. This is useful
+negative breadth: none should be reopened by adding arbitrary graph labels,
+bit offsets, per-row sort directions, larger operator tables, remapped turtle
+directions, or still wider cellular neighborhoods.
+
+Reproduction is in `scripts/run_fifth_wide_fanout.py` and
+`src/eye_mystery/fifth_wide.py`.

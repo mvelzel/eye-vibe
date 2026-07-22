@@ -2012,6 +2012,41 @@ unrestricted name ordering are closed as unfalsifiable. Reproduction is in
 `scripts/analyze_gun_names_selector.py`; the full audit is
 `docs/game-authored-table-audit.md`.
 
+### Fifth wide fan-out: six unrelated bounded mechanisms
+
+The next breadth cycle froze six tests before results: directed graph edge
+reuse, top-to-bottom visual-row local rules, direct base-83 radix packets,
+stable-sort inversion traces, nonlinear digitwise 3×3 operations, and native
+direction turtle drawings. Each control reruns the complete within-lane model
+selection and preserves the specific nuisance structures documented in
+`docs/fifth-wide-fanout-2026-07-21.md`.
+
+Five primary results are negative. Directed-edge reuse is 175 of 1,018
+transitions (`87/2001 = 0.043478` upper tail). The best direct radix packet is
+reversed base 128 with `714/938` printable values
+(`1668/2001 = 0.833583`). The best of eight digitwise `F5`/min/max grid
+operators matches only 3 of 216 pairwise-distinct aligned positions
+(`1895/2001 = 0.947026`). Native turtle paths have selected bounding-area sum
+10,152 (`1053/2001 = 0.526237` lower). The stable-sort statistic reaches
+`6743/12408 = 0.543440` under component order `(1,2,0)`, but a separate
+10,000-control refinement gives `147/10001 = 0.014699`, above the frozen
+promotion threshold.
+
+The visual local-rule primary statistic initially crosses its threshold:
+radius three and shift minus one fit `1292/1298` cells, with
+`1/2001 = 0.000500` upper tail. It does not survive its required predictive
+audit. The model uses 1,149 context rules, and leave-one-row-pair-out validation
+covers only 232 of 1,298 cells. Dropping every first row pair removes all
+complete pairs carrying the family-prefix copies. The capacity-controlled
+radius-at-most-one result then becomes ordinary (`458/1133`,
+`197/2001 = 0.098451`), while the radius-three model covers only 46 of 1,001
+held-out cells (`36/46` correct). Its remaining coverage is concentrated in
+known later copied windows. The hit is another measurement of position
+synchrony plus sparse lookup-table memorization, not a cellular decoder.
+
+No fifth-fan-out lane promotes. Reproduction is in
+`scripts/run_fifth_wide_fanout.py` and `src/eye_mystery/fifth_wide.py`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly
