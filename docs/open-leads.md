@@ -566,3 +566,9 @@ both a family of fixed semantic lookups and the learned practice-#5 dynamic
 shuffle transfer under matched controls. The next novel cycle must widen
 again across unrelated selector *formats*—not deepen arbitrary readings of
 this one table—before selecting another implementation target.
+
+That next breadth step is frozen in
+[`fifth-wide-fanout-2026-07-21.md`](fifth-wide-fanout-2026-07-21.md): directed
+graph routes, 2D local rewrites, mixed-radix packets, stable-sort traces,
+nonlinear digitwise grid operators, and raw-direction turtle paths each get
+one selection-corrected necessity test before any survivor can deepen.
