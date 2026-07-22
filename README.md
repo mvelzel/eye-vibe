@@ -78,6 +78,13 @@ Matched controls recover 99.9233% of 1,304 characters, while four natural
 units worse and seed-unstable. The cyclic outer layer remains solved; its
 plaintext/inner codec does not.
 
+The next Eye pass deliberately changes the question from “how can these
+numbers be read?” to “what small mechanism caused the equality and
+reconvergence structure?” Its fourteen-lane breadth map is frozen in
+[`docs/ninth-wide-causal-map-2026-07-22.md`](docs/ninth-wide-causal-map-2026-07-22.md).
+It includes the recent XGAK category/common-base suggestions, but begins with
+six key-free causal and quotient tests before deepening any one model.
+
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
 contiguous alphabet `0..82`, and the nine messages contain 1,036 values. The
