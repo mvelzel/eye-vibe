@@ -60,11 +60,20 @@ the known rank stream. A later case-sensitive bijection test adds a useful
 boundary: four natural 57-character prose alphabets fail by roughly 10,700
 log-score units while matched controls recover 99.9233% of the text.
 
+A later breadth-first codec pass tested complete printable ASCII, substituted
+Base64, all contiguous quotient widths `2..28`, and direct English/Finnish
+readings before deepening anything. The readable-codec lanes fail. The
+numeric order does retain a narrower clue: consecutive pairs give a
+29-state quotient plus parity, while triples give a 19-state quotient plus a
+nearly memoryless ternary selector. Both quotients are ordered, but neither
+is direct prose under the calibrated static maps.
+
 **Lesson:** repeated structure can prove one layer while leaving the next
 layer unknown.  Convert the recovered group into a functional recurrence: it
 can turn plaintext repetition into an exact oracle before any language score.
 Calibrated failure is preferable to treating unstable pseudo-language as a
-solve.
+solve. When an exact range factors conspicuously, screen neighboring widths as
+well: a quotient can be a mechanism clue without being the plaintext.
 
 ## Cipher 5: enumerate implementation details with a key-free oracle
 

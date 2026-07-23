@@ -1,9 +1,10 @@
 # sdlwdr #4 — recovered cyclic layer, unresolved plaintext
 
-**Status:** Unsolved after a bounded final attack; the outer mechanism is
-strongly identified, but no plaintext or exact replay has been recovered.
+**Status:** Unsolved; the outer mechanism is strongly identified, and a later
+wide codec pass found two numeric quotient leads, but no plaintext or exact
+replay has been recovered.
 
-**Thread:** [Practice cipher #4](https://discord.com/channels/453998283174576133/1227024108286644284/threads/1398401433153572934)
+**Thread:** [Practice cipher #4](https://discord.com/channels/453998283174576133/1398401433153572934)
 
 ## What is actually known
 
@@ -113,6 +114,29 @@ positive or structural control:
    remain seed-unstable gibberish near `-21,700..-21,950`.  This rejects the
    previously untested “straightforward 57-character case alphabet” reading;
    it does not reject a second codec or non-prose plaintext.
+10. **Complete printable ASCII.**  Treating the three first ciphertext values
+    only as primers, an arbitrary injective map from the 53 differences into
+    all 95 printable ASCII characters remains about 10,762 score units below
+    a planted control.  The control recovers `99.9231%`; the real output is
+    seed-unstable punctuation-heavy gibberish.
+11. **Substituted Base64.**  The three difference lengths are all legal
+    unpadded Base64 lengths.  An arbitrary injective 53-to-64 digit optimizer
+    recovers clean planted prose (`96.8205%` byte accuracy, `975/975`
+    printable), but its best real decode has only `691/975` printable bytes
+    and trails by more than 17,300 score units.  Natural-phase Base64 is
+    rejected.
+12. **Contiguous pair/triple quotients.**  A width screen over every grouping
+    `2..28` finds real structure at widths 2 and 3.  Width 2 gives a 29-state
+    quotient plus parity; width 3 gives a 19-state quotient plus an almost
+    memoryless ternary remainder.  Random label assignments make the observed
+    pair grouping's low coordinate dependence only `98/10001` of the time.
+    These are structural survivors, not decoded text.
+13. **Natural quotient alphabets.**  The 29-state quotient is not an injective
+    substitution over either English `A-Z + space + period + comma` or Finnish
+    `A-Z + Ä + Ö + space`: both planted controls recover exactly, while real
+    results remain roughly 9,000–10,000 score units worse.  Exact 24-symbol
+    equality-pattern scans also find no match in large English or Finnish
+    corpora.
 
 ## Verdict
 
@@ -122,7 +146,9 @@ recover the repeated action stream, and the missing inner map is neither the
 tested Wadsworth wheel, ordinary static homophones, the tested adaptive
 57-card alphabet, a conventional case-sensitive 57-character bijection, nor
 an Eye-derived in-game key.  No plaintext is stated because none has been
-verified.
+verified.  The pair/triple quotient structure is retained as the strongest
+new inner-mechanism clue; direct printable, English/Finnish quotient, and
+natural-phase Base64 readings are excluded.
 
 ## Transfer to the Eyes
 
@@ -139,3 +165,6 @@ verified.
   function-consistency constraints even when the key function is arbitrary.
 - A supposed in-game key should survive a direct equality-pattern test before
   receiving interpretive attention.  The Eye-reuse branch fails that test.
+- Numeric label order can carry information after a group reduction.  Screen
+  a whole family of quotient/remainder widths before promoting a conspicuous
+  factor, then distinguish a structured quotient from a readable plaintext.

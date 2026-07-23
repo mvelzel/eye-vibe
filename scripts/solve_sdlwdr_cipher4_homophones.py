@@ -25,6 +25,8 @@ import random
 import string
 from typing import Iterable, Sequence
 
+from eye_mystery.practice_cipher4 import project_action_band
+
 
 MODULUS = 83
 PTA = string.ascii_uppercase + " "
@@ -47,12 +49,48 @@ def normalize(text: str) -> tuple[int, ...]:
     return tuple(result)
 
 
-def action_stream(message: Sequence[int]) -> tuple[int, ...]:
+def action_stream(
+    message: Sequence[int],
+    *,
+    drop_first_state: bool = False,
+    projection: str = "raw",
+) -> tuple[int, ...]:
     if not message:
         return ()
-    return (message[0],) + tuple(
+    differences = tuple(
         (right - left) % MODULUS for left, right in zip(message, message[1:])
     )
+    actions = differences if drop_first_state else (message[0],) + differences
+    return project_action_band(actions, projection)
+
+
+def planted_control(
+    plaintext: Sequence[int],
+    lengths: Sequence[int],
+    slot_counts: Sequence[int],
+    rng: random.Random,
+) -> tuple[tuple[int, ...], ...]:
+    """Encode text with the declared number of homophones per character."""
+
+    tokens_by_value = []
+    next_token = 0
+    for count in slot_counts:
+        tokens = list(range(next_token, next_token + count))
+        rng.shuffle(tokens)
+        tokens_by_value.append(tokens)
+        next_token += count
+    positions = [0] * len(tokens_by_value)
+    encoded = []
+    cursor = 0
+    for length in lengths:
+        stream = []
+        for value in plaintext[cursor : cursor + length]:
+            tokens = tokens_by_value[value]
+            stream.append(tokens[positions[value] % len(tokens)])
+            positions[value] += 1
+        encoded.append(tuple(stream))
+        cursor += length
+    return tuple(encoded)
 
 
 @dataclass(frozen=True)
@@ -76,7 +114,10 @@ class Ngrams:
             order,
             {gram: log(count / total) for gram, count in counts.items()},
             log(0.01 / total),
-            tuple((letter_counts[value] + 1) / (letter_total + len(PTA)) for value in range(len(PTA))),
+            tuple(
+                (letter_counts[value] + 1) / (letter_total + len(PTA))
+                for value in range(len(PTA))
+            ),
         )
 
 
@@ -249,13 +290,64 @@ def main() -> None:
         default="paired",
         help="two case-folded representatives per letter, or frequency-weighted slots",
     )
+    parser.add_argument(
+        "--drop-first-state",
+        action="store_true",
+        help="treat each first ciphertext value as a primer/state",
+    )
+    parser.add_argument(
+        "--projection",
+        choices=(
+            "raw",
+            "rank-div2",
+            "rank-mod2",
+            "rank-div3",
+            "rank-mod3",
+            "rank-div19",
+            "rank-mod19",
+        ),
+        default="raw",
+    )
+    parser.add_argument(
+        "--control",
+        action="store_true",
+        help="replace the real stream with a matched planted homophone control",
+    )
     args = parser.parse_args()
 
     messages = json.loads(args.data.read_text())
-    streams = tuple(action_stream(message) for message in messages)
-    model = Ngrams.train(args.corpus.read_text(errors="ignore"))
+    streams = tuple(
+        action_stream(
+            message,
+            drop_first_state=args.drop_first_state,
+            projection=args.projection,
+        )
+        for message in messages
+    )
+    corpus = args.corpus.read_text(errors="ignore")
+    model = Ngrams.train(corpus)
     rng = random.Random(args.seed)
     annealer = Annealer(streams, model, rng, args.allocation)
+    expected = None
+    if args.control:
+        normalized = normalize(corpus)
+        required = sum(map(len, streams))
+        start = 20_000
+        expected_flat = normalized[start : start + required]
+        if len(expected_flat) != required:
+            raise ValueError("corpus is too short for a matched control")
+        streams = planted_control(
+            expected_flat,
+            tuple(map(len, streams)),
+            annealer.slot_counts,
+            random.Random(args.seed ^ 0xC0117A01),
+        )
+        expected = []
+        cursor = 0
+        for length in map(len, streams):
+            expected.append(tuple(expected_flat[cursor : cursor + length]))
+            cursor += length
+        annealer = Annealer(streams, model, rng, args.allocation)
     print(
         "homophone slots",
         {PTA[value]: count for value, count in enumerate(annealer.slot_counts)},
@@ -282,8 +374,20 @@ def main() -> None:
     print("final key")
     print({symbol: PTA[overall_key[symbol]] for symbol in annealer.symbols})
     print("final plaintext")
-    for decoded in annealer.decode(overall_key):
+    decoded_streams = annealer.decode(overall_key)
+    for decoded in decoded_streams:
         print(render(decoded))
+    if expected is not None:
+        correct = sum(
+            observed == truth
+            for observed_stream, truth_stream in zip(
+                decoded_streams, expected, strict=True
+            )
+            for observed, truth in zip(
+                observed_stream, truth_stream, strict=True
+            )
+        )
+        print(f"control accuracy={correct / sum(map(len, expected)):.6%}")
 
 
 if __name__ == "__main__":

@@ -18,6 +18,29 @@ def cyclic_differences(message: Sequence[int]) -> tuple[int, ...]:
     )
 
 
+def project_action_band(
+    values: Sequence[int], projection: str
+) -> tuple[int, ...]:
+    """Project actions in the exact 22..78 band onto a 3-by-19 grid.
+
+    ``rank-div2``/``rank-mod2`` treat each rank as ``2*q + r``;
+    ``rank-div3``/``rank-mod3`` use ``3*q + r``; and the 3-by-19 alternatives
+    use divisor 19.  ``raw`` is the identity.
+    """
+
+    if projection == "raw":
+        return tuple(values)
+    ranks = tuple(value - 22 for value in values)
+    if any(rank not in range(57) for rank in ranks):
+        raise ValueError("projected actions must lie in the 22..78 band")
+    for divisor in (2, 3, 19):
+        if projection == f"rank-div{divisor}":
+            return tuple(rank // divisor for rank in ranks)
+        if projection == f"rank-mod{divisor}":
+            return tuple(rank % divisor for rank in ranks)
+    raise ValueError(f"unknown projection: {projection}")
+
+
 def consistent_recurrence_prefix(
     plaintext: Sequence[int],
     differences: Sequence[int],

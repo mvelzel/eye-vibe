@@ -78,6 +78,15 @@ Matched controls recover 99.9233% of 1,304 characters, while four natural
 units worse and seed-unstable. The cyclic outer layer remains solved; its
 plaintext/inner codec does not.
 
+A breadth-first follow-up is recorded in
+[`docs/practice-cipher4-wide-codec-audit-2026-07-24.md`](docs/practice-cipher4-wide-codec-audit-2026-07-24.md).
+It rejects complete printable ASCII, natural-phase substituted Base64, and
+static English/Finnish readings of a 29-state quotient. It also preserves a
+new structural lead without calling it plaintext: grouping the exact 57-rank
+band into pairs or triples separates a strongly ordered quotient from a small
+selector stream, with widths 2 and 3 uniquely strongest in the frozen width
+screen.
+
 The next Eye pass deliberately changes the question from “how can these
 numbers be read?” to “what small mechanism caused the equality and
 reconvergence structure?” Its fourteen-lane breadth map is frozen in

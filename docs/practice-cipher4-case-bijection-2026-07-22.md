@@ -74,3 +74,14 @@ case-sensitive prose alphabets under this calibrated model.  This narrows the
 remaining boundary to either a nonlinear/second layer, an unconventional
 source alphabet, or non-prose plaintext.  Merely increasing the same
 annealing budget is not justified.
+
+## Superset follow-up
+
+On 24 July the test was widened to all 95 printable ASCII characters and each
+first ciphertext value was omitted as a possible primer rather than a
+plaintext action. Three 100,000-step restarts recover a matched control to
+`99.9231%` at score `-11284.89`; the best real run is unstable gibberish at
+`-22047.26`. This stronger superset closes ordinary static printable prose,
+not merely the four pools above. The subsequent encoded-format and quotient
+screen is recorded in
+[`practice-cipher4-wide-codec-audit-2026-07-24.md`](practice-cipher4-wide-codec-audit-2026-07-24.md).

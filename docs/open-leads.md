@@ -469,14 +469,27 @@ affine updates give no natural 27- or 42-position language schedule.  The only
 57-state affine survivors erase the previous state and restate the direct
 difference ranks. A separate case-sensitive bijection test now rejects four
 natural 57-character prose alphabets: controls recover 99.9233% at scores near
-`-11,000`, while all real runs remain unstable near `-21,700..-21,950`.
+`-11,000`, while all real runs remain unstable near `-21,700..-21,950`. The
+wider 24 July codec audit additionally rejects complete printable ASCII,
+natural-phase substituted Base64, and static English/Finnish readings of the
+new 29-state quotient.
 
-**Next test:** examine whether the direct action stream is a deterministic
-second-layer encoding or non-prose record format, using format signatures and
-exact equality constraints before language scoring. Seek a genuinely nonlinear
-deck invariant or a new author hint; do not extend blind SAT or rerun generic
-language optimization. A candidate source can now be rejected cheaply by the
-exact recurrence oracle before any full key recovery.
+**Live structural lead:** subtract 22 and group the exact `0..56` ranks into
+consecutive pairs or triples. Width 2 yields a highly structured 29-state
+quotient plus parity; width 3 yields a structured 19-state quotient plus a
+ternary stream whose serial dependence is null-like. The pair grouping's
+quotient/parity frequency dependence has corrected random-label lower tail
+`98/10001 = 0.009799`. Neither quotient is plaintext under the tested static
+language maps.
+
+**Next test:** seek a bounded deck/control law that naturally lifts 29 or 19
+payload states to consecutive pairs/triples, or a small route transposition
+that predicts all exact shared blocks. Do not extend blind SAT, generic
+language annealing, or arbitrary format fitting. A candidate source can be
+rejected cheaply by the exact recurrence and equality-signature oracles.
+
+Full freeze and results:
+[`practice-cipher4-wide-codec-audit-2026-07-24.md`](practice-cipher4-wide-codec-audit-2026-07-24.md).
 
 ### Exact 42-class complement of the Eye alphabet
 

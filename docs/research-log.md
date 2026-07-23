@@ -2383,6 +2383,38 @@ range-model fitting remain disallowed.
 Definitions and reproduction are in
 `docs/eighth-wide-deferred-2026-07-22.md`.
 
+### Practice cipher 4 breadth pass: encoded formats close, quotients survive
+
+The exact `22..78` action band was treated as a representation problem before
+another mechanism was fitted. An injective map into all 95 printable ASCII
+characters fails against a `99.9231%` planted control. The legal unpadded
+Base64 lengths and close frequency profile motivated a stronger arbitrary
+53-to-64 digit search; planted prose recovers cleanly, while the real best has
+only `691/975` printable bytes and is more than 17,300 score units worse.
+
+A frozen screen of every contiguous quotient width `2..28` finds two genuine
+structural survivors. Width 2 produces a 29-state quotient with serial MI
+`1.480049` plus a parity bit; width 3 produces a 19-state quotient with serial
+MI `0.788949` plus a ternary stream whose serial MI `0.001320` is ordinary
+under within-portion shuffles. The adjacent-pair grouping's quotient/parity
+coordinate MI is unusually low under random assignments of the fixed label
+frequencies (`98/10001 = 0.009799`). Width 3 ranks first and width 2 second by
+remainder excess across the full width screen.
+
+Neither quotient is plaintext yet. Exact 24-symbol equality signatures have
+no match in the large English corpus; the 29-state version additionally has
+no match in Finnish *Seven Brothers* or *Kalevala*. Injective English and
+Finnish 29-character alphabets both recover planted controls exactly but leave
+the real streams roughly 9,000–10,000 score units worse and unstable.
+Successive mod-29 and mod-19 finite differences become more uniform, so the
+un-differenced quotient is the uniquely useful layer.
+
+The retained question is now mechanical: what bounded deck construction
+lifts 29 or 19 payload states into consecutive pairs or triples? Static
+language substitution and natural-phase Base64 are closed. Definitions,
+full results, and boundaries are in
+`docs/practice-cipher4-wide-codec-audit-2026-07-24.md`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly
