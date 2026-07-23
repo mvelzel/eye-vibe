@@ -149,6 +149,20 @@ family. Mod-101 sibling-branch differences initially pass their corrected
 screen (`4/1001`) by one support slot, but fail the pre-registered context-map
 validation (`874/2001`). No first-batch lane earns depth.
 
+The next horizon again starts wide before selecting a favorite. Its sixteen
+cryptographic, linguistic, attribution, renderer, chronology, and in-game
+lanes are frozen in
+[`docs/eleventh-wide-horizon-2026-07-24.md`](docs/eleventh-wide-horizon-2026-07-24.md).
+The first mixed batch is complete in
+[`docs/eleventh-wide-first-batch-results-2026-07-24.md`](docs/eleventh-wide-first-batch-results-2026-07-24.md).
+A recent universal index-25 entropy/music claim is directly false and its
+relaxed selected scan is null-typical. A crafted Finnish syllable example
+shares the 24-token opening but not the later Eye equality runs. The useful
+advance is an exact ciphertext-only ordinary-GAK oracle: `BCBDBCDA` has a
+two-operation parent while `BCBDBCDAC` exhausts all 153 pairs. Factorial
+growth blocks an 83-card inference, so this is calibration infrastructure, not
+a decryption.
+
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
 contiguous alphabet `0..82`, and the nine messages contain 1,036 values. The

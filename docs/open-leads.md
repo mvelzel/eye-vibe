@@ -1,4 +1,4 @@
-# Open lead ledger — 22 July 2026
+# Open lead ledger — 24 July 2026
 
 This is a durable ledger, not a claim that every lead should be pursued at
 once.  A paused lead remains here until evidence rejects it or its dependency
@@ -380,12 +380,27 @@ ban on operation entry `(0,0)` is not present in the committed script, but it
 is unnecessary for its published ciphertext.  Our bit-vector solver also
 recovers and exactly replays this public toy pair.
 
-**Pause reason and next test:** the known-plaintext primitive is now verified,
-but both implementations remain unsuitable for unknown plaintext at size 26
-or 83.  Resume after inferring the `2-to-26` plaintext serialization, obtaining
-a small exact crib, or finding a backend/encoding that passes a 26-card replay
-calibration.  Do not interpret one satisfiable model as a unique recovered key
-and do not scale to the Waite East-2 crib before that threshold.
+A second, ciphertext-only primitive is now reproduced independently. For the
+ordinary identity-reset GAK with two unknown plaintext operations and
+`operation[0] != 0`, `BCBDBCDA` is SAT with plaintext `aababaaa`, while
+`BCBDBCDAC` is UNSAT after all 153 four-card operation pairs. The minimum
+operation count jumps from two to three at the appended ninth symbol. This
+proves that fixed-alphabet ordinary GAK has ciphertext orphans; it does not
+recover a meaningful plaintext.
+
+The direct oracle is factorial: two-operation search has 4,560 candidates at
+five cards, 179,700 at six, 9,329,040 at seven, and 622,321,560 at eight.
+An 83-card direct enumeration is therefore forbidden. Also, no-double has no
+finite capacity consequence: one 83-card rotation emits arbitrarily many
+symbols without a repeat.
+
+**Pause reason and next test:** both known- and unknown-plaintext primitives are
+verified, but neither implementation reaches an Eye-relevant size. Resume
+after finding a symbolic encoding or constraint-propagation rule that
+reproduces the four-card orphan and crosses a predeclared planted-deck scaling
+threshold. Do not shrink an Eye prefix to its observed labels; unseen cards
+remain part of the hidden deck. Do not interpret one satisfiable model as a
+unique recovered key or plaintext.
 
 In parallel, formalize deck chaining first as a label-invariant quotient or
 constraint-propagation rule and require it to recover a solvable GCTAK/practice
@@ -735,6 +750,22 @@ respectively `0.550225`, `0.775112`, `0.899550`, `0.732134`, `0.035482`, and
 its predeclared 2,000-control refinement moved away from the `0.01` line. Do
 not add pointer moduli, BWT conventions, block phases, or ordinal sample rules.
 The next wide batch is the six explicitly deferred independent lanes.
+
+An eleventh horizon is frozen in
+[`eleventh-wide-horizon-2026-07-24.md`](eleventh-wide-horizon-2026-07-24.md).
+It adds ciphertext-only GAK orphans and minimum-operation curves, Finnish
+syllable/phonotactic structure, exact carrier attribution, reset
+identifiability, renderer counterfactuals, and later-clue interface signatures
+beside retained deck and practice-cipher work.
+
+Its first mixed batch is complete in
+[`eleventh-wide-first-batch-results-2026-07-24.md`](eleventh-wide-first-batch-results-2026-07-24.md).
+The index-25 entropy/music claim, crafted Kanteletar syllable example, and
+no-double capacity interpretation close. The small GAK orphan is real but
+fails the scale gate. Carrier attribution finds no existing body result that
+predicts a genuinely new context. The next batch should remain mixed across
+reconvergence, reset-state, renderer-width, and independently specified
+in-game interfaces before any one branch deepens.
 
 That batch is now frozen before execution in
 [`eighth-wide-deferred-2026-07-22.md`](eighth-wide-deferred-2026-07-22.md).

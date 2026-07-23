@@ -2453,6 +2453,51 @@ the effect can be attributed completely to already repeated full symbols.
 Definitions and reproduction are in
 `docs/practice-cipher4-selector-route-results-2026-07-24.md`.
 
+## 24 July 2026 — eleventh wide horizon and first mixed batch
+
+The next Eye pass was frozen wide before choosing an implementation favorite.
+Sixteen lanes cover direct numeric claims, unknown-plaintext GAK feasibility,
+deck-action constraints, Finnish source structure, carrier attribution,
+renderer confounds, chronology, and later in-game interfaces. The portfolio
+and promotion gates are in
+`docs/eleventh-wide-horizon-2026-07-24.md`.
+
+The recent entropy/music PDF's exact assertion is false on the accepted
+corpus. Across the first, middle, third, and sum-mod-five trigram projections,
+none of 36 message/projection blocks at glyphs 25–49 is balanced or perfectly
+lag-five periodic. Selecting the best projection and cut at fixed lag five
+gives `62/180`, with corrected upper tail `402/1001`. Selecting lags 2–10 as
+well gives `77/207`, tail `55/1001`. The PDF's plotted perfect payload is not
+the real message data.
+
+The community's ciphertext-orphan example reproduces under the precise
+identity-reset ordinary-GAK convention. `BCBDBCDA` has the exact plaintext
+schedule `aababaaa` with operations `(1,2,3,0)` and `(3,1,0,2)`;
+`BCBDBCDAC` is UNSAT after all 153 admissible two-operation sets. The ninth
+symbol raises the minimum operation alphabet from two to three. This is a real
+ciphertext-only falsifier, but pair enumeration grows from 153 at four cards to
+622,321,560 at eight. It is a calibration oracle, not an Eye-scale solver.
+
+The no-double capacity interpretation closes constructively. Repeating the
+single 83-card rotation `(1,2,...,82,0)` produces an arbitrarily long
+double-free ciphertext; a 1,028-symbol fixture has zero doubles. No-double
+constrains top movement but does not bound length or plaintext alphabet.
+
+A deterministic Finnish orthographic syllabifier was calibrated against
+Kielitoimisto examples. The crafted Discord Kanteletar pair has aligned
+syllable runs `24 same, 2 different, 6 same, 2 different, 14 same`, whereas
+East 1/West 1 begin `24,4,4,4,13`. The example also edits the source and omits
+a common line. It is not source evidence. Syllable search remains dependent on
+finding an invariant that arbitrary GAK would expose.
+
+Finally, the retained curiosities were assigned to their exact carriers.
+Headers carry the factoradic classifier and `Fi!`; selected body sums and
+markers carry the mod-101 checks; selected equality contexts carry the
+isomorph and first/third-eye residues; the later Gate asset only
+retrospectively matches an Eye-derived statistic. None predicts an unseen body
+context. Full results and reproduction are in
+`docs/eleventh-wide-first-batch-results-2026-07-24.md`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly
