@@ -68,12 +68,23 @@ numeric order does retain a narrower clue: consecutive pairs give a
 nearly memoryless ternary selector. Both quotients are ordered, but neither
 is direct prose under the calibrated static maps.
 
+The bounded follow-up is instructive because its strongest statistic initially
+looks like a breakthrough. A leave-one-portion-out context predicts the
+binary/ternary selector with corrected `1/1001` tails under four null models.
+Carrier attribution then shows `0/23` and `0/42` correct predictions whenever
+the coarse context represents a genuinely new full-rank bigram. Almost all
+success is exact action-bigram/trigram reuse from the known homologous
+plaintext. Separately, 206 walk/control laws and 396 fixed routes pass their
+planted controls but are negative on the real data.
+
 **Lesson:** repeated structure can prove one layer while leaving the next
 layer unknown.  Convert the recovered group into a functional recurrence: it
 can turn plaintext repetition into an exact oracle before any language score.
 Calibrated failure is preferable to treating unstable pseudo-language as a
 solve. When an exact range factors conspicuously, screen neighboring widths as
-well: a quotient can be a mechanism clue without being the plaintext.
+well: a quotient can be a mechanism clue without being the plaintext. Then
+identify the exact carrier of every significant projection; a low-dimensional
+view that merely indexes already repeated full symbols is not a decoder.
 
 ## Cipher 5: enumerate implementation details with a key-free oracle
 

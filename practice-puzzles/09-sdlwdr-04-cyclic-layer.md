@@ -137,6 +137,22 @@ positive or structural control:
     results remain roughly 9,000–10,000 score units worse.  Exact 24-symbol
     equality-pattern scans also find no match in large English or Finnish
     corpora.
+14. **Selector-controlled walks.**  All 206 direct/unsigned/signed/carry/
+    toggle/lane laws across widths 2 and 3 were screened on the plausible
+    `19..42` rings.  Planted quotient walks decode cleanly; every real
+    state/control law loses to the untouched quotient.
+15. **Selector prediction with carrier attribution.**  Neighboring quotient
+    context predicts the binary and ternary selectors with corrected
+    `1/1001` tails under four strict nulls.  This is not a control mechanism:
+    predictions on seen coarse contexts are correct `0/23` and `0/42` times
+    when the complete rank bigram is genuinely new.  Nearly all success is
+    memorized exact rank-bigram/trigram reuse from the disclosed shared
+    plaintext.
+16. **Fixed route transpositions.**  A label-invariant equality-pattern model
+    exhausts 396 odd/even, rail, ragged rectangular, snake, and fixed-block
+    routes.  It exactly recovers a planted route.  Real best improvements have
+    selection-corrected tails `0.651741` and `0.179104`, so neither quotient
+    supports a promoted route.
 
 ## Verdict
 
@@ -146,9 +162,10 @@ recover the repeated action stream, and the missing inner map is neither the
 tested Wadsworth wheel, ordinary static homophones, the tested adaptive
 57-card alphabet, a conventional case-sensitive 57-character bijection, nor
 an Eye-derived in-game key.  No plaintext is stated because none has been
-verified.  The pair/triple quotient structure is retained as the strongest
-new inner-mechanism clue; direct printable, English/Finnish quotient, and
-natural-phase Base64 readings are excluded.
+verified.  The pair/triple quotient structure remains a descriptive numeric
+fact, but the bounded selector and route follow-up finds no executable lift
+law.  Its strongest apparent predictor is fully explained by exact action-
+bigram reuse, so the speculative `57=29+28` two-cycle branch is not opened.
 
 ## Transfer to the Eyes
 
@@ -168,3 +185,6 @@ natural-phase Base64 readings are excluded.
 - Numeric label order can carry information after a group reduction.  Screen
   a whole family of quotient/remainder widths before promoting a conspicuous
   factor, then distinguish a structured quotient from a readable plaintext.
+- Attribute a significant projection to its exact full-symbol carriers.
+  Several strong nulls do not turn memorized homologous transitions into a
+  predictive mechanism.

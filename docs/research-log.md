@@ -2415,6 +2415,44 @@ language substitution and natural-phase Base64 are closed. Definitions,
 full results, and boundaries are in
 `docs/practice-cipher4-wide-codec-audit-2026-07-24.md`.
 
+### Practice cipher 4 selector and route attribution
+
+The frozen mechanical follow-up is complete. Widths 2 and 3 together define
+206 direct, unsigned, signed-selector, Boolean-carry, direction-toggle, and
+per-selector-lane laws. They were rendered on the plausible rings
+`19,27,28,29,30,36,37,41,42` under two disclosed alphabet conventions. The
+planted width-2 walk decodes cleanly; on every real run the untouched quotient
+beats all 205 state/control alternatives. The Finnish 29-ring and shared-shift
+checks agree.
+
+A leave-one-portion-out selector predictor initially survives strongly.
+After excluding centered quotient windows copied across portions, the best
+previous-`q`/current-`q`/previous-`r` context gains `0.328318` bits per binary
+selector and `0.551030` per ternary selector. All four 1,000-control nulls—
+free selector shuffle, within-quotient shuffle, circular selector offsets, and
+intact-rank shuffles—give corrected upper tail `1/1001`.
+
+Exact carrier attribution reverses the interpretation. At width 2 the
+predictor is correct on `304/322` seen contexts whose complete rank bigram
+also occurs in training, but `0/23` seen contexts with a genuinely new rank
+bigram. Width 3 gives `295/317` and `0/42`. Exact rank trigrams account for
+`188/194` and `180/189` correct cases. Thus the effect detects the disclosed
+shared plaintext's repeated transitions; it is not an executable selector
+transducer.
+
+Finally, a label-invariant eight-symbol equality-pattern model exhausts 396
+fixed routes: reversal, global odd/even, ragged rectangular and snake reads,
+rail fences, and fixed blocks. A planted seven-column route is identified and
+inverted exactly. The real best improvements over identity have full-selection
+tails `0.651741` and `0.179104` under 200 matched controls. No route survives.
+
+Lanes A–G are therefore closed as specified, and the two-cycle lane is not
+opened without an invariant. Cipher 4 remains unsolved. The broader lesson is
+that statistical significance under several nulls is still insufficient when
+the effect can be attributed completely to already repeated full symbols.
+Definitions and reproduction are in
+`docs/practice-cipher4-selector-route-results-2026-07-24.md`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly

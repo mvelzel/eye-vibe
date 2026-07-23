@@ -87,6 +87,15 @@ band into pairs or triples separates a strongly ordered quotient from a small
 selector stream, with widths 2 and 3 uniquely strongest in the frozen width
 screen.
 
+The bounded selector/route follow-up is complete in
+[`docs/practice-cipher4-selector-route-results-2026-07-24.md`](docs/practice-cipher4-selector-route-results-2026-07-24.md).
+All 206 walk/sign/carry/toggle/lane laws and 396 fixed routes are negative
+against planted controls. A highly significant held-out selector predictor is
+not a mechanism: on genuinely new full-rank bigrams it scores `0/23` and
+`0/42`; its apparent success is exact transition reuse from the disclosed
+shared plaintext. The quotient observation is retained, but no two-cycle lift
+is promoted.
+
 The next Eye pass deliberately changes the question from “how can these
 numbers be read?” to “what small mechanism caused the equality and
 reconvergence structure?” Its fourteen-lane breadth map is frozen in

@@ -474,7 +474,7 @@ wider 24 July codec audit additionally rejects complete printable ASCII,
 natural-phase substituted Base64, and static English/Finnish readings of the
 new 29-state quotient.
 
-**Live structural lead:** subtract 22 and group the exact `0..56` ranks into
+**Resolved structural follow-up:** subtract 22 and group the exact `0..56` ranks into
 consecutive pairs or triples. Width 2 yields a highly structured 29-state
 quotient plus parity; width 3 yields a structured 19-state quotient plus a
 ternary stream whose serial dependence is null-like. The pair grouping's
@@ -482,14 +482,24 @@ quotient/parity frequency dependence has corrected random-label lower tail
 `98/10001 = 0.009799`. Neither quotient is plaintext under the tested static
 language maps.
 
-**Next test:** seek a bounded deck/control law that naturally lifts 29 or 19
-payload states to consecutive pairs/triples, or a small route transposition
-that predicts all exact shared blocks. Do not extend blind SAT, generic
-language annealing, or arbitrary format fitting. A candidate source can be
-rejected cheaply by the exact recurrence and equality-signature oracles.
+The frozen follow-up exhausts 206 quotient walks, selector sign/carry/toggle/
+lane laws, and 396 small fixed routes. Planted controls recover; every real
+walk law loses to the direct quotient, and route improvements are
+selection-null-ordinary. Selector context is highly significant under four
+strict nulls, but carrier attribution shows `0/23` and `0/42` correct on new
+full-rank bigrams: it only indexes exact transition reuse from the known shared
+plaintext.
+
+**Next test:** do not infer the speculative `57=29+28` lift from the count.
+Resume Cipher 4 only with a new deck invariant, a broader source hypothesis
+that passes the exact cyclic recurrence, or a label-invariant operation
+quotient calibrated on a solved deck cipher. Do not extend blind SAT, generic
+language annealing, or arbitrary format fitting.
 
 Full freeze and results:
 [`practice-cipher4-wide-codec-audit-2026-07-24.md`](practice-cipher4-wide-codec-audit-2026-07-24.md).
+Selector/route results:
+[`practice-cipher4-selector-route-results-2026-07-24.md`](practice-cipher4-selector-route-results-2026-07-24.md).
 
 ### Exact 42-class complement of the Eye alphabet
 
