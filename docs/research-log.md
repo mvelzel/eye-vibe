@@ -4001,3 +4001,31 @@ Calling-code-to-region data is pinned to libphonenumber commit
 vendored with provenance. This can corroborate a locale checksum, never body
 language or a key. Protocol:
 `docs/twenty-seventh-three-plane-locale-freeze-2026-07-24.md`.
+
+The generic locale checksum is unique. Of the 12,096 admissible scalar
+assignments, 1,282 have a natural-view assigned geographic calling code, 3,914
+have one in some D4 view, and 173 produce a valid BWT text with two ASCII
+letters in its suffix. Only the observed assignment makes those two fields
+agree:
+
+```text
+001134223 -> columns 358 -> regions FI,AX -> BWT !Fi
+```
+
+Natural match, natural `!` match, D4 match, and D4 `!` match all have count
+one. The unchanged full factoradic filter again has two survivors, only one of
+which has either semantic match. The complete match inventory therefore
+contains exactly the observed record.
+
+The vendored calling-code map has 215 entries and compares exactly with
+libphonenumber commit
+`f7e3e88c92b905c8d6edb81f336dbe25edc05b52`; the acquired generated Java file
+has SHA-256
+`ab2f17e0ba1d5105fbfa7c1039ae0bafe1a6b22c22fdbe85df3ab0a62ba2c517`.
+A read-only Discord search finds no relevant `683` or Niue prior.
+
+This promotes a deliberately redundant `FI` locale/header interpretation,
+not Finnish body plaintext or a key. The rule was inspired by the observed
+match, so its unique count is structural corroboration rather than a
+discovery p-value and is not multiplied with prior counts. Results:
+`docs/twenty-seventh-three-plane-locale-results-2026-07-24.md`.

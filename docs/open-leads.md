@@ -78,6 +78,15 @@ fixed-trail BWT suffix, naturally and under D4, then crosses the unchanged
 factoradic predicate. Protocol:
 [`twenty-seventh-three-plane-locale-freeze-2026-07-24.md`](twenty-seventh-three-plane-locale-freeze-2026-07-24.md).
 
+**Locale-check result:** promoted as marker metadata. Among 12,096 admissible
+assignments, 1,282 have a natural assigned calling code and 173 have an
+alphabetic BWT suffix, but the observed `358 -> FI/AX` with BWT `!Fi` is the
+only region match. It remains unique under D4 and among the two unchanged
+factoradic survivors. Because the generic rule was formulated after seeing
+the target, this is corroboration rather than a discovery p-value. Do not use
+`FI358` as a body key without a separately authored consumer. Results:
+[`twenty-seventh-three-plane-locale-results-2026-07-24.md`](twenty-seventh-three-plane-locale-results-2026-07-24.md).
+
 ### Procedural wand selects exactly `0..82` from `0..100`
 
 **Status:** exact independently authored 83-of-101 selector; the proposed

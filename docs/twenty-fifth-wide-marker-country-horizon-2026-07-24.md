@@ -150,3 +150,9 @@ all three eye-coordinate planes gives calling codes `+683`, `+34`, and
 that inspected triple, freeze the generic relation between any scalar-plane
 calling code and its fixed-trail BWT region suffix. Protocol:
 [`twenty-seventh-three-plane-locale-freeze-2026-07-24.md`](twenty-seventh-three-plane-locale-freeze-2026-07-24.md).
+
+The generic result is unique: exactly one of 12,096 admissible assignments has
+a natural or D4 calling code whose assigned region matches its alphabetic BWT
+suffix, and it is the observed `+358 ↔ !Fi` factoradic survivor. Promote a
+redundant `FI` locale header with the post-hoc boundary intact. Results:
+[`twenty-seventh-three-plane-locale-results-2026-07-24.md`](twenty-seventh-three-plane-locale-results-2026-07-24.md).

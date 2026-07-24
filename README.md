@@ -989,6 +989,17 @@ variants: `358` is not a direct linear panel weight under this interface.
 Results:
 [`docs/twenty-sixth-358-weighted-alignment-results-2026-07-24.md`](docs/twenty-sixth-358-weighted-alignment-results-2026-07-24.md).
 
+The marker locale interpretation has a stronger generic check. Summing
+canonical columns separately in all three eye-coordinate planes gives calling
+codes `+683`, `+34`, and `+358` (`NU`, `ES`, and `FI/AX`). In the same 12,096
+graph-conditioned scalar assignments, 1,282 yield a natural geographic code
+and 173 yield an alphabetic BWT suffix, but only the observed assignment makes
+the code's assigned region equal that suffix: `+358 ↔ !Fi`. It remains unique
+under D4 and selects one of the two unchanged factoradic survivors. This
+promotes a redundant `FI` locale header, still without a body decoder or
+discovery p-value. Results:
+[`docs/twenty-seventh-three-plane-locale-results-2026-07-24.md`](docs/twenty-seventh-three-plane-locale-results-2026-07-24.md).
+
 ## Running the workbench
 
 Python 3.11 or newer is sufficient for the dependency-free experiments:
@@ -1051,6 +1062,7 @@ PYTHONPATH=src python3 scripts/run_fifth_wide_fanout.py --controls 2000 --sort-c
 PYTHONPATH=src python3 scripts/run_ninth_causal_batch.py --controls 1000
 PYTHONPATH=src python3 scripts/audit_marker_country_tag.py
 PYTHONPATH=src python3 scripts/audit_358_weighted_alignment.py
+PYTHONPATH=src python3 scripts/audit_three_plane_locale.py
 ```
 
 The vectorized selected-card scan additionally requires NumPy:
