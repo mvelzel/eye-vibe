@@ -3093,3 +3093,38 @@ Full evidence is in
 objects without altering arbitrary lag-one 83-wheel status or licensing
 fitted code trees, multiset alphabets, hierarchies, or space-filling curves.
 The branch returns laterally to E–H or acquisition lane K.
+
+The next batch was narrowed against prior coverage before calculation.
+Ordinary radix-five borrows, generic moments, geometric hashes, and RePair
+were already tested, so they were excluded. Three distinct mechanisms were
+then frozen in
+`docs/fifteenth-second-batch-freeze-2026-07-24.md`: literal phase-zero uniform
+productions of lengths 2–5, strict factoradic-class leave-one-out dispatch
+over a standard checksum dictionary, and binary events produced when a
+componentwise raw cube result enters `83..124` and is reduced by 83.
+
+All positive controls pass. The morphism plant recovers
+`0->01, 1->10` and exact heldout predictions. Three authored checksum classes
+recover `9/9` withheld markers and their three rule types. A reduction plant
+uniquely separates `sum-order201` from every rival and is exact at `6/6` plus
+`5/5`.
+
+All real-data necessities fail. For uniform lengths 2, 3, 4, and 5, East 1's
+repeated label 40 already demands two different productions at source index
+8. The deduplicated 32-vector checksum dictionary makes zero correct
+factoradic-class predictions: eight folds have no compatible two-panel rule,
+and the ninth is the known negative additive mod-101 rule trained on East 3
+and East 5, which produces no visible East-4 marker.
+
+The 18 missing-state event tables have no exact training convention. The
+first-family winner is `sum-order012` at `45/59`; fixed on the last family it
+scores `41/82`. Its first contradictions are `14->21` versus `25->64` in
+`first-gap30`, and `22->60` versus `43->66` in `last-west4`.
+
+Full evidence is in
+`docs/fifteenth-second-batch-results-2026-07-24.md`; 493 tests pass with Z3
+enabled. These results close only the frozen objects. The next novelty step
+must again start wide; reset/synchronizing automata and predictive/Hankel
+state are retained alongside other new candidates, while the original trie
+checksum, lag-one wheel, Gate vocabulary, practice ciphers 3/4, and
+source/chronology leads remain unchanged.

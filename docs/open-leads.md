@@ -1091,3 +1091,19 @@ No failed family receives a fitted alphabet, tree, hierarchy, or curve. The
 next lateral options are E–H—symbolic dynamics, universal reset semantics,
 header-dispatched checksum types, and missing-state reduction events—or K's
 operation/version archaeology.
+
+**Second-batch result:** E/G/H also close with passing plants. Uniform
+morphisms of lengths `2..5` each contradict one repeated East-1 production at
+source index 8. The standard-checksum dictionary yields `0/9` correct
+leave-one-out marker predictions under the factoradic classes; its only
+two-marker survivor is the known East-3/East-5 additive rule, which predicts
+no visible East-4 marker. The best of 18 explicit missing-cube reduction
+events is inexact at `45/59` training and falls to `41/82` heldout.
+
+Details:
+[`fifteenth-second-batch-results-2026-07-24.md`](fifteenth-second-batch-results-2026-07-24.md).
+Do not repair these with per-panel phases, expanded checksum menus, or
+heldout-selected reduction rules. Remaining distinct cryptographic objects
+include reset/synchronizing automata and predictive/Hankel state. The
+unresolved lag-one wheel, original trie checksum, Gate/interface archaeology,
+practice ciphers 3/4, source ancestry, and chronology leads remain active.

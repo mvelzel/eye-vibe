@@ -191,3 +191,23 @@ All four detectors pass their planted controls and fail on the Eyes:
 Full evidence is in
 [`fifteenth-first-batch-results-2026-07-24.md`](fifteenth-first-batch-results-2026-07-24.md).
 No lane earns depth; continue laterally to E–H or acquisition lane K.
+
+## Second-batch result
+
+E/G/H were separately frozen before calculation in
+[`fifteenth-second-batch-freeze-2026-07-24.md`](fifteenth-second-batch-freeze-2026-07-24.md).
+All three plants pass and all three Eye mechanisms close:
+
+- every phase-zero shared uniform morphism length `2..5` has a literal
+  production contradiction inside East 1;
+- the 32 distinct standard-check prediction vectors give `0/9` correct
+  factoradic-class leave-one-out marker predictions;
+- none of 18 missing-state reduction event conventions is exact on the first
+  family; the selected `sum-order012` gives only `45/59` training and `41/82`
+  heldout agreements.
+
+Full results are in
+[`fifteenth-second-batch-results-2026-07-24.md`](fifteenth-second-batch-results-2026-07-24.md).
+Reset/synchronizing automata and predictive/Hankel state remain genuinely
+different next objects. They must be placed in another broad frozen portfolio
+before either receives depth.
