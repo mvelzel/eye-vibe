@@ -3474,3 +3474,16 @@ requires the broadened numeric match plus consecutive positions, reselects
 gaps 2–30, and allows any of the three final header orders. Its result will
 not be multiplied with the earlier tails because the anchors are shared.
 Protocol: `docs/eighteenth-gap-anchor-position-freeze-2026-07-24.md`.
+
+The position control passes. Of 50,000 new shuffles, 1,612 retain one clean
+gap-11 anchor in all three messages. One has positions equal to a translated
+`021`; a different one satisfies the exact numeric formula; none satisfies
+both. After every control searches gaps 2–30 and allows any final header
+order, none survives the joint numeric/position condition. The corrected
+broad tail is `1/50001 = .0000199996`.
+
+The promoted final-row record therefore has two interfaces: its full marker
+values encode telescoping mod-83 differences, and W4's header edge order
+`021` encodes the rank order of the three landmark positions. This is one
+shared construction result, not two multiplicative p-values. Details:
+`docs/eighteenth-gap-anchor-position-results-2026-07-24.md`.

@@ -1317,3 +1317,10 @@ header-derived component order. The broad joint control reselects gaps 2–30,
 requires the selection-corrected numeric match and consecutive positions, and
 allows any of the three final header orders. Protocol:
 [`eighteenth-gap-anchor-position-freeze-2026-07-24.md`](eighteenth-gap-anchor-position-freeze-2026-07-24.md).
+
+**Position result:** promoted as a second interface of the same final-row
+record. Of 50,000 new shuffles, one has translated `021` positions at gap 11
+and a different one has the exact numeric relation; none has both. No control
+survives the broad joint gap/order search, for corrected tail `1/50001`.
+Results:
+[`eighteenth-gap-anchor-position-results-2026-07-24.md`](eighteenth-gap-anchor-position-results-2026-07-24.md).

@@ -6,12 +6,16 @@ from collections import Counter
 
 from eye_mystery.gap_anchor import (
     any_broad_gap_match,
+    broad_position_match,
     clean_gap_anchors,
     exact_reported_relation,
     final_trimmed_bodies,
     gap_anchor_audit,
     gap_anchor_label_audit,
+    gap_anchor_position_audit,
     planted_gap_streams,
+    planted_position_streams,
+    relative_position_order,
     unique_anchor_values,
 )
 from eye_mystery.seventeenth_state import shuffle_without_adjacent_doubles
@@ -63,6 +67,19 @@ class GapAnchorTests(unittest.TestCase):
     def test_label_control_is_deterministic(self) -> None:
         audit = gap_anchor_label_audit(controls=19)
         self.assertEqual(audit, gap_anchor_label_audit(controls=19))
+
+    def test_position_plant_and_order(self) -> None:
+        plant = planted_position_streams()
+        self.assertEqual(
+            broad_position_match(plant),
+            (11, (75, 81, 48), (0, 2, 1)),
+        )
+        self.assertEqual(relative_position_order((16, 18, 17)), (0, 2, 1))
+        self.assertIsNone(relative_position_order((16, 19, 17)))
+
+    def test_position_control_is_deterministic(self) -> None:
+        audit = gap_anchor_position_audit(controls=19)
+        self.assertEqual(audit, gap_anchor_position_audit(controls=19))
 
 
 if __name__ == "__main__":

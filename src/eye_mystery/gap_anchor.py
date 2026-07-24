@@ -15,6 +15,7 @@ from eye_mystery.seventeenth_state import shuffle_without_adjacent_doubles
 MODULUS = 83
 FINAL_MESSAGES = ("east4", "west4", "east5")
 FINAL_HEADERS = (27, 77, 33)
+FINAL_COMPONENT_ORDERS = ((0, 1, 2), (0, 2, 1), (1, 0, 2))
 TARGET_GAP = 11
 BROAD_GAPS = tuple(range(2, 31))
 
@@ -144,6 +145,48 @@ def any_broad_gap_match(
     return None
 
 
+def relative_position_order(
+    positions: Sequence[int],
+) -> tuple[int, int, int] | None:
+    """Return a translated consecutive order, if the positions form one."""
+
+    if len(positions) != 3 or len(set(positions)) != 3:
+        return None
+    minimum = min(positions)
+    relative = tuple(position - minimum for position in positions)
+    if sorted(relative) != [0, 1, 2]:
+        return None
+    return relative  # type: ignore[return-value]
+
+
+def broad_position_match(
+    streams: Mapping[str, Sequence[int]],
+) -> tuple[
+    int,
+    tuple[int, int, int],
+    tuple[int, int, int],
+] | None:
+    """Search the frozen joint numeric/position family."""
+
+    by_message = {
+        name: clean_gap_anchors(streams[name])
+        for name in FINAL_MESSAGES
+    }
+    for gap in BROAD_GAPS:
+        hits = tuple(by_message[name].get(gap, ()) for name in FINAL_MESSAGES)
+        if not all(len(message_hits) == 1 for message_hits in hits):
+            continue
+        anchors = tuple(message_hits[0].value for message_hits in hits)
+        positions = tuple(message_hits[0].position for message_hits in hits)
+        order = relative_position_order(positions)
+        if (
+            broad_difference_relation(anchors)
+            and order in FINAL_COMPONENT_ORDERS
+        ):
+            return gap, anchors, positions  # type: ignore[return-value]
+    return None
+
+
 def planted_gap_streams() -> dict[str, tuple[int, ...]]:
     """Return a short exact detector plant with the real anchor relation."""
 
@@ -154,6 +197,26 @@ def planted_gap_streams() -> dict[str, tuple[int, ...]]:
         trailing = tuple(range(10, 18))
         streams[name] = (anchor,) + interior + (anchor,) + trailing
     return streams
+
+
+def planted_position_streams() -> dict[str, tuple[int, ...]]:
+    """Return an exact plant with translated ``021`` anchor positions."""
+
+    anchors = (75, 81, 48)
+    prefixes = ((), (70, 71), (70,))
+    return {
+        name: prefix
+        + (anchor,)
+        + tuple(range(10))
+        + (anchor,)
+        + tuple(range(10, 18))
+        for name, anchor, prefix in zip(
+            FINAL_MESSAGES,
+            anchors,
+            prefixes,
+            strict=True,
+        )
+    }
 
 
 @dataclass(frozen=True)
@@ -300,4 +363,75 @@ def gap_anchor_label_audit(
         (1 + body_broad) / denominator,
         (1 + joint_exact) / denominator,
         (1 + joint_broad) / denominator,
+    )
+
+
+@dataclass(frozen=True)
+class GapAnchorPositionAudit:
+    controls: int
+    target_structure_controls: int
+    target_position_controls: int
+    target_numeric_controls: int
+    target_joint_controls: int
+    broad_joint_controls: int
+    target_position_tail: float
+    target_joint_tail: float
+    broad_joint_tail: float
+
+    @property
+    def passes(self) -> bool:
+        return self.broad_joint_tail < 0.01
+
+
+def gap_anchor_position_audit(
+    *,
+    controls: int = 50_000,
+    seed: int = 0x18C05,
+) -> GapAnchorPositionAudit:
+    """Run the frozen position/permutation follow-up."""
+
+    if controls < 1:
+        raise ValueError("at least one control is required")
+    streams = final_trimmed_bodies()
+    rng = random.Random(seed)
+    target_structure = 0
+    target_position = 0
+    target_numeric = 0
+    target_joint = 0
+    broad_joint = 0
+    for _ in range(controls):
+        shuffled = {
+            name: shuffle_without_adjacent_doubles(streams[name], rng)
+            for name in FINAL_MESSAGES
+        }
+        target_hits = tuple(
+            clean_gap_anchors(
+                shuffled[name],
+                minimum_gap=TARGET_GAP,
+                maximum_gap=TARGET_GAP,
+            ).get(TARGET_GAP, ())
+            for name in FINAL_MESSAGES
+        )
+        if all(len(hits) == 1 for hits in target_hits):
+            target_structure += 1
+            anchors = tuple(hits[0].value for hits in target_hits)
+            positions = tuple(hits[0].position for hits in target_hits)
+            position_match = relative_position_order(positions) == (0, 2, 1)
+            numeric_match = exact_reported_relation(anchors)
+            target_position += position_match
+            target_numeric += numeric_match
+            target_joint += position_match and numeric_match
+        broad_joint += broad_position_match(shuffled) is not None
+
+    denominator = controls + 1
+    return GapAnchorPositionAudit(
+        controls,
+        target_structure,
+        target_position,
+        target_numeric,
+        target_joint,
+        broad_joint,
+        (1 + target_position) / denominator,
+        (1 + target_joint) / denominator,
+        (1 + broad_joint) / denominator,
     )
