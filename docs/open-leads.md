@@ -383,24 +383,36 @@ recovers and exactly replays this public toy pair.
 A second, ciphertext-only primitive is now reproduced independently. For the
 ordinary identity-reset GAK with two unknown plaintext operations and
 `operation[0] != 0`, `BCBDBCDA` is SAT with plaintext `aababaaa`, while
-`BCBDBCDAC` is UNSAT after all 153 four-card operation pairs. The minimum
-operation count jumps from two to three at the appended ninth symbol. This
-proves that fixed-alphabet ordinary GAK has ciphertext orphans; it does not
-recover a meaningful plaintext.
+`BCBDBCDAC` is UNSAT after all 108 decryptable four-card operation pairs. Here
+the two operations must also have distinct top-source positions, as required
+for decryption. The minimum operation count jumps from two to three at the
+appended ninth symbol. This proves that fixed-alphabet ordinary GAK has
+ciphertext orphans; it does not recover a meaningful plaintext.
 
-The direct oracle is factorial: two-operation search has 4,560 candidates at
-five cards, 179,700 at six, 9,329,040 at seven, and 622,321,560 at eight.
+The direct oracle is factorial: two-operation search has 3,456 candidates at
+five cards, 144,000 at six, 7,776,000 at seven, and 533,433,600 at eight.
 An 83-card direct enumeration is therefore forbidden. Also, no-double has no
 finite capacity consequence: one 83-card rotation emits arbitrarily many
 symbols without a repeat.
 
-**Pause reason and next test:** both known- and unknown-plaintext primitives are
-verified, but neither implementation reaches an Eye-relevant size. Resume
-after finding a symbolic encoding or constraint-propagation rule that
-reproduces the four-card orphan and crosses a predeclared planted-deck scaling
-threshold. Do not shrink an Eye prefix to its observed labels; unseen cards
-remain part of the hidden deck. Do not interpret one satisfiable model as a
-unique recovered key or plaintext.
+The unknown-plaintext lane now also has a symbolic solver. It reproduces the
+four-card parent/orphan decisions, decides constructed two-operation orphans
+at deck sizes five and six, and replays a planted SAT witness at deck size 12.
+A lazy shared-operation encoding then models all nine Eye panels with identity
+reset. It finds exact witnesses through prefix length three with nine
+operations and through prefix length four with 26 operations. Prefixes four
+and five respectively time out for nine operations, while prefixes 5, 8, and
+10 time out for 26 operations at 30 seconds. Short-prefix SAT is
+underconstrained compatibility, and `unknown` is not incompatibility.
+
+**Pause reason and next test:** the symbolic implementation crosses its planted
+calibration gate but not an Eye-relevant depth. Resume after a representation
+advance that decides at least ten glyphs across all nine reset messages, or
+after an external clue fixes operations/plaintext relations. Do not shrink an
+Eye prefix to its observed labels; unseen cards remain part of the hidden
+deck. Do not interpret one satisfiable model as a unique recovered key or
+plaintext. Exact scope and reproduction are in
+[`eleventh-wide-second-batch-results-2026-07-24.md`](eleventh-wide-second-batch-results-2026-07-24.md).
 
 In parallel, formalize deck chaining first as a label-invariant quotient or
 constraint-propagation rule and require it to recover a solvable GCTAK/practice

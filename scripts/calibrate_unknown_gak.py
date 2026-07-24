@@ -9,8 +9,8 @@ from eye_mystery.unknown_gak import (
     recover_unknown_plaintext_bruteforce,
     replay_unknown_gak,
     top_changing_operation_count,
+    top_changing_operation_set_count,
 )
-from math import comb
 
 
 def cards(text: str) -> tuple[int, ...]:
@@ -60,7 +60,11 @@ def main() -> None:
     print("two-operation search-space growth")
     for deck_size in range(4, 9):
         operations = top_changing_operation_count(deck_size)
-        print(deck_size, operations, comb(operations, 2))
+        print(
+            deck_size,
+            operations,
+            top_changing_operation_set_count(deck_size, 2),
+        )
 
     ciphertext, _ = arbitrary_length_no_double_witness(1_028, deck_size=83)
     print(

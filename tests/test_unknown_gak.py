@@ -6,6 +6,7 @@ from eye_mystery.unknown_gak import (
     recover_unknown_plaintext_bruteforce,
     replay_unknown_gak,
     top_changing_operation_count,
+    top_changing_operation_set_count,
 )
 
 
@@ -40,6 +41,7 @@ class UnknownGAKTests(unittest.TestCase):
             orphan.operation_sets_checked,
             orphan.total_operation_sets,
         )
+        self.assertEqual(orphan.total_operation_sets, 108)
 
     def test_truncated_enumeration_is_unknown_not_unsat(self) -> None:
         result = recover_unknown_plaintext_bruteforce(
@@ -82,6 +84,17 @@ class UnknownGAKTests(unittest.TestCase):
     def test_top_changing_operation_count(self) -> None:
         self.assertEqual(top_changing_operation_count(4), 18)
         self.assertEqual(top_changing_operation_count(5), 96)
+        self.assertEqual(top_changing_operation_set_count(4, 2), 108)
+        self.assertEqual(top_changing_operation_set_count(5, 2), 3_456)
+
+    def test_unique_top_count_without_top_change(self) -> None:
+        result = recover_unknown_plaintext_bruteforce(
+            (0,),
+            deck_size=3,
+            operation_alphabet_size=2,
+            require_top_change=False,
+        )
+        self.assertEqual(result.total_operation_sets, 12)
 
 
 if __name__ == "__main__":

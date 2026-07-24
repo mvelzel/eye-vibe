@@ -88,18 +88,20 @@ new_deck[i] = old_deck[operation[plaintext_symbol][i]]
 ciphertext   = new_deck[0]
 initial deck = identity
 operation[0] != 0
+the operations' source positions at index 0 are distinct
 ```
 
 The last condition makes every used operation bring a non-top card to the top.
-Plaintext is unknown. Plaintext-symbol names are irrelevant, so the exact tiny
-solver enumerates unordered operation sets and performs dynamic reachability
-over deck states.
+Distinct source positions make the plaintext operation recoverable when the
+current deck and next ciphertext are known. Plaintext is unknown.
+Plaintext-symbol names are irrelevant, so the exact tiny solver enumerates
+unordered operation sets and performs dynamic reachability over deck states.
 
 For `A=0, B=1, C=2, D=3`, the reported community pair reproduces:
 
 ```text
-BCBDBCDA   SAT    after 59/153 two-operation sets
-BCBDBCDAC UNSAT  after all 153/153 two-operation sets
+BCBDBCDA   SAT    after 45/108 two-operation sets
+BCBDBCDAC UNSAT  after all 108/108 two-operation sets
 ```
 
 One exact witness for the parent is:
@@ -123,11 +125,11 @@ guessing plaintext. It also demonstrates the scaling wall:
 
 ```text
 deck        top-changing permutations    unordered pairs
-4           18                           153
-5           96                           4,560
-6           600                          179,700
-7           4,320                        9,329,040
-8           35,280                       622,321,560
+4           18                           108
+5           96                           3,456
+6           600                          144,000
+7           4,320                        7,776,000
+8           35,280                       533,433,600
 ```
 
 At 83 cards, direct enumeration is unusable. Shrinking an Eye prefix to the

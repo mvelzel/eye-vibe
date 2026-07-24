@@ -76,6 +76,18 @@ def top_changing_operation_count(deck_size: int) -> int:
     return (deck_size - 1) * factorial(deck_size - 1)
 
 
+def top_changing_operation_set_count(deck_size: int, alphabet_size: int) -> int:
+    """Count unordered decryptable operation sets with distinct top sources."""
+
+    if deck_size < 2:
+        raise ValueError("deck_size must be at least two")
+    if not 1 <= alphabet_size <= deck_size - 1:
+        return 0
+    return comb(deck_size - 1, alphabet_size) * (
+        factorial(deck_size - 1) ** alphabet_size
+    )
+
+
 def arbitrary_length_no_double_witness(
     length: int, *, deck_size: int
 ) -> tuple[tuple[int, ...], UnknownGAKWitness]:
@@ -109,6 +121,7 @@ def recover_unknown_plaintext_bruteforce(
     deck_size: int,
     operation_alphabet_size: int,
     require_top_change: bool = True,
+    require_unique_top_sources: bool = True,
     max_operation_sets: int | None = None,
 ) -> UnknownGAKResult:
     """Decide a tiny unknown-plaintext GAK instance by exact enumeration.
@@ -138,9 +151,21 @@ def recover_unknown_plaintext_bruteforce(
     if operation_alphabet_size > len(operations):
         return UnknownGAKResult("unsat", None, 0, 0)
 
-    total = comb(len(operations), operation_alphabet_size)
+    if require_unique_top_sources:
+        available_top_sources = deck_size - int(require_top_change)
+        if operation_alphabet_size > available_top_sources:
+            return UnknownGAKResult("unsat", None, 0, 0)
+        total = comb(available_top_sources, operation_alphabet_size) * (
+            factorial(deck_size - 1) ** operation_alphabet_size
+        )
+    else:
+        total = comb(len(operations), operation_alphabet_size)
     checked = 0
     for operation_set in combinations(operations, operation_alphabet_size):
+        if require_unique_top_sources and len(
+            {operation[0] for operation in operation_set}
+        ) != len(operation_set):
+            continue
         if max_operation_sets is not None and checked >= max_operation_sets:
             return UnknownGAKResult("unknown", None, checked, total)
         checked += 1
@@ -181,6 +206,7 @@ def minimum_operation_alphabet(
     deck_size: int,
     maximum: int,
     require_top_change: bool = True,
+    require_unique_top_sources: bool = True,
     max_operation_sets: int | None = None,
 ) -> tuple[int | None, tuple[UnknownGAKResult, ...]]:
     """Return the first feasible operation-alphabet size through ``maximum``."""
@@ -194,6 +220,7 @@ def minimum_operation_alphabet(
             deck_size=deck_size,
             operation_alphabet_size=size,
             require_top_change=require_top_change,
+            require_unique_top_sources=require_unique_top_sources,
             max_operation_sets=max_operation_sets,
         )
         results.append(result)

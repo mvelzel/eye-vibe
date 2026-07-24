@@ -2473,10 +2473,12 @@ the real message data.
 The community's ciphertext-orphan example reproduces under the precise
 identity-reset ordinary-GAK convention. `BCBDBCDA` has the exact plaintext
 schedule `aababaaa` with operations `(1,2,3,0)` and `(3,1,0,2)`;
-`BCBDBCDAC` is UNSAT after all 153 admissible two-operation sets. The ninth
-symbol raises the minimum operation alphabet from two to three. This is a real
-ciphertext-only falsifier, but pair enumeration grows from 153 at four cards to
-622,321,560 at eight. It is a calibration oracle, not an Eye-scale solver.
+`BCBDBCDAC` is UNSAT after all 108 decryptable two-operation sets, including
+the ordinary requirement that the operations have distinct top-source
+positions. The ninth symbol raises the minimum operation alphabet from two to
+three. This is a real ciphertext-only falsifier, but pair enumeration grows
+from 108 at four cards to 533,433,600 at eight. It is a calibration oracle, not
+an Eye-scale solver.
 
 The no-double capacity interpretation closes constructively. Repeating the
 single 83-card rotation `(1,2,...,82,0)` produces an arbitrarily long
@@ -2497,6 +2499,34 @@ isomorph and first/third-eye residues; the later Gate asset only
 retrospectively matches an Eye-derived statistic. None predicts an unseen body
 context. Full results and reproduction are in
 `docs/eleventh-wide-first-batch-results-2026-07-24.md`.
+
+## 24 July 2026 — symbolic GAK frontier and second mixed batch
+
+The exact ciphertext-only ordinary-GAK primitive now has an SMT-LIB backend.
+It independently reproduces the four-card parent/orphan pair, decides
+constructed two-operation orphans at deck sizes five and six, and exactly
+replays a planted SAT witness at deck size 12. This crosses the predeclared
+calibration gates, although similar planted sizes 8 and 10 time out, so runtime
+is not a useful monotone scale.
+
+A lazy multi-message encoding shares unknown operations across all nine Eye
+panels while resetting each to the identity deck. It represents only operation
+values reached by the nested top-card compositions, extends the resulting
+partial injections to full permutations, and rejects any SAT model that fails
+exact replay. With nine operations it finds witnesses through three glyphs per
+panel and times out at four; with 26 operations it finds witnesses through
+four glyphs and times out at 5, 8, and 10. These short SAT prefixes are
+underconstrained compatibility, not support for GAK, and timeouts are not
+negative evidence. The lane is frozen until a new representation decides ten
+glyphs per panel or an external clue constrains the operations.
+
+The reset-regime and renderer-counterfactual lanes close by audit. Every direct
+and equality-isomorphic panel overlap is already zero under all panel orders,
+while fixed-base continuous and row-reset scans are negative. The 26-column
+position effect fails family-held-out prediction, its edge controls are
+null-typical, and the newer change-point searches select 42 or 55 rather than
+25/26. Full results and reproduction are in
+`docs/eleventh-wide-second-batch-results-2026-07-24.md`.
 
 ## Crib observations
 

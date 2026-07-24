@@ -159,9 +159,19 @@ A recent universal index-25 entropy/music claim is directly false and its
 relaxed selected scan is null-typical. A crafted Finnish syllable example
 shares the 24-token opening but not the later Eye equality runs. The useful
 advance is an exact ciphertext-only ordinary-GAK oracle: `BCBDBCDA` has a
-two-operation parent while `BCBDBCDAC` exhausts all 153 pairs. Factorial
-growth blocks an 83-card inference, so this is calibration infrastructure, not
-a decryption.
+two-operation parent while `BCBDBCDAC` exhausts all 108 decryptable pairs.
+Factorial growth blocks an 83-card inference, so this is calibration
+infrastructure, not a decryption.
+
+The second mixed batch begins in
+[`docs/eleventh-wide-second-batch-results-2026-07-24.md`](docs/eleventh-wide-second-batch-results-2026-07-24.md).
+An exact SMT encoding crosses its planted calibration gates and a lazy
+shared-operation form reaches three Eye glyphs with nine operations or four
+with 26 before the solver frontier. Every SAT witness is extended to full
+83-card permutations and replayed exactly; the short prefixes are
+underconstrained compatibility, not evidence for GAK. Generic reset-regime and
+renderer-position inference close because their proposed discriminators are
+already subsumed by exact negatives or fail held-out prediction.
 
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
