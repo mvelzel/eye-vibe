@@ -180,6 +180,14 @@ held-out equations. The Eyes admit no common recurrence of order 1–32 in raw
 order-32 coefficient/augmented rank pair is `32/33`. The next lane changes
 object again, to a canonical minimal dictionary automaton.
 
+The canonical dictionary result is recorded in
+[`docs/fourteenth-dictionary-automaton-results-2026-07-24.md`](docs/fourteenth-dictionary-automaton-results-2026-07-24.md).
+Minimization merges only the nine terminal leaves: `919→911` states, zero
+internal suffix merges, and all 918 transitions unchanged. Its
+`37,774 mod 101 = 0` sum and `0.9901263%` matched calibration are therefore
+literally the old prefix-trie event, not independent corroboration.
+Aho–Corasick failure links remain a distinct canonical next test.
+
 The next Eye pass deliberately changes the question from “how can these
 numbers be read?” to “what small mechanism caused the equality and
 reconvergence structure?” Its fourteen-lane breadth map is frozen in

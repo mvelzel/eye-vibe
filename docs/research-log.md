@@ -2958,3 +2958,18 @@ Q-side coefficient fitting occurs. Full results are in
 `docs/fourteenth-linear-results-2026-07-24.md`. The branch moves laterally to
 the canonical minimal dictionary automaton rather than increasing recurrence
 order toward interpolation.
+
+Lane D is canonical but not independent. The nine marker-stripped bodies form
+a 919-state/918-transition trie. Bottom-up right-language minimization gives
+911 states and still 918 transitions. The sole non-singleton equivalence class
+is the nine accepting terminal leaves; there are zero internal
+suffix-equivalent merges.
+
+Accordingly the transition labels still total `37,774 = 374*101`, with exactly
+the existing trie multiplicity vector. Its diagonal-sum- and marker-preserving
+zero count is the same
+`8,174,134,656 / 825,564,856,320 = 0.009901263`, so it cannot be counted as a
+second checksum. Full results are in
+`docs/fourteenth-dictionary-automaton-results-2026-07-24.md`. Aho–Corasick
+failure links remain a genuinely different next object because they can
+capture internal phrase suffixes without identical complete continuations.

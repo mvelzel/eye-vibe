@@ -993,3 +993,14 @@ coefficient and augmented ranks are `32` and `33`. Results:
 Lane D, the canonical minimized dictionary automaton, is next. Orders above 32
 are not an open lead because they move toward finite-data interpolation
 without an authored selector.
+
+**Lane-D result:** closed as independent evidence. The trie minimizes from 919
+to 911 states solely because nine terminal leaves merge. No internal
+right-language states merge, all 918 transitions remain, and their checksum
+and exact matched calibration are literally the existing prefix-trie result.
+Details:
+[`fourteenth-dictionary-automaton-results-2026-07-24.md`](fourteenth-dictionary-automaton-results-2026-07-24.md).
+
+Lane E's canonical failure links remain active: they can identify internal
+repeated suffix/prefix relations without requiring complete suffix-equivalent
+dictionary states.

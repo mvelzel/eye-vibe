@@ -164,3 +164,19 @@ Full results are in
 [`fourteenth-linear-results-2026-07-24.md`](fourteenth-linear-results-2026-07-24.md).
 The next lateral object is lane D's canonical minimal dictionary automaton,
 not a recurrence order large enough to interpolate the finite corpus.
+
+## Third-lane result
+
+Lane D adds no independent structure. The body trie has 919 states and 918
+transitions; its minimal acyclic dictionary automaton has 911 states but still
+918 transitions. The only merge is the nine terminal leaves becoming one
+accepting state. There are zero internal suffix-equivalent merges.
+
+The transition sum remains `37,774 mod 101 = 0` with the exact same
+multiplicity vector and `8,174,134,656 / 825,564,856,320` matched calibration
+as the existing prefix trie. It is the same event, not corroboration. Full
+results:
+[`fourteenth-dictionary-automaton-results-2026-07-24.md`](fourteenth-dictionary-automaton-results-2026-07-24.md).
+
+Lane E's failure-link automaton remains distinct because it can consume
+internal phrase suffixes even when complete right languages differ.
