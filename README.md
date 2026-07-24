@@ -188,6 +188,13 @@ internal suffix merges, and all 918 transitions unchanged. Its
 literally the old prefix-trie event, not independent corroboration.
 Aho–Corasick failure links remain a distinct canonical next test.
 
+That failure-link test is now complete in
+[`docs/fourteenth-failure-link-results-2026-07-24.md`](docs/fourteenth-failure-link-results-2026-07-24.md).
+Twelve nodes link to non-root suffix prefixes, all at depth one. Their incoming
+labels total `792 ≡ 85 mod 101`, zero matched subgroup relabelings close the
+fixed checksum, and the complete depth-drop tape contains no `BEXIT`.
+The canonical cache/failure machine is therefore closed rather than repaired.
+
 The next Eye pass deliberately changes the question from “how can these
 numbers be read?” to “what small mechanism caused the equality and
 reconvergence structure?” Its fourteen-lane breadth map is frozen in

@@ -1010,3 +1010,12 @@ Its exact serializer and promotion gate are frozen in
 numeric-label BFS, non-root failure targets, incoming-label sum modulo 101,
 and one externally fixed depth-drop word
 `BEXIT=(2,5,24,9,20)`. Checksum and word must both pass.
+
+**Lane-E result:** closed. Exactly twelve nodes have non-root failure targets,
+all at depth one. Their incoming labels total `792 ≡ 85 mod 101`; no
+diagonal-check- and marker-preserving subgroup relabeling closes that fixed
+sum. The frozen depth-drop word has no `BEXIT`. Results:
+[`fourteenth-failure-link-results-2026-07-24.md`](fourteenth-failure-link-results-2026-07-24.md).
+
+The next ranked Eye-side lane is M's recursive branch-check prediction. A new
+failure/cache record layout is not open without an authored consumer.

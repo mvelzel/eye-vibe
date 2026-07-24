@@ -2982,3 +2982,17 @@ only word tested is independently fixed
 `BEXIT=(2,5,24,9,20)`. Both closure and one contiguous word occurrence are
 required. The freeze is
 `docs/fourteenth-failure-link-freeze-2026-07-24.md`.
+
+Lane E fails both gates. The canonical Aho–Corasick trie has twelve nodes whose
+failure target is non-root, and all twelve targets have depth one. Their
+incoming labels total `792`, residue `85 mod 101`. The exact
+diagonal-check- and marker-preserving subgroup has zero closing relabelings
+among `825,564,856,320`.
+
+In numeric-label BFS order, the complete depth-drop tape is
+`11,29,32,46,64,71,75,78,79,104,109,112`; it contains no
+`BEXIT=(2,5,24,9,20)`. No joint control is required because neither observed
+criterion passes. Full results are in
+`docs/fourteenth-failure-link-results-2026-07-24.md`. This closes the
+canonical cache/failure machine; a different record layout now requires an
+authored consumer.

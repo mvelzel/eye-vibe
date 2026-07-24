@@ -187,3 +187,20 @@ calculation in
 Use numeric-label BFS order, retain nodes with non-root failure targets, sum
 their incoming labels modulo 101, and test exactly one pre-existing word:
 `BEXIT=(2,5,24,9,20)` in the retained depth-drop tape. Both are required.
+
+## Fourth-lane result
+
+Lane E closes both frozen conditions. Twelve trie nodes have a non-root
+failure target, and every target is at depth one. Their incoming labels total
+`792`, residue `85 mod 101`; zero of the
+`825,564,856,320` diagonal-check- and marker-preserving subgroup relabelings
+can make this fixed checksum close. The complete depth-drop tape is
+
+```text
+11,29,32,46,64,71,75,78,79,104,109,112
+```
+
+and contains no `BEXIT`. Full results:
+[`fourteenth-failure-link-results-2026-07-24.md`](fourteenth-failure-link-results-2026-07-24.md).
+The next ranked cryptographic lane is M's predictive recursive trie checksum;
+the cache/failure-link representation receives no flexible repair.
