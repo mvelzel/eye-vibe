@@ -900,6 +900,13 @@ before testing, with the finite paired-rotating-deck family first. This does
 not replace unresolved ciphers #3/#4. Acquisition and frozen map:
 [`practice-puzzles/12-sdlwdr-06-in-game-deck.md`](practice-puzzles/12-sdlwdr-06-in-game-deck.md).
 
+The first of those seven lanes is now closed. None of 486 source-fixed
+generalized-Chaocipher settings concentrates below rank 42; the best is only
+`419/761`, and every setting uses all 83 ranks. A second, non-Chaocipher test
+is frozen: circle row cuts and exact repeated binary partitions define one
+base permutation, tested under fixed, rank-power, and rank-plus-one updates
+from natural line resets.
+
 ## Running the workbench
 
 Python 3.11 or newer is sufficient for the dependency-free experiments:

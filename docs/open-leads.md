@@ -1507,3 +1507,10 @@ rune-index operation schedules, the original/revised differential, and the
 nine known reset prefixes. The finite paired-deck family is first. Full
 provenance and stop rules:
 [`../practice-puzzles/12-sdlwdr-06-in-game-deck.md`](../practice-puzzles/12-sdlwdr-06-in-game-deck.md).
+
+**First result:** close the generalized-Chaocipher sublane. All 486 fixed
+initial-pair/nadir settings recover all 83 ranks and reach 82. The best low
+rank count is only `419/761` (median 397), with no language-like rendering.
+The next frozen sublane constructs one base permutation from circle row cuts
+or repeated binary stable partitions and tests updates `P`, `P^rank`, and
+`P^(rank+1)` from natural line resets.

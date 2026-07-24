@@ -79,6 +79,58 @@ The first cost-adjusted discriminator is lane B because it is finite, directly
 uses “deck cipher” vocabulary, and can be rejected without knowing the
 plaintext source. Lanes C–G remain recorded if B fails.
 
+## First result: paired rotating decks are negative
+
+The frozen generalized-Chaocipher screen used nine source-fixed initial
+orders—natural, Trailer Altar, card-trick phrase, both physical readings of
+the outer gap/cycle, and both readings of the inner cycle—and the six nadirs
+`17,20,24,32,41,42`. All `9×9×6=486` left/right/nadir settings reset on every
+line.
+
+All 486 settings reproduce the numbered first-character oracle because the
+candidate keys rearrange letters while leaving digit positions fixed. None
+then concentrates into a plausible plaintext alphabet. Every candidate uses
+all 83 recovered ranks and reaches rank 82. Counts in the fixed low range
+`0..41` run from 370 to 419, with median 397. The maximum is:
+
+```text
+left=outer-cycle-ccw  right=natural  nadir=20
+low ranks = 419/761 = .550591
+```
+
+Its rendered first line is visibly mixed with out-of-range symbols, and the
+other lines behave the same way. With a uniform wrong mapping the expected
+low count is `761×42/83≈385`; maximizing 486 correlated settings readily
+explains this modest excess. Close the historical paired-rotation lane. This
+does not reject every possible two-deck cipher, but further nadir or arbitrary
+keyword scans would violate the lane's stop rule.
+
+Executable audit:
+[`audit_sdlwdr_cipher6_paired_decks.py`](../scripts/audit_sdlwdr_cipher6_paired_decks.py).
+
+## Second freeze: circle-authored base permutation
+
+The next test is not another two-deck variant. It asks whether the circle
+defines one base permutation `P` and the plaintext rank generates a family of
+83 deck operations, as in a group-autokey cipher.
+
+The admitted base permutations are fixed before scoring:
+
+- signed rotations by the displayed nontrivial row sizes `17,20,24,32`;
+- stable zero/one partitions produced by repeating the displayed alternating
+  20-bit and irregular 17-bit rows across 83 deck positions;
+- the displayed outside-to-inside composition of those two partitions;
+- only clockwise/counterclockwise tape reading and global zero-first versus
+  one-first packet order.
+
+At every character, emit the current rank of the observed card, then update
+the deck under exactly one of `P`, `P^rank`, or `P^(rank+1)`. Every line resets
+to natural order. The Trailer Altar is used only as the alternative fixed
+letter rendering, not as a fitted deck. Promotion requires a dramatic
+concentration in `0..41` across all nine lines, followed by coherent language;
+otherwise close these physical cut/partition implementations without rotating
+the bit rows or choosing rules per line.
+
 ## Why this matters for the Eyes
 
 This puzzle is the first practice example in the storehouse that explicitly

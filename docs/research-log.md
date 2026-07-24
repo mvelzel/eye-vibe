@@ -3728,3 +3728,19 @@ frozen: altar plaintext order, paired rotating decks, fixed circle cuts,
 binary stable partitions, rune-index schedules, revision differential, and
 the nine reset-prefix constraints. The finite paired-deck family is first.
 Record: `practice-puzzles/12-sdlwdr-06-in-game-deck.md`.
+
+The finite paired-deck screen is negative. Nine source-fixed initial orders
+and six circle/natural nadirs produce 486 generalized-Chaocipher settings. All
+retain the inferred numbered first symbols, but every decoded stream uses all
+83 ranks and reaches rank 82. Low-rank counts span `370..419/761`, median 397;
+the maximum uses outer-cycle counterclockwise on the left, natural on the
+right, and nadir 20. Its `.550591` in-range fraction is not a plaintext
+collapse and its rendering is gibberish.
+
+Before the next score, a distinct circle-permutation test is frozen. The only
+base permutations are signed cuts of `17,20,24,32`, stable partitions from
+the exact alternating and irregular bit rows, and their displayed
+outside-to-inside composition. Only two physical directions and two global
+packet orders are allowed. Natural-reset decoding emits current card rank,
+then applies `P`, `P^rank`, or `P^(rank+1)`. The altar fixes only the
+alternative letter rendering. Details remain in the practice record.
