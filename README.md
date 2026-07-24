@@ -194,6 +194,14 @@ quotient is worse than random header associations; the natural 9×9 edge path
 has held-out tail `0.149254`; polynomial-share events are chance finite-field
 checks; and spatial divergence/curl is null-typical.
 
+The second lateral novelty batch is complete in
+[`docs/twelfth-wide-second-batch-results-2026-07-24.md`](docs/twelfth-wide-second-batch-results-2026-07-24.md).
+Exact line-digraph closure forces 6,046 absent transitions; the apparent raw
+phase occupancy hit vanishes under accepted-trigram-preserving controls
+(`.902020` at 5,000 trials); affine-plane line sums, 373 physical shuffle
+actions, and the two-register header transducer are negative. No lane earns
+depth.
+
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
 contiguous alphabet `0..82`, and the nine messages contain 1,036 values. The

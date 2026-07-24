@@ -824,6 +824,15 @@ train/heldout `AG(2,3)` line-sum design, a fixed dictionary of physical
 83-position shuffles, and a two-register raw-direction predictor controlled
 by the factoradic header classes.
 
+That second batch is complete in
+[`twelfth-wide-second-batch-results-2026-07-24.md`](twelfth-wide-second-batch-results-2026-07-24.md).
+All five lanes close. The line-digraph model forces all 6,889 transitions and
+6,046 false positives. A direction-row shuffle makes raw-phase occupancy look
+significant, but the valid accepted-trigram/parity control gives `.902020`
+over 5,000 trials. `AG(2,3)` heldout tails are `.388060/.094527`; no one of
+373 named physical actions completes a context; and the header transducer
+ranks `81/280` and loses to its unconditioned baseline.
+
 That batch is now frozen before execution in
 [`eighth-wide-deferred-2026-07-22.md`](eighth-wide-deferred-2026-07-22.md).
 It covers static synchronization/error coding, without-replacement packets,

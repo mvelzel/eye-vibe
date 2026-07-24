@@ -2591,6 +2591,23 @@ train/heldout `AG(2,3)` line-sum design, a fixed dictionary of physical deck
 actions, and an order-two raw-direction transducer controlled by the
 independently established factoradic header classes.
 
+The second lateral batch is complete in
+`docs/twelfth-wide-second-batch-results-2026-07-24.md`. The exact line-digraph
+closure collapses to one hidden state and forces 6,046 absent transitions.
+The P-header triple nevertheless ranks first among 84 training triples by F1,
+but only because its 5,377 novel guesses obtain high recall at 9.22%
+precision; the exact support contradiction is decisive.
+
+The rejected raw phases initially show a `.004975` occupancy tail under
+within-row direction shuffles. That control destroys accepted trigrams. A
+strict validation preserving every accepted glyph, row-pair multiset, and
+triangle parity gives `.910448` at 200 controls and `.902020` at 5,000; marker
+and row-boundary tests also fail. Train/heldout affine-plane line sums give
+`.388060` over `F5` and `.094527` over `F83`. A 373-action physical shuffle
+dictionary completes no nonliteral context and is worse than its null. The
+order-two header-controlled raw transducer ranks `81/280` and scores
+`626/2601`, below the unconditioned `628/2601`.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly
