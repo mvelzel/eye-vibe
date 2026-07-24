@@ -44,6 +44,15 @@ positive result.
 inspect which repeated edges form cycles or predict endpoints. Otherwise close
 the literal graph-route compression reading.
 
+**Retrospective practice-cipher transfer, 24 July.** Cipher 3 revealed a useful
+secondary discriminator: invert row-conditional edge occupancy to estimate
+the number of equiprobable outgoing actions. The Eye bodies have 1,018
+transitions, 843 distinct edges, maximum out/in degree `19/18`, and effective
+uniform choice count `33.426694`. A 42-action predecessor model is therefore
+compatible, unlike Cipher 3's approximately 69-choice graph. It is not
+promoted: this statistic was added retrospectively, and the frozen
+prefix-tree-preserving edge-reuse test remains only `87/2001 = .043478`.
+
 ## Lane B — two-dimensional local rewrite sheet
 
 **Interpretation.** The visual rows are successive states of a small cellular

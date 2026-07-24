@@ -12,6 +12,7 @@ from pathlib import Path
 
 from eye_mystery.deck_selected import ACTIONS, selected_action_indices
 from eye_mystery.deck_shuffles import standard_base_candidates
+from eye_mystery.practice_cipher4_factor import serial_mutual_information
 from eye_mystery.practice_cipher5 import (
     decode_dynamic_substitution,
     encode_dynamic_substitution,
@@ -59,6 +60,308 @@ RECOVERED_WHEEL_COORDINATES = {
     card: coordinate
     for coordinate, card in enumerate(RECOVERED_WHEEL_CARDS)
 }
+
+
+def common_prefix_length(
+    left: Sequence[int],
+    right: Sequence[int],
+) -> int:
+    """Return the number of literally equal leading values."""
+
+    return next(
+        (
+            index
+            for index, (left_value, right_value) in enumerate(
+                zip(left, right, strict=False)
+            )
+            if left_value != right_value
+        ),
+        min(len(left), len(right)),
+    )
+
+
+@dataclass(frozen=True)
+class PrefixRelation:
+    left: str
+    right: str
+    full_length: int
+    body_length: int
+
+
+def prefix_relations(
+    streams: Mapping[str, Sequence[Sequence[int]]] | None = None,
+) -> tuple[PrefixRelation, ...]:
+    """Inventory every nonempty literal prefix shared by two reset streams."""
+
+    if streams is None:
+        streams = load_cipher3()
+    named = tuple(
+        (f"{group}{index}", tuple(message))
+        for group in GROUPS
+        for index, message in enumerate(streams[group])
+    )
+    relations = []
+    for left_index, (left_name, left) in enumerate(named):
+        for right_name, right in named[left_index + 1 :]:
+            full = common_prefix_length(left, right)
+            body = common_prefix_length(left[1:], right[1:])
+            if full or body:
+                relations.append(
+                    PrefixRelation(left_name, right_name, full, body)
+                )
+    return tuple(
+        sorted(
+            relations,
+            key=lambda relation: (
+                -relation.body_length,
+                -relation.full_length,
+                relation.left,
+                relation.right,
+            ),
+        )
+    )
+
+
+def shuffled_body_prefix_maxima(
+    streams: Mapping[str, Sequence[Sequence[int]]] | None = None,
+    *,
+    controls: int,
+    seed: int,
+) -> tuple[int, ...]:
+    """Shuffle every body independently and retain its maximum pairwise LCP.
+
+    Each control preserves every message's exact symbol multiset and length.
+    Random shuffles that create an adjacent double are retried, preserving the
+    observed no-double condition as well.
+    """
+
+    if controls < 1:
+        raise ValueError("at least one control is required")
+    if streams is None:
+        streams = load_cipher3()
+    bodies = [
+        tuple(message[1:])
+        for group in GROUPS
+        for message in streams[group]
+    ]
+    rng = random.Random(seed)
+    maxima = []
+    for _ in range(controls):
+        shuffled = []
+        for body in bodies:
+            candidate = list(body)
+            for _attempt in range(10_000):
+                rng.shuffle(candidate)
+                if all(
+                    left != right
+                    for left, right in zip(candidate, candidate[1:])
+                ):
+                    break
+            else:
+                raise RuntimeError("could not construct a no-double control")
+            shuffled.append(tuple(candidate))
+        maxima.append(
+            max(
+                common_prefix_length(left, right)
+                for left_index, left in enumerate(shuffled)
+                for right in shuffled[left_index + 1 :]
+            )
+        )
+    return tuple(maxima)
+
+
+@dataclass(frozen=True)
+class TransitionGraphAudit:
+    events: int
+    unique_edges: int
+    repeated_events: int
+    maximum_multiplicity: int
+    maximum_outdegree: int
+    maximum_indegree: int
+    effective_uniform_choices: float
+
+
+def _effective_uniform_choices(
+    visits: Sequence[int],
+    observed_distinct: int,
+) -> float:
+    """Invert the uniform occupancy expectation for the observed row visits."""
+
+    lower = 1.0
+    upper = 10_000.0
+    for _ in range(100):
+        choices = (lower + upper) / 2
+        expected = sum(
+            choices * (1 - (1 - 1 / choices) ** count)
+            for count in visits
+        )
+        if expected < observed_distinct:
+            lower = choices
+        else:
+            upper = choices
+    return (lower + upper) / 2
+
+
+def transition_graph_audit(
+    streams: Mapping[str, Sequence[Sequence[int]]] | None = None,
+) -> TransitionGraphAudit:
+    """Summarize the previous-ciphertext directed transition graph."""
+
+    if streams is None:
+        streams = load_cipher3()
+    transitions = tuple(
+        (left, right)
+        for group in GROUPS
+        for message in streams[group]
+        for left, right in zip(message, message[1:])
+    )
+    multiplicities = Counter(transitions)
+    outgoing: dict[int, set[int]] = {
+        value: set() for value in range(SIZE)
+    }
+    incoming: dict[int, set[int]] = {
+        value: set() for value in range(SIZE)
+    }
+    visits = Counter()
+    for left, right in multiplicities:
+        outgoing[left].add(right)
+        incoming[right].add(left)
+    for left, _right in transitions:
+        visits[left] += 1
+    unique_edges = len(multiplicities)
+    return TransitionGraphAudit(
+        len(transitions),
+        unique_edges,
+        len(transitions) - unique_edges,
+        max(multiplicities.values()),
+        max(map(len, outgoing.values())),
+        max(map(len, incoming.values())),
+        _effective_uniform_choices(
+            tuple(visits[value] for value in range(SIZE)),
+            unique_edges,
+        ),
+    )
+
+
+def standard_action_stream(
+    message: Sequence[int],
+    transform: str,
+) -> tuple[int, ...]:
+    """Apply one fixed standard-order C83 path transform."""
+
+    if transform == "raw":
+        return tuple(message)
+    if transform in ("difference-forward", "difference-backward"):
+        sign = 1 if transform == "difference-forward" else -1
+        return tuple(
+            sign * (right - left) % SIZE
+            for left, right in zip(message, message[1:])
+        )
+    if transform in ("accumulate-forward", "accumulate-backward"):
+        sign = 1 if transform == "accumulate-forward" else -1
+        value = 0
+        output = []
+        for symbol in message:
+            value = (value + sign * symbol) % SIZE
+            output.append(value)
+        return tuple(output)
+    raise ValueError(f"unknown action transform: {transform}")
+
+
+@dataclass(frozen=True)
+class ActionWidthScore:
+    transform: str
+    width: int
+    coordinate: str
+    training_excess: float
+    heldout_b_excess: float
+    heldout_c_excess: float
+
+
+def _serial_excess(
+    streams: Sequence[Sequence[int]],
+    *,
+    controls: int,
+    rng: random.Random,
+) -> float:
+    observed = serial_mutual_information(streams)
+    null = []
+    for _ in range(controls):
+        shuffled = []
+        for stream in streams:
+            values = list(stream)
+            rng.shuffle(values)
+            shuffled.append(tuple(values))
+        null.append(serial_mutual_information(shuffled))
+    return observed - sum(null) / len(null)
+
+
+def action_width_scores(
+    streams: Mapping[str, Sequence[Sequence[int]]] | None = None,
+    *,
+    controls: int,
+    seed: int,
+) -> tuple[ActionWidthScore, ...]:
+    """Screen standard C83 path transforms and contiguous quotient widths."""
+
+    if controls < 1:
+        raise ValueError("at least one control is required")
+    if streams is None:
+        streams = load_cipher3()
+    transforms = (
+        "raw",
+        "difference-forward",
+        "difference-backward",
+        "accumulate-forward",
+        "accumulate-backward",
+    )
+    rows = []
+    rng = random.Random(seed)
+    for transform in transforms:
+        transformed = {
+            group: tuple(
+                standard_action_stream(message, transform)
+                for message in streams[group]
+            )
+            for group in GROUPS
+        }
+        for width in range(2, 43):
+            for coordinate in ("quotient", "remainder"):
+                projected = {
+                    group: tuple(
+                        tuple(
+                            value // width
+                            if coordinate == "quotient"
+                            else value % width
+                            for value in message
+                        )
+                        for message in transformed[group]
+                    )
+                    for group in GROUPS
+                }
+                rows.append(
+                    ActionWidthScore(
+                        transform,
+                        width,
+                        coordinate,
+                        _serial_excess(
+                            projected["A"],
+                            controls=controls,
+                            rng=rng,
+                        ),
+                        _serial_excess(
+                            projected["B"],
+                            controls=controls,
+                            rng=rng,
+                        ),
+                        _serial_excess(
+                            projected["C"],
+                            controls=controls,
+                            rng=rng,
+                        ),
+                    )
+                )
+    return tuple(rows)
 
 
 @dataclass(frozen=True)

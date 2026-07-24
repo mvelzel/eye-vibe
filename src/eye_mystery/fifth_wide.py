@@ -20,6 +20,54 @@ def directed_edge_reuse(streams: Sequence[Sequence[int]]) -> tuple[int, int, int
 
 
 @dataclass(frozen=True)
+class TransitionOccupancy:
+    events: int
+    distinct_edges: int
+    maximum_outdegree: int
+    maximum_indegree: int
+    effective_uniform_choices: float
+
+
+def transition_occupancy(
+    streams: Sequence[Sequence[int]],
+) -> TransitionOccupancy:
+    """Estimate a uniform action count from row-conditional edge occupancy."""
+
+    edges = tuple(
+        (left, right)
+        for stream in streams
+        for left, right in zip(stream, stream[1:])
+    )
+    outgoing: dict[int, set[int]] = {}
+    incoming: dict[int, set[int]] = {}
+    visits = Counter()
+    for left, right in edges:
+        outgoing.setdefault(left, set()).add(right)
+        incoming.setdefault(right, set()).add(left)
+        visits[left] += 1
+    distinct = sum(map(len, outgoing.values()))
+    lower = 1.0
+    upper = 10_000.0
+    for _ in range(100):
+        choices = (lower + upper) / 2
+        expected = sum(
+            choices * (1 - (1 - 1 / choices) ** count)
+            for count in visits.values()
+        )
+        if expected < distinct:
+            lower = choices
+        else:
+            upper = choices
+    return TransitionOccupancy(
+        len(edges),
+        distinct,
+        max(map(len, outgoing.values()), default=0),
+        max(map(len, incoming.values()), default=0),
+        (lower + upper) / 2,
+    )
+
+
+@dataclass(frozen=True)
 class CellularFit:
     correct: int
     samples: int

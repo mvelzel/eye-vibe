@@ -4,7 +4,9 @@
 cycle decompositions remain undecided exactly, but corrected bounded searches
 make them poor candidates for the complete corpus. A later breadth pass also
 rejects direct reuse of the solved ciphers 1/2 wheel, fixed coordinate drift,
-120,372 named physical-deck models, and cipher 5's recursive update family.
+120,372 named physical-deck models, cipher 5's recursive update family, and
+the frozen standard-coordinate quotient/action lane. A deliberate `8/43`
+literal body-prefix tree is now isolated, but does not yet select a decoder.
 
 ## What was tested
 
@@ -87,7 +89,32 @@ cipher-5 update winner   159/351/581 outside-42 events
 The `J` that controls solved ciphers 1 and 2 occurs 22 times here and its
 complete bounded control family is null. Details are in
 [`../docs/practice-cipher3-first-batch-results-2026-07-24.md`](../docs/practice-cipher3-first-batch-results-2026-07-24.md).
-The standard-`C83` and label-invariant lanes remain active.
+The standard-`C83` and label-invariant lanes were retained for the second
+batch.
+
+The second batch found the missing label-invariant structure:
+
+```text
+A4/A5 body prefix 43
+A0/A4 body prefix  8
+A0/A5 body prefix  8
+A1/A3 body prefix  3
+```
+
+The unequal first symbols make a predecessor/IV interpretation plausible.
+Ten thousand no-double multiset shuffles have maximum prefix at most 4
+(`1/10001` corrected upper tail), so the tree is deliberate. It still does
+not promote a simple predecessor-only action cipher. The 2,229 adjacent
+events form 1,845 distinct directed edges, with maximum out/in degrees
+`32/33`; occupancy corresponds to about `69.041053` equiprobable outgoing
+choices rather than at most 42 language actions. A standard-`C83`
+transform/width selected on A also fails to replicate on B/C.
+
+A bounded static English-homophone optimizer remains gibberish and scores
+about 2,966 log units below its matched planted control, but the control
+recovers only 24.97%, so this is not a general exclusion. Four exact
+English/Finnish source fingerprints are negative. Full results are in
+[`../docs/practice-cipher3-second-batch-results-2026-07-24.md`](../docs/practice-cipher3-second-batch-results-2026-07-24.md).
 
 ## Solution
 
@@ -108,6 +135,10 @@ instead of presenting a timeout as an impossibility proof.
   a shorter cycle silently changes the model.
 - Do not infer that a family is wrong merely because its more symmetric
   one-cycle member is wrong.
+- Search reset streams again after removing a possible predecessor/IV; the
+  strongest Cipher 3 copy was invisible at full-message position zero.
+- A low edge-colouring number is only compatibility. Compare repeated-edge
+  occupancy with the proposed plaintext action count before optimizing words.
 
 The exact checks are implemented in
 `scripts/solve_sdlwdr_cipher3_cycle.py` and
@@ -115,4 +146,7 @@ The exact checks are implemented in
 `scripts/search_sdlwdr_cipher3_decks.py`. The heldout transfer batch is
 implemented in `src/eye_mystery/practice_cipher3_wide.py`,
 `scripts/run_practice_cipher3_first_batch.py`, and
-`scripts/run_practice_cipher3_wheel_transfer.py`.
+`scripts/run_practice_cipher3_wheel_transfer.py`. The prefix/action and static
+homophone checks are reproduced by
+`scripts/run_practice_cipher3_second_batch.py` and
+`scripts/audit_sdlwdr_cipher3_homophones.py`.

@@ -504,8 +504,24 @@ The first four results are complete in
 [`practice-cipher3-first-batch-results-2026-07-24.md`](practice-cipher3-first-batch-results-2026-07-24.md).
 All close: known-wheel heldout tail `.422886`; fixed drift `78/82/82` states;
 physical winner `136/364/582` outside-range events; recursive winner
-`159/351/581`. Continue with the already frozen standard-`C83` and
-label-invariant lanes rather than repairing these models.
+`159/351/581`.
+
+The second batch in
+[`practice-cipher3-second-batch-results-2026-07-24.md`](practice-cipher3-second-batch-results-2026-07-24.md)
+finds a deliberate label-invariant reset-body prefix tree: A4/A5 copy 43
+symbols, while A0 copies their first eight. No 10,000 no-double multiset
+controls reach five. A predecessor/IV path interpretation is plausible, but
+the adjacent-transition occupancy corresponds to about 69 uniform outgoing
+choices, not at most 42 plaintext actions. The standard-coordinate width lane
+fails B/C replication and closes. Static homophony and an unknown hidden
+cyclic order remain undecided; the bounded English homophone run is weaker
+than its partially recovered control, and a 60-second exact hidden-order run
+times out.
+
+**Next test:** exploit the authored A prefix tree only in a model that also
+explains the high transition occupancy. Prioritize randomized/homophonic
+state updates or a newly disclosed author hint; do not deepen the rejected
+predecessor-only 42-action interpolation.
 
 ### sdlwdr practice cipher 4
 

@@ -22,6 +22,7 @@ from eye_mystery.fifth_wide import (
     directed_edge_reuse,
     relabel_streams,
     rotate,
+    transition_occupancy,
     turtle_bounding_area,
 )
 from eye_mystery.language_null import prefix_tree_parity_shuffle
@@ -137,6 +138,7 @@ def main() -> None:
     raw = {name: MESSAGES[name] for name in MESSAGE_ORDER}
 
     graph_observed, transitions, distinct = directed_edge_reuse(tuple(bodies.values()))
+    graph_occupancy = transition_occupancy(tuple(bodies.values()))
     radix_observed = best_radix_fit(tuple(bodies.values()))
     graph_controls = []
     radix_controls = []
@@ -208,6 +210,11 @@ def main() -> None:
     print(
         f"  edge reuse={graph_observed}; transitions={transitions}; distinct={distinct}; "
         f"control median={median(graph_controls)}"
+    )
+    print(
+        f"  maximum out/in degree={graph_occupancy.maximum_outdegree}/"
+        f"{graph_occupancy.maximum_indegree}; effective uniform choices="
+        f"{graph_occupancy.effective_uniform_choices:.6f}"
     )
     graph_hits = sum(value >= graph_observed for value in graph_controls)
     print(f"  corrected upper tail={(graph_hits + 1)}/{args.controls + 1}={corrected(graph_hits,args.controls):.6f}")

@@ -8,6 +8,7 @@ from eye_mystery.fifth_wide import (
     cellular_leave_one_pair_out,
     directed_edge_reuse,
     radix_values,
+    transition_occupancy,
     turtle_bounding_area,
 )
 
@@ -15,6 +16,18 @@ from eye_mystery.fifth_wide import (
 class FifthWideTests(unittest.TestCase):
     def test_directed_edge_reuse(self) -> None:
         self.assertEqual(directed_edge_reuse(((1, 2, 1, 2), (2, 3))), (1, 4, 3))
+
+    def test_transition_occupancy(self) -> None:
+        score = transition_occupancy(((0, 1, 2), (0, 2, 1)))
+        self.assertEqual(
+            (
+                score.events,
+                score.distinct_edges,
+                score.maximum_outdegree,
+                score.maximum_indegree,
+            ),
+            (4, 4, 2, 2),
+        )
 
     def test_cellular_fit_recovers_shifted_center_rule(self) -> None:
         pairs = (

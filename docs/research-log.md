@@ -2753,3 +2753,45 @@ pattern. No result currently validates this crib.
    predate internal cipher construction; developer-created ideas need not
    predate their public release; decoder clues may be introduced after the
    ciphertext. Record which clock every chronological claim uses.
+
+### Practice cipher 3: the hidden reset-body prefix tree
+
+The frozen label-invariant pass found a much stronger observable than the old
+position-progression premise. Although no two relevant messages share their
+first ciphertext symbol, A4 and A5 share the next 43 symbols exactly; A0
+shares their first eight. A1/A3 also share three. Ten thousand independent
+within-message multiset shuffles, rejecting every control with an adjacent
+double, have maximum body-prefix lengths `0..4`; the 43-symbol observation has
+corrected upper tail `1/10001`.
+
+This makes a first-symbol predecessor/IV interpretation natural: different
+predecessors enter one common state, after which common plaintext actions
+trace one common path. The full transition graph stops that intuition from
+becoming a claimed solve. Its 2,229 events contain 1,845 distinct directed
+edges, maximum out/in degree `32/33`, and occupancy equivalent to
+`69.041053` uniform outgoing choices. Thus 42 partial permutation colours can
+interpolate the graph, but a predecessor-only, 42-action natural-language
+machine would repeat far more edges. The distinction between edge-colouring
+compatibility and generative evidence is the main transferable result.
+
+The standard `C83` raw/difference/accumulation width screen is selected on A
+and fails to replicate on B/C. A bounded static English homophone model remains
+gibberish and scores roughly 2,966 log units below a matched planted control;
+because that control reaches only 24.97% event accuracy, the run is not a
+general exclusion. Raw/body/both-difference source fingerprints give zero
+matches in Sherlock Holmes, English/Finnish Kalevala, and Finnish Seven
+Brothers. An exact unknown-`C83`-order/42-difference test times out at 60
+seconds and remains undecided.
+
+The complete checkpoint is
+`docs/practice-cipher3-second-batch-results-2026-07-24.md`; reproduction is in
+`scripts/run_practice_cipher3_second_batch.py` and
+`scripts/audit_sdlwdr_cipher3_homophones.py`.
+
+Applied retrospectively to the Eye bodies, the same statistic gives 1,018
+events, 843 distinct edges, maximum out/in degree `19/18`, and effective
+uniform choice count `33.426694`. Thus the Eyes are compatible with a
+42-action predecessor model whereas Cipher 3 is not. This is not new positive
+evidence: the previously frozen, prefix-tree-preserving Eye edge-reuse test had
+only `.043478` upper tail. The method distinguishes “not falsified” from
+“selected,” and the Eye lane stays closed absent a predictive edge colouring.

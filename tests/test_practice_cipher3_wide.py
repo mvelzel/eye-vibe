@@ -7,16 +7,20 @@ from eye_mystery.practice_cipher3_wide import (
     EXCEPTIONAL_RAW,
     RECOVERED_WHEEL_CARDS,
     WheelControlSemantics,
+    common_prefix_length,
     decode_recovered_wheel,
     decode_fixed_base_selected_action,
     drift_values,
     initial_deck_candidates,
     load_cipher3,
+    prefix_relations,
     recursive_transfer_scores,
     render_wheel_coordinates,
     select_fixed_drift,
     select_physical_transfer,
     select_recursive_transfer,
+    standard_action_stream,
+    transition_graph_audit,
 )
 from eye_mystery.practice_sdlwdr import (
     PUZZLE1_SHIFTS,
@@ -25,6 +29,25 @@ from eye_mystery.practice_sdlwdr import (
 
 
 class PracticeCipher3WidePrimitiveTests(unittest.TestCase):
+    def test_common_prefix_length_handles_mismatch_and_exhaustion(self) -> None:
+        self.assertEqual(common_prefix_length((1, 2, 3), (1, 2, 4)), 2)
+        self.assertEqual(common_prefix_length((1, 2), (1, 2, 3)), 2)
+
+    def test_standard_action_stream_transforms_are_exact(self) -> None:
+        message = (80, 2, 7)
+        self.assertEqual(
+            standard_action_stream(message, "difference-forward"),
+            (5, 5),
+        )
+        self.assertEqual(
+            standard_action_stream(message, "difference-backward"),
+            (78, 78),
+        )
+        self.assertEqual(
+            standard_action_stream(message, "accumulate-forward"),
+            (80, 82, 6),
+        )
+
     def test_recovered_wheel_contains_every_nonexceptional_card(self) -> None:
         self.assertEqual(len(RECOVERED_WHEEL_CARDS), 82)
         self.assertEqual(
@@ -128,6 +151,41 @@ class PracticeCipher3WideCorpusTests(unittest.TestCase):
             ),
             ("recovered82", -1, 9, 78, 82, 82),
         )
+
+    def test_literal_body_prefix_tree_is_frozen(self) -> None:
+        relations = prefix_relations(self.streams)
+        self.assertEqual(
+            [
+                (
+                    relation.left,
+                    relation.right,
+                    relation.full_length,
+                    relation.body_length,
+                )
+                for relation in relations[:4]
+            ],
+            [
+                ("A4", "A5", 0, 43),
+                ("A0", "A4", 0, 8),
+                ("A0", "A5", 0, 8),
+                ("A1", "A3", 0, 3),
+            ],
+        )
+
+    def test_transition_graph_summary_is_frozen(self) -> None:
+        audit = transition_graph_audit(self.streams)
+        self.assertEqual(
+            (
+                audit.events,
+                audit.unique_edges,
+                audit.repeated_events,
+                audit.maximum_multiplicity,
+                audit.maximum_outdegree,
+                audit.maximum_indegree,
+            ),
+            (2229, 1845, 384, 5, 32, 33),
+        )
+        self.assertAlmostEqual(audit.effective_uniform_choices, 69.041053, 5)
 
     def test_recursive_transfer_family_replays_every_emit_after_candidate(self) -> None:
         scores = recursive_transfer_scores(self.streams)

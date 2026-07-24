@@ -38,7 +38,7 @@ encrypted it is not, by itself, a useful practice-puzzle solution.
 | [Practice `two`](05-practice-two-octal-hidden-group.md) | Solved; withheld-plaintext confirmation | Compose isomorph column maps into a group, trim dirty anchors, then finish the residual codec. |
 | [sdlwdr #1 — two-cycle Wadsworth cipher](06-sdlwdr-01-wadsworth-kalevala.md) | Solved; author-confirmed | Chained isomorph maps can expose equal hidden cycles, unequal-wheel arithmetic, and a state-changing exceptional symbol. |
 | [sdlwdr #2 — drifting/reversing Wadsworth cipher](07-sdlwdr-02-reversing-wadsworth.md) | Solved; deterministic full decode | Position bands expose slow drift; a rare marker can reverse both hidden traversals. |
-| [sdlwdr #3 — unresolved progression cipher](08-sdlwdr-03-unsolved-progression.md) | Unsolved; exact `C83` progression excluded | Audit nested moduli and calibrate heuristic failure on a satisfiable subset before allocating more depth. |
+| [sdlwdr #3 — unresolved progression cipher](08-sdlwdr-03-unsolved-progression.md) | Unsolved; several finite families excluded | Remove possible IVs before comparing prefixes, then distinguish action compatibility from evidence using edge occupancy. |
 | [sdlwdr #4 — recovered cyclic layer](09-sdlwdr-04-cyclic-layer.md) | Partially reduced; plaintext unresolved | Exact repeats prove an outer action; a wide quotient screen can preserve mechanism clues without inventing plaintext. |
 | [sdlwdr #5 — recursive increasing-chunk shuffle](10-sdlwdr-05-recursive-chunks.md) | Solved; exact replay | Equality-pattern repetitions can select a recursive state-update law before plaintext letters are assigned. |
 

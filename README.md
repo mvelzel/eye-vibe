@@ -104,7 +104,18 @@ and the first results are in
 Direct reuse of the solved ciphers-1/2 wheel is null on heldout groups
 (`.422886`); fixed drift, 120,372 physical deck models, and cipher-5's
 recursive updates all fail the 42-symbol range by wide margins. The puzzle
-remains unsolved; its standard-`C83` and label-invariant lanes remain active.
+remains unsolved.
+
+The second results are in
+[`docs/practice-cipher3-second-batch-results-2026-07-24.md`](docs/practice-cipher3-second-batch-results-2026-07-24.md).
+They isolate a deliberate body-prefix tree (`A4/A5=43`,
+`A0/A4=A0/A5=8`; no 10,000 matched controls reach 5), then use it as a
+mechanism test rather than a plaintext guess. The directed transition graph
+needs only 33 partial permutation colours but has occupancy equivalent to
+about 69 uniform outgoing choices, making a simple predecessor-state/42-action
+reading poor. The frozen standard-`C83` width screen does not replicate on
+B/C; static homophony remains only a bounded negative because its planted
+control is not fully recovered.
 
 The next Eye pass deliberately changes the question from “how can these
 numbers be read?” to “what small mechanism caused the equality and
