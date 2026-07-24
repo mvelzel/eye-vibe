@@ -417,6 +417,12 @@ plaintext. Exact scope and reproduction are in
 In parallel, formalize deck chaining first as a label-invariant quotient or
 constraint-propagation rule and require it to recover a solvable GCTAK/practice
 fixture. Do not infer merged operation classes from the Eye patterns alone.
+An exact one-swap XGAK counterexample now sharpens that warning: the same two
+no-double paths with a shared prefix and visible final rejoin admit one key
+where `A` and `B` operations are equal and final states coincide, and another
+where both facts are false. Visible reconvergence alone cannot identify the
+operation quotient. A future deck-chaining method needs known plaintext,
+fixed output positions, a bounded operation family, or chosen-path coverage.
 The exact trailer proposal has now been audited: all nine candidate start
 digits share one class, but the categories fail positionwise equality for all
 three concrete funny-obstacle pairs. Retain it only as a start selector until
@@ -778,6 +784,17 @@ fails the scale gate. Carrier attribution finds no existing body result that
 predicts a genuinely new context. The next batch should remain mixed across
 reconvergence, reset-state, renderer-width, and independently specified
 in-game interfaces before any one branch deepens.
+
+The second mixed batch is complete in
+[`eleventh-wide-second-batch-results-2026-07-24.md`](eleventh-wide-second-batch-results-2026-07-24.md).
+The symbolic GAK solver crosses its planted gate but not an Eye-relevant
+prefix. A one-swap XGAK construction proves visible reconvergence cannot by
+itself identify hidden operation or final-state equality. Reset and renderer
+classifiers are subsumed by prior exact negatives. A complete Lua arithmetic
+grammar finds no 42/83 loop or domain, no mod-42/83/101, and zero
+target-derived table lookups; the known 83-of-101 wand branch remains the only
+exact 83 partition. Native immediate mining is nonselective and now requires
+an independently named call path.
 
 That batch is now frozen before execution in
 [`eighth-wide-deferred-2026-07-22.md`](eighth-wide-deferred-2026-07-22.md).

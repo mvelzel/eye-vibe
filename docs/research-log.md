@@ -2528,6 +2528,22 @@ null-typical, and the newer change-point searches select 42 or 55 rather than
 25/26. Full results and reproduction are in
 `docs/eleventh-wide-second-batch-results-2026-07-24.md`.
 
+The remaining second-batch lanes also close. A six-card, one-hidden-swap XGAK
+counterexample emits the same two no-double, prefix-sharing, visibly
+reconvergent paths under two keys. In one key the tested operations and final
+states are equal; in the other both are unequal. Thus ciphertext
+reconvergence alone cannot reveal the withheld action relation.
+
+A complete literal Lua arithmetic grammar over the current WAK finds no
+mod-42/83/101, no 42/83-sized random domain or numeric loop, and no produced
+9/42/83/101 value flowing into a table index. It finds 114 ordinary
+101-outcome random domains, ten nine-outcome domains, one nine-step
+clusterbomb loop, and the two known `Random(0,100)<83` wand branches. Semantic
+inspection yields no state walk or Eye lookup. The practice-transfer backstop
+also closes because none of these methods honestly applies to the disclosed
+construction of unsolved sdlwdr ciphers 3 or 4; those puzzles remain active
+separately.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly

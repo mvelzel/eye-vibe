@@ -120,3 +120,130 @@ therefore provide no held-out signal that selects the authored width.
 **Decision:** close generic renderer-position inference. A later clue may
 still name a particular coordinate, but it must predict a body event not used
 to choose that coordinate.
+
+## B. Composite-action collision calibration
+
+This lane fails by exact non-identifiability before a statistical extractor is
+admissible. A six-card, three-symbol XGAK fixture uses distinct output
+positions:
+
+```text
+A -> 1
+B -> 2
+C -> 3
+```
+
+and the two reset plaintext paths:
+
+```text
+C A B C A
+C B C B A
+```
+
+Under key 1, all three deck operations are identity. Under key 2, `A` alone
+swaps hidden positions 4 and 5; `B` and `C` remain identity. Both keys emit
+exactly:
+
+```text
+3 1 2 3 1
+3 2 3 2 1
+```
+
+The paths have a shared prefix, diverge, contain no adjacent doubles, and
+rejoin on the final visible card. Yet:
+
+- `operation[A] == operation[B]` under key 1 and not under key 2;
+- the two final hidden decks are equal under key 1 and unequal under key 2.
+
+The hidden transposition is a legal one-swap XGAK action and every plaintext
+symbol has a distinct output from the reset deck. Thus the complete proposed
+ciphertext observation is identical while both the withheld operation-pair
+relation and composed-state collision change. More swaps or matched controls
+cannot repair a missing invariant.
+
+**Decision:** close mechanism-independent inference from visible rejoin events.
+A future deck-chaining attack must introduce additional observations—known
+plaintext, fixed output positions, an independently bounded operation family,
+or enough chosen paths to cover the hidden action domain.
+
+## E. Executable later-clue interface
+
+A static scanner was frozen around executable cardinality producers rather
+than free numeric literals:
+
+1. literal modulo by 9, 42, 83, or 101;
+2. inclusive `Random(a,b)` domains of those exact sizes;
+3. comparisons that partition a literal random domain into one of those exact
+   sizes;
+4. literal numeric `for` loops of those exact lengths;
+5. direct or twenty-line assignment flow from a produced value into a Lua
+   table index.
+
+Across all 1,077 Lua files in the installed 14,745-entry WAK:
+
+```text
+cardinality  modulo  random domain  random partition  numeric loop
+9            0       10             4                 1
+42           0        0             0                 0
+83           0        0             2                 0
+101          0      114             0                 0
+
+target-derived lookup flows: 0
+```
+
+The two 83 partitions are the already known copies of
+`Random(0,100) < 83`. They choose modifier versus draw-many wand actions; they
+do not retain the selected integer, walk an 83-state structure, or index the
+83-name table. The four nine-sized partitions are three complements of
+one-in-ten events and a Valentine's potion chance. The only nine-step loop
+spawns nine clusterbomb fragments. The ten nine-way random domains are local
+coordinate jitter, one biome coordinate, and a mimic event. None supplies an
+Eye consumer.
+
+The broader exact-size inventory remains unchanged: one copied 83-name list,
+one ordinary 42-child creature XML, and no 42/101 Lua table. Native x86
+immediates are too nonspecific for a literal-only claim: disassembly contains
+77 uses of `0x53`, 125 of `0x65`, and 201 of `0x2a`, intermixed with character
+bytes, dimensions, and ordinary constants. A native claim therefore needs a
+named handler or semantic decompilation target; raw immediate mining is
+forbidden.
+
+**Decision:** close the bounded Lua/data arithmetic-interface lane. Preserve
+the known 83-of-101 wand branch as genuine later construction vocabulary, but
+it still predicts no unseen Eye quantity. Reopen native code only when another
+clue selects a function or call path.
+
+## F. Practice transfer backstop
+
+No method produced in lanes A–E satisfies the practice-transfer gate:
+
+- the unknown-GAK solver assumes identity-reset arbitrary permutations, while
+  practice cipher 3 has a supplied cyclic/progression construction and cipher
+  4 already has a solved cyclic outer layer;
+- the XGAK result is a non-identifiability counterexample, not an inference
+  method;
+- the arithmetic-signature scanner is specific to authored Noita assets.
+
+Applying any of these to practice 3 or 4 would therefore be an unconstrained
+model change rather than a held-out transfer test.
+
+**Decision:** close only this batch's transfer lane. Practice ciphers 3 and 4
+remain unsolved and active on their own ledger entries. Resume them with a new
+invariant native to their disclosed constructions, not because the Eye batch
+needs another data set.
+
+## Second-batch decision
+
+No body decoder or plaintext results. All six lanes now have bounded outcomes:
+
+- symbolic ordinary GAK crosses planted calibration but stalls at 3–4 Eye
+  glyphs;
+- visible XGAK reconvergence cannot identify hidden action equality;
+- reset and renderer classifiers are subsumed by stronger negatives;
+- installed Lua/data contains no executable target-cardinality lookup;
+- no new method transfers honestly to the unsolved practice puzzles.
+
+The next phase may therefore step back. It must begin with a broad map of
+mechanisms that are not merely variants of these six lanes, freeze cheap
+falsifiers for all of them, and deepen only after the mixed first batch is
+complete.

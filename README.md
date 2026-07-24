@@ -171,7 +171,10 @@ with 26 before the solver frontier. Every SAT witness is extended to full
 83-card permutations and replayed exactly; the short prefixes are
 underconstrained compatibility, not evidence for GAK. Generic reset-regime and
 renderer-position inference close because their proposed discriminators are
-already subsumed by exact negatives or fail held-out prediction.
+already subsumed by exact negatives or fail held-out prediction. A one-swap
+XGAK counterexample also proves that visible rejoining alone cannot identify
+hidden action equality. The installed Lua/data arithmetic grammar finds no
+target-cardinality lookup beyond the already known 83-of-101 wand branch.
 
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
