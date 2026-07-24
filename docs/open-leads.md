@@ -1273,3 +1273,19 @@ rank `72/75`, but Q is full `84/84` over all three fields; all 200 controls are
 at least as deficient, corrected tail `1`, and heldout rank excess `12`. Both
 deeper registered blocks are also full at their limiting dimension. Details:
 [`seventeenth-lane-c-hankel-results-2026-07-24.md`](seventeenth-lane-c-hankel-results-2026-07-24.md).
+
+### Final-row gap anchors and headers
+
+**Status:** newly recovered from the 22 July Discord discussion; control
+protocol frozen, not yet scored.
+
+After the copied 20-symbol opening, each of `east4,west4,east5` has exactly
+one clean repeat at gap 11. Its anchor values are `75,81,48`. Their directed
+differences reproduce all three headers: `75-48=27`, `75-81=77`, and
+`81-48=33 mod 83`. The link is objectively interesting but the gap and
+difference presentation were inspected retrospectively.
+
+The frozen audit therefore runs both the exact reported formula and a broad
+selection correction that lets every one of 50,000 matched shuffles search
+gaps 2–30 and all six anchor orderings. Details:
+[`eighteenth-gap-anchor-freeze-2026-07-24.md`](eighteenth-gap-anchor-freeze-2026-07-24.md).

@@ -3406,3 +3406,28 @@ their limiting dimensions. Every control's nonnegative Q deficit is at least
 the real zero, giving corrected tail `201/201 = 1`; Q rank exceeds P by 12.
 This closes the registered shallow raw-label empirical-Hankel lane. Details:
 `docs/seventeenth-lane-c-hankel-results-2026-07-24.md`.
+
+A subsequent read-only sweep of recent `silmä-cryptography` and `silmä-novel`
+adds no solve, but sharpens two directions. Historical cryptography messages
+explicitly distinguish reversible GAK/permutation state from irreversible
+state collapse and Alberti-style control symbols that override state and are
+discarded on decryption. Those mechanisms can preserve long isomorphs and
+break them at isolated events, so they strengthen seventeenth lanes D/G
+without supplying a fitted reset map.
+
+The newest controller/tutorial-stone glitch has a direct mundane explanation
+in both the installed 14,745-entry WAK and the public 2021 asset history.
+Mountain background scenes choose keyboard or gamepad art with
+`GameGetIsGamepadConnected()` during scene initialization; individual control
+emitters make a separate check when their spawn marker is processed, and
+collision triggers later enable their components. Changing input mode during
+loading can therefore mismatch the baked background and glowing overlay.
+There is no Eye data path or cryptographic operation in these scripts.
+
+One recent numerical observation was absent from the ledger and merits an
+exact audit. After the final family's copied 20-symbol opening, the unique
+clean gap-11 repeat anchors are `75,81,48`; their directed differences are
+the marker values `27,77,33`. Because both the gap and presentation were
+seen, a 50,000-control freeze lets every shuffle search gaps 2–30 and all
+anchor orders. No control has been run yet. Protocol:
+`docs/eighteenth-gap-anchor-freeze-2026-07-24.md`.
