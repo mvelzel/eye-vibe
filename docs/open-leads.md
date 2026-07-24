@@ -901,3 +901,23 @@ mod-101 cocycle is exactly inconsistent: 57 contradictions among 786 equations
 on one 729-node component. The early/current Lua trees supply 337/975 engine
 RNG calls but no implementation, and the exact table inventory supplies no
 frequency model. Details and reproduction are in the eighth-batch document.
+
+### Eye isomorphs as constraints on an unknown geometry
+
+The practice-cipher reflection result suggests a new Eye-side question, now
+frozen broadly in
+`docs/thirteenth-wide-hidden-geometry-horizon-2026-07-24.md`. The seven
+nonliteral isomorph contexts provide 141 aligned adjacent-step pairs touching
+71 labels. A whole context acting as a rotation/reflection is old and already
+excluded as a subcase of the hidden affine action. The new exact lane is
+weaker: corresponding steps need only have the same unsigned distance on one
+unknown 83-cycle, with an independent orientation per step.
+
+Before any deep wheel search, twelve nearby models have been separated:
+adjacent chords, a multi-lag ladder, chord-collision preservation, piecewise
+orientation, context gains, distance substitution, turn grammar, circular
+betweenness, cross-family prediction, completion entropy, planted recovery,
+and only lastly an authored in-game selector join. The first implementation
+is restricted to exact adjacent/multi-lag satisfiability. A satisfiable fit
+cannot promote until its wheel is identifiable on planted data and predicts
+one isomorph family from the other.

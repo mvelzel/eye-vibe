@@ -2825,3 +2825,22 @@ Freeze and results are
 `docs/practice-cipher3-reflection-wheel-freeze-2026-07-24.md` and
 `docs/practice-cipher3-reflection-wheel-results-2026-07-24.md`; implementation
 is in `src/eye_mystery/practice_cipher3_reflection.py`.
+
+### Wide freeze: recovering hidden geometry from Eye isomorphs
+
+The Cipher-3 reflection-wheel failure identifies a transferable bottleneck:
+language scoring could solve the substitution when the wheel was fixed, but
+could not recover an arbitrary 83-point wheel even on planted data. The Eyes
+have seven nonliteral equality-isomorphic windows that may constrain geometry
+directly, so a new twelve-lane breadth map was frozen before optimization in
+`docs/thirteenth-wide-hidden-geometry-horizon-2026-07-24.md`.
+
+The prior-work boundary matters. Requiring every context map to be one
+rotation or reflection is a dihedral subgroup of the already excluded
+arbitrary-label affine action. The new first hypothesis instead equates only
+the unsigned hidden-wheel lengths of corresponding textual steps, allowing
+each step to choose its own orientation. Across the seven fixed contexts this
+supplies 141 unique equations on 71 observed labels. Exact adjacent and
+multi-lag satisfiability, planted recoverability, solution multiplicity, and
+first-family/last-family prediction are specified before any candidate wheel
+or plaintext may be scored.

@@ -127,6 +127,15 @@ recover planted controls perfectly, but real scores remain near `-15.4` per
 trigram and render gibberish. An arbitrary hidden wheel is explicitly
 undecided because its optimizer recovers only `9.02%` of its own control.
 
+The method transfer back to the Eyes begins with a new breadth freeze in
+[`docs/thirteenth-wide-hidden-geometry-horizon-2026-07-24.md`](docs/thirteenth-wide-hidden-geometry-horizon-2026-07-24.md).
+It distinguishes twelve possible uses of an unknown 83-point geometry before
+fitting one. In particular, whole-context rotations/reflections are already
+inside the excluded hidden affine family; the genuinely new first test asks
+only whether corresponding adjacent steps have equal unsigned hidden-wheel
+distance. Exact lag-ladder, identifiability, planted-recovery, and
+cross-family gates are specified before a wheel may be interpreted.
+
 The next Eye pass deliberately changes the question from “how can these
 numbers be read?” to “what small mechanism caused the equality and
 reconvergence structure?” Its fourteen-lane breadth map is frozen in
