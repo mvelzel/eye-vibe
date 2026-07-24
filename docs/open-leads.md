@@ -833,6 +833,13 @@ over 5,000 trials. `AG(2,3)` heldout tails are `.388060/.094527`; no one of
 373 named physical actions completes a context; and the header transducer
 ranks `81/280` and loses to its unconditioned baseline.
 
+The final wide batch is frozen in
+[`twelfth-wide-third-batch-freeze-2026-07-24.md`](twelfth-wide-third-batch-freeze-2026-07-24.md).
+It tests transition-spectrum concentration and a small five-ary convolutional
+syndrome, then closes or advances storage bitplanes, conventional cipher
+modes, and executable clue interfaces only under explicit identifiability and
+selector gates.
+
 That batch is now frozen before execution in
 [`eighth-wide-deferred-2026-07-22.md`](eighth-wide-deferred-2026-07-22.md).
 It covers static synchronization/error coding, without-replacement packets,

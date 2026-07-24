@@ -2608,6 +2608,14 @@ dictionary completes no nonliteral context and is worse than its null. The
 order-two header-controlled raw transducer ranks `81/280` and scores
 `626/2601`, below the unconditioned `628/2601`.
 
+The remaining wide lanes are frozen in
+`docs/twelfth-wide-third-batch-freeze-2026-07-24.md`. A read-only review of the
+latest crypto/novel discussion finds no independently selected in-game deck
+interface beyond the shared number 83. The batch gives new finite tests to
+spectral concentration and five-ary convolutional syndromes, while storage
+bitplanes, conventional modes, and executable clue paths must pass existing
+selector and identifiability gates rather than receive another free scan.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly
