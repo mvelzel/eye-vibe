@@ -2930,3 +2930,16 @@ blocked. Orders `8,10,12,14,16,20,24` were evaluated only on the planted
 fixture. Order 14 is the smallest that exactly recovers the planted third-eye
 selector, natural lane order, concatenation, and zero reversal mask; order 24
 also succeeds. Order 14 is frozen before any real Eye selector score.
+
+The real selector result is negative. P selects
+`s1:concatenate:order=3,0,2,1,4:reverse=10111`, with train improvement only
+`+0.009392391`; applied unchanged to Q it gives `-0.776995317`. Two of the
+first three global-label controls exceed that held-out value. Even if none of
+the remaining 197 did, the corrected tail would be
+`3/201 = 0.014925373`, so the frozen `.01` promotion line is unreachable and
+the run stops exactly.
+
+This closes only the stable global five-lane selector family. Per-header
+selectors and fitted lane codebooks are disallowed repairs. Full evidence is
+in `docs/fourteenth-selector-results-2026-07-24.md`; the next lateral test is
+the shared-linear-generator lane C.

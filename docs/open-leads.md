@@ -973,3 +973,13 @@ predictive-state, checksum-type, end-around-complement, adjacent-motion,
 recursive-trie, executable-interface, and historical-version lanes. If the
 selector transfer fails, the next move is lateral to the shared recurrence or
 canonical automaton; selector-specific codebooks are forbidden.
+
+**Lane-A result:** closed. The calibrated audit exactly recovers its planted
+five-way interleaving. The P-selected real convention has held-out improvement
+`-0.776995317`; two of the first three global-label controls exceed it.
+Therefore its corrected tail is already at least
+`3/201 = 0.014925373`, above the frozen `.01` line. Details:
+[`fourteenth-selector-results-2026-07-24.md`](fourteenth-selector-results-2026-07-24.md).
+
+The shared-linear-generator lane C is next. Do not fit per-header selector
+orders, stateful lane substitutions, or lane-specific alphabets to repair A.

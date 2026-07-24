@@ -164,6 +164,14 @@ return-time coding, checksum-type metadata, recursive trie checks, and
 operation-interface archaeology remain separate lanes; none may be silently
 converted into parameters of the selector test.
 
+The first transfer result is complete in
+[`docs/fourteenth-selector-results-2026-07-24.md`](docs/fourteenth-selector-results-2026-07-24.md).
+The exact planted five-way demultiplexer is recovered, while the P-selected
+Eye convention loses `0.776995317` per pattern on Q. Two of the first three
+global-label controls beat it, proving the corrected tail is already at least
+`3/201 = 0.014925373`. The lane closes without a candidate plaintext; the
+next test moves laterally to a shared generator or canonical automaton.
+
 The next Eye pass deliberately changes the question from “how can these
 numbers be read?” to “what small mechanism caused the equality and
 reconvergence structure?” Its fourteen-lane breadth map is frozen in

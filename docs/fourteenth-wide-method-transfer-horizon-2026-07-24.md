@@ -137,3 +137,17 @@ global-label null.
   lane. Do not translate symbols immediately.
 - Keep the unresolved lag-1 geometry and recursive trie checksum on the
   ledger. Breadth-first selection pauses them; it does not reject them.
+
+## First-lane result
+
+Lane A is closed in its frozen form. The order-14 positive control recovers
+the exact planted five-way selector, concatenation, lane order, and reversal
+mask. The real winner has train improvement `+0.009392391` and held-out
+improvement `-0.776995317`. Two of the first three global-label controls
+exceed the observed held-out result, proving a corrected tail of at least
+`3/201 = 0.014925373`; the `.01` promotion line cannot be reached.
+
+Full results are in
+[`fourteenth-selector-results-2026-07-24.md`](fourteenth-selector-results-2026-07-24.md).
+Per the frozen branch rule, continue laterally to lane C or D rather than
+adding selector-dependent codebooks.
