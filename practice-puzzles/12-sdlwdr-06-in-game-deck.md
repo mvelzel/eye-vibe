@@ -236,6 +236,44 @@ family. Promotion requires the same near-total collapse into `0..41`; no
 per-symbol direction, distance table, or arbitrary class permutation may be
 fit afterward.
 
+## Fourth result: thirteen ordinal cut classes are negative
+
+All 16 pre-registered settings preserve the numbered first symbols, but every
+one uses all 83 ranks through 82. The maximum is:
+
+```text
+binary=cw  class-order=first-occurrence  N=class+1  cut=right
+low ranks = 407/761 = .534823
+```
+
+This is another ordinary mixed-rank stream. Close ordinal `0..12` class
+numbers as direct cut distances.
+
+Executable audit:
+[`audit_sdlwdr_cipher6_tape_classes.py`](../scripts/audit_sdlwdr_cipher6_tape_classes.py).
+
+## Fifth freeze: altar-valued per-rank cuts
+
+The ordinal test discarded a meaningful part of the altar clue: its proposed
+alphabet assigns actual positions to the letters. The next family maps the
+tape symbols through one of only two documented keyed letter orders:
+
+```text
+trailer runes:  BDMAGICKEFHJLNOPQRSTUVWXYZ
+card-trick key: ABDMGICRTKEFHJLNOPQSUVWXYZ
+```
+
+For each, admit two ways to incorporate the nonletters:
+
+1. append digits and space, so `0=26`, `1=27`, `space=36`;
+2. take the circle bits literally as `0/1` and make phrase spaces zero-width.
+
+The resulting tape value at recovered plaintext rank selects a first-`N` cut.
+Test value versus value-plus-one, left/right globally, and the two physical
+binary readings: `2×2×2×2×2=32` models. Reset naturally per line. No ASCII
+values, arbitrary space distance, symbol-specific signs, or rotations of the
+83-slot address tape are admitted.
+
 ## Why this matters for the Eyes
 
 This puzzle is the first practice example in the storehouse that explicitly

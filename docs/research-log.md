@@ -3778,3 +3778,16 @@ distinct symbols in first-occurrence order
 tape by that plaintext rank, turn its symbol into a natural or
 first-occurrence class rank, and rotate the deck by class or class-plus-one.
 Two global cut directions and two binary readings give exactly 16 models.
+
+The 13-class ordinal cut audit is negative. All 16 settings use every rank
+through 82; the maximum, clockwise/first-occurrence/class-plus-one/right cut,
+has only `407/761=.534823` low ranks.
+
+One stricter asset-valued interpretation is frozen next. Map phrase letters
+through either the proposed Trailer order
+`BDMAGICKEFHJLNOPQRSTUVWXYZ` or the `A BAD MAGIC CARD TRICK` keyed order
+`ABDMGICRTKEFHJLNOPQSUVWXYZ`. Treat bits either as appended alphabet
+positions `26/27` with space 36, or literal `0/1` with zero-width spaces.
+Address this value tape by recovered plaintext rank and cut by value or
+value-plus-one, under two global directions and two binary readings. These
+32 settings exhaust the admitted family.

@@ -922,6 +922,12 @@ its 13 distinct symbols select 13 first-`N` cut classes under two fixed class
 orders, zero/one-based distance, two global directions, and two binary
 readings—16 models total.
 
+Those 13 ordinal cuts are negative as well (`407/761` best, all 83 ranks).
+The next fixed consumer keeps the actual altar letter coordinates: two
+documented keyed alphabets, appended versus literal binary values,
+zero/one-based distance, two cut directions, and two binary readings give 32
+per-rank cut models, with no fitted symbol distances.
+
 ## Running the workbench
 
 Python 3.11 or newer is sufficient for the dependency-free experiments:

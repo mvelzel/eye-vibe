@@ -18,6 +18,7 @@ from eye_mystery.practice_cipher6 import (
     paired_deck_audit,
     read_ciphertext,
     stable_partition_permutation,
+    tape_class_cut_audit,
 )
 
 
@@ -79,6 +80,12 @@ class PracticeCipher6Tests(unittest.TestCase):
     def test_joint_asset_tape_audit_keeps_numbered_prefixes(self) -> None:
         results = asset_tape_base_audit(read_ciphertext(CIPHERTEXT))
         self.assertEqual(len(results), len(asset_tape_base_permutations()) * 3)
+        self.assertTrue(all(result.prefix_matches == 9 for result in results))
+        self.assertTrue(all(result.total == 761 for result in results))
+
+    def test_tape_class_cut_audit_is_the_frozen_sixteen_models(self) -> None:
+        results = tape_class_cut_audit(read_ciphertext(CIPHERTEXT))
+        self.assertEqual(len(results), 16)
         self.assertTrue(all(result.prefix_matches == 9 for result in results))
         self.assertTrue(all(result.total == 761 for result in results))
 

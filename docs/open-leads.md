@@ -1535,3 +1535,9 @@ symbol at the recovered plaintext rank selects a natural/first-occurrence
 class number; move the first `N` cards to the back using zero/one-based `N`,
 two global directions, and the two binary readings. This gives exactly 16
 settings and fits no arbitrary operation.
+
+**Fourth result:** the 13 ordinal cut classes are negative; every model uses
+all 83 ranks, best `407/761`. The next frozen interpretation retains the
+actual altar letter positions. Two documented keyed alphabets cross with
+literal-bit versus appended-alphanumeric handling, zero/one-based distance,
+global cut direction, and binary direction: exactly 32 per-rank cut models.

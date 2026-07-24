@@ -394,3 +394,99 @@ def asset_tape_base_audit(
                 )
             )
     return tuple(sorted(results, key=lambda result: result.key, reverse=True))
+
+
+@dataclass(frozen=True)
+class TapeClassCutResult:
+    binary_direction: str
+    collation: str
+    one_based: bool
+    cut_direction: str
+    prefix_matches: int
+    low_rank_count: int
+    total: int
+    distinct: int
+    maximum: int
+    decoded: tuple[tuple[int, ...], ...]
+
+    @property
+    def low_rank_fraction(self) -> float:
+        return self.low_rank_count / self.total
+
+    @property
+    def key(self) -> tuple[int, int, int, int]:
+        return (
+            self.prefix_matches,
+            self.low_rank_count,
+            -self.maximum,
+            -self.distinct,
+        )
+
+
+def _decode_tape_class_cut_line(
+    ciphertext: tuple[int, ...],
+    tape: str,
+    class_rank: dict[str, int],
+    *,
+    one_based: bool,
+    cut_right: bool,
+) -> tuple[int, ...]:
+    deck = tuple(range(SIZE))
+    plaintext = []
+    for card in ciphertext:
+        rank = deck.index(card)
+        plaintext.append(rank)
+        distance = class_rank[tape[rank]] + int(one_based)
+        if cut_right:
+            distance = -distance
+        distance %= SIZE
+        deck = deck[distance:] + deck[:distance]
+    return tuple(plaintext)
+
+
+def tape_class_cut_audit(
+    lines: tuple[tuple[int, ...], ...],
+) -> tuple[TapeClassCutResult, ...]:
+    """Test the frozen 13-symbol first-N cut quotient of the joint asset tape."""
+
+    results = []
+    for reverse_binary in (False, True):
+        tape = asset_tape(reverse_binary=reverse_binary)
+        binary_direction = "ccw" if reverse_binary else "cw"
+        for first_occurrence in (False, True):
+            order = tape_symbol_order(tape, first_occurrence=first_occurrence)
+            class_rank = {symbol: index for index, symbol in enumerate(order)}
+            collation = "first" if first_occurrence else "natural"
+            for one_based in (False, True):
+                for cut_right in (False, True):
+                    decoded = tuple(
+                        _decode_tape_class_cut_line(
+                            line,
+                            tape,
+                            class_rank,
+                            one_based=one_based,
+                            cut_right=cut_right,
+                        )
+                        for line in lines
+                    )
+                    flat = tuple(value for line in decoded for value in line)
+                    results.append(
+                        TapeClassCutResult(
+                            binary_direction=binary_direction,
+                            collation=collation,
+                            one_based=one_based,
+                            cut_direction="right" if cut_right else "left",
+                            prefix_matches=sum(
+                                line[0] == expected
+                                for line, expected in zip(decoded, EXPECTED_PREFIXES)
+                            ),
+                            low_rank_count=sum(
+                                value < len(NATURAL_PLAINTEXT) for value in flat
+                            ),
+                            total=len(flat),
+                            distinct=len(set(flat)),
+                            maximum=max(flat),
+                            decoded=decoded,
+                        )
+                    )
+    return tuple(sorted(results, key=lambda result: result.key, reverse=True))
