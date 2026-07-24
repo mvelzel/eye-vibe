@@ -1255,3 +1255,14 @@ seconds. Adjacent-only geometry remains open. No more blind solver budget is
 assigned; the horizon moves laterally to E's exact graph quotient and C's
 predictive Hankel test. Details:
 [`seventeenth-lane-a-bitvector-results-2026-07-24.md`](seventeenth-lane-a-bitvector-results-2026-07-24.md).
+
+**Lane-E result:** closed at the exact prerequisite. A planted three-sheet
+directed cover recovers exactly. Real P needs 75–77 equitable blocks, and the
+complete support and multiplicity graphs both refine to 83 singletons,
+regardless of whether copied openings are retained. Results:
+[`seventeenth-lane-e-fibration-results-2026-07-24.md`](seventeenth-lane-e-fibration-results-2026-07-24.md).
+
+Lane C's empirical series, depth family, three prime fields, P/Q selection,
+200 joint multiset/no-double controls, positive control, and promotion gate
+are frozen before real rank calculation in
+[`seventeenth-lane-c-hankel-freeze-2026-07-24.md`](seventeenth-lane-c-hankel-freeze-2026-07-24.md).

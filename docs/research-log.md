@@ -3368,3 +3368,25 @@ This is a solver result, not a cryptographic negative. Lane A remains open,
 and the precommitted stop rule moves the portfolio laterally to directed graph
 fibration and predictive Hankel state. Full evidence:
 `docs/seventeenth-lane-a-bitvector-results-2026-07-24.md`.
+
+Lane E then passes its planted-cover control and fails exactly on the Eyes.
+Starting from one color, directed in/out block-count refinement recovers the
+plant's five three-vertex fibers. P alone refines the real support and
+multiplicity graphs to 77 blocks with copied openings, or 75 after trimming
+them; only unseen/sparsely seen labels remain grouped. Adding Q makes all four
+partitions discrete: 83 singleton blocks. No P partition remains equitable on
+the complete graph.
+
+This closes an exact observed-graph fibration into at most 42 fibers without
+requiring random controls, because the model-independent cardinality gate
+already fails. Details:
+`docs/seventeenth-lane-e-fibration-results-2026-07-24.md`.
+
+Before real Lane-C scoring, the empirical Hankel test is frozen separately in
+`docs/seventeenth-lane-c-hankel-freeze-2026-07-24.md`. It removes known copied
+openings, counts reset-local word occurrences, tests depth pairs
+`(1,1),(2,1),(1,2)` over `F83,F101,F257`, selects only on P by the worst-prime
+normalized rank deficit, and transfers to Q. Two hundred joint controls
+shuffle each trimmed multiset under the no-double constraint and repeat the
+whole selection. A deterministic low-state plant must beat 99% of heldout
+controls before Eye ranks count.
