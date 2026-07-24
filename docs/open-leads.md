@@ -1230,3 +1230,21 @@ Results:
 The distinct Cipher 3 lanes still open are the `83=2*42-1` two-sheet model,
 higher-order visible state, broader output-rank decks, routes, variable-length
 codes, and the exact arbitrary-update question if a new invariant appears.
+
+### Seventeenth state-reconstruction horizon
+
+**Status:** twelve lanes frozen wide; adjacent-only exact geometry goes first.
+
+The latest synthesis deliberately stops inventing more direct numeric
+transforms. It recasts the surviving problem as hidden-state reconstruction,
+conformance testing, predictive Hankel rank, synchronization, graph
+fibrations/bisimulation, typed silent events, constrained null generation,
+mechanism-gated source tokens, version archaeology, and confirmed in-game
+operation vocabulary.
+
+The full map, evidence restrictions, recent-Discord reconciliation, ranking,
+and stop rules are in
+[`seventeenth-wide-state-reconstruction-horizon-2026-07-24.md`](seventeenth-wide-state-reconstruction-horizon-2026-07-24.md).
+Lane A is an exact new solver encoding for the already frozen 141-equation
+lag-one hidden-wheel question. It may produce a wheel, `UNSAT`, or no change;
+it may not add lag-two geometry or fit plaintext.

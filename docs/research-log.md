@@ -3326,3 +3326,29 @@ group result to justify blind depth.
 finite global update families in the five standard modes. Arbitrary update,
 hidden coordinate permutation, two-sheet homophony, higher-order state, and
 non-affine deck families remain open.
+
+### Seventeenth wide synthesis: state reconstruction
+
+A fresh read-only Discord delta was reconciled against the durable ledger
+before generating new approaches. The recent entropy pivot, crafted Finnish
+syllable pair, alternating renderer rotations, first-glyph checksum summary,
+33,840-read audit, known-plaintext deck CNF, and ciphertext-only tiny GAK
+examples are already preserved and bounded locally. No new solve or
+operational hint was found.
+
+The next novelty phase therefore starts wide around a different question:
+whether the nine arrays are observations or conformance tests of a hidden
+machine. Twelve lanes are frozen in
+`docs/seventeenth-wide-state-reconstruction-horizon-2026-07-24.md`:
+exact adjacent geometry, conformance-suite architecture, predictive Hankel
+state, reset automata, directed graph fibrations, context bisimulation,
+typed silent `Z101` events, maximum-entropy constraint generation,
+mechanism-gated source tokens, version-differential clues, confirmed in-game
+operation vocabulary, and noncommutative typed checksums.
+
+Lane A ranks first because its hypothesis is already frozen and exactly open.
+The new seven-bit/bit-vector formulation changes the solver rather than the
+model. It must recover a planted wheel, solve every individual context, agree
+with the integer encoding on small subsets, and then report only `SAT`,
+`UNSAT`, or timeout on the first family, last family, and all seven. Lag two
+and plaintext scoring remain forbidden.
