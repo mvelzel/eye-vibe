@@ -405,6 +405,31 @@ initial decks: `8×2×2×2×3=192` models. The schedule resets per line; no
 rotations/phases, per-line direction, fitted rune values, or mixed timing are
 allowed. Promotion again requires near-total low-rank collapse.
 
+## Seventh result: the full rotating clock is negative
+
+Every one of the 192 models still recovers all 83 ranks and reaches rank 82.
+The best setting is:
+
+```text
+initial=card-trick
+schedule=irregular-sign-sum
+physical direction=counterclockwise
+alignment=cumulative
+step indexing=one-based
+low ranks=415/761=.545335
+```
+
+This closes the finite interpretation in which the four authored Circle rows
+are synchronous clocks controlling a rotating 83-card disk. Together with the
+six earlier screens, it leaves no asset-backed preference among the simple
+rotation, stable-partition, fixed-cut, or paired-Chaocipher interpretations.
+The historical Alberti remark and exact 83-slot joint tape remain valuable,
+but a further Cipher #6 attack now needs a new independently fixed state
+transition—not additional phases, signs, or line-specific choices.
+
+Executable audit:
+[`audit_sdlwdr_cipher6_full_circle_clock.py`](../scripts/audit_sdlwdr_cipher6_full_circle_clock.py).
+
 ## Why this matters for the Eyes
 
 This puzzle is the first practice example in the storehouse that explicitly

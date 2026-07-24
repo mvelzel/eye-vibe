@@ -1558,8 +1558,17 @@ negative, best `418/761`; the best raw-card key is `409/761`. Replaying all
 fixed families on the superseded original yields maxima `403..431`, always all
 83 ranks, so the revision does not isolate a covered timing/reset convention.
 
-**Next frozen family:** use the full Circle as a time-driven rotating clock.
+**Seventh result:** use the full Circle as a time-driven rotating clock.
 Map outer `KMGIC` and inner `MAGICK` through the Trailer alphabet, combine
 their 5/6-cycles by eight fixed sum/difference/bit-select/bit-sign schedules,
 and test two physical directions, cumulative/absolute alignment,
-zero/one-based step, and three initial decks: 192 models.
+zero/one-based step, and three initial decks: 192 models. All 192 use all 83
+ranks; the best is `415/761`. This closes the synchronous four-row
+rotating-clock family.
+
+**Disposition:** retain the exact 83-slot joint tape and the author's older
+Alberti remark, but stop multiplying unconstrained Circle variants. A new
+Cipher #6 pass requires an independently justified non-rotational state
+transition. Return current practice-cipher effort to unresolved #4 and #3,
+whose structures can still teach transferable attacks without guessing asset
+semantics.

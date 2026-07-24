@@ -3831,3 +3831,18 @@ Trailer alphabet, outer `KMGIC` is `[7,2,4,5,6]` and inner `MAGICK` is
 cycles under eight fixed sum, difference, bit-select, and bit-sign schedules.
 Two physical readings, cumulative/absolute alignment, zero/one-based step,
 and three initial decks give 192 models with no fitted phase.
+
+The full-circle clock is negative. Every model uses all 83 recovered ranks and
+reaches 82. The best is the card-trick initial deck with the irregular row
+signing the outer-plus-inner step, counterclockwise physical reading,
+cumulative alignment, and one-based steps: `415/761=.545335` low ranks. This
+closes the finite synchronous-clock interpretation.
+
+Cipher #6 has now done useful methodological work without yielding its
+plaintext: it exposed an exact 83-slot cross-asset construction, supplied a
+known-reset prefix oracle, and showed how quickly plausible visual semantics
+become underdetermined when no state transition is independently fixed. The
+joint tape and sdlwdr's historical Alberti remark remain open evidence, but
+additional directions/phases would be curve fitting. Practice effort returns
+to unresolved #4/#3 unless a new author or source clue fixes a non-rotational
+transition.

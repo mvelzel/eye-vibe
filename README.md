@@ -938,11 +938,13 @@ zero/one indexing—216 models total.
 
 Those 216 ciphertext-autokey rotations are negative (`418/761` best; raw-card
 keys `409/761`). The original ciphertext also fails every already fixed
-family, with maxima `403..431` and all ranks used. One full-asset disk family
-is frozen next: outer/inner rune values cycle at periods 5/6, alternating and
-irregular bits select or sign eight fixed step laws, and only physical
-direction, cumulative/absolute alignment, zero/one indexing, and the three
-initial decks vary—192 models.
+family, with maxima `403..431` and all ranks used. The final full-asset disk
+family is also negative: outer/inner rune values cycle at periods 5/6 while
+the alternating and irregular bits select or sign eight fixed step laws; all
+192 models use all 83 ranks, with `415/761` best. Further Cipher #6 work now
+requires an independently fixed non-rotational transition, so practice effort
+returns to unresolved #4/#3 while the exact 83-slot tape and Alberti clue stay
+on the ledger.
 
 ## Running the workbench
 

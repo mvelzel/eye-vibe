@@ -760,3 +760,164 @@ def ciphertext_autokey_audit(
                 )
 
     return tuple(sorted(results, key=lambda result: result.key, reverse=True))
+
+
+FULL_CIRCLE_SCHEDULES = (
+    "sum",
+    "outer-minus-inner",
+    "inner-minus-outer",
+    "alternating-select",
+    "irregular-select",
+    "alternating-sign-sum",
+    "irregular-sign-sum",
+    "split-sign",
+)
+
+
+def full_circle_steps(
+    schedule: str, *, reverse: bool, plus_one: bool
+) -> tuple[int, ...]:
+    """Build one 83-tick step tape from all four nonconstant circle rows."""
+
+    outer_letters = "KMGIC"
+    inner_letters = "MAGICK"
+    alternating = ALTERNATING_BAND
+    irregular = IRREGULAR_BAND
+    if reverse:
+        outer_letters = outer_letters[::-1]
+        inner_letters = inner_letters[::-1]
+        alternating = alternating[::-1]
+        irregular = irregular[::-1]
+    letter_values = {symbol: index for index, symbol in enumerate(ALTAR_LETTERS)}
+    steps = []
+    for tick in range(SIZE):
+        outer = letter_values[outer_letters[tick % len(outer_letters)]]
+        inner = letter_values[inner_letters[tick % len(inner_letters)]]
+        alternating_bit = int(alternating[tick % len(alternating)])
+        irregular_bit = int(irregular[tick % len(irregular)])
+        if schedule == "sum":
+            step = outer + inner
+        elif schedule == "outer-minus-inner":
+            step = outer - inner
+        elif schedule == "inner-minus-outer":
+            step = inner - outer
+        elif schedule == "alternating-select":
+            step = outer if alternating_bit else inner
+        elif schedule == "irregular-select":
+            step = outer if irregular_bit else inner
+        elif schedule == "alternating-sign-sum":
+            step = (1 if alternating_bit else -1) * (outer + inner)
+        elif schedule == "irregular-sign-sum":
+            step = (1 if irregular_bit else -1) * (outer + inner)
+        elif schedule == "split-sign":
+            step = (
+                (1 if alternating_bit else -1) * outer
+                + (1 if irregular_bit else -1) * inner
+            )
+        else:
+            raise ValueError(f"unknown full-circle schedule {schedule!r}")
+        steps.append((step + int(plus_one)) % SIZE)
+    return tuple(steps)
+
+
+@dataclass(frozen=True)
+class FullCircleClockResult:
+    initial_deck: str
+    schedule: str
+    physical_direction: str
+    alignment_mode: str
+    plus_one: bool
+    prefix_matches: int
+    low_rank_count: int
+    total: int
+    distinct: int
+    maximum: int
+    decoded: tuple[tuple[int, ...], ...]
+
+    @property
+    def low_rank_fraction(self) -> float:
+        return self.low_rank_count / self.total
+
+    @property
+    def key(self) -> tuple[int, int, int, int]:
+        return (
+            self.prefix_matches,
+            self.low_rank_count,
+            -self.maximum,
+            -self.distinct,
+        )
+
+
+def _decode_full_circle_clock_line(
+    ciphertext: tuple[int, ...],
+    initial_deck: tuple[int, ...],
+    steps: tuple[int, ...],
+    *,
+    cumulative: bool,
+) -> tuple[int, ...]:
+    deck = initial_deck
+    plaintext = []
+    for tick, card in enumerate(ciphertext):
+        plaintext.append(deck.index(card))
+        distance = steps[tick % len(steps)]
+        source = deck if cumulative else initial_deck
+        deck = source[distance:] + source[:distance]
+    return tuple(plaintext)
+
+
+def full_circle_clock_audit(
+    lines: tuple[tuple[int, ...], ...],
+) -> tuple[FullCircleClockResult, ...]:
+    """Test the frozen time-driven four-ring rotating-disk family."""
+
+    initial_decks = {
+        "natural": tuple(range(SIZE)),
+        "trailer": keyed_deck(ALTAR_LETTERS),
+        "card-trick": keyed_deck(CARD_TRICK_LETTERS),
+    }
+    results = []
+    for schedule in FULL_CIRCLE_SCHEDULES:
+        for reverse in (False, True):
+            physical_direction = "ccw" if reverse else "cw"
+            for plus_one in (False, True):
+                steps = full_circle_steps(
+                    schedule, reverse=reverse, plus_one=plus_one
+                )
+                for initial_name, initial_deck in initial_decks.items():
+                    for cumulative in (False, True):
+                        decoded = tuple(
+                            _decode_full_circle_clock_line(
+                                line,
+                                initial_deck,
+                                steps,
+                                cumulative=cumulative,
+                            )
+                            for line in lines
+                        )
+                        flat = tuple(value for line in decoded for value in line)
+                        results.append(
+                            FullCircleClockResult(
+                                initial_deck=initial_name,
+                                schedule=schedule,
+                                physical_direction=physical_direction,
+                                alignment_mode=(
+                                    "cumulative" if cumulative else "absolute"
+                                ),
+                                plus_one=plus_one,
+                                prefix_matches=sum(
+                                    line[0] == expected
+                                    for line, expected in zip(
+                                        decoded, EXPECTED_PREFIXES
+                                    )
+                                ),
+                                low_rank_count=sum(
+                                    value < len(NATURAL_PLAINTEXT)
+                                    for value in flat
+                                ),
+                                total=len(flat),
+                                distinct=len(set(flat)),
+                                maximum=max(flat),
+                                decoded=decoded,
+                            )
+                        )
+    return tuple(sorted(results, key=lambda result: result.key, reverse=True))

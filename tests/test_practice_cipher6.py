@@ -8,6 +8,7 @@ from eye_mystery.practice_cipher6 import (
     ALTAR_LETTERS,
     CARD_TRICK_LETTERS,
     EXPECTED_PREFIXES,
+    FULL_CIRCLE_SCHEDULES,
     TRAILER_PHRASE,
     asset_tape,
     asset_tape_base_audit,
@@ -17,6 +18,8 @@ from eye_mystery.practice_cipher6 import (
     circle_base_permutations,
     ciphertext_autokey_audit,
     keyed_deck,
+    full_circle_clock_audit,
+    full_circle_steps,
     paired_deck_audit,
     read_ciphertext,
     stable_partition_permutation,
@@ -112,6 +115,17 @@ class PracticeCipher6Tests(unittest.TestCase):
         self.assertEqual(
             sum(result.key_source == "asset-tape" for result in results), 192
         )
+
+    def test_full_circle_step_values_and_frozen_192_models(self) -> None:
+        self.assertEqual(
+            full_circle_steps("sum", reverse=False, plus_one=False)[:6],
+            (9, 5, 8, 10, 12, 14),
+        )
+        results = full_circle_clock_audit(read_ciphertext(CIPHERTEXT))
+        self.assertEqual(len(FULL_CIRCLE_SCHEDULES), 8)
+        self.assertEqual(len(results), 192)
+        self.assertTrue(all(result.prefix_matches == 9 for result in results))
+        self.assertTrue(all(result.total == 761 for result in results))
 
 
 if __name__ == "__main__":
