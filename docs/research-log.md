@@ -3352,3 +3352,19 @@ model. It must recover a planted wheel, solve every individual context, agree
 with the integer encoding on small subsets, and then report only `SAT`,
 `UNSAT`, or timeout on the first family, last family, and all seven. Lag two
 and plaintext scoring remain forbidden.
+
+The seven-bit formulation passes every gate. It agrees with the integer
+solver on planted SAT/UNSAT fixtures and makes all seven individual Eye
+contexts `SAT`; the complete test file passes in 1.802 seconds. On the three
+real joint instances it returns only:
+
+```text
+first  59 constraints / 45 labels  unknown at 60.029 s
+last   82 constraints / 62 labels  unknown at 60.032 s
+all   141 constraints / 71 labels  unknown at 60.045 s
+```
+
+This is a solver result, not a cryptographic negative. Lane A remains open,
+and the precommitted stop rule moves the portfolio laterally to directed graph
+fibration and predictive Hankel state. Full evidence:
+`docs/seventeenth-lane-a-bitvector-results-2026-07-24.md`.

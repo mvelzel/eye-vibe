@@ -682,6 +682,157 @@ def solve_hidden_geometry_boolean(
     )
 
 
+def solve_hidden_geometry_bitvector(
+    constraints: Sequence[ChordConstraint],
+    *,
+    modulus: int = MODULUS,
+    timeout_ms: int = 60_000,
+) -> GeometrySolve:
+    """Solve lag-one hidden geometry as a finite bit-vector problem.
+
+    This is exactly the same unsigned cyclic-distance model as
+    :func:`solve_hidden_geometry`. Coordinates and shared class magnitudes are
+    bit vectors, while explicit conditional subtraction implements reduction
+    modulo ``modulus`` without native remainder arithmetic.
+    """
+
+    _require_z3()
+    if modulus < 3 or modulus % 2 == 0:
+        raise ValueError("modulus must be an odd integer at least three")
+    if not constraints:
+        raise ValueError("at least one constraint is required")
+    started = monotonic()
+    labels = tuple(
+        sorted(
+            {
+                label
+                for constraint in constraints
+                for label in constraint.labels
+            }
+        )
+    )
+    classes = chord_classes(constraints)
+    coordinate_bits = (modulus - 1).bit_length()
+    half = (modulus - 1) // 2
+    magnitude_bits = half.bit_length()
+    wide_bits = coordinate_bits + 1
+    solver = z3.SolverFor("QF_BV")
+    solver.set(timeout=timeout_ms)
+    coordinates = {
+        label: z3.BitVec(f"hidden_bv_coordinate_{label}", coordinate_bits)
+        for label in labels
+    }
+    modulus_coordinate = z3.BitVecVal(modulus, coordinate_bits)
+    for coordinate in coordinates.values():
+        solver.add(z3.ULT(coordinate, modulus_coordinate))
+    solver.add(z3.Distinct(*coordinates.values()))
+
+    anchor_left, anchor_right = next(
+        (left, right)
+        for constraint in constraints
+        for left, right in (
+            (constraint.source_left, constraint.source_right),
+            (constraint.target_left, constraint.target_right),
+        )
+        if left != right
+    )
+    solver.add(
+        coordinates[anchor_left] == z3.BitVecVal(0, coordinate_bits)
+    )
+    solver.add(
+        coordinates[anchor_right] == z3.BitVecVal(1, coordinate_bits)
+    )
+
+    modulus_wide = z3.BitVecVal(modulus, wide_bits)
+    for class_index, edges in enumerate(classes):
+        zero_edges = tuple(left == right for left, right in edges)
+        if any(zero_edges):
+            if not all(zero_edges):
+                return GeometrySolve(
+                    "unsat",
+                    len(constraints),
+                    len(labels),
+                    monotonic() - started,
+                )
+            continue
+        magnitude = z3.BitVec(
+            f"hidden_bv_magnitude_{class_index}",
+            magnitude_bits,
+        )
+        solver.add(
+            z3.UGT(magnitude, z3.BitVecVal(0, magnitude_bits)),
+            z3.ULE(magnitude, z3.BitVecVal(half, magnitude_bits)),
+        )
+        wide_magnitude = z3.ZeroExt(
+            wide_bits - magnitude_bits,
+            magnitude,
+        )
+        for left, right in edges:
+            wide_left = z3.ZeroExt(1, coordinates[left])
+            wide_right = z3.ZeroExt(1, coordinates[right])
+            raw_plus = wide_left + wide_magnitude
+            plus = z3.If(
+                z3.UGE(raw_plus, modulus_wide),
+                raw_plus - modulus_wide,
+                raw_plus,
+            )
+            minus = z3.If(
+                z3.UGE(wide_left, wide_magnitude),
+                wide_left - wide_magnitude,
+                wide_left + modulus_wide - wide_magnitude,
+            )
+            solver.add(z3.Or(wide_right == plus, wide_right == minus))
+
+    outcome = solver.check()
+    elapsed = monotonic() - started
+    if outcome == z3.unknown:
+        return GeometrySolve(
+            "unknown",
+            len(constraints),
+            len(labels),
+            elapsed,
+            reason=solver.reason_unknown(),
+        )
+    if outcome == z3.unsat:
+        return GeometrySolve(
+            "unsat",
+            len(constraints),
+            len(labels),
+            elapsed,
+        )
+
+    model = solver.model()
+    resolved = tuple(
+        sorted(
+            (
+                label,
+                model.eval(
+                    coordinate,
+                    model_completion=True,
+                ).as_long(),
+            )
+            for label, coordinate in coordinates.items()
+        )
+    )
+    flat = [0] * modulus
+    for label, coordinate in resolved:
+        flat[label] = coordinate
+    if not all(
+        constraint_holds(constraint, flat, modulus=modulus)
+        for constraint in constraints
+    ):
+        raise AssertionError(
+            "bit-vector model does not satisfy chord constraints"
+        )
+    return GeometrySolve(
+        "sat",
+        len(constraints),
+        len(labels),
+        elapsed,
+        coordinates=resolved,
+    )
+
+
 def minimize_unsat_core(
     constraints: Sequence[ChordConstraint],
     *,

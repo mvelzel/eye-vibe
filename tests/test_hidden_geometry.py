@@ -15,6 +15,7 @@ from eye_mystery.hidden_geometry import (
     repair_hidden_geometry_classes,
     solve_hidden_geometry,
     solve_hidden_geometry_boolean,
+    solve_hidden_geometry_bitvector,
     z3_available,
 )
 
@@ -88,6 +89,10 @@ class HiddenGeometryUnitTests(unittest.TestCase):
             planted, modulus=5, timeout_ms=5_000
         )
         self.assertEqual(boolean_result.outcome, "sat")
+        bitvector_result = solve_hidden_geometry_bitvector(
+            planted, modulus=5, timeout_ms=5_000
+        )
+        self.assertEqual(bitvector_result.outcome, "sat")
 
     @unittest.skipUnless(z3_available(), "optional z3 package is unavailable")
     def test_solver_rejects_an_equidistant_triangle_on_odd_prime(self) -> None:
@@ -103,6 +108,30 @@ class HiddenGeometryUnitTests(unittest.TestCase):
         )
         self.assertEqual(result.outcome, "unsat")
         self.assertEqual(len(result.core), 2)
+        bitvector_result = solve_hidden_geometry_bitvector(
+            impossible,
+            modulus=5,
+            timeout_ms=5_000,
+        )
+        self.assertEqual(bitvector_result.outcome, "unsat")
+
+    @unittest.skipUnless(z3_available(), "optional z3 package is unavailable")
+    def test_bitvector_solver_accepts_each_individual_eye_context(self) -> None:
+        for name in (
+            "first-gap30",
+            "first-cross",
+            "first-cross-late",
+            "first-gap28",
+            "last-west4",
+            "last-east5",
+            "last-east3",
+        ):
+            with self.subTest(name=name):
+                result = solve_hidden_geometry_bitvector(
+                    chord_constraints(names=(name,)),
+                    timeout_ms=10_000,
+                )
+                self.assertEqual(result.outcome, "sat")
 
 
 if __name__ == "__main__":

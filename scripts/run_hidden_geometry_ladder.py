@@ -16,11 +16,24 @@ from eye_mystery.hidden_geometry import (
     repair_hidden_geometry,
     repair_hidden_geometry_classes,
     solve_hidden_geometry,
+    solve_hidden_geometry_bitvector,
 )
 
 
-def describe(label: str, constraints, *, timeout_ms: int, core: bool = False):
-    function = minimize_unsat_core if core else solve_hidden_geometry
+def describe(
+    label: str,
+    constraints,
+    *,
+    timeout_ms: int,
+    core: bool = False,
+    encoding: str = "integer",
+):
+    if core:
+        function = minimize_unsat_core
+    elif encoding == "bitvector":
+        function = solve_hidden_geometry_bitvector
+    else:
+        function = solve_hidden_geometry
     result = function(constraints, timeout_ms=timeout_ms)
     print(
         f"{label}: {result.outcome}; constraints={result.constraints}; "
@@ -56,6 +69,11 @@ def main() -> None:
     )
     parser.add_argument("--restarts", type=int, default=20)
     parser.add_argument("--steps", type=int, default=200_000)
+    parser.add_argument(
+        "--encoding",
+        choices=("integer", "bitvector"),
+        default="integer",
+    )
     args = parser.parse_args()
 
     names = tuple(spec[0] for spec in NONLITERAL_CONTEXT_SPECS)
@@ -101,6 +119,7 @@ def main() -> None:
                 f"context={name},all-lags",
                 chord_constraints(names=(name,), lags=range(1, length)),
                 timeout_ms=args.timeout_ms,
+                encoding=args.encoding,
             )
         maximum_length = max(spec[-1] for spec in NONLITERAL_CONTEXT_SPECS)
         for family, selected in (
@@ -114,6 +133,7 @@ def main() -> None:
                     names=selected, lags=range(1, maximum_length)
                 ),
                 timeout_ms=args.timeout_ms,
+                encoding=args.encoding,
             )
         for label, selected, maximum in (
             ("first", FIRST_FAMILY_NAMES, 6),
@@ -126,11 +146,13 @@ def main() -> None:
                     names=selected, lags=range(1, maximum + 1)
                 ),
                 timeout_ms=args.timeout_ms,
+                encoding=args.encoding,
             )
         describe(
             "family=last,lag=5",
             chord_constraints(names=LAST_FAMILY_NAMES, lags=(5,)),
             timeout_ms=args.timeout_ms,
+            encoding=args.encoding,
         )
         return
 
@@ -139,6 +161,7 @@ def main() -> None:
             f"context={name},lag=1",
             chord_constraints(names=(name,)),
             timeout_ms=args.timeout_ms,
+            encoding=args.encoding,
         )
 
     for family, selected in (
@@ -151,6 +174,7 @@ def main() -> None:
             chord_constraints(names=selected),
             timeout_ms=args.timeout_ms,
             core=args.minimize_core,
+            encoding=args.encoding,
         )
 
     if args.mode == "adjacent":
@@ -161,6 +185,7 @@ def main() -> None:
             f"combined,lag={lag}",
             chord_constraints(lags=(lag,)),
             timeout_ms=args.timeout_ms,
+            encoding=args.encoding,
         )
     for maximum in range(1, args.max_lag + 1):
         result = describe(
@@ -168,6 +193,7 @@ def main() -> None:
             chord_constraints(lags=range(1, maximum + 1)),
             timeout_ms=args.timeout_ms,
             core=args.minimize_core,
+            encoding=args.encoding,
         )
         if result.outcome == "unsat":
             break

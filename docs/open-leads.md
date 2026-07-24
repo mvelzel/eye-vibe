@@ -1248,3 +1248,10 @@ and stop rules are in
 Lane A is an exact new solver encoding for the already frozen 141-equation
 lag-one hidden-wheel question. It may produce a wheel, `UNSAT`, or no change;
 it may not add lag-two geometry or fit plaintext.
+
+**Lane-A result:** all controls and all seven separate contexts pass, but the
+first, last, and combined joint cases each return `unknown: timeout` at 60
+seconds. Adjacent-only geometry remains open. No more blind solver budget is
+assigned; the horizon moves laterally to E's exact graph quotient and C's
+predictive Hankel test. Details:
+[`seventeenth-lane-a-bitvector-results-2026-07-24.md`](seventeenth-lane-a-bitvector-results-2026-07-24.md).
