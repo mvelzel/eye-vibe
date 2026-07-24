@@ -54,3 +54,15 @@ demultiplexing and improve the held-out score.
 
 If B fails, proceed laterally to C rather than inventing selector-dependent
 substitution tables.
+
+## Lane-C metric calibration
+
+The order-8 equality-pattern model used for B failed to recover an exact
+planted period-7 selector reassociation, so its first real C score is
+inadmissible. Pattern orders `8,10,12,14,16,20` were compared **only on the
+planted fixture**. Order 14 is the smallest that selects the planted width-3,
+period-7, shift-left inverse exactly and gives positive train and held-out
+improvements. Freeze order 14 for lane C before scoring the real stream. The
+candidate family is three natural typed routes—one-place shift left,
+one-place shift right, and reversal—for every period 2–32 and both widths,
+186 candidates total.
