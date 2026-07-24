@@ -3682,3 +3682,18 @@ practice method is executable and marginally changes the Eye output, but the
 authored Earthquake tape is structurally unexceptional in the wrong
 direction. Close this exact sampler under its stop rule. Results:
 `docs/twenty-second-cessation-wheel-transfer-results-2026-07-24.md`.
+
+The next novelty step again starts wide. The eight-lane map in
+`docs/twenty-third-wide-post-wheel-horizon-2026-07-24.md` separates the
+desert quotient, remaining marker rows, rune mapping, practice ciphers 3/4,
+Gate topology, version archaeology, source ancestry, and coding-theoretic
+anchor interpretations before selecting depth.
+
+The cost-adjusted first discriminator is frozen in
+`docs/twenty-third-diamond-context-freeze-2026-07-24.md`. It resets the exact
+historical `y=021`, `x=120`, `x²+y` transform at each of the seven fixed
+nonliteral context records. Fully copied input pairs are excluded; the first
+four contexts are descriptive and only the final three form the primary
+score. Fifty thousand global permutations of `0..82` preserve every corpus
+equality and partial-isomorph structure while destroying the natural
+base-five coordinates. No real score has been inspected.

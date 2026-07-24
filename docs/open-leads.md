@@ -1463,3 +1463,20 @@ Protocol:
 held-out score, for exact tail `.955042017`. Close the sampler without
 rotations, direction permutations, or per-panel phases. Results:
 [`twenty-second-cessation-wheel-transfer-results-2026-07-24.md`](twenty-second-cessation-wheel-transfer-results-2026-07-24.md).
+
+### Twenty-third post-wheel breadth cycle
+
+The next portfolio returns to breadth after two negative Earthquake-content
+tests. It separates eight carriers: the desert paired-record quotient,
+first/second marker-row record types, independently fixed rune ordering,
+practice ciphers 3/4, Gate topology, version archaeology, source/edit
+ancestry, and coding-theoretic interpretations of the anchor loop. Horizon:
+[`twenty-third-wide-post-wheel-horizon-2026-07-24.md`](twenty-third-wide-post-wheel-horizon-2026-07-24.md).
+
+The first cheap discriminator is frozen before evaluation. Reset the exact
+historical `y=021`, `x=120`, `x²+y` transform at each fixed nonliteral context
+record, score only output coordinates whose input pair is not copied
+literally, and reserve the final three contexts for the primary statistic.
+Fifty thousand global label permutations preserve the entire equality
+skeleton while breaking natural base-five coordinates. Protocol:
+[`twenty-third-diamond-context-freeze-2026-07-24.md`](twenty-third-diamond-context-freeze-2026-07-24.md).
