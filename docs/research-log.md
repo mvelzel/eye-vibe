@@ -2943,3 +2943,18 @@ This closes only the stable global five-lane selector family. Per-header
 selectors and fitted lane codebooks are disallowed repairs. Full evidence is
 in `docs/fourteenth-selector-results-2026-07-24.md`; the next lateral test is
 the shared-linear-generator lane C.
+
+Lane C then passes its own calibration and closes exactly. A planted order-3
+`F83` recurrence with coefficients `(2,5,7)` is uniquely recovered from P and
+predicts all `462/462` Q equations generated from independent seeds. The real
+scan covers raw ranks and differences over `F83` plus all six within-trigram
+component serializations over `F5`, at every order 1–32 after removing known
+copied openings.
+
+None is even consistent on P. At order 32, raw ranks give 146 equations,
+differences 143, and each digit serialization 630; every coefficient matrix
+has rank 32 and augmented rank 33. This is an exact contradiction, so no
+Q-side coefficient fitting occurs. Full results are in
+`docs/fourteenth-linear-results-2026-07-24.md`. The branch moves laterally to
+the canonical minimal dictionary automaton rather than increasing recurrence
+order toward interpolation.

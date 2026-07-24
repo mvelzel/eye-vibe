@@ -151,3 +151,16 @@ Full results are in
 [`fourteenth-selector-results-2026-07-24.md`](fourteenth-selector-results-2026-07-24.md).
 Per the frozen branch rule, continue laterally to lane C or D rather than
 adding selector-dependent codebooks.
+
+## Second-lane result
+
+Lane C is exactly closed through order 32. The planted `F83` recurrence
+`(2,5,7)` is uniquely recovered on P and predicts `462/462` Q equations. On
+the Eyes, raw ranks, rank differences, and all six raw-component
+serializations are inconsistent on P at every scanned order. At order 32 each
+coefficient matrix has rank 32 and each augmented matrix rank 33.
+
+Full results are in
+[`fourteenth-linear-results-2026-07-24.md`](fourteenth-linear-results-2026-07-24.md).
+The next lateral object is lane D's canonical minimal dictionary automaton,
+not a recurrence order large enough to interpolate the finite corpus.

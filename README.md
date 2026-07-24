@@ -172,6 +172,14 @@ global-label controls beat it, proving the corrected tail is already at least
 `3/201 = 0.014925373`. The lane closes without a candidate plaintext; the
 next test moves laterally to a shared generator or canonical automaton.
 
+The exact shared-generator follow-up is complete in
+[`docs/fourteenth-linear-results-2026-07-24.md`](docs/fourteenth-linear-results-2026-07-24.md).
+A planted order-3 recurrence is uniquely recovered and predicts `462/462`
+held-out equations. The Eyes admit no common recurrence of order 1–32 in raw
+`F83`, differenced `F83`, or any of six `F5` component serializations; every
+order-32 coefficient/augmented rank pair is `32/33`. The next lane changes
+object again, to a canonical minimal dictionary automaton.
+
 The next Eye pass deliberately changes the question from “how can these
 numbers be read?” to “what small mechanism caused the equality and
 reconvergence structure?” Its fourteen-lane breadth map is frozen in

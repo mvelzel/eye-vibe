@@ -983,3 +983,13 @@ Therefore its corrected tail is already at least
 
 The shared-linear-generator lane C is next. Do not fit per-header selector
 orders, stateful lane substitutions, or lane-specific alphabets to repair A.
+
+**Lane-C result:** closed through order 32. The planted solver uniquely
+recovers `(2,5,7)` and predicts `462/462` independent-seed equations. All
+eight Eye representations are already inconsistent on P; their order-32
+coefficient and augmented ranks are `32` and `33`. Results:
+[`fourteenth-linear-results-2026-07-24.md`](fourteenth-linear-results-2026-07-24.md).
+
+Lane D, the canonical minimized dictionary automaton, is next. Orders above 32
+are not an open lead because they move toward finite-data interpolation
+without an authored selector.
