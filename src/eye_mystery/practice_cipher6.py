@@ -14,6 +14,10 @@ EXPECTED_PREFIXES = tuple(range(27, 36))
 NADIRS = (17, 20, 24, 32, 41, 42)
 NATURAL_PLAINTEXT = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .\n,?-"
 ALTAR_LETTERS = "BDMAGICKEFHJLNOPQRSTUVWXYZ"
+TRAILER_PHRASE = "A BAD MAGIC CARD TRICK"
+ZERO_BAND = "0" * 24
+ALTERNATING_BAND = "10101010101010101010"
+IRREGULAR_BAND = "11110111011101110"
 
 
 def read_ciphertext(path: Path) -> tuple[tuple[int, ...], ...]:
@@ -267,6 +271,106 @@ def circle_base_permutation_audit(
 
     results = []
     for base_name, permutation in circle_base_permutations().items():
+        powers = permutation_powers(permutation)
+        for exponent_mode in ("fixed", "rank", "rank+1"):
+            decoded = tuple(
+                _decode_base_permutation_line(line, powers, exponent_mode)
+                for line in lines
+            )
+            flat = tuple(value for line in decoded for value in line)
+            results.append(
+                BasePermutationResult(
+                    base=base_name,
+                    exponent_mode=exponent_mode,
+                    prefix_matches=sum(
+                        line[0] == expected
+                        for line, expected in zip(decoded, EXPECTED_PREFIXES)
+                    ),
+                    low_rank_count=sum(value < len(NATURAL_PLAINTEXT) for value in flat),
+                    total=len(flat),
+                    distinct=len(set(flat)),
+                    maximum=max(flat),
+                    decoded=decoded,
+                )
+            )
+    return tuple(sorted(results, key=lambda result: result.key, reverse=True))
+
+
+def asset_tape(*, reverse_binary: bool) -> str:
+    """Join the 22-character community phrase to the 61 binary circle marks."""
+
+    alternating = ALTERNATING_BAND[::-1] if reverse_binary else ALTERNATING_BAND
+    irregular = IRREGULAR_BAND[::-1] if reverse_binary else IRREGULAR_BAND
+    tape = TRAILER_PHRASE + ZERO_BAND + alternating + irregular
+    if len(tape) != SIZE:
+        raise AssertionError("joint asset tape must contain exactly 83 symbols")
+    return tape
+
+
+def tape_symbol_order(tape: str, *, first_occurrence: bool) -> tuple[str, ...]:
+    """Return one of the two fixed collations admitted by the tape freeze."""
+
+    return (
+        tuple(dict.fromkeys(tape))
+        if first_occurrence
+        else tuple(sorted(set(tape)))
+    )
+
+
+def stable_tape_permutation(
+    tape: str, symbol_order: tuple[str, ...]
+) -> tuple[int, ...]:
+    """Stable-sort tape positions by one fixed symbol collation."""
+
+    rank = {symbol: index for index, symbol in enumerate(symbol_order)}
+    return tuple(sorted(range(SIZE), key=lambda position: rank[tape[position]]))
+
+
+def cyclic_tape_permutation(
+    tape: str, symbol_order: tuple[str, ...]
+) -> tuple[int, ...]:
+    """Order the starting positions of all cyclic rotations lexicographically."""
+
+    rank = {symbol: index for index, symbol in enumerate(symbol_order)}
+    return tuple(
+        sorted(
+            range(SIZE),
+            key=lambda position: tuple(
+                rank[tape[(position + offset) % SIZE]] for offset in range(SIZE)
+            ),
+        )
+    )
+
+
+def asset_tape_base_permutations() -> dict[str, tuple[int, ...]]:
+    """Construct stable and cyclic deck orders from the exact 83-slot tape."""
+
+    candidates: dict[str, tuple[int, ...]] = {}
+    for reverse_binary in (False, True):
+        tape = asset_tape(reverse_binary=reverse_binary)
+        direction = "ccw" if reverse_binary else "cw"
+        for first_occurrence in (False, True):
+            order = tape_symbol_order(tape, first_occurrence=first_occurrence)
+            collation = "first" if first_occurrence else "natural"
+            candidates[f"stable-{direction}-{collation}"] = stable_tape_permutation(
+                tape, order
+            )
+            candidates[f"cyclic-{direction}-{collation}"] = cyclic_tape_permutation(
+                tape, order
+            )
+    unique: dict[tuple[int, ...], str] = {}
+    for name, permutation in candidates.items():
+        unique.setdefault(permutation, name)
+    return {name: permutation for permutation, name in unique.items()}
+
+
+def asset_tape_base_audit(
+    lines: tuple[tuple[int, ...], ...],
+) -> tuple[BasePermutationResult, ...]:
+    """Test the frozen stable/cyclic permutations of the 83-slot asset tape."""
+
+    results = []
+    for base_name, permutation in asset_tape_base_permutations().items():
         powers = permutation_powers(permutation)
         for exponent_mode in ("fixed", "rank", "rank+1"):
             decoded = tuple(

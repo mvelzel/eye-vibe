@@ -7,6 +7,10 @@ from pathlib import Path
 from eye_mystery.practice_cipher6 import (
     ALTAR_LETTERS,
     EXPECTED_PREFIXES,
+    TRAILER_PHRASE,
+    asset_tape,
+    asset_tape_base_audit,
+    asset_tape_base_permutations,
     candidate_decks,
     circle_base_permutation_audit,
     circle_base_permutations,
@@ -60,6 +64,21 @@ class PracticeCipher6Tests(unittest.TestCase):
     def test_circle_base_audit_keeps_numbered_prefixes(self) -> None:
         results = circle_base_permutation_audit(read_ciphertext(CIPHERTEXT))
         self.assertEqual(len(results), len(circle_base_permutations()) * 3)
+        self.assertTrue(all(result.prefix_matches == 9 for result in results))
+        self.assertTrue(all(result.total == 761 for result in results))
+
+    def test_joint_asset_tape_and_permutations(self) -> None:
+        self.assertEqual(len(TRAILER_PHRASE), 22)
+        self.assertEqual(len(asset_tape(reverse_binary=False)), 83)
+        self.assertEqual(len(asset_tape(reverse_binary=True)), 83)
+        bases = asset_tape_base_permutations()
+        self.assertEqual(len(bases), len(set(bases.values())))
+        for permutation in bases.values():
+            self.assertEqual(set(permutation), set(range(83)))
+
+    def test_joint_asset_tape_audit_keeps_numbered_prefixes(self) -> None:
+        results = asset_tape_base_audit(read_ciphertext(CIPHERTEXT))
+        self.assertEqual(len(results), len(asset_tape_base_permutations()) * 3)
         self.assertTrue(all(result.prefix_matches == 9 for result in results))
         self.assertTrue(all(result.total == 761 for result in results))
 

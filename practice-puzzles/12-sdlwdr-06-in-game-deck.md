@@ -195,6 +195,47 @@ two fixed symbol orders, stable versus cyclic-rotation ordering, and the same
 `P`, `P^rank`, `P^(rank+1)` updates. No tape rotation, per-line order, or
 language-fitted symbol collation is allowed.
 
+## Third result: direct tape orderings are negative
+
+The two binary directions, two symbol collations, and stable/cyclic orderings
+produce eight unique permutations and 24 update candidates. All again use all
+83 recovered ranks through 82. The best result is:
+
+```text
+base=cyclic-cw-first-occurrence  update=P
+low ranks = 406/761 = .533509
+```
+
+This is weaker than both prior maxima and is mixed-rank gibberish. Close stable
+sorting and cyclic-rotation sorting as direct base permutations. Preserve the
+exact `22+61=83` identity while moving to a different consumer.
+
+Executable audit:
+[`audit_sdlwdr_cipher6_asset_tape.py`](../scripts/audit_sdlwdr_cipher6_asset_tape.py).
+
+## Fourth freeze: thirteen tape-symbol operation classes
+
+The exact tape contains thirteen distinct symbols, in first-occurrence order:
+
+```text
+A, space, B, D, M, G, I, C, R, T, K, 0, 1
+```
+
+This admits a small operation quotient without inventing thirteen arbitrary
+permutations. At each step:
+
+1. find the observed ciphertext card's current rank and emit it as plaintext;
+2. use that plaintext rank to address the 83-slot tape;
+3. map the addressed tape symbol to its natural or first-occurrence class
+   rank;
+4. move the first `N` cards to the back, with `N=class` or `class+1`.
+
+Test both global cut directions and the two physical readings of the binary
+rows. Every line resets naturally. These `2×2×2×2=16` settings are the whole
+family. Promotion requires the same near-total collapse into `0..41`; no
+per-symbol direction, distance table, or arbitrary class permutation may be
+fit afterward.
+
 ## Why this matters for the Eyes
 
 This puzzle is the first practice example in the storehouse that explicitly

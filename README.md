@@ -915,6 +915,13 @@ Earthquake binary bands have `24+20+17=61`, producing exactly one 83-slot
 tape. Stable-position and cyclic-rotation deck orders are frozen first, while
 operation-class and step interpretations remain explicitly deferred.
 
+The direct tape-order interpretations are now negative as well: all 24
+stable/cyclic candidates use every rank through 82, best `406/761`. The exact
+83-slot identity remains active under a different, pre-registered consumer:
+its 13 distinct symbols select 13 first-`N` cut classes under two fixed class
+orders, zero/one-based distance, two global directions, and two binary
+readings—16 models total.
+
 ## Running the workbench
 
 Python 3.11 or newer is sufficient for the dependency-free experiments:

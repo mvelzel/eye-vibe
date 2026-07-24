@@ -3765,3 +3765,16 @@ two are presently executable without fitted semantics. Their frozen test uses
 two physical binary directions, natural or first-occurrence symbol collation,
 stable versus cyclic order, and the already fixed `P`, `P^rank`,
 `P^(rank+1)` schedules. No tape rotation or per-line selection is allowed.
+
+The direct 83-slot position-order test is negative. Eight unique permutations
+from binary direction, symbol collation, and stable/cyclic ordering cross with
+three exponent schedules. Every one of the 24 settings uses all ranks through
+82. The maximum is fixed cyclic clockwise order under first-occurrence
+collation, `406/761=.533509` low ranks, with no coherent rendering.
+
+The next tape consumer is frozen without fitting operations. The tape has 13
+distinct symbols in first-occurrence order
+`A,space,B,D,M,G,I,C,R,T,K,0,1`. After emitting current card rank, address the
+tape by that plaintext rank, turn its symbol into a natural or
+first-occurrence class rank, and rotate the deck by class or class-plus-one.
+Two global cut directions and two binary readings give exactly 16 models.

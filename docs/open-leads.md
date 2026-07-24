@@ -1525,3 +1525,13 @@ together they form an exact 83-slot tape. Before depth, five possible
 consumers are separated: stable position order, cyclic-rotation order,
 13 operation classes, literal per-rank steps, and a transformed instruction
 stream. Only the first two have fixed semantics and are admitted next.
+
+**Third result:** stable and cyclic-rotation ordering are negative. All 24
+settings use every rank through 82; the best is only `406/761` low ranks.
+The exact tape remains live under other consumers.
+
+**Next frozen consumer:** its 13 distinct symbols define 13 cut classes. The
+symbol at the recovered plaintext rank selects a natural/first-occurrence
+class number; move the first `N` cards to the back using zero/one-based `N`,
+two global directions, and the two binary readings. This gives exactly 16
+settings and fits no arbitrary operation.
