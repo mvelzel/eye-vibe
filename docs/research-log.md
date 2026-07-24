@@ -3431,3 +3431,28 @@ the marker values `27,77,33`. Because both the gap and presentation were
 seen, a 50,000-control freeze lets every shuffle search gaps 2–30 and all
 anchor orders. No control has been run yet. Protocol:
 `docs/eighteenth-gap-anchor-freeze-2026-07-24.md`.
+
+The frozen audit is positive. The detector recovers its plant, and the real
+trimmed/full positions are respectively `16/37`, `18/39`, and `17/38`.
+Exactly 1,616 of 50,000 nuisance-preserving shuffles have one clean gap-11
+anchor in every final-row message; none also satisfies the exact formula, for
+corrected tail `1/50001 = .0000199996`. The deliberately severe broad control
+searches gaps 2–30, all six anchor orders, and ignores header-to-edge
+assignment. Only 55 controls match, for corrected tail
+`56/50001 = .0011199776`.
+
+The relation is most compactly a telescoping checksum over the ordered anchor
+path `E4 -> W4 -> E5`: headers W4 and E5 are the two modular decrements, while
+header E4 is their sum and the endpoint difference. This promotes a genuine
+marker/body construction link and gives the final factoradic row a concrete
+consumer. It does not yet explain the landmark selector, the first two rows,
+or plaintext. Full results:
+`docs/eighteenth-gap-anchor-results-2026-07-24.md`.
+
+Before deepening, two 50,000-permutation controls are frozen in
+`docs/eighteenth-gap-anchor-label-freeze-2026-07-24.md`. The first globally
+reassigns body labels while keeping markers fixed; the second permutes the
+shared body/marker alphabet jointly. Both retain the exact equality skeleton
+and charge all anchor orders/header-edge assignments. They test whether the
+natural mod-83 coordinate, rather than only the selected positions, is
+authored.

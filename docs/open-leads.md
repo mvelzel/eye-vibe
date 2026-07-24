@@ -1276,8 +1276,7 @@ deeper registered blocks are also full at their limiting dimension. Details:
 
 ### Final-row gap anchors and headers
 
-**Status:** newly recovered from the 22 July Discord discussion; control
-protocol frozen, not yet scored.
+**Status:** promoted as a significant header/body construction link.
 
 After the copied 20-symbol opening, each of `east4,west4,east5` has exactly
 one clean repeat at gap 11. Its anchor values are `75,81,48`. Their directed
@@ -1285,7 +1284,20 @@ differences reproduce all three headers: `75-48=27`, `75-81=77`, and
 `81-48=33 mod 83`. The link is objectively interesting but the gap and
 difference presentation were inspected retrospectively.
 
-The frozen audit therefore runs both the exact reported formula and a broad
-selection correction that lets every one of 50,000 matched shuffles search
-gaps 2–30 and all six anchor orderings. Details:
+No one of 50,000 matched shuffles reproduces the exact formula, for corrected
+tail `1/50001`. The broad correction lets every shuffle search gaps 2–30, all
+six anchor orders, and ignores header-to-edge assignment; 55 controls match,
+for `56/50001 = .001119978`. E4's anchor plus the headers predicts the W4 and
+E5 anchors exactly.
+
+Interpret this as a telescoping final-row checksum:
+`h_W4=a_E4-a_W4`, `h_E5=a_W4-a_E5`, and
+`h_E4=h_W4+h_E5=a_E4-a_E5 mod 83`. It supports typed/check markers but does
+not decode plaintext or establish the running cipher. Freeze and results:
 [`eighteenth-gap-anchor-freeze-2026-07-24.md`](eighteenth-gap-anchor-freeze-2026-07-24.md).
+[`eighteenth-gap-anchor-results-2026-07-24.md`](eighteenth-gap-anchor-results-2026-07-24.md).
+
+Before calling the natural numeric subtraction itself authored, two
+orthogonal 50,000-permutation controls are frozen: permute body labels with
+markers fixed, then permute the shared body/marker alphabet jointly. Protocol:
+[`eighteenth-gap-anchor-label-freeze-2026-07-24.md`](eighteenth-gap-anchor-label-freeze-2026-07-24.md).
