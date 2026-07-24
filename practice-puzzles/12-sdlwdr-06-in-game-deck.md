@@ -338,6 +338,73 @@ symbol-specific direction is permitted. A correct model must collapse almost
 entirely into the low plaintext ranks and then replay under one fixed
 rendering.
 
+## Sixth result: direct ciphertext-autokey rotations are negative
+
+All 216 raw and asset-valued custom-Alberti settings preserve the known first
+symbols but recover all ranks through 82. The maximum is:
+
+```text
+initial=trailer  key=asset-tape  alignment=cumulative
+binary=cw  value-alphabet=trailer  nonletters=appended
+distance=value+1  cut=left
+low ranks = 418/761 = .549277
+```
+
+The best raw-card key is only `409/761`. This closes simple cumulative and
+absolute ciphertext-keyed *rotations*. It does not reject a custom Alberti
+whose disks use non-rotational permutations or several coupled rings.
+
+Executable audit:
+[`audit_sdlwdr_cipher6_ciphertext_autokey.py`](../scripts/audit_sdlwdr_cipher6_ciphertext_autokey.py).
+
+## Revision differential
+
+Every already fixed family was replayed unchanged against the author's
+superseded original ciphertext:
+
+| family | revised best | original best |
+|---|---:|---:|
+| paired rotating decks | 419 | 419 |
+| direct circle base | 428 | 431 |
+| 83-slot order | 406 | 417 |
+| ordinal class cuts | 407 | 416 |
+| altar-valued cuts | 423 | 403 |
+| ciphertext autokey | 418 | 430 |
+
+Every original maximum also uses all 83 ranks through 82. The revision does
+not expose a near-solution under any tested reset, timing, address, or value
+convention. Preserve the old file as an oracle, but do not use the vague
+“one aspect” wording to multiply variants.
+
+## Seventh freeze: full-circle rotating clock
+
+The prior models barely used the authored outer and inner rune sequences as
+sequences. In the Trailer alphabet they are:
+
+```text
+outer KMGIC  -> 7,2,4,5,6
+inner MAGICK -> 2,3,4,5,6,7
+```
+
+At character time `t`, index those cycles at `t mod 5` and `t mod 6`; index
+the alternating and irregular binary rows at `t mod 20` and `t mod 17`.
+Eight source-fixed step schedules are admitted:
+
+1. outer + inner;
+2. outer - inner;
+3. inner - outer;
+4. alternating bit chooses outer versus inner;
+5. irregular bit chooses outer versus inner;
+6. alternating bit signs outer + inner;
+7. irregular bit signs outer + inner;
+8. alternating signs outer while irregular signs inner.
+
+Test the two physical readings of every circle row, cumulative versus
+absolute alignment, step versus step-plus-one, and the three digit-preserving
+initial decks: `8×2×2×2×3=192` models. The schedule resets per line; no
+rotations/phases, per-line direction, fitted rune values, or mixed timing are
+allowed. Promotion again requires near-total low-rank collapse.
+
 ## Why this matters for the Eyes
 
 This puzzle is the first practice example in the storehouse that explicitly

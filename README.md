@@ -936,6 +936,14 @@ ciphertext autokey—raw or tape-valued observed-card keys, cumulative versus
 absolute disk alignment, three fixed initial orders, global direction, and
 zero/one indexing—216 models total.
 
+Those 216 ciphertext-autokey rotations are negative (`418/761` best; raw-card
+keys `409/761`). The original ciphertext also fails every already fixed
+family, with maxima `403..431` and all ranks used. One full-asset disk family
+is frozen next: outer/inner rune values cycle at periods 5/6, alternating and
+irregular bits select or sign eight fixed step laws, and only physical
+direction, cumulative/absolute alignment, zero/one indexing, and the three
+initial decks vary—192 models.
+
 ## Running the workbench
 
 Python 3.11 or newer is sufficient for the dependency-free experiments:

@@ -15,6 +15,7 @@ from eye_mystery.practice_cipher6 import (
     candidate_decks,
     circle_base_permutation_audit,
     circle_base_permutations,
+    ciphertext_autokey_audit,
     keyed_deck,
     paired_deck_audit,
     read_ciphertext,
@@ -101,6 +102,16 @@ class PracticeCipher6Tests(unittest.TestCase):
         self.assertEqual(len(results), 32)
         self.assertTrue(all(result.prefix_matches == 9 for result in results))
         self.assertTrue(all(result.total == 761 for result in results))
+
+    def test_ciphertext_autokey_audit_is_the_frozen_216_models(self) -> None:
+        results = ciphertext_autokey_audit(read_ciphertext(CIPHERTEXT))
+        self.assertEqual(len(results), 216)
+        self.assertTrue(all(result.prefix_matches == 9 for result in results))
+        self.assertTrue(all(result.total == 761 for result in results))
+        self.assertEqual(sum(result.key_source == "raw" for result in results), 24)
+        self.assertEqual(
+            sum(result.key_source == "asset-tape" for result in results), 192
+        )
 
 
 if __name__ == "__main__":

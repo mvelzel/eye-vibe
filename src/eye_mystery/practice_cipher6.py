@@ -611,3 +611,152 @@ def tape_value_cut_audit(
                             )
                         )
     return tuple(sorted(results, key=lambda result: result.key, reverse=True))
+
+
+@dataclass(frozen=True)
+class CiphertextAutokeyResult:
+    initial_deck: str
+    key_source: str
+    alignment_mode: str
+    one_based: bool
+    cut_direction: str
+    binary_direction: str | None
+    value_alphabet: str | None
+    appended_nonletters: bool | None
+    prefix_matches: int
+    low_rank_count: int
+    total: int
+    distinct: int
+    maximum: int
+    decoded: tuple[tuple[int, ...], ...]
+
+    @property
+    def low_rank_fraction(self) -> float:
+        return self.low_rank_count / self.total
+
+    @property
+    def key(self) -> tuple[int, int, int, int]:
+        return (
+            self.prefix_matches,
+            self.low_rank_count,
+            -self.maximum,
+            -self.distinct,
+        )
+
+
+def _decode_ciphertext_autokey_line(
+    ciphertext: tuple[int, ...],
+    initial_deck: tuple[int, ...],
+    key_values: tuple[int, ...],
+    *,
+    cumulative: bool,
+    one_based: bool,
+    cut_right: bool,
+) -> tuple[int, ...]:
+    deck = initial_deck
+    plaintext = []
+    for card in ciphertext:
+        plaintext.append(deck.index(card))
+        distance = key_values[card] + int(one_based)
+        if cut_right:
+            distance = -distance
+        distance %= SIZE
+        source = deck if cumulative else initial_deck
+        deck = source[distance:] + source[:distance]
+    return tuple(plaintext)
+
+
+def ciphertext_autokey_audit(
+    lines: tuple[tuple[int, ...], ...],
+) -> tuple[CiphertextAutokeyResult, ...]:
+    """Test the frozen raw and asset-valued 83-card ciphertext autokeys."""
+
+    initial_decks = {
+        "natural": tuple(range(SIZE)),
+        "trailer": keyed_deck(ALTAR_LETTERS),
+        "card-trick": keyed_deck(CARD_TRICK_LETTERS),
+    }
+    results = []
+
+    def add_family(
+        *,
+        key_source: str,
+        key_values: tuple[int, ...],
+        binary_direction: str | None,
+        value_alphabet: str | None,
+        appended_nonletters: bool | None,
+    ) -> None:
+        for initial_name, initial_deck in initial_decks.items():
+            for cumulative in (False, True):
+                for one_based in (False, True):
+                    for cut_right in (False, True):
+                        decoded = tuple(
+                            _decode_ciphertext_autokey_line(
+                                line,
+                                initial_deck,
+                                key_values,
+                                cumulative=cumulative,
+                                one_based=one_based,
+                                cut_right=cut_right,
+                            )
+                            for line in lines
+                        )
+                        flat = tuple(value for line in decoded for value in line)
+                        results.append(
+                            CiphertextAutokeyResult(
+                                initial_deck=initial_name,
+                                key_source=key_source,
+                                alignment_mode=(
+                                    "cumulative" if cumulative else "absolute"
+                                ),
+                                one_based=one_based,
+                                cut_direction="right" if cut_right else "left",
+                                binary_direction=binary_direction,
+                                value_alphabet=value_alphabet,
+                                appended_nonletters=appended_nonletters,
+                                prefix_matches=sum(
+                                    line[0] == expected
+                                    for line, expected in zip(
+                                        decoded, EXPECTED_PREFIXES
+                                    )
+                                ),
+                                low_rank_count=sum(
+                                    value < len(NATURAL_PLAINTEXT)
+                                    for value in flat
+                                ),
+                                total=len(flat),
+                                distinct=len(set(flat)),
+                                maximum=max(flat),
+                                decoded=decoded,
+                            )
+                        )
+
+    add_family(
+        key_source="raw",
+        key_values=tuple(range(SIZE)),
+        binary_direction=None,
+        value_alphabet=None,
+        appended_nonletters=None,
+    )
+
+    alphabets = {
+        "trailer": ALTAR_LETTERS,
+        "card-trick": CARD_TRICK_LETTERS,
+    }
+    for reverse_binary in (False, True):
+        tape = asset_tape(reverse_binary=reverse_binary)
+        binary_direction = "ccw" if reverse_binary else "cw"
+        for alphabet_name, letters in alphabets.items():
+            for appended_nonletters in (False, True):
+                values = tape_value_map(
+                    letters, appended_nonletters=appended_nonletters
+                )
+                add_family(
+                    key_source="asset-tape",
+                    key_values=tuple(values[symbol] for symbol in tape),
+                    binary_direction=binary_direction,
+                    value_alphabet=alphabet_name,
+                    appended_nonletters=appended_nonletters,
+                )
+
+    return tuple(sorted(results, key=lambda result: result.key, reverse=True))

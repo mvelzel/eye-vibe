@@ -3812,3 +3812,22 @@ realignment, with zero/one indexing and global direction; tape-valued models
 also admit the two binary readings and two fixed nonletter conventions. The
 complete family has 24 raw plus 192 tape-valued models. No line-specific
 offsets or symbol-specific signs are admitted.
+
+The 216-model custom-Alberti ciphertext-autokey rotation screen is negative.
+Every candidate uses all ranks through 82. The maximum is a cumulative,
+left-turning, one-based asset key from the clockwise tape and Trailer value
+alphabet, starting from the Trailer-keyed deck: `418/761=.549277`. Raw-card
+ciphertext autokey reaches only `409/761`.
+
+All six fixed mechanism families were then replayed unchanged on the
+superseded original ciphertext. Their maxima are respectively
+`419,431,417,416,403,430/761`, and every stream again uses all 83 ranks.
+Thus the author's correction is not one of the tested reset, timing, address,
+or value conventions.
+
+A final more faithful rotating-disk family is frozen before evaluation. In the
+Trailer alphabet, outer `KMGIC` is `[7,2,4,5,6]` and inner `MAGICK` is
+`[2,3,4,5,6,7]`. At time `t`, combine those 5/6-cycles and the 20/17 binary
+cycles under eight fixed sum, difference, bit-select, and bit-sign schedules.
+Two physical readings, cumulative/absolute alignment, zero/one-based step,
+and three initial decks give 192 models with no fitted phase.

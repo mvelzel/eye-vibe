@@ -1552,3 +1552,14 @@ ciphertext autokey. The next frozen 216-model family therefore updates a
 rotating deck from observed ciphertext labels, using cumulative versus
 absolute alignment, raw versus fixed tape-derived values, zero/one indexing,
 global direction, two binary readings, and three letter-only initial orders.
+
+**Sixth result:** the 216 custom-Alberti ciphertext-autokey rotations are
+negative, best `418/761`; the best raw-card key is `409/761`. Replaying all
+fixed families on the superseded original yields maxima `403..431`, always all
+83 ranks, so the revision does not isolate a covered timing/reset convention.
+
+**Next frozen family:** use the full Circle as a time-driven rotating clock.
+Map outer `KMGIC` and inner `MAGICK` through the Trailer alphabet, combine
+their 5/6-cycles by eight fixed sum/difference/bit-select/bit-sign schedules,
+and test two physical directions, cumulative/absolute alignment,
+zero/one-based step, and three initial decks: 192 models.
