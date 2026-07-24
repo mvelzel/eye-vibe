@@ -91,3 +91,11 @@ If the exact solve is satisfiable, do **not** decrypt. First quantify solution
 multiplicity, forced distances, and leave-family-out prediction. If it is
 unsatisfiable, shrink the contradiction by contexts and aligned positions so
 that the rejection is independently checkable.
+
+## Post-freeze implementation correction
+
+The equations are invariant not only under translation and reflection but
+under multiplication of every coordinate by any nonzero element of `F83`.
+The solver therefore fixes the endpoints of one constrained edge to `0` and
+`1`, removing translation and all 82 nonzero scalings. This is a
+symmetry-breaking correction only; it neither adds nor removes solutions.

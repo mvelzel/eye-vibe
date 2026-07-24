@@ -921,3 +921,20 @@ and only lastly an authored in-game selector join. The first implementation
 is restricted to exact adjacent/multi-lag satisfiability. A satisfiable fit
 cannot promote until its wheel is identifiable on planted data and predicts
 one isomorph family from the other.
+
+The first result is now in
+`docs/thirteenth-wide-hidden-geometry-results-2026-07-24.md`. Multi-step
+geometry closes exactly: every context passes alone, but the last family is
+UNSAT by cumulative lags 1–3, the first by 1–6, and lag 5 alone already
+contradicts the last family. The strongest certificate uses eight equations
+from only `last-east5` and `last-east3`. All 256 sign branches force a
+collision among eleven label coordinates; removing any equation restores at
+least two collision-free branches.
+
+The adjacent-only model remains open. Three exact encodings timed out jointly,
+while one-sided searches reached only 61–65 of 141 equations. Do not treat
+those bounds as an exclusion or use an incomplete fitted wheel for plaintext.
+If revisited, the next step must improve exact adjacent-CSP propagation or
+learn adjacent distance classes on one family and predict the other. Adding
+lag-2 regularization is disallowed because it moves toward the now-rejected
+multi-step model.

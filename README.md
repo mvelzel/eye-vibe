@@ -136,6 +136,16 @@ only whether corresponding adjacent steps have equal unsigned hidden-wheel
 distance. Exact lag-ladder, identifiability, planted-recovery, and
 cross-family gates are specified before a wheel may be interpreted.
 
+That exact pass is complete in
+[`docs/thirteenth-wide-hidden-geometry-results-2026-07-24.md`](docs/thirteenth-wide-hidden-geometry-results-2026-07-24.md).
+Every context independently admits even an all-lag wheel embedding, but the
+families cannot share one: the last family is inconsistent by cumulative lags
+1–3 and the first by lags 1–6. A deletion-minimal eight-equation certificate
+enumerates all 256 orientation branches and forces a coordinate collision in
+every one. Adjacent chords alone remain honestly unresolved after arithmetic,
+Boolean, CP-SAT, and local-search bounds; no candidate wheel or plaintext is
+claimed.
+
 The next Eye pass deliberately changes the question from “how can these
 numbers be read?” to “what small mechanism caused the equality and
 reconvergence structure?” Its fourteen-lane breadth map is frozen in

@@ -6,6 +6,7 @@ requires-python = ">=3.11"
 
 [project.optional-dependencies]
 solver = ["z3-solver>=4.15"]
+cp = ["ortools>=9.15"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]

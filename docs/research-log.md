@@ -2844,3 +2844,29 @@ supplies 141 unique equations on 71 observed labels. Exact adjacent and
 multi-lag satisfiability, planted recoverability, solution multiplicity, and
 first-family/last-family prediction are specified before any candidate wheel
 or plaintext may be scored.
+
+### Hidden geometry result: multi-step rejection, adjacent case open
+
+The exact lag ladder is complete enough to separate two mechanisms. Every one
+of the seven nonliteral contexts is individually SAT even when all within-
+window pairwise distances are imposed. They cannot share a wheel: the first
+family is UNSAT at cumulative lags 1–6, the last and combined families at
+1–3, and the last family is also UNSAT at lag 5 alone. The preceding first
+1–5 and last 1–2 cases remain `UNKNOWN` after 120 seconds, so the reported
+thresholds are proved boundaries rather than claimed minima.
+
+The last-family proof shrinks to eight chord equalities from `last-east5` and
+`last-east3`. Enumerating their 256 orientation choices and row-reducing over
+`F83` forces two distinct labels to have the same coordinate in every branch.
+The core is deletion-minimal; deleting its rows leaves
+`3,5,8,8,8,8,2,2` collision-free sign branches. This dependency-free
+certificate rejects a common multi-step metric without invoking language or
+the authored numeric label order.
+
+Lag 1 alone remains unresolved. Each context is SAT, but joint arithmetic and
+Boolean Z3 encodings time out; an independent eight-worker CP-SAT run is still
+`UNKNOWN` after 300 seconds; and one-sided searches reach only 61–65/141.
+These are not negative evidence. The surviving hypothesis is specifically an
+adjacent differential transducer whose immediate motion classes need not
+compose into longer geometric chords. Full results and reproduction are in
+`docs/thirteenth-wide-hidden-geometry-results-2026-07-24.md`.
