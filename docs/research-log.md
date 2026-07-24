@@ -3487,3 +3487,20 @@ values encode telescoping mod-83 differences, and W4's header edge order
 `021` encodes the rank order of the three landmark positions. This is one
 shared construction result, not two multiplicative p-values. Details:
 `docs/eighteenth-gap-anchor-position-results-2026-07-24.md`.
+
+The positive record triggers a deliberately wide follow-up in
+`docs/eighteenth-wide-anchor-record-horizon-2026-07-24.md`. Its central new
+abstraction is a rank-two K3 coboundary: the final anchors are vertex
+potentials and the markers are all three pair differences. The first six
+marker control edges independently enumerate both orientations of the
+three-vertex cycle, while the final W4 edge supplies the observed `021`
+position order.
+
+This also sharpens, but does not wholesale validate, the later Gate lead.
+The established Eye record has the exact binary interface
+`77 + 33 -> 27 mod 83`: two path increments and their central telescoping
+total. That matches the independently reconstructed two-side-input,
+upper-control, center-result Gate topology at the level of arity and routing.
+No Type4/Type6 execution, Seula residual mask, or fresh-value allocator has
+appeared. Twelve lanes are ranked before depth; finite incidence conventions
+go first, followed by row-typed records and the synchronizing 11-loop.

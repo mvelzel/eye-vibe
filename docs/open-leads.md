@@ -1324,3 +1324,13 @@ and a different one has the exact numeric relation; none has both. No control
 survives the broad joint gap/order search, for corrected tail `1/50001`.
 Results:
 [`eighteenth-gap-anchor-position-results-2026-07-24.md`](eighteenth-gap-anchor-position-results-2026-07-24.md).
+
+The promoted record now opens a fresh wide horizon rather than an immediate
+parameter scan. Twelve lanes cover a K3 coboundary diagram, row-typed
+landmarks, synchronizing loops, override symbols, pointers, Gate/Cessation
+interfaces, factoradic dual use, authored conformance generation, source
+frames, and archaeology. The Gate is upgraded only at topology level: two
+inputs `77,33` combine to central total `27 mod 83`, matching a real Eye
+interface, while its unpublished masks/cache allocator remain unsupported.
+Map:
+[`eighteenth-wide-anchor-record-horizon-2026-07-24.md`](eighteenth-wide-anchor-record-horizon-2026-07-24.md).
