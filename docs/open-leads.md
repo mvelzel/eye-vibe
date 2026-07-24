@@ -1480,3 +1480,11 @@ literally, and reserve the final three contexts for the primary statistic.
 Fifty thousand global label permutations preserve the entire equality
 skeleton while breaking natural base-five coordinates. Protocol:
 [`twenty-third-diamond-context-freeze-2026-07-24.md`](twenty-third-diamond-context-freeze-2026-07-24.md).
+
+**Lane A result:** closed. The squared quotient scores `11/96` on the first
+four contexts and only `6/129` held out, with no exact context. A total of
+48,175/50,000 global-label controls tie or exceed it, for inclusive tail
+`.963500730`. The historical `x=120` order is also uniquely last among the six
+relative component alignments on held out. Preserve the asset/transform
+history, but do not deepen this record-local reading. Results:
+[`twenty-third-diamond-context-results-2026-07-24.md`](twenty-third-diamond-context-results-2026-07-24.md).

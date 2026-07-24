@@ -3697,3 +3697,16 @@ four contexts are descriptive and only the final three form the primary
 score. Fifty thousand global permutations of `0..82` preserve every corpus
 equality and partial-isomorph structure while destroying the natural
 base-five coordinates. No real score has been inspected.
+
+The held-out desert quotient is decisively negative. The exact historical
+`x²+y` transform scores `11/96` eligible output agreements on the first four
+contexts and `6/129` on the final three, with no exact record. The lossless
+`5x+y` sanity reading gives `4/96` and `3/129`.
+
+All 50,000 controls preserve the complete equality skeleton through one global
+`0..82` relabeling. A total of 48,175 tie or exceed the real held-out score,
+for inclusive tail `48176/50001=.963500730`. With `y=021` fixed, the six
+held-out scores for x orders are `(16,9,10,6,11,14)`; the historical `x=120`
+order is uniquely last. Close this record-local transform under the frozen
+stop rule and return to the twenty-third portfolio. Results:
+`docs/twenty-third-diamond-context-results-2026-07-24.md`.

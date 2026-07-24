@@ -880,6 +880,16 @@ enumerating all 2,380 tapes with the same `13/4` composition gives
 specific Eye transfer is not. Results:
 [`docs/twenty-second-cessation-wheel-transfer-results-2026-07-24.md`](docs/twenty-second-cessation-wheel-transfer-results-2026-07-24.md).
 
+The deferred desert-glyph quotient has now received its prospective held-out
+test and also closes. Resetting the historical `y=021`, `x=120`, `x²+y`
+reading at each nonliteral record gives only `6/129` eligible held-out
+agreements. Of 50,000 global label permutations that preserve the entire Eye
+equality skeleton, 48,175 do at least as well
+(`48176/50001=.963500730`). The historical component alignment is uniquely
+last of six on the held-out score. This rejects the record-local consumer, not
+the factual desert asset class or reproduction of the old transform. Results:
+[`docs/twenty-third-diamond-context-results-2026-07-24.md`](docs/twenty-third-diamond-context-results-2026-07-24.md).
+
 ## Running the workbench
 
 Python 3.11 or newer is sufficient for the dependency-free experiments:
