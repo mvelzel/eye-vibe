@@ -833,14 +833,16 @@ over 5,000 trials. `AG(2,3)` heldout tails are `.388060/.094527`; no one of
 373 named physical actions completes a context; and the header transducer
 ranks `81/280` and loses to its unconditioned baseline.
 
-The final wide batch is frozen in
-[`twelfth-wide-third-batch-freeze-2026-07-24.md`](twelfth-wide-third-batch-freeze-2026-07-24.md).
-It tests transition-spectrum concentration and a small five-ary convolutional
-syndrome, then closes or advances storage bitplanes, conventional cipher
-modes, and executable clue interfaces only under explicit identifiability and
-selector gates.
+The final wide batch is complete in
+[`twelfth-wide-third-batch-results-2026-07-24.md`](twelfth-wide-third-batch-results-2026-07-24.md).
+It also repairs the skipped signed-projective lane G. The quotient
+(`.109453`), spectral concentration (`.149254`), and heldout convolutional
+syndrome (`.457711`) all close. Storage bitplanes have no authored bit
+selector; conventional modes are ciphertext-only unidentifiable; and the
+currently selected executable clue interfaces predict nothing beyond the
+cardinality that selected them. All sixteen lanes now have a bounded result.
 
-That batch is now frozen before execution in
+The earlier six-lane deferred batch was frozen before execution in
 [`eighth-wide-deferred-2026-07-22.md`](eighth-wide-deferred-2026-07-22.md).
 It covers static synchronization/error coding, without-replacement packets,
 an exact reconvergence cocycle, deterministic shared phrase grammar, and

@@ -2616,6 +2616,38 @@ spectral concentration and five-ary convolutional syndromes, while storage
 bitplanes, conventional modes, and executable clue paths must pass existing
 selector and identifiability gates rather than receive another free scan.
 
+### Twelfth wide horizon: final batch and restored lane G
+
+The final batch is complete in
+`docs/twelfth-wide-third-batch-results-2026-07-24.md`. A bookkeeping audit
+caught that the signed-projective quotient G had been deferred rather than
+executed. The restored complete scan quotients every nonliteral context into
+`P1(F41)`, fits all Möbius maps, and reselects all 83 reflection centers inside
+200 target-shuffle controls. Center 39 is best, with supports
+`5,5,5,4,7,7,6`, zero exact contexts, and corrected tail `.109453`. All 40
+primitive roots are coordinate-isomorphic and give the same support vector.
+
+The 843-edge transition support has leading singular-energy fraction
+`.1513166097198497`, ordinary under degree-preserving no-loop edge swaps
+(`.149254`). Of all 124 normalized memory-one through memory-three parity
+filters over `F5`, P selects `(1,2,2,1)` at `177/726`; it gives `385/1875` on
+heldout Q, essentially the strict-control mean, tail `.457711`.
+
+The remaining lanes close by stronger existing boundaries. Exact greedy
+base-seven packing already reconstructs all 150 engine constants and its
+forced 21/22 capacity tape is null (`.825817`); no authored bit index exists.
+Unknown plaintext makes stream, CBC, and arbitrary keyed-permutation modes
+constructively capable of realizing any observed ciphertext. The renderer,
+83-of-101 wand branch, copied `gun_names`, Gate, and selected Lua arithmetic
+paths supply no executable state walk or heldout Eye prediction. The Gate
+remains possible later construction vocabulary, not a completely rejected
+visual clue.
+
+All sixteen A–P lanes now have a bounded result and none earns depth. The
+step-back bottleneck is external identifiability: a known plaintext, selected
+operation family, new authored interface, or a method learned from unsolved
+practice cipher 3/4.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly

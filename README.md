@@ -202,6 +202,16 @@ phase occupancy hit vanishes under accepted-trigram-preserving controls
 actions, and the two-register header transducer are negative. No lane earns
 depth.
 
+The final batch, including the restored signed-projective lane G, is complete
+in
+[`docs/twelfth-wide-third-batch-results-2026-07-24.md`](docs/twelfth-wide-third-batch-results-2026-07-24.md).
+The `P¹(F41)` quotient repairs no context (`.109453`), transition spectral
+concentration is ordinary under degree-preserving controls (`.149254`), and
+the P-selected five-ary parity filter is null on heldout Q panels (`.457711`).
+Exact storage, conventional cipher modes, and currently selected in-game
+interfaces fail their selector or identifiability gates. All sixteen lanes in
+the frozen horizon now have a bounded result; none earns depth.
+
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
 contiguous alphabet `0..82`, and the nine messages contain 1,036 values. The
