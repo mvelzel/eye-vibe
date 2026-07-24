@@ -202,6 +202,14 @@ Eyes, none of 270 rule/branch values is zero: leave-one-out is `0/5`, and the
 all-branch-selected rule gives root 62. The original mod-101 trie closure
 remains unexplained, but this compact recursive consumer is exactly closed.
 
+The typed cross-glyph reassociation lane is complete in
+[`docs/fourteenth-reassociation-results-2026-07-24.md`](docs/fourteenth-reassociation-results-2026-07-24.md).
+Its planted period-seven track delay is recovered exactly, but zero of 225
+frozen one-track shifts/reversals keeps all P panels inside `0..82`; the Q
+intersection is independently empty. This closes accepted-alphabet
+short-block misalignment without ruling out a separately motivated larger
+`0..124` code or an authored header-selected route.
+
 The next Eye pass deliberately changes the question from “how can these
 numbers be read?” to “what small mechanism caused the equality and
 reconvergence structure?” Its fourteen-lane breadth map is frozen in

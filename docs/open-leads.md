@@ -1036,3 +1036,17 @@ both exact prerequisites fail. Results:
 The original prefix-trie closure stays active as an unexplained checksum, not
 as this recursive machine. Reopen recursive weights or node types only if a
 later authored interface fixes them independently.
+
+**Lane-B result:** closed at a model-independent prerequisite. The planted
+period-seven component delay is recovered exactly, but zero of the 225 frozen
+one-component shift/reversal routes keeps all P panels inside the observed
+`0..82` alphabet. The Q intersection is independently empty, and West 2 alone
+has zero valid routes. Results:
+[`fourteenth-reassociation-results-2026-07-24.md`](fourteenth-reassociation-results-2026-07-24.md).
+
+This closes accepted-alphabet short-block misalignment. A transform explicitly
+using the 42 missing ranks, or one selected by an independently authored
+header/game interface, is a different open lane rather than a repair. The
+portfolio now returns to breadth: compare F–L and N–O by which new assumption
+each can falsify before deepening one, while preserving the unresolved
+adjacent-only geometry and original trie checksum.

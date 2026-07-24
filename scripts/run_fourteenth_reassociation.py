@@ -117,7 +117,19 @@ def main() -> None:
         controls=args.controls,
         seed=args.seed,
     )
+    if audit.selected is None:
+        print("OBSERVED")
+        print(
+            f"  valid_training_candidates="
+            f"{audit.valid_training_candidates}/225"
+        )
+        print("  exact_validity_gate=False; controls=not-run")
+        return
     describe("OBSERVED", audit.selected)
+    print(
+        f"  valid_training_candidates="
+        f"{audit.valid_training_candidates}/225"
+    )
     print(
         f"  controls_run={audit.controls_run}; "
         f"exceedances={audit.exceedances}; "

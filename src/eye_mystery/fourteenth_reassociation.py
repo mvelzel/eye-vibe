@@ -31,7 +31,8 @@ class TrackReassociationCandidate:
 
 @dataclass(frozen=True)
 class TrackReassociationAudit:
-    selected: TrackReassociationCandidate
+    selected: TrackReassociationCandidate | None
+    valid_training_candidates: int
     controls_run: int
     exceedances: int
     invalid_controls: int
@@ -107,6 +108,23 @@ def _score(
     return model.score(tuple(rendered))
 
 
+def valid_reassociation_specs(
+    streams: Mapping[str, Sequence[int]],
+    names: Sequence[str],
+    *,
+    specs: Sequence[TrackReassociationSpec] | None = None,
+) -> tuple[TrackReassociationSpec, ...]:
+    catalog = tuple(specs) if specs is not None else reassociation_specs()
+    return tuple(
+        spec
+        for spec in catalog
+        if all(
+            reassociate_track(streams[name], spec) is not None
+            for name in names
+        )
+    )
+
+
 def select_reassociation_candidate(
     streams: Mapping[str, Sequence[int]],
     model: PatternModel,
@@ -166,23 +184,39 @@ def audit_track_reassociation(
     ):
         raise ValueError("controls require accepted Eye labels 0..82")
 
+    valid_training = valid_reassociation_specs(streams, train_names)
+    if not valid_training:
+        return TrackReassociationAudit(
+            selected=None,
+            valid_training_candidates=0,
+            controls_run=0,
+            exceedances=0,
+            invalid_controls=0,
+            null_minimum=float("nan"),
+            null_mean=float("nan"),
+            null_maximum=float("nan"),
+            corrected_upper_tail=1.0,
+            stopped_after_rejection=True,
+        )
     selected = select_reassociation_candidate(
         streams,
         model,
         train_names=train_names,
         heldout_names=heldout_names,
+        specs=valid_training,
     )
     if not selected.heldout_valid:
         return TrackReassociationAudit(
-            selected,
-            0,
-            0,
-            0,
-            float("nan"),
-            float("nan"),
-            float("nan"),
-            1.0,
-            True,
+            selected=selected,
+            valid_training_candidates=len(valid_training),
+            controls_run=0,
+            exceedances=0,
+            invalid_controls=0,
+            null_minimum=float("nan"),
+            null_mean=float("nan"),
+            null_maximum=float("nan"),
+            corrected_upper_tail=1.0,
+            stopped_after_rejection=True,
         )
 
     rng = random.Random(seed)
@@ -214,13 +248,14 @@ def audit_track_reassociation(
     denominator = controls + 1 if stopped else len(null) + 1
     finite = tuple(value for value in null if value != float("-inf"))
     return TrackReassociationAudit(
-        selected,
-        len(null),
-        exceedances,
-        invalid,
-        min(finite) if finite else float("-inf"),
-        sum(finite) / len(finite) if finite else float("-inf"),
-        max(finite) if finite else float("-inf"),
-        (1 + exceedances) / denominator,
-        stopped,
+        selected=selected,
+        valid_training_candidates=len(valid_training),
+        controls_run=len(null),
+        exceedances=exceedances,
+        invalid_controls=invalid,
+        null_minimum=min(finite) if finite else float("-inf"),
+        null_mean=sum(finite) / len(finite) if finite else float("-inf"),
+        null_maximum=max(finite) if finite else float("-inf"),
+        corrected_upper_tail=(1 + exceedances) / denominator,
+        stopped_after_rejection=stopped,
     )

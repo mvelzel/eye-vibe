@@ -3030,3 +3030,17 @@ reversal, rejecting any reconstruction outside `0..82`. An accepted-range
 fixture encrypted by period-seven right shift of component 2 is recovered
 exactly by `c2:p7:shift-left` under the already frozen order-14 pattern model.
 Train and held-out improvements are `+5.842783471` and `+4.030816846`.
+
+The real reassociation audit then fails before model selection. Zero of all
+225 routes keeps every P-panel reconstruction in the accepted `0..82`
+alphabet. The Q-side intersection and the all-nine intersection are also
+empty; per-panel counts in message order are
+`19,8,56,0,8,40,33,3,71`, so West 2 alone excludes the family.
+
+No equality-pattern score or matched control is meaningful when no candidate
+passes this necessary gate. Full results are in
+`docs/fourteenth-reassociation-results-2026-07-24.md`. This exactly closes
+short-block accepted-alphabet misalignment while leaving a deliberate
+`0..124` intermediate code, externally selected routes, and other typed-field
+roles as separate hypotheses. The next novelty choice must again begin wide
+across the remaining portfolio rather than extending this failed family.

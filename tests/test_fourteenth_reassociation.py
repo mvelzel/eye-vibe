@@ -1,9 +1,12 @@
 import unittest
 
+from eye_mystery.corpus import MESSAGE_ORDER, MESSAGES, trigram_values
+from eye_mystery.factoradic_headers import P_MESSAGES
 from eye_mystery.fourteenth_reassociation import (
     TrackReassociationSpec,
     reassociate_track,
     reassociation_specs,
+    valid_reassociation_specs,
 )
 from eye_mystery.fourteenth_selector import base5_digits
 
@@ -55,6 +58,17 @@ class FourteenthReassociationTests(unittest.TestCase):
             TrackReassociationSpec(2, 3, "shift-right"),
         )
         self.assertEqual((2, 0, 1, 4, 3), encrypted)
+
+    def test_no_nontrivial_track_route_stays_accepted_on_all_p_panels(self) -> None:
+        bodies = {}
+        for name in MESSAGE_ORDER:
+            body = trigram_values(MESSAGES[name])[1:]
+            trim = 25 if name in P_MESSAGES else 6
+            bodies[name] = body[trim:]
+        self.assertEqual(
+            (),
+            valid_reassociation_specs(bodies, P_MESSAGES),
+        )
 
 
 if __name__ == "__main__":

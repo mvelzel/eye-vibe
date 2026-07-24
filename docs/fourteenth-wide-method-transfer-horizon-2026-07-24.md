@@ -238,3 +238,18 @@ therefore has exact inverse `c2:p7:shift-left`. The complete P-side selector
 recovers that exact specification, with train improvement `+5.842783471` and
 Q-side improvement `+4.030816846`. No pattern-order scan or real Eye score was
 used. The family and order are now admissible for lane B's real audit.
+
+## Sixth-lane result
+
+Lane B closes at its exact alphabet-validity gate. The calibrated planted
+fixture still recovers `c2:p7:shift-left`, but none of the 225 frozen
+single-track routes keeps every P panel inside `0..82`. Independently, none
+keeps every Q panel in range, and West 2 alone admits zero candidates.
+Consequently there is no real winner to score and no matched-control family
+to run.
+
+Full results are in
+[`fourteenth-reassociation-results-2026-07-24.md`](fourteenth-reassociation-results-2026-07-24.md).
+This rejects short-block accepted-alphabet misalignment, not a deliberate
+larger `0..124` code or a header-selected authored route. Those remain
+separate hypotheses and may not be introduced as post-hoc repairs.
