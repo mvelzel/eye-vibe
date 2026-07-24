@@ -155,6 +155,49 @@ additional mask rule.  The dossier does not state that rule.  Consequently the
 `9|8=17` split is an attractive reading of two real pictograms, while the
 claimed no-leftover four-way partition remains under-specified.
 
+### A direct locale reading from the fixed bands
+
+The two real pictogram bands now have a substantially simpler and fully
+executable reading than the proposed Type4/Type6 machinery.  The upper
+components are ordered unambiguously left-to-right:
+
+```text
+1,5,3 -> decimal 153
+```
+
+The lower band is an exact five-pixel orthogonal plus followed by three
+singletons, hence `+3`.  Under the Eye alphabet:
+
+```text
+153 mod83       = 70 -> f
+(153 + 3) mod83 = 73 -> i
+```
+
+Veska therefore reads `fi`, matching the original marker BWT's `!Fi` suffix
+and its unique `+358 -> FI/AX` locale checksum.  The bands were
+dossier-guided, but their pixels, components, order, and arithmetic are now
+reproduced directly from the unchanged sprite.
+
+This is specific in spatial order: reversing the components gives `36`.
+However, four of all six arbitrary upper-component permutations produce some
+assigned region code (`FI`, `TW`, `AD`, or `BE`), so generic country-code
+appearance is not rare.  The meaningful match is to the already selected
+marker locale `FI`, not to the broad class.
+
+A second later asset restates the operator.  The current-WAK chest reward
+routine uniquely adds `509.7,683.1` to RNG coordinates; their integer parts
+modulo 83 display as `+3`.  Among 11 distinct one-salt-per-argument RNG
+recipes, this is the only primary arithmetic instruction and the only exact
+`+3`.  The same pair is also the only geographic calling-code pair
+`509 -> HT`, `683 -> NU`, with `683` repeating the marker's first-plane code.
+The salts were added with the March 2023 chest-randomness fix, so this remains
+a possible later restatement rather than an original construction input.
+
+The complete frozen comparisons and chronology are in
+[`thirtieth-veska-locale-results-2026-07-24.md`](thirtieth-veska-locale-results-2026-07-24.md)
+and
+[`twenty-ninth-rng-salt-instruction-results-2026-07-24.md`](twenty-ninth-rng-salt-instruction-results-2026-07-24.md).
+
 Likewise, `145 OR (1<<3)=153` is arithmetically exact once bit 3 and the input
 byte are chosen, but the sprite-to-bit selection is the evidentiary step.  The
 dossier says direct use of the Boolean descriptor on raw Eye windows is
@@ -249,15 +292,16 @@ timeline, but it would not fill the missing masks or fresh allocator.
 
 ## Assessment and falsification target
 
-The strongest surviving interpretation is modest: the Gate may deliberately
-repeat visual vocabulary useful for thinking about paired scopes, a third-eye
-successor operation, and a `9|8`/17-role boundary.  Three things support taking
-that seriously: authored paired side panels, genuine activation pictography,
-and the exact Q-C successor edges.  The raw game code does **not** execute the
-proposed record machine, and several central numerical joins are currently
-retrospective and under-specified.
+The strongest surviving interpretation is now narrower but stronger: Veska
+very plausibly restates the marker's Finnish locale tag as `153`, `+3`,
+`mod83 -> fi`.  The Gate may additionally repeat visual vocabulary useful for
+paired scopes, a third-eye successor operation, and a `9|8`/17-role boundary.
+The raw game code still does **not** execute the dossier's proposed record
+machine, and several central numerical joins remain retrospective and
+under-specified.
 
-The Gate theory should be promoted only after one frozen, prospective result:
+The dossier's full Gate record machine should be promoted only after one
+frozen, prospective result:
 
 1. publish the exact Seula residual and Veska/side-band masks;
 2. reproduce every intermediate value from raw PNGs and canonical Eye data;

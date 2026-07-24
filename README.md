@@ -1000,6 +1000,21 @@ promotes a redundant `FI` locale header, still without a body decoder or
 discovery p-value. Results:
 [`docs/twenty-seventh-three-plane-locale-results-2026-07-24.md`](docs/twenty-seventh-three-plane-locale-results-2026-07-24.md).
 
+A ground-up in-game follow-up now gives the marker locale an unexpectedly
+coherent later echo. Across 332 executable `SetRandomSeed` calls in the
+installed WAK, the chest routine's `509.7,683.1` is the sole distinct salt
+recipe containing a marker-plane code and the sole two-geographic-code pair
+(`HT`,`NU`). Its integer parts modulo 83 display as `+3`, uniquely among 11
+two-coordinate salt recipes. Veska's already measured upper/lower mark bands
+then execute directly: left-to-right component sizes `1,5,3` give
+`153 mod83 -> f`, and the visible `+3` gives `i`. This case-insensitively
+matches the marker BWT's `!Fi`. The Gate and salts postdate the Eyes, so this
+promotes a plausible later `FI` header cross-reference—not the dossier's full
+machine and not a body decoder. Results:
+[`docs/twenty-eighth-rng-locale-salt-results-2026-07-24.md`](docs/twenty-eighth-rng-locale-salt-results-2026-07-24.md);
+[`docs/twenty-ninth-rng-salt-instruction-results-2026-07-24.md`](docs/twenty-ninth-rng-salt-instruction-results-2026-07-24.md);
+[`docs/thirtieth-veska-locale-results-2026-07-24.md`](docs/thirtieth-veska-locale-results-2026-07-24.md).
+
 ## Running the workbench
 
 Python 3.11 or newer is sufficient for the dependency-free experiments:
@@ -1063,6 +1078,8 @@ PYTHONPATH=src python3 scripts/run_ninth_causal_batch.py --controls 1000
 PYTHONPATH=src python3 scripts/audit_marker_country_tag.py
 PYTHONPATH=src python3 scripts/audit_358_weighted_alignment.py
 PYTHONPATH=src python3 scripts/audit_three_plane_locale.py
+PYTHONPATH=src python3 scripts/audit_rng_locale_salts.py /path/to/data.wak
+PYTHONPATH=src python3 scripts/analyze_gate_guardian.py --assets /path/to/data/entities/animals/boss_gate --data-root /path/to/data
 ```
 
 The vectorized selected-card scan additionally requires NumPy:

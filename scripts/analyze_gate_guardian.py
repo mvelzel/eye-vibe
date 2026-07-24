@@ -23,6 +23,13 @@ import xml.etree.ElementTree as ET
 from PIL import Image, ImageOps
 
 from eye_mystery.corpus import MESSAGE_ORDER, MESSAGES, trigram_values
+from eye_mystery.gate_locale import (
+    EYE_MODULUS,
+    gate_locale_reading,
+    geographic_region_codes,
+    increment_residue_census,
+    permutation_texts,
+)
 
 
 MODULUS = 101
@@ -258,6 +265,25 @@ def main() -> None:
         "lower 8-neighbour component sizes:",
         sorted(map(len, connected_components(lower))),
     )
+    locale_reading = gate_locale_reading(
+        connected_components(upper), connected_components(lower)
+    )
+    print("direct Eye-alphabet locale reading:", locale_reading)
+    if locale_reading is not None:
+        region_codes = geographic_region_codes()
+        print("upper-order permutations:")
+        for ordering, text in permutation_texts(
+            locale_reading.component_sizes, locale_reading.increment
+        ):
+            print(
+                f"  {ordering} -> {text!r} "
+                f"geographic-region={text.upper() in region_codes}"
+            )
+        lowercase, region_pairs = increment_residue_census(locale_reading.increment)
+        print(
+            f"all-residue +{locale_reading.increment} census: "
+            f"lowercase={lowercase}/{EYE_MODULUS} region-pairs={region_pairs}"
+        )
     print(
         "note: the natural bands give 11|44|9|8; obtaining 12|43|9|8 "
         "requires reclassifying one middle pixel by an additional rule"

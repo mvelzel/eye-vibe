@@ -87,6 +87,39 @@ the target, this is corroboration rather than a discovery p-value. Do not use
 `FI358` as a body key without a separately authored consumer. Results:
 [`twenty-seventh-three-plane-locale-results-2026-07-24.md`](twenty-seventh-three-plane-locale-results-2026-07-24.md).
 
+**In-game corroboration result:** promoted narrowly. The installed WAK has 332
+executable `SetRandomSeed` calls and 28 distinct additive salt recipes. Only
+the copied chest/utility reward recipe `509.7,683.1` contains a marker-plane
+code (`683 -> NU`), and it is the only recipe whose two integer parts are
+geographic calling codes (`HT`,`NU`). More importantly, signed integer parts
+modulo 83 plus ASCII 32 spell `+3`; among 11 one-salt-per-argument recipes,
+this is the only primary arithmetic instruction and the only exact `+3`.
+
+That operator has a fixed Gate operand. Veska's previously measured upper
+components have natural left-to-right sizes `1,5,3`; its lower band is a
+five-pixel plus followed by three singleton components. Therefore:
+
+```text
+153 mod83       -> f
+(153 + 3) mod83 -> i
+```
+
+This matches the marker locale `FI`. Natural order is material: mirroring
+gives `36`, although four of six arbitrary permutations happen to name some
+geographic region, so generic region-ness is not strong. The Gate boss
+postdates the October 2020 Eyes, and the salts were added with the March 2023
+chest-randomness fix; both are eligible only as later clues.
+
+**Next test:** treat `FI` as a strongly corroborated marker/header field. Keep
+the full Type4/Type6 dossier unpromoted. Before applying `+3` to bodies, freeze
+one operand and scope from an independent record boundary and require an
+untouched equality or exact re-encryption. Do not scan arbitrary shifts for
+Finnish-looking text. Results:
+[`twenty-eighth-rng-locale-salt-results-2026-07-24.md`](twenty-eighth-rng-locale-salt-results-2026-07-24.md),
+[`twenty-ninth-rng-salt-instruction-results-2026-07-24.md`](twenty-ninth-rng-salt-instruction-results-2026-07-24.md),
+and
+[`thirtieth-veska-locale-results-2026-07-24.md`](thirtieth-veska-locale-results-2026-07-24.md).
+
 ### Procedural wand selects exactly `0..82` from `0..100`
 
 **Status:** exact independently authored 83-of-101 selector; the proposed

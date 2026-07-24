@@ -4029,3 +4029,93 @@ not Finnish body plaintext or a key. The rule was inspired by the observed
 match, so its unique count is structural corroboration rather than a
 discovery p-value and is not multiplied with prior counts. Results:
 `docs/twenty-seventh-three-plane-locale-results-2026-07-24.md`.
+
+### Current-WAK RNG locale salts
+
+A source-role audit was frozen after noticing that the chest reward code adds
+`509.7` and `683.1` to its two RNG coordinates. Across 332 executable
+`SetRandomSeed` calls in the installed 14,745-entry WAK, 34 calls have an
+eligible additive/subtractive salt and collapse to 28 distinct recipes.
+
+The chest pair is the only recipe containing any marker-plane calling code
+`{34,358,683}` and the only one with exactly one geographic calling code in
+each argument:
+
+```text
+509 -> HT
+683 -> NU
+```
+
+The first marker-coordinate plane independently has column code `683 -> NU`.
+The pair appears in both `chest_random.lua` and `utility_box.lua`, but those
+are copied reward routines and count as one authored recipe.
+
+The public early-access loose data has 46 seed calls, four salted recipes, and
+no match. Public history adds the chest block in the 11 March 2023 stable
+snapshot `7b6eca945caa3f2fad7f759142cdd44033d80e5b`; the official same-day notes
+say chest contents became more random, and the source comment explains the
+position-seed mixing. It is therefore a later-clue candidate with an ordinary
+bug-fix purpose, not an original construction input or proof of intent.
+
+The installed WAK has SHA-256
+`c95a0c01a55ec29267afef6bbec8a0cae0ba2b350638e2203674ed4dfb9227c3`.
+A read-only Discord search finds one 2024 technical discussion of the exact
+floats, confirming floating inputs matter to `SetRandomSeed`, but no Eye,
+calling-code, or Gate interpretation. Results:
+`docs/twenty-eighth-rng-locale-salt-results-2026-07-24.md`.
+
+### The RNG salts and Veska both encode `+3`
+
+The same fixed salt pair has a sharper Eye-alphabet reading:
+
+```text
+509 mod83 = 11 -> +
+683 mod83 = 19 -> 3
+```
+
+Among the 28 distinct recipes, 11 have one salt in each seed argument.
+The chest pair is the only primary-order operator-plus-digit instruction and
+the only exact `+3`; sign/reversal broadening introduces two other arithmetic
+strings but no second `+3`.
+
+This reproduces an already measured Gate feature: Veska's lower eight-pixel
+band is one orthogonal five-pixel plus followed by three singleton components.
+The RNG salts were introduced in March 2023, after the Gate, so they can
+restage that operation but cannot explain the original Eyes.
+
+Complete recipe inventory:
+`docs/twenty-ninth-rng-salt-instruction-results-2026-07-24.md`.
+
+### Direct Veska `fi` locale reading
+
+The `+3` operator supplies a direct reading of the fixed Veska bands without
+the dossier's provisional Type4/Type6 interpreter. The upper nine-pixel band
+has natural left-to-right 8-neighbour component sizes `1,5,3`. Therefore:
+
+```text
+153 mod83       = 70 -> f
+(153 + 3) mod83 = 73 -> i
+```
+
+This case-insensitively matches both the unique marker locale checksum and the
+fixed-trail BWT suffix `!Fi`. The exact sprite SHA-256 is
+`a2e7dd2bfb9b573eb733c1e4d2e52fa0163925b8aeb233b37870332dc264854f`
+in both the public February 2021 snapshot and the installed current data.
+
+Order comparison matters. Natural `153` gives `fi`; its horizontal reverse
+`351` gives `36`. Yet four of the six arbitrary permutations produce some
+assigned region (`FI`,`TW`,`AD`,`BE`), so generic country appearance is weak.
+Across all 83 possible residues, `+3` gives 15 lowercase pairs, 24
+case-insensitive geographic-region pairs, and one exact lowercase `fi`.
+Because the path was discovered post hoc, these counts are descriptive and
+are not multiplied with the marker counts.
+
+Read-only Discord searches for `Veska 153` and `Veska fi` find no prior
+arithmetic decode. The one semantic hit notes the known Finnish
+goalkeeper-slang origin of the Gate part names, which makes `FI` appropriate
+but raises the background rate of Finnish references.
+
+This materially revises the Gate assessment: the full dossier remains
+unproved, but Veska is now a plausible deliberate later diagram of the Eye
+marker's Finnish locale field. No body value has been decoded. Results:
+`docs/thirtieth-veska-locale-results-2026-07-24.md`.

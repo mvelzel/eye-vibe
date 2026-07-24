@@ -156,3 +156,22 @@ a natural or D4 calling code whose assigned region matches its alphabetic BWT
 suffix, and it is the observed `+358 ↔ !Fi` factoradic survivor. Promote a
 redundant `FI` locale header with the post-hoc boundary intact. Results:
 [`twenty-seventh-three-plane-locale-results-2026-07-24.md`](twenty-seventh-three-plane-locale-results-2026-07-24.md).
+
+Lane M now has a positive but still post-hoc in-game result. The unique current
+WAK RNG salt pair containing any marker-plane code is `509.7,683.1`; its
+integer parts are both geographic calling codes, repeat the marker's
+`683 -> NU`, and map through mod83/ASCII+32 to `+3`. Veska's fixed upper/lower
+bands consume that operator without the dossier's provisional machine:
+
+```text
+upper 1,5,3 -> 153 mod83       -> f
+lower +3    -> (153+3) mod83   -> i
+```
+
+Natural spatial order produces `fi`, while the horizontal mirror produces
+`36`. This promotes a plausible later Gate restatement of the marker locale,
+not a body transform. Complete audits:
+[`twenty-eighth-rng-locale-salt-results-2026-07-24.md`](twenty-eighth-rng-locale-salt-results-2026-07-24.md),
+[`twenty-ninth-rng-salt-instruction-results-2026-07-24.md`](twenty-ninth-rng-salt-instruction-results-2026-07-24.md),
+and
+[`thirtieth-veska-locale-results-2026-07-24.md`](thirtieth-veska-locale-results-2026-07-24.md).
