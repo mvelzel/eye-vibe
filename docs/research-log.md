@@ -2897,3 +2897,29 @@ before exposing it to real data, select transformations on training material,
 and require the one fixed transform to survive held-out data. Full results and
 reproduction are in
 `docs/practice-cipher4-fractionation-results-2026-07-24.md`.
+
+### Fourteenth wide horizon: transfer methods, not answers
+
+After the Cipher 4 fractionation closure, prior Eye work was inventoried by
+the *object* each test consumes. Direct `0..82` transforms, fixed routes,
+small group actions, deck bases, ordinary language formats, visual stencils,
+prefix tries, and generic checksums are heavily saturated. Typed fields inside
+one trigram, shared automatic generators, canonical complete-dictionary
+automata, label-invariant recurrence timing, checksum-algorithm selection, and
+operation-interface archaeology remain materially less explored.
+
+Fifteen lanes were frozen before scoring any of them in
+`docs/fourteenth-wide-method-transfer-horizon-2026-07-24.md`. The first
+experiment is a direct method transfer: use one raw eye as a five-way selector
+that stably demultiplexes the other two eyes' `0..24` payload values. Every
+selector position, payload order, lane order, and lane reversal is inside the
+declared family. Selection occurs on P panels; the fixed winner is tested on Q
+panels. Global permutations of all 83 accepted labels preserve the complete
+equality/prefix nuisance structure, and a planted interleaving must be
+recoverable before a real score is admissible.
+
+This breadth freeze explicitly preserves the lag-1 hidden-geometry CSP and
+recursive mod-101 trie checksum while preventing either from becoming an
+unbounded favorite. If selector demultiplexing fails, the next tests are a
+shared order-1..32 linear generator and canonical minimal/failure-link
+automata, not fitted selector codebooks.

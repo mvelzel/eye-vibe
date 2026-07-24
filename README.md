@@ -154,6 +154,16 @@ every one. Adjacent chords alone remain honestly unresolved after arithmetic,
 Boolean, CP-SAT, and local-search bounds; no candidate wheel or plaintext is
 claimed.
 
+A fourteenth breadth-first phase now transfers methods rather than cipher
+answers. Its fifteen independent lanes are frozen in
+[`docs/fourteenth-wide-method-transfer-horizon-2026-07-24.md`](docs/fourteenth-wide-method-transfer-horizon-2026-07-24.md).
+The first test treats one raw eye as a five-way positional selector for the
+other two, a typed demultiplexing model not covered by global eye-order scans.
+Shared LFSR generation, canonical dictionary/failure-link automata,
+return-time coding, checksum-type metadata, recursive trie checks, and
+operation-interface archaeology remain separate lanes; none may be silently
+converted into parameters of the selector test.
+
 The next Eye pass deliberately changes the question from “how can these
 numbers be read?” to “what small mechanism caused the equality and
 reconvergence structure?” Its fourteen-lane breadth map is frozen in

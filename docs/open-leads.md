@@ -953,3 +953,23 @@ If revisited, the next step must improve exact adjacent-CSP propagation or
 learn adjacent distance classes on one family and predict the other. Adding
 lag-2 regularization is disallowed because it moves toward the now-rejected
 multi-step model.
+
+### Fourteenth wide method-transfer horizon
+
+**Status:** fifteen mechanism lanes frozen before any real-data score.
+
+The new coverage map is
+[`fourteenth-wide-method-transfer-horizon-2026-07-24.md`](fourteenth-wide-method-transfer-horizon-2026-07-24.md).
+Its highest-ranked gap treats one raw eye digit as a five-way selector and the
+other two as a typed payload pair. This is not a new eye order: it changes
+sequence position by stable demultiplexing. The complete lane order/reversal
+family will be selected on the P-header panels and evaluated unchanged on the
+six Q panels under global-label controls, with a planted interleaving required
+first.
+
+The horizon also retains mutually independent shared-linear-generator,
+minimal-dictionary-automaton, failure-link, return-time, morphic,
+predictive-state, checksum-type, end-around-complement, adjacent-motion,
+recursive-trie, executable-interface, and historical-version lanes. If the
+selector transfer fails, the next move is lateral to the shared recurrence or
+canonical automaton; selector-specific codebooks are forbidden.
