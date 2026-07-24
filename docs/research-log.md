@@ -3237,3 +3237,28 @@ lag-one wheel, factoradic metadata, Gate vocabulary, practice ciphers,
 source ancestry, or chronology leads. The novelty portfolio returns to
 reset/Hankel, graph-covering, finite-state-coding, archaeology, and
 practice-transfer breadth.
+
+### Practice cipher 3: conformance-vector breadth restart
+
+The active method-acquisition pivot returns to unsolved sdlwdr cipher 3, but
+does not grant more budget to the failed arbitrary-wheel optimizer. The
+strongest positive evidence is architectural: six streams in each of three
+length bands, plus a 43-symbol A4/A5 body copy behind unequal first symbols
+and two shorter branches. This may be a deliberately selected conformance set
+rather than eighteen ordinary literary excerpts.
+
+A sixteen-lane wide horizon was therefore frozen in
+`docs/practice-cipher3-third-wide-horizon-2026-07-24.md` before new scoring.
+It spans master-tape excerpts, per-message affine masks over `F83`, low-order
+generators, counter/PRNG modes, the exact `83=2*42-1` two-sheet architecture,
+higher-order visible states, broader deck actions, compression/recoding,
+polygraphic projections, six-stream route objects, variable-length token
+codes, self-synchronizing codes, equality-only grammars, authored numeric
+order, source conformance, and cross-puzzle construction genealogy.
+
+The first cheap batch is A/B/C/H/M: cross-stream exact and affine factors,
+order-1/2 recurrences and linear complexity, compression signatures, and
+canonical equality-grammar structure. A is selection, B validation, and C
+heldout wherever parameters are learned. The disclosed A prefix tree earns no
+promotion by itself. The authorized browser currently reaches a Discord login
+screen, so no new author hint is assumed in the freeze.

@@ -532,9 +532,21 @@ one of 166 old-wheel/`J` insertions are negative under controls that recover
 unresolved because local and spectral wheel recovery fail the planted
 control; do not score the real corpus with that optimizer.
 
-**Refined next test:** obtain a global wheel initializer, known plaintext, or
-author construction constraint. More local coordinate-swap restarts are
-closed by the failed control.
+The next pass no longer assumes that a hidden wheel is the only missing
+method. The third breadth freeze in
+[`practice-cipher3-third-wide-horizon-2026-07-24.md`](practice-cipher3-third-wide-horizon-2026-07-24.md)
+treats the eighteen A/B/C streams as possible conformance vectors and compares
+sixteen mechanism classes. These include master-tape excerpts, per-message
+`F83` masks, low-order generators, two-sheet homophony, higher-order states,
+compression/recoding, polygraphic codes, routes, variable-length tokens,
+self-synchronizing codes, equality-only grammars, authored numeric order, and
+cross-puzzle implementation genealogy.
+
+**Refined next test:** run the frozen cheap batch A/B/C/H/M. A is selection, B
+validation, C heldout; the known 43-symbol A copy receives no discovery credit.
+In parallel, audit the author history when the authorized Discord session is
+available again. More local coordinate-swap restarts remain closed by the
+failed planted-wheel control.
 
 ### sdlwdr practice cipher 4
 
