@@ -817,6 +817,13 @@ laterally to visible edge-factorization, rejected raw phases, `AG(2,3)`,
 bounded card shuffles, and a tiny header-controlled transducer; do not repair
 the closed models with extra parameters.
 
+The exact next five tests are frozen before scoring in
+[`twelfth-wide-second-batch-freeze-2026-07-24.md`](twelfth-wide-second-batch-freeze-2026-07-24.md):
+line-digraph equality closure, the two unused raw trigram phases, a
+train/heldout `AG(2,3)` line-sum design, a fixed dictionary of physical
+83-position shuffles, and a two-register raw-direction predictor controlled
+by the factoradic header classes.
+
 That batch is now frozen before execution in
 [`eighth-wide-deferred-2026-07-22.md`](eighth-wide-deferred-2026-07-22.md).
 It covers static synchronization/error coding, without-replacement packets,

@@ -2584,6 +2584,13 @@ stencil gives null-typical distinct, zero, and nontrivial-alignment statistics;
 its best tail is `.248756`. No lane advances, so the next work remains lateral
 rather than adding parameters to these failures.
 
+The next five lateral tests are frozen before execution in
+`docs/twelfth-wide-second-batch-freeze-2026-07-24.md`. They test an exact
+line-digraph support closure, the two rejected raw trigram phases, a
+train/heldout `AG(2,3)` line-sum design, a fixed dictionary of physical deck
+actions, and an order-two raw-direction transducer controlled by the
+independently established factoradic header classes.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly
