@@ -3519,3 +3519,17 @@ retrospectively, a new matched control is frozen before counting. It reselects
 gaps 2–30, retains the broad numeric test, and allows both ascending and
 descending rank directions. Protocol:
 `docs/eighteenth-anchor-record-slot-freeze-2026-07-24.md`.
+
+The slot/target control promotes. Of 50,000 new matched shuffles, 1,640 have
+the target gap-11 structure and 253 also have ascending target ranks
+`(1,2,0)`. None satisfies the exact numeric formula, so none has both exact
+fields. The broad control reselects gaps 2–30, broadens numeric edge/order
+assignment, and allows ascending or descending target ranks; 24 match, for
+corrected tail `25/50001 = .000499990`.
+
+The final marker orders now have three coherent consumers: slots 0 and 2
+select source-minus-remaining operands; the omitted slot-1 column gives
+anchor-value ranks; and W4's full order gives anchor-position ranks. This is a
+compact self-describing record, though the base-16/gap-11 selector and
+plaintext remain unknown. Details:
+`docs/eighteenth-anchor-record-slot-results-2026-07-24.md`.

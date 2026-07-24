@@ -1342,3 +1342,11 @@ target column is `(1,2,0)`, exactly the ascending ranks of anchors
 `(75,81,48)`. A new 50,000-control audit reselects gaps 2–30, uses the broad
 numeric relation, and allows ascending or descending target ranks. Protocol:
 [`eighteenth-anchor-record-slot-freeze-2026-07-24.md`](eighteenth-anchor-record-slot-freeze-2026-07-24.md).
+
+**Slot result:** promoted. No one of 50,000 new shuffles satisfies both the
+exact numeric and target-rank fields. The fully reselected broad control has
+24 matches, corrected tail `25/50001 = .000499990`. The final orders now have
+three linked consumers: slots 0/2 choose subtraction operands, slot 1 gives
+anchor-value ranks `(1,2,0)`, and W4's complete order gives anchor-position
+ranks `(0,2,1)`. Results:
+[`eighteenth-anchor-record-slot-results-2026-07-24.md`](eighteenth-anchor-record-slot-results-2026-07-24.md).

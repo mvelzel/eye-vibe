@@ -7,14 +7,18 @@ from collections import Counter
 from eye_mystery.gap_anchor import (
     any_broad_gap_match,
     broad_position_match,
+    broad_slot_rank_match,
     clean_gap_anchors,
     exact_reported_relation,
     final_trimmed_bodies,
     gap_anchor_audit,
     gap_anchor_label_audit,
     gap_anchor_position_audit,
+    gap_anchor_slot_audit,
     planted_gap_streams,
     planted_position_streams,
+    matching_slot_pairs,
+    ordinal_ranks,
     relative_position_order,
     unique_anchor_values,
 )
@@ -80,6 +84,17 @@ class GapAnchorTests(unittest.TestCase):
     def test_position_control_is_deterministic(self) -> None:
         audit = gap_anchor_position_audit(controls=19)
         self.assertEqual(audit, gap_anchor_position_audit(controls=19))
+
+    def test_slot_plant_and_unique_rule(self) -> None:
+        plant = planted_gap_streams()
+        anchors = unique_anchor_values(plant, 11)
+        self.assertEqual(ordinal_ranks(anchors), (1, 2, 0))
+        self.assertEqual(matching_slot_pairs(anchors), ((0, 2),))
+        self.assertEqual(broad_slot_rank_match(plant), (11, anchors))
+
+    def test_slot_control_is_deterministic(self) -> None:
+        audit = gap_anchor_slot_audit(controls=19)
+        self.assertEqual(audit, gap_anchor_slot_audit(controls=19))
 
 
 if __name__ == "__main__":

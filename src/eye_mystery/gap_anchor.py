@@ -16,6 +16,7 @@ MODULUS = 83
 FINAL_MESSAGES = ("east4", "west4", "east5")
 FINAL_HEADERS = (27, 77, 33)
 FINAL_COMPONENT_ORDERS = ((0, 1, 2), (0, 2, 1), (1, 0, 2))
+TARGET_RANK_PATTERNS = ((1, 2, 0), (1, 0, 2))
 TARGET_GAP = 11
 BROAD_GAPS = tuple(range(2, 31))
 
@@ -184,6 +185,82 @@ def broad_position_match(
             and order in FINAL_COMPONENT_ORDERS
         ):
             return gap, anchors, positions  # type: ignore[return-value]
+    return None
+
+
+def ordinal_ranks(values: Sequence[int]) -> tuple[int, int, int]:
+    """Return ascending ranks of three distinct values."""
+
+    if len(values) != 3 or len(set(values)) != 3:
+        raise ValueError("ordinal ranks require three distinct values")
+    ordered = {value: rank for rank, value in enumerate(sorted(values))}
+    return tuple(ordered[value] for value in values)  # type: ignore[return-value]
+
+
+def slot_difference_outputs(
+    anchors: Sequence[int],
+    slot_pair: tuple[int, int],
+) -> tuple[int, int, int]:
+    """Apply one directed component-slot difference to all final orders."""
+
+    if len(anchors) != 3:
+        raise ValueError("slot rule requires three anchors")
+    left_slot, right_slot = slot_pair
+    if (
+        left_slot not in range(3)
+        or right_slot not in range(3)
+        or left_slot == right_slot
+    ):
+        raise ValueError("slot pair must contain distinct indices")
+    return tuple(
+        (
+            anchors[order[left_slot]]
+            - anchors[order[right_slot]]
+        )
+        % MODULUS
+        for order in FINAL_COMPONENT_ORDERS
+    )  # type: ignore[return-value]
+
+
+def matching_slot_pairs(
+    anchors: Sequence[int],
+    headers: Sequence[int] = FINAL_HEADERS,
+) -> tuple[tuple[int, int], ...]:
+    """Return every directed slot pair that reproduces all headers."""
+
+    return tuple(
+        (left_slot, right_slot)
+        for left_slot in range(3)
+        for right_slot in range(3)
+        if left_slot != right_slot
+        and slot_difference_outputs(
+            anchors,
+            (left_slot, right_slot),
+        )
+        == tuple(headers)
+    )
+
+
+def broad_slot_rank_match(
+    streams: Mapping[str, Sequence[int]],
+) -> tuple[int, tuple[int, int, int]] | None:
+    """Search the frozen numeric-plus-target-rank family."""
+
+    by_message = {
+        name: clean_gap_anchors(streams[name])
+        for name in FINAL_MESSAGES
+    }
+    for gap in BROAD_GAPS:
+        hits = tuple(by_message[name].get(gap, ()) for name in FINAL_MESSAGES)
+        if not all(len(message_hits) == 1 for message_hits in hits):
+            continue
+        anchors = tuple(message_hits[0].value for message_hits in hits)
+        if (
+            len(set(anchors)) == 3
+            and broad_difference_relation(anchors)
+            and ordinal_ranks(anchors) in TARGET_RANK_PATTERNS
+        ):
+            return gap, anchors  # type: ignore[return-value]
     return None
 
 
@@ -432,6 +509,71 @@ def gap_anchor_position_audit(
         target_joint,
         broad_joint,
         (1 + target_position) / denominator,
+        (1 + target_joint) / denominator,
+        (1 + broad_joint) / denominator,
+    )
+
+
+@dataclass(frozen=True)
+class GapAnchorSlotAudit:
+    controls: int
+    target_structure_controls: int
+    target_rank_controls: int
+    target_numeric_controls: int
+    target_joint_controls: int
+    broad_joint_controls: int
+    target_rank_tail: float
+    target_joint_tail: float
+    broad_joint_tail: float
+
+    @property
+    def passes(self) -> bool:
+        return self.broad_joint_tail < 0.01
+
+
+def gap_anchor_slot_audit(
+    *,
+    controls: int = 50_000,
+    seed: int = 0x18D07,
+) -> GapAnchorSlotAudit:
+    """Run the frozen slot/target-rank matched controls."""
+
+    if controls < 1:
+        raise ValueError("at least one control is required")
+    streams = final_trimmed_bodies()
+    rng = random.Random(seed)
+    target_structure = 0
+    target_rank = 0
+    target_numeric = 0
+    target_joint = 0
+    broad_joint = 0
+    for _ in range(controls):
+        shuffled = {
+            name: shuffle_without_adjacent_doubles(streams[name], rng)
+            for name in FINAL_MESSAGES
+        }
+        anchors = unique_anchor_values(shuffled, TARGET_GAP)
+        if anchors is not None:
+            target_structure += 1
+            rank_match = (
+                len(set(anchors)) == 3
+                and ordinal_ranks(anchors) == (1, 2, 0)
+            )
+            numeric_match = exact_reported_relation(anchors)
+            target_rank += rank_match
+            target_numeric += numeric_match
+            target_joint += rank_match and numeric_match
+        broad_joint += broad_slot_rank_match(shuffled) is not None
+
+    denominator = controls + 1
+    return GapAnchorSlotAudit(
+        controls,
+        target_structure,
+        target_rank,
+        target_numeric,
+        target_joint,
+        broad_joint,
+        (1 + target_rank) / denominator,
         (1 + target_joint) / denominator,
         (1 + broad_joint) / denominator,
     )
