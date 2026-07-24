@@ -3939,3 +3939,29 @@ body-map holonomy test for the zero-circulation versus residue-seven row
 typing. Freeze and full results:
 `docs/twenty-fifth-wide-marker-country-horizon-2026-07-24.md`;
 `docs/twenty-fifth-marker-country-results-2026-07-24.md`.
+
+### Read-only delta and twenty-sixth routing
+
+A read-only sweep of the restored Discord session found no prior `+358`
+marker observation. The latest `#silmä-cryptography` content remains the
+Kanteletar syllable-pattern proposal already audited. `#silmä-novel` adds a
+tutorial-stone input-device rendering glitch; the author of the observation
+reports that the background loads with the world while the highlight layer
+loads on first input, making it likely an ordinary keyboard/controller state
+split. Preserve tutorial-stone rendering as a low-priority in-game interface
+lead, but do not treat this glitch as cipher evidence.
+
+Ground-up review closes the proposed body-holonomy lane before body scoring.
+The tenth pass already established that the seven independently observed
+context windows form a forest with cycle rank zero. Completing a natural
+three-panel triangle from the same aligned positions would make its composite
+identity tautological, not a held-out observation.
+
+The next clean marker-to-body interface is frozen instead. Interpret the
+canonical column totals as fixed coefficients and test only
+`3*x0+5*x1=8*x2 mod83` on the three natural panel rows after their known copied
+openings. The total covers 263 aligned positions. Its exact null preserves
+each truncated panel as a complete circle and exhausts both relative offsets
+per row; the three row histograms are convolved. No sign, coefficient
+permutation, intercept, lag, or panel selection is admitted. Protocol:
+`docs/twenty-sixth-358-weighted-alignment-freeze-2026-07-24.md`.

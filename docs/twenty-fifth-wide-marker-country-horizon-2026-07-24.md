@@ -120,3 +120,21 @@ therefore descriptive even if unique.
 
 No body value, source text, language model, or game asset is consulted in this
 first audit.
+
+## Post-audit routing note
+
+Lanes A/B are positive as a marker discriminator; exact results are in
+[`twenty-fifth-marker-country-results-2026-07-24.md`](twenty-fifth-marker-country-results-2026-07-24.md).
+
+Lane E does not reach evaluation. The earlier tenth-pass audit already proved
+that the seven independently observed semantic context windows have endpoint
+graph cycle rank zero. They form a forest. Adding the third map within a
+natural three-panel copied opening would derive it from the same aligned
+positions as the other two sides, so identity around that triangle would be
+tautological rather than a new body prediction. A genuine holonomy test stays
+closed until a newly observed independent context creates a cycle.
+
+Lane H is the next prospective discriminator. The exact canonical equation,
+trims, full-cycle relative-alignment null, calibration, and stop rule are
+frozen in
+[`twenty-sixth-358-weighted-alignment-freeze-2026-07-24.md`](twenty-sixth-358-weighted-alignment-freeze-2026-07-24.md).

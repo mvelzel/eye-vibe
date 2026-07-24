@@ -55,6 +55,14 @@ body results are in
 joint audit is in
 [`twenty-fifth-marker-country-results-2026-07-24.md`](twenty-fifth-marker-country-results-2026-07-24.md).
 
+The initial body-holonomy follow-up is closed by a prerequisite, not a score:
+the existing semantic context graph is a forest, and completing a triangle
+from the same aligned copied opening is tautological. The active prospective
+interface is now the single fixed equation
+`3*x0+5*x1=8*x2 mod83` on natural panel rows, under an exact relative-cyclic-
+alignment null. Freeze:
+[`twenty-sixth-358-weighted-alignment-freeze-2026-07-24.md`](twenty-sixth-358-weighted-alignment-freeze-2026-07-24.md).
+
 ### Procedural wand selects exactly `0..82` from `0..100`
 
 **Status:** exact independently authored 83-of-101 selector; the proposed
