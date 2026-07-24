@@ -2996,3 +2996,15 @@ criterion passes. Full results are in
 `docs/fourteenth-failure-link-results-2026-07-24.md`. This closes the
 canonical cache/failure machine; a different record layout now requires an
 authored consumer.
+
+The recursive trie lane was then narrowed before calculation. On the ordinary
+marker-stripped prefix trie, define
+`R(v)=a*incoming+b*sum(children)+c*outdegree+d*depth mod101`, with nonzero
+`a in {-1,+1}` and `b,c,d in {-1,0,+1}`: 54 rules total. Each of the five
+outdegree-at-least-two nodes is held out while a rule is selected on the other
+four. Promotion requires 5/5, root closure by the all-branch-selected rule, a
+planted selection control, and a joint matched tail below `.01`.
+
+This prevents the definitional `(1,1,0,0)` root sum from counting as its own
+prediction and forbids coefficient expansion after seeing five residues. The
+freeze is `docs/fourteenth-recursive-check-freeze-2026-07-24.md`.

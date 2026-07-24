@@ -1019,3 +1019,10 @@ sum. The frozen depth-drop word has no `BEXIT`. Results:
 
 The next ranked Eye-side lane is M's recursive branch-check prediction. A new
 failure/cache record layout is not open without an authored consumer.
+
+Lane M's exact finite test is frozen in
+[`fourteenth-recursive-check-freeze-2026-07-24.md`](fourteenth-recursive-check-freeze-2026-07-24.md).
+Fifty-four label-consuming bottom-up rules are selected with each of the five
+branch nodes held out. Promotion requires 5/5 branch prediction, root closure,
+a planted recovery, and one joint diagonal-preserving matched-control tail
+below `.01`. The known root sum alone cannot pass.

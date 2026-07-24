@@ -204,3 +204,11 @@ and contains no `BEXIT`. Full results:
 [`fourteenth-failure-link-results-2026-07-24.md`](fourteenth-failure-link-results-2026-07-24.md).
 The next ranked cryptographic lane is M's predictive recursive trie checksum;
 the cache/failure-link representation receives no flexible repair.
+
+Lane M is now made non-tautological and frozen before coefficient evaluation
+in
+[`fourteenth-recursive-check-freeze-2026-07-24.md`](fourteenth-recursive-check-freeze-2026-07-24.md).
+Its 54 bottom-up rules must predict all five branch zeros under
+leave-one-branch-out selection and then close the unscored root. The ordinary
+trie sum is only one member; 5/5, root closure, a planted selection control,
+and a joint matched tail below `.01` are all mandatory.
