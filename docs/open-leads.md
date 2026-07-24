@@ -1350,3 +1350,12 @@ three linked consumers: slots 0/2 choose subtraction operands, slot 1 gives
 anchor-value ranks `(1,2,0)`, and W4's complete order gives anchor-position
 ranks `(0,2,1)`. Results:
 [`eighteenth-anchor-record-slot-results-2026-07-24.md`](eighteenth-anchor-record-slot-results-2026-07-24.md).
+
+**Pointer/gauge observation, frozen before controls:** E4's clean repeat ends
+at trimmed index `27`, exactly `h_E4`; adding its fixed marker/opening frame
+`21` gives full index `48`, exactly the E5 anchor selected as E4 order
+`012`'s remaining component. This seeds the difference record and reconstructs
+all anchors `48 -> 75 -> 81`, with `h_E5=33` as a check. The broad 50,000
+control may search every gap, panel, start/end choice, marker, anchor, and
+zero/one-based trimmed/body/full coordinate offset. Protocol:
+[`eighteenth-anchor-pointer-freeze-2026-07-24.md`](eighteenth-anchor-pointer-freeze-2026-07-24.md).

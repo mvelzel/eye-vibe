@@ -3533,3 +3533,17 @@ anchor-value ranks; and W4's full order gives anchor-position ranks. This is a
 compact self-describing record, though the base-16/gap-11 selector and
 plaintext remain unknown. Details:
 `docs/eighteenth-anchor-record-slot-results-2026-07-24.md`.
+
+The closed slot record exposes a possible gauge-fixing pointer. E4 is the
+unique self-edge panel; its selected repeat endpoint is trimmed index 27,
+equal to `h_E4`. Adding the fixed one-marker plus 20-symbol opening frame gives
+full-array index 48, equal to the E5 anchor selected as E4 identity order
+`012`'s remaining component. The pointer sets `a_E5=48`; marker differences
+then reconstruct `a_E4=75` and `a_W4=81`, while `h_E5=33` checks the final
+edge.
+
+Because index/value links are fertile post-hoc territory, a severe new
+control is frozen before counting. Every shuffle may search gaps 2–30, any
+panel, start or end, any marker and anchor, and coordinate offsets
+`0,1,20,21`, after first satisfying the broad numeric record. Protocol:
+`docs/eighteenth-anchor-pointer-freeze-2026-07-24.md`.
