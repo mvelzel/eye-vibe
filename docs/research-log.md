@@ -3650,3 +3650,21 @@ observed and the corrected tail is `1`. Close direct application of the
 17-bit row to these final slices; do not rotate, shift, resize, or choose
 panel-specific masks after the failure. Results:
 `docs/twenty-first-earthquake-mask-results-2026-07-24.md`.
+
+The next lateral step is frozen before evaluation in
+`docs/twenty-second-cessation-wheel-transfer-freeze-2026-07-24.md`.
+A 23 July Discord attachment records a solved practice cipher whose decisive
+operation is line-reset traversal of a binary tape with distances `1..5` and
+a one-position timing exception at each line terminal. Its archive SHA-256 is
+`1c4a834e9722bf3287e008d973ff4eae914988c3a4129b8fcdcac13ad00c8e71`.
+This is not an Eye clue; it is a concrete method transfer that distinguishes
+physical wheel traversal from the failed static mask.
+
+The frozen Eye test maps engine directions `0..4` naturally to distances
+`1..5`, reconstructs the actual visual rows, samples the gap-fixed 17-bit
+Earthquake band, and re-interleaves sampled bit triples. Forward/reverse is
+selected only on the first four fixed nonliteral context pairs. The primary
+score is equality on changed-label positions in the last three pairs. Its
+exact matched null is all `C(17,4)=2,380` tapes with the authored bit
+composition. No rotations, fitted direction maps, panel phases, or byte
+searches are allowed after scoring.

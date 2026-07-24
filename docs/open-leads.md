@@ -1436,3 +1436,23 @@ The irregular row is not a direct binary sieve on these fixed final slices.
 Do not rescue it with rotations, shifted starts, new lengths, or
 panel-specific directions. Results:
 [`twenty-first-earthquake-mask-results-2026-07-24.md`](twenty-first-earthquake-mask-results-2026-07-24.md).
+
+### Cessation row sampler on the Earthquake wheel
+
+**Status:** frozen before evaluation.
+
+Lquid's newly shared practice-puzzle work folder recovers and independently
+verifies a useful cipher operation: distances `1..5` traverse a binary tape,
+the pointer resets for every printed line, nonterminal symbols sample the last
+consumed position, and the line terminal samples the first position after
+consumption. This is method calibration, not evidence that the practice
+plaintext or tape belongs to the Eyes.
+
+The registered Eye transfer uses the natural direction distances `d+1`, the
+exact reconstructed visual rows, and the gap-fixed 17-bit Earthquake tape.
+Forward/reverse is selected on the first four nonliteral context pairs; literal
+source=target positions are excluded; agreement is measured on the final
+three contexts without refitting. The exact null enumerates all 2,380
+17-bit tapes with the real `13/4` composition. A tail below `.01` is required.
+Protocol:
+[`twenty-second-cessation-wheel-transfer-freeze-2026-07-24.md`](twenty-second-cessation-wheel-transfer-freeze-2026-07-24.md).
