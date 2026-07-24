@@ -3189,3 +3189,17 @@ Full evidence is in
 abstract outer-`S6` identity as evidence. Outer-`S6`, reset/Hankel/Lyndon,
 `GF(125)`, graph covering, finite-state coding, archaeology, and practice
 transfer remain queued alongside the original durable leads.
+
+The second sixteenth-horizon batch was then frozen without viewing real
+scores. Its three objects are deliberately different. A canonical outer
+automorphism of `S6` is built from duads, synthemes, and pentads; all 720
+inner conjugates and header/inverse routes act on renderer tapes and must
+preserve the exact newline mask. A word-combinatorics lane asks whether the
+authored cut is already the least necklace rotation under header/inverse
+alphabet order and forward/reverse tape direction. A complete-cube field lane
+enumerates 40 irreducible cubic models of `GF(125)` and three Frobenius powers,
+fitting only a local Möbius map per context while holding the representation
+global.
+
+All three plants must pass before any Eye score. The freeze and exact stop
+rules are in `docs/sixteenth-second-batch-freeze-2026-07-24.md`.

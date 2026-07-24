@@ -1149,3 +1149,11 @@ Results:
 The 31-ray/42-complement inventory remains an exact coordinate fact, but it
 has no validated consumer. Outer-`S6`, reset/Hankel/Lyndon, `GF(125)`,
 covering/coder, archaeology, and practice-transfer lanes remain queued.
+
+The next mixed batch is frozen—but not yet scored—in
+[`sixteenth-second-batch-freeze-2026-07-24.md`](sixteenth-second-batch-freeze-2026-07-24.md).
+It tests the complete 1,440-member inner-conjugate outer-`S6` renderer action,
+four header-defined canonical necklace cuts, and 120 `GF(125)`
+Möbius/Frobenius representations. All three require exact planted recovery
+and all-family heldout closure; abstract exceptional isomorphisms cannot
+promote themselves.
