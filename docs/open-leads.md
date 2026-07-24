@@ -1212,3 +1212,8 @@ The next promoted lane is a generalized affine `AGL(1,83)` deck/GAK screen,
 with structured families and an exact bounded 42-symbol solver. It must pass
 planted recovery and transfer from A to B/C. This is distinct from the closed
 visible-ciphertext recurrence lane.
+
+The equations, five first-symbol modes, four finite update families, exact
+arbitrary-update boundary, positive controls, and stop rules are frozen in
+[`practice-cipher3-affine-gak-freeze-2026-07-24.md`](practice-cipher3-affine-gak-freeze-2026-07-24.md).
+No real score has been used to choose them.

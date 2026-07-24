@@ -3294,3 +3294,13 @@ The next distinct construction-genealogy test is affine `AGL(1,83)` GAK/deck
 state. It is not ruled out by random-like visible-symbol recurrence. Freeze
 structured update families and a bounded exact 42-symbol solver, verify
 planted recovery, select only on A, and transfer unchanged to B/C.
+
+That batch is now frozen, before real scoring, in
+`docs/practice-cipher3-affine-gak-freeze-2026-07-24.md`. It fixes the
+standard visible coordinate `x=b/a`, five first-symbol modes, and four
+structured global update families. The finite lane selects only on A and
+requires at most 42 decoded values over A/B/C jointly. The exact lane gives
+each realized nonzero action one arbitrary global multiplier and asks for a
+decoded union of at most 42 states on A, B, C, and all messages. Positive
+controls must recover a known structured family, exact planted
+satisfiability, and forward ciphertext replay before real results count.
