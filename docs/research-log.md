@@ -2923,3 +2923,10 @@ recursive mod-101 trie checksum while preventing either from becoming an
 unbounded favorite. If selector demultiplexing fails, the next tests are a
 shared order-1..32 linear generator and canonical minimal/failure-link
 automata, not fitted selector codebooks.
+
+The inherited order-8 equality-pattern statistic then failed the selector
+positive control by spuriously reversing one lane, so its real-data run was
+blocked. Orders `8,10,12,14,16,20,24` were evaluated only on the planted
+fixture. Order 14 is the smallest that exactly recovers the planted third-eye
+selector, natural lane order, concatenation, and zero reversal mask; order 24
+also succeeds. Order 14 is frozen before any real Eye selector score.

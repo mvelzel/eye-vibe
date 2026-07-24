@@ -113,6 +113,20 @@ is admissible. Promotion requires a plus-one corrected held-out upper tail
 below `.01`. A high P score, a pretty lane, or an uncorrected winner is
 insufficient.
 
+## Positive-control calibration
+
+The order-8 equality-pattern model inherited from the Cipher 4 route audit
+failed the planted fixture: it found the correct selector and lane order but
+spuriously reversed lane 4. No real Eye score was calculated.
+
+Pattern orders `8,10,12,14,16,20,24` were then compared **only on the planted
+fixture**. Orders 14 and 24 recover the exact planted selector, concatenation,
+lane order, and zero reversal mask. Order 14 is the smallest successful model
+and is frozen for the real audit. Orders 10/12 choose a wrong lane order;
+orders 16/20 choose separate-lane scoring. This calibration changes only the
+external pattern statistic, not the candidate family, held-out split, or
+global-label null.
+
 ## Branching rule
 
 - Commit this horizon before calculating lane A.
