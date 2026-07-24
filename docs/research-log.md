@@ -3744,3 +3744,24 @@ outside-to-inside composition. Only two physical directions and two global
 packet orders are allowed. Natural-reset decoding emits current card rank,
 then applies `P`, `P^rank`, or `P^(rank+1)`. The altar fixes only the
 alternative letter rendering. Details remain in the practice record.
+
+The direct circle-permutation family is negative. After deduplication, 18
+signed-cut, repeated-binary-partition, and outside-to-inside bases crossed
+with three exponent schedules produce 54 candidates. Every result still uses
+all 83 ranks through 82. The maximum low-rank count is fixed `cut+24` at
+`428/761=.562418`; its natural and altar renderings are visibly mixed-rank
+gibberish.
+
+A sharper joint clue is now frozen before testing. The community phrase
+`A BAD MAGIC CARD TRICK` is 22 characters with spaces, and the three
+Earthquake binary rows total `24+20+17=61`; concatenating them gives exactly
+83 positions. This is not literal altar text, so the identity may reflect the
+practice author's choice rather than Noita's original asset.
+
+Five consumers are separated before depth: stable ordering of the 83
+positions, cyclic-rotation ordering, 13 tape-symbol operation classes,
+literal per-rank steps, and a transformed instruction stream. Only the first
+two are presently executable without fitted semantics. Their frozen test uses
+two physical binary directions, natural or first-occurrence symbol collation,
+stable versus cyclic order, and the already fixed `P`, `P^rank`,
+`P^(rank+1)` schedules. No tape rotation or per-line selection is allowed.

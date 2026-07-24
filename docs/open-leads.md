@@ -1514,3 +1514,14 @@ rank count is only `419/761` (median 397), with no language-like rendering.
 The next frozen sublane constructs one base permutation from circle row cuts
 or repeated binary stable partitions and tests updates `P`, `P^rank`, and
 `P^(rank+1)` from natural line resets.
+
+**Second result:** close those direct cuts/partitions. Eighteen unique bases
+and three schedules give 54 candidates; all use every rank through 82. The
+best is fixed `cut+24` at `428/761` low ranks, still mixed-rank gibberish.
+
+**New exact lead:** the community phrase `A BAD MAGIC CARD TRICK` has length 22
+including spaces, while the Circle's binary bands total `24+20+17=61`;
+together they form an exact 83-slot tape. Before depth, five possible
+consumers are separated: stable position order, cyclic-rotation order,
+13 operation classes, literal per-rank steps, and a transformed instruction
+stream. Only the first two have fixed semantics and are admitted next.

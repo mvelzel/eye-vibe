@@ -131,6 +131,70 @@ concentration in `0..41` across all nine lines, followed by coherent language;
 otherwise close these physical cut/partition implementations without rotating
 the bit rows or choosing rules per line.
 
+## Second result: direct circle permutations are negative
+
+Deduplicating the displayed cuts, repeated alternating/irregular partitions,
+and their outside-to-inside compositions leaves 18 base permutations. The
+three registered exponent schedules give 54 candidates. All preserve the
+known numbered prefixes, but all recover all 83 ranks and reach 82. The best
+candidate is:
+
+```text
+base=cut+24  update=P
+low ranks = 428/761 = .562418
+```
+
+Its output is mixed-rank gibberish under both natural and altar alphabets.
+The next candidates fall to `424/761` and `422/761`; no candidate approaches
+the near-total low-rank collapse required of the presumed 42-symbol
+plaintext. Close direct signed cuts, repeated binary stable partitions, and
+their fixed/rank-power forms.
+
+Executable audit:
+[`audit_sdlwdr_cipher6_circle_permutations.py`](../scripts/audit_sdlwdr_cipher6_circle_permutations.py).
+
+## New exact identity: one 83-slot asset tape
+
+A more constrained joint use of the two clues appears only after keeping
+spaces in the community's proposed Trailer-Altar phrase:
+
+```text
+len("A BAD MAGIC CARD TRICK") = 22
+Earthquake binary rows       = 24 + 20 + 17 = 61
+total                        = 83
+```
+
+Thus the phrase followed by the zero, alternating, and irregular rows is an
+exact 83-position string:
+
+```text
+A BAD MAGIC CARD TRICK
+000000000000000000000000
+10101010101010101010
+11110111011101110
+```
+
+This identity is exact given its inputs, but one input is a community keyed
+phrase associated with the altar—not literal text displayed by the asset.
+The author may have chosen the phrase precisely because this puzzle has 83
+cards, or the equality may be incidental. It earns a bounded test, not an
+assumption of intent.
+
+### Wide consumers before selecting one
+
+| Consumer | Meaning | Falsifier |
+|---|---|---|
+| Stable position order | Stable-sort the 83 card positions by their tape symbols, using either natural character order or the tape's first-occurrence order. | No low-rank collapse under the three already frozen update schedules. |
+| Cyclic-rotation order | Because the binary source is circular, lexicographically order all 83 cyclic rotations; their starting positions form a full deck permutation. | Same; only natural and first-occurrence symbol orders, with the physical binary direction ambiguity. |
+| Thirteen operation classes | The tape's 13 distinct symbols select 13 shared deck operations. | Deferred until an operation family is independently specified; do not fit 13 arbitrary permutations. |
+| Literal per-rank steps | The symbol at plaintext rank selects a cut/distance. | Deferred because symbol-to-distance semantics are not yet fixed. |
+| BWT/instruction stream | The 83-slot cycle is serialized after a transform and consumed over time. | Deferred unless the position-order tests reveal a related invariant. |
+
+The first test admits two binary directions while keeping the phrase readable,
+two fixed symbol orders, stable versus cyclic-rotation ordering, and the same
+`P`, `P^rank`, `P^(rank+1)` updates. No tape rotation, per-line order, or
+language-fitted symbol collation is allowed.
+
 ## Why this matters for the Eyes
 
 This puzzle is the first practice example in the storehouse that explicitly

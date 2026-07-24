@@ -8,9 +8,12 @@ from eye_mystery.practice_cipher6 import (
     ALTAR_LETTERS,
     EXPECTED_PREFIXES,
     candidate_decks,
+    circle_base_permutation_audit,
+    circle_base_permutations,
     keyed_deck,
     paired_deck_audit,
     read_ciphertext,
+    stable_partition_permutation,
 )
 
 
@@ -42,6 +45,23 @@ class PracticeCipher6Tests(unittest.TestCase):
         self.assertEqual(len(results), 9 * 9 * 6)
         self.assertEqual(results[0].total, 761)
         self.assertTrue(any(result.prefix_matches == 9 for result in results))
+
+    def test_circle_base_permutations_are_valid_and_deduplicated(self) -> None:
+        bases = circle_base_permutations()
+        self.assertEqual(len(bases), len(set(bases.values())))
+        for permutation in bases.values():
+            self.assertEqual(set(permutation), set(range(83)))
+        irregular = stable_partition_permutation(
+            "11110111011101110", reverse=False, ones_first=True
+        )
+        self.assertEqual(irregular[:4], (0, 1, 2, 3))
+        self.assertEqual(irregular[-4:], (67, 72, 76, 80))
+
+    def test_circle_base_audit_keeps_numbered_prefixes(self) -> None:
+        results = circle_base_permutation_audit(read_ciphertext(CIPHERTEXT))
+        self.assertEqual(len(results), len(circle_base_permutations()) * 3)
+        self.assertTrue(all(result.prefix_matches == 9 for result in results))
+        self.assertTrue(all(result.total == 761 for result in results))
 
 
 if __name__ == "__main__":

@@ -907,6 +907,14 @@ is frozen: circle row cuts and exact repeated binary partitions define one
 base permutation, tested under fixed, rank-power, and rank-plus-one updates
 from natural line resets.
 
+That second family is also negative: 54 candidates all use every rank through
+82; fixed `cut+24` is best at only `428/761` low ranks. A more exact joint
+construction now replaces those loose matches. The proposed altar phrase
+`A BAD MAGIC CARD TRICK` has 22 characters including spaces, and the three
+Earthquake binary bands have `24+20+17=61`, producing exactly one 83-slot
+tape. Stable-position and cyclic-rotation deck orders are frozen first, while
+operation-class and step interpretations remain explicitly deferred.
+
 ## Running the workbench
 
 Python 3.11 or newer is sufficient for the dependency-free experiments:
