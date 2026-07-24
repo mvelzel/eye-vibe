@@ -117,6 +117,9 @@ def main() -> None:
     parser.add_argument("--start", type=int, default=6)
     parser.add_argument("--length", type=int, default=200)
     args = parser.parse_args()
+    if args.maximum_homophones < 0:
+        parser.error("--maximum-homophones must be nonnegative")
+    maximum_homophones = args.maximum_homophones or None
 
     messages = json.loads(
         (ROOT / "artifacts/practice-sdlwdr/cipher4.json").read_text()
@@ -133,7 +136,7 @@ def main() -> None:
             matches(
                 target,
                 source,
-                maximum_homophones=args.maximum_homophones,
+                maximum_homophones=maximum_homophones,
             )
         )
         print(

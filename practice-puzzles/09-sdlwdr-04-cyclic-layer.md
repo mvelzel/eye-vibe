@@ -153,6 +153,25 @@ positive or structural control:
     routes.  It exactly recovers a planted route.  Real best improvements have
     selection-corrected tails `0.651741` and `0.179104`, so neither quotient
     supports a promoted route.
+17. **Exact public-source homophones.**  The 200-symbol common block has 50
+    symbols and 150 equality constraints.  With no cap on how many action
+    symbols may encode one character, it has zero compatible windows across
+    2,040,251 letters-only and 2,478,970 space-preserving characters from
+    *Sherlock Holmes*, English/Finnish *Kalevala*, and Finnish *Seven
+    Brothers*.  This exactly excludes those passages, not arbitrary sources.
+18. **Selector demultiplexing.**  All 68 width-2/3 lane orders, concatenation
+    modes, and reversal masks were selected on portions 1–2 and tested on
+    portion 3 under 2,000 selector-shuffle controls.  The planted interleaving
+    is recovered (`1/201`), while the real winner hurts held-out score and is
+    null-ordinary (`1080/2001`).
+19. **Typed coordinate reassociation.**  All 186 width-2/3, period-2..32
+    selector shifts/reversals were audited after choosing pattern order only
+    on a planted fixture.  The planted period-7 transform is recovered exactly
+    (`1/101`); the real winner again hurts held-out score (`77/101`).
+
+The full homophone/fractionation checkpoint, including both positive controls
+and complete numeric results, is in
+[`docs/practice-cipher4-fractionation-results-2026-07-24.md`](../docs/practice-cipher4-fractionation-results-2026-07-24.md).
 
 ## Verdict
 

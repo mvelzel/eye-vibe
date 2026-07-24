@@ -578,6 +578,21 @@ Full freeze and results:
 Selector/route results:
 [`practice-cipher4-selector-route-results-2026-07-24.md`](practice-cipher4-selector-route-results-2026-07-24.md).
 
+The later fractionation pass closes two more natural uses of the quotient
+coordinates. Stable selector lanes are held-out negative
+(`1080/2001 = 0.539730135`), and all short-block, type-preserving selector
+reassociations are likewise negative (`77/101 = 0.762376238`); matched planted
+fixtures recover both target mechanisms. An uncapped equality-fingerprint
+scan also finds no static-homophone match for the 200-symbol common block in
+four public English/Finnish sources. Results:
+[`practice-cipher4-fractionation-results-2026-07-24.md`](practice-cipher4-fractionation-results-2026-07-24.md).
+
+**Remaining boundary:** run-controlled packets, type-preserving deck deals,
+quotient digraph packets, boundary symbols, and edited lane templates remain
+unexecuted but lower priority. Resume only with an author hint naming a
+matching operation or a qualitatively different packet invariant; do not
+continue fitting selector-dependent codebooks.
+
 ### Exact 42-class complement of the Eye alphabet
 
 **Status:** exact architecture count, canonical decoders negative.  The raw

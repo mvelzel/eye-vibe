@@ -96,6 +96,14 @@ not a mechanism: on genuinely new full-rank bigrams it scores `0/23` and
 shared plaintext. The quotient observation is retained, but no two-cycle lift
 is promoted.
 
+The next frozen fractionation pass is recorded in
+[`docs/practice-cipher4-fractionation-results-2026-07-24.md`](docs/practice-cipher4-fractionation-results-2026-07-24.md).
+An uncapped exact homophone fingerprint finds no compatible window in four
+public English/Finnish sources. Selector demultiplexing and typed short-block
+coordinate reassociation both recover their planted mechanisms but reverse on
+held-out real data (`1080/2001` and `77/101`). Cipher 4 remains unsolved; the
+`3×19` form is descriptive rather than an identified codec.
+
 A fresh method-acquisition pass reopens sdlwdr cipher 3 without extending the
 solver-invented progression premise. Its frozen horizon is
 [`docs/practice-cipher3-wide-freeze-2026-07-24.md`](docs/practice-cipher3-wide-freeze-2026-07-24.md),

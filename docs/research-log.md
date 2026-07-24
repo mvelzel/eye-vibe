@@ -2870,3 +2870,30 @@ These are not negative evidence. The surviving hypothesis is specifically an
 adjacent differential transducer whose immediate motion classes need not
 compose into longer geometric chords. Full results and reproduction are in
 `docs/thirteenth-wide-hidden-geometry-results-2026-07-24.md`.
+
+### Practice cipher 4: homophone and fractionation checkpoint
+
+The 200-symbol common action block was scanned by its exact equality
+fingerprint against letters-only and space-preserving *Sherlock Holmes*,
+English/Finnish *Kalevala*, and Finnish *Seven Brothers*. Unlimited
+many-to-one homophones are allowed, but all 150 repeated-position constraints
+must hold. Across 2,040,251 and 2,478,970 normalized characters respectively,
+there are zero compatible windows. This is a concrete-source exclusion.
+
+The frozen selector-demultiplex family then selected every width-2/3 lane
+order and reversal on portions 1–2 and tested the fixed winner on portion 3.
+A planted interleaving is recovered with corrected tail `1/201`; the real
+winner has held-out improvement `-0.102488285` and tail `1080/2001`.
+
+Typed coordinate reassociation required a calibration repair: the order-8
+pattern model failed its positive control, so its real score was discarded.
+Order 14 was the smallest model to recover the planted width-3, period-7
+inverse and was frozen before the real run. The planted result has tail
+`1/101`; the real winner has held-out improvement `-0.365859218` and tail
+`77/101`.
+
+Cipher 4 remains unsolved. The lesson is procedural: calibrate the statistic
+before exposing it to real data, select transformations on training material,
+and require the one fixed transform to survive held-out data. Full results and
+reproduction are in
+`docs/practice-cipher4-fractionation-results-2026-07-24.md`.
