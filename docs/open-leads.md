@@ -11,8 +11,9 @@ what would stop or promote it.  Completed and rejected branches remain in
 
 ### Six-symbol factoradic header type system
 
-**Status:** independently reproduced structural metadata; six direct body
-interfaces rejected, with no plaintext and no decoder.
+**Status:** independently reproduced structural metadata; its duplicate-edge
+scalar ambiguity is now resolved by a second marker reading. Six direct body
+interfaces remain rejected, with no plaintext and no decoder.
 
 Lexicographically unranking the nine first-trigram ranks as permutations of
 `[center,up,right,down,left,newline]` gives a coherent three-way classifier.
@@ -25,7 +26,16 @@ This is not forced by the earlier header graph. Freezing its nine `(a,b)`
 coordinates and permuting only the observed third-digit multiset leaves two
 full survivors among 12,096 in-range distinct-rank assignments. They differ
 only by swapping West2 and West4, the graph's indistinguishable duplicate
-edge, hence one structural class. The shared fixed center is deflated: all
+edge. The newly noticed canonical third-digit grid has column sums `3,5,8`,
+while the alternate survivor has `4,4,8` and no D4 `358` view. This resolves
+the authored scalar assignment within the structural class. The same observed
+digits decode to `!Fi` through the independently fixed marker-trail BWT.
+
+The frozen joint audit retains only the observed assignment under natural or
+D4 `358` crossed with exact or case-insensitive `Fi`. This is descriptive,
+not a discovery p-value: both routes reuse the same digits and the grid sum was
+noticed post hoc. It promotes self-checking Finland/Finnish metadata, not a
+body cipher. The shared fixed center is separately deflated: all
 lexicographic S6 ranks below 120 fix the first symbol automatically.
 
 The frozen wide portfolio is complete. Nonabelian products match no header;
@@ -34,12 +44,16 @@ D4 cosets and conjugacy features are ordinary; and moving the renderer newline
 destroys row syntax. None approaches its `0.01` promotion line.
 
 **Next test:** retain the header classifier while waiting for an independently
-authored rule that consumes its three types or graph coordinates. Direct fixed
-unshuffling and arbitrary S6-feature-to-letter maps are not admissible. Full
-provenance is in
+authored rule that consumes its three types, graph coordinates, or locale tag.
+The immediate prospective body-facing test is whether equality-derived
+context maps reproduce the marker rows' zero-versus-seven circulation without
+numeric fitting. Direct fixed unshuffling, arbitrary S6-feature-to-letter
+maps, and unconstrained `FI358` keys are not admissible. Full provenance is in
 [`discord-factoradic-audit-2026-07-22.md`](discord-factoradic-audit-2026-07-22.md),
-and body results are in
-[`factoradic-wide-2026-07-22.md`](factoradic-wide-2026-07-22.md).
+body results are in
+[`factoradic-wide-2026-07-22.md`](factoradic-wide-2026-07-22.md), and the new
+joint audit is in
+[`twenty-fifth-marker-country-results-2026-07-24.md`](twenty-fifth-marker-country-results-2026-07-24.md).
 
 ### Procedural wand selects exactly `0..82` from `0..100`
 

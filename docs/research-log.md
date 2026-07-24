@@ -3897,3 +3897,45 @@ seven, and pointer-closed final difference—as a discriminator for a future
 model, not as permission to invent a new operator per row. Freeze and result:
 `docs/twenty-fourth-row-record-transfer-freeze-2026-07-24.md`;
 `docs/twenty-fourth-row-record-transfer-results-2026-07-24.md`.
+
+### Marker `!Fi` / `+358` conjunction
+
+Stepping back to the complete first-trigram layer reveals a new exact spatial
+reading. In canonical engine order, the header third digits are
+`001/134/223`; their three column sums are `(3,5,8)`, Finland's international
+calling code. This reuses the nine digits already decoded through the fixed
+East-5-first marker trail, stable LF mapping, and primary-zero inverse BWT as
+`!Fi`.
+
+The discovery was retrospective, so a finite conditional audit was frozen
+before enumeration. It keeps every first/second graph coordinate fixed,
+permutes only the observed multiset `001122334`, retains ranks in `0..82` and
+distinctness, and measures exact versus D4 `358`, exact versus
+case-insensitive `Fi`, their intersections, and the unchanged full factoradic
+predicate. No body value or language score is consulted.
+
+The old range filters reproduce exactly: 22,680 assignments become 15,120
+in-range and 12,096 distinct-rank cases. In that final universe, natural
+ordered `358` occurs 224 times and D4-broadened `358` 855 times. The fixed BWT
+route has 1,137 single-cycle assignments, 404 with three values in `0..82`,
+two case-insensitive `Fi` suffixes, and one exact `!Fi`. Every registered
+joint count is one: natural or D4 `358`, crossed with exact or
+case-insensitive `Fi`, retains only the observed assignment. The other text
+case is `%Fi` on assignment `100134223`, whose column sums are `457`.
+
+The pre-existing full factoradic predicate remains untouched and again leaves
+two survivors. The observed `001134223` has column sums `358` and BWT `!Fi`.
+The West2/West4 scalar swap `001234213` has sums `448`, no D4 `358` view, and
+no valid single-cycle BWT text. Thus the new layout resolves the factoradic
+duplicate-edge ambiguity 1-of-2.
+
+This is a positive structural discriminator but not a calibrated discovery
+tail: both readings use the same digits, and the search space of recognizable
+post-hoc grid facts is unknown. Do not multiply the counts. Promote only the
+narrow claim that the markers likely contain designed, self-checking metadata
+consistent with Finland/Finnish. It neither solves the bodies nor licenses
+arbitrary `FI358` keys. The next prospective lane is an equality-derived
+body-map holonomy test for the zero-circulation versus residue-seven row
+typing. Freeze and full results:
+`docs/twenty-fifth-wide-marker-country-horizon-2026-07-24.md`;
+`docs/twenty-fifth-marker-country-results-2026-07-24.md`.

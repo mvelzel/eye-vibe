@@ -966,6 +966,20 @@ zero-circulation first row, residue-seven second row, and pointer-closed final
 row. Results:
 [`docs/twenty-fourth-row-record-transfer-results-2026-07-24.md`](docs/twenty-fourth-row-record-transfer-results-2026-07-24.md).
 
+A new breadth pass finds a positive marker-layer discriminator. The nine
+header third digits form the canonical grid `001/134/223`, whose natural
+column sums are `3,5,8`. The same digits independently travel through the
+fixed East-5-first BWT route to `!Fi`. In the frozen 12,096-assignment
+graph-conditioned universe, natural `358` occurs 224 times and a
+case-insensitive `Fi` suffix twice, but only the observed assignment has both;
+the joint remains unique after D4 broadening. More structurally, the unchanged
+factoradic predicate's two survivors have column sums `358` and `448`, so the
+new layout selects the observed West2/West4 scalar assignment. This promotes a
+self-checking Finland/Finnish metadata tag, not a body decoder or an
+uncorrected p-value. Horizon and result:
+[`docs/twenty-fifth-wide-marker-country-horizon-2026-07-24.md`](docs/twenty-fifth-wide-marker-country-horizon-2026-07-24.md);
+[`docs/twenty-fifth-marker-country-results-2026-07-24.md`](docs/twenty-fifth-marker-country-results-2026-07-24.md).
+
 ## Running the workbench
 
 Python 3.11 or newer is sufficient for the dependency-free experiments:
@@ -1026,6 +1040,7 @@ PYTHONPATH=src python3 scripts/scan_game_authored_tables.py /path/to/data.wak
 PYTHONPATH=src python3 scripts/analyze_gun_names_selector.py /path/to/data.wak /path/to/english.txt --controls 2000
 PYTHONPATH=src python3 scripts/run_fifth_wide_fanout.py --controls 2000 --sort-controls 10000
 PYTHONPATH=src python3 scripts/run_ninth_causal_batch.py --controls 1000
+PYTHONPATH=src python3 scripts/audit_marker_country_tag.py
 ```
 
 The vectorized selected-card scan additionally requires NumPy:
