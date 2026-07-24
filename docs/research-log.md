@@ -3547,3 +3547,18 @@ control is frozen before counting. Every shuffle may search gaps 2–30, any
 panel, start or end, any marker and anchor, and coordinate offsets
 `0,1,20,21`, after first satisfying the broad numeric record. Protocol:
 `docs/eighteenth-anchor-pointer-freeze-2026-07-24.md`.
+
+The pointer/gauge control promotes. Of 50,000 new matched shuffles, 1,747
+retain one clean gap-11 anchor in all three panels. None also reproduces the
+exact endpoint pointer; none reproduces the exact numeric slot rule. The
+fully broadened family reselects gaps 2–30, any panel, either repeat boundary,
+any marker and anchor, and independent offsets `0,1,20,21`; six controls
+survive, for corrected tail `7/50001 = .000139997`.
+
+The final row therefore fixes its own additive gauge. E4's trimmed endpoint
+`27` is `h_E4`; adding the fixed full-array frame `21` gives `a_E5=48`.
+The typed difference record reconstructs `a_E4=75` and `a_W4=81`, then
+checks `h_E5=33`. This makes the final row a closed self-describing record,
+not a checksum graph needing an external seed. It remains structural
+metadata rather than a plaintext decode. Details:
+`docs/eighteenth-anchor-pointer-results-2026-07-24.md`.

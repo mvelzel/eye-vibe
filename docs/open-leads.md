@@ -1359,3 +1359,12 @@ all anchors `48 -> 75 -> 81`, with `h_E5=33` as a check. The broad 50,000
 control may search every gap, panel, start/end choice, marker, anchor, and
 zero/one-based trimmed/body/full coordinate offset. Protocol:
 [`eighteenth-anchor-pointer-freeze-2026-07-24.md`](eighteenth-anchor-pointer-freeze-2026-07-24.md).
+
+**Pointer result:** promoted. No one of 50,000 new matched shuffles reproduces
+the exact pointer or numeric slot rule. Six survive the fully broadened joint
+search, for corrected tail `7/50001 = .000139997`. The final row therefore
+fixes its own additive gauge: `27+21=48` sets `a_E5`, then the markers
+reconstruct `a_E4=75`, `a_W4=81`, and check `h_E5=33`. It is now a closed
+self-describing record, though it still does not reveal plaintext or explain
+the final-row/base-16/gap-11 selector. Results:
+[`eighteenth-anchor-pointer-results-2026-07-24.md`](eighteenth-anchor-pointer-results-2026-07-24.md).

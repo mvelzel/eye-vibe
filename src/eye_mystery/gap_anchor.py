@@ -19,6 +19,7 @@ FINAL_COMPONENT_ORDERS = ((0, 1, 2), (0, 2, 1), (1, 0, 2))
 TARGET_RANK_PATTERNS = ((1, 2, 0), (1, 0, 2))
 TARGET_GAP = 11
 BROAD_GAPS = tuple(range(2, 31))
+POINTER_OFFSETS = (0, 1, 20, 21)
 
 
 def final_trimmed_bodies() -> dict[str, tuple[int, ...]]:
@@ -264,6 +265,110 @@ def broad_slot_rank_match(
     return None
 
 
+def exact_pointer_match(
+    streams: Mapping[str, Sequence[int]],
+) -> bool:
+    """Check the frozen target pointer and complete gauge reconstruction."""
+
+    by_message = {
+        name: clean_gap_anchors(
+            streams[name],
+            minimum_gap=TARGET_GAP,
+            maximum_gap=TARGET_GAP,
+        ).get(TARGET_GAP, ())
+        for name in FINAL_MESSAGES
+    }
+    if not all(len(hits) == 1 for hits in by_message.values()):
+        return False
+    anchors = tuple(
+        by_message[name][0].value
+        for name in FINAL_MESSAGES
+    )
+    if matching_slot_pairs(anchors) != ((0, 2),):
+        return False
+
+    east4_endpoint = by_message["east4"][0].position + TARGET_GAP
+    east5_anchor = east4_endpoint + 21
+    if (
+        east4_endpoint != FINAL_HEADERS[0]
+        or east5_anchor != anchors[2]
+    ):
+        return False
+
+    reconstructed = (
+        (east5_anchor + FINAL_HEADERS[0]) % MODULUS,
+        (
+            east5_anchor
+            + FINAL_HEADERS[0]
+            - FINAL_HEADERS[1]
+        )
+        % MODULUS,
+        east5_anchor,
+    )
+    return (
+        reconstructed == anchors
+        and (anchors[1] - anchors[2]) % MODULUS == FINAL_HEADERS[2]
+    )
+
+
+@dataclass(frozen=True)
+class PointerWitness:
+    gap: int
+    carrier: str
+    boundary: str
+    position: int
+    header: int
+    header_offset: int
+    anchor: int
+    anchor_offset: int
+
+
+def broad_pointer_match(
+    streams: Mapping[str, Sequence[int]],
+) -> PointerWitness | None:
+    """Search the complete preregistered broad pointer family."""
+
+    by_message = {
+        name: clean_gap_anchors(streams[name])
+        for name in FINAL_MESSAGES
+    }
+    for gap in BROAD_GAPS:
+        hits = tuple(by_message[name].get(gap, ()) for name in FINAL_MESSAGES)
+        if not all(len(message_hits) == 1 for message_hits in hits):
+            continue
+        anchors = tuple(message_hits[0].value for message_hits in hits)
+        if not broad_difference_relation(anchors):
+            continue
+        for carrier, message_hits in zip(
+            FINAL_MESSAGES,
+            hits,
+            strict=True,
+        ):
+            start = message_hits[0].position
+            for boundary, position in (
+                ("start", start),
+                ("end", start + gap),
+            ):
+                for header in FINAL_HEADERS:
+                    for header_offset in POINTER_OFFSETS:
+                        if position + header_offset != header:
+                            continue
+                        for anchor in anchors:
+                            for anchor_offset in POINTER_OFFSETS:
+                                if position + anchor_offset == anchor:
+                                    return PointerWitness(
+                                        gap,
+                                        carrier,
+                                        boundary,
+                                        position,
+                                        header,
+                                        header_offset,
+                                        anchor,
+                                        anchor_offset,
+                                    )
+    return None
+
+
 def planted_gap_streams() -> dict[str, tuple[int, ...]]:
     """Return a short exact detector plant with the real anchor relation."""
 
@@ -294,6 +399,25 @@ def planted_position_streams() -> dict[str, tuple[int, ...]]:
             strict=True,
         )
     }
+
+
+def planted_pointer_streams() -> dict[str, tuple[int, ...]]:
+    """Return the exact pointer plant from the preregistered protocol."""
+
+    starts = (16, 18, 17)
+    anchors = (75, 81, 48)
+    streams = {}
+    for name, start, anchor in zip(
+        FINAL_MESSAGES,
+        starts,
+        anchors,
+        strict=True,
+    ):
+        stream = list(range(40))
+        stream[start] = anchor
+        stream[start + TARGET_GAP] = anchor
+        streams[name] = tuple(stream)
+    return streams
 
 
 @dataclass(frozen=True)
@@ -574,6 +698,85 @@ def gap_anchor_slot_audit(
         target_joint,
         broad_joint,
         (1 + target_rank) / denominator,
+        (1 + target_joint) / denominator,
+        (1 + broad_joint) / denominator,
+    )
+
+
+@dataclass(frozen=True)
+class GapAnchorPointerAudit:
+    controls: int
+    target_structure_controls: int
+    target_pointer_controls: int
+    target_numeric_controls: int
+    target_joint_controls: int
+    broad_joint_controls: int
+    target_pointer_tail: float
+    target_joint_tail: float
+    broad_joint_tail: float
+
+    @property
+    def passes(self) -> bool:
+        return self.broad_joint_tail < 0.01
+
+
+def gap_anchor_pointer_audit(
+    *,
+    controls: int = 50_000,
+    seed: int = 0x18E09,
+) -> GapAnchorPointerAudit:
+    """Run the frozen pointer/gauge matched controls."""
+
+    if controls < 1:
+        raise ValueError("at least one control is required")
+    streams = final_trimmed_bodies()
+    if not exact_pointer_match(streams):
+        raise AssertionError("real exact pointer does not reproduce")
+    if broad_pointer_match(streams) is None:
+        raise AssertionError("real broad pointer does not reproduce")
+
+    rng = random.Random(seed)
+    target_structure = 0
+    target_pointer = 0
+    target_numeric = 0
+    target_joint = 0
+    broad_joint = 0
+    for _ in range(controls):
+        shuffled = {
+            name: shuffle_without_adjacent_doubles(streams[name], rng)
+            for name in FINAL_MESSAGES
+        }
+        target_hits = tuple(
+            clean_gap_anchors(
+                shuffled[name],
+                minimum_gap=TARGET_GAP,
+                maximum_gap=TARGET_GAP,
+            ).get(TARGET_GAP, ())
+            for name in FINAL_MESSAGES
+        )
+        if all(len(hits) == 1 for hits in target_hits):
+            target_structure += 1
+            anchors = tuple(hits[0].value for hits in target_hits)
+            endpoint = target_hits[0][0].position + TARGET_GAP
+            pointer_match = (
+                endpoint == FINAL_HEADERS[0]
+                and endpoint + 21 == anchors[2]
+            )
+            numeric_match = matching_slot_pairs(anchors) == ((0, 2),)
+            target_pointer += pointer_match
+            target_numeric += numeric_match
+            target_joint += pointer_match and numeric_match
+        broad_joint += broad_pointer_match(shuffled) is not None
+
+    denominator = controls + 1
+    return GapAnchorPointerAudit(
+        controls,
+        target_structure,
+        target_pointer,
+        target_numeric,
+        target_joint,
+        broad_joint,
+        (1 + target_pointer) / denominator,
         (1 + target_joint) / denominator,
         (1 + broad_joint) / denominator,
     )
