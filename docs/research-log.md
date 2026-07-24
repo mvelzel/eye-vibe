@@ -3504,3 +3504,18 @@ upper-control, center-result Gate topology at the level of arity and routing.
 No Type4/Type6 execution, Seula residual mask, or fresh-value allocator has
 appeared. Twelve lanes are ranked before depth; finite incidence conventions
 go first, followed by row-typed records and the synchronizing 11-loop.
+
+Lane A's finite slot audit gives a much cleaner exact description. For each
+final order `(source,target,remaining)`, exactly one of six directed slot
+differences reproduces all markers:
+`h=a[source]-a[remaining] mod 83`. The output vectors for slot pairs
+`01,02,10,12,20,21` are respectively
+`(77,27,6)`, `(27,77,33)`, `(6,56,77)`, `(33,50,27)`, `(56,6,50)`, and
+`(50,33,56)`.
+
+The omitted target column of orders `012,021,102` is `(1,2,0)`, exactly the
+ascending rank pattern of anchors `(75,81,48)`. Since this was seen
+retrospectively, a new matched control is frozen before counting. It reselects
+gaps 2–30, retains the broad numeric test, and allows both ascending and
+descending rank directions. Protocol:
+`docs/eighteenth-anchor-record-slot-freeze-2026-07-24.md`.

@@ -1334,3 +1334,11 @@ inputs `77,33` combine to central total `27 mod 83`, matching a real Eye
 interface, while its unpublished masks/cache allocator remain unsupported.
 Map:
 [`eighteenth-wide-anchor-record-horizon-2026-07-24.md`](eighteenth-wide-anchor-record-horizon-2026-07-24.md).
+
+**Lane-A slot observation, frozen before controls:** with final component
+orders `012,021,102`, the unique directed slot rule reproducing all markers is
+`source - remaining`, i.e. slots `0-2`; all other five fail. The omitted
+target column is `(1,2,0)`, exactly the ascending ranks of anchors
+`(75,81,48)`. A new 50,000-control audit reselects gaps 2–30, uses the broad
+numeric relation, and allows ascending or descending target ranks. Protocol:
+[`eighteenth-anchor-record-slot-freeze-2026-07-24.md`](eighteenth-anchor-record-slot-freeze-2026-07-24.md).
