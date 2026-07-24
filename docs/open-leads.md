@@ -1217,3 +1217,16 @@ The equations, five first-symbol modes, four finite update families, exact
 arbitrary-update boundary, positive controls, and stop rules are frozen in
 [`practice-cipher3-affine-gak-freeze-2026-07-24.md`](practice-cipher3-affine-gak-freeze-2026-07-24.md).
 No real score has been used to choose them.
+
+**Affine-GAK result:** the structured lane closes with passing controls. None
+of 2,291 A-valid catalog candidates reaches 42 values; the unique minimum is
+75 under `skip`, `u(t)=70*t+60`, and it becomes invalid on B/C. The arbitrary
+update lane is unresolved: all five group-A 42-state queries and all five
+all-message 82-state diagnostics time out at ten seconds. Do not turn that
+unknown into a rejection or extend the catalog with a zero exception.
+
+Results:
+[`practice-cipher3-affine-gak-results-2026-07-24.md`](practice-cipher3-affine-gak-results-2026-07-24.md).
+The distinct Cipher 3 lanes still open are the `83=2*42-1` two-sheet model,
+higher-order visible state, broader output-rank decks, routes, variable-length
+codes, and the exact arbitrary-update question if a new invariant appears.

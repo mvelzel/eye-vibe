@@ -155,6 +155,20 @@ prefix-tree shape thousands of times, so it cannot identify a plaintext
 passage without a stronger mechanism. Full results:
 [`../docs/practice-cipher3-third-wide-first-batch-results-2026-07-24.md`](../docs/practice-cipher3-third-wide-first-batch-results-2026-07-24.md).
 
+Construction genealogy then motivated a standard-coordinate affine
+group-autokey test. Its complete 35,675-member structured catalog passes a
+42-symbol plant, but the real A-selected minimum is 75 values:
+
+```text
+mode=skip, u(t)=70*t+60, A unique=75
+```
+
+The winner becomes invalid on B/C, and no A candidate reaches 42. This closes
+four structured global update families in five first-symbol modes. A broader
+arbitrary-update Z3 model is unresolved: all five group-A queries time out at
+the 42-state boundary, as do all-message 82-state diagnostics. Full results:
+[`../docs/practice-cipher3-affine-gak-results-2026-07-24.md`](../docs/practice-cipher3-affine-gak-results-2026-07-24.md).
+
 ## Solution
 
 No verified plaintext has been recovered, so there is no solution text to
@@ -186,6 +200,10 @@ instead of presenting a timeout as an impossibility proof.
   compatibility, not identification, unless it predicts unseen text.
 - Separate visible-symbol recurrence from hidden affine deck state: failure of
   the former does not test the latter.
+- Let a selected update becoming undefined on heldout data count as a
+  prediction failure; do not invent an exceptional multiplier afterward.
+- A planted SAT instance validates an encoding, not its ability to decide the
+  full corpus. Preserve real timeouts as unresolved.
 
 The exact checks are implemented in
 `scripts/solve_sdlwdr_cipher3_cycle.py` and
@@ -200,4 +218,6 @@ homophone checks are reproduced by
 `src/eye_mystery/practice_cipher3_reflection.py` and
 `scripts/run_practice_cipher3_reflection_wheel.py`. The third wide batch is
 implemented in `src/eye_mystery/practice_cipher3_third.py` and
-`scripts/run_practice_cipher3_third_batch.py`.
+`scripts/run_practice_cipher3_third_batch.py`. The affine GAK batch is
+`src/eye_mystery/practice_cipher3_affine_gak.py` and
+`scripts/run_practice_cipher3_affine_gak.py`.

@@ -3304,3 +3304,25 @@ each realized nonzero action one arbitrary global multiplier and asks for a
 decoded union of at most 42 states on A, B, C, and all messages. Positive
 controls must recover a known structured family, exact planted
 satisfiability, and forward ciphertext replay before real results count.
+
+Both controls pass. The structured 42-action plant retains its true
+`indicator-both`, `u(t)=2^t` family among the A-minimizers and transfers to
+B/C. A separate four-state arbitrary-update plant is exact `SAT` and its model
+replays the complete ciphertext. Direct round trips pass for all five modes.
+
+The real finite result is far from the threshold. Of 35,675 candidates, 2,291
+remain valid over A and zero decode A to at most 42 values. The unique
+A-selected minimum is `skip`, `u(t)=70*t+60`, with 75 values and normalized
+IoC `1.016215981`; it hits a zero multiplier on B/C.
+
+The exact lane is inconclusive. With ten-second limits, all five group-A
+queries at 42 states return `unknown: timeout`. All five all-message
+diagnostics also time out even when the ceiling is relaxed to all 82 states.
+The formulation is therefore not decisive on real data despite its passing
+small plant. Per the frozen stop rule there is no structured survivor or exact
+group result to justify blind depth.
+
+`docs/practice-cipher3-affine-gak-results-2026-07-24.md` closes only the four
+finite global update families in the five standard modes. Arbitrary update,
+hidden coordinate permutation, two-sheet homophony, higher-order state, and
+non-affine deck families remain open.
