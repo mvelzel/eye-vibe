@@ -225,3 +225,16 @@ Full results:
 [`fourteenth-recursive-check-results-2026-07-24.md`](fourteenth-recursive-check-results-2026-07-24.md).
 The original trie checksum remains unexplained, but this uniform recursive
 consumer receives no coefficient or node-type expansion.
+
+## Lane-B positive-control calibration
+
+The frozen typed reassociation family has 225 candidates:
+three moved components, periods 2–26, and shift-left, shift-right, or reversal.
+The order-14 equality-pattern model already frozen by lane A is retained.
+
+An accepted-range planted fixture keeps every plaintext and ciphertext value
+inside `0..82`, delays component 2 to the right in period-seven blocks, and
+therefore has exact inverse `c2:p7:shift-left`. The complete P-side selector
+recovers that exact specification, with train improvement `+5.842783471` and
+Q-side improvement `+4.030816846`. No pattern-order scan or real Eye score was
+used. The family and order are now admissible for lane B's real audit.

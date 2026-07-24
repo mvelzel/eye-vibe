@@ -3022,3 +3022,11 @@ are not run. Full results are in
 the unexplained `37,774 mod101=0` root event while closing this compact uniform
 recursive consumer and forbidding coefficient/node-type expansion without an
 authored interface.
+
+The remaining high-ranked method-transfer lane B then passes its positive
+control before the Eyes are scored. Its 225 candidates move exactly one of
+three typed eye components within periods 2–26 by left shift, right shift, or
+reversal, rejecting any reconstruction outside `0..82`. An accepted-range
+fixture encrypted by period-seven right shift of component 2 is recovered
+exactly by `c2:p7:shift-left` under the already frozen order-14 pattern model.
+Train and held-out improvements are `+5.842783471` and `+4.030816846`.
