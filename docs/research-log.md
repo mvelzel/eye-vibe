@@ -2648,6 +2648,18 @@ step-back bottleneck is external identifiability: a known plaintext, selected
 operation family, new authored interface, or a method learned from unsolved
 practice cipher 3/4.
 
+### Practice cipher 3: mechanism breadth restart
+
+The first post-horizon method-acquisition target is sdlwdr cipher 3. The old
+position-progressive permutation was a project hypothesis rather than a
+located author hint, so increasing its SMT budget would not be a genuine new
+lead. `docs/practice-cipher3-wide-freeze-2026-07-24.md` instead freezes seven
+independent routes before scoring: transfer of the solved ciphers 1/2 wheel,
+standard `C83` actions, fixed position drift, named physical deck updates,
+cipher-5's exact recursive operation family, label-invariant isomorph maps,
+and source closure only after mechanism selection. Group A is training; groups
+B/C remain held out.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly

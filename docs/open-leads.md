@@ -492,6 +492,14 @@ for the progression premise.
 **Next test:** resume only when a new invariant, known plaintext, or author hint
 reduces the model. Do not extend blind SMT or annealing time.
 
+That condition is now met methodologically rather than by granting the old
+model more search time: the new breadth freeze in
+[`practice-cipher3-wide-freeze-2026-07-24.md`](practice-cipher3-wide-freeze-2026-07-24.md)
+abandons the unendorsed progression assumption and compares seven finite
+mechanism transfers. Its first heldout batch tests the independently recovered
+`C82` wheel, fixed coordinate drift, standard physical selected-card models,
+and cipher-5's exact recursive update family.
+
 ### sdlwdr practice cipher 4
 
 **Status:** outer cyclic layer solved, inner codec unsolved.  The arbitrary
