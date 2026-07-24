@@ -1,13 +1,20 @@
 from __future__ import annotations
 
+import random
 import unittest
+from collections import Counter
 
 from eye_mystery.seventeenth_state import (
     FibrationAudit,
     coarsest_equitable_partition,
+    evaluate_hankel_split,
     fibration_audit,
+    hankel_control_audit,
+    modular_rank,
     partition_is_equitable,
+    periodic_hankel_plant,
     planted_regular_cover,
+    shuffle_without_adjacent_doubles,
 )
 
 
@@ -26,6 +33,42 @@ class SeventeenthFibrationTests(unittest.TestCase):
             FibrationAudit(False, True, 75, 74, 9, 83, 83, 1, False),
         )
         self.assertEqual(fibration_audit(), expected)
+
+
+class SeventeenthHankelTests(unittest.TestCase):
+    def test_modular_rank_is_exact(self) -> None:
+        matrix = ((1, 2, 3), (2, 4, 6), (1, 1, 0))
+        self.assertEqual(modular_rank(matrix, 83), 2)
+        self.assertEqual(modular_rank(((83, 0), (0, 1)), 83), 1)
+
+    def test_shuffle_preserves_registered_nuisances(self) -> None:
+        source = (0, 1, 0, 2, 1, 2, 0)
+        shuffled = shuffle_without_adjacent_doubles(
+            source,
+            random.Random(917),
+        )
+        self.assertEqual(Counter(shuffled), Counter(source))
+        self.assertEqual(len(shuffled), len(source))
+        self.assertTrue(
+            all(left != right for left, right in zip(shuffled, shuffled[1:]))
+        )
+
+    def test_algebraic_selector_always_chooses_shallow_block(self) -> None:
+        plant = periodic_hankel_plant()
+        split = evaluate_hankel_split(plant, ("east1", "west1", "east2"))
+        self.assertEqual(split.selected_depth, (1, 1))
+        self.assertGreaterEqual(split.blocks[0].score, split.blocks[1].score)
+        self.assertGreaterEqual(split.blocks[0].score, split.blocks[2].score)
+
+    def test_periodic_positive_control_passes_small_audit(self) -> None:
+        audit = hankel_control_audit(
+            periodic_hankel_plant(),
+            controls=19,
+        )
+        self.assertTrue(audit.training.selected.all_fields_deficient)
+        self.assertTrue(audit.heldout.selected.all_fields_deficient)
+        self.assertEqual(audit.exceedances, 0)
+        self.assertEqual(audit.heldout_rank_excess, 0)
 
 
 if __name__ == "__main__":

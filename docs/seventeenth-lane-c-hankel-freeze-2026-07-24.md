@@ -5,9 +5,9 @@
 Use markerless bodies after removing the already known copied openings:
 
 ```text
-east1/west1/east2          24 symbols
-west2/east3/west3           5 symbols
-east4/west4/east5          20 symbols
+east1/west1/east2          remove 24 symbols
+west2/east3/west3          remove  5 symbols
+east4/west4/east5          remove 20 symbols
 ```
 
 For a set of reset messages, define `f(w)` as the total number of contiguous
@@ -62,9 +62,12 @@ apart from ties that also resolve to `(1,1)`.
 
 Do not silently replace the family after this observation. Retain all three
 registered blocks, but use `(1,1)` as the now-explicit primary statistic. The
-two deeper blocks are mandatory robustness checks: promotion requires a
-positive deficit in all three fields for all three depths. Controls still run
-the nominal selector so the implementation verifies the algebraic result.
+two deeper blocks are mandatory reported robustness diagnostics. They are not
+an added promotion gate: exact finite-corpus reset/boundary terms can increase
+their empirical rank even for a deterministic periodic positive control.
+Promotion retains the original requirement of a positive deficit in all three
+fields at the selected `(1,1)` block. Controls still run the nominal selector
+so the implementation verifies the algebraic result.
 
 Freeze the continuation prediction as follows. Let `d_P` be the maximum rank
 of the P `H(1,1)` block over the three fields. A promoted state model predicts
@@ -95,11 +98,18 @@ Before Eye scoring, generate reset streams from one small deterministic
 weighted/periodic automaton with the same no-double condition. The complete
 pipeline must:
 
-- yield a positive deficit on every field;
+- yield a positive selected-block deficit on every field;
 - beat at least 99% of its shuffled controls on heldout messages;
 - choose one of the frozen depth pairs without a plant-only convention.
 
 If this fails, no real rank is interpreted.
+
+The fixed plant period alternates nine hub symbols with eighteen leaf symbols:
+hub `i mod 9`, then leaf `9+i`, for `i=0..17`. Each message takes its observed
+trimmed-body length from that cyclic tape, with message-index phase. This
+36-step, 27-symbol construction has an intentionally low-rank hub/leaf
+transition operator without using a special Hankel evaluator. Both plant and
+real controls use PRNG seed `0x17c0`.
 
 ## Scope
 
