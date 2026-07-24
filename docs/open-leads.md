@@ -1414,3 +1414,18 @@ Keep the exact transform as a medium-low-priority intermediate
 representation. Test it next only against held-out equality/isomorph
 predictions, not an unconstrained substitution search. Audit:
 [`twentieth-diamond-reading-audit-2026-07-24.md`](twentieth-diamond-reading-audit-2026-07-24.md).
+
+### Earthquake irregular-mask prospective test
+
+The unused `11110111011101110` row is frozen as a mask over 17-symbol slices
+at final trimmed starts `16,18,17`. Only forward/reverse and ones/zeros are
+allowed. The known equal anchor endpoints at offsets `0,11` are removed before
+scoring.
+
+Four held-out metrics cover nontrivial exact equality skeletons, common
+repeat pairs, supported conflict-free partial bijections, and aligned mod-83
+equalities. Each of 50,000 controls preserves the complete known selector:
+body length/multiset, fixed numeric anchors and starts, no adjacent doubles,
+and the unique clean gap-11 witness. Variant selection is handled inside each
+metric; four metric tails receive Bonferroni correction. Protocol:
+[`twenty-first-earthquake-mask-freeze-2026-07-24.md`](twenty-first-earthquake-mask-freeze-2026-07-24.md).

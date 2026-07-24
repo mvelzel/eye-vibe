@@ -3613,3 +3613,18 @@ Those controls still do not correct the historical formula search, and the
 author later called similar high-IoC summed-eye effects coincidental. Preserve
 the exact transform for a held-out isomorph test, but do not call it a decode.
 Audit: `docs/twentieth-diamond-reading-audit-2026-07-24.md`.
+
+The first prospective Earthquake-content test is now frozen without reading
+the real slices. Apply `11110111011101110` only as forward/reverse
+ones/zeros masks to 17-symbol slices at final trimmed starts `16,18,17`.
+Offsets 0 and 11 are the already known anchor equality and are removed from
+all scoring.
+
+The four registered held-out metrics are nontrivial exact equality skeleton,
+common repeat pairs, conflict-free supported partial bijection, and aligned
+numeric equality. Fifty thousand controls condition on the full promoted
+selector by preserving length, multiset, the fixed numeric anchors at
+start/start+11, no adjacent doubles, and the unique clean gap-11 witness.
+Variant maximization happens within each metric and the four metric tails are
+Bonferroni corrected. Freeze:
+`docs/twenty-first-earthquake-mask-freeze-2026-07-24.md`.
