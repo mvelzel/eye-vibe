@@ -2660,6 +2660,17 @@ cipher-5's exact recursive operation family, label-invariant isomorph maps,
 and source closure only after mechanism selection. Group A is training; groups
 B/C remain held out.
 
+The first mixed batch is complete in
+`docs/practice-cipher3-first-batch-results-2026-07-24.md`. The complete
+ciphers-1/2 wheel/control family is ordinary on B/C (`.422886`) and produces
+gibberish. Fixed drift selected on A expands from 78 to all 82 ordinary wheel
+states in both heldout groups. Among 120,372 distinct physical
+base/action/mode candidates, the A winner still emits 136 out-of-range ranks
+and 946 more on B/C. Cipher 5's exact recursive operation family emits
+159/351/581 outside-range ranks. These transfers close without weakening the
+older scoped progression results. Standard-`C83` and label-invariant lanes
+remain active.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly

@@ -96,6 +96,16 @@ not a mechanism: on genuinely new full-rank bigrams it scores `0/23` and
 shared plaintext. The quotient observation is retained, but no two-cycle lift
 is promoted.
 
+A fresh method-acquisition pass reopens sdlwdr cipher 3 without extending the
+solver-invented progression premise. Its frozen horizon is
+[`docs/practice-cipher3-wide-freeze-2026-07-24.md`](docs/practice-cipher3-wide-freeze-2026-07-24.md),
+and the first results are in
+[`docs/practice-cipher3-first-batch-results-2026-07-24.md`](docs/practice-cipher3-first-batch-results-2026-07-24.md).
+Direct reuse of the solved ciphers-1/2 wheel is null on heldout groups
+(`.422886`); fixed drift, 120,372 physical deck models, and cipher-5's
+recursive updates all fail the 42-symbol range by wide margins. The puzzle
+remains unsolved; its standard-`C83` and label-invariant lanes remain active.
+
 The next Eye pass deliberately changes the question from “how can these
 numbers be read?” to “what small mechanism caused the equality and
 reconvergence structure?” Its fourteen-lane breadth map is frozen in

@@ -2,7 +2,9 @@
 
 **Status:** Unsolved. One exact mechanism family is excluded; two broader
 cycle decompositions remain undecided exactly, but corrected bounded searches
-make them poor candidates for the complete corpus.
+make them poor candidates for the complete corpus. A later breadth pass also
+rejects direct reuse of the solved ciphers 1/2 wheel, fixed coordinate drift,
+120,372 named physical-deck models, and cipher 5's recursive update family.
 
 ## What was tested
 
@@ -72,6 +74,21 @@ followed by selected-card deck updates did not collapse a representative
 message to a plausible small alphabet, but that scan is a finite negative,
 not a proof about arbitrary deck operations.
 
+The required new invariant was sought by abandoning rather than enlarging the
+progression model. In a train-A/test-B-C mechanism-transfer pass:
+
+```text
+recovered C82 wheel      matched heldout tail .422886
+fixed coordinate drift   78/82/82 states
+physical deck winner     136/364/582 outside-42 events
+cipher-5 update winner   159/351/581 outside-42 events
+```
+
+The `J` that controls solved ciphers 1 and 2 occurs 22 times here and its
+complete bounded control family is null. Details are in
+[`../docs/practice-cipher3-first-batch-results-2026-07-24.md`](../docs/practice-cipher3-first-batch-results-2026-07-24.md).
+The standard-`C83` and label-invariant lanes remain active.
+
 ## Solution
 
 No verified plaintext has been recovered, so there is no solution text to
@@ -95,4 +112,7 @@ instead of presenting a timeout as an impossibility proof.
 The exact checks are implemented in
 `scripts/solve_sdlwdr_cipher3_cycle.py` and
 `scripts/solve_sdlwdr_cipher3_progression.py`; the bounded deck scan is
-`scripts/search_sdlwdr_cipher3_decks.py`.
+`scripts/search_sdlwdr_cipher3_decks.py`. The heldout transfer batch is
+implemented in `src/eye_mystery/practice_cipher3_wide.py`,
+`scripts/run_practice_cipher3_first_batch.py`, and
+`scripts/run_practice_cipher3_wheel_transfer.py`.

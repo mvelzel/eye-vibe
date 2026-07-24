@@ -500,6 +500,13 @@ mechanism transfers. Its first heldout batch tests the independently recovered
 `C82` wheel, fixed coordinate drift, standard physical selected-card models,
 and cipher-5's exact recursive update family.
 
+The first four results are complete in
+[`practice-cipher3-first-batch-results-2026-07-24.md`](practice-cipher3-first-batch-results-2026-07-24.md).
+All close: known-wheel heldout tail `.422886`; fixed drift `78/82/82` states;
+physical winner `136/364/582` outside-range events; recursive winner
+`159/351/581`. Continue with the already frozen standard-`C83` and
+label-invariant lanes rather than repairing these models.
+
 ### sdlwdr practice cipher 4
 
 **Status:** outer cyclic layer solved, inner codec unsolved.  The arbitrary
