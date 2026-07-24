@@ -10,6 +10,7 @@ from eye_mystery.gap_anchor import (
     exact_reported_relation,
     final_trimmed_bodies,
     gap_anchor_audit,
+    gap_anchor_label_audit,
     planted_gap_streams,
     unique_anchor_values,
 )
@@ -58,6 +59,10 @@ class GapAnchorTests(unittest.TestCase):
         self.assertEqual(audit.real_positions, (16, 18, 17))
         self.assertEqual(audit.real_anchors, (75, 81, 48))
         self.assertEqual(audit.predicted_nonreference, (81, 48))
+
+    def test_label_control_is_deterministic(self) -> None:
+        audit = gap_anchor_label_audit(controls=19)
+        self.assertEqual(audit, gap_anchor_label_audit(controls=19))
 
 
 if __name__ == "__main__":

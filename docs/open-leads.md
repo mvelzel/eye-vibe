@@ -1301,3 +1301,19 @@ Before calling the natural numeric subtraction itself authored, two
 orthogonal 50,000-permutation controls are frozen: permute body labels with
 markers fixed, then permute the shared body/marker alphabet jointly. Protocol:
 [`eighteenth-gap-anchor-label-freeze-2026-07-24.md`](eighteenth-gap-anchor-label-freeze-2026-07-24.md).
+
+**Label-control result:** both pass. The fully broadened body-only tail is
+`100/50001 = .001999960`; the joint shared-alphabet relabeling tail is
+`4/50001 = .000079998`. The natural orthodox `0..82 mod 83` coordinate is
+therefore part of the promoted construction link, not an arbitrary naming of
+the equality skeleton. Direct anchor-normalization does not align the window
+interiors, so retain typed/check metadata rather than a simple rotation.
+Results:
+[`eighteenth-gap-anchor-label-results-2026-07-24.md`](eighteenth-gap-anchor-label-results-2026-07-24.md).
+
+One positional consequence is frozen separately before control counting. The
+trimmed anchor positions are `16,18,17 = 16+(0,2,1)`, exactly W4's
+header-derived component order. The broad joint control reselects gaps 2–30,
+requires the selection-corrected numeric match and consecutive positions, and
+allows any of the three final header orders. Protocol:
+[`eighteenth-gap-anchor-position-freeze-2026-07-24.md`](eighteenth-gap-anchor-position-freeze-2026-07-24.md).

@@ -93,14 +93,18 @@ rows operate.
 
 ## Next tests
 
-Before treating the natural `0..82` arithmetic as authored rather than an
-accidental label assignment, run two separately frozen equality-preserving
-controls:
+The separately frozen equality-preserving label controls now pass:
 
-1. globally permute all 83 body labels while keeping the three markers fixed;
-2. globally permute the shared 83-label alphabet in both markers and bodies.
+```text
+body-only broad tail   100/50001 = .001999960
+joint broad tail         4/50001 = .000079998
+```
 
-Then work outward from the established final-row consumer. Do not scan
+This promotes the natural `0..82 mod 83` coordinate, not merely the anchor
+positions. Full controls:
+[`eighteenth-gap-anchor-label-results-2026-07-24.md`](eighteenth-gap-anchor-label-results-2026-07-24.md).
+
+Work outward from the established final-row consumer. Do not scan
 arbitrary arithmetic over the first two rows. First derive candidate landmark
 selectors from their already established equality-isomorph families, and
 require a row-typed rule to predict withheld anchors under full reselection.

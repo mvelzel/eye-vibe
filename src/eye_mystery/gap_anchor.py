@@ -235,3 +235,69 @@ def gap_anchor_audit(
         (1 + targeted_relation) / (1 + controls),
         (1 + broad_relation) / (1 + controls),
     )
+
+
+@dataclass(frozen=True)
+class GapAnchorLabelAudit:
+    controls: int
+    body_only_exact_matches: int
+    body_only_broad_matches: int
+    joint_exact_matches: int
+    joint_broad_matches: int
+    body_only_exact_tail: float
+    body_only_broad_tail: float
+    joint_exact_tail: float
+    joint_broad_tail: float
+
+    @property
+    def natural_coordinate_passes(self) -> bool:
+        return (
+            self.body_only_broad_tail < 0.01
+            and self.joint_broad_tail < 0.01
+        )
+
+
+def gap_anchor_label_audit(
+    *,
+    controls: int = 50_000,
+    seed: int = 0x18B0D,
+) -> GapAnchorLabelAudit:
+    """Run the frozen body-only and joint global-label nulls."""
+
+    if controls < 1:
+        raise ValueError("at least one control is required")
+    anchors = (75, 81, 48)
+    headers = FINAL_HEADERS
+    rng = random.Random(seed)
+    body_exact = 0
+    body_broad = 0
+    joint_exact = 0
+    joint_broad = 0
+    permutation = list(range(MODULUS))
+    for _ in range(controls):
+        rng.shuffle(permutation)
+        mapped_anchors = tuple(permutation[value] for value in anchors)
+        mapped_headers = tuple(permutation[value] for value in headers)
+        body_exact += exact_reported_relation(mapped_anchors, headers)
+        body_broad += broad_difference_relation(mapped_anchors, headers)
+        joint_exact += exact_reported_relation(
+            mapped_anchors,
+            mapped_headers,
+        )
+        joint_broad += broad_difference_relation(
+            mapped_anchors,
+            mapped_headers,
+        )
+
+    denominator = controls + 1
+    return GapAnchorLabelAudit(
+        controls,
+        body_exact,
+        body_broad,
+        joint_exact,
+        joint_broad,
+        (1 + body_exact) / denominator,
+        (1 + body_broad) / denominator,
+        (1 + joint_exact) / denominator,
+        (1 + joint_broad) / denominator,
+    )

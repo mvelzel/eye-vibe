@@ -3456,3 +3456,21 @@ shared body/marker alphabet jointly. Both retain the exact equality skeleton
 and charge all anchor orders/header-edge assignments. They test whether the
 natural mod-83 coordinate, rather than only the selected positions, is
 authored.
+
+Both label nulls promote. With body labels permuted and markers fixed, the
+exact/broad corrected tails are `9/50001 = .000179996` and
+`100/50001 = .001999960`. With markers and bodies permuted jointly, preserving
+their common abstract alphabet, the tails are `1/50001 = .000020000` and
+`4/50001 = .000079998`. Thus the natural orthodox mod-83 coordinate is part
+of the final-row construction link. Subtracting each anchor from its
+12-symbol window does not align the interiors, so this is not evidence for a
+simple running rotational cipher. Results:
+`docs/eighteenth-gap-anchor-label-results-2026-07-24.md`.
+
+The printed anchor positions expose a further pre-control fact:
+`(16,18,17)=16+(0,2,1)`, exactly the W4 marker edge's independently defined
+component order. A new matched-control protocol is frozen before counting. It
+requires the broadened numeric match plus consecutive positions, reselects
+gaps 2–30, and allows any of the three final header orders. Its result will
+not be multiplied with the earlier tails because the anchors are shared.
+Protocol: `docs/eighteenth-gap-anchor-position-freeze-2026-07-24.md`.
