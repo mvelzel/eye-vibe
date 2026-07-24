@@ -186,6 +186,14 @@ searches distinguish older broad ingredients—9×9 layouts, projective groups,
 overlapping trigrams, vector fields, and Reed–Solomon/Shamir ideas—from these
 narrower falsifiable tests.
 
+That first novelty batch is complete in
+[`docs/twelfth-wide-first-batch-results-2026-07-24.md`](docs/twelfth-wide-first-batch-results-2026-07-24.md).
+All five screens close under their matched controls. Nonliteral context maps
+are null-typical under projective fitting; the header-conditioned Coxeter
+quotient is worse than random header associations; the natural 9×9 edge path
+has held-out tail `0.149254`; polynomial-share events are chance finite-field
+checks; and spatial divergence/curl is null-typical.
+
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the
 contiguous alphabet `0..82`, and the nine messages contain 1,036 values. The

@@ -807,6 +807,16 @@ fractional-linear context maps, header-conditioned adjacent transpositions in
 and spatial Hodge defects. Finish all five screens before deepening a favorite
 unless one makes a literal held-out prediction.
 
+The first batch is complete in
+[`twelfth-wide-first-batch-results-2026-07-24.md`](twelfth-wide-first-batch-results-2026-07-24.md).
+All five lanes close. Corrected tails are `.781095/.925373` for the
+nonliteral projective fits, `.746269` and `.830846` for the Coxeter scan and
+heldout, `.149254` for the selected 9×9 path heldout, `.213930/.497512` for
+polynomial shares, and `.248756` or weaker for the spatial field. Proceed
+laterally to visible edge-factorization, rejected raw phases, `AG(2,3)`,
+bounded card shuffles, and a tiny header-controlled transducer; do not repair
+the closed models with extra parameters.
+
 That batch is now frozen before execution in
 [`eighth-wide-deferred-2026-07-22.md`](eighth-wide-deferred-2026-07-22.md).
 It covers static synchronization/error coding, without-replacement packets,

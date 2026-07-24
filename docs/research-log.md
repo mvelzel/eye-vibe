@@ -2567,6 +2567,23 @@ leave-one-panel-out polynomial shares, and exact-layout spatial Hodge defects.
 Its stop rule requires all five cheap screens before depth unless one produces
 a literal held-out prediction.
 
+The first mixed batch is complete in
+`docs/twelfth-wide-first-batch-results-2026-07-24.md`. Every lane is negative.
+After removing copied-prefix identity contamination, the seven nonliteral
+context maps have projective-fit tails `.781095` over `F83` and `.925373`
+over `F101`, with no exact context. The complete 120-model
+header-conditioned Coxeter scan has tail `.746269`; a training-selected
+assignment scores only `4/148` heldout, tail `.830846`.
+
+The natural 9×9 directed-edge path is the closest descriptive excess but is
+still ordinary: the first four panels select row-major numbering and the
+other five give `75/589` joins, tail `.149254`. Cross-panel interpolation
+finds two degree-seven columns over `F83` and one over `F101`, tails `.213930`
+and `.497512`, with no lower-degree column. The exact-layout triangular Hodge
+stencil gives null-typical distinct, zero, and nontrivial-alignment statistics;
+its best tail is `.248756`. No lane advances, so the next work remains lateral
+rather than adding parameters to these failures.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly
