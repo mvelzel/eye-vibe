@@ -1488,3 +1488,22 @@ four contexts and only `6/129` held out, with no exact context. A total of
 relative component alignments on held out. Preserve the asset/transform
 history, but do not deepen this record-local reading. Results:
 [`twenty-third-diamond-context-results-2026-07-24.md`](twenty-third-diamond-context-results-2026-07-24.md).
+
+### Practice cipher #6: explicit in-game/deck bridge
+
+**Status:** active acquisition and mechanism-calibration lead; does not replace
+the unresolved obligations for sdlwdr ciphers #3 and #4.
+
+On 22 July 2026, sdlwdr posted a new nine-line 83-symbol deck cipher and stated
+that its mechanism incorporates both the Trailer Altar and Earthquake Circle.
+The revised 769-byte attachment is preserved exactly with SHA-256
+`0b5e0a73e1cb8efc6090fa893fc4604195d2d85e884bfe2d39f35952974654c2`.
+Its nine line starts are consecutive cards at positions `27..35`, strongly
+suggesting numbered plaintext prefixes `1..9` under a common natural reset.
+
+Seven asset roles are frozen before mechanism testing: altar plaintext order,
+paired rotating alphabets, physical circle cuts, binary stable partitions,
+rune-index operation schedules, the original/revised differential, and the
+nine known reset prefixes. The finite paired-deck family is first. Full
+provenance and stop rules:
+[`../practice-puzzles/12-sdlwdr-06-in-game-deck.md`](../practice-puzzles/12-sdlwdr-06-in-game-deck.md).

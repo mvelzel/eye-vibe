@@ -890,6 +890,16 @@ last of six on the held-out score. This rejects the record-local consumer, not
 the factual desert asset class or reproduction of the old transform. Results:
 [`docs/twenty-third-diamond-context-results-2026-07-24.md`](docs/twenty-third-diamond-context-results-2026-07-24.md).
 
+A new practice-calibration lane explicitly bridges the two main research
+tracks. Sdlwdr's Practice Cipher #6 is a nine-line 83-symbol deck cipher whose
+author says it incorporates the Trailer Altar and Earthquake Circle. The exact
+original and revised attachments are preserved; the revised file begins with
+the nine natural ranks corresponding to `1..9`, providing a common-reset
+known-prefix oracle. Seven materially different asset roles were separated
+before testing, with the finite paired-rotating-deck family first. This does
+not replace unresolved ciphers #3/#4. Acquisition and frozen map:
+[`practice-puzzles/12-sdlwdr-06-in-game-deck.md`](practice-puzzles/12-sdlwdr-06-in-game-deck.md).
+
 ## Running the workbench
 
 Python 3.11 or newer is sufficient for the dependency-free experiments:

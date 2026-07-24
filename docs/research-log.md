@@ -3710,3 +3710,21 @@ held-out scores for x orders are `(16,9,10,6,11,14)`; the historical `x=120`
 order is uniquely last. Close this record-local transform under the frozen
 stop rule and return to the twenty-third portfolio. Results:
 `docs/twenty-third-diamond-context-results-2026-07-24.md`.
+
+A new read-only Discord acquisition adds an unusually relevant practice
+calibration without displacing the original five-puzzle obligation. Sdlwdr's
+22 July “Practice Cipher #6” explicitly names a deck cipher incorporating the
+Trailer Altar and Earthquake Circle. Both attachments were acquired; the
+author-designated revised file has nine lines, 761 non-newline symbols, all 83
+characters `!` through `s`, and SHA-256
+`0b5e0a73e1cb8efc6090fa893fc4604195d2d85e884bfe2d39f35952974654c2`.
+
+Its first characters `<=>?@ABCD` occupy natural deck ranks `27..35`, matching
+plaintext digits `1..9` after A–Z and suggesting nine resets with known
+numbered prefixes. The original and revised encodings share only those nine
+starts plus twelve later cards, so the correction mutates the running state
+almost immediately. Before testing language, seven distinct asset roles are
+frozen: altar plaintext order, paired rotating decks, fixed circle cuts,
+binary stable partitions, rune-index schedules, revision differential, and
+the nine reset-prefix constraints. The finite paired-deck family is first.
+Record: `practice-puzzles/12-sdlwdr-06-in-game-deck.md`.
