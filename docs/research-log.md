@@ -3593,9 +3593,8 @@ The diamond acquisition overturns the reported-number premise. Naugam's
 `24,20,16` “radii” are the shell sizes `4r` for `r=6,5,4`, and `85` is the
 size `1+2r(r+1)` of the same radius-six Manhattan ball. The board was
 constructed by assigning the three trigram eyes walk lengths `1,2,3`; these
-are not counts
-measured from Noita's diamond sprite. Lane G is therefore negative as
-independent Earthquake-circle corroboration.
+are not counts measured from Noita's diamond sprite. Lane G is therefore
+negative as independent Earthquake-circle corroboration.
 
 The original defektu “Diamond Readings” document nevertheless exposes a
 different exact asset-backed transform. In the installed WAK, blocks 01
@@ -3636,3 +3635,18 @@ The plant must instead make all four registered fields nonzero in
 forward-one; ties are allowed because both real and control scores already
 maximize the same four-variant family. No real slice or score was inspected
 before this correction.
+
+The frozen Earthquake irregular-mask test is decisively negative. The
+positive plant exercises all four fields. On real 17-symbol slices at
+`16,18,17`, every forward/reverse and ones/zeros view scores zero for
+nontrivial exact skeleton, common repeats, supported conflict-free partial
+bijection, and aligned numeric equality after removing the known offsets
+0/11.
+
+All 50,000 controls condition on the complete promoted anchor witness. The
+shuffler takes 1,305,953 attempts for 150,000 accepted streams, mean
+8.706353. Since all observed metric maxima are zero, every control is at least
+observed and the corrected tail is `1`. Close direct application of the
+17-bit row to these final slices; do not rotate, shift, resize, or choose
+panel-specific masks after the failure. Results:
+`docs/twenty-first-earthquake-mask-results-2026-07-24.md`.

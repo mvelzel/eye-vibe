@@ -1429,3 +1429,10 @@ body length/multiset, fixed numeric anchors and starts, no adjacent doubles,
 and the unique clean gap-11 witness. Variant selection is handled inside each
 metric; four metric tails receive Bonferroni correction. Protocol:
 [`twenty-first-earthquake-mask-freeze-2026-07-24.md`](twenty-first-earthquake-mask-freeze-2026-07-24.md).
+
+**Result:** closed. All four real variants score zero on all four metrics.
+Every one of 50,000 controls is at least observed, for corrected tail `1`.
+The irregular row is not a direct binary sieve on these fixed final slices.
+Do not rescue it with rotations, shifted starts, new lengths, or
+panel-specific directions. Results:
+[`twenty-first-earthquake-mask-results-2026-07-24.md`](twenty-first-earthquake-mask-results-2026-07-24.md).
