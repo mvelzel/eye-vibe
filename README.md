@@ -163,7 +163,7 @@ two-operation parent while `BCBDBCDAC` exhausts all 108 decryptable pairs.
 Factorial growth blocks an 83-card inference, so this is calibration
 infrastructure, not a decryption.
 
-The second mixed batch begins in
+The second mixed batch is complete in
 [`docs/eleventh-wide-second-batch-results-2026-07-24.md`](docs/eleventh-wide-second-batch-results-2026-07-24.md).
 An exact SMT encoding crosses its planted calibration gates and a lazy
 shared-operation form reaches three Eye glyphs with nine operations or four
@@ -175,6 +175,16 @@ already subsumed by exact negatives or fail held-out prediction. A one-swap
 XGAK counterexample also proves that visible rejoining alone cannot identify
 hidden action equality. The installed Lua/data arithmetic grammar finds no
 target-cardinality lookup beyond the already known 83-of-101 wand branch.
+
+The next novelty phase explicitly begins wide in
+[`docs/twelfth-wide-novel-horizon-2026-07-24.md`](docs/twelfth-wide-novel-horizon-2026-07-24.md).
+It freezes sixteen independently motivated mechanism classes before any new
+depth work. The first mixed batch covers projective context maps, a
+header-conditioned `S6` Coxeter quotient, a nine-state directed-edge code,
+cross-panel polynomial shares, and spatial divergence/curl. Targeted Discord
+searches distinguish older broad ingredients—9×9 layouts, projective groups,
+overlapping trigrams, vector fields, and Reed–Solomon/Shamir ideas—from these
+narrower falsifiable tests.
 
 The canonical interpretation is implemented in `src/eye_mystery/corpus.py`:
 three base-five eyes form one value, the accepted reading produces exactly the

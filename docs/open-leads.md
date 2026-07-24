@@ -796,6 +796,17 @@ target-derived table lookups; the known 83-of-101 wand branch remains the only
 exact 83 partition. Native immediate mining is nonselective and now requires
 an independently named call path.
 
+A twelfth horizon now starts deliberately wider than the preceding mechanism
+work in
+[`twelfth-wide-novel-horizon-2026-07-24.md`](twelfth-wide-novel-horizon-2026-07-24.md).
+Sixteen lanes cover algebraic, group-word, graph-edge, cross-panel,
+two-dimensional, coding, transducer, card-mechanical, conventional-crypto, and
+executable-clue constructions. The first batch is frozen before scoring:
+fractional-linear context maps, header-conditioned adjacent transpositions in
+`S6`, a natural 9×9 directed-edge path, leave-one-panel-out polynomial shares,
+and spatial Hodge defects. Finish all five screens before deepening a favorite
+unless one makes a literal held-out prediction.
+
 That batch is now frozen before execution in
 [`eighth-wide-deferred-2026-07-22.md`](eighth-wide-deferred-2026-07-22.md).
 It covers static synchronization/error coding, without-replacement packets,

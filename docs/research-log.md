@@ -2544,6 +2544,29 @@ also closes because none of these methods honestly applies to the disclosed
 construction of unsolved sdlwdr ciphers 3 or 4; those puzzles remain active
 separately.
 
+## 24 July 2026 — twelfth wide novelty horizon
+
+The next search begins with a sixteen-lane map rather than a single favored
+theory. The frozen map is in
+`docs/twelfth-wide-novel-horizon-2026-07-24.md`. It treats “novel” as an exact
+test absent from the local record and targeted readable Discord searches, not
+as a claim that nobody privately considered the broad ingredient.
+
+The prior-art boundary matters. Projective groups occur in the recent
+practice-cipher/GAK work, 9×9 and `81+2` layouts are old Eye suggestions,
+overlapping trigrams are extensively explored, an Eye vector-field comment
+dates to 2021, and Shamir/Reed–Solomon have been named. The targeted searches
+found no Eye-specific fractional-linear `PGL(2,83)` context model, no
+five-eye-to-adjacent-`S6`-generator construction, no 9×9
+visible-symbol-as-directed-edge path test, and no discrete curl/Hodge audit.
+Those narrower constructions are hypotheses, not results.
+
+The first batch is intentionally mixed: projective context-map compatibility,
+header-conditioned Coxeter words, a natural nine-state directed-edge code,
+leave-one-panel-out polynomial shares, and exact-layout spatial Hodge defects.
+Its stop rule requires all five cheap screens before depth unless one produces
+a literal held-out prediction.
+
 ## Crib observations
 
 The strongest public alignment suggests a repeated plaintext region of roughly
