@@ -3390,3 +3390,19 @@ normalized rank deficit, and transfers to Q. Two hundred joint controls
 shuffle each trimmed multiset under the no-double constraint and repeat the
 whole selection. A deterministic low-state plant must beat 99% of heldout
 controls before Eye ranks count.
+
+The implementation audit catches an algebraic degeneracy before real scoring:
+because `H(1,1)` is a submatrix of the two registered rectangular blocks and
+all have the same smaller dimension, the nominal selector always chooses
+`(1,1)`. The committed protocol retains that primary statistic, reports the
+two deeper blocks, and freezes a continuation requirement that Q rank not
+exceed P rank. A fixed 36-step hub/leaf plant passes unchanged: P and Q both
+rank `20/28` in all three fields, no one of 200 shuffles matches its Q
+deficit, corrected tail `1/201`, and rank excess zero.
+
+The Eye result does not transfer. P's selected block ranks `72/75`, but Q
+ranks a full `84/84` over all three fields. Both deeper blocks are full at
+their limiting dimensions. Every control's nonnegative Q deficit is at least
+the real zero, giving corrected tail `201/201 = 1`; Q rank exceeds P by 12.
+This closes the registered shallow raw-label empirical-Hankel lane. Details:
+`docs/seventeenth-lane-c-hankel-results-2026-07-24.md`.

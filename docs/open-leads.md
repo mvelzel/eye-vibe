@@ -1266,3 +1266,10 @@ Lane C's empirical series, depth family, three prime fields, P/Q selection,
 200 joint multiset/no-double controls, positive control, and promotion gate
 are frozen before real rank calculation in
 [`seventeenth-lane-c-hankel-freeze-2026-07-24.md`](seventeenth-lane-c-hankel-freeze-2026-07-24.md).
+
+**Lane-C result:** closed at transfer. The fixed plant passes with P/Q rank
+`20/28`, corrected tail `1/201`, and zero heldout rank growth. The Eyes have P
+rank `72/75`, but Q is full `84/84` over all three fields; all 200 controls are
+at least as deficient, corrected tail `1`, and heldout rank excess `12`. Both
+deeper registered blocks are also full at their limiting dimension. Details:
+[`seventeenth-lane-c-hankel-results-2026-07-24.md`](seventeenth-lane-c-hankel-results-2026-07-24.md).

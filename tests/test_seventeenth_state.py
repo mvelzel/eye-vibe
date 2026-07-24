@@ -7,6 +7,7 @@ from collections import Counter
 from eye_mystery.seventeenth_state import (
     FibrationAudit,
     coarsest_equitable_partition,
+    eye_bodies,
     evaluate_hankel_split,
     fibration_audit,
     hankel_control_audit,
@@ -69,6 +70,39 @@ class SeventeenthHankelTests(unittest.TestCase):
         self.assertTrue(audit.heldout.selected.all_fields_deficient)
         self.assertEqual(audit.exceedances, 0)
         self.assertEqual(audit.heldout_rank_excess, 0)
+
+    def test_eye_hankel_splits_match_frozen_result(self) -> None:
+        streams = eye_bodies(prefix_trimmed=True)
+        training = evaluate_hankel_split(
+            streams,
+            ("east1", "west1", "east2"),
+        )
+        heldout = evaluate_hankel_split(
+            streams,
+            ("west2", "east3", "west3", "east4", "west4", "east5"),
+        )
+        self.assertEqual(
+            [
+                (block.depth, block.rows, block.columns, block.ranks)
+                for block in training.blocks
+            ],
+            [
+                ((1, 1), 75, 75, (72, 72, 72)),
+                ((2, 1), 298, 75, (75, 75, 75)),
+                ((1, 2), 75, 298, (75, 75, 75)),
+            ],
+        )
+        self.assertEqual(
+            [
+                (block.depth, block.rows, block.columns, block.ranks)
+                for block in heldout.blocks
+            ],
+            [
+                ((1, 1), 84, 84, (84, 84, 84)),
+                ((2, 1), 679, 84, (84, 84, 84)),
+                ((1, 2), 84, 679, (84, 84, 84)),
+            ],
+        )
 
 
 if __name__ == "__main__":
