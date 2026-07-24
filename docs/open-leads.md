@@ -1107,3 +1107,31 @@ heldout-selected reduction rules. Remaining distinct cryptographic objects
 include reset/synchronizing automata and predictive/Hankel state. The
 unresolved lag-one wheel, original trie checksum, Gate/interface archaeology,
 practice ciphers 3/4, source ancestry, and chronology leads remain active.
+
+### Sixteenth exceptional-structures horizon
+
+**Status:** fifteen lanes frozen wide; first batch A/C/D/E not yet scored.
+
+A canonical projective quotient of the raw eye cube was previously missing
+from the ledger. Nonzero triples in `F5^3` form the 31 points of `PG(2,5)`.
+Visible labels `1..82` realize every point 2–4 times, and the missing 42 cube
+states are exactly the remaining scalar representatives. This supplies a
+specific 31-class homophonic/projective test rather than an arbitrary
+alphabet reduction.
+
+The same breadth pass records, without yet promoting, two exceptional
+six/26-count interfaces: the unique outer automorphism of `S6` connects a
+standard point-stabilizer `S5` to the transitive `PGL(2,5)` action on the six
+points of `P1(F5)`, and each complete record length is
+`26=|P1(F25)|`. Exact read-only Discord searches found no located Eye-channel
+discussion of these constructions, Dyck syntax, rotor routers, reset words,
+Hankel state, or Lyndon factorization.
+
+The first batch is deliberately mixed: `PG(2,5)` ray projection, header-typed
+Dyck stack syntax, a five-state rotor router, and the exact within-row
+`P1(F25)` extended-code test. Outer-`S6`, reset, Hankel, necklace,
+`GF(125)`, covering, finite-state coder, archaeology, and practice-transfer
+lanes remain queued rather than discarded.
+
+Freeze and stop rules:
+[`sixteenth-wide-exceptional-structures-horizon-2026-07-24.md`](sixteenth-wide-exceptional-structures-horizon-2026-07-24.md).
