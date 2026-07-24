@@ -579,11 +579,19 @@ strict nulls, but carrier attribution shows `0/23` and `0/42` correct on new
 full-rank bigrams: it only indexes exact transition reuse from the known shared
 plaintext.
 
+**Nonlinear restart:** the canonical zigzag reading of the odd 57-band
+(`0,-1,+1,...,-28,+28`) is negative, including the full 83-position wheel.
+The arbitrary cyclic-GAK recurrence remains open. All-message Z3 with the
+known shared blocks times out on the 27/42-symbol alphabets. A packed
+250,000-state beam reaches transition 49 on the real common block—but also
+loses a matched 201-character English plant at transition 49. This is a
+calibrated heuristic failure, not a cipher exclusion.
+
 **Next test:** do not infer the speculative `57=29+28` lift from the count.
-Resume Cipher 4 only with a new deck invariant, a broader source hypothesis
-that passes the exact cyclic recurrence, or a label-invariant operation
-quotient calibrated on a solved deck cipher. Do not extend blind SAT, generic
-language annealing, or arbitrary format fitting.
+Resume Cipher 4 with a crib/source hypothesis, a stronger constraint-guided
+nonlinear search that first recovers the matched plant, or a new deck
+invariant. Do not extend blind SAT, raise the failed language-only beam, or
+fit arbitrary formats.
 
 Full freeze and results:
 [`practice-cipher4-wide-codec-audit-2026-07-24.md`](practice-cipher4-wide-codec-audit-2026-07-24.md).

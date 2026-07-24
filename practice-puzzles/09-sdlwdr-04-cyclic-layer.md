@@ -168,6 +168,23 @@ positive or structural control:
     selector shifts/reversals were audited after choosing pattern order only
     on a planted fixture.  The planted period-7 transform is recovered exactly
     (`1/101`); the real winner again hurts held-out score (`77/101`).
+20. **Canonical signed band and nonlinear GAK restart.**  The previously
+    omitted zigzag interpretation of the odd 57-band—signed steps
+    `0,-1,+1,...,-28,+28`—does not produce language on rings 19..83, including
+    a standard 83-character wheel.  The more general necessary recurrence
+    `p'=delta+q(p) mod83` remains open.  An exact all-message model with the
+    long common blocks constrained returns `unknown` at 30 seconds for compact
+    27, natural-position 27, and natural 42 alphabets.  A packed 250,000-state
+    character beam reaches only transition 49 on the real 200-action block.
+    Crucially, it also reaches only transition 49 and loses the known target on
+    a matched 201-character natural-English plant.  The beam result is
+    therefore **inadmissible as negative evidence**; it identifies a search
+    limitation, not a cipher exclusion.
+
+The signed-band and packed-beam reproductions are
+[`analyze_sdlwdr_cipher4_signed_band.py`](../scripts/analyze_sdlwdr_cipher4_signed_band.py)
+and
+[`search_sdlwdr_cipher4_nonlinear_gak.py`](../scripts/search_sdlwdr_cipher4_nonlinear_gak.py).
 
 The full homophone/fractionation checkpoint, including both positive controls
 and complete numeric results, is in
@@ -185,6 +202,10 @@ verified.  The pair/triple quotient structure remains a descriptive numeric
 fact, but the bounded selector and route follow-up finds no executable lift
 law.  Its strongest apparent predictor is fully explained by exact action-
 bigram reuse, so the speculative `57=29+28` two-cycle branch is not opened.
+The arbitrary nonlinear cyclic-GAK transition remains the best mechanistically
+grounded open inner layer, but it now has an explicit dependency: a crib,
+source hit, or stronger constraint-guided search that passes the matched prose
+plant.  Raising the same language-only beam is not a valid next experiment.
 
 ## Transfer to the Eyes
 

@@ -3846,3 +3846,32 @@ joint tape and sdlwdr's historical Alberti remark remain open evidence, but
 additional directions/phases would be curve fitting. Practice effort returns
 to unresolved #4/#3 unless a new author or source clue fixes a non-rotational
 transition.
+
+### Cipher 4 nonlinear restart: the omitted signed map closes, the GAK stays open
+
+The new bigram heatmap is a visualization of the already recovered cyclic
+geometry: every adjacent ciphertext step lies in `22..78`, leaving a diagonal
+forbidden band. Its odd width motivated one genuinely omitted finite map.
+Ranks `0..56` were interpreted by the standard signed zigzag
+`0,-1,+1,...,-28,+28` and its reflection, alongside the direct centered
+signed order. Accumulation on rings 19..83, including the standard
+83-character plaintext wheel, produces no language. The asymmetric zigzag
+was not present in the earlier selector-sign table, so this is a real closure
+rather than a rerun.
+
+The more important architecture is still the arbitrary cyclic-GAK recurrence
+`p[i+1]=sign*delta[i]+q(p[selector]) mod83`. Exact all-message Z3 models were
+augmented with equality over every maximal common action block of length at
+least eight. Compact 27, natural-position 27, and natural 42 all return
+`unknown` after 30 seconds in the primary current-symbol convention; no
+impossibility is claimed.
+
+A packed beam was then implemented to avoid copying full keys and paths before
+selection. It passes a deliberately repetitive nonlinear plant, but that
+control is too easy. At the real 200-action common block, a six-gram,
+250,000-state natural-position search retains only thirteen candidates and
+dies after transition 49. A matched 201-character natural-English plant from
+the training corpus also dies after transition 49 and loses its known target.
+Therefore the real failure is inadmissible. The surviving lead is now sharply
+defined: solve or constrain nonlinear `q` with a crib, source passage, or
+look-ahead/constraint search that first recovers the matched plant.

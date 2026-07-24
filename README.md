@@ -104,6 +104,14 @@ coordinate reassociation both recover their planted mechanisms but reverse on
 held-out real data (`1080/2001` and `77/101`). Cipher 4 remains unsolved; the
 `3×19` form is descriptive rather than an identified codec.
 
+A nonlinear-GAK restart closes one omitted finite interpretation but preserves
+the main open model honestly. Standard signed zigzag steps for the odd
+57-action band produce no language, including on an 83-position wheel.
+All-message exact recurrence models time out, while a faster 250,000-state beam
+dies at transition 49 on both the real common block and a matched known-English
+plant. The beam is therefore not negative evidence; Cipher 4 now waits for a
+crib/source hit or a constraint-guided search that passes that matched control.
+
 A fresh method-acquisition pass reopens sdlwdr cipher 3 without extending the
 solver-invented progression premise. Its frozen horizon is
 [`docs/practice-cipher3-wide-freeze-2026-07-24.md`](docs/practice-cipher3-wide-freeze-2026-07-24.md),
