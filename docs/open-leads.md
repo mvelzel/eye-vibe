@@ -1580,3 +1580,24 @@ Cipher #6 pass requires an independently justified non-rotational state
 transition. Return current practice-cipher effort to unresolved #4 and #3,
 whose structures can still teach transferable attacks without guessing asset
 semantics.
+
+### First/second-row transfer of the final record
+
+**Status:** universal schema closed exactly; row-type residue retained.
+
+The fixed final-row grammar was tested before selecting any earlier body
+landmarks. Row 1's component orders `012,120,201` and markers `50,80,36`
+admit exactly 83 additive-gauge anchor vectors, but their possible ordinary
+rank patterns are only `021,102,210`. The already fixed target column `120`
+is impossible. Row 2's orders `021,210,102` and markers `76,63,34` admit no
+anchor vector at all: their directed cycle sum is `7 mod83` rather than zero.
+The known final anchors remain a positive calibration.
+
+The preregistered row-1 plant is therefore impossible, so the calibration gate
+forbids body fitting or shuffle tails. Do not rescue the model with a new
+sign, rank direction, trim, or gap. Retain only the sharper typed fact: row 1
+has zero circulation, row 2 has residue seven, and the final row is the
+pointer-closed difference record. Any future explanation of the first two
+rows must predict a body consequence from that distinction. Freeze/results:
+[`twenty-fourth-row-record-transfer-freeze-2026-07-24.md`](twenty-fourth-row-record-transfer-freeze-2026-07-24.md);
+[`twenty-fourth-row-record-transfer-results-2026-07-24.md`](twenty-fourth-row-record-transfer-results-2026-07-24.md).

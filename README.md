@@ -954,6 +954,18 @@ requires an independently fixed non-rotational transition, so practice effort
 returns to unresolved #4/#3 while the exact 83-slot tape and Alberti clue stay
 on the ledger.
 
+The next direct transfer from the promoted final Eye record is now closed
+exactly, before fitting any body landmarks. Under the unchanged
+`anchor[source]-anchor[remaining] mod83` rule, the first marker row has 83
+gauge-shifted numeric solutions but none can carry its fixed target-rank
+column `120`; the only attainable ranks are `021,102,210`. The second row has
+no numeric solution because its directed cycle circulation is `7 mod83`.
+The known final row remains a positive calibration. This rejects one universal
+three-row record grammar while exposing a sharper typed distinction:
+zero-circulation first row, residue-seven second row, and pointer-closed final
+row. Results:
+[`docs/twenty-fourth-row-record-transfer-results-2026-07-24.md`](docs/twenty-fourth-row-record-transfer-results-2026-07-24.md).
+
 ## Running the workbench
 
 Python 3.11 or newer is sufficient for the dependency-free experiments:

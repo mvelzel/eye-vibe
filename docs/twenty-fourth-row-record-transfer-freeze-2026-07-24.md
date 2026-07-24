@@ -113,3 +113,11 @@ Infeasibility or no joint match closes this exact transfer without trying a
 different operator, sign, rank direction, trim, or gap range.  A promoted
 result earns a separately frozen pointer/position prediction; this pass does
 not inspect those fields.
+
+## Evaluation note
+
+The positive-control construction failed algebraically before body data was
+consulted: row 1 has numeric solutions but none with its frozen target ranks,
+while row 2 has no numeric solution. Per the calibration gate, the body and
+matched-control stages were therefore not run. Exact results:
+[`twenty-fourth-row-record-transfer-results-2026-07-24.md`](twenty-fourth-row-record-transfer-results-2026-07-24.md).

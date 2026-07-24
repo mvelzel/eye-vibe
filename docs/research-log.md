@@ -3875,3 +3875,25 @@ the training corpus also dies after transition 49 and loses its known target.
 Therefore the real failure is inadmissible. The surviving lead is now sharply
 defined: solve or constrain nonlinear `q` with a crib, source passage, or
 look-ahead/constraint search that first recovers the matched plant.
+
+### Early-row transfer of the final anchor grammar
+
+The next twenty-third-portfolio discriminator was frozen before evaluation:
+apply only the final record's clean-loop selector, fixed
+source-minus-remaining slot rule, and ascending target-rank field to the first
+two marker rows. The required row-1 positive plant turns out not to exist.
+
+Exact enumeration gives 83 numeric anchor solutions for row 1 because
+`50+80+36=0 mod83`, but their rank patterns are only `021,102,210`; the fixed
+target column is `120` and occurs zero times. Row 2 has zero numeric solutions
+because `76+63+34=7 mod83`, whereas a closed gradient must sum to zero. The
+same implementation accepts the known final anchors `75,81,48`, headers
+`27,77,33`, and ranks `120`.
+
+The calibration gate therefore stops the test before any earlier body or
+matched shuffle is inspected. The universal three-row schema is rejected
+without a p-value. Retain the exact row typing—zero circulation, residue
+seven, and pointer-closed final difference—as a discriminator for a future
+model, not as permission to invent a new operator per row. Freeze and result:
+`docs/twenty-fourth-row-record-transfer-freeze-2026-07-24.md`;
+`docs/twenty-fourth-row-record-transfer-results-2026-07-24.md`.

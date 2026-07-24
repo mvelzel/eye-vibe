@@ -53,3 +53,19 @@ Every implemented lane gets its own freeze before the real statistic is read.
 A failure returns the portfolio to breadth.  A survivor earns only the next
 prediction, not an immediate plaintext claim.
 
+## Lane B result
+
+The minimum final-row field grammar fails before any earlier body landmark is
+selected. Row 1's fixed source-minus-remaining equations have 83
+gauge-shifted solutions because its headers sum to zero mod 83, but their
+possible rank patterns are only `021,102,210`; the frozen target column `120`
+is impossible. Row 2 has no numeric solution because its directed cycle sum
+is `7 mod 83`, not zero. The known final row remains a positive calibration.
+
+Because the preregistered row-1 plant cannot exist, no shuffles or body search
+were run. Close the universal-record transfer without changing signs, ranks,
+or trims. The exact obstruction preserves a narrower lead: row 1 is a
+zero-circulation type, row 2 carries residue seven, and the final row is a
+pointer-closed difference type. A future row-typed model must explain that
+distinction prospectively. Results:
+[`twenty-fourth-row-record-transfer-results-2026-07-24.md`](twenty-fourth-row-record-transfer-results-2026-07-24.md).
