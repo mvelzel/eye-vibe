@@ -3668,3 +3668,17 @@ score is equality on changed-label positions in the last three pairs. Its
 exact matched null is all `C(17,4)=2,380` tapes with the authored bit
 composition. No rotations, fitted direction maps, panel phases, or byte
 searches are allowed after scoring.
+
+The frozen Cessation-wheel transfer is strongly negative. The real irregular
+tape selects forward from the four training contexts, with `19/63`
+changed-label agreements. It then scores `17/85` on the three held-out
+contexts, and no context matches exactly. Uniform endpoint timing is slightly
+worse at `17/63` training and `16/85` held out.
+
+Every one of the 2,380 composition-matched tapes underwent the same
+training-only orientation selection. A total of 2,273 tie or exceed the real
+held-out score, giving inclusive exact tail `.955042017`. The terminal-aware
+practice method is executable and marginally changes the Eye output, but the
+authored Earthquake tape is structurally unexceptional in the wrong
+direction. Close this exact sampler under its stop rule. Results:
+`docs/twenty-second-cessation-wheel-transfer-results-2026-07-24.md`.

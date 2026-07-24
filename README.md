@@ -870,6 +870,16 @@ fingerprints are rotations of the bibliography abbreviation `Pipp. l. N:o` in
 book 53047; three space-preserving hits are rotations of the repeated line
 `Ooppee Mikko Hetta` in book 57770. None is a literal source candidate.
 
+A lateral Cessation-method transfer is also now closed. A newly shared
+practice-puzzle work folder identifies an exact line-reset, distance-`1..5`,
+terminal-aware binary-tape sampler. Applied prospectively to the reconstructed
+Eye visual rows and the gap-fixed 17-bit Earthquake tape, it scores only
+`17/85` changed-label agreements on held-out nonliteral contexts. Fully
+enumerating all 2,380 tapes with the same `13/4` composition gives
+`2273/2380=.955042017`. The timing rule is real and reproducible, but this
+specific Eye transfer is not. Results:
+[`docs/twenty-second-cessation-wheel-transfer-results-2026-07-24.md`](docs/twenty-second-cessation-wheel-transfer-results-2026-07-24.md).
+
 ## Running the workbench
 
 Python 3.11 or newer is sufficient for the dependency-free experiments:

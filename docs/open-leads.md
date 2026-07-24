@@ -1439,7 +1439,7 @@ panel-specific directions. Results:
 
 ### Cessation row sampler on the Earthquake wheel
 
-**Status:** frozen before evaluation.
+**Status:** closed by exact matched control.
 
 Lquid's newly shared practice-puzzle work folder recovers and independently
 verifies a useful cipher operation: distances `1..5` traverse a binary tape,
@@ -1456,3 +1456,10 @@ three contexts without refitting. The exact null enumerates all 2,380
 17-bit tapes with the real `13/4` composition. A tail below `.01` is required.
 Protocol:
 [`twenty-second-cessation-wheel-transfer-freeze-2026-07-24.md`](twenty-second-cessation-wheel-transfer-freeze-2026-07-24.md).
+
+**Result:** the real tape selects forward and scores `19/63` on training,
+`17/85` held out, with zero exact contexts. Uniform endpoint timing gives
+`17/63` and `16/85`. Of all 2,380 tapes, 2,273 tie or exceed the registered
+held-out score, for exact tail `.955042017`. Close the sampler without
+rotations, direction permutations, or per-panel phases. Results:
+[`twenty-second-cessation-wheel-transfer-results-2026-07-24.md`](twenty-second-cessation-wheel-transfer-results-2026-07-24.md).
