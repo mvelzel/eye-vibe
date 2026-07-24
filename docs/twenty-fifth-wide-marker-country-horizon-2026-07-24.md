@@ -143,3 +143,10 @@ Lane H is negative: the three row scores are `2/74`, `1/96`, and `1/93`;
 their exact convolved relative-alignment tail is `.391803759`. Close the
 direct linear consumer under its frozen stop rule. Results:
 [`twenty-sixth-358-weighted-alignment-results-2026-07-24.md`](twenty-sixth-358-weighted-alignment-results-2026-07-24.md).
+
+Lane L now has a sharper generic checksum test. Summing canonical columns in
+all three eye-coordinate planes gives calling codes `+683`, `+34`, and
+`+358`, corresponding to regions `NU`, `ES`, and `FI/AX`. Rather than score
+that inspected triple, freeze the generic relation between any scalar-plane
+calling code and its fixed-trail BWT region suffix. Protocol:
+[`twenty-seventh-three-plane-locale-freeze-2026-07-24.md`](twenty-seventh-three-plane-locale-freeze-2026-07-24.md).

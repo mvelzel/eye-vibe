@@ -70,6 +70,14 @@ components. Preserve `358` as marker metadata pending a separately authored
 consumer. Results:
 [`twenty-sixth-358-weighted-alignment-results-2026-07-24.md`](twenty-sixth-358-weighted-alignment-results-2026-07-24.md).
 
+**Active metadata check:** all three coordinate planes have canonical
+column-sum calling codes: `683 -> NU`, `034 -> ES`, and
+`358 -> FI/AX`. The inspected triple is not a p-value. A generic frozen audit
+now asks whether each admissible scalar assignment's calling code names its
+fixed-trail BWT suffix, naturally and under D4, then crosses the unchanged
+factoradic predicate. Protocol:
+[`twenty-seventh-three-plane-locale-freeze-2026-07-24.md`](twenty-seventh-three-plane-locale-freeze-2026-07-24.md).
+
 ### Procedural wand selects exactly `0..82` from `0..100`
 
 **Status:** exact independently authored 83-of-101 selector; the proposed

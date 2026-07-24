@@ -3978,3 +3978,26 @@ rotation is invariant, and the convolved mass is exact. Close direct
 coefficient/sign/lag variants under the stop rule. The marker country tag is
 unaffected, but it supplies no linear body consumer here. Results:
 `docs/twenty-sixth-358-weighted-alignment-results-2026-07-24.md`.
+
+### Three-plane locale checksum freeze
+
+The marker country observation extends symmetrically across eye coordinates.
+Summing down canonical columns separately in the first, middle, and third
+digit planes gives `683`, `034`, and `358`. These are assigned E.164 calling
+codes for Niue (`NU`), Spain (`ES`), and Finland/Åland (`FI`,`AX`). The fixed
+BWT route on the scalar plane says `!Fi`.
+
+The exact triple is post hoc and is not scored. A generic conditional audit is
+frozen instead: in the same 12,096 graph-conditioned scalar assignments, parse
+single-digit column sums as a padded decimal calling code and ask whether the
+fixed-trail BWT's two-letter suffix is one of that code's assigned regions.
+Natural geometry is primary; all D4 views are the one broadening. The first
+BWT character is ignored for the generic event and `!` is reported
+separately. The unchanged factoradic predicate is crossed only after all
+events are counted.
+
+Calling-code-to-region data is pinned to libphonenumber commit
+`f7e3e88c92b905c8d6edb81f336dbe25edc05b52`; the generated map will be
+vendored with provenance. This can corroborate a locale checksum, never body
+language or a key. Protocol:
+`docs/twenty-seventh-three-plane-locale-freeze-2026-07-24.md`.
