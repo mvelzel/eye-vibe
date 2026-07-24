@@ -1050,3 +1050,32 @@ header/game interface, is a different open lane rather than a repair. The
 portfolio now returns to breadth: compare F–L and N–O by which new assumption
 each can falsify before deepening one, while preserving the unresolved
 adjacent-only geometry and original trie checksum.
+
+### Fifteenth wide novel-object horizon
+
+**Status:** four independent first-batch objects frozen before real scoring.
+
+The new breadth map is
+[`fifteenth-wide-novel-horizon-2026-07-24.md`](fifteenth-wide-novel-horizon-2026-07-24.md).
+Its first batch is:
+
+1. a six-leaf binary prefix code whose leaf order is supplied by each
+   factoradic header;
+2. a canonical unordered-eye multiset payload plus ordering/inversion channel;
+3. partial isometries of the authored depth-three five-ary glyph tree;
+4. the canonical reflected five-ary Gray traversal of the complete 125-state
+   cube.
+
+These respectively test a bitstream, a within-glyph quotient, a rooted-tree
+geometry, and a full-cube geometry. None may absorb parameters from another
+after failure. Uniform morphisms, reset automata, header-dispatched checksums,
+missing-state reduction arithmetic, predictive Hankel states, edit ancestry,
+version archaeology, and executable Kantele voice-leading remain separate
+later lanes.
+
+Read-only searches of `silmä-cryptography` and `silmä-novel` found no exact
+prefix-code, multiset/order, p-adic/ultrametric, Gray-code, or low-complexity
+symbolic-dynamics formulation. This is only a bounded search result, not proof
+of universal novelty. Direct Kantele sonification and playing Eye notes
+in-game are prior art; the new claim is only the canonical multiset/order
+factorization and its falsifiable split.

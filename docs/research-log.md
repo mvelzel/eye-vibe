@@ -3044,3 +3044,27 @@ short-block accepted-alphabet misalignment while leaving a deliberate
 `0..124` intermediate code, externally selected routes, and other typed-field
 roles as separate hypotheses. The next novelty choice must again begin wide
 across the remaining portfolio rather than extending this failed family.
+
+The next step therefore starts from objects, not parameters. A read-only
+Discord audit of `silmä-cryptography` and `silmä-novel` found no exact prior
+formulation matching header-ordered binary prefix trees, within-trigram
+multiset/order factorization, five-adic glyph-tree isometries, reflected
+base-five Gray traversal, or low-complexity symbolic dynamics. Exact search
+terms and attribution limits are recorded in
+`docs/fifteenth-wide-novel-horizon-2026-07-24.md`; no messages, reactions, or
+calls were made.
+
+Two Kantele documents were also inspected. They already map the five eye
+directions to Kantele notes, try trigrams as note sequences/chords and sums,
+and suggest playing Eye-derived sequences in game. Music conversion is
+therefore prior art. Its useful method transfer is narrower: a chord naturally
+splits an unordered pitch multiset from a voicing/inversion order. For visible
+Eye ranks, that quotient has 31 realized multiset classes and four absent
+classes `333,334,344,444`.
+
+The fifteenth horizon freezes twelve mutually bounded lanes and selects four
+for the first batch: a 42-shape header-ordered six-leaf prefix code, the
+31-class multiset/order split, six possible authored five-adic coordinate
+orders, and 96 canonical reflected-Gray geometries. Plants, first/last-family
+held-out gates, complete controls, and forbidden repairs are specified before
+any real result.

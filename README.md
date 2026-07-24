@@ -210,6 +210,15 @@ intersection is independently empty. This closes accepted-alphabet
 short-block misalignment without ruling out a separately motivated larger
 `0..124` code or an authored header-selected route.
 
+A fifteenth breadth phase now deliberately invents new objects before fitting
+new parameters:
+[`docs/fifteenth-wide-novel-horizon-2026-07-24.md`](docs/fifteenth-wide-novel-horizon-2026-07-24.md).
+The first frozen batch tests a header-ordered six-leaf prefix code, an
+unordered-eye multiset plus inversion channel, five-adic glyph-tree
+isometries, and a canonical five-ary reflected-Gray traversal. Direct Kantele
+sonification is recorded as prior art; targeted read-only Discord searches
+found no exact formulation of these four bounded tests.
+
 The next Eye pass deliberately changes the question from “how can these
 numbers be read?” to “what small mechanism caused the equality and
 reconvergence structure?” Its fourteen-lane breadth map is frozen in
