@@ -3256,9 +3256,41 @@ polygraphic projections, six-stream route objects, variable-length token
 codes, self-synchronizing codes, equality-only grammars, authored numeric
 order, source conformance, and cross-puzzle construction genealogy.
 
-The first cheap batch is A/B/C/H/M: cross-stream exact and affine factors,
+The first cheap batch was A/B/C/H/M: cross-stream exact and affine factors,
 order-1/2 recurrences and linear complexity, compression signatures, and
 canonical equality-grammar structure. A is selection, B validation, and C
 heldout wherever parameters are learned. The disclosed A prefix tree earns no
-promotion by itself. The authorized browser currently reaches a Discord login
-screen, so no new author hint is assumed in the freeze.
+promotion by itself.
+
+The renewed read-only Discord session then allowed the full Cipher 3 thread
+to be checked. It contains the March 2025 attachment and A0 correction, then
+only recent unsolved discussion. No mechanism, plaintext, IV/header, grouping,
+or alphabet hint is present. In the preceding practice-cipher thread, sdlwdr
+called the third one “a bit more unique”; in July 2026 they said its source
+code had been lost. This is useful construction-genealogy evidence, not a
+decoder clue.
+
+The frozen first batch is completely negative. Outside the disclosed A tree,
+the best affine relation has length five and all nine such maps occur once;
+there is no exact factor of length four. The strongest equality-isomorph has
+28 positions but only two repeated constraints. A-selected order-one/two
+`F83` recurrences leave `77/75` residual values on A and all 83 on B/C.
+All eighteen Berlekamp–Massey complexities are essentially half their body
+lengths.
+
+The 2,229 bodies have entropy `6.344283` bits/symbol, zero adjacent doubles,
+and 1,588 direct LZ78 phrases. Direct numeric MTF still uses all 83 labels.
+A2/A3/A5 cannot use their first value as a literal BWT primary index; the 15
+valid inversions give 1,255 phrases. Under 1,000 multiset-preserving shuffles,
+the direct and inverse lower tails are `.242757` and `.758242`.
+
+A public Crawford *Kalevala* check found hundreds of matching `43/8`
+prefix-tree hierarchies and thousands of repeated length-43 passages under
+each tested normalization. The source remains possible, but the prefix shape
+does not locate plaintext. Full evidence is in
+`docs/practice-cipher3-third-wide-first-batch-results-2026-07-24.md`.
+
+The next distinct construction-genealogy test is affine `AGL(1,83)` GAK/deck
+state. It is not ruled out by random-like visible-symbol recurrence. Freeze
+structured update families and a bounded exact 42-symbol solver, verify
+planted recovery, select only on A, and transfer unchanged to B/C.

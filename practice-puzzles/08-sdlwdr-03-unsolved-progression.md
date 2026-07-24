@@ -5,8 +5,11 @@ cycle decompositions remain undecided exactly, but corrected bounded searches
 make them poor candidates for the complete corpus. A later breadth pass also
 rejects direct reuse of the solved ciphers 1/2 wheel, fixed coordinate drift,
 120,372 named physical-deck models, cipher 5's recursive update family, and
-the frozen standard-coordinate quotient/action lane. A deliberate `8/43`
-literal body-prefix tree is now isolated, but does not yet select a decoder.
+the frozen standard-coordinate quotient/action lane. A third wide pass rejects
+undisclosed exact/affine common-tape factors, low-order `F83` recurrences,
+direct MTF/BWT readings, anomalous LZ78 compression, and an equality-only
+grammar. A deliberate `8/43` literal body-prefix tree is isolated, but does
+not yet select a decoder.
 
 ## What was tested
 
@@ -134,6 +137,24 @@ arbitrary hidden-wheel optimizer is not a negative result: it recovers only
 interpreted under it. See
 [`../docs/practice-cipher3-reflection-wheel-results-2026-07-24.md`](../docs/practice-cipher3-reflection-wheel-results-2026-07-24.md).
 
+The next restart deliberately widened to sixteen mechanism classes before
+testing five cheap ones. Outside the known A tree there is no exact shared
+factor of length four, while the nine affine length-five coincidences all use
+different maps and occur once. A-selected order-one/two recurrences leave
+`77/75` residual symbols on A and all 83 on both B and C. Every body's
+Berlekamp–Massey complexity is essentially half its length. Direct MTF uses
+all 83 decoded values, three first symbols are invalid as literal BWT primary
+indices, and neither direct nor inverse-BWT LZ78 counts are exceptional
+against 1,000 matched shuffles. The strongest nondisclosed equality-isomorph
+contains only two repeated constraints.
+
+A complete read-only author-thread audit adds no operational clue. sdlwdr
+described the third puzzle as “a bit more unique” in 2025, and in 2026 said
+the source code was lost. A public Crawford *Kalevala* scan finds the observed
+prefix-tree shape thousands of times, so it cannot identify a plaintext
+passage without a stronger mechanism. Full results:
+[`../docs/practice-cipher3-third-wide-first-batch-results-2026-07-24.md`](../docs/practice-cipher3-third-wide-first-batch-results-2026-07-24.md).
+
 ## Solution
 
 No verified plaintext has been recovered, so there is no solution text to
@@ -159,6 +180,12 @@ instead of presenting a timeout as an impossibility proof.
   occupancy with the proposed plaintext action count before optimizing words.
 - A mathematically exact quotient size does not recover its hidden coordinate.
   Require a planted wheel—not only a planted substitution—to succeed.
+- Long equality-isomorphic factors are weak when almost every position
+  introduces a fresh symbol; count repeated equality constraints explicitly.
+- A source corpus may reproduce a prefix hierarchy many times. Treat that as
+  compatibility, not identification, unless it predicts unseen text.
+- Separate visible-symbol recurrence from hidden affine deck state: failure of
+  the former does not test the latter.
 
 The exact checks are implemented in
 `scripts/solve_sdlwdr_cipher3_cycle.py` and
@@ -171,4 +198,6 @@ homophone checks are reproduced by
 `scripts/run_practice_cipher3_second_batch.py` and
 `scripts/audit_sdlwdr_cipher3_homophones.py`. Reflection-wheel tests are in
 `src/eye_mystery/practice_cipher3_reflection.py` and
-`scripts/run_practice_cipher3_reflection_wheel.py`.
+`scripts/run_practice_cipher3_reflection_wheel.py`. The third wide batch is
+implemented in `src/eye_mystery/practice_cipher3_third.py` and
+`scripts/run_practice_cipher3_third_batch.py`.

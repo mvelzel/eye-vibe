@@ -1182,3 +1182,33 @@ Details:
 The outer automorphism remains a valid abstract relation, not an Eye clue
 without another authored consumer. Reset/Hankel, graph covering,
 finite-state coding, archaeology, and practice transfer remain queued.
+
+### Practice cipher 3: conformance-vector breadth restart
+
+**Status:** first cheap batch closed; hidden affine deck state promoted next.
+
+The active method-acquisition pivot treats the six streams in each of three
+length bands and the deliberate `43/8` reset-body prefix tree as possible
+conformance-vector architecture. Sixteen distinct mechanism classes were
+frozen in
+[`practice-cipher3-third-wide-horizon-2026-07-24.md`](practice-cipher3-third-wide-horizon-2026-07-24.md).
+
+The A/B/C/H/M batch is negative. There is no undisclosed exact factor of
+length four; all nine affine length-five coincidences are one-offs; and the
+strongest equality-isomorph carries only two repeated constraints.
+A-selected order-one/two recurrences leave 77/75 residual values on A and all
+83 on B/C. Every body has random-like half-length linear complexity. Direct
+MTF uses all 83 symbols, three messages reject a literal first-symbol BWT
+index, and direct/inverse-BWT LZ78 counts are ordinary under 1,000 matched
+shuffles.
+
+The complete author-thread audit adds only that sdlwdr called Cipher 3 “a bit
+more unique” and later lost its source code. A Crawford *Kalevala* scan finds
+the `43/8` prefix hierarchy thousands of times, so it is compatible but not
+identifying. Results:
+[`practice-cipher3-third-wide-first-batch-results-2026-07-24.md`](practice-cipher3-third-wide-first-batch-results-2026-07-24.md).
+
+The next promoted lane is a generalized affine `AGL(1,83)` deck/GAK screen,
+with structured families and an exact bounded 42-symbol solver. It must pass
+planted recovery and transfer from A to B/C. This is distinct from the closed
+visible-ciphertext recurrence lane.

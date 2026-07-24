@@ -86,11 +86,13 @@ The batch will report:
 
 ## Discord evidence boundary
 
-The authorized browser profile currently opens Discord at a fresh login
-screen. No new author hint was available for this freeze. The locally
-preserved evidence remains the ciphertext attachment, the A0 correction, and
-the absence of a recorded mechanism hint in the original thread. When the
-session is available again, the author history should be audited for wording
-about the A/B/C grouping, intended plaintext type, alphabet order, resets, and
-whether the first symbol is data or setup. Those facts may reprioritize this
-horizon but will not be silently read into it.
+After this freeze, the renewed authorized session allowed a complete
+read-only audit. The original thread contains only the ciphertext attachment,
+the A0 correction, and recent unsolved discussion. No message identifies the
+mechanism, plaintext type, alphabet order, resets, grouping, or first-symbol
+role. Elsewhere sdlwdr called the puzzle “a bit more unique” and later said
+its source code had been lost. Those facts reprioritize construction
+genealogy, but do not establish a mechanism.
+
+First-batch results are recorded in
+[`practice-cipher3-third-wide-first-batch-results-2026-07-24.md`](practice-cipher3-third-wide-first-batch-results-2026-07-24.md).
