@@ -116,6 +116,24 @@ recovers only 24.97%, so this is not a general exclusion. Four exact
 English/Finnish source fingerprints are negative. Full results are in
 [`../docs/practice-cipher3-second-batch-results-2026-07-24.md`](../docs/practice-cipher3-second-batch-results-2026-07-24.md).
 
+A follow-up tested the exact `83 -> 42` reflection quotient. The transition
+graph itself excludes a fresh single-direction half-cycle: it has 253
+reciprocal edge pairs and maximum reciprocal degree 14, while one 42-step
+half of an 83-cycle permits at most two reciprocal partners per state. The
+direction-free quotient remains meaningful, so two finite coordinate families
+were calibrated:
+
+```text
+standard raw wheel        real -15.538194, control -7.178008 / trigram
+166 old-wheel insertions  real -15.394573, control -7.178008 / trigram
+```
+
+Both controls recover 100% plaintext; every real output is gibberish. An
+arbitrary hidden-wheel optimizer is not a negative result: it recovers only
+9.02% of its planted control after 500,000 steps, so the real corpus is not
+interpreted under it. See
+[`../docs/practice-cipher3-reflection-wheel-results-2026-07-24.md`](../docs/practice-cipher3-reflection-wheel-results-2026-07-24.md).
+
 ## Solution
 
 No verified plaintext has been recovered, so there is no solution text to
@@ -139,6 +157,8 @@ instead of presenting a timeout as an impossibility proof.
   strongest Cipher 3 copy was invisible at full-message position zero.
 - A low edge-colouring number is only compatibility. Compare repeated-edge
   occupancy with the proposed plaintext action count before optimizing words.
+- A mathematically exact quotient size does not recover its hidden coordinate.
+  Require a planted wheel—not only a planted substitution—to succeed.
 
 The exact checks are implemented in
 `scripts/solve_sdlwdr_cipher3_cycle.py` and
@@ -149,4 +169,6 @@ implemented in `src/eye_mystery/practice_cipher3_wide.py`,
 `scripts/run_practice_cipher3_wheel_transfer.py`. The prefix/action and static
 homophone checks are reproduced by
 `scripts/run_practice_cipher3_second_batch.py` and
-`scripts/audit_sdlwdr_cipher3_homophones.py`.
+`scripts/audit_sdlwdr_cipher3_homophones.py`. Reflection-wheel tests are in
+`src/eye_mystery/practice_cipher3_reflection.py` and
+`scripts/run_practice_cipher3_reflection_wheel.py`.

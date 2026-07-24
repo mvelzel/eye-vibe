@@ -117,6 +117,16 @@ reading poor. The frozen standard-`C83` width screen does not replicate on
 B/C; static homophony remains only a bounded negative because its planted
 control is not fully recovered.
 
+The exact reflection-wheel follow-up is
+[`docs/practice-cipher3-reflection-wheel-results-2026-07-24.md`](docs/practice-cipher3-reflection-wheel-results-2026-07-24.md).
+Reciprocal transitions exclude a single directed 42-step half-cycle
+label-independently (`14` reciprocal partners at one state versus maximum
+`2`). The direction-free `Z83/{±1}` quotient is calibrated separately:
+standard raw order and all 166 insertions of `J` into the solved old wheel
+recover planted controls perfectly, but real scores remain near `-15.4` per
+trigram and render gibberish. An arbitrary hidden wheel is explicitly
+undecided because its optimizer recovers only `9.02%` of its own control.
+
 The next Eye pass deliberately changes the question from “how can these
 numbers be read?” to “what small mechanism caused the equality and
 reconvergence structure?” Its fourteen-lane breadth map is frozen in

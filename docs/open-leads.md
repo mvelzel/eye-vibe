@@ -523,6 +523,19 @@ explains the high transition occupancy. Prioritize randomized/homophonic
 state updates or a newly disclosed author hint; do not deepen the rejected
 predecessor-only 42-action interpolation.
 
+The reflection-wheel follow-up in
+[`practice-cipher3-reflection-wheel-results-2026-07-24.md`](practice-cipher3-reflection-wheel-results-2026-07-24.md)
+adds two scoped closures. A one-direction 42-step half-cycle is exactly
+impossible from reciprocal degree `14 > 2`. The standard raw wheel and every
+one of 166 old-wheel/`J` insertions are negative under controls that recover
+100% plaintext. A completely arbitrary hidden `Z83/{±1}` wheel remains
+unresolved because local and spectral wheel recovery fail the planted
+control; do not score the real corpus with that optimizer.
+
+**Refined next test:** obtain a global wheel initializer, known plaintext, or
+author construction constraint. More local coordinate-swap restarts are
+closed by the failed control.
+
 ### sdlwdr practice cipher 4
 
 **Status:** outer cyclic layer solved, inner codec unsolved.  The arbitrary

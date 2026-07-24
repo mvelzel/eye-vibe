@@ -2795,3 +2795,33 @@ uniform choice count `33.426694`. Thus the Eyes are compatible with a
 evidence: the previously frozen, prefix-tree-preserving Eye edge-reuse test had
 only `.043478` upper tail. The method distinguishes “not falsified” from
 “selected,” and the Eye lane stays closed absent a predictive edge colouring.
+
+### Practice cipher 3: reflection wheel separates key from geometry
+
+The exact alphabet-size bridge `Z83/{±1}` was tested after freezing it.
+Before quotienting directions, the real reciprocal-transition graph proves
+that a single 42-step forward half-cycle is impossible: 253 unordered pairs
+occur both ways and one raw state has 14 reciprocal partners; a directed
+half-cycle allows at most two.
+
+For the direction-free quotient, the displayed standard wheel and all 166
+ways to insert exceptional `J` into both orientations of the solved
+cipher-1/2 wheel were exhausted. Matched controls recover 100% plaintext at
+`-7.178008` per trigram and select the planted `forward-17` insertion together
+with its dihedral `reverse-65` equivalent. The real standard wheel scores
+`-15.538194`; the best old-wheel insertion scores `-15.394573`. Both are
+punctuation-heavy gibberish, closing those finite coordinate families.
+
+The arbitrary hidden-wheel test stops at its positive control. With the true
+wheel fixed, the substitution solver reaches 100% in 10,000 moves. With the
+wheel unknown, 500,000 moves reach only `9.017497%` jointly (and about 9.47%
+even with the true key fixed), with no dihedrally correct wheel. Circular
+spectral initialization recovers at most 10 of 83 true adjacencies. Therefore
+the real arbitrary-wheel corpus is not assigned a candidate score or text.
+The result isolates wheel geometry—not language substitution—as the missing
+method.
+
+Freeze and results are
+`docs/practice-cipher3-reflection-wheel-freeze-2026-07-24.md` and
+`docs/practice-cipher3-reflection-wheel-results-2026-07-24.md`; implementation
+is in `src/eye_mystery/practice_cipher3_reflection.py`.
