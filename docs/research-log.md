@@ -3628,3 +3628,11 @@ start/start+11, no adjacent doubles, and the unique clean gap-11 witness.
 Variant maximization happens within each metric and the four metric tails are
 Bonferroni corrected. Freeze:
 `docs/twenty-first-earthquake-mask-freeze-2026-07-24.md`.
+
+Before real evaluation, the positive-control wording needed one transparent
+correction. Removing known offset 0 makes forward-one a strict subset of
+reverse-one, so unique forward identification is impossible for every metric.
+The plant must instead make all four registered fields nonzero in
+forward-one; ties are allowed because both real and control scores already
+maximize the same four-variant family. No real slice or score was inspected
+before this correction.

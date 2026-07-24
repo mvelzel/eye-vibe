@@ -138,6 +138,14 @@ fails.
 
 ## Positive control
 
+### Pre-evaluation correction
+
+This wording was corrected after freezing but before inspecting real slices
+or scores. Once known offset `0` is removed, the forward-one offsets are a
+strict subset of the reverse-one offsets. Some registered metrics therefore
+cannot identify forward-one uniquely even on a plant. Requiring a unique
+variant would be mathematically impossible.
+
 Before real evaluation, construct a three-panel plant with:
 
 - the fixed gap-11 anchor in every panel;
@@ -146,9 +154,11 @@ Before real evaluation, construct a three-panel plant with:
 - one aligned numeric equality;
 - no adjacent doubles.
 
-The detector must identify the intended forward-one variant and every planted
-field. The conditional shuffler must preserve each plant's length, multiset,
-fixed anchor pair, no-adjacent-double rule, and unique clean gap-11 witness.
+The detector must score every planted field nonzero in the forward-one view.
+A tied or stronger superset view is allowed; real and control data already
+maximize over the same complete four-variant family. The conditional shuffler
+must preserve each plant's length, multiset, fixed anchor pair,
+no-adjacent-double rule, and unique clean gap-11 witness.
 
 ## Stop rule
 
