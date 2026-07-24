@@ -180,3 +180,10 @@ results:
 
 Lane E's failure-link automaton remains distinct because it can consume
 internal phrase suffixes even when complete right languages differ.
+
+Lane E's previously broad depth-change descriptor is now fixed before
+calculation in
+[`fourteenth-failure-link-freeze-2026-07-24.md`](fourteenth-failure-link-freeze-2026-07-24.md).
+Use numeric-label BFS order, retain nodes with non-root failure targets, sum
+their incoming labels modulo 101, and test exactly one pre-existing word:
+`BEXIT=(2,5,24,9,20)` in the retained depth-drop tape. Both are required.

@@ -1004,3 +1004,9 @@ Details:
 Lane E's canonical failure links remain active: they can identify internal
 repeated suffix/prefix relations without requiring complete suffix-equivalent
 dictionary states.
+
+Its exact serializer and promotion gate are frozen in
+[`fourteenth-failure-link-freeze-2026-07-24.md`](fourteenth-failure-link-freeze-2026-07-24.md):
+numeric-label BFS, non-root failure targets, incoming-label sum modulo 101,
+and one externally fixed depth-drop word
+`BEXIT=(2,5,24,9,20)`. Checksum and word must both pass.

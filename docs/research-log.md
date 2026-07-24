@@ -2973,3 +2973,12 @@ second checksum. Full results are in
 `docs/fourteenth-dictionary-automaton-results-2026-07-24.md`. Aho–Corasick
 failure links remain a genuinely different next object because they can
 capture internal phrase suffixes without identical complete continuations.
+
+Before calculating lane E, its ambiguous “depth-change word” was resolved.
+The nine bodies define one Aho–Corasick trie and numeric-label BFS. Retain
+exactly nodes whose failure target is non-root; sum their incoming labels
+modulo 101 and serialize `node depth - failure depth` in that BFS order. The
+only word tested is independently fixed
+`BEXIT=(2,5,24,9,20)`. Both closure and one contiguous word occurrence are
+required. The freeze is
+`docs/fourteenth-failure-link-freeze-2026-07-24.md`.
