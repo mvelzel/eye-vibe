@@ -1368,3 +1368,26 @@ reconstruct `a_E4=75`, `a_W4=81`, and check `h_E5=33`. It is now a closed
 self-describing record, though it still does not reveal plaintext or explain
 the final-row/base-16/gap-11 selector. Results:
 [`eighteenth-anchor-pointer-results-2026-07-24.md`](eighteenth-anchor-pointer-results-2026-07-24.md).
+
+### Earthquake-circle parameter diagram
+
+The installed Earthquake/Holy-Mountain magical-symbol images are byte-identical
+to the early-access-data copies. Their five transcribed rows have lengths
+`32,24,20,17,24` and primitive periods `5,1,2,17,6`. Longstanding Discord
+work already connects `24,20,5` to the three copied-opening lengths; a
+17-position wheel was also proposed. The new final anchor record makes a
+tighter synthesis possible:
+
+```text
+20 circumference        final opening trim
+17 one-based             zero-based base position 16
+W4 order 021             starts 16,18,17
+10/10 balanced ring      ten interiors, hence framed gap 11
+periods 5 and 6          five eyes and six component/renderer symbols
+```
+
+This exact selector is retrospective and receives no new p-value. Eight lanes
+are mapped before depth. First priority is a prospective use of the unused
+17-bit pattern; the reported `24,20,16` diamond geometry is the main
+independent asset-acquisition lane. Horizon:
+[`nineteenth-earthquake-circle-wide-horizon-2026-07-24.md`](nineteenth-earthquake-circle-wide-horizon-2026-07-24.md).

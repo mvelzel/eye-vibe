@@ -3562,3 +3562,29 @@ checks `h_E5=33`. This makes the final row a closed self-describing record,
 not a checksum graph needing an external seed. It remains structural
 metadata rather than a plaintext decode. Details:
 `docs/eighteenth-anchor-pointer-results-2026-07-24.md`.
+
+A read-only Discord reconciliation reopens the Earthquake/Holy-Mountain
+magical circle in a more constrained form. The installed WAK routes
+Earthquake and workshop collapse through `magical_symbol[_fast].xml` to
+`animated_emitter[_large].png`. The two image SHA-256 values are respectively
+`0e752d47688bfe88f196bf312c98e720f6391b5cf616e145ed2ee8ca15ba591d`
+and
+`7d839270f5abf0516faaa41d077f21181009a0a833cf2ab384dcf3a38475c9be`;
+the early-access-data copies are byte-identical.
+
+The five transcribed rows have lengths `32,24,20,17,24`, primitive periods
+`5,1,2,17,6`, and the alternating 20-band has ten zeroes and ten ones. The
+community already noted the `24/20` copied-opening match in 2021, added the
+middle `5`/five-eye match explicitly in March 2026, and proposed a 17-position
+wheel in 2023. These are prior art, not project discoveries.
+
+The validated final anchor record now gives the loose numbers one compact
+consumer: circumference 20 selects the final opening trim; ring length 17
+gives one-based address 17 or zero-based 16; W4 order `021` gives starts
+`16,18,17`; the balanced band supplies ten interior events, framed by an
+equal state at gap 11; and rune periods five/six echo the visible-eye and
+renderer/control alphabets. This recipe was assembled retrospectively and
+gets no new p-value. Eight possible consumers are ranked before depth. The
+first prospective test will use the still-unused actual 17-bit pattern;
+independent acquisition of the reported `24,20,16` diamond geometry is next.
+Horizon: `docs/nineteenth-earthquake-circle-wide-horizon-2026-07-24.md`.
