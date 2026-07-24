@@ -3965,3 +3965,16 @@ each truncated panel as a complete circle and exhausts both relative offsets
 per row; the three row histograms are convolved. No sign, coefficient
 permutation, intercept, lag, or panel selection is admitted. Protocol:
 `docs/twenty-sixth-358-weighted-alignment-freeze-2026-07-24.md`.
+
+The weighted interface is negative. Exact natural-row scores are `2/74`,
+`1/96`, and `1/93`, totaling only `4/263`. Their independent cyclic-null
+ranges are `0..6`, `0..7`, and `0..6`; the exact per-row tails are
+`.228816654`, `.678385417`, and `.676494392`.
+
+Convolving all three exact histograms gives null range `0..19` and inclusive
+upper mass `171017439974/436487491584=.391803759`. The detector recovers a
+perfect algebraic plant, every row histogram has mass `L²`, simultaneous
+rotation is invariant, and the convolved mass is exact. Close direct
+coefficient/sign/lag variants under the stop rule. The marker country tag is
+unaffected, but it supplies no linear body consumer here. Results:
+`docs/twenty-sixth-358-weighted-alignment-results-2026-07-24.md`.

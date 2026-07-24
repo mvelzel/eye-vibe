@@ -63,6 +63,13 @@ interface is now the single fixed equation
 alignment null. Freeze:
 [`twenty-sixth-358-weighted-alignment-freeze-2026-07-24.md`](twenty-sixth-358-weighted-alignment-freeze-2026-07-24.md).
 
+**Weighted-interface result:** closed. The three natural rows score `2/74`,
+`1/96`, and `1/93`; the convolved exact cyclic-alignment tail is
+`.391803759`. Do not vary coefficient order, signs, intercepts, lags, or eye
+components. Preserve `358` as marker metadata pending a separately authored
+consumer. Results:
+[`twenty-sixth-358-weighted-alignment-results-2026-07-24.md`](twenty-sixth-358-weighted-alignment-results-2026-07-24.md).
+
 ### Procedural wand selects exactly `0..82` from `0..100`
 
 **Status:** exact independently authored 83-of-101 selector; the proposed

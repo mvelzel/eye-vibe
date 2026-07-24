@@ -138,3 +138,8 @@ Lane H is the next prospective discriminator. The exact canonical equation,
 trims, full-cycle relative-alignment null, calibration, and stop rule are
 frozen in
 [`twenty-sixth-358-weighted-alignment-freeze-2026-07-24.md`](twenty-sixth-358-weighted-alignment-freeze-2026-07-24.md).
+
+Lane H is negative: the three row scores are `2/74`, `1/96`, and `1/93`;
+their exact convolved relative-alignment tail is `.391803759`. Close the
+direct linear consumer under its frozen stop rule. Results:
+[`twenty-sixth-358-weighted-alignment-results-2026-07-24.md`](twenty-sixth-358-weighted-alignment-results-2026-07-24.md).

@@ -980,6 +980,15 @@ uncorrected p-value. Horizon and result:
 [`docs/twenty-fifth-wide-marker-country-horizon-2026-07-24.md`](docs/twenty-fifth-wide-marker-country-horizon-2026-07-24.md);
 [`docs/twenty-fifth-marker-country-results-2026-07-24.md`](docs/twenty-fifth-marker-country-results-2026-07-24.md).
 
+The first prospective body consumer is negative. Applying only the fixed
+canonical equation `3*x0+5*x1=8*x2 mod83` after the three copied-opening trims
+gives row scores `2/74`, `1/96`, and `1/93`, total `4/263`. Exhausting both
+relative circular offsets per row and convolving the exact histograms gives
+tail `171017439974/436487491584=.391803759`. Close coefficient/sign/lag
+variants: `358` is not a direct linear panel weight under this interface.
+Results:
+[`docs/twenty-sixth-358-weighted-alignment-results-2026-07-24.md`](docs/twenty-sixth-358-weighted-alignment-results-2026-07-24.md).
+
 ## Running the workbench
 
 Python 3.11 or newer is sufficient for the dependency-free experiments:
@@ -1041,6 +1050,7 @@ PYTHONPATH=src python3 scripts/analyze_gun_names_selector.py /path/to/data.wak /
 PYTHONPATH=src python3 scripts/run_fifth_wide_fanout.py --controls 2000 --sort-controls 10000
 PYTHONPATH=src python3 scripts/run_ninth_causal_batch.py --controls 1000
 PYTHONPATH=src python3 scripts/audit_marker_country_tag.py
+PYTHONPATH=src python3 scripts/audit_358_weighted_alignment.py
 ```
 
 The vectorized selected-card scan additionally requires NumPy:
