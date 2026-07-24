@@ -274,6 +274,70 @@ binary readings: `2×2×2×2×2=32` models. Reset naturally per line. No ASCII
 values, arbitrary space distance, symbol-specific signs, or rotations of the
 83-slot address tape are admitted.
 
+## Fifth result: altar-valued plaintext-autokey cuts are negative
+
+All 32 admitted value maps and directions again preserve the numbered starts
+but use every recovered rank through 82. The maximum is:
+
+```text
+binary=ccw  alphabet=card-trick  symbols=appended
+distance=value  cut=right
+low ranks = 423/761 = .555848
+```
+
+No setting produces coherent output. Close the 83-slot tape as a
+*plaintext-rank-addressed* cut schedule under ordinal and altar-valued
+semantics.
+
+Executable audit:
+[`audit_sdlwdr_cipher6_tape_values.py`](../scripts/audit_sdlwdr_cipher6_tape_values.py).
+
+## Author-side clue: custom Alberti/ciphertext autokey
+
+A read-only server-wide Discord search supplies a stronger architecture clue.
+On 18 May 2023 in `#silmä-novel`, sdlwdr wrote:
+
+> So I was thinking maybe the earthquake symbol could be used for some sort of
+> alberti cipher.
+
+The surrounding historical discussion later distinguishes classical Alberti
+from a custom 83-symbol ciphertext-autokey variant. This predates Practice #6
+by more than three years and comes from its author. It does not reveal the
+puzzle mechanism, but it changes the next selector: the observed ciphertext
+card, rather than recovered plaintext rank, should be allowed to turn the
+disk/deck.
+
+## Sixth freeze: 83-card ciphertext-autokey disk
+
+The first custom-Alberti family uses natural line resets and the three
+letter-only initial orders that leave digit positions fixed:
+
+```text
+natural
+BDMAGICKEFHJLNOPQRSTUVWXYZ...
+ABDMGICRTKEFHJLNOPQSUVWXYZ...
+```
+
+After emitting the observed card's current rank, update the disk from that
+card's fixed label in one of two ways:
+
+1. cumulative: advance the current alignment by the key value;
+2. absolute: set the next alignment to the key value relative to the initial
+   deck.
+
+Two key sources are admitted:
+
+- raw ciphertext card label, zero- or one-based;
+- the already frozen 83-slot asset tape at that ciphertext label, under the
+  two altar alphabets and literal/appended nonletter conventions.
+
+Test both global directions and both binary readings where the asset tape is
+used. This gives 24 raw-card and 192 asset-valued settings, 216 total. No
+per-line initial offset, ciphertext substitution, tape rotation, or
+symbol-specific direction is permitted. A correct model must collapse almost
+entirely into the low plaintext ranks and then replay under one fixed
+rendering.
+
 ## Why this matters for the Eyes
 
 This puzzle is the first practice example in the storehouse that explicitly

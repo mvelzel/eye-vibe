@@ -1541,3 +1541,14 @@ all 83 ranks, best `407/761`. The next frozen interpretation retains the
 actual altar letter positions. Two documented keyed alphabets cross with
 literal-bit versus appended-alphanumeric handling, zero/one-based distance,
 global cut direction, and binary direction: exactly 32 per-rank cut models.
+
+**Fifth result:** altar-valued plaintext-rank cuts are negative, best
+`423/761`; all use every rank through 82.
+
+**Architecture upgrade:** a read-only server search finds sdlwdr himself
+proposing on 18 May 2023 that the Earthquake symbol might drive “some sort of
+Alberti cipher.” Historical discussion frames a custom 83-symbol form as
+ciphertext autokey. The next frozen 216-model family therefore updates a
+rotating deck from observed ciphertext labels, using cumulative versus
+absolute alignment, raw versus fixed tape-derived values, zero/one indexing,
+global direction, two binary readings, and three letter-only initial orders.

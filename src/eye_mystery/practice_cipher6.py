@@ -14,6 +14,7 @@ EXPECTED_PREFIXES = tuple(range(27, 36))
 NADIRS = (17, 20, 24, 32, 41, 42)
 NATURAL_PLAINTEXT = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .\n,?-"
 ALTAR_LETTERS = "BDMAGICKEFHJLNOPQRSTUVWXYZ"
+CARD_TRICK_LETTERS = "ABDMGICRTKEFHJLNOPQSUVWXYZ"
 TRAILER_PHRASE = "A BAD MAGIC CARD TRICK"
 ZERO_BAND = "0" * 24
 ALTERNATING_BAND = "10101010101010101010"
@@ -489,4 +490,124 @@ def tape_class_cut_audit(
                             decoded=decoded,
                         )
                     )
+    return tuple(sorted(results, key=lambda result: result.key, reverse=True))
+
+
+@dataclass(frozen=True)
+class TapeValueCutResult:
+    binary_direction: str
+    alphabet: str
+    appended_nonletters: bool
+    one_based: bool
+    cut_direction: str
+    prefix_matches: int
+    low_rank_count: int
+    total: int
+    distinct: int
+    maximum: int
+    decoded: tuple[tuple[int, ...], ...]
+
+    @property
+    def low_rank_fraction(self) -> float:
+        return self.low_rank_count / self.total
+
+    @property
+    def key(self) -> tuple[int, int, int, int]:
+        return (
+            self.prefix_matches,
+            self.low_rank_count,
+            -self.maximum,
+            -self.distinct,
+        )
+
+
+def tape_value_map(
+    letters: str, *, appended_nonletters: bool
+) -> dict[str, int]:
+    """Map tape symbols through one fixed altar-derived alphabet convention."""
+
+    mapping = {symbol: index for index, symbol in enumerate(letters)}
+    if appended_nonletters:
+        mapping.update({str(digit): 26 + digit for digit in range(10)})
+        mapping[" "] = 36
+    else:
+        mapping.update({"0": 0, "1": 1, " ": 0})
+    return mapping
+
+
+def _decode_tape_value_cut_line(
+    ciphertext: tuple[int, ...],
+    tape: str,
+    values: dict[str, int],
+    *,
+    one_based: bool,
+    cut_right: bool,
+) -> tuple[int, ...]:
+    deck = tuple(range(SIZE))
+    plaintext = []
+    for card in ciphertext:
+        rank = deck.index(card)
+        plaintext.append(rank)
+        distance = values[tape[rank]] + int(one_based)
+        if cut_right:
+            distance = -distance
+        distance %= SIZE
+        deck = deck[distance:] + deck[:distance]
+    return tuple(plaintext)
+
+
+def tape_value_cut_audit(
+    lines: tuple[tuple[int, ...], ...],
+) -> tuple[TapeValueCutResult, ...]:
+    """Test the frozen altar-valued first-N cut family."""
+
+    results = []
+    alphabets = {
+        "trailer": ALTAR_LETTERS,
+        "card-trick": CARD_TRICK_LETTERS,
+    }
+    for reverse_binary in (False, True):
+        tape = asset_tape(reverse_binary=reverse_binary)
+        binary_direction = "ccw" if reverse_binary else "cw"
+        for alphabet_name, letters in alphabets.items():
+            for appended_nonletters in (False, True):
+                values = tape_value_map(
+                    letters, appended_nonletters=appended_nonletters
+                )
+                for one_based in (False, True):
+                    for cut_right in (False, True):
+                        decoded = tuple(
+                            _decode_tape_value_cut_line(
+                                line,
+                                tape,
+                                values,
+                                one_based=one_based,
+                                cut_right=cut_right,
+                            )
+                            for line in lines
+                        )
+                        flat = tuple(value for line in decoded for value in line)
+                        results.append(
+                            TapeValueCutResult(
+                                binary_direction=binary_direction,
+                                alphabet=alphabet_name,
+                                appended_nonletters=appended_nonletters,
+                                one_based=one_based,
+                                cut_direction="right" if cut_right else "left",
+                                prefix_matches=sum(
+                                    line[0] == expected
+                                    for line, expected in zip(
+                                        decoded, EXPECTED_PREFIXES
+                                    )
+                                ),
+                                low_rank_count=sum(
+                                    value < len(NATURAL_PLAINTEXT)
+                                    for value in flat
+                                ),
+                                total=len(flat),
+                                distinct=len(set(flat)),
+                                maximum=max(flat),
+                                decoded=decoded,
+                            )
+                        )
     return tuple(sorted(results, key=lambda result: result.key, reverse=True))

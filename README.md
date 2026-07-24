@@ -928,6 +928,14 @@ documented keyed alphabets, appended versus literal binary values,
 zero/one-based distance, two cut directions, and two binary readings give 32
 per-rank cut models, with no fitted symbol distances.
 
+Those 32 plaintext-autokey cuts are negative (`423/761` best, all ranks).
+A more important read-only Discord find now redirects the architecture:
+sdlwdr himself suggested in May 2023 that the Earthquake symbol might drive
+an Alberti cipher. The next frozen family is therefore custom 83-symbol
+ciphertext autokey—raw or tape-valued observed-card keys, cumulative versus
+absolute disk alignment, three fixed initial orders, global direction, and
+zero/one indexing—216 models total.
+
 ## Running the workbench
 
 Python 3.11 or newer is sufficient for the dependency-free experiments:

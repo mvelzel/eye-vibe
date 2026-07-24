@@ -3791,3 +3791,24 @@ positions `26/27` with space 36, or literal `0/1` with zero-width spaces.
 Address this value tape by recovered plaintext rank and cut by value or
 value-plus-one, under two global directions and two binary readings. These
 32 settings exhaust the admitted family.
+
+The altar-valued plaintext-autokey family is negative. Every one of its 32
+models uses all ranks through 82. The maximum is counterclockwise binary
+reading, card-trick alphabet, appended nonletters, zero-based right cut:
+`423/761=.555848`.
+
+A read-only server-wide Discord search then recovers a decisive architecture
+hint from the puzzle author. On 18 May 2023 in `#silmä-novel`, sdlwdr wrote
+that the Earthquake symbol might be used for “some sort of alberti cipher.”
+Later community discussion calls a custom 83-symbol form ciphertext autokey,
+not classical Alberti. This is older than Practice #6 and therefore is not a
+retrospective reaction to the puzzle.
+
+The next family is frozen accordingly. Natural, Trailer-keyed, and
+card-trick-keyed initial decks all preserve the digit positions. After current
+rank emission, the observed ciphertext card supplies either its raw value or
+its fixed 83-slot tape value. Update is cumulative rotation or absolute
+realignment, with zero/one indexing and global direction; tape-valued models
+also admit the two binary readings and two fixed nonletter conventions. The
+complete family has 24 raw plus 192 tape-valued models. No line-specific
+offsets or symbol-specific signs are admitted.

@@ -6,6 +6,7 @@ from pathlib import Path
 
 from eye_mystery.practice_cipher6 import (
     ALTAR_LETTERS,
+    CARD_TRICK_LETTERS,
     EXPECTED_PREFIXES,
     TRAILER_PHRASE,
     asset_tape,
@@ -19,6 +20,8 @@ from eye_mystery.practice_cipher6 import (
     read_ciphertext,
     stable_partition_permutation,
     tape_class_cut_audit,
+    tape_value_cut_audit,
+    tape_value_map,
 )
 
 
@@ -86,6 +89,16 @@ class PracticeCipher6Tests(unittest.TestCase):
     def test_tape_class_cut_audit_is_the_frozen_sixteen_models(self) -> None:
         results = tape_class_cut_audit(read_ciphertext(CIPHERTEXT))
         self.assertEqual(len(results), 16)
+        self.assertTrue(all(result.prefix_matches == 9 for result in results))
+        self.assertTrue(all(result.total == 761 for result in results))
+
+    def test_tape_value_maps_and_frozen_thirty_two_models(self) -> None:
+        trailer = tape_value_map(ALTAR_LETTERS, appended_nonletters=True)
+        literal = tape_value_map(CARD_TRICK_LETTERS, appended_nonletters=False)
+        self.assertEqual((trailer["B"], trailer["0"], trailer["1"], trailer[" "]), (0, 26, 27, 36))
+        self.assertEqual((literal["A"], literal["0"], literal["1"], literal[" "]), (0, 0, 1, 0))
+        results = tape_value_cut_audit(read_ciphertext(CIPHERTEXT))
+        self.assertEqual(len(results), 32)
         self.assertTrue(all(result.prefix_matches == 9 for result in results))
         self.assertTrue(all(result.total == 761 for result in results))
 
