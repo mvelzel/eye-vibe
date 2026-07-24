@@ -3203,3 +3203,37 @@ global.
 
 All three plants must pass before any Eye score. The freeze and exact stop
 rules are in `docs/sixteenth-second-batch-freeze-2026-07-24.md`.
+
+The outer positive control first exposed a gauge ambiguity. With an arbitrary
+planted conjugate, 96 P candidates preserved newline masks and the frozen
+tie-break selected the wrong one for Q. Before any real scoring, only the
+plant gauge was changed to canonical `c000`; the 1,440-model catalog, score,
+split, and tie-break were untouched. The canonical plant then selects
+`c000-header`, decodes `0/977` plus `0/2190` mismatches, and makes the
+remaining 24-fold P ambiguity explicit. The necklace and `GF(125)` plants
+also pass; the latter uniquely recovers `t^3+t+1`, Frobenius one, across all
+seven independent Möbius contexts.
+
+All real mechanisms fail. Outer action `c003-header` minimizes P errors but
+still gives `53/977`, all from West 1; it then gives `364/2190` on Q. No
+outer candidate is exact on P. Each of the four header/inverse and
+forward/reverse necklace conventions has zero canonical P and Q panels. All
+nine tapes are primitive and borderless; their least rotations are nonzero.
+The three P Duval factor counts happen to equal seven, but that field was
+diagnostic and Q is mixed, so it is not promoted.
+
+The exhaustive `GF(125)` scan finds no exact context in any of 120 global
+representations. The selected `t^3+2t^2+2t+3`, Frobenius-one representation
+scores `8/18,6/18,9/18,6/9` on the four training contexts and
+`7/30,7/30,7/25` heldout after maximizing each local map over every three-edge
+fit. Three agreements are definitional, and every context has a further
+contradiction.
+
+Full evidence is in
+`docs/sixteenth-second-batch-results-2026-07-24.md`. These results close the
+direct outer renderer action, canonical header necklace cut, and fractional
+`GF(125)` context action. They do not demote the original trie checksum,
+lag-one wheel, factoradic metadata, Gate vocabulary, practice ciphers,
+source ancestry, or chronology leads. The novelty portfolio returns to
+reset/Hankel, graph-covering, finite-state-coding, archaeology, and
+practice-transfer breadth.

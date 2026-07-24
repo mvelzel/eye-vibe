@@ -239,3 +239,20 @@ Full evidence:
 The exact projective inventory remains a fact, not a cipher result.
 Outer-`S6`, reset, Hankel, Lyndon, `GF(125)`, graph-covering, enumerative-code,
 archaeology, and practice-transfer lanes remain queued.
+
+## Second-batch result
+
+The queued outer-`S6`, necklace/Lyndon, and `GF(125)` lanes were frozen
+together before calculation. Their plants pass, but all three Eye consumers
+close:
+
+- no outer action is exact on P; the best gives `53/977` P and `364/2190` Q
+  newline-mask mismatches;
+- no header/direction convention places any panel at its least necklace
+  rotation;
+- no field/Frobenius representation makes even one repeated context Möbius.
+
+Results:
+[`sixteenth-second-batch-results-2026-07-24.md`](sixteenth-second-batch-results-2026-07-24.md).
+Reset/Hankel, graph covering, finite-state coding, archaeology, and practice
+transfer remain queued.

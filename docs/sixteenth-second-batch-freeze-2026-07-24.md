@@ -178,3 +178,19 @@ lane tests only the genuinely different fractional/Frobenius completion.
 - Preserve the original trie checksum, arbitrary lag-one wheel, factoradic
   metadata, Gate construction vocabulary, practice ciphers 3/4, source
   ancestry, and chronology ledger.
+
+## Result
+
+All three mechanisms close after their plants pass:
+
+- the best of 1,440 outer-`S6` renderer actions has `53/977` P and
+  `364/2190` Q newline-mask mismatches; no P candidate is exact;
+- all four necklace conventions have `0/3` canonical P and `0/6` canonical Q
+  panels;
+- no `GF(125)` representation makes any context exact; the selected
+  `t^3+2t^2+2t+3`, Frobenius-one representation reaches only
+  `8/18,6/18,9/18,6/9` on P and `7/30,7/30,7/25` on Q.
+
+Full evidence:
+[`sixteenth-second-batch-results-2026-07-24.md`](sixteenth-second-batch-results-2026-07-24.md).
+Return to breadth; do not expand these failed families.

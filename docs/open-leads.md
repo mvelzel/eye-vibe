@@ -1157,3 +1157,16 @@ four header-defined canonical necklace cuts, and 120 `GF(125)`
 Möbius/Frobenius representations. All three require exact planted recovery
 and all-family heldout closure; abstract exceptional isomorphisms cannot
 promote themselves.
+
+**Second-batch result:** all three close with passing plants. The best outer
+action has 53 P and 364 Q newline-mask errors, with no exact P candidate. All
+four necklace conventions produce zero canonical panels despite every tape
+being primitive and borderless. No `GF(125)` representation makes even one
+context exact; the fully three-edge-fitted winner reaches at most `9/18` in
+training and `7/25` heldout.
+
+Details:
+[`sixteenth-second-batch-results-2026-07-24.md`](sixteenth-second-batch-results-2026-07-24.md).
+The outer automorphism remains a valid abstract relation, not an Eye clue
+without another authored consumer. Reset/Hankel, graph covering,
+finite-state coding, archaeology, and practice transfer remain queued.
