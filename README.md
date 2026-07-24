@@ -219,6 +219,14 @@ isometries, and a canonical five-ary reflected-Gray traversal. Direct Kantele
 sonification is recorded as prior art; targeted read-only Discord searches
 found no exact formulation of these four bounded tests.
 
+That first batch is complete in
+[`docs/fifteenth-first-batch-results-2026-07-24.md`](docs/fifteenth-first-batch-results-2026-07-24.md).
+All plants pass, while the Eyes give prefix-code tail `5/120`, multiset P/Q
+tails `1410/2001` and `656/2001`, five-adic preservation
+`171/249` then `573/831`, and Gray-chord preservation `3/59` then `3/82`.
+No object earns depth; the next move remains lateral rather than fitting one
+of these failures.
+
 The next Eye pass deliberately changes the question from “how can these
 numbers be read?” to “what small mechanism caused the equality and
 reconvergence structure?” Its fourteen-lane breadth map is frozen in

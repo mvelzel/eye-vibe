@@ -1079,3 +1079,15 @@ symbolic-dynamics formulation. This is only a bounded search result, not proof
 of universal novelty. Direct Kantele sonification and playing Eye notes
 in-game are prior art; the new claim is only the canonical multiset/order
 factorization and its falsifiable split.
+
+**First-batch result:** A–D all close with passing plants. The prefix-code
+winner has exact held-out tail `5/120`; multiset P/Q tails are
+`1410/2001` and `656/2001`, with order-tape tail `89/2001`; the five-adic
+hierarchy preserves only `171/249` and `573/831` pairs; and the Gray path
+preserves only `3/59` and `3/82` chords. Results:
+[`fifteenth-first-batch-results-2026-07-24.md`](fifteenth-first-batch-results-2026-07-24.md).
+
+No failed family receives a fitted alphabet, tree, hierarchy, or curve. The
+next lateral options are E–H—symbolic dynamics, universal reset semantics,
+header-dispatched checksum types, and missing-state reduction events—or K's
+operation/version archaeology.

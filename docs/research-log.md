@@ -3068,3 +3068,28 @@ for the first batch: a 42-shape header-ordered six-leaf prefix code, the
 orders, and 96 canonical reflected-Gray geometries. Plants, first/last-family
 held-out gates, complete controls, and forbidden repairs are specified before
 any real result.
+
+All four plants pass. The prefix-code selector recovers
+`shape17:header`, aligned width-eight MSB, exactly. The multiset plant beats
+200 relabelings on both P and Q (`1/201` each). A conditional five-adic tree
+automorphism recovers hierarchy `(2,0,1)` and preserves `3120/3120` training
+plus `2340/2340` held-out pairs. A translated reflected-Gray fixture preserves
+`136/136` and `102/102` chords; two reflection masks are distance-equivalent.
+
+The Eye results are all negative. The prefix-code winner
+`shape11:inverse` has held-out score `-24.720305418` and exact rank
+`5/120 = 0.041666667`. The multiset projection has P/Q corrected tails
+`1410/2001 = 0.704647676` and `656/2001 = 0.327836082`; the order tape's
+`343` compressed bytes and `684` runs give `89/2001 = 0.044477761`.
+
+The geometric necessities fail exactly. The best five-adic order `(1,2,0)`
+preserves `171/249` first-family and `573/831` last-family label pairs. Its
+first contradictions change LCP depth from one to zero. The best 125-state
+Gray candidate preserves only `3/59` and `3/82` aligned adjacent chords, with
+an index-zero contradiction in both splits.
+
+Full evidence is in
+`docs/fifteenth-first-batch-results-2026-07-24.md`. This closes the four frozen
+objects without altering arbitrary lag-one 83-wheel status or licensing
+fitted code trees, multiset alphabets, hierarchies, or space-filling curves.
+The branch returns laterally to E–H or acquisition lane K.

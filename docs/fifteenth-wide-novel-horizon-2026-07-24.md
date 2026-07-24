@@ -171,3 +171,23 @@ Implement A–D only after this horizon is committed.
 - If all four fail with passing plants, record four exclusions and return to
   E–H or K. Preserve the unresolved adjacent-only 83-wheel, original trie
   checksum, practice ciphers 3/4, source leads, and Gate clues on the ledger.
+
+## First-batch result
+
+All four detectors pass their planted controls and fail on the Eyes:
+
+- A recovers its exact planted tree and byte convention, but the real
+  P-selected `shape11:inverse` has exhaustive Q tail
+  `5/120 = 0.041666667`;
+- B detects the planted multiset payload on both splits at `1/201`, while the
+  real P and Q tails are `1410/2001` and `656/2001`; its order tape reaches
+  only `89/2001`;
+- C recovers a planted conditional tree automorphism at `3120/3120` and
+  `2340/2340`, but the best Eye hierarchy preserves only `171/249` training
+  and `573/831` held-out pairs;
+- D preserves all `136/136` and `102/102` planted Gray chords, but the best Eye
+  candidate gives only `3/59` and `3/82`.
+
+Full evidence is in
+[`fifteenth-first-batch-results-2026-07-24.md`](fifteenth-first-batch-results-2026-07-24.md).
+No lane earns depth; continue laterally to E–H or acquisition lane K.
