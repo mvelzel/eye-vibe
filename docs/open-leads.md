@@ -1391,3 +1391,26 @@ are mapped before depth. First priority is a prospective use of the unused
 17-bit pattern; the reported `24,20,16` diamond geometry is the main
 independent asset-acquisition lane. Horizon:
 [`nineteenth-earthquake-circle-wide-horizon-2026-07-24.md`](nineteenth-earthquake-circle-wide-horizon-2026-07-24.md).
+
+### Desert-glyph paired-trigram transform
+
+The original “Diamond Readings” document and installed assets have now been
+audited. The reported `24,20,16,85` diamond geometry is not in the sprite:
+it follows mathematically from an analyst-chosen `1,2,3` walk on a radius-six
+Manhattan board. That part is closed as independent Earthquake-circle
+corroboration.
+
+A separate lead survives. The diamond, three-oval, and `¡!¡` ruin blocks are
+exactly the three decorated structures with spawn weight `.6`. Their proposed
+reading pairs accepted trigrams with `y=021`, `x=120`, then applies `5x+y`
+or `x²+y`; every published value reproduces. The squared map has only 19
+reachable values and an intrinsic uniform-input IoC of `.0624`. Its aggregate
+collision excess gives six-alignment max-family tails `.019199` under whole
+x-trigram reassociation and `.013799` under cyclic offsets. Because the
+formula was historically selected from a broad search, this is not a decode
+or promotable p-value.
+
+Keep the exact transform as a medium-low-priority intermediate
+representation. Test it next only against held-out equality/isomorph
+predictions, not an unconstrained substitution search. Audit:
+[`twentieth-diamond-reading-audit-2026-07-24.md`](twentieth-diamond-reading-audit-2026-07-24.md).

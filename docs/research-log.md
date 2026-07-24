@@ -3588,3 +3588,28 @@ gets no new p-value. Eight possible consumers are ranked before depth. The
 first prospective test will use the still-unused actual 17-bit pattern;
 independent acquisition of the reported `24,20,16` diamond geometry is next.
 Horizon: `docs/nineteenth-earthquake-circle-wide-horizon-2026-07-24.md`.
+
+The diamond acquisition overturns the reported-number premise. Naugam's
+`24,20,16` “radii” are the shell sizes `4r` for `r=6,5,4`, and `85` is the
+size `1+2r(r+1)` of the same radius-six Manhattan ball. The board was
+constructed by assigning the three trigram eyes walk lengths `1,2,3`; these
+are not counts
+measured from Noita's diamond sprite. Lane G is therefore negative as
+independent Earthquake-circle corroboration.
+
+The original defektu “Diamond Readings” document nevertheless exposes a
+different exact asset-backed transform. In the installed WAK, blocks 01
+(diamond), 05 (three ovals), and 07 (`¡!¡`) are precisely the three decorated
+desert-ruin pieces sharing spawn weight `.6`. Pairing accepted trigrams as
+`y,x`, reading orders `021,120`, and zero-padding odd endings reproduces every
+published `5x+y` and `x²+y` value.
+
+The squared output has 19 reachable symbols and a built-in uniform-input IoC
+of `.0624`, so its raw `.069–.085` message IoCs are not direct language
+evidence. It uniquely maximizes aggregate ordered collisions among the six
+relative component alignments. Max-family controls give `384/20001=.019199`
+for whole-x-trigram reassociation and `276/20001=.013799` for cyclic offsets.
+Those controls still do not correct the historical formula search, and the
+author later called similar high-IoC summed-eye effects coincidental. Preserve
+the exact transform for a held-out isomorph test, but do not call it a decode.
+Audit: `docs/twentieth-diamond-reading-audit-2026-07-24.md`.
