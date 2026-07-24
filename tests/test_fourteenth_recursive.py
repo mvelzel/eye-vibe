@@ -1,5 +1,6 @@
 import unittest
 
+from eye_mystery.corpus import MESSAGE_ORDER, MESSAGES, trigram_values
 from eye_mystery.fourteenth_recursive import (
     RecursiveRule,
     audit_recursive_checks,
@@ -40,6 +41,21 @@ class FourteenthRecursiveTests(unittest.TestCase):
             audit_recursive_checks(streams).branch_paths,
             audit_recursive_checks(reversed_streams).branch_paths,
         )
+
+    def test_eye_branch_result_is_frozen(self) -> None:
+        bodies = {
+            name: trigram_values(MESSAGES[name])[1:]
+            for name in MESSAGE_ORDER
+        }
+        audit = audit_recursive_checks(bodies)
+        self.assertEqual(
+            (2, 24, 5, 9, 20),
+            tuple(map(len, audit.branch_paths)),
+        )
+        self.assertEqual(0, audit.leave_one_out_correct)
+        self.assertEqual((96, 32, 64, 73, 5), audit.selected_branch_values)
+        self.assertEqual(0, audit.selected_branch_zeros)
+        self.assertEqual(62, audit.root_value)
 
 
 if __name__ == "__main__":

@@ -3008,3 +3008,17 @@ planted selection control, and a joint matched tail below `.01`.
 This prevents the definitional `(1,1,0,0)` root sum from counting as its own
 prediction and forbids coefficient expansion after seeing five residues. The
 freeze is `docs/fourteenth-recursive-check-freeze-2026-07-24.md`.
+
+The recursive selector passes its planted nested tree: all five held-out
+branches are zero and the root closes. The Eye data gate then fails maximally.
+Across all 54 rules and five canonical branch nodes—270 values total—not one
+is zero. Every leave-one-out fold therefore scores zero; deterministic ties
+select `(-1,-1,-1,-1)`, whose branch values are
+`96,32,64,73,5` and whose root value is 62.
+
+Since observed prediction is `0/5` and the root is nonzero, subgroup controls
+are not run. Full results are in
+`docs/fourteenth-recursive-check-results-2026-07-24.md`. The result preserves
+the unexplained `37,774 mod101=0` root event while closing this compact uniform
+recursive consumer and forbidding coefficient/node-type expansion without an
+authored interface.

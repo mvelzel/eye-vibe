@@ -212,3 +212,16 @@ Its 54 bottom-up rules must predict all five branch zeros under
 leave-one-branch-out selection and then close the unscored root. The ordinary
 trie sum is only one member; 5/5, root closure, a planted selection control,
 and a joint matched tail below `.01` are all mandatory.
+
+## Fifth-lane result
+
+Lane M passes its planted selector (`5/5`, root zero) and fails the Eye data
+gate maximally. None of the `54×5=270` rule/branch evaluations is zero, so
+leave-one-out prediction is `0/5`. The deterministic all-branch tie rule gives
+branch values `96,32,64,73,5` and root 62. Controls are unnecessary because
+both exact prerequisites fail.
+
+Full results:
+[`fourteenth-recursive-check-results-2026-07-24.md`](fourteenth-recursive-check-results-2026-07-24.md).
+The original trie checksum remains unexplained, but this uniform recursive
+consumer receives no coefficient or node-type expansion.

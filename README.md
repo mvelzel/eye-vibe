@@ -195,6 +195,13 @@ labels total `792 ≡ 85 mod 101`, zero matched subgroup relabelings close the
 fixed checksum, and the complete depth-drop tape contains no `BEXIT`.
 The canonical cache/failure machine is therefore closed rather than repaired.
 
+The high-value recursive trie follow-up is also complete in
+[`docs/fourteenth-recursive-check-results-2026-07-24.md`](docs/fourteenth-recursive-check-results-2026-07-24.md).
+Its planted five-branch tree predicts `5/5` and closes the root. Across the
+Eyes, none of 270 rule/branch values is zero: leave-one-out is `0/5`, and the
+all-branch-selected rule gives root 62. The original mod-101 trie closure
+remains unexplained, but this compact recursive consumer is exactly closed.
+
 The next Eye pass deliberately changes the question from “how can these
 numbers be read?” to “what small mechanism caused the equality and
 reconvergence structure?” Its fourteen-lane breadth map is frozen in

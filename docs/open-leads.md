@@ -1026,3 +1026,13 @@ Fifty-four label-consuming bottom-up rules are selected with each of the five
 branch nodes held out. Promotion requires 5/5 branch prediction, root closure,
 a planted recovery, and one joint diagonal-preserving matched-control tail
 below `.01`. The known root sum alone cannot pass.
+
+**Lane-M result:** the planted tree passes `5/5` with root zero; the Eye trie
+has zero hits among all `54×5=270` rule/branch evaluations. Leave-one-out is
+`0/5`, and the selected root is 62. Matched controls are not opened because
+both exact prerequisites fail. Results:
+[`fourteenth-recursive-check-results-2026-07-24.md`](fourteenth-recursive-check-results-2026-07-24.md).
+
+The original prefix-trie closure stays active as an unexplained checksum, not
+as this recursive machine. Reopen recursive weights or node types only if a
+later authored interface fixes them independently.
