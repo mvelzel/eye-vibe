@@ -1110,7 +1110,8 @@ practice ciphers 3/4, source ancestry, and chronology leads remain active.
 
 ### Sixteenth exceptional-structures horizon
 
-**Status:** fifteen lanes frozen wide; first batch A/C/D/E not yet scored.
+**Status:** fifteen lanes frozen wide; first batch A/C/D/E closed with
+passing plants.
 
 A canonical projective quotient of the raw eye cube was previously missing
 from the ledger. Nonzero triples in `F5^3` form the 31 points of `PG(2,5)`.
@@ -1135,3 +1136,16 @@ lanes remain queued rather than discarded.
 
 Freeze and stop rules:
 [`sixteenth-wide-exceptional-structures-horizon-2026-07-24.md`](sixteenth-wide-exceptional-structures-horizon-2026-07-24.md).
+
+The first batch is now negative. Every projected repeated context loses
+functionality or injectivity, and the canonical 31-ray language projection
+has P/Q tails `.065967016` and `.148925537`. The best header-Dyck convention
+reaches only `5/977` P symbols and validates no panel. The five-state rotor
+fails on East 1's first local successor turn `1,1,2,0,1`. All 720 low-degree
+`P1(F25)` row-code candidates fit zero of ten P records.
+
+Results:
+[`sixteenth-first-batch-results-2026-07-24.md`](sixteenth-first-batch-results-2026-07-24.md).
+The 31-ray/42-complement inventory remains an exact coordinate fact, but it
+has no validated consumer. Outer-`S6`, reset/Hankel/Lyndon, `GF(125)`,
+covering/coder, archaeology, and practice-transfer lanes remain queued.

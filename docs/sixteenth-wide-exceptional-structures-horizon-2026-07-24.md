@@ -220,3 +220,22 @@ Implement four different objects, only after this horizon is committed:
 - Preserve the original trie checksum, arbitrary lag-one wheel, factoradic
   metadata, Gate construction vocabulary, practice ciphers 3/4, source
   ancestry, and chronology ledger throughout.
+
+## First-batch result
+
+All four plants pass, and all four real mechanisms close:
+
+- the exact 31-ray alphabet decomposition is preserved, but all seven
+  projected context maps lose functionality or injectivity; the fixed ray
+  language projection has P/Q tails `.065967016` and `.148925537`;
+- all four header-Dyck conventions fail in P, with the winner reaching only
+  `5/977` P and `26/2190` Q symbols and no valid panel;
+- East 1's first five successors from raw direction zero are
+  `1,1,2,0,1`, contradicting a five-successor rotor turn;
+- every one of 720 `P1(F25)` candidates fits `0/10` P records.
+
+Full evidence:
+[`sixteenth-first-batch-results-2026-07-24.md`](sixteenth-first-batch-results-2026-07-24.md).
+The exact projective inventory remains a fact, not a cipher result.
+Outer-`S6`, reset, Hankel, Lyndon, `GF(125)`, graph-covering, enumerative-code,
+archaeology, and practice-transfer lanes remain queued.

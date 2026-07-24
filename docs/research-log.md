@@ -3157,3 +3157,35 @@ batch deliberately spans four objects: canonical `PG(2,5)` ray homophony and
 projective-context necessities, header-induced three-type Dyck syntax,
 five-state raw-eye rotor schedules, and within-row `P1(F25)` low-degree
 extended codes. No real score may be calculated before the freeze commit.
+
+All four positive controls then pass before real scoring. A planted
+projective map preserves `4495/4495` incidence triples, and a canonical ray
+homophone beats 200 relabelings on both splits. The header-Dyck plant validates
+all `977+2190` symbols. Five planted local rotors are recovered across
+independent resets. The extended-row plant uniquely recovers
+`x^2+2`, output eyes `0,2`, forward order, and degree 3, closing `10/10` P
+plus `24/24` Q records.
+
+The real projective action fails before matrix fitting. Every one of the seven
+nonliteral contexts is nonfunctional or noninjective after ray projection.
+The separate 31-point language tape also misses promotion: P/Q corrected
+tails are `132/2001=.065967016` and `298/2001=.148925537`. Thus the
+31-ray/42-complement inventory is exact but has no validated geometric or
+homophonic consumer.
+
+Typed stack syntax fails all panels. The P-selected `header-aligned`
+convention reaches only `5/977` training and `26/2190` heldout symbols; East 1
+first mismatches at renderer-tape index 5. The rotor model fails still
+earlier: the first five successors of current direction zero in East 1 are
+`1,1,2,0,1`, not a permutation of the five directions.
+
+The exact `P1(F25)` row test is maximally negative. Across ten irreducible
+quadratics, six ordered eye pairs, two directions, and degrees 0–5, all 720
+candidates fit zero of ten P records. No candidate reaches Q selection.
+
+Full evidence is in
+`docs/sixteenth-first-batch-results-2026-07-24.md`; the Z3-enabled suite passes
+504 tests. The result does not reject the factoradic headers or use the
+abstract outer-`S6` identity as evidence. Outer-`S6`, reset/Hankel/Lyndon,
+`GF(125)`, graph covering, finite-state coding, archaeology, and practice
+transfer remain queued alongside the original durable leads.
