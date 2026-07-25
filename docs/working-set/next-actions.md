@@ -3,30 +3,27 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Execute the header scope program (`20/20`)
+## 1. Execute the terminal source-state return (`20/20`)
 
-The final headers now route a low-capacity target-to-source transition:
+The header layer now selects a concrete body event:
 
 ```text
-E4 0->0 loop
-E5 1->0 target mate: old pair 17+3=20
-W4 0->2 source mate: late pair 30+4=34
-
-final +3 -> phase pointer/row 1; bridge repair completes row 1
+row 2: 34+29=63, 63+13=76
+terminal late class: 15 at positions 16 and 29
+active scope: E4 loop -> W4 source mate
 ```
 
-Treat the three factoradic header coordinates as a scope-routing program.
-Without inspecting another candidate segment first, derive a ranked prediction
-for:
+Freeze the directed E4/W4 operation before scanning other repeat classes or
+panel pairs. Test whether the terminal visible values return:
 
-- the roles of row-2 markers `76,63`;
-- the next pair/scope after boundary `34`;
-- one additional old/new state edge beyond `7->24`; or
-- one first-seen allocation.
+- the E4 loop/header state `27`;
+- the preserved state edge `7->24`;
+- a next phase boundary; or
+- a deterministic allocation/cache role.
 
-**Promotion gate:** freeze the coordinate-to-scope rule, then recover a held-out
-boundary, marker role, edge, or allocation. A narrative that merely renames
-the observed target/source pairs fails.
+**Promotion gate:** the fixed source operation must recover one known state
+and remain unusual after every repeat event, panel pair, direction, and a
+matched relabeling null. A post-hoc choice among arithmetic operations fails.
 
 ## 2. Novel machine synthesis, wide first (`16/20`)
 

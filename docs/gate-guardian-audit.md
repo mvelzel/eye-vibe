@@ -248,6 +248,21 @@ suffixes of the two mates, `20+30=50` equals both the East1 marker and
 header transducer independently of the dossier's missing masks. Full audit:
 [`thirty-sixth-phase-marker-closure-results-2026-07-26.md`](thirty-sixth-phase-marker-closure-results-2026-07-26.md).
 
+The remaining row-2 fields now execute as the terminal pointer for that source
+phase. Its final equality class occurs at position 29 and repeats position 16,
+so the reverse-cycle marker order is:
+
+```text
+West3 34 + 29 = East3 63
+East3 63 + 13 = West2 76
+```
+
+This is the only observed hit after allowing every marker row, ordering,
+repeat event, and increment sign. Combined with the phase topology it selects
+the unique observed scalar assignment. All nine markers therefore have a
+control-plane role; visible body-label semantics remain open. Results:
+[`thirty-seventh-terminal-repeat-record-results-2026-07-26.md`](thirty-seventh-terminal-repeat-record-results-2026-07-26.md).
+
 The Eye-side transition now also preserves one constrained state edge. After
 canonicalizing the old and new phases independently, `7->24` is the only edge
 shared by any panel pair: it appears in both East panels with different

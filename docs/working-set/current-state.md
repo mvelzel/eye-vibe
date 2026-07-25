@@ -22,13 +22,8 @@ and reproduction paths are in [`evidence-map.md`](evidence-map.md).
 The first trigram of each message is structured metadata, not an ordinary body
 symbol.
 
-Canonical ranks:
-
-```text
-row 1: 50 80 36
-row 2: 76 63 34
-final: 27 77 33
-```
+Canonical rows are `(50,80,36)`, `(76,63,34)`, and final
+`(27,77,33)`.
 
 Treating each rank as a lexicographic permutation of the five eye codes plus
 newline gives:
@@ -44,13 +39,7 @@ a header type system, not yet a decoder.
 
 ## Promoted locale field
 
-The nine header scalar digits form:
-
-```text
-0 0 1
-1 3 4
-2 2 3
-```
+The nine scalar digits form rows `(0,0,1)`, `(1,3,4)`, `(2,2,3)`.
 
 Natural column sums give `+358`; the fixed marker trail and inverse BWT give
 `!Fi`. A generic calling-code/region audit finds the observed
@@ -62,15 +51,9 @@ itself establish Finnish body plaintext or authorize `FI358` as a key.
 
 ## Promoted final-row record
 
-After removing each marker and its copied 20-symbol opening, the final three
-messages contain unique clean gap-11 repeats:
-
-```text
-message  anchor  trimmed start
-E4       75      16
-W4       81      18
-E5       48      17
-```
+After removing each marker and copied 20-symbol opening, the final messages
+have unique gap-11 `(anchor,start)` records: E4 `(75,16)`, W4 `(81,18)`,
+E5 `(48,17)`.
 
 Their marker values are exact mod-83 differences:
 
@@ -124,10 +107,20 @@ only the observed of two full factoradic survivors. Treat seven as a
 phase-width budget and newline preimage as a schedule field; the state update
 and body-label semantics remain unknown.
 
-A prospective transfer to row 2 predicts suffixes `(4,3,4)` and starts
-`(15,14,15)`, where an exact-looking map switch and seven-symbol phase occur.
-It is negative under matched controls: exact joint tail `.021459571`, broad
-tail `.400012000`. Do not generalize the final ledger to row 2.
+Literal transfer to row 2's copied-opening exit remains negative (`.0215`
+exact, `.4000` broad). Row 2 instead encodes the terminal repeat of the late
+common phase. From the source-pair boundary 34, the terminal zero-based
+position is 29 and its back-reference distance is 13:
+
+```text
+34+29=63
+63+13=76
+```
+
+This is the reverse-cycle order West3 -> East3 -> West2. It is the only hit
+after allowing every row, order, repeat event, and increment sign. The fixed
+record occurs in `126/12096`; combined with the phase topology it leaves only
+the observed scalar assignment.
 
 Across the promoted final map switch, the same visible value links independently
 canonicalized old/new classes. The only edge shared by any panel pair is
@@ -142,14 +135,8 @@ Promote one preserved state/cache correspondence, not a general update map.
 ## Later Gate/WAK corroboration
 
 The Gate Guardian postdates the October 2020 Eye Messages and is eligible only
-as a later decoding/construction hint. Veska objectively contains:
-
-```text
-upper components: 1,5,3 -> 153
-lower pictogram:  +3
-153 mod83       -> f
-(153+3) mod83   -> i
-```
+as a later decoding/construction hint. Veska objectively supplies upper
+`1,5,3 ->153`, lower `+3`, and `153,(153+3) mod83 -> f,i`.
 
 The current-WAK chest RNG salts independently render as `+3` under the Eye
 alphabet and repeat `683 -> NU`; they were introduced in March 2023.

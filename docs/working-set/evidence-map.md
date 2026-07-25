@@ -53,12 +53,15 @@ archive.
   [`../thirty-fifth-phase-overlap-update-results-2026-07-26.md`](../thirty-fifth-phase-overlap-update-results-2026-07-26.md)
 - Complete phase/header repair and target-to-source scope switch:
   [`../thirty-sixth-phase-marker-closure-results-2026-07-26.md`](../thirty-sixth-phase-marker-closure-results-2026-07-26.md)
+- Row-2 terminal-repeat pointer record:
+  [`../thirty-seventh-terminal-repeat-record-results-2026-07-26.md`](../thirty-seventh-terminal-repeat-record-results-2026-07-26.md)
 - Phase implementations:
   [`../../src/eye_mystery/synchronizing_bridge.py`](../../src/eye_mystery/synchronizing_bridge.py),
   [`../../src/eye_mystery/phase_ledger.py`](../../src/eye_mystery/phase_ledger.py),
   [`../../src/eye_mystery/row2_phase_transfer.py`](../../src/eye_mystery/row2_phase_transfer.py),
   [`../../src/eye_mystery/phase_overlap.py`](../../src/eye_mystery/phase_overlap.py),
-  [`../../src/eye_mystery/phase_marker_closure.py`](../../src/eye_mystery/phase_marker_closure.py)
+  [`../../src/eye_mystery/phase_marker_closure.py`](../../src/eye_mystery/phase_marker_closure.py),
+  [`../../src/eye_mystery/terminal_repeat_record.py`](../../src/eye_mystery/terminal_repeat_record.py)
 
 ## Gate and later clue chronology
 
