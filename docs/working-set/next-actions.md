@@ -3,27 +3,28 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Execute the terminal source-state return (`20/20`)
+## 1. Test Veska `153` as a state selector (`20/20`)
 
-The header layer now selects a concrete body event:
+The control cycle now selects terminal equality class 15, uses an East
+extension width 3, and returns header 27 before applying Gate `+3`:
 
 ```text
-row 2: 34+29=63, 63+13=76
-terminal late class: 15 at positions 16 and 29
-active scope: E4 loop -> W4 source mate
+terminal class15 | suffix3 -> 153
+W4-E4 -> 27; 27+3 -> phase30
 ```
 
-Freeze the directed E4/W4 operation before scanning other repeat classes or
-panel pairs. Test whether the terminal visible values return:
+Freeze the natural `15|3` parsing before broadening. Compare Veska's upper
+`1,5,3` components against every repeated class and typed suffix, then test
+whether its lower `+3` schedules the return cycle rather than merely spelling
+the locale `fi`.
 
-- the E4 loop/header state `27`;
-- the preserved state edge `7->24`;
-- a next phase boundary; or
-- a deterministic allocation/cache role.
+In parallel, retain the two other marker-return events as a bounded schedule
+lead: class5/distance4 returns West4 marker77; class20/distance4 returns East2
+marker36.
 
-**Promotion gate:** the fixed source operation must recover one known state
-and remain unusual after every repeat event, panel pair, direction, and a
-matched relabeling null. A post-hoc choice among arithmetic operations fails.
+**Promotion gate:** a fixed asset parsing selects class15/suffix3 uniquely and
+predicts an operation already present in the cycle. Arbitrary decimal
+concatenations or choosing among repeat hits after inspection fails.
 
 ## 2. Novel machine synthesis, wide first (`16/20`)
 

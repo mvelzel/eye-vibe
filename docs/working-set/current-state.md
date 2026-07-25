@@ -122,6 +122,12 @@ after allowing every row, order, repeat event, and increment sign. The fixed
 record occurs in `126/12096`; combined with the phase topology it leaves only
 the observed scalar assignment.
 
+The selected terminal class15 labels are E4 `40`, W4 `67`, E5 `21`. The
+already fixed source direction returns `67-40=27 mod83`, exactly the E4 loop
+header. It is the only fixed-direction repeat returning 27; a matched
+multiplicity/reuse relabeling gives `1/12`. Thus the control cycle is
+`27 ->(+3) 30 ->(+4) 34 ->(+29,+13) class15 ->(W4-E4) 27`.
+
 Across the promoted final map switch, the same visible value links independently
 canonicalized old/new classes. The only edge shared by any panel pair is
 `7->24`, present in both East panels with different labels and absent West.

@@ -263,6 +263,21 @@ the unique observed scalar assignment. All nine markers therefore have a
 control-plane role; visible body-label semantics remain open. Results:
 [`thirty-seventh-terminal-repeat-record-results-2026-07-26.md`](thirty-seventh-terminal-repeat-record-results-2026-07-26.md).
 
+At that selected terminal class, E4/W4 labels are `40,67`. Applying the
+already fixed source direction gives `67-40=27`, returning the E4 loop header
+that Gate `+3` advances to phase length 30. The terminal class is the only
+fixed-direction repeat returning 27; exactly one of 12 multiplicity/reuse-
+matched relabelings does so. The Eye-side control machine is therefore a
+literal cycle:
+
+```text
+27 ->(+3) 30 ->(+4) 34 ->(+29,+13) class15
+   ->(W4-E4) 27
+```
+
+Results:
+[`thirty-eighth-terminal-source-return-results-2026-07-26.md`](thirty-eighth-terminal-source-return-results-2026-07-26.md).
+
 The Eye-side transition now also preserves one constrained state edge. After
 canonicalizing the old and new phases independently, `7->24` is the only edge
 shared by any panel pair: it appears in both East panels with different
@@ -377,8 +392,9 @@ control layer. Veska restates the Finnish locale tag as `153`, `+3`,
 `mod83 -> fi`; `+3` then closes the complete final-to-first marker transfer
 through phase pointer 30 and bridge repair 20. The final header edges route an
 Eye-derived target-to-source scope switch whose extensions are `3` and `4`.
-This is a real header/state transducer, although it is not one shared
-factoradic permutation.
+The row-2 pointer and terminal source subtraction return the machine to header
+27, making “cyclical sieve” an executable Eye-side description. This is a real
+header/state transducer, although it is not one shared factoradic permutation.
 
 The raw game code still does **not** execute the dossier's proposed Type4/Type6
 record machine. Its Seula mask, side-band selection, eight cache roles, and
