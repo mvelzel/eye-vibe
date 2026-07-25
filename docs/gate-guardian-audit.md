@@ -294,6 +294,13 @@ the final right state exactly at the E4/W4 conflict, and its cached W4->E4
 difference returns marker77. Results:
 [`fortieth-middle-eye-control-cycle-results-2026-07-26.md`](fortieth-middle-eye-control-cycle-results-2026-07-26.md).
 
+That wheel does not act as a direct D4 substitution between panel tables.
+Square symmetries, toroidal shifts, shared physical eye transforms, and 18,432
+independent-eye D4 models all fail; the broadest family fits at most 3/25
+cells and never predicts class10 from the other control states. A stateful
+cache/allocator remains necessary. Results:
+[`forty-first-state-table-transform-results-2026-07-26.md`](forty-first-state-table-transform-results-2026-07-26.md).
+
 The Eye-side transition now also preserves one constrained state edge. After
 canonicalizing the old and new phases independently, `7->24` is the only edge
 shared by any panel pair: it appears in both East panels with different

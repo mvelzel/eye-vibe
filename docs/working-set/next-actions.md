@@ -3,27 +3,27 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Execute the `5×5` equality-state table (`20/20`)
+## 1. Infer the state allocator/cache (`20/20`)
 
-The common late phase allocates classes `0..24`. Its positive middle-axis
-states form a complete counterclockwise control wheel:
+Direct D4 table transfer is closed. Treat the late signature as an
+allocation/reference program:
 
 ```text
-5,20,15,10 -> up,left,down,right
-last class10 repeat -> E4/W4 boundary34
+common phase: 25 first-seen allocations + 5 references
+E4 boundary: class10 reference; W4 allocates class27
+control wheel: classes5,20,15,10
 ```
 
-Represent each class as `(middle,third)` in the `5×5` leading-zero plane.
-Start wide over only D4 moves, row/column shifts, and source/target map
-operations selected by the control wheel. Use equality and map structure, not
-language scores.
+Start wide over FIFO/LRU/MRU, move-to-front/back, typed cache lookup, and
+small deterministic allocation rules. Preserve the exact reference tape and
+old/new reuse types.
 
-Freeze one operation on three direction states and withhold class10, one
-marker-valued pair difference, and at least one first-seen class.
+Train on common references through class15. Withhold class10's E4 repeat/W4
+allocation split, its marker77 return, and at least one fresh label.
 
-**Promotion gate:** a single table operation predicts the held-out boundary,
-map difference, or allocation. Plot symmetries and per-cell fitted directions
-fail.
+**Promotion gate:** one cache rule predicts the held-out split or a fresh
+allocation. Merely replaying equality classes or choosing a label per cell
+fails.
 
 ## 2. Novel machine synthesis, wide first (`16/20`)
 
