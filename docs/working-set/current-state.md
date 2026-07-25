@@ -105,6 +105,12 @@ No matched, East-conditioned, or broadened control recurs in 50,000 trials
 (`1/50001`). This promotes a reset, shared phase, typed suffix, exact map
 switch, and second shared phase.
 
+The final header control edges are E4 `0->0`, W4 `0->2`, E5 `1->0`.
+Before the switch, the longest pair is the common-target E4/E5 scope:
+`17+3=20`. After it, the longest pair is the common-source E4/W4 scope:
+`30+4=34`. The E4 loop is the pivot, and the extensions match the target- and
+source-mate suffix widths. This promotes a target-to-source scope switch.
+
 The typed suffixes `(3,4,3)` consume two header fields:
 
 ```text
@@ -136,9 +142,7 @@ Promote one preserved state/cache correspondence, not a general update map.
 ## Later Gate/WAK corroboration
 
 The Gate Guardian postdates the October 2020 Eye Messages and is eligible only
-as a later decoding/construction hint.
-
-Objectively measured Veska bands:
+as a later decoding/construction hint. Veska objectively contains:
 
 ```text
 upper components: 1,5,3 -> 153
@@ -150,29 +154,25 @@ lower pictogram:  +3
 The current-WAK chest RNG salts independently render as `+3` under the Eye
 alphabet and repeat `683 -> NU`; they were introduced in March 2023.
 
-The `+3` operator acts coherently on the two non-self fields of the final Eye
-record:
+The previously missing self-field result closes through measured phases:
 
 ```text
-77+3=80
-33+3=36
+final row +3             (27,77,33) -> (30,80,36)
+E4 bridge repair +20                  (50,80,36) = row 1
 ```
 
-It is the only nonzero shift completing any natural non-self row transfer on
-the observed grid. Under the fixed conditional scalar null, the exact event
-occurs `372/12096`; any ordered row pair gives `492/12096`.
-
-The two transfers have different left and right factoradic quotients. This
-supports a narrow scalar/check-field restatement, not one Gate-derived
-factoradic instruction and not a body-wide `+3` shift.
+Here `30` is the late common-phase length and `20+30=50`. The fixed full
+closure occurs in `22/12096` conditional scalar assignments; allowing every
+row pair, self slot, bridge length, and target permutation gives `34/12096`.
+Scanning all 82 shifts leaves only this `+3` construction. It selects the
+observed of two factoradic survivors. The source-pair delta and phase sum both
+equal `50`; the late source-pair boundary `34` is exactly the West3 marker.
 
 The dossier's Type4/Type6 cache machine remains unproved. In particular, the
 Seula 70-pixel residual, exact `12+43+9+8` Veska partition, side-band scope
 rules, and first-seen Type6 allocator are not independently executable.
-
-Veska's objective `9+8=17` bands now match the Eye-derived common phase
-length. This is Gate-motivated, retrospective corroboration of construction
-vocabulary, not an independent probability or a Type4/Type6 decode.
+The two non-self transfers still have different factoradic quotients, so this
+is a header/state repair—not a body-wide shift or complete Gate decoder.
 
 ## Other construction facts worth retaining
 

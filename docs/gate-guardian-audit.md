@@ -198,27 +198,32 @@ The complete frozen comparisons and chronology are in
 and
 [`twenty-ninth-rng-salt-instruction-results-2026-07-24.md`](twenty-ninth-rng-salt-instruction-results-2026-07-24.md).
 
-The same `+3` also has a bounded execution on the original marker record.
-It maps the two established final-row non-self fields into first-row markers:
+The same `+3` now has a complete bounded execution on the original marker and
+phase record. The earlier audit stopped at:
 
 ```text
 West4 77 + 3 = 80 West1
 East5 33 + 3 = 36 East2
 ```
 
-The self/total field gives `27+3=30`, which is absent.  In base five the two
-hits preserve their control-edge target and advance their source by one.
-Among all shifts `1..82`, `+3` is the only one that completely transfers any
-natural row's non-self fields into another row.  Under the 12,096-assignment
-conditional marker null, the exact transfer occurs 372 times (`.030753968`);
-allowing every ordered row pair gives 492 (`.040674603`).
+The shifted self value is not an unused miss. It is the independently measured
+late equality-phase length, and the self bridge repairs it into the remaining
+row-1 field:
 
-This does **not** execute one factoradic instruction.  The two transfers have
-different left and right permutation quotients, and zero conditional complete
-transfers share either quotient.  The narrow scalar/check-field link is
-retained; body shifting and a Gate-derived header transducer are not.
-Full audit:
-[`thirty-first-gate-plus3-marker-transfer-results-2026-07-26.md`](thirty-first-gate-plus3-marker-transfer-results-2026-07-26.md).
+```text
+East4 27 + 3 = 30       late three-panel phase
+       30 + 20 = 50     East4 bridge -> East1 marker
+
+(27,77,33) + 3 = (30,80,36)
+self repair +20 = (50,80,36) = row 1
+```
+
+The fixed closure occurs in 22 of 12,096 conditional scalar assignments
+(`.001818783`). Allowing every ordered row pair, self slot, observed bridge
+length, and target permutation gives 34 (`.002810847`). Scanning every
+nonzero shift under those broad roles leaves exactly one observed hit: `+3`,
+final row to row 1, E4 self, bridge 20. It selects only the observed of the
+two full factoradic survivors.
 
 The final Eye record now supplies a separate executable `17`. From each
 gap-11 return endpoint to the known late-context entry, all three bodies share
@@ -234,6 +239,15 @@ language corroboration, not an independent probability. It still does not
 supply the dossier's missing 17-role assignment or Type6 allocator. Results:
 [`thirty-second-synchronizing-bridge-results-2026-07-26.md`](thirty-second-synchronizing-bridge-results-2026-07-26.md).
 
+The header control edges also route the phase scopes. E4 is loop `0->0`; E5
+shares its target and W4 shares its source. Before the map switch, the longest
+pair is the target group E4/E5, extending `17+3=20`. Afterwards it is the
+source group E4/W4, extending `30+4=34`. The extension widths match the typed
+suffixes of the two mates, `20+30=50` equals both the East1 marker and
+`77-27`, and boundary 34 is the West3 marker. This promotes a target-to-source
+header transducer independently of the dossier's missing masks. Full audit:
+[`thirty-sixth-phase-marker-closure-results-2026-07-26.md`](thirty-sixth-phase-marker-closure-results-2026-07-26.md).
+
 The Eye-side transition now also preserves one constrained state edge. After
 canonicalizing the old and new phases independently, `7->24` is the only edge
 shared by any panel pair: it appears in both East panels with different
@@ -243,6 +257,11 @@ visible labels and is absent West. The edge was selected by the existing
 but it still supplies neither the dossier's eight cache roles nor its
 first-seen allocator. Results:
 [`thirty-fifth-phase-overlap-update-results-2026-07-26.md`](thirty-fifth-phase-overlap-update-results-2026-07-26.md).
+
+The two non-self `+3` transfers still have different left and right
+factoradic quotients. The result is therefore a header/state repair, not one
+shared six-symbol permutation, a body-wide Caesar shift, or a validation of
+the full Type4/Type6 machine.
 
 Likewise, `145 OR (1<<3)=153` is arithmetically exact once bit 3 and the input
 byte are chosen, but the sprite-to-bit selection is the evidentiary step.  The
@@ -338,15 +357,17 @@ timeline, but it would not fill the missing masks or fresh allocator.
 
 ## Assessment and falsification target
 
-The strongest surviving interpretation is now narrower but stronger: Veska
-very plausibly restates the marker's Finnish locale tag as `153`, `+3`,
-`mod83 -> fi`.  Its `+3` also coherently transfers the final marker record's
-two non-self fields into first-row markers, but does not give one factoradic
-operation.  The Gate may additionally repeat visual vocabulary useful for
-paired scopes, a third-eye successor operation, and a `9|8`/17-role boundary.
-The raw game code still does **not** execute the dossier's proposed record
-machine, and several central numerical joins remain retrospective and
-under-specified.
+The strongest surviving interpretation is now broader and executable at the
+control layer. Veska restates the Finnish locale tag as `153`, `+3`,
+`mod83 -> fi`; `+3` then closes the complete final-to-first marker transfer
+through phase pointer 30 and bridge repair 20. The final header edges route an
+Eye-derived target-to-source scope switch whose extensions are `3` and `4`.
+This is a real header/state transducer, although it is not one shared
+factoradic permutation.
+
+The raw game code still does **not** execute the dossier's proposed Type4/Type6
+record machine. Its Seula mask, side-band selection, eight cache roles, and
+fresh-value allocator remain retrospective or under-specified.
 
 The dossier's full Gate record machine should be promoted only after one
 frozen, prospective result:

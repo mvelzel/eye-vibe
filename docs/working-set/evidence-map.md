@@ -51,11 +51,14 @@ archive.
   [`../thirty-fourth-row2-phase-transfer-results-2026-07-26.md`](../thirty-fourth-row2-phase-transfer-results-2026-07-26.md)
 - Preserved `7->24` cross-phase state edge:
   [`../thirty-fifth-phase-overlap-update-results-2026-07-26.md`](../thirty-fifth-phase-overlap-update-results-2026-07-26.md)
+- Complete phase/header repair and target-to-source scope switch:
+  [`../thirty-sixth-phase-marker-closure-results-2026-07-26.md`](../thirty-sixth-phase-marker-closure-results-2026-07-26.md)
 - Phase implementations:
   [`../../src/eye_mystery/synchronizing_bridge.py`](../../src/eye_mystery/synchronizing_bridge.py),
   [`../../src/eye_mystery/phase_ledger.py`](../../src/eye_mystery/phase_ledger.py),
   [`../../src/eye_mystery/row2_phase_transfer.py`](../../src/eye_mystery/row2_phase_transfer.py),
-  [`../../src/eye_mystery/phase_overlap.py`](../../src/eye_mystery/phase_overlap.py)
+  [`../../src/eye_mystery/phase_overlap.py`](../../src/eye_mystery/phase_overlap.py),
+  [`../../src/eye_mystery/phase_marker_closure.py`](../../src/eye_mystery/phase_marker_closure.py)
 
 ## Gate and later clue chronology
 

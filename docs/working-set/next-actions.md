@@ -3,28 +3,30 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Predict beyond the preserved phase edge (`19/20`)
+## 1. Execute the header scope program (`20/20`)
 
-The promoted final schedule is:
-
-```text
-return -> common17 -> East RNN / West NNNR -> map switch -> common30
-```
-
-The update now contains one constrained state correspondence:
+The final headers now route a low-capacity target-to-source transition:
 
 ```text
-old class 7 -> new class 24 = 7+17
-East first occurrence 28 = 24+newline preimage 4
+E4 0->0 loop
+E5 1->0 target mate: old pair 17+3=20
+W4 0->2 source mate: late pair 30+4=34
+
+final +3 -> phase pointer/row 1; bridge repair completes row 1
 ```
 
-Start wide over low-capacity cache, queue/deck, automaton-state, and typed
-allocation rules. Train only on the schedule and `7->24`; withhold all other
-overlap edges, panel reuse counts, and phase exits.
+Treat the three factoradic header coordinates as a scope-routing program.
+Without inspecting another candidate segment first, derive a ranked prediction
+for:
 
-**Promotion gate:** one rule predicts another old/new edge, which panel
-preserves it, a first-seen allocation, or a phase exit. Arbitrary completion
-of the partial permutations fails.
+- the roles of row-2 markers `76,63`;
+- the next pair/scope after boundary `34`;
+- one additional old/new state edge beyond `7->24`; or
+- one first-seen allocation.
+
+**Promotion gate:** freeze the coordinate-to-scope rule, then recover a held-out
+boundary, marker role, edge, or allocation. A narrative that merely renames
+the observed target/source pairs fails.
 
 ## 2. Novel machine synthesis, wide first (`16/20`)
 
