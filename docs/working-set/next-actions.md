@@ -3,7 +3,7 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Decode the typed phase transition (`18/20`)
+## 1. Predict beyond the preserved phase edge (`19/20`)
 
 The promoted final schedule is:
 
@@ -11,13 +11,20 @@ The promoted final schedule is:
 return -> common17 -> East RNN / West NNNR -> map switch -> common30
 ```
 
-Seek the smallest operation that turns the first cross-panel partial
-bijections into the second. Use only overlap edges and header class as
-training; withhold one changed mapping or the known four-symbol late
-extension.
+The update now contains one constrained state correspondence:
 
-**Promotion gate:** one operation predicts an undisclosed map edge or phase
-exit. Arbitrary completion of the partial permutations fails.
+```text
+old class 7 -> new class 24 = 7+17
+East first occurrence 28 = 24+newline preimage 4
+```
+
+Start wide over low-capacity cache, queue/deck, automaton-state, and typed
+allocation rules. Train only on the schedule and `7->24`; withhold all other
+overlap edges, panel reuse counts, and phase exits.
+
+**Promotion gate:** one rule predicts another old/new edge, which panel
+preserves it, a first-seen allocation, or a phase exit. Arbitrary completion
+of the partial permutations fails.
 
 ## 2. Novel machine synthesis, wide first (`16/20`)
 

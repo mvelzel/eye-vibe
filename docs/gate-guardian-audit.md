@@ -234,6 +234,16 @@ language corroboration, not an independent probability. It still does not
 supply the dossier's missing 17-role assignment or Type6 allocator. Results:
 [`thirty-second-synchronizing-bridge-results-2026-07-26.md`](thirty-second-synchronizing-bridge-results-2026-07-26.md).
 
+The Eye-side transition now also preserves one constrained state edge. After
+canonicalizing the old and new phases independently, `7->24` is the only edge
+shared by any panel pair: it appears in both East panels with different
+visible labels and is absent West. The edge was selected by the existing
+`7+17=24` ledger, not by a Gate value; its exact matched-null probability is
+`3/33800`. This makes “cache/state preservation” more plausible vocabulary,
+but it still supplies neither the dossier's eight cache roles nor its
+first-seen allocator. Results:
+[`thirty-fifth-phase-overlap-update-results-2026-07-26.md`](thirty-fifth-phase-overlap-update-results-2026-07-26.md).
+
 Likewise, `145 OR (1<<3)=153` is arithmetically exact once bit 3 and the input
 byte are chosen, but the sprite-to-bit selection is the evidentiary step.  The
 dossier says direct use of the Boolean descriptor on raw Eye windows is

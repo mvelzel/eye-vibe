@@ -123,6 +123,16 @@ A prospective transfer to row 2 predicts suffixes `(4,3,4)` and starts
 It is negative under matched controls: exact joint tail `.021459571`, broad
 tail `.400012000`. Do not generalize the final ledger to row 2.
 
+Across the promoted final map switch, the same visible value links independently
+canonicalized old/new classes. The only edge shared by any panel pair is
+`7->24`, present in both East panels with different labels and absent West.
+It was independently selected by `7+17=24`; East's newline preimage then puts
+class 24's unique first occurrence at `24+4=28`. Under a null preserving both
+equality signatures and all overlap multiplicity types, the exact East-pair
+probability is `3/33800` (`.000088757`); any shared edge is common (`.1010`),
+but any pair sharing an offset-17 edge has matched-control rate `.00136`.
+Promote one preserved state/cache correspondence, not a general update map.
+
 ## Later Gate/WAK corroboration
 
 The Gate Guardian postdates the October 2020 Eye Messages and is eligible only
