@@ -118,6 +118,11 @@ only the observed of two full factoradic survivors. Treat seven as a
 phase-width budget and newline preimage as a schedule field; the state update
 and body-label semantics remain unknown.
 
+A prospective transfer to row 2 predicts suffixes `(4,3,4)` and starts
+`(15,14,15)`, where an exact-looking map switch and seven-symbol phase occur.
+It is negative under matched controls: exact joint tail `.021459571`, broad
+tail `.400012000`. Do not generalize the final ledger to row 2.
+
 ## Later Gate/WAK corroboration
 
 The Gate Guardian postdates the October 2020 Eye Messages and is eligible only

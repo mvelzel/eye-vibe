@@ -3,29 +3,7 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Transfer the phase-budget rule (`19/20`)
-
-**Established rule:** the final trace has a common 17-position phase,
-side-typed suffixes `(3,4,3)`, and:
-
-```text
-suffix + header newline preimage = row-2 circulation = 7
-```
-
-Test whether that rule predicts a still-unused boundary rather than merely
-describing the final record. The next eligible family is row 2: its fixed
-newline preimages predict suffixes `(4,3,4)`. A phase start/end must first be
-selected from an existing label-invariant boundary—copied-opening exit,
-prefix-tree branch, or registered reconvergence—not by scanning positions for
-those lengths.
-
-**Promotion gate:** the fixed `(4,3,4)` schedule predicts a withheld equality
-or map switch in all three row-2 panels under complete boundary-reselection
-controls.
-
-**Do not:** fit another budget, symbol, position, or per-panel direction.
-
-## 2. Decode the typed phase transition (`18/20`)
+## 1. Decode the typed phase transition (`18/20`)
 
 The promoted final schedule is:
 
@@ -41,7 +19,7 @@ extension.
 **Promotion gate:** one operation predicts an undisclosed map edge or phase
 exit. Arbitrary completion of the partial permutations fails.
 
-## 3. Novel machine synthesis, wide first (`16/20`)
+## 2. Novel machine synthesis, wide first (`16/20`)
 
 Before deepening a new decoder, enumerate a small portfolio of genuinely
 different machines. At minimum include:
@@ -59,7 +37,7 @@ Run one cheap necessity test per family. A family earns depth only by
 predicting a held-out equality, boundary, or marker role. Start wide before
 optimizing parameters.
 
-## 4. Practice cipher #4 constraint solver (`15/20`)
+## 3. Practice cipher #4 constraint solver (`15/20`)
 
 The 57-cycle outer action is established; the remaining codec is the useful
 unknown. Replace the failed beam with a constraint-guided solver that first
@@ -75,7 +53,7 @@ Potential bounded objects:
 **Promotion gate:** exact replay of the full puzzle and a concise account of
 how the mechanism was cracked. A source lookup alone is insufficient.
 
-## 5. Practice cipher #3 mechanism acquisition (`14/20`)
+## 4. Practice cipher #3 mechanism acquisition (`14/20`)
 
 Retain the exact prefix tree and exclusion certificates. Seek an author-hint
 or operation family that explains the progression without inventing a hidden
@@ -84,7 +62,7 @@ or operation family that explains the progression without inventing a hidden
 **Promotion gate:** solve/replay the full puzzle or produce a
 deletion-minimal exact exclusion of a clearly motivated family.
 
-## 6. Read-only Silmä delta (`14/20`)
+## 5. Read-only Silmä delta (`14/20`)
 
 Search the cryptography and novel channels for developments after the latest
 captured evidence, especially:
@@ -99,7 +77,7 @@ Discord remains strictly read-only: no messages, reactions, or calls.
 Preserve attachment hashes and surrounding provenance. Community claims
 generate tests; they are not imported as facts.
 
-## 7. Gate only on new executable evidence (`11/20`)
+## 6. Gate only on new executable evidence (`11/20`)
 
 Do not continue fitting the current dossier. Reopen only if one of these
 arrives:
@@ -112,7 +90,7 @@ arrives:
 
 Require reproduction from raw assets and one held-out prediction.
 
-## 8. Source/language archaeology (`9/20`)
+## 7. Source/language archaeology (`9/20`)
 
 The `FI` field makes Finnish sources worth scoring only after a decoder is
 selected without language. The Finnish *Corpus Hermeticum* lead remains
@@ -133,4 +111,6 @@ decoder-independent reason makes the expected information gain worthwhile.
 - arbitrary hidden wheel fitted directly to Eye output;
 - Earthquake mask or Cessation sampler on the final anchor slices;
 - literal transfer of the final-row grammar to rows 1 and 2;
+- phase-budget transfer to row 2's copied-opening exit (`.0215` exact,
+  `.4000` broad);
 - Gate Type4/Type6 execution without the missing masks and allocator.
