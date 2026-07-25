@@ -278,6 +278,14 @@ literal cycle:
 Results:
 [`thirty-eighth-terminal-source-return-results-2026-07-26.md`](thirty-eighth-terminal-source-return-results-2026-07-26.md).
 
+Veska's upper `1,5,3` tape now has a direct state-machine parse: `15|3`
+selects the terminal equality class and E4 loop suffix. It is the only valid
+class/width parse after allowing all late classes, both suffix widths, both
+splits, and all component permutations. The lower `+3` then executes the
+already fixed `27->30` restart. The same marks still read `fi`, making the
+asset a plausible double-encoded later clue. Results:
+[`thirty-ninth-veska-state-selector-results-2026-07-26.md`](thirty-ninth-veska-state-selector-results-2026-07-26.md).
+
 The Eye-side transition now also preserves one constrained state edge. After
 canonicalizing the old and new phases independently, `7->24` is the only edge
 shared by any panel pair: it appears in both East panels with different
@@ -393,7 +401,8 @@ control layer. Veska restates the Finnish locale tag as `153`, `+3`,
 through phase pointer 30 and bridge repair 20. The final header edges route an
 Eye-derived target-to-source scope switch whose extensions are `3` and `4`.
 The row-2 pointer and terminal source subtraction return the machine to header
-27, making “cyclical sieve” an executable Eye-side description. This is a real
+27, while Veska `15|3,+3` selects and restarts that terminal state. “Cyclical
+sieve” is therefore an executable Eye-side description. This is a real
 header/state transducer, although it is not one shared factoradic permutation.
 
 The raw game code still does **not** execute the dossier's proposed Type4/Type6

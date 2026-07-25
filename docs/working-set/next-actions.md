@@ -3,28 +3,27 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Test Veska `153` as a state selector (`20/20`)
+## 1. Decode the repeat-return schedule (`20/20`)
 
-The control cycle now selects terminal equality class 15, uses an East
-extension width 3, and returns header 27 before applying Gate `+3`:
+Three of five late repeat events produce marker-valued directed differences:
 
 ```text
-terminal class15 | suffix3 -> 153
-W4-E4 -> 27; 27+3 -> phase30
+pos9  class5  distance4   W4->E4 = 77
+pos26 class20 distance4   E5->E4 = 36
+pos29 class15 distance13  E4->W4 = 27
 ```
 
-Freeze the natural `15|3` parsing before broadening. Compare Veska's upper
-`1,5,3` components against every repeated class and typed suffix, then test
-whether its lower `+3` schedules the return cycle rather than merely spelling
-the locale `fi`.
+Start wide over direction schedules derived only from header edge source,
+target, loop, repeat distance, and first/last occurrence roles. Withhold the
+numeric differences while selecting the schedule.
 
-In parallel, retain the two other marker-return events as a bounded schedule
-lead: class5/distance4 returns West4 marker77; class20/distance4 returns East2
-marker36.
+The events at positions18/class0 and27/class1 are negative controls. A valid
+machine should classify them as data/cache validation without choosing that
+classification after inspecting marker hits.
 
-**Promotion gate:** a fixed asset parsing selects class15/suffix3 uniquely and
-predicts an operation already present in the cycle. Arbitrary decimal
-concatenations or choosing among repeat hits after inspection fails.
+**Promotion gate:** one low-capacity schedule predicts all three pair
+directions/marker roles and both non-hits, or predicts a new state outside the
+five inspected repeats. Per-event direction fitting fails.
 
 ## 2. Novel machine synthesis, wide first (`16/20`)
 

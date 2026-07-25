@@ -147,6 +147,11 @@ as a later decoding/construction hint. Veska objectively supplies upper
 The current-WAK chest RNG salts independently render as `+3` under the Eye
 alphabet and repeat `683 -> NU`; they were introduced in March 2023.
 
+Veska `1,5,3` has one valid late-state/suffix parse under all class, split,
+width, and component-permutation controls: terminal class `15`, E4 loop width
+`3`. Its lower `+3` then executes the closed restart `27+3=30`, while the same
+marks redundantly retain `153,+3 -> fi`.
+
 The previously missing self-field result closes through measured phases:
 
 ```text

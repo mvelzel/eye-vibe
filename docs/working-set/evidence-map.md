@@ -57,6 +57,8 @@ archive.
   [`../thirty-seventh-terminal-repeat-record-results-2026-07-26.md`](../thirty-seventh-terminal-repeat-record-results-2026-07-26.md)
 - Terminal source-state return and executable cycle:
   [`../thirty-eighth-terminal-source-return-results-2026-07-26.md`](../thirty-eighth-terminal-source-return-results-2026-07-26.md)
+- Veska `15|3,+3` state-selector diagram:
+  [`../thirty-ninth-veska-state-selector-results-2026-07-26.md`](../thirty-ninth-veska-state-selector-results-2026-07-26.md)
 - Phase implementations:
   [`../../src/eye_mystery/synchronizing_bridge.py`](../../src/eye_mystery/synchronizing_bridge.py),
   [`../../src/eye_mystery/phase_ledger.py`](../../src/eye_mystery/phase_ledger.py),
@@ -64,7 +66,8 @@ archive.
   [`../../src/eye_mystery/phase_overlap.py`](../../src/eye_mystery/phase_overlap.py),
   [`../../src/eye_mystery/phase_marker_closure.py`](../../src/eye_mystery/phase_marker_closure.py),
   [`../../src/eye_mystery/terminal_repeat_record.py`](../../src/eye_mystery/terminal_repeat_record.py),
-  [`../../src/eye_mystery/terminal_source_return.py`](../../src/eye_mystery/terminal_source_return.py)
+  [`../../src/eye_mystery/terminal_source_return.py`](../../src/eye_mystery/terminal_source_return.py),
+  [`../../src/eye_mystery/veska_state_selector.py`](../../src/eye_mystery/veska_state_selector.py)
 
 ## Gate and later clue chronology
 
