@@ -1,5 +1,10 @@
 # Open lead ledger — 24 July 2026
 
+> **Legacy portfolio notice:** this file interleaves live, completed, and
+> superseded breadth branches. The authoritative current queue is
+> [`working-set/next-actions.md`](working-set/next-actions.md); use this file
+> only as a searchable idea archive.
+
 This is a durable ledger, not a claim that every lead should be pursued at
 once.  A paused lead remains here until evidence rejects it or its dependency
 is satisfied; it is not silently dropped when another experiment becomes
@@ -110,15 +115,29 @@ geographic region, so generic region-ness is not strong. The Gate boss
 postdates the October 2020 Eyes, and the salts were added with the March 2023
 chest-randomness fix; both are eligible only as later clues.
 
-**Next test:** treat `FI` as a strongly corroborated marker/header field. Keep
-the full Type4/Type6 dossier unpromoted. Before applying `+3` to bodies, freeze
-one operand and scope from an independent record boundary and require an
-untouched equality or exact re-encryption. Do not scan arbitrary shifts for
-Finnish-looking text. Results:
+**Marker-transfer result:** the fixed final record supplies the independently
+selected scope. Its two non-self fields transfer exactly into row 1:
+
+```text
+77 + 3 = 80
+33 + 3 = 36
+```
+
+The self/total field `27+3=30` is absent. `+3` is the only nonzero shift that
+completely transfers any natural non-self row into another on the observed
+grid. The exact conditional event occurs in `372/12096=.030753968`
+assignments; broadening to all ordered row pairs gives
+`492/12096=.040674603`.
+
+The stronger factoradic consequence fails: the two transfers have different
+left and right permutation quotients, and zero conditional complete
+transfers share a quotient. Promote a narrow scalar/check-field restatement,
+not a body shift or header permutation machine. Results:
 [`twenty-eighth-rng-locale-salt-results-2026-07-24.md`](twenty-eighth-rng-locale-salt-results-2026-07-24.md),
 [`twenty-ninth-rng-salt-instruction-results-2026-07-24.md`](twenty-ninth-rng-salt-instruction-results-2026-07-24.md),
+[`thirtieth-veska-locale-results-2026-07-24.md`](thirtieth-veska-locale-results-2026-07-24.md),
 and
-[`thirtieth-veska-locale-results-2026-07-24.md`](thirtieth-veska-locale-results-2026-07-24.md).
+[`thirty-first-gate-plus3-marker-transfer-results-2026-07-26.md`](thirty-first-gate-plus3-marker-transfer-results-2026-07-26.md).
 
 ### Procedural wand selects exactly `0..82` from `0..100`
 

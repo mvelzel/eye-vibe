@@ -1,5 +1,10 @@
 # Research log — 21 July 2026
 
+> **Archive notice:** this is chronological provenance, not the current
+> resumption document. Start with
+> [`working-set/current-state.md`](working-set/current-state.md) and search
+> this file only for a named topic.
+
 ## Re-established facts
 
 - Nine messages, 1,036 trigrams, lengths `99, 103, 118, 102, 137, 124,
@@ -4119,3 +4124,37 @@ This materially revises the Gate assessment: the full dossier remains
 unproved, but Veska is now a plausible deliberate later diagram of the Eye
 marker's Finnish locale field. No body value has been decoded. Results:
 `docs/thirtieth-veska-locale-results-2026-07-24.md`.
+
+### Gate `+3` transfer on the fixed marker record
+
+The final anchor record supplies a body-independent operand scope for the
+later Gate/WAK `+3` operator. Its two non-self fields transfer exactly into
+the first marker row:
+
+```text
+West4  77 + 3 = 80  West1
+East5  33 + 3 = 36  East2
+East4  27 + 3 = 30  absent
+```
+
+In base five, both hits preserve their established control-edge target and
+advance the source by one. Across all 82 nonzero shifts, `+3` is the only
+shift completing any natural non-self row-to-row transfer on the observed
+grid.
+
+In the 12,096-assignment graph-conditioned scalar universe, the exact transfer
+appears 372 times (`.030753968`), or 283 times with the shifted self field
+absent globally. Searching all ordered row pairs gives 492 complete transfers
+(`.040674603`). These are descriptive because the relation was inspected,
+although the operator was selected independently by later assets.
+
+The preregistered factoradic consequence is exactly negative. The `77->80`
+and `33->36` transfers have different left quotients and different right
+quotients; none belongs to the observed P D4 group. Zero of 372 exact and zero
+of 492 broad complete transfers share a quotient. The detector recovers a
+synthetic shared-quotient plant.
+
+Promote the link only as a later scalar/check-field restatement. It does not
+license a body shift, Finnish plaintext scoring, or the dossier's
+Type4/Type6 machine. Results:
+`docs/thirty-first-gate-plus3-marker-transfer-results-2026-07-26.md`.

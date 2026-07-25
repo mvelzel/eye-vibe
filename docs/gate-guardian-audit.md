@@ -198,6 +198,28 @@ The complete frozen comparisons and chronology are in
 and
 [`twenty-ninth-rng-salt-instruction-results-2026-07-24.md`](twenty-ninth-rng-salt-instruction-results-2026-07-24.md).
 
+The same `+3` also has a bounded execution on the original marker record.
+It maps the two established final-row non-self fields into first-row markers:
+
+```text
+West4 77 + 3 = 80 West1
+East5 33 + 3 = 36 East2
+```
+
+The self/total field gives `27+3=30`, which is absent.  In base five the two
+hits preserve their control-edge target and advance their source by one.
+Among all shifts `1..82`, `+3` is the only one that completely transfers any
+natural row's non-self fields into another row.  Under the 12,096-assignment
+conditional marker null, the exact transfer occurs 372 times (`.030753968`);
+allowing every ordered row pair gives 492 (`.040674603`).
+
+This does **not** execute one factoradic instruction.  The two transfers have
+different left and right permutation quotients, and zero conditional complete
+transfers share either quotient.  The narrow scalar/check-field link is
+retained; body shifting and a Gate-derived header transducer are not.
+Full audit:
+[`thirty-first-gate-plus3-marker-transfer-results-2026-07-26.md`](thirty-first-gate-plus3-marker-transfer-results-2026-07-26.md).
+
 Likewise, `145 OR (1<<3)=153` is arithmetically exact once bit 3 and the input
 byte are chosen, but the sprite-to-bit selection is the evidentiary step.  The
 dossier says direct use of the Boolean descriptor on raw Eye windows is
@@ -294,7 +316,9 @@ timeline, but it would not fill the missing masks or fresh allocator.
 
 The strongest surviving interpretation is now narrower but stronger: Veska
 very plausibly restates the marker's Finnish locale tag as `153`, `+3`,
-`mod83 -> fi`.  The Gate may additionally repeat visual vocabulary useful for
+`mod83 -> fi`.  Its `+3` also coherently transfers the final marker record's
+two non-self fields into first-row markers, but does not give one factoradic
+operation.  The Gate may additionally repeat visual vocabulary useful for
 paired scopes, a third-eye successor operation, and a `9|8`/17-role boundary.
 The raw game code still does **not** execute the dossier's proposed record
 machine, and several central numerical joins remain retrospective and

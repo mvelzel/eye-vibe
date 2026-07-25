@@ -5,11 +5,17 @@ Messages. It does **not** claim a plaintext. As of 22 July 2026 the mystery is
 still publicly unsolved, and the experiments here deliberately distinguish a
 statistical curiosity from a validated decryption.
 
-The current queue is maintained in [`docs/open-leads.md`](docs/open-leads.md);
-the chronological evidence and negative results remain in
-[`docs/research-log.md`](docs/research-log.md).  A lead entering the queue does
-not replace the others.  The breadth-first assumption audit and novel mechanism
-map are in
+To resume current work, load the compact
+[`docs/working-set/current-state.md`](docs/working-set/current-state.md) and
+[`docs/working-set/next-actions.md`](docs/working-set/next-actions.md), then
+use the
+[`docs/working-set/evidence-map.md`](docs/working-set/evidence-map.md) to open
+only the exact supporting report needed. The large
+[`docs/research-log.md`](docs/research-log.md) and
+[`docs/open-leads.md`](docs/open-leads.md) files are searchable provenance
+archives, not startup context.
+
+The breadth-first assumption audit and novel mechanism map are in
 [`docs/novel-synthesis-2026-07-21.md`](docs/novel-synthesis-2026-07-21.md).
 The subsequent deliberately wide architecture map and its frozen cheap probes
 are in
@@ -1080,6 +1086,7 @@ PYTHONPATH=src python3 scripts/audit_358_weighted_alignment.py
 PYTHONPATH=src python3 scripts/audit_three_plane_locale.py
 PYTHONPATH=src python3 scripts/audit_rng_locale_salts.py /path/to/data.wak
 PYTHONPATH=src python3 scripts/analyze_gate_guardian.py --assets /path/to/data/entities/animals/boss_gate --data-root /path/to/data
+PYTHONPATH=src python3 scripts/audit_gate_plus3_transfer.py
 ```
 
 The vectorized selected-card scan additionally requires NumPy:
