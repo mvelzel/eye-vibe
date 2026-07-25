@@ -220,6 +220,20 @@ retained; body shifting and a Gate-derived header transducer are not.
 Full audit:
 [`thirty-first-gate-plus3-marker-transfer-results-2026-07-26.md`](thirty-first-gate-plus3-marker-transfer-results-2026-07-26.md).
 
+The final Eye record now supplies a separate executable `17`. From each
+gap-11 return endpoint to the known late-context entry, all three bodies share
+one equality-state trace for exactly 17 positions. East then has a
+three-position suffix, West a four-position suffix, before a new common
+30-position partial-bijection phase. No matched or broadened control reaches
+the observed trace in 50,000 trials.
+
+Veska's objective upper/lower bands therefore match an Eye-side phase
+boundary as `9+8=17`, rather than only an isolated number. The test was
+Gate-motivated and the comparison retrospective, so this is construction-
+language corroboration, not an independent probability. It still does not
+supply the dossier's missing 17-role assignment or Type6 allocator. Results:
+[`thirty-second-synchronizing-bridge-results-2026-07-26.md`](thirty-second-synchronizing-bridge-results-2026-07-26.md).
+
 Likewise, `145 OR (1<<3)=153` is arithmetically exact once bit 3 and the input
 byte are chosen, but the sprite-to-bit selection is the evidentiary step.  The
 dossier says direct use of the Boolean descriptor on raw Eye windows is

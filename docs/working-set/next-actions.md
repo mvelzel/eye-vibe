@@ -3,37 +3,43 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Synchronizing-loop semantics (`18/20`)
+## 1. Transfer the phase-budget rule (`19/20`)
 
-**Question:** Why do all three final bodies contain one clean
-`A..........A` loop of length 11 at header-ordered starts?
+**Established rule:** the final trace has a common 17-position phase,
+side-typed suffixes `(3,4,3)`, and:
 
-Treat each 11-step window as a state-return trace, not a text crib. Compare
-its interior entry/exit context with later equality reconvergences and partial
-context maps. Select breakpoints only by a label-invariant change in map
-consistency, then withhold one panel.
+```text
+suffix + header newline preimage = row-2 circulation = 7
+```
 
-**Promotion gate:** one shared state event predicts an unused later equality
-or reconvergence in all three panels. Common length alone fails.
+Test whether that rule predicts a still-unused boundary rather than merely
+describing the final record. The next eligible family is row 2: its fixed
+newline preimages predict suffixes `(4,3,4)`. A phase start/end must first be
+selected from an existing label-invariant boundary—copied-opening exit,
+prefix-tree branch, or registered reconvergence—not by scanning positions for
+those lengths.
 
-**Do not:** scan arithmetic of the ten interior values, equate length ten with
-`THAT WHICH`, or fit one breakpoint per panel.
+**Promotion gate:** the fixed `(4,3,4)` schedule predicts a withheld equality
+or map switch in all three row-2 panels under complete boundary-reselection
+controls.
 
-## 2. Row-2 residue-seven record (`17/20`)
+**Do not:** fit another budget, symbol, position, or per-panel direction.
 
-**Question:** What operation makes row 1 integrable and row 2 carry residue
-seven while the final row closes a pointer record?
+## 2. Decode the typed phase transition (`18/20`)
 
-Seek a body-derived, label-invariant defect count selected by the fixed
-header edge topology. Candidate objects must already exist independently:
-conflicts in partial context maps, unmatched reconvergence branches, or a
-state-return defect.
+The promoted final schedule is:
 
-**Promotion gate:** the body statistic predicts `0` for row 1 and `7` for row
-2 without choosing a modulus, alignment, or subset after inspection.
+```text
+return -> common17 -> East RNN / West NNNR -> map switch -> common30
+```
 
-**Do not:** count arbitrary features until seven appears. The equality between
-row-2 circulation and final scalar sum is retrospective.
+Seek the smallest operation that turns the first cross-panel partial
+bijections into the second. Use only overlap edges and header class as
+training; withhold one changed mapping or the known four-symbol late
+extension.
+
+**Promotion gate:** one operation predicts an undisclosed map edge or phase
+exit. Arbitrary completion of the partial permutations fails.
 
 ## 3. Novel machine synthesis, wide first (`16/20`)
 
@@ -128,4 +134,3 @@ decoder-independent reason makes the expected information gain worthwhile.
 - Earthquake mask or Cessation sampler on the final anchor slices;
 - literal transfer of the final-row grammar to rows 1 and 2;
 - Gate Type4/Type6 execution without the missing masks and allocator.
-

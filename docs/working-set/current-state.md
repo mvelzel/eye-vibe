@@ -94,6 +94,30 @@ The exact final grammar does not transfer to earlier rows:
 - row 2 has nonzero circulation residue `7`;
 - only the final row satisfies the complete grammar.
 
+## Promoted two-phase state trace
+
+From each gap-11 endpoint to the independently known late-context entry, the
+final bridges have lengths `(20,21,20)`. Their equality signatures share an
+exact 17-position prefix. E4/E5 then share a complete 20-position bridge;
+the first next pair conflicts and begins the known common 30-position phase.
+W4 follows the shared trace through 17, then has a four-position suffix.
+No matched, East-conditioned, or broadened control recurs in 50,000 trials
+(`1/50001`). This promotes a reset, shared phase, typed suffix, exact map
+switch, and second shared phase.
+
+The typed suffixes `(3,4,3)` consume two header fields:
+
+```text
+suffix + factoradic newline preimage = row-2 circulation
+(3,4,3) + (4,3,4) = (7,7,7)
+```
+
+The generic ledger holds in 159/12,096 scalar assignments. All exact-suffix
+matches use newline; any symbol/suffix placement gives 694/12,096. It selects
+only the observed of two full factoradic survivors. Treat seven as a
+phase-width budget and newline preimage as a schedule field; the state update
+and body-label semantics remain unknown.
+
 ## Later Gate/WAK corroboration
 
 The Gate Guardian postdates the October 2020 Eye Messages and is eligible only
@@ -130,6 +154,10 @@ factoradic instruction and not a body-wide `+3` shift.
 The dossier's Type4/Type6 cache machine remains unproved. In particular, the
 Seula 70-pixel residual, exact `12+43+9+8` Veska partition, side-band scope
 rules, and first-seen Type6 allocator are not independently executable.
+
+Veska's objective `9+8=17` bands now match the Eye-derived common phase
+length. This is Gate-motivated, retrospective corroboration of construction
+vocabulary, not an independent probability or a Type4/Type6 decode.
 
 ## Other construction facts worth retaining
 
@@ -174,4 +202,3 @@ The compact current model is:
 5. the body machine and plaintext remain unknown.
 
 Do not collapse these layers into one cipher without a held-out prediction.
-

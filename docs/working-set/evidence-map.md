@@ -43,6 +43,13 @@ archive.
   [`../twenty-fourth-row-record-transfer-results-2026-07-24.md`](../twenty-fourth-row-record-transfer-results-2026-07-24.md)
 - Implementation:
   [`../../src/eye_mystery/gap_anchor.py`](../../src/eye_mystery/gap_anchor.py)
+- Promoted reset/phase/change-point trace:
+  [`../thirty-second-synchronizing-bridge-results-2026-07-26.md`](../thirty-second-synchronizing-bridge-results-2026-07-26.md)
+- Residue-seven newline/suffix ledger:
+  [`../thirty-third-residue-seven-phase-ledger-results-2026-07-26.md`](../thirty-third-residue-seven-phase-ledger-results-2026-07-26.md)
+- Phase implementations:
+  [`../../src/eye_mystery/synchronizing_bridge.py`](../../src/eye_mystery/synchronizing_bridge.py),
+  [`../../src/eye_mystery/phase_ledger.py`](../../src/eye_mystery/phase_ledger.py)
 
 ## Gate and later clue chronology
 
