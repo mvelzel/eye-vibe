@@ -286,6 +286,14 @@ already fixed `27->30` restart. The same marks still read `fi`, making the
 asset a plausible double-encoded later clue. Results:
 [`thirty-ninth-veska-state-selector-results-2026-07-26.md`](thirty-ninth-veska-state-selector-results-2026-07-26.md).
 
+The late state table also contains a physical direction wheel. Canonical
+classes `5,10,15,20 = 010,020,030,040_5` are the four positive middle-eye-only
+states. All repeat by boundary34 in counterclockwise order
+`up,left,down,right`; neither other digit axis is complete. Class10 supplies
+the final right state exactly at the E4/W4 conflict, and its cached W4->E4
+difference returns marker77. Results:
+[`fortieth-middle-eye-control-cycle-results-2026-07-26.md`](fortieth-middle-eye-control-cycle-results-2026-07-26.md).
+
 The Eye-side transition now also preserves one constrained state edge. After
 canonicalizing the old and new phases independently, `7->24` is the only edge
 shared by any panel pair: it appears in both East panels with different

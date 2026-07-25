@@ -3,27 +3,27 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Decode the repeat-return schedule (`20/20`)
+## 1. Execute the `5×5` equality-state table (`20/20`)
 
-Three of five late repeat events produce marker-valued directed differences:
+The common late phase allocates classes `0..24`. Its positive middle-axis
+states form a complete counterclockwise control wheel:
 
 ```text
-pos9  class5  distance4   W4->E4 = 77
-pos26 class20 distance4   E5->E4 = 36
-pos29 class15 distance13  E4->W4 = 27
+5,20,15,10 -> up,left,down,right
+last class10 repeat -> E4/W4 boundary34
 ```
 
-Start wide over direction schedules derived only from header edge source,
-target, loop, repeat distance, and first/last occurrence roles. Withhold the
-numeric differences while selecting the schedule.
+Represent each class as `(middle,third)` in the `5×5` leading-zero plane.
+Start wide over only D4 moves, row/column shifts, and source/target map
+operations selected by the control wheel. Use equality and map structure, not
+language scores.
 
-The events at positions18/class0 and27/class1 are negative controls. A valid
-machine should classify them as data/cache validation without choosing that
-classification after inspecting marker hits.
+Freeze one operation on three direction states and withhold class10, one
+marker-valued pair difference, and at least one first-seen class.
 
-**Promotion gate:** one low-capacity schedule predicts all three pair
-directions/marker roles and both non-hits, or predicts a new state outside the
-five inspected repeats. Per-event direction fitting fails.
+**Promotion gate:** a single table operation predicts the held-out boundary,
+map difference, or allocation. Plot symmetries and per-cell fitted directions
+fail.
 
 ## 2. Novel machine synthesis, wide first (`16/20`)
 

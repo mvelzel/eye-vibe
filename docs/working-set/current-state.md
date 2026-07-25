@@ -128,6 +128,12 @@ header. It is the only fixed-direction repeat returning 27; a matched
 multiplicity/reuse relabeling gives `1/12`. Thus the control cycle is
 `27 ->(+3) 30 ->(+4) 34 ->(+29,+13) class15 ->(W4-E4) 27`.
 
+The positive middle-eye-only classes `5,10,15,20 = 010,020,030,040_5`
+all repeat by boundary34; the other single-coordinate axes do not. Their
+repeat order is directions `1,4,3,2`, exactly counterclockwise from up.
+Class10 completes the missing right direction at the E4/W4 conflict, and its
+cached W4->E4 label difference returns West4 marker77.
+
 Across the promoted final map switch, the same visible value links independently
 canonicalized old/new classes. The only edge shared by any panel pair is
 `7->24`, present in both East panels with different labels and absent West.
