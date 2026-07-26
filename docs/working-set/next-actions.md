@@ -3,7 +3,23 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Practice cipher #4 mechanism acquisition (`15/20`)
+## 1. Odd-East checksum self-pointer mechanism (`17/20`)
+
+The three mod-101-closing messages yield complete circular-distance packets
+`13,7 | 11,13,21 | 30` by locating their own checksum quotients. Their sums
+are `20,45,30`; subtracting them from headers gives the established controls
+`30,18,3`. Exact assignment-corrected conditional rates are small, but the
+mechanism and consumers were discovered retrospectively.
+
+Advance only by deriving packet order/sign from a header type, finding an
+authored interface for the exact operation, or predicting a held-out field.
+The unchanged extractor fails the six non-closing messages, so retain it only
+as a typed odd-East subsystem. Do not scan alternate moduli, distances,
+aggregators, or scalar ledgers.
+
+**Promotion gate:** one prospective consumer or independent operation selector.
+
+## 2. Practice cipher #4 mechanism acquisition (`15/20`)
 
 The word-constrained arbitrary cyclic-GAK solver now passes a matched
 punctuation-bearing plant but fails the real data at `48..52/200`; phase
@@ -24,7 +40,7 @@ language without an independent selector.
 **Promotion gate:** exact replay of the full puzzle and a concise account of
 how the mechanism was cracked.
 
-## 2. Read-only Silmä delta (`14/20`)
+## 3. Read-only Silmä delta (`14/20`)
 
 Search the cryptography and novel channels for developments after the latest
 captured evidence, especially:
@@ -50,7 +66,7 @@ three transitions for both 26- and 29-symbol plaintext disks. The arbitrary
 83-symbol disk allowed by the proposal remains solver-indeterminate; reopen
 only with an independently selected disk order or a resolving exact invariant.
 
-## 3. Practice cipher #3 mechanism acquisition (`14/20`)
+## 4. Practice cipher #3 mechanism acquisition (`14/20`)
 
 Retain the exact prefix tree and exclusion certificates. Seek an author-hint
 or operation family that explains the progression without inventing a hidden
@@ -61,7 +77,7 @@ replace it with an arbitrary pairing without a new selector.
 **Promotion gate:** solve/replay the full puzzle or produce a
 deletion-minimal exact exclusion of a clearly motivated family.
 
-## 4. Petri-only archaeology on a fixed interface (`12/20`)
+## 5. Petri-only archaeology on a fixed interface (`12/20`)
 
 NollaArvi's direct Eye attribution justifies Petri-specific sources. The
 bounded pre-2020 repository census found a relevant 2015 alternating-
@@ -74,7 +90,7 @@ to an Eye header, control class, or held-out body quantity. Do not mine
 incidental source constants or enumerate assignments of generic card-game
 operations after seeing the target.
 
-## 5. Gate only on new executable evidence (`11/20`)
+## 6. Gate only on new executable evidence (`11/20`)
 
 Do not continue fitting the current dossier. Reopen only if one of these
 arrives:
@@ -91,7 +107,7 @@ Petri is now directly attributed as the Eye author, but the public data
 history still cannot identify the Gate asset author. Do not transfer Gate
 operations on Eye authorship alone.
 
-## 6. Source/language archaeology (`9/20`)
+## 7. Source/language archaeology (`9/20`)
 
 The `FI` field makes Finnish sources worth scoring only after a decoder is
 selected without language. The Finnish *Corpus Hermeticum* lead remains
