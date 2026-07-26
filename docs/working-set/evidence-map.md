@@ -34,6 +34,8 @@ archive.
   [`../fifty-sixth-kantele-header-results-2026-07-26.md`](../fifty-sixth-kantele-header-results-2026-07-26.md)
 - Header-ordered visible-codebook and omission-count channels, negative:
   [`../fifty-seventh-header-order-ideal-results-2026-07-26.md`](../fifty-seventh-header-order-ideal-results-2026-07-26.md)
+- Header-orbit obstruction and conditional `2x41` ranks, negative:
+  [`../fifty-eighth-header-orbit-no-repeat-results-2026-07-26.md`](../fifty-eighth-header-orbit-no-repeat-results-2026-07-26.md)
 
 ## Final-row anchor record
 
