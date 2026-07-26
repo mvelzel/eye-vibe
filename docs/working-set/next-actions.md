@@ -110,3 +110,4 @@ decoder-independent reason makes the expected information gain worthwhile.
 - Gate Type4/Type6 execution without the missing masks and allocator.
 - discarded standard/keyed `A-Z` warm-ups on structured affine GAK or
   fixed-base/top-swap decks.
+- direct visible-coordinate swap-or-not card shuffles of one to three rounds.

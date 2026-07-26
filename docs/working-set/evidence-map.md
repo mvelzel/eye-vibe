@@ -134,6 +134,9 @@ archive.
 - Historical 26-glyph discarded-alphabet initializer, with bounded affine-GAK
   and structured-deck exclusions:
   [`../fifty-first-alphabet-warmup-results-2026-07-26.md`](../fifty-first-alphabet-warmup-results-2026-07-26.md)
+- Historical swap-or-not card-shuffle proposal, closed for one to three rounds
+  in visible `Z_83` coordinates:
+  [`../fifty-second-swap-or-not-results-2026-07-26.md`](../fifty-second-swap-or-not-results-2026-07-26.md)
 
 ## Practice puzzles
 
