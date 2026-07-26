@@ -197,9 +197,10 @@ is a header/state repair—not a body-wide shift or complete Gate decoder.
 
 - The complete body prefix trie closes exactly modulo 101. Direct recursive,
   automaton, and failure-link consumers tested so far do not explain it.
-- A procedural wand generator independently selects exactly ranks `0..82`
-  from an underlying `0..100` range; this is evidence that 83-of-101 is
-  authored game vocabulary, not an Eye decoder.
+- NollaArvi directly attributed the Eye secret to Petri Purho in April 2021.
+  Petri's 2015 triangle renderer predates the Eyes, but its polygon windings
+  conflict with the accepted order. It corroborates only alternating-triangle
+  topology, not the cipher; Gate and cauldron authorship remain unproved.
 - Equality/reconvergence structure and copied openings are real and must be
   preserved by any decoder. Fixed substitutions that destroy them are poor
   models.

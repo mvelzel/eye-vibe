@@ -75,6 +75,11 @@ archive.
   [`../forty-fourth-silma-delta-2026-07-26.md`](../forty-fourth-silma-delta-2026-07-26.md)
 - Petri/Gate provenance boundary:
   [`../forty-fifth-petri-provenance-results-2026-07-26.md`](../forty-fifth-petri-provenance-results-2026-07-26.md)
+- Direct developer attribution of the Eye secret to Petri:
+  [`../forty-eighth-petri-eye-attribution-2026-07-26.md`](../forty-eighth-petri-eye-attribution-2026-07-26.md)
+- Petri's 2015 alternating-triangle source and negative global vertex-order
+  transfer:
+  [`../forty-ninth-petri-triangle-order-freeze-2026-07-26.md`](../forty-ninth-petri-triangle-order-freeze-2026-07-26.md)
 - Phase implementations:
   [`../../src/eye_mystery/synchronizing_bridge.py`](../../src/eye_mystery/synchronizing_bridge.py),
   [`../../src/eye_mystery/phase_ledger.py`](../../src/eye_mystery/phase_ledger.py),
