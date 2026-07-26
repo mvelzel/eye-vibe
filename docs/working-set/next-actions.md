@@ -3,7 +3,47 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Quotient-addressed 83-state tables (`16/20`)
+## 1. Fresh theory-isolated attack horizon (`15/20`)
+
+Start wide from promoted Eye-only facts. Enumerate genuinely different
+mechanism families, assign each one an independent selector/capacity story,
+and freeze one cheap necessity test per family before deepening any of them.
+Do not combine partial fits from unrelated theories. A raw observation or
+technique may transfer, but its evidential weight does not.
+
+Favor mechanisms that can explain the exact equality/reconvergence structure,
+the typed header, and the final-row record while predicting an uninspected
+body event. Include non-prose and construction-workflow possibilities. Reject
+any family whose first test can fit arbitrary labelings.
+
+**Promotion gate:** one family survives a capacity-controlled test and fixes
+an unseen consequence before inspection.
+
+## 2. Practice cipher #3 mechanism acquisition (`14/20`)
+
+Retain the exact prefix tree and exclusion certificates. Seek an author-hint
+or operation family that explains the progression without inventing a hidden
+83-wheel. The exact standard-coordinate two-sheet family
+`x ~ a-x (mod 83)` now passes its plant and fails heldout real text; do not
+replace it with an arbitrary pairing without a new selector.
+
+**Promotion gate:** solve/replay the full puzzle or produce a
+deletion-minimal exact exclusion of a clearly motivated family.
+
+## 3. Practice cipher #4 mechanism acquisition (`12/20`)
+
+The cyclic outer layer and exact shared blocks are recovered. The calibrated
+word-constrained GAK beam fails at `48..52/200`, and a new read-only author
+search found no additional hint. Do not widen that beam.
+
+Reopen only with a source/crib, a non-GAK deck invariant, or a packet rule
+that predicts the one-character insertion and later resynchronization. The
+low cross-message collision is only a weak phase-selection clue (`.012627`);
+the high-bigram claim is null-ordinary.
+
+**Promotion gate:** exact full-puzzle replay plus the cracking method.
+
+## 4. Quotient-addressed 83-state tables (`12/20`)
 
 Freeze each panel's first 83 full-array values as `f:Z83->Z83`, start at
 `floor(sum/101)`, and follow until repeat. The nine orbit sizes total72.
@@ -21,70 +61,14 @@ Veska does not validate this lead. Its objective remainder split is 11/44,
 not 12/43, and no complete authored category mapping exists. Keep the Gate
 lane separate; partial count matches contribute zero evidence here.
 
-Advance only through a frozen prediction of an uninspected Eye
-transition/value or an independently authored Eye interface selecting
-quotient addressing. Do not scan alternate seeds, moduli, table lengths,
-windows, aggregates, or new scalar ledgers.
+No honest internal holdout remains: every first-83 table, orbit, header, and
+physical row was inspected before the balance was noticed. Do not relabel a
+known E5 orbit size or E2 header as a prediction. Advance only through an
+independently authored Eye interface selecting quotient addressing. Do not
+scan alternate seeds, moduli, table lengths, windows, aggregates, suffix
+relations, or new scalar ledgers.
 
-**Promotion gate:** one prospective Eye-only prediction.
-
-## 2. Practice cipher #4 mechanism acquisition (`15/20`)
-
-The word-constrained arbitrary cyclic-GAK solver now passes a matched
-punctuation-bearing plant but fails the real data at `48..52/200`; phase
-offsets reach at most 57. Do not widen that beam again.
-
-Reopen only with:
-
-- a source/crib or author hint;
-- an invariant for a non-GAK deck beneath the recovered cyclic outer layer;
-- a packet construction that predicts the one-character insertion and later
-  resynchronization.
-
-The reported low cross-message symbol collision is now bounded as a weak
-initial-state-selection clue. Its paired high-bigram claim is ordinary under
-the exact cyclic phase null. Do not mine the 86 low-collision phase pairs for
-language without an independent selector.
-
-**Promotion gate:** exact replay of the full puzzle and a concise account of
-how the mechanism was cracked.
-
-## 3. Read-only Silmä delta (`14/20`)
-
-Search the cryptography and novel channels for developments after the latest
-captured evidence, especially:
-
-- independent final-record interpretations;
-- shared-state or synchronizing-loop proposals;
-- new sdlwdr #3/#4 hints or attachments;
-- published Gate masks/allocator rules;
-- proposed mechanisms that make held-out predictions.
-
-Discord remains strictly read-only: no messages, reactions, or calls.
-Preserve attachment hashes and surrounding provenance. Community claims
-generate tests; they are not imported as facts.
-
-The historical discarded-`A-Z` initializer has now been executed and closed
-for structured affine GAK and fixed-base/top-swap decks. Reopen it only with
-an independently supplied operation family; do not enumerate arbitrary
-permutations.
-
-The historical Earthquake-gear Wadsworth machine is now executable. Every
-fixed-weight arithmetic-progression order of the visible ranks fails within
-three transitions for both 26- and 29-symbol plaintext disks. The arbitrary
-83-symbol disk allowed by the proposal remains solver-indeterminate; reopen
-only with an independently selected disk order or a resolving exact invariant.
-
-## 4. Practice cipher #3 mechanism acquisition (`14/20`)
-
-Retain the exact prefix tree and exclusion certificates. Seek an author-hint
-or operation family that explains the progression without inventing a hidden
-83-wheel. The exact standard-coordinate two-sheet family
-`x ~ a-x (mod 83)` now passes its plant and fails heldout real text; do not
-replace it with an arbitrary pairing without a new selector.
-
-**Promotion gate:** solve/replay the full puzzle or produce a
-deletion-minimal exact exclusion of a clearly motivated family.
+**Promotion gate:** an external selector followed by one unseen consequence.
 
 ## 5. Petri-only archaeology on a fixed interface (`12/20`)
 

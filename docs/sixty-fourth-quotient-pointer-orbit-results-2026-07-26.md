@@ -270,6 +270,20 @@ selects quotient addressing. The Veska lane advances separately only through
 a complete target-blind asset rule with a held-out consequence. Success in
 one lane cannot be used as partial support for the other.
 
+## Holdout audit
+
+No honest corpus-internal holdout remains. The first-83 tables, all nine
+seeds, complete orbits, headers, and physical row assignment were inspected
+before the row balance was recognized. Recasting E5's known orbit size or
+E2's known header as a “prediction” would be retrospective reconstruction.
+Likewise, inventing a relation to the unconsumed suffix after seeing the
+orbits would introduce a new operation rather than test this one.
+
+The lane therefore stops here. It can reopen only when an independently
+authored Eye interface selects quotient addressing before exposing another
+target. The `.000896` broad row-balance anomaly remains logged, but without
+that selector it is not a construction claim.
+
 Reproduction:
 [`audit_quotient_pointer_orbits.py`](../scripts/audit_quotient_pointer_orbits.py);
 implementation:

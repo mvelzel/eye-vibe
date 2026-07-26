@@ -40,6 +40,11 @@ accumulation. Run that checker before committing.
 - Require a planted positive control for a new detector.
 - Prefer held-out prediction or exact re-encryption over language score.
 - Preserve clean negative results and obey their stop rules.
+- Treat every fringe or later-asset theory as an isolated, binary hypothesis.
+  It must supply its own complete reproducible clue/decoder chain and held-out
+  consequence. Partial matches from separate theories never corroborate one
+  another. A reusable technique or raw observation may transfer only with its
+  original provenance and without transferring evidential weight.
 - Later in-game clues may help decode an older Eye puzzle, but information
   required to construct a proposed source/key must predate construction or
   have been privately available to the developers.
@@ -53,4 +58,3 @@ accumulation. Run that checker before committing.
 - Practice-puzzle writeups must state the cracking method and place as much of
   the full verified solution as copyright permits directly in the document.
 - Keep commits focused and push completed work to the configured repository.
-

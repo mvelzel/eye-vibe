@@ -14,8 +14,9 @@ and reproduction paths are in [`evidence-map.md`](evidence-map.md).
   `0..124`.
 - The normal trigram reading is strongly selected among geometric reading
   variants and preserves the shared openings and known isomorphs.
-- The renderer stores packed base-seven rows and renders nine precomputed
-  arrays; it does not decrypt at spawn time.
+- The installed 2025 binary's nine-way initializer contains all 150
+  independently packed base-seven corpus words exactly. It unpacks them for
+  rendering and performs no runtime decryption.
 
 ## Promoted marker/header structure
 
@@ -182,15 +183,17 @@ remainder. These are dependent outputs of one retrospectively found operation.
 Eye-only checks bound it. Source digit2 selects both tail-free walks, but any
 simple header class does so in `.1740` of controls. Physical-row totals are
 `(13,23,36)`, with `13+23=36=E2 header`; the broad rate is `.000896`. Retain
-one prospective Eye-only test, not a construction mechanism.
+the anomaly, not a construction mechanism. No honest internal holdout remains;
+reopen only if an authored Eye interface independently selects the operation.
 
 ## Other construction facts worth retaining
 
 The body prefix trie closes modulo101, though direct consumers fail. NollaArvi
 attributed the secret to Petri Purho; his eligible 2015 triangle renderer has
-an incompatible vertex order. Equality/reconvergence must survive any decoder.
-Direct `3,5,8` weighting and fixed-disk Earthquake/Wadsworth are negative; an
-arbitrary hidden disk remains unresolved.
+an incompatible vertex order. Frosthaven's octahedron/14-segment proposal
+fails standalone capacity and reproducibility gates. Direct `3,5,8` weighting
+and fixed-disk Earthquake/Wadsworth are negative; an arbitrary hidden disk
+remains unresolved. Equality/reconvergence must survive any decoder.
 
 ## Practice-puzzle calibration
 
