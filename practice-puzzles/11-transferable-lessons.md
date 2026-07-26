@@ -77,6 +77,12 @@ success is exact action-bigram/trigram reuse from the known homologous
 plaintext. Separately, 206 walk/control laws and 396 fixed routes pass their
 planted controls but are negative on the real data.
 
+A later collision claim supplies one more calibration lesson. The pooled
+bigram IoC is 2.322 times the independent `83×83` baseline, but it is ordinary
+when the null preserves each portion's recovered cyclic action stream and
+varies only initial phase. The unusually low aligned-symbol count survives
+only as a weak primer-selection clue and does not select the inner codec.
+
 **Lesson:** repeated structure can prove one layer while leaving the next
 layer unknown.  Convert the recovered group into a functional recurrence: it
 can turn plaintext repetition into an exact oracle before any language score.
@@ -85,6 +91,9 @@ solve. When an exact range factors conspicuously, screen neighboring widths as
 well: a quotient can be a mechanism clue without being the plaintext. Then
 identify the exact carrier of every significant projection; a low-dimensional
 view that merely indexes already repeated full symbols is not a decoder.
+Likewise, compare an IoC claim with a null that preserves the already recovered
+group action; an independent-symbol baseline can make known structure look
+like a new layer.
 
 ## Cipher 5: enumerate implementation details with a key-free oracle
 

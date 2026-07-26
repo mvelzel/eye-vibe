@@ -16,6 +16,11 @@ Reopen only with:
 - a packet construction that predicts the one-character insertion and later
   resynchronization.
 
+The reported low cross-message symbol collision is now bounded as a weak
+initial-state-selection clue. Its paired high-bigram claim is ordinary under
+the exact cyclic phase null. Do not mine the 86 low-collision phase pairs for
+language without an independent selector.
+
 **Promotion gate:** exact replay of the full puzzle and a concise account of
 how the mechanism was cracked.
 

@@ -189,6 +189,15 @@ positive or structural control:
     fold reaches only 52.  This is a calibrated bounded rejection of ordinary
     dictionary prose in the natural 32-position alphabet, not a proof against
     the full 42/83-symbol or non-GAK supersets.
+22. **Cross-message collision null.**  Only two aligned ciphertext symbols
+    coincide across the three portions, but independent additive shifts of
+    portions 2 and 3 preserve the complete recovered action streams. Exhausting
+    all `83²` shifts puts the corrected lower tail at `.012627`: mildly
+    unusual, not unique. The pooled bigram IoC is 2.322 times a uniform
+    `83×83` baseline, yet its shift-matched upper tail is `.314659`.
+    Consequently the apparent high bigram IoC is explained by the existing
+    action band and shared blocks. The residue is only a possible deliberate
+    choice of initial deck states, not an inner codec.
 
 The signed-band and packed-beam reproductions are
 [`analyze_sdlwdr_cipher4_signed_band.py`](../scripts/analyze_sdlwdr_cipher4_signed_band.py)
@@ -201,6 +210,9 @@ and complete numeric results, is in
 
 The word-constrained nonlinear result is
 [`docs/practice-cipher4-word-gak-results-2026-07-26.md`](../docs/practice-cipher4-word-gak-results-2026-07-26.md).
+
+The collision audit is
+[`docs/fiftieth-cipher4-collision-null-results-2026-07-26.md`](../docs/fiftieth-cipher4-collision-null-results-2026-07-26.md).
 
 ## Verdict
 
@@ -219,7 +231,9 @@ word-constrained search that passes a matched punctuation-bearing prose plant.
 It remains mathematically open outside the bounded natural-32 language model,
 but it is no longer the best blind inner-layer attack. Reopen it only with a
 crib, source hit, or author hint; raising the same language beam is not a
-valid next experiment.
+valid next experiment. The low cross-message symbol coincidence may reflect
+chosen initial deck states, but the matched null gives no selected state or
+new decoding operation.
 
 ## Transfer to the Eyes
 

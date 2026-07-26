@@ -212,9 +212,10 @@ is a header/state repair—not a body-wide shift or complete Gate decoder.
 
 sdlwdr #1, #2, and #5 are solved; #3 is unresolved after broad progression,
 wheel, recursion, and deck negatives; #4 has a recovered outer 57-cycle but
-unresolved codec; #6's direct asset-driven rotation/cut/Alberti families are
-negative. Transfer only a recovered operation, use language-independent
-scoring, and demand exact replay.
+unresolved codec. Its low aligned-symbol count is a weak phase-selection clue
+(`.012627`), while high bigram IoC is null-ordinary (`.314659`). #6's direct
+asset-driven families are negative. Transfer only a recovered operation and
+demand exact replay.
 
 ## Interpretation boundary
 
@@ -222,8 +223,7 @@ The compact current model is:
 
 1. orthodox trigrams are correct;
 2. first trigrams are a typed, redundant locale/check header;
-3. at least the final row contains an exact self-describing body landmark
-   record;
+3. the final row contains an exact self-describing body landmark record;
 4. later game assets plausibly restate some marker operations;
 5. the body machine and plaintext remain unknown.
 
