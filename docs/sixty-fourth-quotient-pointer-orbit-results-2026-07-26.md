@@ -16,9 +16,9 @@ Every accepted Eye value is a valid address in `0..82`, so the first 83
 full-array values—including the exceptional header at address zero—define
 `f: Z83 -> Z83` without a key, relabeling, or fitted operation.
 
-This is the strongest current evidence that the mod-101 quotient is an
-executable pointer rather than a retrospective scalar coincidence. It is not
-yet a plaintext decoder.
+This defines a compact, parameter-free operation worth testing. It is not yet
+evidence that the developers intended the quotient as a pointer, and it is not
+a plaintext decoder. The operation was found retrospectively.
 
 ## Complete reproduction
 
@@ -60,8 +60,9 @@ overlap excess                     20-17 = 3
 ordered cycle lengths                  1,4,7
 ```
 
-Thus the same fixed operation recovers the independently established Eye
-phase split `17+3=20`. The cycle lengths form an ordered `+3` progression.
+Thus the same fixed operation numerically reproduces the independently
+established Eye phase split `17+3=20`. The cycle lengths form an ordered `+3`
+progression.
 
 Their pairwise intersection sizes in `E1,E3,E5` order are:
 
@@ -74,7 +75,7 @@ E3∩E5 = 2  ({45,60})
 The nonempty-mask matches the established header-edge composability pattern
 for `0->1, 2->1, 1->0`: the first two edges do not compose with each other,
 while each composes with the third. The mask alone is common under the null
-and is corroboration, not a discovery statistic.
+and is descriptive rather than positive evidence.
 
 Across all nine orbits, 51 labels are visited and 32 are omitted:
 
@@ -86,7 +87,42 @@ E4 is independently the final loop/pivot panel. Allowing every nonzero
 checksum remainder barely changes the matched-null rate, because the other
 remainders are mostly outside the natural omitted-count range.
 
-## Exact Gate correspondence and its boundary
+## Eye-only observations
+
+Two relations can be stated without referring to Gate Guardian or any other
+fringe theory.
+
+First, the only tail-free walks are E2 and E3. They are also exactly the two
+panels whose promoted header source digit is `2`:
+
+```text
+tail-free panels = {E2,E3} = panels with source digit 2
+```
+
+This named equality is not selective after accounting for other simple unary
+header classifications: it occurs in `173,963/1,000,000` matched controls.
+It is useful description, not positive evidence.
+
+Second, summing orbit sizes by physical row gives:
+
+```text
+row 1: 2+2+9   = 13
+row 2: 11+4+8  = 23
+row 3: 5+17+14 = 36
+13+23 = 36 = E2 header value
+```
+
+The typed relation occurs in `81/1,000,000` controls. Allowing any physical
+row to equal the sum of the other two and any observed header to equal that
+balanced value gives `895/1,000,000`, add-one corrected `.000895999`.
+This is the best Eye-internal anomaly produced by the operation. It remains
+retrospective and is derived from the same orbit sizes as the other relations.
+
+The broad conjunction of the unary classification and row balance occurs in
+`155/1,000,000`, corrected `.000155999844`. The two events are not independent
+and this joint is not multiplied by any other rate.
+
+## Separate Veska comparison and its failure
 
 The quotient orbits partition as:
 
@@ -99,10 +135,11 @@ closing tails                           8
                                       72
 ```
 
-This is exactly the Gate dossier's proposed Veska partition
-`12 outer + 43 crack + 9 upper + 8 lower`.
+This numerically matches the Gate dossier's proposed Veska partition
+`12 outer + 43 crack + 9 upper + 8 lower`. That comparison motivated an
+audit; it does not validate the pointer operation.
 
-The ground-up sprite audit prevents overclaiming:
+The ground-up sprite audit does not reproduce the claimed partition:
 
 - Veska objectively has 72 authored-color pixels.
 - Its separated upper and lower pictograms objectively have 9 and 8 pixels.
@@ -111,9 +148,17 @@ The ground-up sprite audit prevents overclaiming:
 - The dossier did not publish the extra mask that moves one pixel between
   those groups.
 
-Therefore `72|9|8` is independent later-asset evidence. The pointer model's
-`12|43` is a sharp prospective prediction of the missing mask, not evidence
-that the mask exists.
+Therefore the current Veska construction hypothesis fails its complete
+reproduction requirement. The raw asset supplies a total and two counts that
+can be compared with the orbit output, but no authored rule maps all 72 pixels
+to the four orbit categories. The missing `12/43` split must not be treated as
+a prediction whose later recovery would retrospectively validate this model:
+many target-aware masks could manufacture it.
+
+Veska remains a binary, standalone lead. It can return only if an objective
+asset-derived rule independently yields a complete executable mapping and a
+held-out consequence. Its partial numerical overlap contributes zero weight
+to the quotient-orbit hypothesis.
 
 ## Matched conditional null
 
@@ -131,23 +176,23 @@ preserving:
 The null does not preserve every later nonliteral isomorph, so its rates are
 not universal corpus-preserving probabilities. A synthetic 83-table fixture
 with unrelated labels and the planted `8|12|9|43`, `20|17`, and `1|4|7`
-structure triggers every detector before the real-data result is asserted.
+structure also plants the source/tail-free and physical-row relations and
+triggers every detector before the real-data result is asserted.
 
 The fixed seed is `0x5645534b41`.
 
-The typed Gate rows use the natural semantic assignment
+The typed Veska-comparison rows use the proposed semantic assignment
 `cycle->outer, mixed->crack, pure-cycle->upper, tail->lower`. Because that
 assignment was noticed retrospectively, the broad rows also allow the
 objective `8/9` pair—or the complete four counts—to occupy any of the four
-pointer categories. The broad rows govern the evidence assessment.
+pointer categories. These rows document the explored comparison; they do not
+enter the Eye-only evidence assessment.
+
+### Eye-only audit
 
 | Frozen event | Hits / 1,000,000 | Add-one corrected rate |
 |---|---:|---:|
 | all-nine orbit total `72` | 5,829 | `.005829994` |
-| typed objective Gate `72|9|8` | 18 | `.000018999981` |
-| broad-category objective Gate `72|9|8` | 102 | `.000102999897` |
-| typed predicted `12|43|9|8` | 1 | `.000001999998` |
-| any-category predicted `12|43|9|8` | 4 | `.000004999995` |
 | closing orbit total/union `20|17` | 4,022 | `.004022996` |
 | ordered cycle lengths `1|4|7` | 493 | `.0004939995` |
 | any ordered cycle `+3` progression | 2,548 | `.002548997` |
@@ -155,14 +200,30 @@ pointer categories. The broad rows govern the evidence assessment.
 | omitted count equals typed E4 remainder | 34,884 | `.03488497` |
 | omitted count equals any checksum remainder | 34,966 | `.03496697` |
 | total `72` and omitted count `32` | 343 | `.0003439997` |
-| Eye `20|17` and typed Gate `72|9|8` | 0 | `<.000001` |
-| Eye `20|17` and broad Gate `72|9|8` | 1 | `.000001999998` |
-| preceding broad joint plus cycles `1|4|7` | 0 | `<.000001` |
+| source digit 2 exactly selects tail-free panels | 38,554 | `.038554961` |
+| any simple unary header class selects tail-free panels | 173,963 | `.173963826` |
+| typed physical-row balance and E2 header `36` | 81 | `.000081999918` |
+| any physical-row balance and any observed header | 895 | `.000895999104` |
+| typed source/tail-free plus typed row balance | 7 | `.000007999992` |
+| broad unary/tail-free plus broad row balance | 155 | `.000155999844` |
+
+### Exploratory Veska-comparison audit
+
+| Frozen event | Hits / 1,000,000 | Add-one corrected rate |
+|---|---:|---:|
+| typed proposed `72|9|8` categories | 18 | `.000018999981` |
+| broad-category proposed `72|9|8` | 102 | `.000102999897` |
+| typed proposed `12|43|9|8` | 1 | `.000001999998` |
+| any-category proposed `12|43|9|8` | 4 | `.000004999995` |
+| Eye `20|17` plus typed Veska comparison | 0 | `<.000001` |
+| Eye `20|17` plus broad Veska comparison | 1 | `.000001999998` |
+| preceding broad comparison plus cycles `1|4|7` | 0 | `<.000001` |
 
 These are overlapping views of one pointer structure and must not be
 multiplied. They are conditional rates, not project-wide discovery
 probabilities; the operation was found retrospectively after substantial
-exploration.
+exploration. In particular, the Veska-comparison rows cannot strengthen the
+Eye-only rows.
 
 ## Convention audit
 
@@ -175,31 +236,39 @@ closing total/union 25/24
 closing cycles 10,8,2
 ```
 
-It satisfies none of the bridge events. Scanning every common contiguous
-83-cell window start `0..16`, only start zero has the Gate, phase, cycle, or
-typed partition events. This selects the exceptional header as table address
-zero rather than treating it as discarded framing.
+It satisfies none of the recorded events. Scanning every common contiguous
+83-cell window start `0..16`, only start zero has the physical-row balance,
+phase, cycle, or explored partition events. This favors the exceptional
+header as table address zero within this hypothesis rather than treating it
+as discarded framing.
 
 ## Decision and next falsifier
 
-Promote the following construction lead:
+Retain the following as a bounded Eye-only hypothesis:
 
 > The nine panels contain quotient-addressed `83`-state functional tables.
-> Their orbit decomposition connects the mod-101 checksums, the `17+3=20`
-> phase machine, and the later Veska `72|9|8` artwork.
+> Their orbit decomposition may relate the mod-101 checksum fields to the
+> physical message layout.
 
-Do not yet promote:
+The physical-row balance is sufficiently unusual under the matched null to
+justify one prospective test. It is not sufficient to promote a construction
+mechanism because the operation and the balance were both found
+retrospectively and no decoded symbol, transition, or asset instruction
+selects the walk.
 
-- the dossier's unpublished `12/43` pixel mask;
+Do not promote:
+
+- any Veska corroboration or the dossier's unpublished `12/43` pixel mask;
 - a body-wide cipher or allocation rule;
 - plaintext, Finnish or otherwise;
 - alternate seeds, moduli, table lengths, window offsets, or aggregate
   ledgers chosen after this result.
 
-The next valid advance must be prospective: recover an objective Veska mask
-that yields `12/43` without using the target, find an authored interface that
-selects this quotient-pointer operation, or use the frozen orbit partition to
-predict an uninspected Eye transition/value.
+The quotient lane advances only by predicting an uninspected Eye
+transition/value or by finding an independently authored Eye interface that
+selects quotient addressing. The Veska lane advances separately only through
+a complete target-blind asset rule with a held-out consequence. Success in
+one lane cannot be used as partial support for the other.
 
 Reproduction:
 [`audit_quotient_pointer_orbits.py`](../scripts/audit_quotient_pointer_orbits.py);

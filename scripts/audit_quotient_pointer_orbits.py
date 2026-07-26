@@ -49,6 +49,13 @@ def main() -> None:
         observed.closing_cycle_lengths,
         observed.closing_intersection_sizes,
     )
+    print(
+        "Eye-internal source/tail-free and row-total checks:",
+        observed.tail_free_names,
+        observed.row_orbit_totals,
+        observed.source_two_tail_free_event,
+        observed.typed_row_balance_event,
+    )
     print("common 83-window starts with substantive bridge events")
     for start, item in common_window_signatures():
         events = (
@@ -87,6 +94,12 @@ def main() -> None:
         ("phase + broad objective", audit.phase_and_broad_objective_hits),
         ("phase + typed objective + cycles", audit.full_bridge_hits),
         ("phase + broad objective + cycles", audit.broad_full_bridge_hits),
+        ("source2 exactly tail-free", audit.source_two_tail_free_hits),
+        ("any unary class tail-free", audit.broad_unary_tail_free_hits),
+        ("typed row3 balance/header36", audit.typed_row_balance_hits),
+        ("any balanced row/any header", audit.broad_row_balance_hits),
+        ("typed Eye-internal joint", audit.typed_eye_internal_joint_hits),
+        ("broad Eye-internal joint", audit.broad_eye_internal_joint_hits),
     )
     for label, hits in fields:
         print(

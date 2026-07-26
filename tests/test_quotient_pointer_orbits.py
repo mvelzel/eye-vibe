@@ -15,6 +15,7 @@ from eye_mystery.quotient_pointer_orbits import (
     panel_orbit,
     sample_conditioned_table,
     signature,
+    source_two_messages,
 )
 
 
@@ -111,6 +112,13 @@ class QuotientPointerOrbitTests(unittest.TestCase):
         self.assertTrue(item.header_overlap_event)
         self.assertTrue(item.typed_sieve_remainder_event)
         self.assertTrue(item.any_checksum_remainder_event)
+        self.assertEqual(item.tail_free_names, frozenset(("east2", "east3")))
+        self.assertEqual(item.tail_free_names, source_two_messages())
+        self.assertEqual(item.row_orbit_totals, (13, 23, 36))
+        self.assertTrue(item.source_two_tail_free_event)
+        self.assertTrue(item.broad_unary_tail_free_event)
+        self.assertTrue(item.typed_row_balance_event)
+        self.assertTrue(item.broad_row_balance_event)
 
     def test_planted_gate_phase_signature_is_detected(self) -> None:
         paths = {
@@ -144,8 +152,12 @@ class QuotientPointerOrbitTests(unittest.TestCase):
         self.assertTrue(planted.phase_event)
         self.assertTrue(planted.ordered_cycle_event)
         self.assertTrue(planted.header_overlap_event)
+        self.assertTrue(planted.source_two_tail_free_event)
+        self.assertTrue(planted.broad_unary_tail_free_event)
+        self.assertTrue(planted.typed_row_balance_event)
+        self.assertTrue(planted.broad_row_balance_event)
 
-    def test_only_full_array_window_has_substantive_bridge(self) -> None:
+    def test_only_full_array_window_has_substantive_event(self) -> None:
         hits = []
         for start, item in common_window_signatures():
             if (
@@ -153,6 +165,7 @@ class QuotientPointerOrbitTests(unittest.TestCase):
                 or item.predicted_full_partition_event
                 or item.phase_event
                 or item.ordered_cycle_event
+                or item.broad_row_balance_event
             ):
                 hits.append(start)
         self.assertEqual(hits, [0])

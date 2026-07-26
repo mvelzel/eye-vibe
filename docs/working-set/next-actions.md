@@ -3,31 +3,30 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Quotient-addressed 83-state tables (`19/20`)
+## 1. Quotient-addressed 83-state tables (`16/20`)
 
 Freeze each panel's first 83 full-array values as `f:Z83->Z83`, start at
 `floor(sum/101)`, and follow until repeat. The nine orbit sizes total72.
-Closing E1/E3/E5 give tails8, cycles12, multiplicity total20, union17, ordered
-cycles `1,4,7`, and header-composability intersections `0,1,2`. E2 is the
-sole nonclosing tail-free orbit, size9; the other nonclosing orbits total43.
+Closing E1/E3/E5 give tails8, cycles12, multiplicity total20, union17, and
+ordered cycles `1,4,7`. The all-orbit sieve omits32 labels, equal to the E4
+pivot remainder. Only full-array start0 works among common 83-windows.
 
-This exactly predicts the dossier partition `12+43+9+8=72`. Raw Veska
-independently proves only total72 and the separated 9/8 pictograms; its
-simple remaining split is 11/44. In one million controls preserving copied
-prefixes, quotient positions, multisets, checksums, and no-doubles, broad
-category-assigned `72|9|8` occurs 102 times. One also matches Eye `17|20`;
-none additionally retains ordered cycles `1,4,7`.
+Eye-only physical-row totals are `(13,23,36)`, where
+`13+23=36=E2 header`. The broad matched rate allowing any row and observed
+header is `.000896`. Source digit2 also selects the two tail-free walks, but
+the broad unary-class rate is `.1740`, so this adds no persuasive weight.
+All are dependent outputs of one retrospectively found operation.
 
-The all-orbit sieve omits32 labels, equal to the E4 pivot remainder; joint
-with total72 is `.000344`. Only full-array start0 works among all common
-83-windows. This is a promoted construction mechanism, not plaintext.
+Veska does not validate this lead. Its objective remainder split is 11/44,
+not 12/43, and no complete authored category mapping exists. Keep the Gate
+lane separate; partial count matches contribute zero evidence here.
 
-Advance only through an objective target-blind Veska `12/43` mask, an authored
-quotient-pointer interface, or a frozen-orbit prediction of an uninspected
-Eye transition/value. Do not scan alternate seeds, moduli, table lengths,
+Advance only through a frozen prediction of an uninspected Eye
+transition/value or an independently authored Eye interface selecting
+quotient addressing. Do not scan alternate seeds, moduli, table lengths,
 windows, aggregates, or new scalar ledgers.
 
-**Promotion gate:** one prospective prediction or independently authored mask.
+**Promotion gate:** one prospective Eye-only prediction.
 
 ## 2. Practice cipher #4 mechanism acquisition (`15/20`)
 
@@ -102,8 +101,11 @@ operations after seeing the target.
 
 ## 6. Gate only on new executable evidence (`11/20`)
 
-Do not continue fitting the current dossier. Reopen only if one of these
-arrives:
+Treat Veska as a binary standalone hypothesis, not partial corroboration for
+other theories. The raw asset has 72 authored-color marks and separated 9/8
+bands, but its objective remaining split is 11/44 and no complete executable
+mapping has been recovered. Do not continue fitting the current dossier.
+Reopen only if one of these arrives:
 
 - exact Seula residual mask;
 - objective 72-pixel partition rule;

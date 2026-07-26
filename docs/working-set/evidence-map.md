@@ -59,13 +59,13 @@ archive.
   [`../thirty-fourth-row2-phase-transfer-results-2026-07-26.md`](../thirty-fourth-row2-phase-transfer-results-2026-07-26.md)
 - Preserved `7->24` cross-phase state edge:
   [`../thirty-fifth-phase-overlap-update-results-2026-07-26.md`](../thirty-fifth-phase-overlap-update-results-2026-07-26.md)
-- Complete phase/header repair and target-to-source scope switch:
+- Eye phase/scope measurements; Gate-dependent header repair unpromoted:
   [`../thirty-sixth-phase-marker-closure-results-2026-07-26.md`](../thirty-sixth-phase-marker-closure-results-2026-07-26.md)
-- Row-2 terminal-repeat pointer record:
+- Eye-only row-2 terminal-repeat pointer record:
   [`../thirty-seventh-terminal-repeat-record-results-2026-07-26.md`](../thirty-seventh-terminal-repeat-record-results-2026-07-26.md)
-- Terminal source-state return and executable cycle:
+- Eye-only terminal source return; Gate-dependent cycle unpromoted:
   [`../thirty-eighth-terminal-source-return-results-2026-07-26.md`](../thirty-eighth-terminal-source-return-results-2026-07-26.md)
-- Veska `15|3,+3` state-selector diagram:
+- Retrospective Veska `15|3,+3` comparison, unpromoted:
   [`../thirty-ninth-veska-state-selector-results-2026-07-26.md`](../thirty-ninth-veska-state-selector-results-2026-07-26.md)
 - Middle-eye four-direction control cycle:
   [`../fortieth-middle-eye-control-cycle-results-2026-07-26.md`](../fortieth-middle-eye-control-cycle-results-2026-07-26.md)
@@ -106,20 +106,20 @@ archive.
 
 - Ground-up asset/code audit:
   [`../gate-guardian-audit.md`](../gate-guardian-audit.md)
-- Current-WAK locale salt census and dated introduction:
+- Current-WAK locale salt census and dated introduction, unpromoted:
   [`../twenty-eighth-rng-locale-salt-results-2026-07-24.md`](../twenty-eighth-rng-locale-salt-results-2026-07-24.md)
-- Exact `+3` instruction comparison:
+- Exploratory `+3` instruction comparison, unpromoted:
   [`../twenty-ninth-rng-salt-instruction-results-2026-07-24.md`](../twenty-ninth-rng-salt-instruction-results-2026-07-24.md)
-- Raw Veska `153,+3 -> fi` audit:
+- Raw Veska `153,+3 -> fi` comparison, unpromoted:
   [`../thirtieth-veska-locale-results-2026-07-24.md`](../thirtieth-veska-locale-results-2026-07-24.md)
-- `+3` transfer on the original marker record:
+- Exploratory `+3` transfer on the original marker record, unpromoted:
   [`../thirty-first-gate-plus3-marker-transfer-results-2026-07-26.md`](../thirty-first-gate-plus3-marker-transfer-results-2026-07-26.md)
 - Transfer implementation:
   [`../../src/eye_mystery/gate_plus3_transfer.py`](../../src/eye_mystery/gate_plus3_transfer.py)
 
 ## Mod-101 and 83-of-101 construction vocabulary
 
-- Quotient-addressed 83-state orbit bridge to Eye phases and Veska:
+- Quotient-addressed 83-state Eye-only orbit audit; Veska comparison rejected:
   [`../sixty-fourth-quotient-pointer-orbit-results-2026-07-26.md`](../sixty-fourth-quotient-pointer-orbit-results-2026-07-26.md)
 - Prefix-trie checksum and controls:
   [`../novel-synthesis-2026-07-21.md`](../novel-synthesis-2026-07-21.md)

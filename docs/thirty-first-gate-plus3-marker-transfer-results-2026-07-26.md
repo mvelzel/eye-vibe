@@ -1,5 +1,10 @@
 # Thirty-first pass — Gate `+3` marker-transfer results
 
+> **Status correction, 26 July 2026:** The marker arithmetic is retained as an
+> exploratory comparison only. Gate `+3` has not been independently validated
+> as an Eye instruction, so these partial transfers do not corroborate the
+> Gate theory or the Eye header model.
+
 ## Result
 
 The later Gate/WAK `+3` operator has a real but narrow execution on the
@@ -150,4 +155,3 @@ Implementation:
 - `src/eye_mystery/gate_plus3_transfer.py`
 - `scripts/audit_gate_plus3_transfer.py`
 - `tests/test_gate_plus3_transfer.py`
-

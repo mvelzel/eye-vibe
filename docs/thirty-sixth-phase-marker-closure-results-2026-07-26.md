@@ -1,5 +1,10 @@
 # Thirty-sixth pass — phase-marker closure results
 
+> **Status correction, 26 July 2026:** The phase measurements remain Eye-only
+> observations, but the claimed closure imports the unvalidated Gate `+3`
+> interpretation. It is therefore not a promoted construction record. The
+> numerical closure is preserved as retrospective provenance only.
+
 ## Outcome
 
 Promote a complete phase/header construction record:

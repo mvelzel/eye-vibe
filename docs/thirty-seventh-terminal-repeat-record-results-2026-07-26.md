@@ -1,5 +1,9 @@
 # Thirty-seventh pass — terminal-repeat row-2 record results
 
+> **Status correction, 26 July 2026:** The row-2 repeat record is retained as
+> an Eye-only observation. The later “complete marker-layer interpretation”
+> in this document depends on unvalidated Gate `+3` and is not promoted.
+
 ## Outcome
 
 Promote marker row 2 as a terminal-repeat pointer record for the late common

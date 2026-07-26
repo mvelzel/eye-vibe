@@ -1,5 +1,9 @@
 # Thirty-eighth pass — terminal source-state return results
 
+> **Status correction, 26 July 2026:** The exact Eye-only source return is
+> retained. The advertised executable cycle imports unvalidated Gate `+3` and
+> is not promoted; that partial asset match cannot strengthen this result.
+
 ## Outcome
 
 Promote a cyclic source-state return:

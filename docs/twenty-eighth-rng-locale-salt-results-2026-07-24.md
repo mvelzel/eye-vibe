@@ -1,5 +1,10 @@
 # Twenty-eighth result — the `509.7,683.1` RNG salt is unique
 
+> **Status correction, 26 July 2026:** This is an exact asset census but an
+> unpromoted clue hypothesis. The salt/marker comparison has no complete
+> decoding mechanism or held-out prediction and must not strengthen Veska or
+> any Eye-only theory.
+
 ## Outcome
 
 The complete frozen current-WAK inventory finds one exceptional coordinate

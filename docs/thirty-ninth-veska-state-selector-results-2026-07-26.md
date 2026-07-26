@@ -1,5 +1,10 @@
 # Thirty-ninth pass — Veska state-selector results
 
+> **Status correction, 26 July 2026:** This state-selector interpretation is
+> withdrawn from the promoted model. It maps Veska into already measured Eye
+> quantities without a complete asset decoder or held-out consequence, so the
+> fit contributes no evidence to either theory.
+
 ## Outcome
 
 Promote Veska as a later state-selector diagram for the executable Eye control

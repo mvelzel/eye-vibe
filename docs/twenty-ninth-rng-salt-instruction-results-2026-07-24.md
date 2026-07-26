@@ -1,5 +1,10 @@
 # Twenty-ninth result — the RNG salt uniquely spells `+3`
 
+> **Status correction, 26 July 2026:** The arithmetic rendering is reproducible
+> but remains an unpromoted WAK hypothesis. Its resemblance to a Veska mark
+> supplies no evidence for either asset being an Eye clue; each requires its
+> own complete mechanism and held-out consequence.
+
 ## Outcome
 
 The exceptional chest RNG salt pair has a second exact reading:

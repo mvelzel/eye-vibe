@@ -1,5 +1,11 @@
 # Thirtieth result — Veska directly reads `fi`
 
+> **Status correction, 26 July 2026:** This is a retrospective asset
+> interpretation, not a validated reading. It selects an arithmetic
+> serialization because it reaches an already known Eye locale. Without a
+> complete target-blind Veska-to-Eye mechanism and held-out consequence, the
+> `fi` match contributes no evidence.
+
 ## Outcome
 
 Using the Gate asset bands fixed before this interpretation was noticed,

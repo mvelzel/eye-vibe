@@ -125,8 +125,9 @@ the observed scalar assignment.
 The selected terminal class15 labels are E4 `40`, W4 `67`, E5 `21`. The
 already fixed source direction returns `67-40=27 mod83`, exactly the E4 loop
 header. It is the only fixed-direction repeat returning 27; a matched
-multiplicity/reuse relabeling gives `1/12`. Thus the control cycle is
-`27 ->(+3) 30 ->(+4) 34 ->(+29,+13) class15 ->(W4-E4) 27`.
+multiplicity/reuse relabeling gives `1/12`. This closes an Eye-only return to
+header27. No Eye-derived operation currently selects the transition from 27
+to phase boundary30; the earlier Gate-`+3` completion is unpromoted.
 
 The positive middle-eye-only classes `5,10,15,20 = 010,020,030,040_5`
 all repeat by boundary34; the other single-coordinate axes do not. Their
@@ -145,7 +146,7 @@ The third-eye classes `1..4` have scoped roles
 `common,source,target,absent`, clockwise from up. Headers
 `102,302,113_5` type source scalar2 and target scalar3; the two closed E4/E5
 branch checks return `(3,2)` in reciprocal order. The first is the carry
-`002+040=003+031+3`, echoing Gate `+3`. Prospective visible-label transfer
+`002+040=003+031+3`. Prospective visible-label transfer
 scores `0/2`; strict stack/queue/deque and static `5×5` code models are also
 negative. Direct transfer to six other registered contexts scores `0/4`.
 
@@ -159,46 +160,29 @@ probability is `3/33800` (`.000088757`); any shared edge is common (`.1010`),
 but any pair sharing an offset-17 edge has matched-control rate `.00136`.
 Promote one preserved state/cache correspondence, not a general update map.
 
-## Later Gate/WAK corroboration
+## Later-asset hypotheses (unpromoted)
 
-The Gate Guardian postdates the October 2020 Eye Messages and is eligible only
-as a later decoding/construction hint. Veska objectively supplies upper
-`1,5,3 ->153`, lower `+3`, and `153,(153+3) mod83 -> f,i`.
+Gate Guardian and current-WAK postdate the Eye Messages, so they could be later
+clues. Historical audits found numerical correspondences involving Veska
+`153,+3`, WAK salts, and Eye marker/phase quantities. None supplies a complete
+asset-to-Eye mechanism or a held-out consequence. These partial matches cannot
+corroborate one another or strengthen an Eye-only theory.
 
-The current-WAK chest RNG salts independently render as `+3` under the Eye
-alphabet and repeat `683 -> NU`; they were introduced in March 2023.
+Veska's raw marks give total72 and isolated 9/8 bands, but the remaining
+objective split is 11/44, not the dossier's 12/43. Gate and WAK remain separate
+binary hypotheses; each must stand on a complete target-blind executable map.
 
-Veska `1,5,3` has one valid late-state/suffix parse under all class, split,
-width, and component-permutation controls: terminal class `15`, E4 loop width
-`3`. Its lower `+3` then executes the closed restart `27+3=30`, while the same
-marks redundantly retain `153,+3 -> fi`.
+## Quotient-addressed table hypothesis
 
-The previously missing self-field result closes through measured phases:
+The checksum quotient can address each panel's first83 values as a functional
+table. Nine orbit sizes total72; closing E1/E3/E5 give tail/cycle `8/12`,
+multiplicity/union `20/17`, and cycles `1,4,7`; the union omits32 labels, E4's
+remainder. These are dependent outputs of one retrospectively found operation.
 
-```text
-final row +3             (27,77,33) -> (30,80,36)
-E4 bridge repair +20                  (50,80,36) = row 1
-```
-
-Here `30` is the late common-phase length and `20+30=50`. The fixed full
-closure occurs in `22/12096` conditional scalar assignments; allowing every
-row pair, self slot, bridge length, and target permutation gives `34/12096`.
-Scanning all 82 shifts leaves only this `+3` construction. It selects the
-observed of two factoradic survivors. The source-pair delta and phase sum both
-equal `50`; the late source-pair boundary `34` is exactly the West3 marker.
-
-The checksum quotient now addresses each panel's first 83 full-array values.
-Nine forward-orbit sizes total72. Closing E1/E3/E5 split into 12 cycle and 8
-tail nodes, total/union `20/17`, with ordered cycles `1,4,7`. Nonclosing E2 is
-the sole tail-free orbit, size9; the other five total43. This predicts Veska
-`12+43+9+8=72`. The raw asset proves only total72 and the 9/8 bands; its
-simple remaining split is 11/44, so 12/43 remains a mask prediction; broad
-`72|9|8` is `.000103`. One control also matches Eye `17+3=20`, but none keeps cycles `1,4,7`.
-
-The all-orbit union omits32 labels, the typed E4 checksum remainder (`.0349`
-alone, `.000344` with total72). Body-only and every other common 83-window
-start fail. Promote quotient-addressed tables as a construction lead, not yet
-a decoder; Type6's Seula mask, scope rules, and allocator remain unproved.
+Eye-only checks bound it. Source digit2 selects both tail-free walks, but any
+simple header class does so in `.1740` of controls. Physical-row totals are
+`(13,23,36)`, with `13+23=36=E2 header`; the broad rate is `.000896`. Retain
+one prospective Eye-only test, not a construction mechanism.
 
 ## Other construction facts worth retaining
 
@@ -224,7 +208,7 @@ The compact current model is:
 1. orthodox trigrams are correct;
 2. first trigrams are a typed, redundant locale/check header;
 3. the final row contains an exact self-describing body landmark record;
-4. later game assets plausibly restate some marker operations;
+4. later-asset clue theories remain unvalidated and separate;
 5. the body machine and plaintext remain unknown.
 
 Do not collapse these layers into one cipher without a held-out prediction.

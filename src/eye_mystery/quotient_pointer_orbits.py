@@ -10,15 +10,22 @@ structure under a prefix- and occurrence-preserving null.
 from __future__ import annotations
 
 from dataclasses import dataclass
+from functools import cache
 from random import Random
 from typing import Callable, Sequence
 
 from eye_mystery.corpus import MESSAGE_ORDER, MESSAGES, trigram_values
+from eye_mystery.factoradic_headers import base5_digits, lexicographic_unrank
 
 
 TABLE_SIZE = 83
 CHECKSUM_MODULUS = 101
 CHECKSUM_FAMILY = ("east1", "east3", "east5")
+PHYSICAL_ROWS = (
+    ("east1", "west1", "east2"),
+    ("west2", "east3", "west3"),
+    ("east4", "west4", "east5"),
+)
 
 # Full-array lengths: marker at zero plus every independently established
 # literal body prefix.  Freezing the longest known prefix per panel preserves
@@ -78,6 +85,38 @@ class OrbitSignature:
     pure_nonclosing_orbit_sizes: tuple[int, ...]
     other_nonclosing_orbit_total: int
     closing_intersection_sizes: tuple[int, int, int]
+    row_orbit_totals: tuple[int, int, int]
+
+    @property
+    def tail_free_names(self) -> frozenset[str]:
+        return frozenset(
+            panel.name for panel in self.panels if not panel.orbit.tail
+        )
+
+    @property
+    def source_two_tail_free_event(self) -> bool:
+        return self.tail_free_names == source_two_messages()
+
+    @property
+    def broad_unary_tail_free_event(self) -> bool:
+        return self.tail_free_names in header_unary_predicate_masks()
+
+    @property
+    def typed_row_balance_event(self) -> bool:
+        headers = {
+            panel.name: panel_values(panel.name)[0] for panel in self.panels
+        }
+        first, second, third = self.row_orbit_totals
+        return third == first + second == headers["east2"]
+
+    @property
+    def broad_row_balance_event(self) -> bool:
+        headers = {panel_values(panel.name)[0] for panel in self.panels}
+        total = sum(self.row_orbit_totals)
+        return any(
+            2 * row_total == total and row_total in headers
+            for row_total in self.row_orbit_totals
+        )
 
     @property
     def pure_nonclosing_orbit_total(self) -> int:
@@ -202,6 +241,12 @@ class PointerNullAudit:
     phase_and_broad_objective_hits: int
     full_bridge_hits: int
     broad_full_bridge_hits: int
+    source_two_tail_free_hits: int
+    broad_unary_tail_free_hits: int
+    typed_row_balance_hits: int
+    broad_row_balance_hits: int
+    typed_eye_internal_joint_hits: int
+    broad_eye_internal_joint_hits: int
 
     def corrected_rate(self, hits: int) -> float:
         return (hits + 1) / (self.trials + 1)
@@ -238,6 +283,63 @@ def functional_orbit(
 
 def panel_values(name: str) -> tuple[int, ...]:
     return trigram_values(MESSAGES[name])
+
+
+@cache
+def source_two_messages() -> frozenset[str]:
+    return frozenset(
+        name
+        for name in MESSAGE_ORDER
+        if base5_digits(panel_values(name)[0])[1] == 2
+    )
+
+
+@cache
+def header_unary_predicate_masks() -> frozenset[frozenset[str]]:
+    """Finite correction family for simple header/panel classifications."""
+
+    masks: set[frozenset[str]] = set()
+    digits = {
+        name: base5_digits(panel_values(name)[0]) for name in MESSAGE_ORDER
+    }
+    for coordinate in range(3):
+        for value in {entry[coordinate] for entry in digits.values()}:
+            masks.add(
+                frozenset(
+                    name
+                    for name in MESSAGE_ORDER
+                    if digits[name][coordinate] == value
+                )
+            )
+
+    newline_preimages = {
+        name: lexicographic_unrank(panel_values(name)[0]).index(5)
+        for name in MESSAGE_ORDER
+    }
+    for value in set(newline_preimages.values()):
+        masks.add(
+            frozenset(
+                name
+                for name in MESSAGE_ORDER
+                if newline_preimages[name] == value
+            )
+        )
+
+    east = frozenset(name for name in MESSAGE_ORDER if name.startswith("east"))
+    masks.update((east, frozenset(MESSAGE_ORDER) - east))
+    for row in PHYSICAL_ROWS:
+        masks.add(frozenset(row))
+    self_edges = frozenset(
+        name
+        for name in MESSAGE_ORDER
+        if digits[name][1] == digits[name][0] - 1
+    )
+    masks.update((self_edges, frozenset(MESSAGE_ORDER) - self_edges))
+    p_messages = frozenset(PHYSICAL_ROWS[0])
+    masks.update((p_messages, frozenset(MESSAGE_ORDER) - p_messages))
+    closing = frozenset(CHECKSUM_FAMILY)
+    masks.update((closing, frozenset(MESSAGE_ORDER) - closing))
+    return frozenset(masks)
 
 
 def panel_orbit(
@@ -309,6 +411,10 @@ def signature(
         pure_nonclosing_orbit_sizes=pure_nonclosing,
         other_nonclosing_orbit_total=other_nonclosing_total,
         closing_intersection_sizes=intersections,
+        row_orbit_totals=tuple(
+            sum(by_name[name].orbit.size for name in row)
+            for row in PHYSICAL_ROWS
+        ),
     )
 
 
@@ -430,6 +536,12 @@ def matched_pointer_null(
         "phase_broad_objective": 0,
         "full": 0,
         "broad_full": 0,
+        "source_tailfree": 0,
+        "broad_tailfree": 0,
+        "row_balance": 0,
+        "broad_row_balance": 0,
+        "internal_joint": 0,
+        "broad_internal_joint": 0,
     }
 
     for trial in range(1, trials + 1):
@@ -464,6 +576,16 @@ def matched_pointer_null(
         counts["phase_broad_objective"] += phase and broad_objective
         counts["full"] += phase and objective and cycles
         counts["broad_full"] += phase and broad_objective and cycles
+        source_tailfree = item.source_two_tail_free_event
+        broad_tailfree = item.broad_unary_tail_free_event
+        row_balance = item.typed_row_balance_event
+        broad_row_balance = item.broad_row_balance_event
+        counts["source_tailfree"] += source_tailfree
+        counts["broad_tailfree"] += broad_tailfree
+        counts["row_balance"] += row_balance
+        counts["broad_row_balance"] += broad_row_balance
+        counts["internal_joint"] += source_tailfree and row_balance
+        counts["broad_internal_joint"] += broad_tailfree and broad_row_balance
         if progress is not None and trial % 100_000 == 0:
             progress(trial)
 
@@ -486,4 +608,10 @@ def matched_pointer_null(
         phase_and_broad_objective_hits=counts["phase_broad_objective"],
         full_bridge_hits=counts["full"],
         broad_full_bridge_hits=counts["broad_full"],
+        source_two_tail_free_hits=counts["source_tailfree"],
+        broad_unary_tail_free_hits=counts["broad_tailfree"],
+        typed_row_balance_hits=counts["row_balance"],
+        broad_row_balance_hits=counts["broad_row_balance"],
+        typed_eye_internal_joint_hits=counts["internal_joint"],
+        broad_eye_internal_joint_hits=counts["broad_internal_joint"],
     )
