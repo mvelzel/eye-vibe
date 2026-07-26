@@ -120,3 +120,4 @@ decoder-independent reason makes the expected information gain worthwhile.
 - direct visible-coordinate swap-or-not card shuffles of one to three rounds.
 - Earthquake-gear Wadsworth on any arithmetic progression of visible ranks.
 - factoradic-header matching against the current executable Kantele songs.
+- static header-ordered visible-codebook ranks and 42-state omission counts.
