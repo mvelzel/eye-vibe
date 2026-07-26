@@ -201,12 +201,12 @@ is a header/state repair—not a body-wide shift or complete Gate decoder.
   Petri's 2015 triangle renderer predates the Eyes, but its polygon windings
   conflict with the accepted order. It corroborates only alternating-triangle
   topology, not the cipher; Gate and cauldron authorship remain unproved.
-- Equality/reconvergence structure and copied openings are real and must be
-  preserved by any decoder. Fixed substitutions that destroy them are poor
-  models.
-- Direct fixed `3,5,8` body weighting is negative.
-- The existing equality-derived context graph is a forest, so a claimed
-  holonomy around its derived triangles is tautological.
+- Equality/reconvergence and copied openings are real; decoders must preserve
+  them, so fixed substitutions that destroy them are poor models.
+- Direct `3,5,8` body weighting is negative; the equality-derived context
+  graph is a forest, so its derived-triangle holonomy is tautological.
+- Earthquake-gear/Wadsworth rejects every arithmetic-progression 83-disk for
+  `m=26/29` and all fixed weights; its arbitrary hidden disk is unresolved.
 
 ## Practice-puzzle calibration
 

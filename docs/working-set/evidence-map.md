@@ -137,6 +137,10 @@ archive.
 - Historical swap-or-not card-shuffle proposal, closed for one to three rounds
   in visible `Z_83` coordinates:
   [`../fifty-second-swap-or-not-results-2026-07-26.md`](../fifty-second-swap-or-not-results-2026-07-26.md)
+- Exact Earthquake-gear Wadsworth reconstruction; every fixed-weight
+  arithmetic-progression visible disk is closed, arbitrary hidden disk
+  unresolved:
+  [`../fifty-third-earthquake-gears-results-2026-07-26.md`](../fifty-third-earthquake-gears-results-2026-07-26.md)
 
 ## Practice puzzles
 

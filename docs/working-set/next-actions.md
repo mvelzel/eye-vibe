@@ -44,6 +44,12 @@ for structured affine GAK and fixed-base/top-swap decks. Reopen it only with
 an independently supplied operation family; do not enumerate arbitrary
 permutations.
 
+The historical Earthquake-gear Wadsworth machine is now executable. Every
+fixed-weight arithmetic-progression order of the visible ranks fails within
+three transitions for both 26- and 29-symbol plaintext disks. The arbitrary
+83-symbol disk allowed by the proposal remains solver-indeterminate; reopen
+only with an independently selected disk order or a resolving exact invariant.
+
 ## 3. Practice cipher #3 mechanism acquisition (`14/20`)
 
 Retain the exact prefix tree and exclusion certificates. Seek an author-hint
@@ -111,3 +117,4 @@ decoder-independent reason makes the expected information gain worthwhile.
 - discarded standard/keyed `A-Z` warm-ups on structured affine GAK or
   fixed-base/top-swap decks.
 - direct visible-coordinate swap-or-not card shuffles of one to three rounds.
+- Earthquake-gear Wadsworth on any arithmetic progression of visible ranks.
