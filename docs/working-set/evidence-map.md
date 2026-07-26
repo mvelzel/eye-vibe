@@ -131,6 +131,9 @@ archive.
   [`../seventeenth-lane-e-fibration-results-2026-07-24.md`](../seventeenth-lane-e-fibration-results-2026-07-24.md)
 - Hidden-wheel exact exclusion:
   [`../thirteenth-wide-hidden-geometry-results-2026-07-24.md`](../thirteenth-wide-hidden-geometry-results-2026-07-24.md)
+- Historical 26-glyph discarded-alphabet initializer, with bounded affine-GAK
+  and structured-deck exclusions:
+  [`../fifty-first-alphabet-warmup-results-2026-07-26.md`](../fifty-first-alphabet-warmup-results-2026-07-26.md)
 
 ## Practice puzzles
 

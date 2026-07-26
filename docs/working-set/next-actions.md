@@ -39,6 +39,11 @@ Discord remains strictly read-only: no messages, reactions, or calls.
 Preserve attachment hashes and surrounding provenance. Community claims
 generate tests; they are not imported as facts.
 
+The historical discarded-`A-Z` initializer has now been executed and closed
+for structured affine GAK and fixed-base/top-swap decks. Reopen it only with
+an independently supplied operation family; do not enumerate arbitrary
+permutations.
+
 ## 3. Practice cipher #3 mechanism acquisition (`14/20`)
 
 Retain the exact prefix tree and exclusion certificates. Seek an author-hint
@@ -103,3 +108,5 @@ decoder-independent reason makes the expected information gain worthwhile.
 - phase-budget transfer to row 2's copied-opening exit (`.0215` exact,
   `.4000` broad);
 - Gate Type4/Type6 execution without the missing masks and allocator.
+- discarded standard/keyed `A-Z` warm-ups on structured affine GAK or
+  fixed-base/top-swap decks.

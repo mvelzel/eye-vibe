@@ -7,6 +7,31 @@ from collections.abc import Callable, Sequence
 MODULUS = 83
 
 
+def decode_affine_gak_from_state(
+    ciphertext: Sequence[int],
+    multiplier_for_plaintext: Callable[[int], int],
+    *,
+    previous: int,
+    hidden: int,
+) -> tuple[int, ...] | None:
+    """Decode from an explicitly constructed affine GAK state."""
+
+    previous %= MODULUS
+    hidden %= MODULUS
+    if hidden == 0:
+        return None
+    plaintext = []
+    for current in ciphertext:
+        symbol = (current - previous) * hidden % MODULUS
+        plaintext.append(symbol)
+        multiplier = multiplier_for_plaintext(symbol) % MODULUS
+        if multiplier == 0:
+            return None
+        hidden = hidden * multiplier % MODULUS
+        previous = current
+    return tuple(plaintext)
+
+
 def decode_affine_gak(
     ciphertext: Sequence[int],
     multiplier_for_plaintext: Callable[[int], int],
@@ -47,16 +72,9 @@ def decode_affine_gak(
         body = ciphertext[1:]
     else:
         raise ValueError(f"unknown affine GAK mode: {mode}")
-    if hidden == 0:
-        return None
-
-    plaintext = []
-    for current in body:
-        symbol = (current - previous) * hidden % MODULUS
-        plaintext.append(symbol)
-        multiplier = multiplier_for_plaintext(symbol) % MODULUS
-        if multiplier == 0:
-            return None
-        hidden = hidden * multiplier % MODULUS
-        previous = current
-    return tuple(plaintext)
+    return decode_affine_gak_from_state(
+        body,
+        multiplier_for_plaintext,
+        previous=previous,
+        hidden=hidden,
+    )
