@@ -122,3 +122,4 @@ decoder-independent reason makes the expected information gain worthwhile.
 - factoradic-header matching against the current executable Kantele songs.
 - static header-ordered visible-codebook ranks and 42-state omission counts.
 - header-action orbit projection and header-ordered `2x41` no-repeat ranks.
+- header-ordered prefix-trie syndrome without a node-level collation rule.
