@@ -135,6 +135,9 @@ Class10 completes the missing right direction at the E4/W4 conflict, and its
 cached W4->E4 label difference returns West4 marker77. Direct D4 transforms
 of the `5×5` coordinates or visible eye trigrams are negative; even 18,432
 independent-eye models fit at most 3/25 cells and fail the class10 holdout.
+Adaptive cache policies also fail: a 55,360,004-model affine-deck family fits
+at most 7/30 training symbols. Equality alone leaves `P(83,25)`, about 153.6
+bits, of fresh-label choice and therefore cannot be the allocator input.
 
 Across the promoted final map switch, the same visible value links independently
 canonicalized old/new classes. The only edge shared by any panel pair is

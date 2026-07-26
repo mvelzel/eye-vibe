@@ -301,6 +301,13 @@ cells and never predicts class10 from the other control states. A stateful
 cache/allocator remains necessary. Results:
 [`forty-first-state-table-transform-results-2026-07-26.md`](forty-first-state-table-transform-results-2026-07-26.md).
 
+But equality-driven cache policies do not provide that allocator. A broad
+55,360,004-model adaptive-deck screen fits at most 7/30 common symbols, while
+the equality trace itself leaves `P(83,25)` possible numeric assignments.
+Type6 therefore still needs an independent numeric carrier for first-seen
+values. Results:
+[`forty-second-cache-allocator-results-2026-07-26.md`](forty-second-cache-allocator-results-2026-07-26.md).
+
 The Eye-side transition now also preserves one constrained state edge. After
 canonicalizing the old and new phases independently, `7->24` is the only edge
 shared by any panel pair: it appears in both East panels with different

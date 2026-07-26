@@ -63,6 +63,8 @@ archive.
   [`../fortieth-middle-eye-control-cycle-results-2026-07-26.md`](../fortieth-middle-eye-control-cycle-results-2026-07-26.md)
 - Direct `5×5` D4/visible-eye transfer, negative:
   [`../forty-first-state-table-transform-results-2026-07-26.md`](../forty-first-state-table-transform-results-2026-07-26.md)
+- Adaptive cache allocator and identifiability, negative:
+  [`../forty-second-cache-allocator-results-2026-07-26.md`](../forty-second-cache-allocator-results-2026-07-26.md)
 - Phase implementations:
   [`../../src/eye_mystery/synchronizing_bridge.py`](../../src/eye_mystery/synchronizing_bridge.py),
   [`../../src/eye_mystery/phase_ledger.py`](../../src/eye_mystery/phase_ledger.py),
@@ -73,7 +75,8 @@ archive.
   [`../../src/eye_mystery/terminal_source_return.py`](../../src/eye_mystery/terminal_source_return.py),
   [`../../src/eye_mystery/veska_state_selector.py`](../../src/eye_mystery/veska_state_selector.py),
   [`../../src/eye_mystery/middle_eye_cycle.py`](../../src/eye_mystery/middle_eye_cycle.py),
-  [`../../src/eye_mystery/state_table_screen.py`](../../src/eye_mystery/state_table_screen.py)
+  [`../../src/eye_mystery/state_table_screen.py`](../../src/eye_mystery/state_table_screen.py),
+  [`../../src/eye_mystery/cache_allocator_screen.py`](../../src/eye_mystery/cache_allocator_screen.py)
 
 ## Gate and later clue chronology
 

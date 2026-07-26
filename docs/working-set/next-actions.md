@@ -3,27 +3,25 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Infer the state allocator/cache (`20/20`)
+## 1. Locate the allocator's independent input (`20/20`)
 
-Direct D4 table transfer is closed. Treat the late signature as an
-allocation/reference program:
+Direct D4 transfer and adaptive cache policies are closed. Equality structure
+can schedule references but cannot select fresh numeric values: the common
+phase admits `P(83,25)` injective assignments, about 153.6 bits of choice.
 
 ```text
-common phase: 25 first-seen allocations + 5 references
-E4 boundary: class10 reference; W4 allocates class27
-control wheel: classes5,20,15,10
+required: independent numeric carrier
+candidates: another stream, fixed deck/key, arithmetic state, asset tape
+holdout: one fresh class label after position29
 ```
 
-Start wide over FIFO/LRU/MRU, move-to-front/back, typed cache lookup, and
-small deterministic allocation rules. Preserve the exact reference tape and
-old/new reuse types.
+Inventory carriers already fixed without Eye-body fitting. Test each as a
+fresh-value generator before permitting cache logic. Start with cross-panel
+numeric state, factoradic header state, and objectively extractable Gate
+tapes; do not infer a tape from desired labels.
 
-Train on common references through class15. Withhold class10's E4 repeat/W4
-allocation split, its marker77 return, and at least one fresh label.
-
-**Promotion gate:** one cache rule predicts the held-out split or a fresh
-allocation. Merely replaying equality classes or choosing a label per cell
-fails.
+**Promotion gate:** one frozen carrier predicts a fresh post-common label.
+Replaying equality classes or choosing a per-class label fails.
 
 ## 2. Novel machine synthesis, wide first (`16/20`)
 
