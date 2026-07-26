@@ -147,7 +147,7 @@ The third-eye classes `1..4` have scoped roles
 branch checks return `(3,2)` in reciprocal order. The first is the carry
 `002+040=003+031+3`, echoing Gate `+3`. Prospective visible-label transfer
 scores `0/2`; strict stack/queue/deque and static `5×5` code models are also
-negative.
+negative. Direct transfer to six other registered contexts scores `0/4`.
 
 Across the promoted final map switch, the same visible value links independently
 canonicalized old/new classes. The only edge shared by any panel pair is

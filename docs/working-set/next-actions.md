@@ -3,32 +3,7 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Header-typed branch record, external prediction (`18/20`)
-
-The wide machine batch is complete. Strict stack/queue/deque, affine
-systematic-code, orthogonal-array, and direct third-axis visible-label
-transfers close. One label-invariant transducer survives:
-
-```text
-final header scalars        source2, target3
-third-axis branch classes   source2, target3
-closed branch checks        target3, source2
-```
-
-The `+3` record is also an exact base-five carry and the fixed Gate operation.
-Do not fit more arithmetic inside the two discovered windows.
-
-Next, find an independently delimited divergence/rejoin record outside those
-windows and freeze its expected check from header type before reading its
-class sum. Candidate scopes are the earlier natural rows or a separately
-selected final-row phase, but the already negative universal row-record
-transfer must not be reopened.
-
-**Promotion gate:** one exact equality boundary or checksum predicted outside
-the two inspected windows. Visible-label allocation remains closed after the
-prospective `0/2` transfer failures.
-
-## 2. Practice cipher #4 mechanism acquisition (`15/20`)
+## 1. Practice cipher #4 mechanism acquisition (`15/20`)
 
 The word-constrained arbitrary cyclic-GAK solver now passes a matched
 punctuation-bearing plant but fails the real data at `48..52/200`; phase
@@ -44,7 +19,7 @@ Reopen only with:
 **Promotion gate:** exact replay of the full puzzle and a concise account of
 how the mechanism was cracked.
 
-## 3. Practice cipher #3 mechanism acquisition (`14/20`)
+## 2. Practice cipher #3 mechanism acquisition (`14/20`)
 
 Retain the exact prefix tree and exclusion certificates. Seek an author-hint
 or operation family that explains the progression without inventing a hidden
@@ -53,7 +28,7 @@ or operation family that explains the progression without inventing a hidden
 **Promotion gate:** solve/replay the full puzzle or produce a
 deletion-minimal exact exclusion of a clearly motivated family.
 
-## 4. Read-only Silmä delta (`14/20`)
+## 3. Read-only Silmä delta (`14/20`)
 
 Search the cryptography and novel channels for developments after the latest
 captured evidence, especially:
@@ -68,7 +43,7 @@ Discord remains strictly read-only: no messages, reactions, or calls.
 Preserve attachment hashes and surrounding provenance. Community claims
 generate tests; they are not imported as facts.
 
-## 5. Gate only on new executable evidence (`11/20`)
+## 4. Gate only on new executable evidence (`11/20`)
 
 Do not continue fitting the current dossier. Reopen only if one of these
 arrives:
@@ -86,7 +61,7 @@ at release and NollaArvi names him for possible later Eye/cauldron work, but
 the public data history is a mirror whose commits cannot identify Gate asset
 authors. Reopen provenance only with an internal source or author statement.
 
-## 6. Source/language archaeology (`9/20`)
+## 5. Source/language archaeology (`9/20`)
 
 The `FI` field makes Finnish sources worth scoring only after a decoder is
 selected without language. The Finnish *Corpus Hermeticum* lead remains
@@ -107,6 +82,7 @@ decoder-independent reason makes the expected information gain worthwhile.
 - arbitrary hidden wheel fitted directly to Eye output;
 - Earthquake mask or Cessation sampler on the final anchor slices;
 - literal transfer of the final-row grammar to rows 1 and 2;
+- reciprocal header-scalar checks on the other registered contexts (`0/4`);
 - phase-budget transfer to row 2's copied-opening exit (`.0215` exact,
   `.4000` broad);
 - Gate Type4/Type6 execution without the missing masks and allocator.
