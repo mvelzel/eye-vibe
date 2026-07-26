@@ -138,6 +138,8 @@ independent-eye models fit at most 3/25 cells and fail the class10 holdout.
 Adaptive cache policies also fail: a 55,360,004-model affine-deck family fits
 at most 7/30 training symbols. Equality alone leaves `P(83,25)`, about 153.6
 bits, of fresh-label choice and therefore cannot be the allocator input.
+Cross-panel mod-83 models fit at most 7/23 and three-eye arithmetic 4/23;
+all co-best models fail withheld control class10 and phase class24.
 
 Across the promoted final map switch, the same visible value links independently
 canonicalized old/new classes. The only edge shared by any panel pair is

@@ -3,25 +3,24 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Locate the allocator's independent input (`20/20`)
+## 1. Read-only Silmä carrier delta (`19/20`)
 
-Direct D4 transfer and adaptive cache policies are closed. Equality structure
-can schedule references but cannot select fresh numeric values: the common
-phase admits `P(83,25)` injective assignments, about 153.6 bits of choice.
+Known carriers now have bounded failures: cross-panel mod-83 models reach
+7/23, three-eye arithmetic 4/23, and adaptive decks 7/30. Search recent
+`silmä-cryptography` and `silmä-novel` history specifically for:
 
 ```text
-required: independent numeric carrier
-candidates: another stream, fixed deck/key, arithmetic state, asset tape
-holdout: one fresh class label after position29
+new fixed numeric tapes or deck orders
+reproducible first-seen allocation rules
+offline construction-tool/key evidence
+held-out predictions for class10, class24, or post-common fresh labels
 ```
 
-Inventory carriers already fixed without Eye-body fitting. Test each as a
-fresh-value generator before permitting cache logic. Start with cross-panel
-numeric state, factoradic header state, and objectively extractable Gate
-tapes; do not infer a tape from desired labels.
+Discord remains strictly read-only. Preserve attachment provenance and do not
+import community claims as facts.
 
-**Promotion gate:** one frozen carrier predicts a fresh post-common label.
-Replaying equality classes or choosing a per-class label fails.
+**Promotion gate:** independently reproduce a carrier and predict one fresh
+label not used to select it.
 
 ## 2. Novel machine synthesis, wide first (`16/20`)
 
@@ -41,7 +40,7 @@ Run one cheap necessity test per family. A family earns depth only by
 predicting a held-out equality, boundary, or marker role. Start wide before
 optimizing parameters.
 
-## 3. Practice cipher #4 constraint solver (`15/20`)
+## 3. Practice cipher #4 constraint solver (`17/20`)
 
 The 57-cycle outer action is established; the remaining codec is the useful
 unknown. Replace the failed beam with a constraint-guided solver that first
