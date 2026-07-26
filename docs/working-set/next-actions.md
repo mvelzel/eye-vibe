@@ -106,7 +106,8 @@ decoder-independent reason makes the expected information gain worthwhile.
 - direct `FI`, `FINNISH`, `FIBONACCI`, or `FI358` deck keys;
 - direct factoradic body products, quotients, running states, cosets, moving
   newline, or a middle-header consecutive stagger across all three rows;
-- direct `3,5,8` weighted panel equation;
+- direct `3,5,8` weighting or the metadata-selected quasi-uniform radix-5
+  rANS decoder;
 - arbitrary hidden wheel fitted directly to Eye output;
 - Earthquake mask or Cessation sampler on the final anchor slices;
 - literal transfer of the final-row grammar to rows 1 and 2;

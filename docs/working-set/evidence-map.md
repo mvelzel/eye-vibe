@@ -28,6 +28,8 @@ archive.
   [`../twenty-seventh-three-plane-locale-results-2026-07-24.md`](../twenty-seventh-three-plane-locale-results-2026-07-24.md)
 - Direct `3,5,8` body-weight test, negative:
   [`../twenty-sixth-358-weighted-alignment-results-2026-07-24.md`](../twenty-sixth-358-weighted-alignment-results-2026-07-24.md)
+- Metadata-selected quasi-uniform radix-five rANS, negative:
+  [`../fifty-fifth-rans-358-results-2026-07-26.md`](../fifty-fifth-rans-358-results-2026-07-26.md)
 
 ## Final-row anchor record
 

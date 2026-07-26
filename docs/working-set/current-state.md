@@ -46,8 +46,8 @@ Natural column sums give `+358`; the fixed marker trail and inverse BWT give
 `358 -> FI/AX` and `!Fi` match uniquely among the 12,096 admissible
 assignments. The other coordinate planes sum to `683 -> NU` and `034 -> ES`.
 
-Interpret this as a redundant Finnish/Finland locale and serialization marker;
-it does not establish Finnish body plaintext or authorize `FI358` as a key.
+Interpret this as a Finnish/Finland locale marker with a retrospective
+serialization echo; it does not establish Finnish plaintext or a `FI358` key.
 
 ## Promoted final-row record
 
