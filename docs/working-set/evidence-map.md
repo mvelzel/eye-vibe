@@ -30,6 +30,8 @@ archive.
   [`../twenty-sixth-358-weighted-alignment-results-2026-07-24.md`](../twenty-sixth-358-weighted-alignment-results-2026-07-24.md)
 - Metadata-selected quasi-uniform radix-five rANS, negative:
   [`../fifty-fifth-rans-358-results-2026-07-26.md`](../fifty-fifth-rans-358-results-2026-07-26.md)
+- Executable Kantele songs under real factoradic header routes, negative:
+  [`../fifty-sixth-kantele-header-results-2026-07-26.md`](../fifty-sixth-kantele-header-results-2026-07-26.md)
 
 ## Final-row anchor record
 
