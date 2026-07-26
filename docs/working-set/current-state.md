@@ -195,6 +195,11 @@ fails standalone capacity and reproducibility gates. Direct `3,5,8` weighting
 and fixed-disk Earthquake/Wadsworth are negative; an arbitrary hidden disk
 remains unresolved. Equality/reconvergence must survive any decoder.
 
+A direct visible-state permutation-action model has exact support minimum19,
+even after aligning the registered isomorphic passages. It is non-identifying:
+after the unique source26 pivot names all actions, every one of 858 other
+classes can change color alone. This is capacity, not a decoder.
+
 ## Practice-puzzle calibration
 
 sdlwdr #1, #2, and #5 are solved; #3 is unresolved after broad progression,

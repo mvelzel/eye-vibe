@@ -133,8 +133,8 @@ archive.
 
 ## Equality/state-machine work
 
-- State-reconstruction breadth map:
-  [`../seventeenth-wide-state-reconstruction-horizon-2026-07-24.md`](../seventeenth-wide-state-reconstruction-horizon-2026-07-24.md)
+- State reconstruction and exact visible-action capacity/non-identifiability:
+  [`../seventeenth-wide-state-reconstruction-horizon-2026-07-24.md`](../seventeenth-wide-state-reconstruction-horizon-2026-07-24.md), [`../sixty-sixth-theory-isolated-wide-horizon-2026-07-26.md`](../sixty-sixth-theory-isolated-wide-horizon-2026-07-26.md)
 - Matched state tests:
   [`../seventeenth-lane-a-bitvector-results-2026-07-24.md`](../seventeenth-lane-a-bitvector-results-2026-07-24.md),
   [`../seventeenth-lane-c-hankel-results-2026-07-24.md`](../seventeenth-lane-c-hankel-results-2026-07-24.md),

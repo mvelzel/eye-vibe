@@ -3,21 +3,21 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Fresh theory-isolated attack horizon (`15/20`)
+## 1. Parameterized-match overlap closure (`15/20`)
 
-Start wide from promoted Eye-only facts. Enumerate genuinely different
-mechanism families, assign each one an independent selector/capacity story,
-and freeze one cheap necessity test per family before deepening any of them.
-Do not combine partial fits from unrelated theories. A raw observation or
-technique may transfer, but its evidential weight does not.
+The theory-isolated wide horizon is frozen. Its direct visible-action screen
+has exact minimum19 but zero nontrivial unary backbone: after source26 fixes
+the action names, all 858 other classes are individually recolorable. Do not
+language-fit those arbitrary colors.
 
-Favor mechanisms that can explain the exact equality/reconvergence structure,
-the typed header, and the final-row record while predicting an uninspected
-body event. Include non-prose and construction-workflow possibilities. Reject
-any family whose first test can fit arbitrary labelings.
+Instead treat the registered equality-isomorphic passages as parameterized
+strings. Freeze a small training set, form exact overlap/word-equation closure,
+and test whether it forces an unregistered factor or extension. Any corpus
+split is retrospective validation because all factors have been inspected.
+Charge factor choice, alignment, reversal, and renaming separately.
 
-**Promotion gate:** one family survives a capacity-controlled test and fixes
-an unseen consequence before inspection.
+**Promotion gate:** a low-capacity closure fixes a held-out factor or extension
+without selecting it from the target.
 
 ## 2. Practice cipher #3 mechanism acquisition (`14/20`)
 
@@ -123,6 +123,7 @@ decoder-independent reason makes the expected information gain worthwhile.
 - direct `3,5,8` weighting or the metadata-selected quasi-uniform radix-5
   rANS decoder;
 - arbitrary hidden wheel fitted directly to Eye output;
+- arbitrary 19-color visible-action completion without an external selector;
 - Earthquake mask or Cessation sampler on the final anchor slices;
 - literal transfer of the final-row grammar to rows 1 and 2;
 - reciprocal header-scalar checks on the other registered contexts (`0/4`);
