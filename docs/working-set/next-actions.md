@@ -3,23 +3,7 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Parameterized-match overlap closure (`15/20`)
-
-The theory-isolated wide horizon is frozen. Its direct visible-action screen
-has exact minimum19 but zero nontrivial unary backbone: after source26 fixes
-the action names, all 858 other classes are individually recolorable. Do not
-language-fit those arbitrary colors.
-
-Instead treat the registered equality-isomorphic passages as parameterized
-strings. Freeze a small training set, form exact overlap/word-equation closure,
-and test whether it forces an unregistered factor or extension. Any corpus
-split is retrospective validation because all factors have been inspected.
-Charge factor choice, alignment, reversal, and renaming separately.
-
-**Promotion gate:** a low-capacity closure fixes a held-out factor or extension
-without selecting it from the target.
-
-## 2. Practice cipher #3 mechanism acquisition (`14/20`)
+## 1. Practice cipher #3 mechanism acquisition (`14/20`)
 
 Retain the exact prefix tree and exclusion certificates. Seek an author-hint
 or operation family that explains the progression without inventing a hidden
@@ -30,7 +14,7 @@ replace it with an arbitrary pairing without a new selector.
 **Promotion gate:** solve/replay the full puzzle or produce a
 deletion-minimal exact exclusion of a clearly motivated family.
 
-## 3. Practice cipher #4 mechanism acquisition (`12/20`)
+## 2. Practice cipher #4 mechanism acquisition (`12/20`)
 
 The cyclic outer layer and exact shared blocks are recovered. The calibrated
 word-constrained GAK beam fails at `48..52/200`, and a new read-only author
@@ -43,7 +27,7 @@ the high-bigram claim is null-ordinary.
 
 **Promotion gate:** exact full-puzzle replay plus the cracking method.
 
-## 4. Quotient-addressed 83-state tables (`12/20`)
+## 3. Quotient-addressed 83-state tables (`12/20`)
 
 Freeze each panel's first 83 full-array values as `f:Z83->Z83`, start at
 `floor(sum/101)`, and follow until repeat. The nine orbit sizes total72.
@@ -70,7 +54,7 @@ relations, or new scalar ledgers.
 
 **Promotion gate:** an external selector followed by one unseen consequence.
 
-## 5. Petri-only archaeology on a fixed interface (`12/20`)
+## 4. Petri-only archaeology on a fixed interface (`12/20`)
 
 NollaArvi's direct Eye attribution justifies Petri-specific sources. The
 bounded pre-2020 repository census found a relevant 2015 alternating-
@@ -83,7 +67,7 @@ to an Eye header, control class, or held-out body quantity. Do not mine
 incidental source constants or enumerate assignments of generic card-game
 operations after seeing the target.
 
-## 6. Gate only on new executable evidence (`11/20`)
+## 5. Gate only on new executable evidence (`11/20`)
 
 Treat Veska as a binary standalone hypothesis, not partial corroboration for
 other theories. The raw asset has 72 authored-color marks and separated 9/8
@@ -103,7 +87,7 @@ Petri is now directly attributed as the Eye author, but the public data
 history still cannot identify the Gate asset author. Do not transfer Gate
 operations on Eye authorship alone.
 
-## 7. Source/language archaeology (`9/20`)
+## 6. Source/language archaeology (`9/20`)
 
 The `FI` field makes Finnish sources worth scoring only after a decoder is
 selected without language. The Finnish *Corpus Hermeticum* lead remains
@@ -124,6 +108,8 @@ decoder-independent reason makes the expected information gain worthwhile.
   rANS decoder;
 - arbitrary hidden wheel fitted directly to Eye output;
 - arbitrary 19-color visible-action completion without an external selector;
+- sparse parameterized-map/group closure without new label correspondences;
+- the 2025 initializer's position/index-only caller interface;
 - Earthquake mask or Cessation sampler on the final anchor slices;
 - literal transfer of the final-row grammar to rows 1 and 2;
 - reciprocal header-scalar checks on the other registered contexts (`0/4`);

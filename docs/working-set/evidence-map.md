@@ -79,8 +79,8 @@ archive.
   [`../forty-sixth-wide-novel-machine-results-2026-07-26.md`](../forty-sixth-wide-novel-machine-results-2026-07-26.md)
 - Registered-context checksum transfer, negative:
   [`../forty-seventh-context-checksum-transfer-results-2026-07-26.md`](../forty-seventh-context-checksum-transfer-results-2026-07-26.md)
-- Read-only Silmä deltas; Frosthaven rejection and exact binary initializer:
-  [`../forty-fourth-silma-delta-2026-07-26.md`](../forty-fourth-silma-delta-2026-07-26.md), [`../sixty-fifth-silma-and-binary-delta-2026-07-26.md`](../sixty-fifth-silma-and-binary-delta-2026-07-26.md)
+- Read-only Silmä deltas; Frosthaven rejection and exact binary interface:
+  [`../forty-fourth-silma-delta-2026-07-26.md`](../forty-fourth-silma-delta-2026-07-26.md), [`../sixty-fifth-silma-and-binary-delta-2026-07-26.md`](../sixty-fifth-silma-and-binary-delta-2026-07-26.md), [`../sixty-seventh-overlap-dedup-and-binary-callsite-2026-07-26.md`](../sixty-seventh-overlap-dedup-and-binary-callsite-2026-07-26.md)
 - Petri/Gate provenance boundary:
   [`../forty-fifth-petri-provenance-results-2026-07-26.md`](../forty-fifth-petri-provenance-results-2026-07-26.md)
 - Direct developer attribution of the Eye secret to Petri:

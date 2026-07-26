@@ -17,6 +17,8 @@ and reproduction paths are in [`evidence-map.md`](evidence-map.md).
 - The installed 2025 binary's nine-way initializer contains all 150
   independently packed base-seven corpus words exactly. It unpacks them for
   rendering and performs no runtime decryption.
+- Its sole direct caller passes only `(x,y,panel 0..8)`; a side-parity filter
+  routes the five East and four West panels. No caller-supplied key exists.
 
 ## Promoted marker/header structure
 
