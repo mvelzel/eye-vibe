@@ -11,11 +11,18 @@ are `20,45,30`; subtracting them from headers gives the established controls
 `30,18,3`. Exact assignment-corrected conditional rates are small, but the
 mechanism and consumers were discovered retrospectively.
 
-Advance only by deriving packet order/sign from a header type, finding an
-authored interface for the exact operation, or predicting a held-out field.
+The induced odd-East control graph now explains packet sizes exactly:
+`count+indegree(source)=3`. It is only `1/6` under count assignment and `2/6`
+after nearby formula selection. The graph-derived diagonal value test becomes
+ordinary (`.1817`) after full slot correction, and the current WAK has no
+literal division-by-101 Lua path.
+
+Advance only by deriving numeric packet order/sign from another header type,
+finding a construction-time interface for the exact operation, or predicting
+a held-out field.
 The unchanged extractor fails the six non-closing messages, so retain it only
 as a typed odd-East subsystem. Do not scan alternate moduli, distances,
-aggregators, or scalar ledgers.
+aggregators, scalar ledgers, or sparse-matrix statistics.
 
 **Promotion gate:** one prospective consumer or independent operation selector.
 
