@@ -141,6 +141,14 @@ bits, of fresh-label choice and therefore cannot be the allocator input.
 Cross-panel mod-83 models fit at most 7/23 and three-eye arithmetic 4/23;
 all co-best models fail withheld control class10 and phase class24.
 
+The third-eye classes `1..4` have scoped roles
+`common,source,target,absent`, clockwise from up. Headers
+`102,302,113_5` type source scalar2 and target scalar3; the two closed E4/E5
+branch checks return `(3,2)` in reciprocal order. The first is the carry
+`002+040=003+031+3`, echoing Gate `+3`. Prospective visible-label transfer
+scores `0/2`; strict stack/queue/deque and static `5×5` code models are also
+negative.
+
 Across the promoted final map switch, the same visible value links independently
 canonicalized old/new classes. The only edge shared by any panel pair is
 `7->24`, present in both East panels with different labels and absent West.
@@ -201,20 +209,11 @@ is a header/state repair—not a body-wide shift or complete Gate decoder.
 
 ## Practice-puzzle calibration
 
-sdlwdr status:
-
-- #1 solved and author-confirmed;
-- #2 solved;
-- #3 unresolved; simple progression, old-wheel, reflection-wheel, recursion,
-  and large fixed deck families are excluded;
-- #4 outer 57-cycle layer recovered, inner plaintext/codec unresolved;
-- #5 solved with exact replay;
-- #6 unresolved; direct Trailer-Altar/Earthquake rotating, cut, and Alberti
-  families are negative.
-
-The transferable lesson is to recover an operation from equality structure,
-use language-independent scoring, and demand exact replay. Do not import a
-practice plaintext or in-game asset merely because both use 83 symbols.
+sdlwdr #1, #2, and #5 are solved; #3 is unresolved after broad progression,
+wheel, recursion, and deck negatives; #4 has a recovered outer 57-cycle but
+unresolved codec; #6's direct asset-driven rotation/cut/Alberti families are
+negative. Transfer only a recovered operation, use language-independent
+scoring, and demand exact replay.
 
 ## Interpretation boundary
 

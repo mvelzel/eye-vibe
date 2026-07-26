@@ -3,23 +3,30 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Novel machine synthesis, wide first (`17/20`)
+## 1. Header-typed branch record, external prediction (`18/20`)
 
-Before deepening a new decoder, enumerate a small portfolio of genuinely
-different machines. At minimum include:
+The wide machine batch is complete. Strict stack/queue/deque, affine
+systematic-code, orthogonal-array, and direct third-axis visible-label
+transfers close. One label-invariant transducer survives:
 
-- typed transducer whose header chooses operation arity, not a substitution;
-- reset/synchronizing automaton over equality classes;
-- error-detecting/conformance records rather than encrypted prose;
-- mixed-radix control plus mod-83 payload;
-- reversible stack/queue or deck operation selected by repeated-context
-  events;
-- a later-clue machine in which Gate supplies operation vocabulary but no
-  numeric key.
+```text
+final header scalars        source2, target3
+third-axis branch classes   source2, target3
+closed branch checks        target3, source2
+```
 
-Run one cheap necessity test per family. A family earns depth only by
-predicting a held-out equality, boundary, or marker role. Start wide before
-optimizing parameters.
+The `+3` record is also an exact base-five carry and the fixed Gate operation.
+Do not fit more arithmetic inside the two discovered windows.
+
+Next, find an independently delimited divergence/rejoin record outside those
+windows and freeze its expected check from header type before reading its
+class sum. Candidate scopes are the earlier natural rows or a separately
+selected final-row phase, but the already negative universal row-record
+transfer must not be reopened.
+
+**Promotion gate:** one exact equality boundary or checksum predicted outside
+the two inspected windows. Visible-label allocation remains closed after the
+prospective `0/2` transfer failures.
 
 ## 2. Practice cipher #4 mechanism acquisition (`15/20`)
 

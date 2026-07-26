@@ -1708,3 +1708,35 @@ pointer-closed difference record. Any future explanation of the first two
 rows must predict a body consequence from that distinction. Freeze/results:
 [`twenty-fourth-row-record-transfer-freeze-2026-07-24.md`](twenty-fourth-row-record-transfer-freeze-2026-07-24.md);
 [`twenty-fourth-row-record-transfer-results-2026-07-24.md`](twenty-fourth-row-record-transfer-results-2026-07-24.md).
+
+### Header-scalar-typed final branch record
+
+**Status:** label-invariant transducer promoted; direct numeric consumer
+negative.
+
+After excluding already tested automata, cache, geometry, and carrier
+families, a new wide batch isolates the final late branch. Third-eye classes
+`1,2,3,4` have scoped repeat roles `common,source,target,absent`, exactly the
+clockwise physical direction cycle. The final headers `102,302,113_5` supply
+source-pair scalar 2 and target scalar 3. The only two closed loop/target
+disagreement windows have class-sum differences `(3,2)`, the two scalars in
+reciprocal order.
+
+The first window is:
+
+```text
+2,25,20 versus 25,3,16
+```
+
+After cancelling class25, its coordinate residual is `(0,+1,-2)` and its
+base-five weight is `+3`; equivalently `002+040=003+031+3`. This is an exact
+new consumer of the final scalar fields and a second executable use of the
+later Gate `+3`.
+
+A prospective transfer of the known middle-axis visible-label operations to
+third-axis classes 2/3 fails both frozen models at `0/2`. Strict
+stack/queue/deque and affine/orthogonal `5×5` encoders also close. Retain the
+headers as branch/check types, not fresh-label allocators. Require the same
+fixed transducer to predict an independently delimited record before
+deepening. Results:
+[`forty-sixth-wide-novel-machine-results-2026-07-26.md`](forty-sixth-wide-novel-machine-results-2026-07-26.md).

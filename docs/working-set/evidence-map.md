@@ -67,6 +67,8 @@ archive.
   [`../forty-second-cache-allocator-results-2026-07-26.md`](../forty-second-cache-allocator-results-2026-07-26.md)
 - Cross-panel numeric carriers, negative:
   [`../forty-third-cross-panel-carrier-results-2026-07-26.md`](../forty-third-cross-panel-carrier-results-2026-07-26.md)
+- Header-scalar-typed branch checks, with numeric label transfer negative:
+  [`../forty-sixth-wide-novel-machine-results-2026-07-26.md`](../forty-sixth-wide-novel-machine-results-2026-07-26.md)
 - Read-only Silmä carrier/provenance delta:
   [`../forty-fourth-silma-delta-2026-07-26.md`](../forty-fourth-silma-delta-2026-07-26.md)
 - Petri/Gate provenance boundary:
