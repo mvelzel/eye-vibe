@@ -3,24 +3,21 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Read-only Silmä carrier delta (`19/20`)
+## 1. Practice cipher #4 constraint solver (`18/20`)
 
-Known carriers now have bounded failures: cross-panel mod-83 models reach
-7/23, three-eye arithmetic 4/23, and adaptive decks 7/30. Search recent
-`silmä-cryptography` and `silmä-novel` history specifically for:
+The 57-cycle outer action is established; the remaining codec is the useful
+unknown. Replace the failed beam with a constraint-guided solver that first
+recovers a matched known-English plant of comparable size.
 
-```text
-new fixed numeric tapes or deck orders
-reproducible first-seen allocation rules
-offline construction-tool/key evidence
-held-out predictions for class10, class24, or post-common fresh labels
-```
+Potential bounded objects:
 
-Discord remains strictly read-only. Preserve attachment provenance and do not
-import community claims as facts.
+- conjugacy/quotient classes of the recovered action;
+- exact known-plaintext fingerprints from disclosed shared text;
+- SAT/SMT constraints over a small state update whose transition reuse is
+  learned on one section and held out on another.
 
-**Promotion gate:** independently reproduce a carrier and predict one fresh
-label not used to select it.
+**Promotion gate:** exact replay of the full puzzle and a concise account of
+how the mechanism was cracked. A source lookup alone is insufficient.
 
 ## 2. Novel machine synthesis, wide first (`16/20`)
 
@@ -40,23 +37,7 @@ Run one cheap necessity test per family. A family earns depth only by
 predicting a held-out equality, boundary, or marker role. Start wide before
 optimizing parameters.
 
-## 3. Practice cipher #4 constraint solver (`17/20`)
-
-The 57-cycle outer action is established; the remaining codec is the useful
-unknown. Replace the failed beam with a constraint-guided solver that first
-recovers a matched known-English plant of comparable size.
-
-Potential bounded objects:
-
-- conjugacy/quotient classes of the recovered action;
-- exact known-plaintext fingerprints from disclosed shared text;
-- SAT/SMT constraints over a small state update whose transition reuse is
-  learned on one section and held out on another.
-
-**Promotion gate:** exact replay of the full puzzle and a concise account of
-how the mechanism was cracked. A source lookup alone is insufficient.
-
-## 4. Practice cipher #3 mechanism acquisition (`14/20`)
+## 3. Practice cipher #3 mechanism acquisition (`14/20`)
 
 Retain the exact prefix tree and exclusion certificates. Seek an author-hint
 or operation family that explains the progression without inventing a hidden
@@ -65,7 +46,7 @@ or operation family that explains the progression without inventing a hidden
 **Promotion gate:** solve/replay the full puzzle or produce a
 deletion-minimal exact exclusion of a clearly motivated family.
 
-## 5. Read-only Silmä delta (`14/20`)
+## 4. Read-only Silmä delta (`14/20`)
 
 Search the cryptography and novel channels for developments after the latest
 captured evidence, especially:
@@ -80,7 +61,7 @@ Discord remains strictly read-only: no messages, reactions, or calls.
 Preserve attachment hashes and surrounding provenance. Community claims
 generate tests; they are not imported as facts.
 
-## 6. Gate only on new executable evidence (`11/20`)
+## 5. Gate only on new executable evidence (`11/20`)
 
 Do not continue fitting the current dossier. Reopen only if one of these
 arrives:
@@ -93,7 +74,12 @@ arrives:
 
 Require reproduction from raw assets and one held-out prediction.
 
-## 7. Source/language archaeology (`9/20`)
+Petri provenance is now specifically bounded: official Steam posts place him
+at release and NollaArvi names him for possible later Eye/cauldron work, but
+the public data history is a mirror whose commits cannot identify Gate asset
+authors. Reopen provenance only with an internal source or author statement.
+
+## 6. Source/language archaeology (`9/20`)
 
 The `FI` field makes Finnish sources worth scoring only after a decoder is
 selected without language. The Finnish *Corpus Hermeticum* lead remains

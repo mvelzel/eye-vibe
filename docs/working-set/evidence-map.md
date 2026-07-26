@@ -67,6 +67,10 @@ archive.
   [`../forty-second-cache-allocator-results-2026-07-26.md`](../forty-second-cache-allocator-results-2026-07-26.md)
 - Cross-panel numeric carriers, negative:
   [`../forty-third-cross-panel-carrier-results-2026-07-26.md`](../forty-third-cross-panel-carrier-results-2026-07-26.md)
+- Read-only Silmä carrier/provenance delta:
+  [`../forty-fourth-silma-delta-2026-07-26.md`](../forty-fourth-silma-delta-2026-07-26.md)
+- Petri/Gate provenance boundary:
+  [`../forty-fifth-petri-provenance-results-2026-07-26.md`](../forty-fifth-petri-provenance-results-2026-07-26.md)
 - Phase implementations:
   [`../../src/eye_mystery/synchronizing_bridge.py`](../../src/eye_mystery/synchronizing_bridge.py),
   [`../../src/eye_mystery/phase_ledger.py`](../../src/eye_mystery/phase_ledger.py),
