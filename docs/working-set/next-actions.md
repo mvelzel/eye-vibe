@@ -9,8 +9,11 @@ Retain the exact prefix tree and exclusion certificates. Seek an author-hint
 or operation family that explains the progression without inventing a hidden
 83-wheel. Both the exact affine two-sheet family and a capacity-preserving
 search over arbitrary static `83 -> 42` pairings pass their matched plants and
-fail heldout real text. Stop widening static homophone optimizers. Reopen with
-an author/source clue or a concrete low-capacity polygraphic or radix codec.
+fail heldout real text. The frozen 34,860-structure projective-linear
+consecutive-pair plus affine-quotient search now does likewise. Stop widening
+quotient/homophone optimizers. Next require an author/source clue or test the
+already frozen low-capacity six-stream route/transposition lane; do not jump
+to nonlinear pair maps, triples, or arbitrary polygraphic codebooks.
 
 **Promotion gate:** solve/replay the full puzzle or produce a
 deletion-minimal exact exclusion of a clearly motivated family.

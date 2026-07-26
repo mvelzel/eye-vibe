@@ -12,8 +12,10 @@ grammar. The complete 83-member affine two-sheet family
 `x ~ a-x (mod 83)` also fails after a matched plant recovers its exact
 reflection and held-out plaintext. A capacity-preserving search over the
 arbitrary static `83 -> 42` two-sheet architecture likewise passes its matched
-heldout plant and fails sharply on the real heldout groups. A deliberate
-`8/43` literal body-prefix tree is isolated, but does not yet select a decoder.
+heldout plant and fails sharply on the real heldout groups. The complete
+34,860-member projective-linear pair plus affine-quotient catalog also passes
+overlap/block plants and fails real heldout text. A deliberate `8/43` literal
+body-prefix tree is isolated, but does not yet select a decoder.
 
 ## What was tested
 
@@ -194,6 +196,17 @@ architecture, not exact UNSAT over its enormous key space; stateful or
 polygraphic variants remain open. Full results:
 [`../docs/practice-cipher3-arbitrary-two-sheet-results-2026-07-27.md`](../docs/practice-cipher3-arbitrary-two-sheet-results-2026-07-27.md).
 
+The frozen polygraphic extension exhausts all 84 projective-linear functions
+of consecutive pairs, all 83 affine two-sheet quotients, and five explicit
+overlap/block routes. A likelihood-ratio screen searches all 34,860
+structures, then optimizes the route-balanced shortlist on A only. It exactly
+recovers hidden overlapping and disjoint controls at 100% and 96.544276%
+heldout accuracy. The real A winner is gibberish and falls to `-15.865307` on
+B+C, `8.283842` log units per trigram behind the matched disjoint plant. This
+is a strong calibrated negative for the frozen English-character search, not
+exact UNSAT or evidence against nonlinear/stateful polygraphs. Full results:
+[`../docs/practice-cipher3-pair-quotient-results-2026-07-27.md`](../docs/practice-cipher3-pair-quotient-results-2026-07-27.md).
+
 ## Solution
 
 No verified plaintext has been recovered, so there is no solution text to
@@ -235,6 +248,9 @@ instead of presenting a timeout as an impossibility proof.
 - If the hidden order is widened, preserve the proposed quotient capacities
   exactly and select the key on one group only. Here, A-only optimization
   looked less bad in-sample while untouched B+C exposed decisive overfit.
+- Score equality patterns against a matched null, not by absolute likelihood.
+  Random high-alphabet streams overproduce the most common all-distinct
+  pattern and can otherwise rank ahead of planted natural language.
 
 The exact checks are implemented in
 `scripts/solve_sdlwdr_cipher3_cycle.py` and
@@ -255,4 +271,6 @@ implemented in `src/eye_mystery/practice_cipher3_third.py` and
 `src/eye_mystery/practice_cipher3_two_sheet.py` and
 `scripts/run_practice_cipher3_two_sheet.py`. The arbitrary static quotient is
 `src/eye_mystery/practice_cipher3_arbitrary_two_sheet.py` and
-`scripts/run_practice_cipher3_arbitrary_two_sheet.py`.
+`scripts/run_practice_cipher3_arbitrary_two_sheet.py`. The projective pair
+quotient is `src/eye_mystery/practice_cipher3_pair_quotient.py` and
+`scripts/run_practice_cipher3_pair_quotient.py`.

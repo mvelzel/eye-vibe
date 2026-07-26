@@ -41,13 +41,19 @@ identity `83=2*42-1` motivated a static two-sheet quotient: all 83 affine
 pairings fail, and a capacity-preserving search over arbitrary pairings passes
 a matched plant almost perfectly on untouched groups but collapses to
 gibberish on real heldout groups. That latter result is calibrated evidence,
-not exhaustive UNSAT.
+not exhaustive UNSAT. A finite polygraphic extension likewise screens all
+34,860 projective-linear pair/affine-quotient structures: it exactly recovers
+overlap and block plants, while the real A key falls more than eight heldout
+log units per trigram behind its matched control.
 
 **Lesson:** an unresolved puzzle can still teach model discipline.  State the
 precise permutation family, distinguish UNSAT from timeout, and retain only the
 part actually excluded. For high-capacity quotient searches, preserve exact
 preimage sizes and freeze the key on one message family before inspecting
 another; a plausible training score is not evidence if transfer fails.
+Equality-pattern screening should use a language-vs-null likelihood ratio:
+absolute likelihood rewards random streams for repeatedly producing the
+single dominant all-distinct pattern.
 
 ## Cipher 4: peel off a group action without inventing the inner codec
 

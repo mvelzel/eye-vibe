@@ -1,6 +1,6 @@
 # Current Eye-mystery state
 
-**Snapshot:** 26 July 2026  
+**Snapshot:** 27 July 2026
 **Outcome:** unsolved; no validated plaintext or complete body decoder.
 
 This file contains only the facts needed to resume reasoning. Exact evidence
@@ -204,13 +204,13 @@ classes can change color alone. This is capacity, not a decoder.
 
 ## Practice-puzzle calibration
 
-sdlwdr #1, #2, and #5 are solved; #3 is unresolved, with a strong calibrated
-heldout negative for the exact static `83 -> 42` quotient in addition to broad
-progression, wheel, recursion, and deck negatives; #4 has a recovered outer
-57-cycle but unresolved codec. Its low aligned-symbol count is a weak phase
-clue (`.012627`); high bigram IoC is null-ordinary (`.314659`). #6's direct
-asset-driven families are negative. Transfer only a recovered operation and
-demand exact replay.
+sdlwdr #1, #2, and #5 are solved; #3 is unresolved, with strong calibrated
+heldout negatives for static `83 -> 42` and the complete 34,860-member frozen
+projective-pair search, besides broad progression/wheel/recursion/deck negatives.
+#4 has a recovered outer 57-cycle but unresolved codec. Its low aligned-symbol
+count is a weak phase clue (`.012627`); high bigram IoC is null-ordinary
+(`.314659`). #6's direct asset-driven families are negative. Transfer only a
+recovered operation and demand exact replay.
 
 ## Interpretation boundary
 
