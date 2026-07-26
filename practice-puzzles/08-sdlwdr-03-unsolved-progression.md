@@ -8,8 +8,10 @@ rejects direct reuse of the solved ciphers 1/2 wheel, fixed coordinate drift,
 the frozen standard-coordinate quotient/action lane. A third wide pass rejects
 undisclosed exact/affine common-tape factors, low-order `F83` recurrences,
 direct MTF/BWT readings, anomalous LZ78 compression, and an equality-only
-grammar. A deliberate `8/43` literal body-prefix tree is isolated, but does
-not yet select a decoder.
+grammar. The complete 83-member affine two-sheet family
+`x ~ a-x (mod 83)` also fails after a matched plant recovers its exact
+reflection and held-out plaintext. A deliberate `8/43` literal body-prefix
+tree is isolated, but does not yet select a decoder.
 
 ## What was tested
 
@@ -169,6 +171,16 @@ arbitrary-update Z3 model is unresolved: all five group-A queries time out at
 the 42-state boundary, as do all-message 82-state diagnostics. Full results:
 [`../docs/practice-cipher3-affine-gak-results-2026-07-24.md`](../docs/practice-cipher3-affine-gak-results-2026-07-24.md).
 
+The exact `83=2*42-1` static two-sheet interpretation was then tested without
+an arbitrary pairing. All 83 affine involutions `x -> a-x mod83` were
+exhausted; each gives 41 pairs and one fixed point. A group-A substitution
+search recovered a planted `a=37` at rank one with 100% A accuracy and 99.95%
+frozen-key B/C accuracy. On the real data, both full and body modes select
+unstable gibberish and fall from about `-7.03` to `-15.70` log units per
+held-out trigram. This closes the standard-coordinate affine symbol quotient,
+not an arbitrary hidden pairing or stateful sheet schedule. Full results:
+[`../docs/sixtieth-cipher3-affine-involution-results-2026-07-26.md`](../docs/sixtieth-cipher3-affine-involution-results-2026-07-26.md).
+
 ## Solution
 
 No verified plaintext has been recovered, so there is no solution text to
@@ -204,6 +216,9 @@ instead of presenting a timeout as an impossibility proof.
   prediction failure; do not invent an exceptional multiplier afterward.
 - A planted SAT instance validates an encoding, not its ability to decide the
   full corpus. Preserve real timeouts as unresolved.
+- An exact alphabet identity such as `83=2*42-1` should first be tested through
+  a complete low-capacity pairing family. Recover the planted pairing and
+  freeze the key across held-out groups before widening to a hidden order.
 
 The exact checks are implemented in
 `scripts/solve_sdlwdr_cipher3_cycle.py` and
@@ -220,4 +235,6 @@ homophone checks are reproduced by
 implemented in `src/eye_mystery/practice_cipher3_third.py` and
 `scripts/run_practice_cipher3_third_batch.py`. The affine GAK batch is
 `src/eye_mystery/practice_cipher3_affine_gak.py` and
-`scripts/run_practice_cipher3_affine_gak.py`.
+`scripts/run_practice_cipher3_affine_gak.py`. The affine two-sheet quotient is
+`src/eye_mystery/practice_cipher3_two_sheet.py` and
+`scripts/run_practice_cipher3_two_sheet.py`.

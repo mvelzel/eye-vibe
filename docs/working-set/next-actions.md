@@ -54,7 +54,9 @@ only with an independently selected disk order or a resolving exact invariant.
 
 Retain the exact prefix tree and exclusion certificates. Seek an author-hint
 or operation family that explains the progression without inventing a hidden
-83-wheel.
+83-wheel. The exact standard-coordinate two-sheet family
+`x ~ a-x (mod 83)` now passes its plant and fails heldout real text; do not
+replace it with an arbitrary pairing without a new selector.
 
 **Promotion gate:** solve/replay the full puzzle or produce a
 deletion-minimal exact exclusion of a clearly motivated family.
@@ -123,3 +125,4 @@ decoder-independent reason makes the expected information gain worthwhile.
 - static header-ordered visible-codebook ranks and 42-state omission counts.
 - header-action orbit projection and header-ordered `2x41` no-repeat ranks.
 - header-ordered prefix-trie syndrome without a node-level collation rule.
+- Cipher 3 static affine two-sheet quotients `x ~ a-x (mod 83)`.
