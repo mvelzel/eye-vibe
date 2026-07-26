@@ -198,6 +198,12 @@ positive or structural control:
     Consequently the apparent high bigram IoC is explained by the existing
     action band and shared blocks. The residue is only a possible deliberate
     choice of initial deck states, not an inner codec.
+23. **Arithmetic insertion screen.**  A later author message proposed
+    sum/difference/product insertions as an Eye no-double workaround, not as a
+    Cipher 4 hint. For completeness, 7,392 coordinate/relation/period/phase
+    models were reselected in 500 within-portion action shuffles. The best
+    real cell has two hits and corrected tail `.353293`; it supplies no inner
+    mechanism.
 
 The signed-band and packed-beam reproductions are
 [`analyze_sdlwdr_cipher4_signed_band.py`](../scripts/analyze_sdlwdr_cipher4_signed_band.py)
@@ -213,6 +219,9 @@ The word-constrained nonlinear result is
 
 The collision audit is
 [`docs/fiftieth-cipher4-collision-null-results-2026-07-26.md`](../docs/fiftieth-cipher4-collision-null-results-2026-07-26.md).
+
+The arithmetic insertion side check is included in
+[`docs/fifty-fourth-wide-stepback-results-2026-07-26.md`](../docs/fifty-fourth-wide-stepback-results-2026-07-26.md).
 
 ## Verdict
 

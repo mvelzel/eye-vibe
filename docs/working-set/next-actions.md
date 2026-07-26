@@ -104,8 +104,8 @@ decoder-independent reason makes the expected information gain worthwhile.
 
 - fixed substitution, affine substitution, simple Caesar/`+3` body shifts;
 - direct `FI`, `FINNISH`, `FIBONACCI`, or `FI358` deck keys;
-- direct factoradic body products, quotients, running states, cosets, and
-  moving newline;
+- direct factoradic body products, quotients, running states, cosets, moving
+  newline, or a middle-header consecutive stagger across all three rows;
 - direct `3,5,8` weighted panel equation;
 - arbitrary hidden wheel fitted directly to Eye output;
 - Earthquake mask or Cessation sampler on the final anchor slices;

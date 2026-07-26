@@ -141,6 +141,8 @@ archive.
   arithmetic-progression visible disk is closed, arbitrary hidden disk
   unresolved:
   [`../fifty-third-earthquake-gears-results-2026-07-26.md`](../fifty-third-earthquake-gears-results-2026-07-26.md)
+- Wide metadata/stagger and exact no-double postprocessor audit:
+  [`../fifty-fourth-wide-stepback-results-2026-07-26.md`](../fifty-fourth-wide-stepback-results-2026-07-26.md)
 
 ## Practice puzzles
 
@@ -153,7 +155,8 @@ archive.
 - sdlwdr #4:
   [`../../practice-puzzles/09-sdlwdr-04-cyclic-layer.md`](../../practice-puzzles/09-sdlwdr-04-cyclic-layer.md),
   [`../practice-cipher4-word-gak-results-2026-07-26.md`](../practice-cipher4-word-gak-results-2026-07-26.md),
-  [`../fiftieth-cipher4-collision-null-results-2026-07-26.md`](../fiftieth-cipher4-collision-null-results-2026-07-26.md)
+  [`../fiftieth-cipher4-collision-null-results-2026-07-26.md`](../fiftieth-cipher4-collision-null-results-2026-07-26.md),
+  [`../fifty-fourth-wide-stepback-results-2026-07-26.md`](../fifty-fourth-wide-stepback-results-2026-07-26.md)
 - sdlwdr #6:
   [`../../practice-puzzles/12-sdlwdr-06-in-game-deck.md`](../../practice-puzzles/12-sdlwdr-06-in-game-deck.md)
 

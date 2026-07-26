@@ -42,12 +42,12 @@ a header type system, not yet a decoder.
 The nine scalar digits form rows `(0,0,1)`, `(1,3,4)`, `(2,2,3)`.
 
 Natural column sums give `+358`; the fixed marker trail and inverse BWT give
-`!Fi`. A generic calling-code/region audit finds the observed
+`!Fi`, while the same digits describe the alphabet cut `83=3×5²+8`. A generic calling-code/region audit finds the observed
 `358 -> FI/AX` and `!Fi` match uniquely among the 12,096 admissible
 assignments. The other coordinate planes sum to `683 -> NU` and `034 -> ES`.
 
-Interpret this as a redundant Finnish/Finland locale marker. It does not by
-itself establish Finnish body plaintext or authorize `FI358` as a key.
+Interpret this as a redundant Finnish/Finland locale and serialization marker;
+it does not establish Finnish body plaintext or authorize `FI358` as a key.
 
 ## Promoted final-row record
 
