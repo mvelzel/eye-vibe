@@ -711,6 +711,15 @@ unexecuted but lower priority. Resume only with an author hint naming a
 matching operation or a qualitatively different packet invariant; do not
 continue fitting selector-dependent codebooks.
 
+The later word-constrained nonlinear-GAK pass now supplies the positive
+control missing from the earlier beam. A punctuation-bearing natural-32 plant
+is recovered exactly at rank one. All four real timing/orientation conventions
+stop at transitions `48..49`; offsets `0..16` stop by 57, and a five-times
+wider primary beam stops at 52. This is a bounded negative for dictionary
+prose under the arbitrary cyclic rotation table, not for full 42/83-symbol or
+non-GAK deck models. Results:
+[`practice-cipher4-word-gak-results-2026-07-26.md`](practice-cipher4-word-gak-results-2026-07-26.md).
+
 ### Exact 42-class complement of the Eye alphabet
 
 **Status:** exact architecture count, canonical decoders negative.  The raw

@@ -3,23 +3,7 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Practice cipher #4 constraint solver (`18/20`)
-
-The 57-cycle outer action is established; the remaining codec is the useful
-unknown. Replace the failed beam with a constraint-guided solver that first
-recovers a matched known-English plant of comparable size.
-
-Potential bounded objects:
-
-- conjugacy/quotient classes of the recovered action;
-- exact known-plaintext fingerprints from disclosed shared text;
-- SAT/SMT constraints over a small state update whose transition reuse is
-  learned on one section and held out on another.
-
-**Promotion gate:** exact replay of the full puzzle and a concise account of
-how the mechanism was cracked. A source lookup alone is insufficient.
-
-## 2. Novel machine synthesis, wide first (`16/20`)
+## 1. Novel machine synthesis, wide first (`17/20`)
 
 Before deepening a new decoder, enumerate a small portfolio of genuinely
 different machines. At minimum include:
@@ -36,6 +20,22 @@ different machines. At minimum include:
 Run one cheap necessity test per family. A family earns depth only by
 predicting a held-out equality, boundary, or marker role. Start wide before
 optimizing parameters.
+
+## 2. Practice cipher #4 mechanism acquisition (`15/20`)
+
+The word-constrained arbitrary cyclic-GAK solver now passes a matched
+punctuation-bearing plant but fails the real data at `48..52/200`; phase
+offsets reach at most 57. Do not widen that beam again.
+
+Reopen only with:
+
+- a source/crib or author hint;
+- an invariant for a non-GAK deck beneath the recovered cyclic outer layer;
+- a packet construction that predicts the one-character insertion and later
+  resynchronization.
+
+**Promotion gate:** exact replay of the full puzzle and a concise account of
+how the mechanism was cracked.
 
 ## 3. Practice cipher #3 mechanism acquisition (`14/20`)
 

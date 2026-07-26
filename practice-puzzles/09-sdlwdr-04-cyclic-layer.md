@@ -180,6 +180,15 @@ positive or structural control:
     a matched 201-character natural-English plant.  The beam result is
     therefore **inadmissible as negative evidence**; it identifies a search
     limitation, not a cipher exclusion.
+21. **Word-constrained nonlinear GAK.**  A replacement solver combines exact
+    arbitrary rotation-table consistency with a complete word-prefix trie.
+    It recovers a punctuation-bearing 102-character natural-position plant
+    exactly at rank one.  On the real data, the four current/next and relative
+    orientation conventions stop at transitions `48..49`; all possible word
+    starts at offsets `0..16` stop by 57, and increasing the primary beam five
+    fold reaches only 52.  This is a calibrated bounded rejection of ordinary
+    dictionary prose in the natural 32-position alphabet, not a proof against
+    the full 42/83-symbol or non-GAK supersets.
 
 The signed-band and packed-beam reproductions are
 [`analyze_sdlwdr_cipher4_signed_band.py`](../scripts/analyze_sdlwdr_cipher4_signed_band.py)
@@ -189,6 +198,9 @@ and
 The full homophone/fractionation checkpoint, including both positive controls
 and complete numeric results, is in
 [`docs/practice-cipher4-fractionation-results-2026-07-24.md`](../docs/practice-cipher4-fractionation-results-2026-07-24.md).
+
+The word-constrained nonlinear result is
+[`docs/practice-cipher4-word-gak-results-2026-07-26.md`](../docs/practice-cipher4-word-gak-results-2026-07-26.md).
 
 ## Verdict
 
@@ -202,10 +214,12 @@ verified.  The pair/triple quotient structure remains a descriptive numeric
 fact, but the bounded selector and route follow-up finds no executable lift
 law.  Its strongest apparent predictor is fully explained by exact action-
 bigram reuse, so the speculative `57=29+28` two-cycle branch is not opened.
-The arbitrary nonlinear cyclic-GAK transition remains the best mechanistically
-grounded open inner layer, but it now has an explicit dependency: a crib,
-source hit, or stronger constraint-guided search that passes the matched prose
-plant.  Raising the same language-only beam is not a valid next experiment.
+The arbitrary nonlinear cyclic-GAK transition now also fails a stronger
+word-constrained search that passes a matched punctuation-bearing prose plant.
+It remains mathematically open outside the bounded natural-32 language model,
+but it is no longer the best blind inner-layer attack. Reopen it only with a
+crib, source hit, or author hint; raising the same language beam is not a
+valid next experiment.
 
 ## Transfer to the Eyes
 

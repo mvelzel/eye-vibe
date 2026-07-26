@@ -132,7 +132,8 @@ archive.
 - sdlwdr #3:
   [`../../practice-puzzles/08-sdlwdr-03-unsolved-progression.md`](../../practice-puzzles/08-sdlwdr-03-unsolved-progression.md)
 - sdlwdr #4:
-  [`../../practice-puzzles/09-sdlwdr-04-cyclic-layer.md`](../../practice-puzzles/09-sdlwdr-04-cyclic-layer.md)
+  [`../../practice-puzzles/09-sdlwdr-04-cyclic-layer.md`](../../practice-puzzles/09-sdlwdr-04-cyclic-layer.md),
+  [`../practice-cipher4-word-gak-results-2026-07-26.md`](../practice-cipher4-word-gak-results-2026-07-26.md)
 - sdlwdr #6:
   [`../../practice-puzzles/12-sdlwdr-06-in-game-deck.md`](../../practice-puzzles/12-sdlwdr-06-in-game-deck.md)
 
