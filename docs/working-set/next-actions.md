@@ -7,9 +7,10 @@ falsifiability, potential new information, and capacity control.
 
 Retain the exact prefix tree and exclusion certificates. Seek an author-hint
 or operation family that explains the progression without inventing a hidden
-83-wheel. The exact standard-coordinate two-sheet family
-`x ~ a-x (mod 83)` now passes its plant and fails heldout real text; do not
-replace it with an arbitrary pairing without a new selector.
+83-wheel. Both the exact affine two-sheet family and a capacity-preserving
+search over arbitrary static `83 -> 42` pairings pass their matched plants and
+fail heldout real text. Stop widening static homophone optimizers. Reopen with
+an author/source clue or a concrete low-capacity polygraphic or radix codec.
 
 **Promotion gate:** solve/replay the full puzzle or produce a
 deletion-minimal exact exclusion of a clearly motivated family.

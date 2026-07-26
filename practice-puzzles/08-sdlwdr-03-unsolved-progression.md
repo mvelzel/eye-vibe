@@ -10,8 +10,10 @@ undisclosed exact/affine common-tape factors, low-order `F83` recurrences,
 direct MTF/BWT readings, anomalous LZ78 compression, and an equality-only
 grammar. The complete 83-member affine two-sheet family
 `x ~ a-x (mod 83)` also fails after a matched plant recovers its exact
-reflection and held-out plaintext. A deliberate `8/43` literal body-prefix
-tree is isolated, but does not yet select a decoder.
+reflection and held-out plaintext. A capacity-preserving search over the
+arbitrary static `83 -> 42` two-sheet architecture likewise passes its matched
+heldout plant and fails sharply on the real heldout groups. A deliberate
+`8/43` literal body-prefix tree is isolated, but does not yet select a decoder.
 
 ## What was tested
 
@@ -181,6 +183,17 @@ held-out trigram. This closes the standard-coordinate affine symbol quotient,
 not an arbitrary hidden pairing or stateful sheet schedule. Full results:
 [`../docs/sixtieth-cipher3-affine-involution-results-2026-07-26.md`](../docs/sixtieth-cipher3-affine-involution-results-2026-07-26.md).
 
+The remaining arbitrary static pairing was then represented directly as one
+global `83 -> 42` map with exactly 41 doubletons and one singleton. The
+capacity-preserving optimizer selected its key on A only. A matched plant
+recovered 98.448368% of untouched full-mode B+C and 97.199785% in body mode.
+The real frozen keys instead produced gibberish at `-15.749327` and
+`-15.744717` heldout trigram score per window, more than eight log units below
+their controls. This is a strong calibrated negative for the direct static
+architecture, not exact UNSAT over its enormous key space; stateful or
+polygraphic variants remain open. Full results:
+[`../docs/practice-cipher3-arbitrary-two-sheet-results-2026-07-27.md`](../docs/practice-cipher3-arbitrary-two-sheet-results-2026-07-27.md).
+
 ## Solution
 
 No verified plaintext has been recovered, so there is no solution text to
@@ -219,6 +232,9 @@ instead of presenting a timeout as an impossibility proof.
 - An exact alphabet identity such as `83=2*42-1` should first be tested through
   a complete low-capacity pairing family. Recover the planted pairing and
   freeze the key across held-out groups before widening to a hidden order.
+- If the hidden order is widened, preserve the proposed quotient capacities
+  exactly and select the key on one group only. Here, A-only optimization
+  looked less bad in-sample while untouched B+C exposed decisive overfit.
 
 The exact checks are implemented in
 `scripts/solve_sdlwdr_cipher3_cycle.py` and
@@ -237,4 +253,6 @@ implemented in `src/eye_mystery/practice_cipher3_third.py` and
 `src/eye_mystery/practice_cipher3_affine_gak.py` and
 `scripts/run_practice_cipher3_affine_gak.py`. The affine two-sheet quotient is
 `src/eye_mystery/practice_cipher3_two_sheet.py` and
-`scripts/run_practice_cipher3_two_sheet.py`.
+`scripts/run_practice_cipher3_two_sheet.py`. The arbitrary static quotient is
+`src/eye_mystery/practice_cipher3_arbitrary_two_sheet.py` and
+`scripts/run_practice_cipher3_arbitrary_two_sheet.py`.

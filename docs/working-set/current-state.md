@@ -204,10 +204,11 @@ classes can change color alone. This is capacity, not a decoder.
 
 ## Practice-puzzle calibration
 
-sdlwdr #1, #2, and #5 are solved; #3 is unresolved after broad progression,
-wheel, recursion, and deck negatives; #4 has a recovered outer 57-cycle but
-unresolved codec. Its low aligned-symbol count is a weak phase-selection clue
-(`.012627`), while high bigram IoC is null-ordinary (`.314659`). #6's direct
+sdlwdr #1, #2, and #5 are solved; #3 is unresolved, with a strong calibrated
+heldout negative for the exact static `83 -> 42` quotient in addition to broad
+progression, wheel, recursion, and deck negatives; #4 has a recovered outer
+57-cycle but unresolved codec. Its low aligned-symbol count is a weak phase
+clue (`.012627`); high bigram IoC is null-ordinary (`.314659`). #6's direct
 asset-driven families are negative. Transfer only a recovered operation and
 demand exact replay.
 

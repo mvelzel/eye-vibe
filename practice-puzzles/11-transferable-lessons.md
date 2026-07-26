@@ -36,11 +36,18 @@ encoded exactly: an arbitrary permutation `P` would decode position `i` by
 `P^-i`.  A single 83-cycle cannot confine all data to a 42-symbol plaintext
 alphabet; the exact solver returns UNSAT.  More permissive `82+1` and `41+41+1`
 cycle decompositions did not close within their time bounds, and scans of
-standard selected-card update laws did not collapse the alphabet.
+standard selected-card update laws did not collapse the alphabet. The exact
+identity `83=2*42-1` motivated a static two-sheet quotient: all 83 affine
+pairings fail, and a capacity-preserving search over arbitrary pairings passes
+a matched plant almost perfectly on untouched groups but collapses to
+gibberish on real heldout groups. That latter result is calibrated evidence,
+not exhaustive UNSAT.
 
 **Lesson:** an unresolved puzzle can still teach model discipline.  State the
 precise permutation family, distinguish UNSAT from timeout, and retain only the
-part actually excluded.
+part actually excluded. For high-capacity quotient searches, preserve exact
+preimage sizes and freeze the key on one message family before inspecting
+another; a plausible training score is not evidence if transfer fails.
 
 ## Cipher 4: peel off a group action without inventing the inner codec
 
