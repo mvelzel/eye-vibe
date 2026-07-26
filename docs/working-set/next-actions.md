@@ -3,28 +3,31 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Odd-East checksum self-pointer mechanism (`17/20`)
+## 1. Quotient-addressed 83-state tables (`19/20`)
 
-The three mod-101-closing messages yield complete circular-distance packets
-`13,7 | 11,13,21 | 30` by locating their own checksum quotients. Their sums
-are `20,45,30`; subtracting them from headers gives the established controls
-`30,18,3`. Exact assignment-corrected conditional rates are small, but the
-mechanism and consumers were discovered retrospectively.
+Freeze each panel's first 83 full-array values as `f:Z83->Z83`, start at
+`floor(sum/101)`, and follow until repeat. The nine orbit sizes total72.
+Closing E1/E3/E5 give tails8, cycles12, multiplicity total20, union17, ordered
+cycles `1,4,7`, and header-composability intersections `0,1,2`. E2 is the
+sole nonclosing tail-free orbit, size9; the other nonclosing orbits total43.
 
-The induced odd-East control graph now explains packet sizes exactly:
-`count+indegree(source)=3`. It is only `1/6` under count assignment and `2/6`
-after nearby formula selection. The graph-derived diagonal value test becomes
-ordinary (`.1817`) after full slot correction, and the current WAK has no
-literal division-by-101 Lua path.
+This exactly predicts the dossier partition `12+43+9+8=72`. Raw Veska
+independently proves only total72 and the separated 9/8 pictograms; its
+simple remaining split is 11/44. In one million controls preserving copied
+prefixes, quotient positions, multisets, checksums, and no-doubles, broad
+category-assigned `72|9|8` occurs 102 times. One also matches Eye `17|20`;
+none additionally retains ordered cycles `1,4,7`.
 
-Advance only by deriving numeric packet order/sign from another header type,
-finding a construction-time interface for the exact operation, or predicting
-a held-out field.
-The unchanged extractor fails the six non-closing messages, so retain it only
-as a typed odd-East subsystem. Do not scan alternate moduli, distances,
-aggregators, scalar ledgers, or sparse-matrix statistics.
+The all-orbit sieve omits32 labels, equal to the E4 pivot remainder; joint
+with total72 is `.000344`. Only full-array start0 works among all common
+83-windows. This is a promoted construction mechanism, not plaintext.
 
-**Promotion gate:** one prospective consumer or independent operation selector.
+Advance only through an objective target-blind Veska `12/43` mask, an authored
+quotient-pointer interface, or a frozen-orbit prediction of an uninspected
+Eye transition/value. Do not scan alternate seeds, moduli, table lengths,
+windows, aggregates, or new scalar ledgers.
+
+**Promotion gate:** one prospective prediction or independently authored mask.
 
 ## 2. Practice cipher #4 mechanism acquisition (`15/20`)
 

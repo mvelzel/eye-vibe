@@ -119,6 +119,8 @@ archive.
 
 ## Mod-101 and 83-of-101 construction vocabulary
 
+- Quotient-addressed 83-state orbit bridge to Eye phases and Veska:
+  [`../sixty-fourth-quotient-pointer-orbit-results-2026-07-26.md`](../sixty-fourth-quotient-pointer-orbit-results-2026-07-26.md)
 - Prefix-trie checksum and controls:
   [`../novel-synthesis-2026-07-21.md`](../novel-synthesis-2026-07-21.md)
 - Procedural wand selector:

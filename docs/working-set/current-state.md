@@ -187,26 +187,26 @@ Scanning all 82 shifts leaves only this `+3` construction. It selects the
 observed of two factoradic survivors. The source-pair delta and phase sum both
 equal `50`; the late source-pair boundary `34` is exactly the West3 marker.
 
-The dossier's Type4/Type6 cache machine remains unproved. In particular, the
-Seula 70-pixel residual, exact `12+43+9+8` Veska partition, side-band scope
-rules, and first-seen Type6 allocator are not independently executable.
-The two non-self transfers still have different factoradic quotients, so this
-is a header/state repair—not a body-wide shift or complete Gate decoder.
+The checksum quotient now addresses each panel's first 83 full-array values.
+Nine forward-orbit sizes total72. Closing E1/E3/E5 split into 12 cycle and 8
+tail nodes, total/union `20/17`, with ordered cycles `1,4,7`. Nonclosing E2 is
+the sole tail-free orbit, size9; the other five total43. This predicts Veska
+`12+43+9+8=72`. The raw asset proves only total72 and the 9/8 bands; its
+simple remaining split is 11/44, so 12/43 remains a mask prediction; broad
+`72|9|8` is `.000103`. One control also matches Eye `17+3=20`, but none keeps cycles `1,4,7`.
+
+The all-orbit union omits32 labels, the typed E4 checksum remainder (`.0349`
+alone, `.000344` with total72). Body-only and every other common 83-window
+start fail. Promote quotient-addressed tables as a construction lead, not yet
+a decoder; Type6's Seula mask, scope rules, and allocator remain unproved.
 
 ## Other construction facts worth retaining
 
-- The complete body prefix trie closes exactly modulo 101. Direct recursive,
-  automaton, and failure-link consumers tested so far do not explain it.
-- NollaArvi directly attributed the Eye secret to Petri Purho in April 2021.
-  Petri's 2015 triangle renderer predates the Eyes, but its polygon windings
-  conflict with the accepted order. It corroborates only alternating-triangle
-  topology, not the cipher; Gate and cauldron authorship remain unproved.
-- Equality/reconvergence and copied openings are real; decoders must preserve
-  them, so fixed substitutions that destroy them are poor models.
-- Direct `3,5,8` body weighting is negative; the equality-derived context
-  graph is a forest, so its derived-triangle holonomy is tautological.
-- Earthquake-gear/Wadsworth rejects every arithmetic-progression 83-disk for
-  `m=26/29` and all fixed weights; its arbitrary hidden disk is unresolved.
+The body prefix trie closes modulo101, though direct consumers fail. NollaArvi
+attributed the secret to Petri Purho; his eligible 2015 triangle renderer has
+an incompatible vertex order. Equality/reconvergence must survive any decoder.
+Direct `3,5,8` weighting and fixed-disk Earthquake/Wadsworth are negative; an
+arbitrary hidden disk remains unresolved.
 
 ## Practice-puzzle calibration
 
