@@ -5,8 +5,10 @@ falsifiability, potential new information, and capacity control.
 
 ## 1. Practice cipher #3 mechanism acquisition (`14/20`)
 
-Retain the exact prefix tree and exclusion certificates. Seek an author-hint
-or operation family that explains the progression without inventing a hidden
+Retain the exact prefix tree and exclusion certificates. The complete
+read-only author-thread re-audit found no newer clue and independently
+verified the full 18-stream corpus. Freeze this lane until an external hint or
+operation family explains the progression without inventing a hidden
 83-wheel. Both the exact affine two-sheet family and a capacity-preserving
 search over arbitrary static `83 -> 42` pairings pass their matched plants and
 fail heldout real text. The frozen 34,860-structure projective-linear

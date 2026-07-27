@@ -157,12 +157,16 @@ indices, and neither direct nor inverse-BWT LZ78 counts are exceptional
 against 1,000 matched shuffles. The strongest nondisclosed equality-isomorph
 contains only two repeated constraints.
 
-A complete read-only author-thread audit adds no operational clue. sdlwdr
-described the third puzzle as “a bit more unique” in 2025, and in 2026 said
-the source code was lost. A public Crawford *Kalevala* scan finds the observed
-prefix-tree shape thousands of times, so it cannot identify a plaintext
-passage without a stronger mechanism. Full results:
+A complete read-only author-thread audit adds no operational clue. A 27 July
+2026 re-audit found no newer post and verified every integer and stream order
+in the 9 KB attachment plus separate A0 correction against the local corpus.
+sdlwdr described the third puzzle as “a bit more unique” in 2025, and in 2026
+said the source code was lost. A public Crawford *Kalevala* scan finds the
+observed prefix-tree shape thousands of times, so it cannot identify a
+plaintext passage without a stronger mechanism. Full results:
 [`../docs/practice-cipher3-third-wide-first-batch-results-2026-07-24.md`](../docs/practice-cipher3-third-wide-first-batch-results-2026-07-24.md).
+The exact source re-audit is
+[`../docs/seventy-third-cipher3-source-reaudit-2026-07-27.md`](../docs/seventy-third-cipher3-source-reaudit-2026-07-27.md).
 
 Construction genealogy then motivated a standard-coordinate affine
 group-autokey test. Its complete 35,675-member structured catalog passes a
