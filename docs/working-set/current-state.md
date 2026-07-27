@@ -165,15 +165,15 @@ Promote one preserved state/cache correspondence, not a general update map.
 
 ## Later-asset hypotheses (unpromoted)
 
-Gate Guardian and current-WAK postdate the Eye Messages, so they could be later
-clues. Historical audits found numerical correspondences involving Veska
-`153,+3`, WAK salts, and Eye marker/phase quantities. None supplies a complete
-asset-to-Eye mechanism or a held-out consequence. These partial matches cannot
-corroborate one another or strengthen an Eye-only theory.
+Gate and current-WAK could be later clues, but Veska/WAK numerical matches
+supply neither a complete asset-to-Eye mechanism nor a holdout and cannot
+corroborate one another. Veska's raw marks give total72 and 9/8 bands, while
+the objective remainder is 11/44, not the dossier's 12/43.
 
-Veska's raw marks give total72 and isolated 9/8 bands, but the remaining
-objective split is 11/44, not the dossier's 12/43. Gate and WAK remain separate
-binary hypotheses; each must stand on a complete target-blind executable map.
+A frozen census also closes the reported 1.0 companion shortlist: its current
+assets are binary, decorative, unordered, or passive rather than an Eye
+interface. The historical fingerprint and `1402/145/980` WAK census remain
+external reports because the paid historical depot requires authentication.
 
 ## Quotient-addressed table hypothesis
 

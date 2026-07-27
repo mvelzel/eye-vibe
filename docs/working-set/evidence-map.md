@@ -104,8 +104,7 @@ archive.
 
 ## Gate and later clue chronology
 
-- Ground-up asset/code audit:
-  [`../gate-guardian-audit.md`](../gate-guardian-audit.md)
+- Ground-up Gate audit and frozen 1.0 named-shortlist negative: [`../gate-guardian-audit.md`](../gate-guardian-audit.md), [`../noita-1.0-interface-census-freeze-2026-07-27.md`](../noita-1.0-interface-census-freeze-2026-07-27.md), [`../noita-1.0-interface-census-results-2026-07-27.md`](../noita-1.0-interface-census-results-2026-07-27.md)
 - Current-WAK locale salt census and dated introduction, unpromoted:
   [`../twenty-eighth-rng-locale-salt-results-2026-07-24.md`](../twenty-eighth-rng-locale-salt-results-2026-07-24.md)
 - Exploratory `+3` instruction comparison, unpromoted:

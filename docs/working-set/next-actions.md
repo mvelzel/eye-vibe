@@ -151,3 +151,5 @@ decoder-independent reason makes the expected information gain worthwhile.
   operations and arbitrary local reset state.
 - Lymm's punctuation/capital plus word-length Morse rule on the 12 English
   Wall Message translations (`46/98` valid groups; no run longer than three).
+- the retrospectively named Noita 1.0 companion assets without either the
+  entitled historical payloads or a complete asset-derived Eye mapping.
