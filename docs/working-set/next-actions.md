@@ -150,6 +150,8 @@ decoder-independent reason makes the expected information gain worthwhile.
   orientations, in both full and primer modes, for Cipher 3 and the Eyes.
 - direct `S6 x 7` cell/divider incidence projection of the 83 labels.
 - balanced 42-leaf tree distances under BFS/pre/in/postorder numbering.
+- further generic solver substitutions for adjacent hidden-cycle geometry;
+  its pair census is `18 SAT / 0 UNSAT / 3 UNKNOWN`.
 - canonical first-`N` packet XGAK across the frozen 64-model family.
 - Waite's exact East-2 suffix under ordinary GAK with arbitrary permutation
   operations and arbitrary local reset state.

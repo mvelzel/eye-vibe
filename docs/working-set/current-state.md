@@ -191,18 +191,18 @@ reopen only if an authored Eye interface independently selects the operation.
 ## Other construction facts worth retaining
 
 The body prefix trie closes modulo101, though direct consumers fail. NollaArvi
-attributed the secret to Petri Purho; his 2015 triangle renderer has an
-incompatible vertex order. Frosthaven's proposal, direct `3,5,8` weighting,
-and fixed-disk Earthquake/Wadsworth fail; an arbitrary hidden disk is open.
+attributed the secret to Petri Purho; his 2015 triangle renderer is incompatible.
+Frosthaven, direct `3,5,8`, and fixed-disk Wadsworth fail; a hidden disk is open.
 
 The Waite East-2 suffix is rejected under ordinary GAK; XGAK remains open.
-Local `THAT WHICH` fits GAK, but connected pairs remain unresolved: constant
-fills fail; 574/1,000 random fills survive closure; no finite key follows.
+Local `THAT WHICH` fits GAK; connected pairs remain unresolved, with 574/1,000
+random fills surviving closure and no finite key.
 
 A direct visible-state permutation-action model has exact support minimum19,
 even after aligning the registered isomorphic passages. It is non-identifying:
 after the unique source26 pivot names all actions, every one of 858 other
-classes can change color alone. This is capacity, not a decoder.
+classes can change color alone. This is capacity, not a decoder. Adjacent
+hidden-cycle pair geometry remains `18 SAT / 0 UNSAT / 3 UNKNOWN`.
 
 ## Practice-puzzle calibration
 

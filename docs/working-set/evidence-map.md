@@ -138,8 +138,8 @@ archive.
   [`../seventeenth-lane-a-bitvector-results-2026-07-24.md`](../seventeenth-lane-a-bitvector-results-2026-07-24.md),
   [`../seventeenth-lane-c-hankel-results-2026-07-24.md`](../seventeenth-lane-c-hankel-results-2026-07-24.md),
   [`../seventeenth-lane-e-fibration-results-2026-07-24.md`](../seventeenth-lane-e-fibration-results-2026-07-24.md)
-- Hidden-wheel exact exclusion:
-  [`../thirteenth-wide-hidden-geometry-results-2026-07-24.md`](../thirteenth-wide-hidden-geometry-results-2026-07-24.md)
+- Hidden-wheel multi-lag exclusion and adjacent-pair census:
+  [`../thirteenth-wide-hidden-geometry-results-2026-07-24.md`](../thirteenth-wide-hidden-geometry-results-2026-07-24.md), [`../sixty-eighth-adjacent-geometry-pair-results-2026-07-27.md`](../sixty-eighth-adjacent-geometry-pair-results-2026-07-27.md), [`../sixty-ninth-adjacent-geometry-cnf-results-2026-07-27.md`](../sixty-ninth-adjacent-geometry-cnf-results-2026-07-27.md), [`../seventy-first-adjacent-geometry-lazy-injection-results-2026-07-27.md`](../seventy-first-adjacent-geometry-lazy-injection-results-2026-07-27.md), [`../seventy-second-adjacent-geometry-domain-results-2026-07-27.md`](../seventy-second-adjacent-geometry-domain-results-2026-07-27.md)
 - Historical 26-glyph discarded-alphabet initializer, with bounded affine-GAK
   and structured-deck exclusions:
   [`../fifty-first-alphabet-warmup-results-2026-07-26.md`](../fifty-first-alphabet-warmup-results-2026-07-26.md)
