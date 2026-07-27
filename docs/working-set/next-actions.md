@@ -121,6 +121,18 @@ score more isolated words.
 Acquire a physical copy only when a source fingerprint or other
 decoder-independent reason makes the expected information gain worthwhile.
 
+## 7. Rowwise recurrence floor (`8/20`)
+
+After natural trims, minimum same-label recurrence distances are exactly
+`333|222|444` by physical row. A 100,000-trial null preserving all registered
+context cells, per-body multisets, and no doubles gives corrected tail
+`.0007300`. This is a retrospective candidate invariant, not a discovery
+p-value or evidence for a cooldown machine. Community work already established
+repeat-gap analysis and its dependence on the hidden permutation settings.
+
+Do not scan other trims, groups, cuts, or gap summaries. Reopen only if an
+independently selected mechanism predicts `3/2/4` and a new consequence.
+
 ## Closed routes not to reopen without new evidence
 
 - fixed substitution, affine substitution, simple Caesar/`+3` body shifts;

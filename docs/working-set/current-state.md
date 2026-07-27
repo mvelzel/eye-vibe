@@ -190,13 +190,13 @@ reopen only if an authored Eye interface independently selects the operation.
 
 ## Other construction facts worth retaining
 
-The body prefix trie closes modulo101, though direct consumers fail. NollaArvi
-attributed the secret to Petri Purho; his 2015 triangle renderer is incompatible.
-Frosthaven, direct `3,5,8`, and fixed-disk Wadsworth fail; a hidden disk is open.
+The body prefix trie closes modulo101, though direct consumers fail. Natural-
+trim rowwise recurrence minima are `333|222|444` with context-fixed tail
+`.00073`; this is retrospective prior-art analysis. Petri's renderer fails.
 
 Waite's East-2 suffix is impossible under ordinary GAK. Distinct-selector XGAK
-replays it exactly but also admits a frozen wrong next card: capacity, not
-evidence. Local `THAT WHICH` fits GAK; 574/1,000 connected fills survive.
+replays it but admits a frozen wrong next card. Local `THAT WHICH` fits GAK;
+574/1,000 connected fills survive. Fixed-disk Wadsworth also fails.
 
 A direct visible-state permutation-action model has exact support minimum19,
 even after aligning the registered isomorphic passages. It is non-identifying:

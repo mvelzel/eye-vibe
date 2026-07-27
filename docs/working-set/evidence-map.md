@@ -153,6 +153,8 @@ archive.
 - Wide metadata/stagger and exact no-double postprocessor audit: [`../fifty-fourth-wide-stepback-results-2026-07-26.md`](../fifty-fourth-wide-stepback-results-2026-07-26.md)
 - Waite East-2 exact GAK boundary—ordinary-GAK rejection and non-predictive distinct-selector XGAK replay: [`../waite-sparse-gak-results-2026-07-27.md`](../waite-sparse-gak-results-2026-07-27.md), [`../waite-sparse-xgak-results-2026-07-27.md`](../waite-sparse-xgak-results-2026-07-27.md)
 - Local and connected-gap `THAT WHICH` GAK audits: [`../that-which-gak-results-2026-07-27.md`](../that-which-gak-results-2026-07-27.md), [`../that-which-connected-gap-gak-results-2026-07-27.md`](../that-which-connected-gap-gak-results-2026-07-27.md)
+- Retrospective rowwise recurrence floor, frozen controls, and prior-art audit:
+  [`../row-cooldown-freeze-2026-07-27.md`](../row-cooldown-freeze-2026-07-27.md), [`../row-cooldown-results-2026-07-27.md`](../row-cooldown-results-2026-07-27.md), [`../../src/eye_mystery/row_cooldown.py`](../../src/eye_mystery/row_cooldown.py)
 
 ## Practice puzzles
 
@@ -172,9 +174,7 @@ archive.
 
 ## Archives
 
-- Chronological provenance:
-  [`../research-log.md`](../research-log.md)
-- Legacy lead portfolio:
-  [`../open-leads.md`](../open-leads.md)
+- Chronological provenance: [`../research-log.md`](../research-log.md)
+- Legacy lead portfolio: [`../open-leads.md`](../open-leads.md)
 - Root narrative and command catalog:
   [`../../README.md`](../../README.md)
