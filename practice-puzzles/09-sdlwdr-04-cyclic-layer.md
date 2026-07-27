@@ -204,6 +204,15 @@ positive or structural control:
     models were reselected in 500 within-portion action shuffles. The best
     real cell has two hits and corrected tail `.353293`; it supplies no inner
     mechanism.
+24. **Centered edit diamond.**  The one-character branch between the first
+    long copied block and the following 105-action block is `18,22` in
+    portion 1 versus `12` in portions 2/3. Subtracting the independently fixed
+    midpoint 28 gives `-10 + -6 = -16` exactly. This selects a local additive
+    synchronization convention without language. It is not the global codec:
+    the six copied-block rejoins require neutrals
+    `28,55,48,28,32,24 (mod57)`, and direct centered accumulation remains
+    frequency-flat and unreadable. The literal transfer to all 36 Eye-message
+    pairs finds no short edit diamond at all.
 
 The signed-band and packed-beam reproductions are
 [`analyze_sdlwdr_cipher4_signed_band.py`](../scripts/analyze_sdlwdr_cipher4_signed_band.py)
@@ -222,6 +231,9 @@ The collision audit is
 
 The arithmetic insertion side check is included in
 [`docs/fifty-fourth-wide-stepback-results-2026-07-26.md`](../docs/fifty-fourth-wide-stepback-results-2026-07-26.md).
+
+The distinct copied-block edit audit is
+[`docs/seventy-sixth-edit-diamond-results-2026-07-27.md`](../docs/seventy-sixth-edit-diamond-results-2026-07-27.md).
 
 ## Verdict
 
@@ -242,7 +254,9 @@ but it is no longer the best blind inner-layer attack. Reopen it only with a
 crib, source hit, or author hint; raising the same language beam is not a
 valid next experiment. The low cross-message symbol coincidence may reflect
 chosen initial deck states, but the matched null gives no selected state or
-new decoding operation.
+new decoding operation. The midpoint edit diamond is a real local composition
+clue, but its failure at every later rejoin closes one global centered-additive
+state; it does not recover the inner codec.
 
 ## Transfer to the Eyes
 

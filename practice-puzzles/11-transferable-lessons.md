@@ -107,6 +107,13 @@ when the null preserves each portion's recovered cyclic action stream and
 varies only initial phase. The unusually low aligned-symbol count survives
 only as a weak primer-selection clue and does not select the inner codec.
 
+The one-character edit supplies a different exact oracle. Between copied
+blocks, portion 1 takes ranks `18,22` while portions 2/3 take rank `12`.
+Treating a rank as the increment `rank-k` forces `k=28`, exactly the midpoint
+of the 57-rank band, because `-10-6=-16`. This is a real local
+synchronization diamond. It does not generalize: later copied-block rejoins
+force four other neutrals, and the centered accumulator is frequency-flat.
+
 **Lesson:** repeated structure can prove one layer while leaving the next
 layer unknown.  Convert the recovered group into a functional recurrence: it
 can turn plaintext repetition into an exact oracle before any language score.
@@ -117,7 +124,9 @@ identify the exact carrier of every significant projection; a low-dimensional
 view that merely indexes already repeated full symbols is not a decoder.
 Likewise, compare an IoC claim with a null that preserves the already recovered
 group action; an independent-symbol baseline can make known structure look
-like a new layer.
+like a new layer. For insertion/rejoin events, equate the two path products
+before guessing text; then require the selected operation to close every other
+rejoin rather than promoting one exact local fit.
 
 ## Cipher 5: enumerate implementation details with a key-free oracle
 
@@ -142,9 +151,11 @@ separated.
    and branch-local state changes instead of forcing every glyph to be text.
 4. **Enumerate bounded mechanism families.**  Implementation details are
    hypotheses to search, not assumptions to bury.
-5. **Require held-out verification.**  A crib or optimized key must predict an
+5. **Exploit edit diamonds.**  A short branch that rejoins can identify a
+   neutral element or operation composition without an alphabet assignment.
+6. **Require held-out verification.**  A crib or optimized key must predict an
    unused continuation, and a full solution should replay the ciphertext.
-6. **Calibrate every heuristic.**  Run planted positives and matched nulls;
+7. **Calibrate every heuristic.**  Run planted positives and matched nulls;
    reject unstable language-like output.
-7. **Keep layers separate.**  Metadata, traversal order, outer group action,
+8. **Keep layers separate.**  Metadata, traversal order, outer group action,
    inner codec, source text, and in-game key are distinct claims.

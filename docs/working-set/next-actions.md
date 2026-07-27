@@ -31,10 +31,12 @@ The cyclic outer layer and exact shared blocks are recovered. The calibrated
 word-constrained GAK beam fails at `48..52/200`, and a new read-only author
 search found no additional hint. Do not widen that beam.
 
-Reopen only with a source/crib, a non-GAK deck invariant, or a packet rule
-that predicts the one-character insertion and later resynchronization. The
-low cross-message collision is only a weak phase-selection clue (`.012627`);
-the high-bigram claim is null-ordinary.
+The one-character insertion now selects a local additive neutral exactly:
+`(18-28)+(22-28)=12-28`. Later copied-block rejoins require incompatible
+neutrals, so one global centered state is closed; the literal Eye transfer is
+empty. Reopen only with a source/crib or a non-GAK rule that explains both
+this local composition and the other rejoins. The collision/IoC clues remain
+null or weak.
 
 **Promotion gate:** exact full-puzzle replay plus the cracking method.
 

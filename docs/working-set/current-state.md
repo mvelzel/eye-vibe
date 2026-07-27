@@ -212,10 +212,10 @@ projective-pair search. Its complete six-stream route lane is also closed:
 row plants are non-identifiable, while the calibrated ragged-column selector
 recovers its plant but has no real B survivor at the 42-action gate. This sits
 beside broad progression/wheel/recursion/deck negatives. The exact 166-map authored signed-line family is closed for #3 and the Eyes; arbitrary hidden order is untested because its solvers fail their plants.
-#4 has a recovered outer 57-cycle but unresolved codec; its collision clues
-are null/weak. #6's direct asset families are negative. Lymm's wall-cover
-practice yields word-length Morse with two defective bits, but the unchanged
-rule fails all 12 real English Wall Messages. Demand exact replay on transfer.
+#4's outer 57-cycle is recovered; one edit selects neutral28, but later rejoins
+require incompatible neutrals and the codec remains unresolved.
+#6's direct assets are negative. Lymm's wall-cover practice yields word-length
+Morse with two defective bits; its rule fails all 12 English Wall Messages.
 
 ## Interpretation boundary
 

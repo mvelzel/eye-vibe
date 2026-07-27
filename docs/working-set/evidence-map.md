@@ -166,7 +166,7 @@ archive.
   [`../../practice-puzzles/09-sdlwdr-04-cyclic-layer.md`](../../practice-puzzles/09-sdlwdr-04-cyclic-layer.md),
   [`../practice-cipher4-word-gak-results-2026-07-26.md`](../practice-cipher4-word-gak-results-2026-07-26.md),
   [`../fiftieth-cipher4-collision-null-results-2026-07-26.md`](../fiftieth-cipher4-collision-null-results-2026-07-26.md),
-  [`../fifty-fourth-wide-stepback-results-2026-07-26.md`](../fifty-fourth-wide-stepback-results-2026-07-26.md)
+  [`../fifty-fourth-wide-stepback-results-2026-07-26.md`](../fifty-fourth-wide-stepback-results-2026-07-26.md), [edit diamond](../seventy-sixth-edit-diamond-results-2026-07-27.md)
 - sdlwdr #6:
   [`../../practice-puzzles/12-sdlwdr-06-in-game-deck.md`](../../practice-puzzles/12-sdlwdr-06-in-game-deck.md)
 - Lymm wall steganography [solution](../../practice-puzzles/13-lymm-wall-message-steganography.md)
