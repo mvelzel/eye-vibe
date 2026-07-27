@@ -161,7 +161,7 @@ archive.
 - Transferable methods:
   [`../../practice-puzzles/11-transferable-lessons.md`](../../practice-puzzles/11-transferable-lessons.md)
 - sdlwdr #3:
-  [`../../practice-puzzles/08-sdlwdr-03-unsolved-progression.md`](../../practice-puzzles/08-sdlwdr-03-unsolved-progression.md), [arbitrary two-sheet results](../practice-cipher3-arbitrary-two-sheet-results-2026-07-27.md), [pair-quotient results](../practice-cipher3-pair-quotient-results-2026-07-27.md)
+  [`../../practice-puzzles/08-sdlwdr-03-unsolved-progression.md`](../../practice-puzzles/08-sdlwdr-03-unsolved-progression.md), [arbitrary two-sheet results](../practice-cipher3-arbitrary-two-sheet-results-2026-07-27.md), [pair-quotient results](../practice-cipher3-pair-quotient-results-2026-07-27.md), [six-stream route results](../practice-cipher3-route-results-2026-07-27.md)
 - sdlwdr #4:
   [`../../practice-puzzles/09-sdlwdr-04-cyclic-layer.md`](../../practice-puzzles/09-sdlwdr-04-cyclic-layer.md),
   [`../practice-cipher4-word-gak-results-2026-07-26.md`](../practice-cipher4-word-gak-results-2026-07-26.md),

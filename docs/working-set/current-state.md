@@ -206,7 +206,10 @@ classes can change color alone. This is capacity, not a decoder.
 
 sdlwdr #1, #2, and #5 are solved; #3 is unresolved, with strong calibrated
 heldout negatives for static `83 -> 42` and the complete 34,860-member frozen
-projective-pair search, besides broad progression/wheel/recursion/deck negatives.
+projective-pair search. Its complete six-stream route lane is also closed:
+row plants are non-identifiable, while the calibrated ragged-column selector
+recovers its plant but has no real B survivor at the 42-action gate. This sits
+beside broad progression/wheel/recursion/deck negatives.
 #4 has a recovered outer 57-cycle but unresolved codec. Its low aligned-symbol
 count is a weak phase clue (`.012627`); high bigram IoC is null-ordinary
 (`.314659`). #6's direct asset-driven families are negative. Transfer only a

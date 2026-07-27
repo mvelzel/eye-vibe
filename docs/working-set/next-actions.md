@@ -11,9 +11,12 @@ or operation family that explains the progression without inventing a hidden
 search over arbitrary static `83 -> 42` pairings pass their matched plants and
 fail heldout real text. The frozen 34,860-structure projective-linear
 consecutive-pair plus affine-quotient search now does likewise. Stop widening
-quotient/homophone optimizers. Next require an author/source clue or test the
-already frozen low-capacity six-stream route/transposition lane; do not jump
-to nonlinear pair maps, triples, or arbitrary polygraphic codebooks.
+quotient/homophone optimizers. The complete six-stream row/column route catalog
+is now closed: row controls are non-identifiable, and the calibrated column
+control passes while the real A class has no B survivor. Next require an
+author/source clue or another predeclared low-capacity mechanism. Do not jump
+to nonlinear pair maps, triples, arbitrary polygraphic codebooks, or wider
+transpositions.
 
 **Promotion gate:** solve/replay the full puzzle or produce a
 deletion-minimal exact exclusion of a clearly motivated family.

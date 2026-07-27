@@ -15,7 +15,10 @@ arbitrary static `83 -> 42` two-sheet architecture likewise passes its matched
 heldout plant and fails sharply on the real heldout groups. The complete
 34,860-member projective-linear pair plus affine-quotient catalog also passes
 overlap/block plants and fails real heldout text. A deliberate `8/43` literal
-body-prefix tree is isolated, but does not yet select a decoder.
+body-prefix tree is isolated, but does not yet select a decoder. A complete
+17,280-member six-stream route catalog also fails: the row plant is
+non-identifiable, while the calibrated column/additive selector recovers its
+plant but retains no real route at the B 42-action gate.
 
 ## What was tested
 
@@ -207,6 +210,19 @@ is a strong calibrated negative for the frozen English-character search, not
 exact UNSAT or evidence against nonlinear/stateful polygraphs. Full results:
 [`../docs/practice-cipher3-pair-quotient-results-2026-07-27.md`](../docs/practice-cipher3-pair-quotient-results-2026-07-27.md).
 
+The remaining low-capacity route lane treated each group's six supplied
+streams as rows of one object. It exhaustively searched 5,760 row
+concatenations and 11,520 ragged column/snake reads. Controls preserved the
+real lengths and hid a weighted 42-step modular action stream. The row
+selector failed to identify its plant, so no real row winner was interpreted.
+The column/additive selector recovered the planted A path up to reversal; B
+removed the false parity route, and the true route retained supports `27/29`
+on untouched B/C. On the real data the minimum A support is already 78, and
+both members of its A equivalence class use all 83 steps on B. The separate
+broad class likewise has no B survivor at an effective-choice bound of 42.
+C was not inspected because the frozen B gate failed. Full results:
+[`../docs/practice-cipher3-route-results-2026-07-27.md`](../docs/practice-cipher3-route-results-2026-07-27.md).
+
 ## Solution
 
 No verified plaintext has been recovered, so there is no solution text to
@@ -232,6 +248,9 @@ instead of presenting a timeout as an impossibility proof.
   occupancy with the proposed plaintext action count before optimizing words.
 - A mathematically exact quotient size does not recover its hidden coordinate.
   Require a planted wheel—not only a planted substitution—to succeed.
+- When ragged-route parameters are observationally equivalent on training
+  lengths, carry the whole coordinate-equivalence class forward. Let heldout
+  geometry filter it; never let a lexical tie-break masquerade as recovery.
 - Long equality-isomorphic factors are weak when almost every position
   introduces a fresh symbol; count repeated equality constraints explicitly.
 - A source corpus may reproduce a prefix hierarchy many times. Treat that as
@@ -273,4 +292,6 @@ implemented in `src/eye_mystery/practice_cipher3_third.py` and
 `src/eye_mystery/practice_cipher3_arbitrary_two_sheet.py` and
 `scripts/run_practice_cipher3_arbitrary_two_sheet.py`. The projective pair
 quotient is `src/eye_mystery/practice_cipher3_pair_quotient.py` and
-`scripts/run_practice_cipher3_pair_quotient.py`.
+`scripts/run_practice_cipher3_pair_quotient.py`. The six-stream route pass is
+`src/eye_mystery/practice_cipher3_routes.py` and
+`scripts/run_practice_cipher3_routes.py`.
