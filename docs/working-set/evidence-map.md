@@ -156,10 +156,7 @@ archive.
 
 ## Practice puzzles
 
-- Index:
-  [`../../practice-puzzles/README.md`](../../practice-puzzles/README.md)
-- Transferable methods:
-  [`../../practice-puzzles/11-transferable-lessons.md`](../../practice-puzzles/11-transferable-lessons.md)
+- [Index](../../practice-puzzles/README.md) and [transferable methods](../../practice-puzzles/11-transferable-lessons.md)
 - sdlwdr #3:
   [`../../practice-puzzles/08-sdlwdr-03-unsolved-progression.md`](../../practice-puzzles/08-sdlwdr-03-unsolved-progression.md), [arbitrary two-sheet results](../practice-cipher3-arbitrary-two-sheet-results-2026-07-27.md), [pair-quotient results](../practice-cipher3-pair-quotient-results-2026-07-27.md), [six-stream route results](../practice-cipher3-route-results-2026-07-27.md)
 - sdlwdr #4:
@@ -169,6 +166,8 @@ archive.
   [`../fifty-fourth-wide-stepback-results-2026-07-26.md`](../fifty-fourth-wide-stepback-results-2026-07-26.md)
 - sdlwdr #6:
   [`../../practice-puzzles/12-sdlwdr-06-in-game-deck.md`](../../practice-puzzles/12-sdlwdr-06-in-game-deck.md)
+- Lymm wall steganography [solution](../../practice-puzzles/13-lymm-wall-message-steganography.md)
+  and [negative in-game transfer](../wall-steganography-transfer-results-2026-07-27.md)
 
 ## Archives
 

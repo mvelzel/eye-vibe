@@ -42,6 +42,7 @@ encrypted it is not, by itself, a useful practice-puzzle solution.
 | [sdlwdr #4 — recovered cyclic layer](09-sdlwdr-04-cyclic-layer.md) | Partially reduced; plaintext unresolved | Exact repeats prove an outer action; a wide quotient screen can preserve mechanism clues without inventing plaintext. |
 | [sdlwdr #5 — recursive increasing-chunk shuffle](10-sdlwdr-05-recursive-chunks.md) | Solved; exact replay | Equality-pattern repetitions can select a recursive state-update law before plaintext letters are assigned. |
 | [sdlwdr #6 — in-game-keyed deck cipher](12-sdlwdr-06-in-game-deck.md) | Unsolved; wide mechanism map frozen | Treat in-game decorations as independently constrained parts of an executable deck mechanism, then exploit common resets before language. |
+| [Lymm — Wall Messages steganography](13-lymm-wall-message-steganography.md) | Plaintext recovered; two carrier defects | Separate symbol boundaries from bit carriers: punctuation/capitals delimit Morse while coarse word length supplies bits. |
 
 The cross-puzzle synthesis is in
 [Transferable lessons from the five sdlwdr ciphers](11-transferable-lessons.md).

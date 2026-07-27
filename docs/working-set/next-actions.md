@@ -142,3 +142,5 @@ decoder-independent reason makes the expected information gain worthwhile.
 - canonical first-`N` packet XGAK across the frozen 64-model family.
 - Waite's exact East-2 suffix under ordinary GAK with arbitrary permutation
   operations and arbitrary local reset state.
+- Lymm's punctuation/capital plus word-length Morse rule on the 12 English
+  Wall Message translations (`46/98` valid groups; no run longer than three).

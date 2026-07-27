@@ -212,10 +212,10 @@ projective-pair search. Its complete six-stream route lane is also closed:
 row plants are non-identifiable, while the calibrated ragged-column selector
 recovers its plant but has no real B survivor at the 42-action gate. This sits
 beside broad progression/wheel/recursion/deck negatives.
-#4 has a recovered outer 57-cycle but unresolved codec. Its low aligned-symbol
-count is a weak phase clue (`.012627`); high bigram IoC is null-ordinary
-(`.314659`). #6's direct asset-driven families are negative. Transfer only a
-recovered operation and demand exact replay.
+#4 has a recovered outer 57-cycle but unresolved codec; its collision clues
+are null/weak. #6's direct asset families are negative. Lymm's wall-cover
+practice yields word-length Morse with two defective bits, but the unchanged
+rule fails all 12 real English Wall Messages. Demand exact replay on transfer.
 
 ## Interpretation boundary
 
