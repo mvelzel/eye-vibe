@@ -15,10 +15,10 @@ archive.
 
 - Independent factoradic reconstruction and conditional audit:
   [`../discord-factoradic-audit-2026-07-22.md`](../discord-factoradic-audit-2026-07-22.md)
-- Code:
-  [`../../src/eye_mystery/factoradic_headers.py`](../../src/eye_mystery/factoradic_headers.py)
-- Six direct factoradic/body interfaces, all negative:
-  [`../factoradic-wide-2026-07-22.md`](../factoradic-wide-2026-07-22.md)
+- Code: [`../../src/eye_mystery/factoradic_headers.py`](../../src/eye_mystery/factoradic_headers.py)
+- Six direct factoradic/body interfaces, all negative: [`../factoradic-wide-2026-07-22.md`](../factoradic-wide-2026-07-22.md)
+- Arbitrary-representation finite-order context action, negative:
+  [`../seventy-fifth-header-context-order-results-2026-07-27.md`](../seventy-fifth-header-context-order-results-2026-07-27.md)
 
 ## Locale marker
 

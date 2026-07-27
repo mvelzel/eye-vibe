@@ -157,7 +157,8 @@ independently selected mechanism predicts `3/2/4` and a new consequence.
 - Earthquake-gear Wadsworth on any arithmetic progression of visible ranks.
 - factoradic-header matching against the current executable Kantele songs.
 - static header-ordered visible-codebook ranks and 42-state omission counts.
-- header-action orbit projection and header-ordered `2x41` no-repeat ranks.
+- header-action orbit projection, finite-order context representations, and
+  header-ordered `2x41` no-repeat ranks.
 - header-ordered prefix-trie syndrome without a node-level collation rule.
 - Cipher 3 static affine two-sheet quotients `x ~ a-x (mod 83)`.
 - authored-order signed displacements `-41..41` under all 166 cuts and

@@ -37,8 +37,9 @@ newline gives:
 - two scalar assignments among 12,096 graph-conditioned assignments, one
   class after the only duplicate-edge swap.
 
-Direct factoradic body consumers tested so far are negative. The structure is
-a header type system, not yet a decoder.
+Direct factoradic body consumers are negative: this is a header type system, not
+yet a decoder. No source-, target-, or relative-header element can induce all
+five nonliteral cross-panel maps; West4's seven-vertex path exceeds every header order.
 
 ## Promoted locale field
 
@@ -190,9 +191,8 @@ reopen only if an authored Eye interface independently selects the operation.
 
 ## Other construction facts worth retaining
 
-The body prefix trie closes modulo101, though direct consumers fail. Natural-
-trim rowwise recurrence minima are `333|222|444` with context-fixed tail
-`.00073`; this is retrospective prior-art analysis. Petri's renderer fails.
+The body prefix trie closes modulo101, though direct consumers fail. Natural-trim
+recurrence minima are `333|222|444` with tail `.00073`; Petri's renderer fails.
 
 Waite's East-2 suffix is impossible under ordinary GAK. Distinct-selector XGAK
 replays it but admits a frozen wrong next card. Local `THAT WHICH` fits GAK;

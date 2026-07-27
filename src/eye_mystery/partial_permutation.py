@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
+from functools import lru_cache
 
 
 @dataclass(frozen=True)
@@ -24,6 +25,19 @@ class CompletionStats:
     minimum_support: int
     even_completion: bool
     odd_completion: bool
+
+
+@dataclass(frozen=True)
+class FiniteOrderCompletion:
+    """Exact feasibility of completing a partial map with ``P**m = identity``."""
+
+    exponent: int
+    feasible: bool
+    path_vertex_lengths: tuple[int, ...]
+    cycle_lengths: tuple[int, ...]
+    incompatible_cycle_lengths: tuple[int, ...]
+    minimum_extra_vertices: int | None
+    unobserved_vertices: int
 
 
 def validate_partial_permutation(
@@ -141,6 +155,95 @@ def completion_stats(
         minimum_support=minimum_support,
         even_completion=even_completion,
         odd_completion=odd_completion,
+    )
+
+
+def finite_order_completion(
+    mapping: Mapping[int, int], alphabet_size: int, exponent: int
+) -> FiniteOrderCompletion:
+    """Test whether a completion can satisfy ``permutation**exponent = id``.
+
+    Observed cycles must already have divisor lengths.  Observed path
+    components can be concatenated and closed into cycles whose lengths divide
+    ``exponent``; wholly unobserved vertices may fill the remaining slots.
+    A small exact bin-packing dynamic program minimizes that filler.
+    """
+
+    validate_partial_permutation(mapping, alphabet_size)
+    if exponent < 1:
+        raise ValueError("exponent must be positive")
+
+    path_edges, cycle_lengths = _components(mapping)
+    path_vertices = tuple(sorted((length + 1 for length in path_edges), reverse=True))
+    incompatible_cycles = tuple(
+        length for length in cycle_lengths if exponent % length
+    )
+    observed_vertices = len(set(mapping) | set(mapping.values()))
+    unobserved_vertices = alphabet_size - observed_vertices
+    if incompatible_cycles or any(length > exponent for length in path_vertices):
+        return FiniteOrderCompletion(
+            exponent,
+            False,
+            path_vertices,
+            cycle_lengths,
+            incompatible_cycles,
+            None,
+            unobserved_vertices,
+        )
+
+    divisors = tuple(
+        value for value in range(1, exponent + 1) if exponent % value == 0
+    )
+    counts = [0] * (exponent + 1)
+    for length in path_vertices:
+        counts[length] += 1
+
+    @lru_cache(maxsize=None)
+    def minimum_filler(state: tuple[int, ...]) -> int:
+        if not any(state):
+            return 0
+        anchor = max(index for index, count in enumerate(state) if count)
+        available = list(state)
+        available[anchor] -= 1
+        best = alphabet_size + exponent + 1
+
+        for capacity in divisors:
+            if capacity < anchor:
+                continue
+            chosen = [0] * len(state)
+            chosen[anchor] = 1
+
+            def fill(size: int, used: int) -> None:
+                nonlocal best
+                if size < 2:
+                    next_state = tuple(
+                        count - take
+                        for count, take in zip(state, chosen, strict=True)
+                    )
+                    best = min(
+                        best,
+                        capacity - used + minimum_filler(next_state),
+                    )
+                    return
+                maximum = min(available[size], (capacity - used) // size)
+                for take in range(maximum + 1):
+                    chosen[size] = take + (1 if size == anchor else 0)
+                    fill(size - 1, used + take * size)
+                chosen[size] = 1 if size == anchor else 0
+
+            fill(exponent, anchor)
+
+        return best
+
+    extra = minimum_filler(tuple(counts))
+    return FiniteOrderCompletion(
+        exponent,
+        extra <= unobserved_vertices,
+        path_vertices,
+        cycle_lengths,
+        incompatible_cycles,
+        extra,
+        unobserved_vertices,
     )
 
 

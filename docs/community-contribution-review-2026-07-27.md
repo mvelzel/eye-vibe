@@ -10,6 +10,9 @@ are:
   crib but also a pre-frozen wrong next card, proving the fit non-predictive.
 - The Gate dossier's `12+43+9+8` Veska partition needs an unstated mask;
   direct spatial separation gives `11+44+9+8`.
+- No source-, target-, or relative-factoradic header element can induce all
+  five nonliteral cross-panel maps, even under an arbitrary 83-label
+  permutation representation; West 4 alone forces a seven-vertex path.
 
 Everything else was prior art, retrospective patterning, closure of models I
 introduced, or inconclusive exploration. There is no new plaintext, key,
