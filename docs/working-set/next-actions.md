@@ -107,11 +107,12 @@ GAK, independent of operation/deck choice: a five-observation top-stabilizer
 certificate is contradictory. Reopen that sentence only under an explicitly
 different state or output architecture, not a wider permutation search.
 
-The ten-character `THAT WHICH` core passes the stronger test: all six windows
-have consistent top-stabilizer words and one exact shared-operation ordinary-
-GAK witness from arbitrary local states. This is only local feasibility.
-Advance it through a source-selected continuation or a model that connects the
-two occurrences across their unknown gaps; do not score more isolated words.
+The ten-character `THAT WHICH` core passes locally. Its connected-gap
+ordinary-GAK test is unresolved: exhaustive free-subgroup closure leaves many
+arbitrary schedules, while exact finite completion times out. Reopen only with
+a source-selected continuation, a same-shaped calibrated finite-cover solver,
+or an explicitly different architecture. Do not sample more arbitrary gaps or
+score more isolated words.
 
 Acquire a physical copy only when a source fingerprint or other
 decoder-independent reason makes the expected information gain worthwhile.

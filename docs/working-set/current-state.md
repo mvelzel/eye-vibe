@@ -195,9 +195,9 @@ attributed the secret to Petri Purho; his 2015 triangle renderer has an
 incompatible vertex order. Frosthaven's proposal, direct `3,5,8` weighting,
 and fixed-disk Earthquake/Wadsworth fail; an arbitrary hidden disk is open.
 
-The Waite East-2 suffix is rejected under ordinary GAK by a five-observation top-stabilizer contradiction; XGAK remains open. The six `THAT WHICH`
-windows instead admit an exact shared-operation GAK witness from arbitrary
-local states—compatibility, not plaintext evidence.
+The Waite East-2 suffix is rejected under ordinary GAK; XGAK remains open.
+Local `THAT WHICH` fits GAK, but connected pairs remain unresolved: constant
+fills fail; 574/1,000 random fills survive closure; no finite key follows.
 
 A direct visible-state permutation-action model has exact support minimum19,
 even after aligning the registered isomorphic passages. It is non-identifying:
