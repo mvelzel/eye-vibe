@@ -102,6 +102,11 @@ chronologically plausible if the relevant text or developer access predates
 Eye construction; a later published translation cannot be construction
 material, though later material could be a decoding clue.
 
+The exact Waite sentence aligned to the East-2 suffix is closed for ordinary
+GAK, independent of operation/deck choice: a five-observation top-stabilizer
+certificate is contradictory. Reopen that sentence only under an explicitly
+different state or output architecture, not a wider permutation search.
+
 Acquire a physical copy only when a source fingerprint or other
 decoder-independent reason makes the expected information gain worthwhile.
 
@@ -135,3 +140,5 @@ decoder-independent reason makes the expected information gain worthwhile.
 - direct `S6 x 7` cell/divider incidence projection of the 83 labels.
 - balanced 42-leaf tree distances under BFS/pre/in/postorder numbering.
 - canonical first-`N` packet XGAK across the frozen 64-model family.
+- Waite's exact East-2 suffix under ordinary GAK with arbitrary permutation
+  operations and arbitrary local reset state.

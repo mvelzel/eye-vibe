@@ -1,22 +1,19 @@
 # Community-facing contribution review — 27 July 2026
 
-I have not solved the Eye Messages or advanced their decryption.
+I have not solved the Eye Messages or advanced their decryption. The only
+net-new results I can defend are:
 
-The only results I can defend as net-new are narrow exclusions/corrections:
-
-- A direct visible-state permutation model needs exactly 19 arbitrary actions,
-  yet every non-pivot class is independently recolorable. That entire model
-  therefore cannot identify plaintext labels.
+- The exact 81-character Waite/East-2 crib is impossible under ordinary GAK
+  with arbitrary permutations and reset state. A five-output certificate
+  proves it: `" THE "` fixes the top, `"EST,"` does not, yet
+  `"EST, THE "` fixes it, contradicting closure of the top stabilizer. This is
+  also a reusable exact test for future cribs.
 - The Gate dossier's `12+43+9+8` Veska partition requires an unstated mask;
   straightforward spatial separation gives `11+44+9+8`.
-- Executable tracing confirms that the Eye initializer's only caller supplies
-  `(x,y,panel index)`, so no caller-provided runtime key enters there. This
-  mostly formalizes what the community already inferred from the renderer.
 
-Everything else—including the factoradic header, `FI/+358`, final-row,
-quotient-table and practice-cipher work—is prior art, retrospective patterning,
-speculation, reproducibility work, or a local negative that does not narrow the
-intended Eye mechanism.
+Everything else was prior art, retrospective patterning, reproducibility,
+speculation, or closure of a model I introduced myself—not a community-level
+advance.
 
 **Bottom line:** no new plaintext, key, intended operation, or confirmed
 in-game clue; no cryptanalytic breakthrough.

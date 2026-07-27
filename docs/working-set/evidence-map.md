@@ -151,8 +151,8 @@ archive.
   arithmetic-progression visible disk is closed, arbitrary hidden disk
   unresolved:
   [`../fifty-third-earthquake-gears-results-2026-07-26.md`](../fifty-third-earthquake-gears-results-2026-07-26.md)
-- Wide metadata/stagger and exact no-double postprocessor audit:
-  [`../fifty-fourth-wide-stepback-results-2026-07-26.md`](../fifty-fourth-wide-stepback-results-2026-07-26.md)
+- Wide metadata/stagger and exact no-double postprocessor audit: [`../fifty-fourth-wide-stepback-results-2026-07-26.md`](../fifty-fourth-wide-stepback-results-2026-07-26.md)
+- Exact Waite East-2 ordinary-GAK rejection and five-observation top-stabilizer certificate: [`../waite-sparse-gak-results-2026-07-27.md`](../waite-sparse-gak-results-2026-07-27.md)
 
 ## Practice puzzles
 
