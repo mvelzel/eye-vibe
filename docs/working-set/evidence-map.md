@@ -156,21 +156,21 @@ archive.
 - Retrospective rowwise recurrence floor, frozen controls, and prior-art audit:
   [`../row-cooldown-freeze-2026-07-27.md`](../row-cooldown-freeze-2026-07-27.md), [`../row-cooldown-results-2026-07-27.md`](../row-cooldown-results-2026-07-27.md), [`../../src/eye_mystery/row_cooldown.py`](../../src/eye_mystery/row_cooldown.py)
 
-## Practice puzzles
+## Wall Messages and practice puzzles
 
-- [Index](../../practice-puzzles/README.md) and [transferable methods](../../practice-puzzles/11-transferable-lessons.md)
+- Exact Wall assets, chronology, screens, header candidate, and table rejection:
+  [`../wall-message-ground-truth-and-header-results-2026-07-27.md`](../wall-message-ground-truth-and-header-results-2026-07-27.md)
+- Wall implementations: [`../../src/eye_mystery/noita_wall_assets.py`](../../src/eye_mystery/noita_wall_assets.py),
+  [`../../src/eye_mystery/wall_header_clue.py`](../../src/eye_mystery/wall_header_clue.py)
+- [Practice index](../../practice-puzzles/README.md) and
+  [transferable methods](../../practice-puzzles/11-transferable-lessons.md)
 - sdlwdr #3: [status](../../practice-puzzles/08-sdlwdr-03-unsolved-progression.md),
-  [source re-audit](../seventy-third-cipher3-source-reaudit-2026-07-27.md), [two-sheet](../practice-cipher3-arbitrary-two-sheet-results-2026-07-27.md), [pair quotient](../practice-cipher3-pair-quotient-results-2026-07-27.md), [routes](../practice-cipher3-route-results-2026-07-27.md), [signed path](../practice-cipher3-signed-path-results-2026-07-27.md)
-- Eye signed-path transfer: [freeze](../eye-signed-path-transfer-freeze-2026-07-27.md), [results](../eye-signed-path-transfer-results-2026-07-27.md)
-- sdlwdr #4:
-  [`../../practice-puzzles/09-sdlwdr-04-cyclic-layer.md`](../../practice-puzzles/09-sdlwdr-04-cyclic-layer.md),
-  [`../practice-cipher4-word-gak-results-2026-07-26.md`](../practice-cipher4-word-gak-results-2026-07-26.md),
-  [`../fiftieth-cipher4-collision-null-results-2026-07-26.md`](../fiftieth-cipher4-collision-null-results-2026-07-26.md),
-  [`../fifty-fourth-wide-stepback-results-2026-07-26.md`](../fifty-fourth-wide-stepback-results-2026-07-26.md), [edit diamond](../seventy-sixth-edit-diamond-results-2026-07-27.md)
-- sdlwdr #6:
-  [`../../practice-puzzles/12-sdlwdr-06-in-game-deck.md`](../../practice-puzzles/12-sdlwdr-06-in-game-deck.md)
-- Lymm wall steganography [solution](../../practice-puzzles/13-lymm-wall-message-steganography.md)
-  and [negative in-game transfer](../wall-steganography-transfer-results-2026-07-27.md)
+  [source re-audit](../seventy-third-cipher3-source-reaudit-2026-07-27.md),
+  [routes](../practice-cipher3-route-results-2026-07-27.md),
+  [signed path](../practice-cipher3-signed-path-results-2026-07-27.md)
+- sdlwdr #4: [status](../../practice-puzzles/09-sdlwdr-04-cyclic-layer.md), [edit diamond](../seventy-sixth-edit-diamond-results-2026-07-27.md)
+- Lymm wall-practice [solution](../../practice-puzzles/13-lymm-wall-message-steganography.md)
+  and [transfer negative](../wall-steganography-transfer-results-2026-07-27.md)
 
 ## Archives
 

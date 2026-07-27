@@ -204,18 +204,18 @@ after the unique source26 pivot names all actions, every one of 858 other
 classes can change color alone. This is capacity, not a decoder. Adjacent
 hidden-cycle pair geometry remains `18 SAT / 0 UNSAT / 3 UNKNOWN`.
 
-## Practice-puzzle calibration
+## Wall-message lead and practice calibration
 
-sdlwdr #1, #2, and #5 are solved; #3 is unresolved, with strong calibrated
-heldout negatives for static `83 -> 42` and the complete 34,860-member frozen
-projective-pair search. Its complete six-stream route lane is also closed:
-row plants are non-identifiable, while the calibrated ragged-column selector
-recovers its plant but has no real B survivor at the 42-action gate. This sits
-beside broad progression/wheel/recursion/deck negatives. The exact 166-map authored signed-line family is closed for #3 and the Eyes; arbitrary hidden order is untested because its solvers fail their plants.
-#4's outer 57-cycle is recovered; one edit selects neutral28, but later rejoins
-require incompatible neutrals and the codec remains unresolved.
-#6's direct assets are negative. Lymm's wall-cover practice yields word-length
-Morse with two defective bits; its rule fails all 12 English Wall Messages.
+The 12 exact Wall PNGs contain one static 29-symbol `4x4` codebook: no
+per-occurrence pixel channel or metadata survives. Visible-feature Baconian,
+practice-Morse, XOR, and direct 83-bit/isomorph consumers are negative.
+Chronology is eligible. Wall counts `(50 periods, 61 literal YOU + two explicit
+omissions, 33 questions)` equal the three odd-East checksum headers
+`(50,63,33)`. World-Y, zero-based indices into the 83 `you*` contexts select
+preceding words `AND CREATED GOD`, uniquely in a frozen 16-convention family,
+but the target is post hoc and the literal 83-entry table destroys four of six
+canonical `THAT WHICH` signatures. Retain the count match, not a decoder.
+sdlwdr #1/#2/#5 are solved; #3/#4 remain unresolved; #6's assets are negative.
 
 ## Interpretation boundary
 

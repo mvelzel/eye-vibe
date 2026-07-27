@@ -3,27 +3,26 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Practice cipher #3 mechanism acquisition (`14/20`)
+## 1. Wall-message clue family (`14/20`)
 
-Retain the exact prefix tree and exclusion certificates. The complete
-read-only author-thread re-audit found no newer clue and independently
-verified the full 18-stream corpus. Freeze this lane until an external hint or
-operation family explains the progression without inventing a hidden
-83-wheel. Both the exact affine two-sheet family and a capacity-preserving
-search over arbitrary static `83 -> 42` pairings pass their matched plants and
-fail heldout real text. The frozen 34,860-structure projective-linear
-consecutive-pair plus affine-quotient search now does likewise. Stop widening
-quotient/homophone optimizers. The complete six-stream row/column route catalog
-is now closed: row controls are non-identifiable, and the calibrated column
-control passes while the real A class has no B survivor. Next require an
-author/source clue or another predeclared low-capacity mechanism. The complete
-166-map authored-order signed-line family is negative; its arbitrary hidden
-permutation is not interpretable because both general solvers time out on
-their plants. Do not jump to nonlinear pair maps, triples, arbitrary
-polygraphic codebooks, or wider transpositions.
+The exact assets close occurrence-level pixel variants, metadata, direct XOR,
+the transferred practice-Morse rule, and a 1,120-model visible Baconian family.
+Twelve natural 83-bit masks fail the six canonical `THAT WHICH` windows.
 
-**Promotion gate:** solve/replay the full puzzle or produce a
-deletion-minimal exact exclusion of a clearly motivated family.
+Retain one unpromoted correspondence: `50` periods, repaired `63` literal YOU,
+and `33` questions equal the odd-East checksum headers. Those headers index the
+83 `you*` contexts to `AND CREATED GOD` only under world-Y, zero-based,
+preceding-word convention. The full word table is noninjective, produces word
+salad, and destroys four of six canonical isomorph signatures.
+
+Next test only source-selected consumers: an independently authored rule must
+choose order, context side, and a low-capacity state/deck operation. Do not fit
+a Wall-keyed machine to the phrase. In parallel, inspect other in-game lore
+interfaces for an explicit 83-entry ordering, selector, or operation that
+predicts the Wall convention before Eye output is examined.
+
+**Promotion gate:** a complete canonical decoder or an independent held-out
+Eye consequence preserving the copied openings and isomorphs.
 
 ## 2. Practice cipher #4 mechanism acquisition (`12/20`)
 
