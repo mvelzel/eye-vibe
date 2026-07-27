@@ -48,7 +48,11 @@ log units per trigram behind its matched control. A final 17,280-route
 row/ragged-column screen shows why route symmetries must remain set-valued:
 the calibrated column selector recovers its plant up to A reversal and B
 resolves the ambiguity, whereas the real A class has no B survivor at the
-42-action gate.
+42-action gate. Reading `83=2*42-1` instead as all signed steps on a
+42-position line adds an exact cheap test: every authored-order cut and
+orientation fails in both full and primer modes, while a matched fixture
+selects its planted map. The arbitrary hidden step permutation remains open
+because its solvers fail their own controls.
 
 **Lesson:** an unresolved puzzle can still teach model discipline.  State the
 precise permutation family, distinguish UNSAT from timeout, and retain only the
@@ -59,7 +63,8 @@ Equality-pattern screening should use a language-vs-null likelihood ratio:
 absolute likelihood rewards random streams for repeatedly producing the
 single dominant all-distinct pattern. If two route parameters induce the same
 training coordinate order, retain both; an arbitrary lexical tie-break is not
-mechanism recovery.
+mechanism recovery. For a primer-driven bounded line walk, replace start-state
+search by the exact cumulative-range criterion.
 
 ## Cipher 4: peel off a group action without inventing the inner codec
 

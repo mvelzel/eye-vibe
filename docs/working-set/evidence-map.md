@@ -158,7 +158,8 @@ archive.
 
 - [Index](../../practice-puzzles/README.md) and [transferable methods](../../practice-puzzles/11-transferable-lessons.md)
 - sdlwdr #3:
-  [`../../practice-puzzles/08-sdlwdr-03-unsolved-progression.md`](../../practice-puzzles/08-sdlwdr-03-unsolved-progression.md), [arbitrary two-sheet results](../practice-cipher3-arbitrary-two-sheet-results-2026-07-27.md), [pair-quotient results](../practice-cipher3-pair-quotient-results-2026-07-27.md), [six-stream route results](../practice-cipher3-route-results-2026-07-27.md)
+  [`../../practice-puzzles/08-sdlwdr-03-unsolved-progression.md`](../../practice-puzzles/08-sdlwdr-03-unsolved-progression.md), [arbitrary two-sheet results](../practice-cipher3-arbitrary-two-sheet-results-2026-07-27.md), [pair-quotient results](../practice-cipher3-pair-quotient-results-2026-07-27.md), [six-stream route results](../practice-cipher3-route-results-2026-07-27.md), [signed-path results](../practice-cipher3-signed-path-results-2026-07-27.md)
+- Eye signed-path transfer: [freeze](../eye-signed-path-transfer-freeze-2026-07-27.md), [results](../eye-signed-path-transfer-results-2026-07-27.md)
 - sdlwdr #4:
   [`../../practice-puzzles/09-sdlwdr-04-cyclic-layer.md`](../../practice-puzzles/09-sdlwdr-04-cyclic-layer.md),
   [`../practice-cipher4-word-gak-results-2026-07-26.md`](../practice-cipher4-word-gak-results-2026-07-26.md),

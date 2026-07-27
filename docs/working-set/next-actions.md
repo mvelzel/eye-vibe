@@ -14,9 +14,11 @@ consecutive-pair plus affine-quotient search now does likewise. Stop widening
 quotient/homophone optimizers. The complete six-stream row/column route catalog
 is now closed: row controls are non-identifiable, and the calibrated column
 control passes while the real A class has no B survivor. Next require an
-author/source clue or another predeclared low-capacity mechanism. Do not jump
-to nonlinear pair maps, triples, arbitrary polygraphic codebooks, or wider
-transpositions.
+author/source clue or another predeclared low-capacity mechanism. The complete
+166-map authored-order signed-line family is negative; its arbitrary hidden
+permutation is not interpretable because both general solvers time out on
+their plants. Do not jump to nonlinear pair maps, triples, arbitrary
+polygraphic codebooks, or wider transpositions.
 
 **Promotion gate:** solve/replay the full puzzle or produce a
 deletion-minimal exact exclusion of a clearly motivated family.
@@ -144,6 +146,8 @@ decoder-independent reason makes the expected information gain worthwhile.
 - header-action orbit projection and header-ordered `2x41` no-repeat ranks.
 - header-ordered prefix-trie syndrome without a node-level collation rule.
 - Cipher 3 static affine two-sheet quotients `x ~ a-x (mod 83)`.
+- authored-order signed displacements `-41..41` under all 166 cuts and
+  orientations, in both full and primer modes, for Cipher 3 and the Eyes.
 - direct `S6 x 7` cell/divider incidence projection of the 83 labels.
 - balanced 42-leaf tree distances under BFS/pre/in/postorder numbering.
 - canonical first-`N` packet XGAK across the frozen 64-model family.

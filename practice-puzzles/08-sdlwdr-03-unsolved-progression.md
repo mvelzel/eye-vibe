@@ -223,6 +223,23 @@ broad class likewise has no B survivor at an effective-choice bound of 42.
 C was not inspected because the frozen B gate failed. Full results:
 [`../docs/practice-cipher3-route-results-2026-07-27.md`](../docs/practice-cipher3-route-results-2026-07-27.md).
 
+The exact identity `83=2*42-1` was then read as all signed displacements on a
+42-position plaintext line rather than as two-sheet homophony. Both
+first-value conventions were exhausted over every authored-order cut and
+orientation:
+
+```text
+d(v) = ((sign*v + offset) mod83) - 41
+2 * 83 = 166 maps
+```
+
+A same-length control uses every displacement and recovers its hidden map.
+The real full and primer modes have zero survivors. This exactly closes the
+166-map numeric signed-path family, while the arbitrary hidden permutation
+remains unresolved because both general solvers timed out on their planted
+controls before real data was opened. Full results:
+[`../docs/practice-cipher3-signed-path-results-2026-07-27.md`](../docs/practice-cipher3-signed-path-results-2026-07-27.md).
+
 ## Solution
 
 No verified plaintext has been recovered, so there is no solution text to
@@ -270,6 +287,9 @@ instead of presenting a timeout as an impossibility proof.
 - Score equality patterns against a matched null, not by absolute likelihood.
   Random high-alphabet streams overproduce the most common all-distinct
   pattern and can otherwise rank ahead of planted natural language.
+- When alphabet size is `2n-1`, test signed displacement on an `n`-state line
+  separately from cyclic magnitude and static two-sheet quotient. With an
+  ignored primer, boundedness is exactly a cumulative-range test.
 
 The exact checks are implemented in
 `scripts/solve_sdlwdr_cipher3_cycle.py` and
@@ -294,4 +314,6 @@ implemented in `src/eye_mystery/practice_cipher3_third.py` and
 quotient is `src/eye_mystery/practice_cipher3_pair_quotient.py` and
 `scripts/run_practice_cipher3_pair_quotient.py`. The six-stream route pass is
 `src/eye_mystery/practice_cipher3_routes.py` and
-`scripts/run_practice_cipher3_routes.py`.
+`scripts/run_practice_cipher3_routes.py`. The signed-path pass is
+`src/eye_mystery/practice_cipher3_signed_path.py` and
+`scripts/run_practice_cipher3_signed_path.py`.
