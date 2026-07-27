@@ -6,6 +6,8 @@ are:
 - The exact 81-character Waite/East-2 crib is impossible under ordinary GAK
   by a five-output top-stabilizer contradiction; the generalized
   free-subgroup/Stallings test is reusable for other ordinary-GAK cribs.
+- A sparse exact XGAK solver reaches the full 83-card scale. It replays that
+  crib but also a pre-frozen wrong next card, proving the fit non-predictive.
 - The Gate dossier's `12+43+9+8` Veska partition needs an unstated mask;
   direct spatial separation gives `11+44+9+8`.
 

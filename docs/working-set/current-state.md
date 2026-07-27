@@ -194,9 +194,9 @@ The body prefix trie closes modulo101, though direct consumers fail. NollaArvi
 attributed the secret to Petri Purho; his 2015 triangle renderer is incompatible.
 Frosthaven, direct `3,5,8`, and fixed-disk Wadsworth fail; a hidden disk is open.
 
-The Waite East-2 suffix is rejected under ordinary GAK; XGAK remains open.
-Local `THAT WHICH` fits GAK; connected pairs remain unresolved, with 574/1,000
-random fills surviving closure and no finite key.
+Waite's East-2 suffix is impossible under ordinary GAK. Distinct-selector XGAK
+replays it exactly but also admits a frozen wrong next card: capacity, not
+evidence. Local `THAT WHICH` fits GAK; 574/1,000 connected fills survive.
 
 A direct visible-state permutation-action model has exact support minimum19,
 even after aligning the registered isomorphic passages. It is non-identifying:

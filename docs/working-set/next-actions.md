@@ -106,10 +106,10 @@ chronologically plausible if the relevant text or developer access predates
 Eye construction; a later published translation cannot be construction
 material, though later material could be a decoding clue.
 
-The exact Waite sentence aligned to the East-2 suffix is closed for ordinary
-GAK, independent of operation/deck choice: a five-observation top-stabilizer
-certificate is contradictory. Reopen that sentence only under an explicitly
-different state or output architecture, not a wider permutation search.
+The exact Waite/East-2 sentence is evidentially closed. Ordinary GAK has a
+five-observation contradiction; distinct-selector XGAK replays all 81 symbols
+but also a pre-frozen wrong next card. Reopen only when an external clue
+restricts the operations, selectors, quotient, or orbit partition.
 
 The ten-character `THAT WHICH` core passes locally. Its connected-gap
 ordinary-GAK test is unresolved: exhaustive free-subgroup closure leaves many
@@ -155,8 +155,8 @@ decoder-independent reason makes the expected information gain worthwhile.
 - further generic solver substitutions for adjacent hidden-cycle geometry;
   its pair census is `18 SAT / 0 UNSAT / 3 UNKNOWN`.
 - canonical first-`N` packet XGAK across the frozen 64-model family.
-- Waite's exact East-2 suffix under ordinary GAK with arbitrary permutation
-  operations and arbitrary local reset state.
+- Waite's exact East-2 suffix: impossible under ordinary arbitrary GAK;
+  exactly replayable but non-predictive under distinct-selector XGAK.
 - Lymm's punctuation/capital plus word-length Morse rule on the 12 English
   Wall Message translations (`46/98` valid groups; no run longer than three).
 - the retrospectively named Noita 1.0 companion assets without either the
