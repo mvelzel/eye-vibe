@@ -169,6 +169,10 @@ independently selected mechanism predicts `3/2/4` and a new consequence.
 - canonical first-`N` packet XGAK across the frozen 64-model family.
 - Waite's exact East-2 suffix: impossible under ordinary arbitrary GAK;
   exactly replayable but non-predictive under distinct-selector XGAK.
+- semidirect, non-transitive, or progressive XGAK without an independently
+  selected Eye orbit, selector, or operation;
+- broad Kalevala/charms syllable similarity without a machine-preserved
+  fingerprint and exact unseen extension;
 - Lymm's punctuation/capital plus word-length Morse rule on the 12 English
   Wall Message translations (`46/98` valid groups; no run longer than three).
 - the retrospectively named Noita 1.0 companion assets without either the
