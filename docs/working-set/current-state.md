@@ -171,10 +171,10 @@ holdout; its raw marks total72 with 9/8 bands, while the objective remainder is
 11/44, not 12/43. The Alchemist parser/screens found no tape hit, header
 alignment, source constant, or isomorph consequence; direct 8→5 is limited to
 five classes versus the target's six.
-The current WAK/engine census found no Eye key, cipher string, or runtime
-decoder. Hidden mountain-text is ordinary documented lore; companions are
-decorative/passive. Historical fingerprints remain external reports because the
-paid historical depot requires authentication.
+Native disassembly confirms the renderer only unpacks base-seven corpus
+words and receives coordinates/panel, with no key/state argument or decryptor.
+The outside-WAK layers (Finnish example mod, fonts, FMOD, schemas) add no key;
+hidden mountain-text is ordinary lore. Historical fingerprints remain external reports because the paid historical depot requires authentication.
 
 ## Quotient-addressed table hypothesis
 

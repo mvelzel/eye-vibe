@@ -68,13 +68,13 @@ relations, or new scalar ledgers.
 
 ## 4. Holdswap/deck state machine (`10/20`)
 
-The public Holdswap Array proposal is the clearest live developer-sized model:
-used ciphertext symbols exchange per-plaintext hold boxes, potentially
-explaining minimal side effects and E4/E5 near-isomorphs. It is not yet a
-specification: output timing, swap partner, initial state, and reversibility
-are missing. Formalize the smallest reversible transition, plant the observed
-repeat/no-double fixture, then test exact re-syncs and one withheld isomorph.
-Do not fit a state machine to the Eye before the planted control passes.
+The public Holdswap Array proposal is the clearest live developer-sized model.
+Small fixed-partner and per-plaintext hold-card variants were planted and
+screened: only identity/no-op preserves all seven nonliteral isomorph contexts;
+nontrivial variants fail the withheld E4/E5 relation or collapse to static
+substitution. The full `S83` semantics remain underspecified. Formalize only a
+complete nontrivial transition, then test exact re-syncs and one withheld
+isomorph. Do not fit a state machine to the Eye before the planted control.
 
 **Promotion gate:** complete transition + planted replay + held-out Eye result.
 
