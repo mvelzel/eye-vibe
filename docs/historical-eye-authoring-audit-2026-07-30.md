@@ -61,6 +61,50 @@ decoder.
 Without the entitled depot payloads, this establishes chronology only, not a
 byte-level pre-release delta.
 
+Additional public chronology checks covered the [2019-10-23 release
+notes](https://noitagame.com/release_notes/20191023/), the 2020-06-24 and
+2020-07-15 notes, and the [1.0 release
+notes](https://noitagame.com/release_notes/20201015/); they likewise use only
+generic “new secrets” wording. [GOGDB product
+1310457090](https://www.gogdb.org/product/1310457090) lists exact 2019–2020
+builds, while the [SteamDB depot
+manifests](https://steamdb.info/depot/881101/manifests/) remain entitlement
+gated. Public Internet Archive candidates were checked for provenance: the
+Noita ZIP is an April/May 2021 build (version hash
+`49826289ea5895d7869f52af3e16ca4519eb6315`), the `noita-setup` SFX is dated
+December 2021, and a 5.6-GB ISO is dated April 2021. None is a verified
+pre-1.0 snapshot, so these mirrors cannot answer whether the Eye payload
+predates the 2020 release.
+
+One historical payload target is now reproducible without guessing the build:
+[GOGDB's exact 2020-05-20 build metadata](https://www.gogdb.org/product/1310457090/build/53351147046566224)
+identifies the game's data.wak MD5 as
+`3129ee3e8b556477147a866017ead0b4` (three raw chunk MD5s beginning
+`4915ed...`, `3c0691...`, and `e7ad0e...`) and noita.exe SHA-256
+`c5e8a689...`. The public GOG metadata endpoint exposes these hashes, but the
+payload download requires an OAuth secure link and returned 401; no
+entitlement bypass was attempted. This is the strongest remaining historical
+lead: an entitled copy of that exact build could settle whether the Eye
+initializer/data existed before the 2020 translation question.
+
+The official localization chronology also constrains the Finnish-book lead:
+the [30 March](https://noitagame.com/release_notes/20210330/) and
+[2 April 2021](https://noitagame.com/release_notes/20210402/) release notes
+announce “100% Finnished localization (Options, Language).” That is months
+after 1.0 and after the 23 March 2021 Eye video, so this in-game Finnish
+translation cannot be required to construct the original Eye ciphertext.
+It remains eligible only as a later decoding clue.
+Discovery chronology is separate from authoring chronology. The Reddit
+submission kdx9iq (15 December 2020, preserved by
+https://api.pullpush.io/reddit/search/submission/?ids=kdx9iq) shows that players
+were already discussing Eye runes in parallel worlds immediately after 1.0,
+but its comments do not date the developer's construction. The first public
+Eye Messages wiki article was created 4 April 2021, and the earliest
+well-known mystery video was uploaded 23 March 2021
+(https://www.youtube.com/watch?v=4lSPZWmmoS8). These dates establish only that
+the community's documented solving effort is post-release; they neither
+support nor rule out a pre-2020 Finnish source or an offline developer key.
+
 ## Result
 
 The dated independent decompilation closes a major historical uncertainty:

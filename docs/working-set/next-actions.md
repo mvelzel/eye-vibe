@@ -15,11 +15,8 @@ and `33` questions equal the odd-East checksum headers. Those headers index the
 preceding-word convention. The full word table is noninjective, produces word
 salad, and destroys four of six canonical isomorph signatures.
 
-Next test only source-selected consumers: an independently authored rule must
-choose order, context side, and a low-capacity state/deck operation. Do not fit
-a Wall-keyed machine to the phrase. In parallel, inspect other in-game lore
-interfaces for an explicit 83-entry ordering, selector, or operation that
-predicts the Wall convention before Eye output is examined.
+The current-WAK player/debug interface census is now complete and negative
+([`ingame-interface-exhaustion-results-2026-07-30.md`](../ingame-interface-exhaustion-results-2026-07-30.md)). Continue only with a source-selected consumer: an independently authored rule must choose order, context side, and a low-capacity state/deck operation. Do not fit a Wall-keyed machine to the phrase; historical cauldron/depot payloads remain separate.
 
 **Promotion gate:** a complete canonical decoder or an independent held-out
 Eye consequence preserving the copied openings and isomorphs.
@@ -111,6 +108,11 @@ chronologically plausible if the relevant text or developer access predates
 Eye construction; a later published translation cannot be construction
 material, though later material could be a decoding clue.
 
+The exact GOG 2020-05-20 build is the highest-value historical artifact lead:
+its public metadata gives data.wak MD5 `3129ee3e8b556477147a866017ead0b4` and
+noita.exe SHA-256 prefix `c5e8a689`; obtain it only through legitimate
+entitlement, then compare the Eye initializer and data before revisiting
+translation chronology.
 The exact Waite/East-2 sentence is evidentially closed. Ordinary GAK has a
 five-observation contradiction; distinct-selector XGAK replays all 81 symbols
 but also a pre-frozen wrong next card. Reopen only when an external clue
@@ -150,6 +152,9 @@ independently selected mechanism predicts `3/2/4` and a new consequence.
 - arbitrary 19-color visible-action completion without an external selector;
 - sparse parameterized-map/group closure without new label correspondences;
 - the 2025 initializer's position/index-only caller and five-frame atlas;
++ the authored 2024 25-cell public automaton under its exact seed, action map,
+  and two-slot emission schedule;
++ the authored 2024 three-ring disk mask and its exact ASCII32 output;
 - Earthquake mask or Cessation sampler on the final anchor slices;
 - literal transfer of the final-row grammar to rows 1 and 2;
 - reciprocal header-scalar checks on the other registered contexts (`0/4`);
