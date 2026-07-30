@@ -105,7 +105,8 @@ archive.
 ## Gate and later clue chronology
 
 - Ground-up Gate audit and frozen 1.0 named-shortlist negative: [`../gate-guardian-audit.md`](../gate-guardian-audit.md), [`../noita-1.0-interface-census-freeze-2026-07-27.md`](../noita-1.0-interface-census-freeze-2026-07-27.md), [`../noita-1.0-interface-census-results-2026-07-27.md`](../noita-1.0-interface-census-results-2026-07-27.md)
-- Alchemist, native binary, Holdswap, and outside-WAK wide-net results: [`../../src/eye_mystery/alchemist_cell_diagram.py`](../../src/eye_mystery/alchemist_cell_diagram.py), [`../../scripts/audit_alchemist_cell_diagram.py`](../../scripts/audit_alchemist_cell_diagram.py), [`../wide-net-screen-results-2026-07-30.md`](../wide-net-screen-results-2026-07-30.md), [`../wider-second-tranche-results-2026-07-30.md`](../wider-second-tranche-results-2026-07-30.md)
+- Alchemist, native atlas/binary, Holdswap, outside-WAK, source-deck, and historical results: [`../compiled-eye-atlas-results-2026-07-30.md`](../compiled-eye-atlas-results-2026-07-30.md), [`../historical-eye-authoring-audit-2026-07-30.md`](../historical-eye-authoring-audit-2026-07-30.md), [`../wide-net-screen-results-2026-07-30.md`](../wide-net-screen-results-2026-07-30.md), [`../wider-second-tranche-results-2026-07-30.md`](../wider-second-tranche-results-2026-07-30.md), [`../source-deck-family-results-2026-07-30.md`](../source-deck-family-results-2026-07-30.md), [`../non-wak-side-channel-audit-results-2026-07-30.md`](../non-wak-side-channel-audit-results-2026-07-30.md)
+- Third-tranche synthesis: [`../third-wide-tranche-results-2026-07-30.md`](../third-wide-tranche-results-2026-07-30.md)
 - Current-WAK locale salt census and dated introduction, unpromoted:
   [`../twenty-eighth-rng-locale-salt-results-2026-07-24.md`](../twenty-eighth-rng-locale-salt-results-2026-07-24.md)
 - Exploratory `+3` instruction comparison, unpromoted:
@@ -140,9 +141,8 @@ archive.
   [`../seventeenth-lane-e-fibration-results-2026-07-24.md`](../seventeenth-lane-e-fibration-results-2026-07-24.md)
 - Hidden-wheel multi-lag exclusion and adjacent-pair census:
   [`../thirteenth-wide-hidden-geometry-results-2026-07-24.md`](../thirteenth-wide-hidden-geometry-results-2026-07-24.md), [`../sixty-eighth-adjacent-geometry-pair-results-2026-07-27.md`](../sixty-eighth-adjacent-geometry-pair-results-2026-07-27.md), [`../sixty-ninth-adjacent-geometry-cnf-results-2026-07-27.md`](../sixty-ninth-adjacent-geometry-cnf-results-2026-07-27.md), [`../seventy-first-adjacent-geometry-lazy-injection-results-2026-07-27.md`](../seventy-first-adjacent-geometry-lazy-injection-results-2026-07-27.md), [`../seventy-second-adjacent-geometry-domain-results-2026-07-27.md`](../seventy-second-adjacent-geometry-domain-results-2026-07-27.md)
-- Historical 26-glyph discarded-alphabet initializer, with bounded affine-GAK
-  and structured-deck exclusions:
-  [`../fifty-first-alphabet-warmup-results-2026-07-26.md`](../fifty-first-alphabet-warmup-results-2026-07-26.md)
+- Historical 26-glyph initializer and 2021 public binary reconstruction (all
+  150 packed words exact; no key/state): [`../fifty-first-alphabet-warmup-results-2026-07-26.md`](../fifty-first-alphabet-warmup-results-2026-07-26.md), [`../historical-eye-authoring-audit-2026-07-30.md`](../historical-eye-authoring-audit-2026-07-30.md)
 - Historical swap-or-not card-shuffle proposal, closed for one to three rounds
   in visible `Z_83` coordinates:
   [`../fifty-second-swap-or-not-results-2026-07-26.md`](../fifty-second-swap-or-not-results-2026-07-26.md)

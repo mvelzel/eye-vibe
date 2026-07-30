@@ -165,16 +165,16 @@ but any pair sharing an offset-17 edge has matched-control rate `.00136`.
 Promote one preserved state/cache correspondence, not a general update map.
 
 ## Later-asset hypotheses (unpromoted)
-
 Later-asset clues remain isolated. Veska/Gate supplies no complete mechanism or
 holdout; its raw marks total72 with 9/8 bands, while the objective remainder is
 11/44, not 12/43. The Alchemist parser/screens found no tape hit, header
 alignment, source constant, or isomorph consequence; direct 8→5 is limited to
 five classes versus the target's six.
-Native disassembly confirms the renderer only unpacks base-seven corpus
-words and receives coordinates/panel, with no key/state argument or decryptor.
-The outside-WAK layers (Finnish example mod, fonts, FMOD, schemas) add no key;
-hidden mountain-text is ordinary lore. Historical fingerprints remain external reports because the paid historical depot requires authentication.
+Native disassembly confirms a renderer-only base-seven unpacker and an explicit
+five-frame 11×7 direction atlas: no key/state argument or decryptor.
+PNG/font/translation/schema/FMOD audits add no key; raw WAK scan finds zero exact hits for 143 full packed words and no complete stream.
+Hidden mountain-text is ordinary lore. Source-selected dynamic decks (BDMAGICK/ASCII/runic/periodic/lore/book/translation orders) have no all-seven isomorph survivor; a dated
+Apr-2021 public decomp independently reproduces all 150 words with no key/state; pre-1.0 delta remains auth-blocked.
 
 ## Quotient-addressed table hypothesis
 

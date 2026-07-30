@@ -72,9 +72,13 @@ The public Holdswap Array proposal is the clearest live developer-sized model.
 Small fixed-partner and per-plaintext hold-card variants were planted and
 screened: only identity/no-op preserves all seven nonliteral isomorph contexts;
 nontrivial variants fail the withheld E4/E5 relation or collapse to static
-substitution. The full `S83` semantics remain underspecified. Formalize only a
-complete nontrivial transition, then test exact re-syncs and one withheld
-isomorph. Do not fit a state machine to the Eye before the planted control.
+substitution. A wider source-selected screen (21 ASCII/BDMAGICK, runic,
+periodic, lore/book, Wall, and translation orders × 14 small updates × both
+directions) likewise has no all-seven survivor; its best dynamic result is
+5/6 training plus the held-out context, with no literal re-sync. The full
+`S83` semantics remain underspecified. Formalize only a complete nontrivial
+transition, then test exact re-syncs and one withheld isomorph. Do not fit a
+state machine to the Eye before the planted control.
 
 **Promotion gate:** complete transition + planted replay + held-out Eye result.
 
@@ -145,7 +149,7 @@ independently selected mechanism predicts `3/2/4` and a new consequence.
 - arbitrary hidden wheel fitted directly to Eye output;
 - arbitrary 19-color visible-action completion without an external selector;
 - sparse parameterized-map/group closure without new label correspondences;
-- the 2025 initializer's position/index-only caller interface;
+- the 2025 initializer's position/index-only caller and five-frame atlas;
 - Earthquake mask or Cessation sampler on the final anchor slices;
 - literal transfer of the final-row grammar to rows 1 and 2;
 - reciprocal header-scalar checks on the other registered contexts (`0/4`);
