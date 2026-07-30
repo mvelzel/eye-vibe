@@ -66,25 +66,25 @@ relations, or new scalar ledgers.
 
 **Promotion gate:** an external selector followed by one unseen consequence.
 
-## 4. Petri-only archaeology on a fixed interface (`12/20`)
+## 4. Holdswap/deck state machine (`10/20`)
 
-NollaArvi's direct Eye attribution justifies Petri-specific sources. The
-bounded pre-2020 repository census found a relevant 2015 alternating-
-triangle renderer, but its literal vertex order is globally incompatible
-with the accepted Eye order. Card-game and QR mechanisms expose no selected
-Eye interface.
+The public Holdswap Array proposal is the clearest live developer-sized model:
+used ciphertext symbols exchange per-plaintext hold boxes, potentially
+explaining minimal side effects and E4/E5 near-isomorphs. It is not yet a
+specification: output timing, swap partner, initial state, and reversibility
+are missing. Formalize the smallest reversible transition, plant the observed
+repeat/no-double fixture, then test exact re-syncs and one withheld isomorph.
+Do not fit a state machine to the Eye before the planted control passes.
 
-Reopen only for a Petri-authored operation with a decoder-independent mapping
-to an Eye header, control class, or held-out body quantity. Do not mine
-incidental source constants or enumerate assignments of generic card-game
-operations after seeing the target.
+**Promotion gate:** complete transition + planted replay + held-out Eye result.
 
 ## 5. Gate only on new executable evidence (`11/20`)
 
-Treat Veska as a binary standalone hypothesis, not partial corroboration for
-other theories. The raw asset has 72 authored-color marks and separated 9/8
-bands, but its objective remaining split is 11/44 and no complete executable
-mapping has been recovered. Do not continue fitting the current dossier.
+Treat Veska and the Alchemist diagram as binary standalone hypotheses, not
+partial corroboration for other theories. Veska has 72 authored-color marks
+and separated 9/8 bands but an 11/44 objective remainder; the Alchemist's
+direct 8→5 reading cannot preserve six-class Eye isomorphs and its fixed
+source/tape/header screens are negative. Do not continue fitting either asset.
 Reopen only if one of these arrives:
 
 - exact Seula residual mask;

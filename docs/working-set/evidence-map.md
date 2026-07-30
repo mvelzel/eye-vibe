@@ -105,6 +105,7 @@ archive.
 ## Gate and later clue chronology
 
 - Ground-up Gate audit and frozen 1.0 named-shortlist negative: [`../gate-guardian-audit.md`](../gate-guardian-audit.md), [`../noita-1.0-interface-census-freeze-2026-07-27.md`](../noita-1.0-interface-census-freeze-2026-07-27.md), [`../noita-1.0-interface-census-results-2026-07-27.md`](../noita-1.0-interface-census-results-2026-07-27.md)
+- Alchemist parser, frozen direct screens, and wide-net result: [`../../src/eye_mystery/alchemist_cell_diagram.py`](../../src/eye_mystery/alchemist_cell_diagram.py), [`../../scripts/audit_alchemist_cell_diagram.py`](../../scripts/audit_alchemist_cell_diagram.py), [`../wide-net-screen-results-2026-07-30.md`](../wide-net-screen-results-2026-07-30.md)
 - Current-WAK locale salt census and dated introduction, unpromoted:
   [`../twenty-eighth-rng-locale-salt-results-2026-07-24.md`](../twenty-eighth-rng-locale-salt-results-2026-07-24.md)
 - Exploratory `+3` instruction comparison, unpromoted:
@@ -113,8 +114,7 @@ archive.
   [`../thirtieth-veska-locale-results-2026-07-24.md`](../thirtieth-veska-locale-results-2026-07-24.md)
 - Exploratory `+3` transfer on the original marker record, unpromoted:
   [`../thirty-first-gate-plus3-marker-transfer-results-2026-07-26.md`](../thirty-first-gate-plus3-marker-transfer-results-2026-07-26.md)
-- Transfer implementation:
-  [`../../src/eye_mystery/gate_plus3_transfer.py`](../../src/eye_mystery/gate_plus3_transfer.py)
+- Transfer implementation: [`../../src/eye_mystery/gate_plus3_transfer.py`](../../src/eye_mystery/gate_plus3_transfer.py)
 
 ## Mod-101 and 83-of-101 construction vocabulary
 

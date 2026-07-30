@@ -166,15 +166,15 @@ Promote one preserved state/cache correspondence, not a general update map.
 
 ## Later-asset hypotheses (unpromoted)
 
-Gate and current-WAK could be later clues, but Veska/WAK numerical matches
-supply neither a complete asset-to-Eye mechanism nor a holdout and cannot
-corroborate one another. Veska's raw marks give total72 and 9/8 bands, while
-the objective remainder is 11/44, not the dossier's 12/43.
-
-A frozen census also closes the reported 1.0 companion shortlist: its current
-assets are binary, decorative, unordered, or passive rather than an Eye
-interface. The historical fingerprint and `1402/145/980` WAK census remain
-external reports because the paid historical depot requires authentication.
+Later-asset clues remain isolated. Veska/Gate supplies no complete mechanism or
+holdout; its raw marks total72 with 9/8 bands, while the objective remainder is
+11/44, not 12/43. The Alchemist parser/screens found no tape hit, header
+alignment, source constant, or isomorph consequence; direct 8→5 is limited to
+five classes versus the target's six.
+The current WAK/engine census found no Eye key, cipher string, or runtime
+decoder. Hidden mountain-text is ordinary documented lore; companions are
+decorative/passive. Historical fingerprints remain external reports because the
+paid historical depot requires authentication.
 
 ## Quotient-addressed table hypothesis
 
