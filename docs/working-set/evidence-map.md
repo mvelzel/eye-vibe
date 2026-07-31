@@ -158,10 +158,9 @@ archive.
 
 ## Wall Messages and practice puzzles
 
-- Exact Wall assets, chronology, screens, header candidate, and table rejection:
-  [`../wall-message-ground-truth-and-header-results-2026-07-27.md`](../wall-message-ground-truth-and-header-results-2026-07-27.md)
-- Wall implementations: [`../../src/eye_mystery/noita_wall_assets.py`](../../src/eye_mystery/noita_wall_assets.py),
-  [`../../src/eye_mystery/wall_header_clue.py`](../../src/eye_mystery/wall_header_clue.py)
+- Exact Wall assets, header candidate, table rejection, and matched deck-family
+  closure: [`../wall-message-ground-truth-and-header-results-2026-07-27.md`](../wall-message-ground-truth-and-header-results-2026-07-27.md), [`../wall-context-deck-matched-control-results-2026-07-31.md`](../wall-context-deck-matched-control-results-2026-07-31.md)
+- Wall implementations: [`../../src/eye_mystery/wall_header_clue.py`](../../src/eye_mystery/wall_header_clue.py), [`../../src/eye_mystery/wall_context_deck.py`](../../src/eye_mystery/wall_context_deck.py)
 - [Practice index](../../practice-puzzles/README.md) and
   [transferable methods](../../practice-puzzles/11-transferable-lessons.md)
 - sdlwdr #3: [status](../../practice-puzzles/08-sdlwdr-03-unsolved-progression.md),

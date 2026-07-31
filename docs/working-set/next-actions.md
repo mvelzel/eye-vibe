@@ -3,23 +3,24 @@
 This queue is replaceable state. Scores use 0–5 for evidence fit,
 falsifiability, potential new information, and capacity control.
 
-## 1. Wall-message clue family (`14/20`)
+## 1. Independently authored operation selector (`13/20`)
 
-The exact assets close occurrence-level pixel variants, metadata, direct XOR,
-the transferred practice-Morse rule, and a 1,120-model visible Baconian family.
-Twelve natural 83-bit masks fail the six canonical `THAT WHICH` windows.
+The exact Wall count/header correspondence remains unpromoted, but its complete
+480-model length-parameterized reversible-deck family is now negative. The
+real assignment has 30 all-seven and 25 bridge-joint models; matched controls
+reach those counts in `110/500` and `121/500`. The strongest active fixed model
+clears both gates in `702/20000` randomized assignments. Do not add Wall fields,
+deck operations, or reset schedules without a new authored instruction.
 
-Retain one unpromoted correspondence: `50` periods, repaired `63` literal YOU,
-and `33` questions equal the odd-East checksum headers. Those headers index the
-83 `you*` contexts to `AND CREATED GOD` only under world-Y, zero-based,
-preceding-word convention. The full word table is noninjective, produces word
-salad, and destroys four of six canonical isomorph signatures.
-
-The current-WAK player/debug interface census is now complete and negative
-([`ingame-interface-exhaustion-results-2026-07-30.md`](../ingame-interface-exhaustion-results-2026-07-30.md)). Continue only with a source-selected consumer: an independently authored rule must choose order, context side, and a low-capacity state/deck operation. Do not fit a Wall-keyed machine to the phrase; historical cauldron/depot payloads remain separate.
+The current-WAK player/debug interface census is also negative. The remaining
+high-information route is an independently authored instruction that chooses
+the operation before Eye scoring: a historical cauldron/calendar payload,
+legitimately acquired old depot, or a newly identified executable asset
+interface. Keep each source isolated; do not combine partial Wall, Gate, wand,
+or Cessation matches.
 
 **Promotion gate:** a complete canonical decoder or an independent held-out
-Eye consequence preserving the copied openings and isomorphs.
+Eye prediction from the source-selected operation.
 
 ## 2. Practice cipher #4 mechanism acquisition (`12/20`)
 

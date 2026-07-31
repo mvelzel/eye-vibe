@@ -206,15 +206,15 @@ hidden-cycle pair geometry remains `18 SAT / 0 UNSAT / 3 UNKNOWN`.
 
 ## Wall-message lead and practice calibration
 
-The 12 exact Wall PNGs contain one static 29-symbol `4x4` codebook: no
-per-occurrence pixel channel or metadata survives. Visible-feature Baconian,
-practice-Morse, XOR, and direct 83-bit/isomorph consumers are negative.
-Chronology is eligible. Wall counts `(50 periods, 61 literal YOU + two explicit
-omissions, 33 questions)` equal the three odd-East checksum headers
-`(50,63,33)`. World-Y, zero-based indices into the 83 `you*` contexts select
-preceding words `AND CREATED GOD`, uniquely in a frozen 16-convention family,
-but the target is post hoc and the literal 83-entry table destroys four of six
-canonical `THAT WHICH` signatures. Retain the count match, not a decoder.
+The 12 Wall PNGs contain one static 29-symbol `4x4` codebook; pixel, metadata,
+Baconian, practice-Morse, XOR, and direct 83-bit consumers are negative. Counts
+`(50 periods, 61 YOU + two omissions, 33 questions)` equal the odd-East headers
+`(50,63,33)`. World-Y indices into 83 `you*` contexts select `AND CREATED GOD`
+in one frozen convention, but the target is post hoc. A frozen 480-model
+reversible-deck consumer gives 30 all-seven and 25 bridge-joint survivors;
+random Wall assignments give at least that many in `110/500` and `121/500`
+controls. Its most active fixed model clears both gates in `702/20000`.
+Retain the count match, not a table or decoder.
 sdlwdr #1/#2/#5 are solved; #3/#4 remain unresolved; #6's assets are negative.
 
 ## Interpretation boundary
