@@ -194,9 +194,9 @@ reopen only if an authored Eye interface independently selects the operation.
 The body prefix trie closes modulo101, though direct consumers fail. Natural-trim
 recurrence minima are `333|222|444` with tail `.00073`; Petri's renderer fails.
 
-Waite's East-2 suffix is ordinary-GAK impossible; distinct-selector XGAK admits
-a frozen wrong next card. Trial452 gives all three connected `THAT WHICH`
-segments an exact minimum-K GAK witness, but its random gaps are gibberish.
+Waite's East-2 suffix and all 40 literal Waite gap triples are ordinary-GAK
+impossible (`AT WHICH ` fixes top in W1/E2 but not E1). Trial452 gives the
+three core windows an exact minimum-K witness, but its random gaps are gibberish.
 
 A direct visible-state permutation-action model has exact support minimum19,
 even after aligning the registered isomorphic passages. It is non-identifying:

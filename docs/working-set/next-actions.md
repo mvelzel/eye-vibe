@@ -125,6 +125,10 @@ replays all three segments. This proves capacity, not the crib; the
 retrospectively random gaps are gibberish. Do not sample more arbitrary gaps.
 Advance only with a source-selected continuation, shared/reset-state
 constraint, authored operation family, or held-out prediction.
+Literal Waite continuation is now closed: all `5×4×2=40` exact-gap triples
+share `AT WHICH `, which fixes top in W1/E2 but not E1. This is the known
+length-11 split as a direct GAK certificate; do not test more OCR occurrences
+with the same space continuation.
 
 Acquire a physical copy only when a source fingerprint or other
 decoder-independent reason makes the expected information gain worthwhile.
