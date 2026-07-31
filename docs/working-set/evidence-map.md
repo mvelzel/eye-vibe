@@ -152,7 +152,7 @@ archive.
   [`../fifty-third-earthquake-gears-results-2026-07-26.md`](../fifty-third-earthquake-gears-results-2026-07-26.md)
 - Wide metadata/stagger and exact no-double postprocessor audit: [`../fifty-fourth-wide-stepback-results-2026-07-26.md`](../fifty-fourth-wide-stepback-results-2026-07-26.md)
 - Waite East-2 exact GAK boundary—ordinary-GAK rejection and non-predictive distinct-selector XGAK replay: [`../waite-sparse-gak-results-2026-07-27.md`](../waite-sparse-gak-results-2026-07-27.md), [`../waite-sparse-xgak-results-2026-07-27.md`](../waite-sparse-xgak-results-2026-07-27.md)
-- Local and connected-gap `THAT WHICH` GAK audits: [`../that-which-gak-results-2026-07-27.md`](../that-which-gak-results-2026-07-27.md), [`../that-which-connected-gap-gak-results-2026-07-27.md`](../that-which-connected-gap-gak-results-2026-07-27.md)
+- Local and connected-gap `THAT WHICH` GAK audits, including the exact minimum-K witness: [`../that-which-gak-results-2026-07-27.md`](../that-which-gak-results-2026-07-27.md), [`../hail-mary-01-connected-gap-gak-results-2026-07-31.md`](../hail-mary-01-connected-gap-gak-results-2026-07-31.md)
 - Retrospective rowwise recurrence floor, frozen controls, and prior-art audit:
   [`../row-cooldown-freeze-2026-07-27.md`](../row-cooldown-freeze-2026-07-27.md), [`../row-cooldown-results-2026-07-27.md`](../row-cooldown-results-2026-07-27.md), [`../../src/eye_mystery/row_cooldown.py`](../../src/eye_mystery/row_cooldown.py)
 

@@ -119,11 +119,12 @@ but also a pre-frozen wrong next card. Reopen only when an external clue
 restricts the operations, selectors, quotient, or orbit partition.
 
 The ten-character `THAT WHICH` core passes locally. Its connected-gap
-ordinary-GAK test is unresolved: exhaustive free-subgroup closure leaves many
-arbitrary schedules, while exact finite completion times out. Reopen only with
-a source-selected continuation, a same-shaped calibrated finite-cover solver,
-or an explicitly different architecture. Do not sample more arbitrary gaps or
-score more isolated words.
+ordinary-GAK test is now constructively SAT at the minimum `K=7`: trial452's
+34-state quotient completes to seven full 83-position permutations and exactly
+replays all three segments. This proves capacity, not the crib; the
+retrospectively random gaps are gibberish. Do not sample more arbitrary gaps.
+Advance only with a source-selected continuation, shared/reset-state
+constraint, authored operation family, or held-out prediction.
 
 Acquire a physical copy only when a source fingerprint or other
 decoder-independent reason makes the expected information gain worthwhile.
@@ -152,9 +153,9 @@ independently selected mechanism predicts `3/2/4` and a new consequence.
 - arbitrary 19-color visible-action completion without an external selector;
 - sparse parameterized-map/group closure without new label correspondences;
 - the 2025 initializer's position/index-only caller and five-frame atlas;
-+ the authored 2024 25-cell public automaton under its exact seed, action map,
+- the authored 2024 25-cell public automaton under its exact seed, action map,
   and two-slot emission schedule;
-+ the authored 2024 three-ring disk mask and its exact ASCII32 output;
+- the authored 2024 three-ring disk mask and its exact ASCII32 output;
 - Earthquake mask or Cessation sampler on the final anchor slices;
 - literal transfer of the final-row grammar to rows 1 and 2;
 - reciprocal header-scalar checks on the other registered contexts (`0/4`);

@@ -1,6 +1,6 @@
 # Current Eye-mystery state
 
-**Snapshot:** 27 July 2026
+**Snapshot:** 31 July 2026
 **Outcome:** unsolved; no validated plaintext or complete body decoder.
 
 This file contains only the facts needed to resume reasoning. Exact evidence
@@ -194,9 +194,9 @@ reopen only if an authored Eye interface independently selects the operation.
 The body prefix trie closes modulo101, though direct consumers fail. Natural-trim
 recurrence minima are `333|222|444` with tail `.00073`; Petri's renderer fails.
 
-Waite's East-2 suffix is impossible under ordinary GAK. Distinct-selector XGAK
-replays it but admits a frozen wrong next card. Local `THAT WHICH` fits GAK;
-574/1,000 connected fills survive. Fixed-disk Wadsworth also fails.
+Waite's East-2 suffix is ordinary-GAK impossible; distinct-selector XGAK admits
+a frozen wrong next card. Trial452 gives all three connected `THAT WHICH`
+segments an exact minimum-K GAK witness, but its random gaps are gibberish.
 
 A direct visible-state permutation-action model has exact support minimum19,
 even after aligning the registered isomorphic passages. It is non-identifying:
